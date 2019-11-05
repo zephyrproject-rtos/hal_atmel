@@ -1,0 +1,41 @@
+Atmel SAM4E
+###########
+
+Origin:
+   Microchip Packs Repository
+   http://packs.download.atmel.com/
+
+   Atmel SAM4E Series Device Support (1.1.57)
+   http://packs.download.atmel.com/Atmel.SAM4E_DFP.1.1.57.atpack
+
+Status:
+   version 1.1.57
+
+Purpose:
+   Official package for SAM4E.
+
+Description:
+   Atmel Software Framework (ASF) provides a set of low-level
+   header files that give access to different hardware
+   peripherals of Atmel's ICs.
+
+URL:
+   http://packs.download.atmel.com/
+   http://packs.download.atmel.com/Atmel.SAM4E_DFP.1.1.57.atpack
+
+commit:
+   n/a
+
+Maintained-by:
+   External
+
+License:
+   SAM Software Package License
+
+License Link:
+   n/a
+
+Patch Lst:
+   * Add MPU peripheral in device file
+   * Fix CHIPID_EXID for SAM4E8C and SAM4E16C
+
