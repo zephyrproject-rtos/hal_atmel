@@ -193,7 +193,7 @@ typedef struct {
 #define GMAC_NSR_MDIO (0x1u << 1) /**< \brief (GMAC_NSR) MDIO Input Status */
 #define GMAC_NSR_IDLE (0x1u << 2) /**< \brief (GMAC_NSR) PHY Management Logic Idle */
 /* -------- GMAC_UR : (GMAC Offset: 0x00C) User Register -------- */
-#define GMAC_UR_RMIIMII (0x1u << 0) /**< \brief (GMAC_UR)  */
+#define GMAC_UR_RMII (0x1u << 0) /**< \brief (GMAC_UR)  */
 #define GMAC_UR_HDFC (0x1u << 6) /**< \brief (GMAC_UR) Half Duplex Flow Control */
 #define GMAC_UR_BPDG (0x1u << 7) /**< \brief (GMAC_UR) BPDG Bypass Deglitchers */
 /* -------- GMAC_DCFGR : (GMAC Offset: 0x010) DMA Configuration Register -------- */
