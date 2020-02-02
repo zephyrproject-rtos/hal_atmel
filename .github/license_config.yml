@@ -1,6 +1,11 @@
 license:
   main: bsd-x11
+  report_missing: false
+  additional:
+    - bsd-new
   category: Permissive
+copyright:
+  check: false
 exclude:
   extensions:
     - yml
