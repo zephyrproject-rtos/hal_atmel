@@ -1,0 +1,14 @@
+license:
+  main: bsd-x11
+  category: Permissive
+exclude:
+  extensions:
+    - yml
+    - yaml
+    - html
+    - rst
+    - conf
+    - cfg
+  langs:
+    - HTML
+
