@@ -3,6 +3,7 @@ license:
   report_missing: false
   additional:
     - bsd-new
+    - apache-2.0
   category: Permissive
 copyright:
   check: false
