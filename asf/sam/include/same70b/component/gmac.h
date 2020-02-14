@@ -4648,7 +4648,7 @@ typedef struct {
   __O  uint32_t GMAC_IDRPQ[5];  /**< (GMAC Offset: 0x620) Interrupt Disable Register Priority Queue (index = 1) 0 */
   RoReg8  Reserved16[0xC];
   __IO uint32_t GMAC_IMRPQ[5];  /**< (GMAC Offset: 0x640) Interrupt Mask Register Priority Queue (index = 1) 0 */
-  RoReg8  Reserved17[0x90];
+  RoReg8  Reserved17[0x8C];
   __IO uint32_t GMAC_ST2ER[4];  /**< (GMAC Offset: 0x6E0) Screening Type 2 Ethertype Register (index = 0) 0 */
   RoReg8  Reserved18[0x10];
   __IO uint32_t GMAC_ST2CW00;   /**< (GMAC Offset: 0x700) Screening Type 2 Compare Word 0 Register (index = 0) */
