@@ -3616,7 +3616,7 @@ typedef struct {
   __I  uint8_t                        Reserved1[52];
   __IO uint32_t GMAC_HRB;       /**< (GMAC Offset: 0x80) Hash Register Bottom */
   __IO uint32_t GMAC_HRT;       /**< (GMAC Offset: 0x84) Hash Register Top */
-       GmacSa   GmacSa[GMACSA_NUMBER]; /**< Offset: 0x88 Specific Address 1 Bottom Register */
+       GmacSa   GMAC_SA[GMACSA_NUMBER]; /**< Offset: 0x88 Specific Address 1 Bottom Register */
   __IO uint32_t GMAC_TIDM1;     /**< (GMAC Offset: 0xA8) Type ID Match 1 Register */
   __IO uint32_t GMAC_TIDM2;     /**< (GMAC Offset: 0xAC) Type ID Match 2 Register */
   __IO uint32_t GMAC_TIDM3;     /**< (GMAC Offset: 0xB0) Type ID Match 3 Register */
@@ -3767,7 +3767,7 @@ typedef struct {
   __I  uint8_t                        Reserved1[52];
   __IO GMAC_HRB_Type                  GMAC_HRB;       /**< Offset: 0x80 (R/W  32) Hash Register Bottom */
   __IO GMAC_HRT_Type                  GMAC_HRT;       /**< Offset: 0x84 (R/W  32) Hash Register Top */
-       GmacSa                         GmacSa[4];      /**< Offset: 0x88 Specific Address 1 Bottom Register */
+       GmacSa                         GMAC_SA[4];      /**< Offset: 0x88 Specific Address 1 Bottom Register */
   __IO GMAC_TIDM1_Type                GMAC_TIDM1;     /**< Offset: 0xA8 (R/W  32) Type ID Match 1 Register */
   __IO GMAC_TIDM2_Type                GMAC_TIDM2;     /**< Offset: 0xAC (R/W  32) Type ID Match 2 Register */
   __IO GMAC_TIDM3_Type                GMAC_TIDM3;     /**< Offset: 0xB0 (R/W  32) Type ID Match 3 Register */
