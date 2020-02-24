@@ -3,11 +3,13 @@
  *
  * \brief Component description for TWIHS
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- TWIHS_CR : (TWIHS Offset: 0x00) (/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t START:1;                   /**< bit:      0  Send a START Condition                   */
@@ -76,6 +79,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_CR_OFFSET                     (0x00)                                        /**<  (TWIHS_CR) Control Register  Offset */
@@ -152,6 +156,7 @@ typedef union {
 
 /* -------- TWIHS_MMR : (TWIHS Offset: 0x04) (R/W 32) Master Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :8;                        /**< bit:   0..7  Reserved */
@@ -164,6 +169,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_MMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_MMR_OFFSET                    (0x04)                                        /**<  (TWIHS_MMR) Master Mode Register  Offset */
@@ -191,6 +197,7 @@ typedef union {
 
 /* -------- TWIHS_SMR : (TWIHS Offset: 0x08) (R/W 32) Slave Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NACKEN:1;                  /**< bit:      0  Slave Receiver Data Phase NACK enable    */
@@ -211,6 +218,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_SMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_SMR_OFFSET                    (0x08)                                        /**<  (TWIHS_SMR) Slave Mode Register  Offset */
@@ -250,6 +258,7 @@ typedef union {
 
 /* -------- TWIHS_IADR : (TWIHS Offset: 0x0c) (R/W 32) Internal Address Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IADR:24;                   /**< bit:  0..23  Internal Address                         */
@@ -257,6 +266,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_IADR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_IADR_OFFSET                   (0x0C)                                        /**<  (TWIHS_IADR) Internal Address Register  Offset */
@@ -270,6 +280,7 @@ typedef union {
 
 /* -------- TWIHS_CWGR : (TWIHS Offset: 0x10) (R/W 32) Clock Waveform Generator Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CLDIV:8;                   /**< bit:   0..7  Clock Low Divider                        */
@@ -281,6 +292,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_CWGR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_CWGR_OFFSET                   (0x10)                                        /**<  (TWIHS_CWGR) Clock Waveform Generator Register  Offset */
@@ -303,6 +315,7 @@ typedef union {
 
 /* -------- TWIHS_SR : (TWIHS Offset: 0x20) (R/ 32) Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXCOMP:1;                  /**< bit:      0  Transmission Completed (cleared by writing TWIHS_THR) */
@@ -331,6 +344,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_SR_OFFSET                     (0x20)                                        /**<  (TWIHS_SR) Status Register  Offset */
@@ -398,6 +412,7 @@ typedef union {
 
 /* -------- TWIHS_IER : (TWIHS Offset: 0x24) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXCOMP:1;                  /**< bit:      0  Transmission Completed Interrupt Enable  */
@@ -423,6 +438,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_IER_OFFSET                    (0x24)                                        /**<  (TWIHS_IER) Interrupt Enable Register  Offset */
@@ -481,6 +497,7 @@ typedef union {
 
 /* -------- TWIHS_IDR : (TWIHS Offset: 0x28) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXCOMP:1;                  /**< bit:      0  Transmission Completed Interrupt Disable */
@@ -506,6 +523,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_IDR_OFFSET                    (0x28)                                        /**<  (TWIHS_IDR) Interrupt Disable Register  Offset */
@@ -564,6 +582,7 @@ typedef union {
 
 /* -------- TWIHS_IMR : (TWIHS Offset: 0x2c) (R/ 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXCOMP:1;                  /**< bit:      0  Transmission Completed Interrupt Mask    */
@@ -589,6 +608,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_IMR_OFFSET                    (0x2C)                                        /**<  (TWIHS_IMR) Interrupt Mask Register  Offset */
@@ -647,6 +667,7 @@ typedef union {
 
 /* -------- TWIHS_RHR : (TWIHS Offset: 0x30) (R/ 32) Receive Holding Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXDATA:8;                  /**< bit:   0..7  Master or Slave Receive Holding Data     */
@@ -654,6 +675,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_RHR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_RHR_OFFSET                    (0x30)                                        /**<  (TWIHS_RHR) Receive Holding Register  Offset */
@@ -667,6 +689,7 @@ typedef union {
 
 /* -------- TWIHS_THR : (TWIHS Offset: 0x34) (/W 32) Transmit Holding Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXDATA:8;                  /**< bit:   0..7  Master or Slave Transmit Holding Data    */
@@ -674,6 +697,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_THR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_THR_OFFSET                    (0x34)                                        /**<  (TWIHS_THR) Transmit Holding Register  Offset */
@@ -687,6 +711,7 @@ typedef union {
 
 /* -------- TWIHS_SMBTR : (TWIHS Offset: 0x38) (R/W 32) SMBus Timing Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PRESC:4;                   /**< bit:   0..3  SMBus Clock Prescaler                    */
@@ -697,6 +722,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_SMBTR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_SMBTR_OFFSET                  (0x38)                                        /**<  (TWIHS_SMBTR) SMBus Timing Register  Offset */
@@ -719,6 +745,7 @@ typedef union {
 
 /* -------- TWIHS_FILTR : (TWIHS Offset: 0x44) (R/W 32) Filter Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FILT:1;                    /**< bit:      0  RX Digital Filter                        */
@@ -730,6 +757,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_FILTR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_FILTR_OFFSET                  (0x44)                                        /**<  (TWIHS_FILTR) Filter Register  Offset */
@@ -752,6 +780,7 @@ typedef union {
 
 /* -------- TWIHS_SWMR : (TWIHS Offset: 0x4c) (R/W 32) SleepWalking Matching Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SADR1:7;                   /**< bit:   0..6  Slave Address 1                          */
@@ -764,6 +793,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_SWMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_SWMR_OFFSET                   (0x4C)                                        /**<  (TWIHS_SWMR) SleepWalking Matching Register  Offset */
@@ -786,6 +816,7 @@ typedef union {
 
 /* -------- TWIHS_WPMR : (TWIHS Offset: 0xe4) (R/W 32) Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
@@ -794,6 +825,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_WPMR_OFFSET                   (0xE4)                                        /**<  (TWIHS_WPMR) Write Protection Mode Register  Offset */
@@ -812,6 +844,7 @@ typedef union {
 
 /* -------- TWIHS_WPSR : (TWIHS Offset: 0xe8) (R/ 32) Write Protection Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPVS:1;                    /**< bit:      0  Write Protection Violation Status        */
@@ -820,6 +853,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TWIHS_WPSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TWIHS_WPSR_OFFSET                   (0xE8)                                        /**<  (TWIHS_WPSR) Write Protection Status Register  Offset */
@@ -843,7 +877,7 @@ typedef struct {
   __IO uint32_t TWIHS_SMR;      /**< (TWIHS Offset: 0x08) Slave Mode Register */
   __IO uint32_t TWIHS_IADR;     /**< (TWIHS Offset: 0x0C) Internal Address Register */
   __IO uint32_t TWIHS_CWGR;     /**< (TWIHS Offset: 0x10) Clock Waveform Generator Register */
-  RoReg8  Reserved1[0xC];
+  __I  uint8_t                        Reserved1[12];
   __I  uint32_t TWIHS_SR;       /**< (TWIHS Offset: 0x20) Status Register */
   __O  uint32_t TWIHS_IER;      /**< (TWIHS Offset: 0x24) Interrupt Enable Register */
   __O  uint32_t TWIHS_IDR;      /**< (TWIHS Offset: 0x28) Interrupt Disable Register */
@@ -851,11 +885,11 @@ typedef struct {
   __I  uint32_t TWIHS_RHR;      /**< (TWIHS Offset: 0x30) Receive Holding Register */
   __O  uint32_t TWIHS_THR;      /**< (TWIHS Offset: 0x34) Transmit Holding Register */
   __IO uint32_t TWIHS_SMBTR;    /**< (TWIHS Offset: 0x38) SMBus Timing Register */
-  RoReg8  Reserved2[0x8];
+  __I  uint8_t                        Reserved2[8];
   __IO uint32_t TWIHS_FILTR;    /**< (TWIHS Offset: 0x44) Filter Register */
-  RoReg8  Reserved3[0x4];
+  __I  uint8_t                        Reserved3[4];
   __IO uint32_t TWIHS_SWMR;     /**< (TWIHS Offset: 0x4C) SleepWalking Matching Register */
-  RoReg8  Reserved4[0x94];
+  __I  uint8_t                        Reserved4[148];
   __IO uint32_t TWIHS_WPMR;     /**< (TWIHS Offset: 0xE4) Write Protection Mode Register */
   __I  uint32_t TWIHS_WPSR;     /**< (TWIHS Offset: 0xE8) Write Protection Status Register */
 } Twihs;
@@ -868,7 +902,7 @@ typedef struct {
   __IO TWIHS_SMR_Type                 TWIHS_SMR;      /**< Offset: 0x08 (R/W  32) Slave Mode Register */
   __IO TWIHS_IADR_Type                TWIHS_IADR;     /**< Offset: 0x0C (R/W  32) Internal Address Register */
   __IO TWIHS_CWGR_Type                TWIHS_CWGR;     /**< Offset: 0x10 (R/W  32) Clock Waveform Generator Register */
-  __I  uint32_t                       Reserved1[3];
+  __I  uint8_t                        Reserved1[12];
   __I  TWIHS_SR_Type                  TWIHS_SR;       /**< Offset: 0x20 (R/   32) Status Register */
   __O  TWIHS_IER_Type                 TWIHS_IER;      /**< Offset: 0x24 ( /W  32) Interrupt Enable Register */
   __O  TWIHS_IDR_Type                 TWIHS_IDR;      /**< Offset: 0x28 ( /W  32) Interrupt Disable Register */
@@ -876,11 +910,11 @@ typedef struct {
   __I  TWIHS_RHR_Type                 TWIHS_RHR;      /**< Offset: 0x30 (R/   32) Receive Holding Register */
   __O  TWIHS_THR_Type                 TWIHS_THR;      /**< Offset: 0x34 ( /W  32) Transmit Holding Register */
   __IO TWIHS_SMBTR_Type               TWIHS_SMBTR;    /**< Offset: 0x38 (R/W  32) SMBus Timing Register */
-  __I  uint32_t                       Reserved2[2];
+  __I  uint8_t                        Reserved2[8];
   __IO TWIHS_FILTR_Type               TWIHS_FILTR;    /**< Offset: 0x44 (R/W  32) Filter Register */
-  __I  uint32_t                       Reserved3[1];
+  __I  uint8_t                        Reserved3[4];
   __IO TWIHS_SWMR_Type                TWIHS_SWMR;     /**< Offset: 0x4C (R/W  32) SleepWalking Matching Register */
-  __I  uint32_t                       Reserved4[37];
+  __I  uint8_t                        Reserved4[148];
   __IO TWIHS_WPMR_Type                TWIHS_WPMR;     /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
   __I  TWIHS_WPSR_Type                TWIHS_WPSR;     /**< Offset: 0xE8 (R/   32) Write Protection Status Register */
 } Twihs;

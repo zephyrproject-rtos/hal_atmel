@@ -3,11 +3,13 @@
  *
  * \brief Component description for PIO
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- PIO_PER : (PIO Offset: 0x00) (/W 32) PIO Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  PIO Enable                               */
@@ -85,6 +88,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PER_OFFSET                      (0x00)                                        /**<  (PIO_PER) PIO Enable Register  Offset */
@@ -194,6 +198,7 @@ typedef union {
 
 /* -------- PIO_PDR : (PIO Offset: 0x04) (/W 32) PIO Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  PIO Disable                              */
@@ -234,6 +239,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PDR_OFFSET                      (0x04)                                        /**<  (PIO_PDR) PIO Disable Register  Offset */
@@ -343,6 +349,7 @@ typedef union {
 
 /* -------- PIO_PSR : (PIO Offset: 0x08) (R/ 32) PIO Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  PIO Status                               */
@@ -383,6 +390,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PSR_OFFSET                      (0x08)                                        /**<  (PIO_PSR) PIO Status Register  Offset */
@@ -492,6 +500,7 @@ typedef union {
 
 /* -------- PIO_OER : (PIO Offset: 0x10) (/W 32) Output Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Output Enable                            */
@@ -532,6 +541,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_OER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_OER_OFFSET                      (0x10)                                        /**<  (PIO_OER) Output Enable Register  Offset */
@@ -641,6 +651,7 @@ typedef union {
 
 /* -------- PIO_ODR : (PIO Offset: 0x14) (/W 32) Output Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Output Disable                           */
@@ -681,6 +692,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_ODR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_ODR_OFFSET                      (0x14)                                        /**<  (PIO_ODR) Output Disable Register  Offset */
@@ -790,6 +802,7 @@ typedef union {
 
 /* -------- PIO_OSR : (PIO Offset: 0x18) (R/ 32) Output Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Output Status                            */
@@ -830,6 +843,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_OSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_OSR_OFFSET                      (0x18)                                        /**<  (PIO_OSR) Output Status Register  Offset */
@@ -939,6 +953,7 @@ typedef union {
 
 /* -------- PIO_IFER : (PIO Offset: 0x20) (/W 32) Glitch Input Filter Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Input Filter Enable                      */
@@ -979,6 +994,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_IFER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_IFER_OFFSET                     (0x20)                                        /**<  (PIO_IFER) Glitch Input Filter Enable Register  Offset */
@@ -1088,6 +1104,7 @@ typedef union {
 
 /* -------- PIO_IFDR : (PIO Offset: 0x24) (/W 32) Glitch Input Filter Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Input Filter Disable                     */
@@ -1128,6 +1145,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_IFDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_IFDR_OFFSET                     (0x24)                                        /**<  (PIO_IFDR) Glitch Input Filter Disable Register  Offset */
@@ -1237,6 +1255,7 @@ typedef union {
 
 /* -------- PIO_IFSR : (PIO Offset: 0x28) (R/ 32) Glitch Input Filter Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Input Filter Status                      */
@@ -1277,6 +1296,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_IFSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_IFSR_OFFSET                     (0x28)                                        /**<  (PIO_IFSR) Glitch Input Filter Status Register  Offset */
@@ -1386,6 +1406,7 @@ typedef union {
 
 /* -------- PIO_SODR : (PIO Offset: 0x30) (/W 32) Set Output Data Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Set Output Data                          */
@@ -1426,6 +1447,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_SODR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_SODR_OFFSET                     (0x30)                                        /**<  (PIO_SODR) Set Output Data Register  Offset */
@@ -1535,6 +1557,7 @@ typedef union {
 
 /* -------- PIO_CODR : (PIO Offset: 0x34) (/W 32) Clear Output Data Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Clear Output Data                        */
@@ -1575,6 +1598,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_CODR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_CODR_OFFSET                     (0x34)                                        /**<  (PIO_CODR) Clear Output Data Register  Offset */
@@ -1684,6 +1708,7 @@ typedef union {
 
 /* -------- PIO_ODSR : (PIO Offset: 0x38) (R/W 32) Output Data Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Output Data Status                       */
@@ -1724,6 +1749,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_ODSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_ODSR_OFFSET                     (0x38)                                        /**<  (PIO_ODSR) Output Data Status Register  Offset */
@@ -1833,6 +1859,7 @@ typedef union {
 
 /* -------- PIO_PDSR : (PIO Offset: 0x3c) (R/ 32) Pin Data Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Output Data Status                       */
@@ -1873,6 +1900,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PDSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PDSR_OFFSET                     (0x3C)                                        /**<  (PIO_PDSR) Pin Data Status Register  Offset */
@@ -1982,6 +2010,7 @@ typedef union {
 
 /* -------- PIO_IER : (PIO Offset: 0x40) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Input Change Interrupt Enable            */
@@ -2022,6 +2051,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_IER_OFFSET                      (0x40)                                        /**<  (PIO_IER) Interrupt Enable Register  Offset */
@@ -2131,6 +2161,7 @@ typedef union {
 
 /* -------- PIO_IDR : (PIO Offset: 0x44) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Input Change Interrupt Disable           */
@@ -2171,6 +2202,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_IDR_OFFSET                      (0x44)                                        /**<  (PIO_IDR) Interrupt Disable Register  Offset */
@@ -2280,6 +2312,7 @@ typedef union {
 
 /* -------- PIO_IMR : (PIO Offset: 0x48) (R/ 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Input Change Interrupt Mask              */
@@ -2320,6 +2353,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_IMR_OFFSET                      (0x48)                                        /**<  (PIO_IMR) Interrupt Mask Register  Offset */
@@ -2429,6 +2463,7 @@ typedef union {
 
 /* -------- PIO_ISR : (PIO Offset: 0x4c) (R/ 32) Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Input Change Interrupt Status            */
@@ -2469,6 +2504,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_ISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_ISR_OFFSET                      (0x4C)                                        /**<  (PIO_ISR) Interrupt Status Register  Offset */
@@ -2578,6 +2614,7 @@ typedef union {
 
 /* -------- PIO_MDER : (PIO Offset: 0x50) (/W 32) Multi-driver Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Multi-drive Enable                       */
@@ -2618,6 +2655,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_MDER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_MDER_OFFSET                     (0x50)                                        /**<  (PIO_MDER) Multi-driver Enable Register  Offset */
@@ -2727,6 +2765,7 @@ typedef union {
 
 /* -------- PIO_MDDR : (PIO Offset: 0x54) (/W 32) Multi-driver Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Multi-drive Disable                      */
@@ -2767,6 +2806,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_MDDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_MDDR_OFFSET                     (0x54)                                        /**<  (PIO_MDDR) Multi-driver Disable Register  Offset */
@@ -2876,6 +2916,7 @@ typedef union {
 
 /* -------- PIO_MDSR : (PIO Offset: 0x58) (R/ 32) Multi-driver Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Multi-drive Status                       */
@@ -2916,6 +2957,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_MDSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_MDSR_OFFSET                     (0x58)                                        /**<  (PIO_MDSR) Multi-driver Status Register  Offset */
@@ -3025,6 +3067,7 @@ typedef union {
 
 /* -------- PIO_PUDR : (PIO Offset: 0x60) (/W 32) Pull-up Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Pull-Up Disable                          */
@@ -3065,6 +3108,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PUDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PUDR_OFFSET                     (0x60)                                        /**<  (PIO_PUDR) Pull-up Disable Register  Offset */
@@ -3174,6 +3218,7 @@ typedef union {
 
 /* -------- PIO_PUER : (PIO Offset: 0x64) (/W 32) Pull-up Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Pull-Up Enable                           */
@@ -3214,6 +3259,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PUER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PUER_OFFSET                     (0x64)                                        /**<  (PIO_PUER) Pull-up Enable Register  Offset */
@@ -3323,6 +3369,7 @@ typedef union {
 
 /* -------- PIO_PUSR : (PIO Offset: 0x68) (R/ 32) Pad Pull-up Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Pull-Up Status                           */
@@ -3363,6 +3410,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PUSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PUSR_OFFSET                     (0x68)                                        /**<  (PIO_PUSR) Pad Pull-up Status Register  Offset */
@@ -3472,6 +3520,7 @@ typedef union {
 
 /* -------- PIO_ABCDSR : (PIO Offset: 0x70) (R/W 32) Peripheral ABCD Select Register 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Peripheral Select                        */
@@ -3512,6 +3561,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_ABCDSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_ABCDSR_OFFSET                   (0x70)                                        /**<  (PIO_ABCDSR) Peripheral ABCD Select Register 0  Offset */
@@ -3621,6 +3671,7 @@ typedef union {
 
 /* -------- PIO_IFSCDR : (PIO Offset: 0x80) (/W 32) Input Filter Slow Clock Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Peripheral Clock Glitch Filtering Select */
@@ -3661,6 +3712,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_IFSCDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_IFSCDR_OFFSET                   (0x80)                                        /**<  (PIO_IFSCDR) Input Filter Slow Clock Disable Register  Offset */
@@ -3770,6 +3822,7 @@ typedef union {
 
 /* -------- PIO_IFSCER : (PIO Offset: 0x84) (/W 32) Input Filter Slow Clock Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Slow Clock Debouncing Filtering Select   */
@@ -3810,6 +3863,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_IFSCER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_IFSCER_OFFSET                   (0x84)                                        /**<  (PIO_IFSCER) Input Filter Slow Clock Enable Register  Offset */
@@ -3919,6 +3973,7 @@ typedef union {
 
 /* -------- PIO_IFSCSR : (PIO Offset: 0x88) (R/ 32) Input Filter Slow Clock Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Glitch or Debouncing Filter Selection Status */
@@ -3959,6 +4014,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_IFSCSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_IFSCSR_OFFSET                   (0x88)                                        /**<  (PIO_IFSCSR) Input Filter Slow Clock Status Register  Offset */
@@ -4068,6 +4124,7 @@ typedef union {
 
 /* -------- PIO_SCDR : (PIO Offset: 0x8c) (R/W 32) Slow Clock Divider Debouncing Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DIV:14;                    /**< bit:  0..13  Slow Clock Divider Selection for Debouncing */
@@ -4075,6 +4132,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_SCDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_SCDR_OFFSET                     (0x8C)                                        /**<  (PIO_SCDR) Slow Clock Divider Debouncing Register  Offset */
@@ -4088,6 +4146,7 @@ typedef union {
 
 /* -------- PIO_PPDDR : (PIO Offset: 0x90) (/W 32) Pad Pull-down Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Pull-Down Disable                        */
@@ -4128,6 +4187,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PPDDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PPDDR_OFFSET                    (0x90)                                        /**<  (PIO_PPDDR) Pad Pull-down Disable Register  Offset */
@@ -4237,6 +4297,7 @@ typedef union {
 
 /* -------- PIO_PPDER : (PIO Offset: 0x94) (/W 32) Pad Pull-down Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Pull-Down Enable                         */
@@ -4277,6 +4338,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PPDER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PPDER_OFFSET                    (0x94)                                        /**<  (PIO_PPDER) Pad Pull-down Enable Register  Offset */
@@ -4386,6 +4448,7 @@ typedef union {
 
 /* -------- PIO_PPDSR : (PIO Offset: 0x98) (R/ 32) Pad Pull-down Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Pull-Down Status                         */
@@ -4426,6 +4489,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PPDSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PPDSR_OFFSET                    (0x98)                                        /**<  (PIO_PPDSR) Pad Pull-down Status Register  Offset */
@@ -4535,6 +4599,7 @@ typedef union {
 
 /* -------- PIO_OWER : (PIO Offset: 0xa0) (/W 32) Output Write Enable -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Output Write Enable                      */
@@ -4575,6 +4640,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_OWER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_OWER_OFFSET                     (0xA0)                                        /**<  (PIO_OWER) Output Write Enable  Offset */
@@ -4684,6 +4750,7 @@ typedef union {
 
 /* -------- PIO_OWDR : (PIO Offset: 0xa4) (/W 32) Output Write Disable -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Output Write Disable                     */
@@ -4724,6 +4791,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_OWDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_OWDR_OFFSET                     (0xA4)                                        /**<  (PIO_OWDR) Output Write Disable  Offset */
@@ -4833,6 +4901,7 @@ typedef union {
 
 /* -------- PIO_OWSR : (PIO Offset: 0xa8) (R/ 32) Output Write Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Output Write Status                      */
@@ -4873,6 +4942,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_OWSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_OWSR_OFFSET                     (0xA8)                                        /**<  (PIO_OWSR) Output Write Status Register  Offset */
@@ -4982,6 +5052,7 @@ typedef union {
 
 /* -------- PIO_AIMER : (PIO Offset: 0xb0) (/W 32) Additional Interrupt Modes Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Additional Interrupt Modes Enable        */
@@ -5022,6 +5093,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_AIMER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_AIMER_OFFSET                    (0xB0)                                        /**<  (PIO_AIMER) Additional Interrupt Modes Enable Register  Offset */
@@ -5131,6 +5203,7 @@ typedef union {
 
 /* -------- PIO_AIMDR : (PIO Offset: 0xb4) (/W 32) Additional Interrupt Modes Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Additional Interrupt Modes Disable       */
@@ -5171,6 +5244,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_AIMDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_AIMDR_OFFSET                    (0xB4)                                        /**<  (PIO_AIMDR) Additional Interrupt Modes Disable Register  Offset */
@@ -5280,6 +5354,7 @@ typedef union {
 
 /* -------- PIO_AIMMR : (PIO Offset: 0xb8) (R/ 32) Additional Interrupt Modes Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  IO Line Index                            */
@@ -5320,6 +5395,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_AIMMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_AIMMR_OFFSET                    (0xB8)                                        /**<  (PIO_AIMMR) Additional Interrupt Modes Mask Register  Offset */
@@ -5429,6 +5505,7 @@ typedef union {
 
 /* -------- PIO_ESR : (PIO Offset: 0xc0) (/W 32) Edge Select Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Edge Interrupt Selection                 */
@@ -5469,6 +5546,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_ESR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_ESR_OFFSET                      (0xC0)                                        /**<  (PIO_ESR) Edge Select Register  Offset */
@@ -5578,6 +5656,7 @@ typedef union {
 
 /* -------- PIO_LSR : (PIO Offset: 0xc4) (/W 32) Level Select Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Level Interrupt Selection                */
@@ -5618,6 +5697,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_LSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_LSR_OFFSET                      (0xC4)                                        /**<  (PIO_LSR) Level Select Register  Offset */
@@ -5727,6 +5807,7 @@ typedef union {
 
 /* -------- PIO_ELSR : (PIO Offset: 0xc8) (R/ 32) Edge/Level Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Edge/Level Interrupt Source Selection    */
@@ -5767,6 +5848,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_ELSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_ELSR_OFFSET                     (0xC8)                                        /**<  (PIO_ELSR) Edge/Level Status Register  Offset */
@@ -5876,6 +5958,7 @@ typedef union {
 
 /* -------- PIO_FELLSR : (PIO Offset: 0xd0) (/W 32) Falling Edge/Low-Level Select Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Falling Edge/Low-Level Interrupt Selection */
@@ -5916,6 +5999,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_FELLSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_FELLSR_OFFSET                   (0xD0)                                        /**<  (PIO_FELLSR) Falling Edge/Low-Level Select Register  Offset */
@@ -6025,6 +6109,7 @@ typedef union {
 
 /* -------- PIO_REHLSR : (PIO Offset: 0xd4) (/W 32) Rising Edge/High-Level Select Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Rising Edge/High-Level Interrupt Selection */
@@ -6065,6 +6150,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_REHLSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_REHLSR_OFFSET                   (0xD4)                                        /**<  (PIO_REHLSR) Rising Edge/High-Level Select Register  Offset */
@@ -6174,6 +6260,7 @@ typedef union {
 
 /* -------- PIO_FRLHSR : (PIO Offset: 0xd8) (R/ 32) Fall/Rise - Low/High Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Edge/Level Interrupt Source Selection    */
@@ -6214,6 +6301,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_FRLHSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_FRLHSR_OFFSET                   (0xD8)                                        /**<  (PIO_FRLHSR) Fall/Rise - Low/High Status Register  Offset */
@@ -6323,6 +6411,7 @@ typedef union {
 
 /* -------- PIO_LOCKSR : (PIO Offset: 0xe0) (R/ 32) Lock Status -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P0:1;                      /**< bit:      0  Lock Status                              */
@@ -6363,6 +6452,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_LOCKSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_LOCKSR_OFFSET                   (0xE0)                                        /**<  (PIO_LOCKSR) Lock Status  Offset */
@@ -6472,6 +6562,7 @@ typedef union {
 
 /* -------- PIO_WPMR : (PIO Offset: 0xe4) (R/W 32) Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
@@ -6480,6 +6571,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_WPMR_OFFSET                     (0xE4)                                        /**<  (PIO_WPMR) Write Protection Mode Register  Offset */
@@ -6498,6 +6590,7 @@ typedef union {
 
 /* -------- PIO_WPSR : (PIO Offset: 0xe8) (R/ 32) Write Protection Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPVS:1;                    /**< bit:      0  Write Protection Violation Status        */
@@ -6507,6 +6600,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_WPSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_WPSR_OFFSET                     (0xE8)                                        /**<  (PIO_WPSR) Write Protection Status Register  Offset */
@@ -6523,6 +6617,7 @@ typedef union {
 
 /* -------- PIO_SCHMITT : (PIO Offset: 0x100) (R/W 32) Schmitt Trigger Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SCHMITT0:1;                /**< bit:      0  Schmitt Trigger Control                  */
@@ -6563,6 +6658,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_SCHMITT_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_SCHMITT_OFFSET                  (0x100)                                       /**<  (PIO_SCHMITT) Schmitt Trigger Register  Offset */
@@ -6672,6 +6768,7 @@ typedef union {
 
 /* -------- PIO_DRIVER : (PIO Offset: 0x118) (R/W 32) I/O Drive Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t LINE0:1;                   /**< bit:      0  Drive of PIO Line 0                      */
@@ -6712,6 +6809,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_DRIVER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_DRIVER_OFFSET                   (0x118)                                       /**<  (PIO_DRIVER) I/O Drive Register  Offset */
@@ -6949,6 +7047,7 @@ typedef union {
 
 /* -------- PIO_PCMR : (PIO Offset: 0x150) (R/W 32) Parallel Capture Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PCEN:1;                    /**< bit:      0  Parallel Capture Mode Enable             */
@@ -6962,6 +7061,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PCMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PCMR_OFFSET                     (0x150)                                       /**<  (PIO_PCMR) Parallel Capture Mode Register  Offset */
@@ -6993,6 +7093,7 @@ typedef union {
 
 /* -------- PIO_PCIER : (PIO Offset: 0x154) (/W 32) Parallel Capture Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DRDY:1;                    /**< bit:      0  Parallel Capture Mode Data Ready Interrupt Enable */
@@ -7003,6 +7104,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PCIER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PCIER_OFFSET                    (0x154)                                       /**<  (PIO_PCIER) Parallel Capture Interrupt Enable Register  Offset */
@@ -7025,6 +7127,7 @@ typedef union {
 
 /* -------- PIO_PCIDR : (PIO Offset: 0x158) (/W 32) Parallel Capture Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DRDY:1;                    /**< bit:      0  Parallel Capture Mode Data Ready Interrupt Disable */
@@ -7035,6 +7138,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PCIDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PCIDR_OFFSET                    (0x158)                                       /**<  (PIO_PCIDR) Parallel Capture Interrupt Disable Register  Offset */
@@ -7057,6 +7161,7 @@ typedef union {
 
 /* -------- PIO_PCIMR : (PIO Offset: 0x15c) (R/ 32) Parallel Capture Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DRDY:1;                    /**< bit:      0  Parallel Capture Mode Data Ready Interrupt Mask */
@@ -7067,6 +7172,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PCIMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PCIMR_OFFSET                    (0x15C)                                       /**<  (PIO_PCIMR) Parallel Capture Interrupt Mask Register  Offset */
@@ -7089,6 +7195,7 @@ typedef union {
 
 /* -------- PIO_PCISR : (PIO Offset: 0x160) (R/ 32) Parallel Capture Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DRDY:1;                    /**< bit:      0  Parallel Capture Mode Data Ready         */
@@ -7097,6 +7204,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PCISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PCISR_OFFSET                    (0x160)                                       /**<  (PIO_PCISR) Parallel Capture Interrupt Status Register  Offset */
@@ -7113,12 +7221,14 @@ typedef union {
 
 /* -------- PIO_PCRHR : (PIO Offset: 0x164) (R/ 32) Parallel Capture Reception Holding Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RDATA:32;                  /**< bit:  0..31  Parallel Capture Mode Reception Data     */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PIO_PCRHR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PIO_PCRHR_OFFSET                    (0x164)                                       /**<  (PIO_PCRHR) Parallel Capture Reception Holding Register  Offset */
@@ -7137,15 +7247,15 @@ typedef struct {
   __O  uint32_t PIO_PER;        /**< (PIO Offset: 0x00) PIO Enable Register */
   __O  uint32_t PIO_PDR;        /**< (PIO Offset: 0x04) PIO Disable Register */
   __I  uint32_t PIO_PSR;        /**< (PIO Offset: 0x08) PIO Status Register */
-  RoReg8  Reserved1[0x4];
+  __I  uint8_t                        Reserved1[4];
   __O  uint32_t PIO_OER;        /**< (PIO Offset: 0x10) Output Enable Register */
   __O  uint32_t PIO_ODR;        /**< (PIO Offset: 0x14) Output Disable Register */
   __I  uint32_t PIO_OSR;        /**< (PIO Offset: 0x18) Output Status Register */
-  RoReg8  Reserved2[0x4];
+  __I  uint8_t                        Reserved2[4];
   __O  uint32_t PIO_IFER;       /**< (PIO Offset: 0x20) Glitch Input Filter Enable Register */
   __O  uint32_t PIO_IFDR;       /**< (PIO Offset: 0x24) Glitch Input Filter Disable Register */
   __I  uint32_t PIO_IFSR;       /**< (PIO Offset: 0x28) Glitch Input Filter Status Register */
-  RoReg8  Reserved3[0x4];
+  __I  uint8_t                        Reserved3[4];
   __O  uint32_t PIO_SODR;       /**< (PIO Offset: 0x30) Set Output Data Register */
   __O  uint32_t PIO_CODR;       /**< (PIO Offset: 0x34) Clear Output Data Register */
   __IO uint32_t PIO_ODSR;       /**< (PIO Offset: 0x38) Output Data Status Register */
@@ -7157,13 +7267,13 @@ typedef struct {
   __O  uint32_t PIO_MDER;       /**< (PIO Offset: 0x50) Multi-driver Enable Register */
   __O  uint32_t PIO_MDDR;       /**< (PIO Offset: 0x54) Multi-driver Disable Register */
   __I  uint32_t PIO_MDSR;       /**< (PIO Offset: 0x58) Multi-driver Status Register */
-  RoReg8  Reserved4[0x4];
+  __I  uint8_t                        Reserved4[4];
   __O  uint32_t PIO_PUDR;       /**< (PIO Offset: 0x60) Pull-up Disable Register */
   __O  uint32_t PIO_PUER;       /**< (PIO Offset: 0x64) Pull-up Enable Register */
   __I  uint32_t PIO_PUSR;       /**< (PIO Offset: 0x68) Pad Pull-up Status Register */
-  RoReg8  Reserved5[0x4];
+  __I  uint8_t                        Reserved5[4];
   __IO uint32_t PIO_ABCDSR[2];  /**< (PIO Offset: 0x70) Peripheral ABCD Select Register 0 */
-  RoReg8  Reserved6[0x8];
+  __I  uint8_t                        Reserved6[8];
   __O  uint32_t PIO_IFSCDR;     /**< (PIO Offset: 0x80) Input Filter Slow Clock Disable Register */
   __O  uint32_t PIO_IFSCER;     /**< (PIO Offset: 0x84) Input Filter Slow Clock Enable Register */
   __I  uint32_t PIO_IFSCSR;     /**< (PIO Offset: 0x88) Input Filter Slow Clock Status Register */
@@ -7171,31 +7281,31 @@ typedef struct {
   __O  uint32_t PIO_PPDDR;      /**< (PIO Offset: 0x90) Pad Pull-down Disable Register */
   __O  uint32_t PIO_PPDER;      /**< (PIO Offset: 0x94) Pad Pull-down Enable Register */
   __I  uint32_t PIO_PPDSR;      /**< (PIO Offset: 0x98) Pad Pull-down Status Register */
-  RoReg8  Reserved7[0x4];
+  __I  uint8_t                        Reserved7[4];
   __O  uint32_t PIO_OWER;       /**< (PIO Offset: 0xA0) Output Write Enable */
   __O  uint32_t PIO_OWDR;       /**< (PIO Offset: 0xA4) Output Write Disable */
   __I  uint32_t PIO_OWSR;       /**< (PIO Offset: 0xA8) Output Write Status Register */
-  RoReg8  Reserved8[0x4];
+  __I  uint8_t                        Reserved8[4];
   __O  uint32_t PIO_AIMER;      /**< (PIO Offset: 0xB0) Additional Interrupt Modes Enable Register */
   __O  uint32_t PIO_AIMDR;      /**< (PIO Offset: 0xB4) Additional Interrupt Modes Disable Register */
   __I  uint32_t PIO_AIMMR;      /**< (PIO Offset: 0xB8) Additional Interrupt Modes Mask Register */
-  RoReg8  Reserved9[0x4];
+  __I  uint8_t                        Reserved9[4];
   __O  uint32_t PIO_ESR;        /**< (PIO Offset: 0xC0) Edge Select Register */
   __O  uint32_t PIO_LSR;        /**< (PIO Offset: 0xC4) Level Select Register */
   __I  uint32_t PIO_ELSR;       /**< (PIO Offset: 0xC8) Edge/Level Status Register */
-  RoReg8  Reserved10[0x4];
+  __I  uint8_t                        Reserved10[4];
   __O  uint32_t PIO_FELLSR;     /**< (PIO Offset: 0xD0) Falling Edge/Low-Level Select Register */
   __O  uint32_t PIO_REHLSR;     /**< (PIO Offset: 0xD4) Rising Edge/High-Level Select Register */
   __I  uint32_t PIO_FRLHSR;     /**< (PIO Offset: 0xD8) Fall/Rise - Low/High Status Register */
-  RoReg8  Reserved11[0x4];
+  __I  uint8_t                        Reserved11[4];
   __I  uint32_t PIO_LOCKSR;     /**< (PIO Offset: 0xE0) Lock Status */
   __IO uint32_t PIO_WPMR;       /**< (PIO Offset: 0xE4) Write Protection Mode Register */
   __I  uint32_t PIO_WPSR;       /**< (PIO Offset: 0xE8) Write Protection Status Register */
-  RoReg8  Reserved12[0x14];
+  __I  uint8_t                        Reserved12[20];
   __IO uint32_t PIO_SCHMITT;    /**< (PIO Offset: 0x100) Schmitt Trigger Register */
-  RoReg8  Reserved13[0x14];
+  __I  uint8_t                        Reserved13[20];
   __IO uint32_t PIO_DRIVER;     /**< (PIO Offset: 0x118) I/O Drive Register */
-  RoReg8  Reserved14[0x34];
+  __I  uint8_t                        Reserved14[52];
   __IO uint32_t PIO_PCMR;       /**< (PIO Offset: 0x150) Parallel Capture Mode Register */
   __O  uint32_t PIO_PCIER;      /**< (PIO Offset: 0x154) Parallel Capture Interrupt Enable Register */
   __O  uint32_t PIO_PCIDR;      /**< (PIO Offset: 0x158) Parallel Capture Interrupt Disable Register */
@@ -7210,15 +7320,15 @@ typedef struct {
   __O  PIO_PER_Type                   PIO_PER;        /**< Offset: 0x00 ( /W  32) PIO Enable Register */
   __O  PIO_PDR_Type                   PIO_PDR;        /**< Offset: 0x04 ( /W  32) PIO Disable Register */
   __I  PIO_PSR_Type                   PIO_PSR;        /**< Offset: 0x08 (R/   32) PIO Status Register */
-  __I  uint32_t                       Reserved1[1];
+  __I  uint8_t                        Reserved1[4];
   __O  PIO_OER_Type                   PIO_OER;        /**< Offset: 0x10 ( /W  32) Output Enable Register */
   __O  PIO_ODR_Type                   PIO_ODR;        /**< Offset: 0x14 ( /W  32) Output Disable Register */
   __I  PIO_OSR_Type                   PIO_OSR;        /**< Offset: 0x18 (R/   32) Output Status Register */
-  __I  uint32_t                       Reserved2[1];
+  __I  uint8_t                        Reserved2[4];
   __O  PIO_IFER_Type                  PIO_IFER;       /**< Offset: 0x20 ( /W  32) Glitch Input Filter Enable Register */
   __O  PIO_IFDR_Type                  PIO_IFDR;       /**< Offset: 0x24 ( /W  32) Glitch Input Filter Disable Register */
   __I  PIO_IFSR_Type                  PIO_IFSR;       /**< Offset: 0x28 (R/   32) Glitch Input Filter Status Register */
-  __I  uint32_t                       Reserved3[1];
+  __I  uint8_t                        Reserved3[4];
   __O  PIO_SODR_Type                  PIO_SODR;       /**< Offset: 0x30 ( /W  32) Set Output Data Register */
   __O  PIO_CODR_Type                  PIO_CODR;       /**< Offset: 0x34 ( /W  32) Clear Output Data Register */
   __IO PIO_ODSR_Type                  PIO_ODSR;       /**< Offset: 0x38 (R/W  32) Output Data Status Register */
@@ -7230,13 +7340,13 @@ typedef struct {
   __O  PIO_MDER_Type                  PIO_MDER;       /**< Offset: 0x50 ( /W  32) Multi-driver Enable Register */
   __O  PIO_MDDR_Type                  PIO_MDDR;       /**< Offset: 0x54 ( /W  32) Multi-driver Disable Register */
   __I  PIO_MDSR_Type                  PIO_MDSR;       /**< Offset: 0x58 (R/   32) Multi-driver Status Register */
-  __I  uint32_t                       Reserved4[1];
+  __I  uint8_t                        Reserved4[4];
   __O  PIO_PUDR_Type                  PIO_PUDR;       /**< Offset: 0x60 ( /W  32) Pull-up Disable Register */
   __O  PIO_PUER_Type                  PIO_PUER;       /**< Offset: 0x64 ( /W  32) Pull-up Enable Register */
   __I  PIO_PUSR_Type                  PIO_PUSR;       /**< Offset: 0x68 (R/   32) Pad Pull-up Status Register */
-  __I  uint32_t                       Reserved5[1];
+  __I  uint8_t                        Reserved5[4];
   __IO PIO_ABCDSR_Type                PIO_ABCDSR[2];  /**< Offset: 0x70 (R/W  32) Peripheral ABCD Select Register 0 */
-  __I  uint32_t                       Reserved6[2];
+  __I  uint8_t                        Reserved6[8];
   __O  PIO_IFSCDR_Type                PIO_IFSCDR;     /**< Offset: 0x80 ( /W  32) Input Filter Slow Clock Disable Register */
   __O  PIO_IFSCER_Type                PIO_IFSCER;     /**< Offset: 0x84 ( /W  32) Input Filter Slow Clock Enable Register */
   __I  PIO_IFSCSR_Type                PIO_IFSCSR;     /**< Offset: 0x88 (R/   32) Input Filter Slow Clock Status Register */
@@ -7244,31 +7354,31 @@ typedef struct {
   __O  PIO_PPDDR_Type                 PIO_PPDDR;      /**< Offset: 0x90 ( /W  32) Pad Pull-down Disable Register */
   __O  PIO_PPDER_Type                 PIO_PPDER;      /**< Offset: 0x94 ( /W  32) Pad Pull-down Enable Register */
   __I  PIO_PPDSR_Type                 PIO_PPDSR;      /**< Offset: 0x98 (R/   32) Pad Pull-down Status Register */
-  __I  uint32_t                       Reserved7[1];
+  __I  uint8_t                        Reserved7[4];
   __O  PIO_OWER_Type                  PIO_OWER;       /**< Offset: 0xA0 ( /W  32) Output Write Enable */
   __O  PIO_OWDR_Type                  PIO_OWDR;       /**< Offset: 0xA4 ( /W  32) Output Write Disable */
   __I  PIO_OWSR_Type                  PIO_OWSR;       /**< Offset: 0xA8 (R/   32) Output Write Status Register */
-  __I  uint32_t                       Reserved8[1];
+  __I  uint8_t                        Reserved8[4];
   __O  PIO_AIMER_Type                 PIO_AIMER;      /**< Offset: 0xB0 ( /W  32) Additional Interrupt Modes Enable Register */
   __O  PIO_AIMDR_Type                 PIO_AIMDR;      /**< Offset: 0xB4 ( /W  32) Additional Interrupt Modes Disable Register */
   __I  PIO_AIMMR_Type                 PIO_AIMMR;      /**< Offset: 0xB8 (R/   32) Additional Interrupt Modes Mask Register */
-  __I  uint32_t                       Reserved9[1];
+  __I  uint8_t                        Reserved9[4];
   __O  PIO_ESR_Type                   PIO_ESR;        /**< Offset: 0xC0 ( /W  32) Edge Select Register */
   __O  PIO_LSR_Type                   PIO_LSR;        /**< Offset: 0xC4 ( /W  32) Level Select Register */
   __I  PIO_ELSR_Type                  PIO_ELSR;       /**< Offset: 0xC8 (R/   32) Edge/Level Status Register */
-  __I  uint32_t                       Reserved10[1];
+  __I  uint8_t                        Reserved10[4];
   __O  PIO_FELLSR_Type                PIO_FELLSR;     /**< Offset: 0xD0 ( /W  32) Falling Edge/Low-Level Select Register */
   __O  PIO_REHLSR_Type                PIO_REHLSR;     /**< Offset: 0xD4 ( /W  32) Rising Edge/High-Level Select Register */
   __I  PIO_FRLHSR_Type                PIO_FRLHSR;     /**< Offset: 0xD8 (R/   32) Fall/Rise - Low/High Status Register */
-  __I  uint32_t                       Reserved11[1];
+  __I  uint8_t                        Reserved11[4];
   __I  PIO_LOCKSR_Type                PIO_LOCKSR;     /**< Offset: 0xE0 (R/   32) Lock Status */
   __IO PIO_WPMR_Type                  PIO_WPMR;       /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
   __I  PIO_WPSR_Type                  PIO_WPSR;       /**< Offset: 0xE8 (R/   32) Write Protection Status Register */
-  __I  uint32_t                       Reserved12[5];
+  __I  uint8_t                        Reserved12[20];
   __IO PIO_SCHMITT_Type               PIO_SCHMITT;    /**< Offset: 0x100 (R/W  32) Schmitt Trigger Register */
-  __I  uint32_t                       Reserved13[5];
+  __I  uint8_t                        Reserved13[20];
   __IO PIO_DRIVER_Type                PIO_DRIVER;     /**< Offset: 0x118 (R/W  32) I/O Drive Register */
-  __I  uint32_t                       Reserved14[13];
+  __I  uint8_t                        Reserved14[52];
   __IO PIO_PCMR_Type                  PIO_PCMR;       /**< Offset: 0x150 (R/W  32) Parallel Capture Mode Register */
   __O  PIO_PCIER_Type                 PIO_PCIER;      /**< Offset: 0x154 ( /W  32) Parallel Capture Interrupt Enable Register */
   __O  PIO_PCIDR_Type                 PIO_PCIDR;      /**< Offset: 0x158 ( /W  32) Parallel Capture Interrupt Disable Register */

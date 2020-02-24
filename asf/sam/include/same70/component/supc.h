@@ -3,11 +3,13 @@
  *
  * \brief Component description for SUPC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- SUPC_CR : (SUPC Offset: 0x00) (/W 32) Supply Controller Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -55,6 +58,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SUPC_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SUPC_CR_OFFSET                      (0x00)                                        /**<  (SUPC_CR) Supply Controller Control Register  Offset */
@@ -84,6 +88,7 @@ typedef union {
 
 /* -------- SUPC_SMMR : (SUPC Offset: 0x04) (R/W 32) Supply Controller Supply Monitor Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SMTH:4;                    /**< bit:   0..3  Supply Monitor Threshold                 */
@@ -96,6 +101,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SUPC_SMMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SUPC_SMMR_OFFSET                    (0x04)                                        /**<  (SUPC_SMMR) Supply Controller Supply Monitor Mode Register  Offset */
@@ -136,6 +142,7 @@ typedef union {
 
 /* -------- SUPC_MR : (SUPC Offset: 0x08) (R/W 32) Supply Controller Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :12;                       /**< bit:  0..11  Reserved */
@@ -151,6 +158,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SUPC_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SUPC_MR_OFFSET                      (0x08)                                        /**<  (SUPC_MR) Supply Controller Mode Register  Offset */
@@ -197,6 +205,7 @@ typedef union {
 
 /* -------- SUPC_WUMR : (SUPC Offset: 0x0c) (R/W 32) Supply Controller Wake-up Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -220,6 +229,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } SUPC_WUMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SUPC_WUMR_OFFSET                    (0x0C)                                        /**<  (SUPC_WUMR) Supply Controller Wake-up Mode Register  Offset */
@@ -309,6 +319,7 @@ typedef union {
 
 /* -------- SUPC_WUIR : (SUPC Offset: 0x10) (R/W 32) Supply Controller Wake-up Inputs Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WKUPEN0:1;                 /**< bit:      0  Wake-up Input Enable 0 to 0              */
@@ -350,6 +361,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } SUPC_WUIR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SUPC_WUIR_OFFSET                    (0x10)                                        /**<  (SUPC_WUIR) Supply Controller Wake-up Inputs Register  Offset */
@@ -562,6 +574,7 @@ typedef union {
 
 /* -------- SUPC_SR : (SUPC Offset: 0x14) (R/ 32) Supply Controller Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -601,6 +614,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } SUPC_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SUPC_SR_OFFSET                      (0x14)                                        /**<  (SUPC_SR) Supply Controller Status Register  Offset */

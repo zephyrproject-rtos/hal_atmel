@@ -3,11 +3,13 @@
  *
  * \brief Instance description for TC0
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -133,9 +135,9 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for TC0 peripheral ========== */
-#define TC0_INSTANCE_ID_CHANNEL1                 24        
-#define TC0_INSTANCE_ID_CHANNEL0                 23        
-#define TC0_INSTANCE_ID_CHANNEL2                 25        
-#define TC0_DMAC_ID_RX                           40        
+#define TC0_DMAC_ID_RX                           40         
+#define TC0_INSTANCE_ID_CHANNEL0                 23         
+#define TC0_INSTANCE_ID_CHANNEL1                 24         
+#define TC0_INSTANCE_ID_CHANNEL2                 25         
 
 #endif /* _SAME70_TC0_INSTANCE_ */

@@ -3,11 +3,13 @@
  *
  * \brief Component description for QSPI
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- QSPI_CR : (QSPI Offset: 0x00) (/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t QSPIEN:1;                  /**< bit:      0  QSPI Enable                              */
@@ -57,6 +60,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_CR_OFFSET                      (0x00)                                        /**<  (QSPI_CR) Control Register  Offset */
@@ -79,6 +83,7 @@ typedef union {
 
 /* -------- QSPI_MR : (QSPI Offset: 0x04) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SMM:1;                     /**< bit:      0  Serial Memory Mode                       */
@@ -94,6 +99,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_MR_OFFSET                      (0x04)                                        /**<  (QSPI_MR) Mode Register  Offset */
@@ -147,6 +153,7 @@ typedef union {
 
 /* -------- QSPI_RDR : (QSPI Offset: 0x08) (R/ 32) Receive Data Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RD:16;                     /**< bit:  0..15  Receive Data                             */
@@ -154,6 +161,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_RDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_RDR_OFFSET                     (0x08)                                        /**<  (QSPI_RDR) Receive Data Register  Offset */
@@ -167,6 +175,7 @@ typedef union {
 
 /* -------- QSPI_TDR : (QSPI Offset: 0x0c) (/W 32) Transmit Data Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TD:16;                     /**< bit:  0..15  Transmit Data                            */
@@ -174,6 +183,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_TDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_TDR_OFFSET                     (0x0C)                                        /**<  (QSPI_TDR) Transmit Data Register  Offset */
@@ -187,6 +197,7 @@ typedef union {
 
 /* -------- QSPI_SR : (QSPI Offset: 0x10) (R/ 32) Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RDRF:1;                    /**< bit:      0  Receive Data Register Full (cleared by reading SPI_RDR) */
@@ -203,6 +214,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_SR_OFFSET                      (0x10)                                        /**<  (QSPI_SR) Status Register  Offset */
@@ -237,6 +249,7 @@ typedef union {
 
 /* -------- QSPI_IER : (QSPI Offset: 0x14) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RDRF:1;                    /**< bit:      0  Receive Data Register Full Interrupt Enable */
@@ -251,6 +264,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_IER_OFFSET                     (0x14)                                        /**<  (QSPI_IER) Interrupt Enable Register  Offset */
@@ -282,6 +296,7 @@ typedef union {
 
 /* -------- QSPI_IDR : (QSPI Offset: 0x18) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RDRF:1;                    /**< bit:      0  Receive Data Register Full Interrupt Disable */
@@ -296,6 +311,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_IDR_OFFSET                     (0x18)                                        /**<  (QSPI_IDR) Interrupt Disable Register  Offset */
@@ -327,6 +343,7 @@ typedef union {
 
 /* -------- QSPI_IMR : (QSPI Offset: 0x1c) (R/ 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RDRF:1;                    /**< bit:      0  Receive Data Register Full Interrupt Mask */
@@ -341,6 +358,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_IMR_OFFSET                     (0x1C)                                        /**<  (QSPI_IMR) Interrupt Mask Register  Offset */
@@ -372,6 +390,7 @@ typedef union {
 
 /* -------- QSPI_SCR : (QSPI Offset: 0x20) (R/W 32) Serial Clock Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CPOL:1;                    /**< bit:      0  Clock Polarity                           */
@@ -383,6 +402,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_SCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_SCR_OFFSET                     (0x20)                                        /**<  (QSPI_SCR) Serial Clock Register  Offset */
@@ -405,12 +425,14 @@ typedef union {
 
 /* -------- QSPI_IAR : (QSPI Offset: 0x30) (R/W 32) Instruction Address Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ADDR:32;                   /**< bit:  0..31  Address                                  */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_IAR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_IAR_OFFSET                     (0x30)                                        /**<  (QSPI_IAR) Instruction Address Register  Offset */
@@ -424,6 +446,7 @@ typedef union {
 
 /* -------- QSPI_ICR : (QSPI Offset: 0x34) (R/W 32) Instruction Code Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t INST:8;                    /**< bit:   0..7  Instruction Code                         */
@@ -433,6 +456,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_ICR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_ICR_OFFSET                     (0x34)                                        /**<  (QSPI_ICR) Instruction Code Register  Offset */
@@ -449,6 +473,7 @@ typedef union {
 
 /* -------- QSPI_IFR : (QSPI Offset: 0x38) (R/W 32) Instruction Frame Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WIDTH:3;                   /**< bit:   0..2  Width of Instruction Code, Address, Option Code and Data */
@@ -468,6 +493,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_IFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_IFR_OFFSET                     (0x38)                                        /**<  (QSPI_IFR) Instruction Frame Register  Offset */
@@ -546,6 +572,7 @@ typedef union {
 
 /* -------- QSPI_SMR : (QSPI Offset: 0x40) (R/W 32) Scrambling Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SCREN:1;                   /**< bit:      0  Scrambling/Unscrambling Enable           */
@@ -554,6 +581,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_SMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_SMR_OFFSET                     (0x40)                                        /**<  (QSPI_SMR) Scrambling Mode Register  Offset */
@@ -574,12 +602,14 @@ typedef union {
 
 /* -------- QSPI_SKR : (QSPI Offset: 0x44) (/W 32) Scrambling Key Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t USRK:32;                   /**< bit:  0..31  Scrambling User Key                      */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_SKR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_SKR_OFFSET                     (0x44)                                        /**<  (QSPI_SKR) Scrambling Key Register  Offset */
@@ -593,6 +623,7 @@ typedef union {
 
 /* -------- QSPI_WPMR : (QSPI Offset: 0xe4) (R/W 32) Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
@@ -601,6 +632,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_WPMR_OFFSET                    (0xE4)                                        /**<  (QSPI_WPMR) Write Protection Mode Register  Offset */
@@ -619,6 +651,7 @@ typedef union {
 
 /* -------- QSPI_WPSR : (QSPI Offset: 0xe8) (R/ 32) Write Protection Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPVS:1;                    /**< bit:      0  Write Protection Violation Status        */
@@ -628,6 +661,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } QSPI_WPSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define QSPI_WPSR_OFFSET                    (0xE8)                                        /**<  (QSPI_WPSR) Write Protection Status Register  Offset */
@@ -655,14 +689,14 @@ typedef struct {
   __O  uint32_t QSPI_IDR;       /**< (QSPI Offset: 0x18) Interrupt Disable Register */
   __I  uint32_t QSPI_IMR;       /**< (QSPI Offset: 0x1C) Interrupt Mask Register */
   __IO uint32_t QSPI_SCR;       /**< (QSPI Offset: 0x20) Serial Clock Register */
-  RoReg8  Reserved1[0xC];
+  __I  uint8_t                        Reserved1[12];
   __IO uint32_t QSPI_IAR;       /**< (QSPI Offset: 0x30) Instruction Address Register */
   __IO uint32_t QSPI_ICR;       /**< (QSPI Offset: 0x34) Instruction Code Register */
   __IO uint32_t QSPI_IFR;       /**< (QSPI Offset: 0x38) Instruction Frame Register */
-  RoReg8  Reserved2[0x4];
+  __I  uint8_t                        Reserved2[4];
   __IO uint32_t QSPI_SMR;       /**< (QSPI Offset: 0x40) Scrambling Mode Register */
   __O  uint32_t QSPI_SKR;       /**< (QSPI Offset: 0x44) Scrambling Key Register */
-  RoReg8  Reserved3[0x9C];
+  __I  uint8_t                        Reserved3[156];
   __IO uint32_t QSPI_WPMR;      /**< (QSPI Offset: 0xE4) Write Protection Mode Register */
   __I  uint32_t QSPI_WPSR;      /**< (QSPI Offset: 0xE8) Write Protection Status Register */
 } Qspi;
@@ -679,14 +713,14 @@ typedef struct {
   __O  QSPI_IDR_Type                  QSPI_IDR;       /**< Offset: 0x18 ( /W  32) Interrupt Disable Register */
   __I  QSPI_IMR_Type                  QSPI_IMR;       /**< Offset: 0x1C (R/   32) Interrupt Mask Register */
   __IO QSPI_SCR_Type                  QSPI_SCR;       /**< Offset: 0x20 (R/W  32) Serial Clock Register */
-  __I  uint32_t                       Reserved1[3];
+  __I  uint8_t                        Reserved1[12];
   __IO QSPI_IAR_Type                  QSPI_IAR;       /**< Offset: 0x30 (R/W  32) Instruction Address Register */
   __IO QSPI_ICR_Type                  QSPI_ICR;       /**< Offset: 0x34 (R/W  32) Instruction Code Register */
   __IO QSPI_IFR_Type                  QSPI_IFR;       /**< Offset: 0x38 (R/W  32) Instruction Frame Register */
-  __I  uint32_t                       Reserved2[1];
+  __I  uint8_t                        Reserved2[4];
   __IO QSPI_SMR_Type                  QSPI_SMR;       /**< Offset: 0x40 (R/W  32) Scrambling Mode Register */
   __O  QSPI_SKR_Type                  QSPI_SKR;       /**< Offset: 0x44 ( /W  32) Scrambling Key Register */
-  __I  uint32_t                       Reserved3[39];
+  __I  uint8_t                        Reserved3[156];
   __IO QSPI_WPMR_Type                 QSPI_WPMR;      /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
   __I  QSPI_WPSR_Type                 QSPI_WPSR;      /**< Offset: 0xE8 (R/   32) Write Protection Status Register */
 } Qspi;

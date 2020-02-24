@@ -3,11 +3,13 @@
  *
  * \brief Component description for UART
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- UART_CR : (UART Offset: 0x00) (/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -61,6 +64,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } UART_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define UART_CR_OFFSET                      (0x00)                                        /**<  (UART_CR) Control Register  Offset */
@@ -95,6 +99,7 @@ typedef union {
 
 /* -------- UART_MR : (UART Offset: 0x04) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :4;                        /**< bit:   0..3  Reserved */
@@ -108,6 +113,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } UART_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define UART_MR_OFFSET                      (0x04)                                        /**<  (UART_MR) Mode Register  Offset */
@@ -156,6 +162,7 @@ typedef union {
 
 /* -------- UART_IER : (UART Offset: 0x08) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXRDY:1;                   /**< bit:      0  Enable RXRDY Interrupt                   */
@@ -172,6 +179,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } UART_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define UART_IER_OFFSET                     (0x08)                                        /**<  (UART_IER) Interrupt Enable Register  Offset */
@@ -203,6 +211,7 @@ typedef union {
 
 /* -------- UART_IDR : (UART Offset: 0x0c) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXRDY:1;                   /**< bit:      0  Disable RXRDY Interrupt                  */
@@ -219,6 +228,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } UART_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define UART_IDR_OFFSET                     (0x0C)                                        /**<  (UART_IDR) Interrupt Disable Register  Offset */
@@ -250,6 +260,7 @@ typedef union {
 
 /* -------- UART_IMR : (UART Offset: 0x10) (R/ 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXRDY:1;                   /**< bit:      0  Mask RXRDY Interrupt                     */
@@ -266,6 +277,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } UART_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define UART_IMR_OFFSET                     (0x10)                                        /**<  (UART_IMR) Interrupt Mask Register  Offset */
@@ -297,6 +309,7 @@ typedef union {
 
 /* -------- UART_SR : (UART Offset: 0x14) (R/ 32) Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXRDY:1;                   /**< bit:      0  Receiver Ready                           */
@@ -313,6 +326,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } UART_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define UART_SR_OFFSET                      (0x14)                                        /**<  (UART_SR) Status Register  Offset */
@@ -344,6 +358,7 @@ typedef union {
 
 /* -------- UART_RHR : (UART Offset: 0x18) (R/ 32) Receive Holding Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXCHR:8;                   /**< bit:   0..7  Received Character                       */
@@ -351,6 +366,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } UART_RHR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define UART_RHR_OFFSET                     (0x18)                                        /**<  (UART_RHR) Receive Holding Register  Offset */
@@ -364,6 +380,7 @@ typedef union {
 
 /* -------- UART_THR : (UART Offset: 0x1c) (/W 32) Transmit Holding Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXCHR:8;                   /**< bit:   0..7  Character to be Transmitted              */
@@ -371,6 +388,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } UART_THR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define UART_THR_OFFSET                     (0x1C)                                        /**<  (UART_THR) Transmit Holding Register  Offset */
@@ -384,6 +402,7 @@ typedef union {
 
 /* -------- UART_BRGR : (UART Offset: 0x20) (R/W 32) Baud Rate Generator Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CD:16;                     /**< bit:  0..15  Clock Divisor                            */
@@ -391,6 +410,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } UART_BRGR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define UART_BRGR_OFFSET                    (0x20)                                        /**<  (UART_BRGR) Baud Rate Generator Register  Offset */
@@ -404,6 +424,7 @@ typedef union {
 
 /* -------- UART_CMPR : (UART Offset: 0x24) (R/W 32) Comparison Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t VAL1:8;                    /**< bit:   0..7  First Comparison Value for Received Character */
@@ -417,6 +438,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } UART_CMPR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define UART_CMPR_OFFSET                    (0x24)                                        /**<  (UART_CMPR) Comparison Register  Offset */
@@ -443,6 +465,7 @@ typedef union {
 
 /* -------- UART_WPMR : (UART Offset: 0xe4) (R/W 32) Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
@@ -451,6 +474,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } UART_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define UART_WPMR_OFFSET                    (0xE4)                                        /**<  (UART_WPMR) Write Protection Mode Register  Offset */
@@ -481,7 +505,7 @@ typedef struct {
   __O  uint32_t UART_THR;       /**< (UART Offset: 0x1C) Transmit Holding Register */
   __IO uint32_t UART_BRGR;      /**< (UART Offset: 0x20) Baud Rate Generator Register */
   __IO uint32_t UART_CMPR;      /**< (UART Offset: 0x24) Comparison Register */
-  RoReg8  Reserved1[0xBC];
+  __I  uint8_t                        Reserved1[188];
   __IO uint32_t UART_WPMR;      /**< (UART Offset: 0xE4) Write Protection Mode Register */
 } Uart;
 
@@ -498,7 +522,7 @@ typedef struct {
   __O  UART_THR_Type                  UART_THR;       /**< Offset: 0x1C ( /W  32) Transmit Holding Register */
   __IO UART_BRGR_Type                 UART_BRGR;      /**< Offset: 0x20 (R/W  32) Baud Rate Generator Register */
   __IO UART_CMPR_Type                 UART_CMPR;      /**< Offset: 0x24 (R/W  32) Comparison Register */
-  __I  uint32_t                       Reserved1[47];
+  __I  uint8_t                        Reserved1[188];
   __IO UART_WPMR_Type                 UART_WPMR;      /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
 } Uart;
 

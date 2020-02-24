@@ -3,11 +3,13 @@
  *
  * \brief Instance description for RTC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,7 +46,6 @@
 #define REG_RTC_IDR             (0x400E1884) /**< (RTC) Interrupt Disable Register */
 #define REG_RTC_IMR             (0x400E1888) /**< (RTC) Interrupt Mask Register */
 #define REG_RTC_VER             (0x400E188C) /**< (RTC) Valid Entry Register */
-#define REG_RTC_WPMR            (0x400E1944) /**< (RTC) Write Protection Mode Register */
 
 #else
 
@@ -60,11 +61,10 @@
 #define REG_RTC_IDR             (*(__O  uint32_t*)0x400E1884U) /**< (RTC) Interrupt Disable Register */
 #define REG_RTC_IMR             (*(__I  uint32_t*)0x400E1888U) /**< (RTC) Interrupt Mask Register */
 #define REG_RTC_VER             (*(__I  uint32_t*)0x400E188CU) /**< (RTC) Valid Entry Register */
-#define REG_RTC_WPMR            (*(__IO uint32_t*)0x400E1944U) /**< (RTC) Write Protection Mode Register */
 
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for RTC peripheral ========== */
-#define RTC_INSTANCE_ID                          2         
+#define RTC_INSTANCE_ID                          2          
 
 #endif /* _SAME70_RTC_INSTANCE_ */

@@ -3,11 +3,13 @@
  *
  * \brief Instance description for DACC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -71,7 +73,7 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for DACC peripheral ========== */
-#define DACC_INSTANCE_ID                         30        
-#define DACC_DMAC_ID_TX                          30        
+#define DACC_DMAC_ID_TX                          30         
+#define DACC_INSTANCE_ID                         30         
 
 #endif /* _SAME70_DACC_INSTANCE_ */

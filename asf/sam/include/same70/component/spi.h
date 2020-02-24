@@ -3,11 +3,13 @@
  *
  * \brief Component description for SPI
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- SPI_CR : (SPI Offset: 0x00) (/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SPIEN:1;                   /**< bit:      0  SPI Enable                               */
@@ -64,6 +67,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SPI_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SPI_CR_OFFSET                       (0x00)                                        /**<  (SPI_CR) Control Register  Offset */
@@ -101,6 +105,7 @@ typedef union {
 
 /* -------- SPI_MR : (SPI Offset: 0x04) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MSTR:1;                    /**< bit:      0  Master/Slave Mode                        */
@@ -118,6 +123,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SPI_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SPI_MR_OFFSET                       (0x04)                                        /**<  (SPI_MR) Mode Register  Offset */
@@ -152,6 +158,7 @@ typedef union {
 
 /* -------- SPI_RDR : (SPI Offset: 0x08) (R/ 32) Receive Data Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RD:16;                     /**< bit:  0..15  Receive Data                             */
@@ -160,6 +167,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SPI_RDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SPI_RDR_OFFSET                      (0x08)                                        /**<  (SPI_RDR) Receive Data Register  Offset */
@@ -176,6 +184,7 @@ typedef union {
 
 /* -------- SPI_TDR : (SPI Offset: 0x0c) (/W 32) Transmit Data Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TD:16;                     /**< bit:  0..15  Transmit Data                            */
@@ -186,6 +195,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SPI_TDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SPI_TDR_OFFSET                      (0x0C)                                        /**<  (SPI_TDR) Transmit Data Register  Offset */
@@ -205,6 +215,7 @@ typedef union {
 
 /* -------- SPI_SR : (SPI Offset: 0x10) (R/ 32) Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RDRF:1;                    /**< bit:      0  Receive Data Register Full (cleared by reading SPI_RDR) */
@@ -221,6 +232,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SPI_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SPI_SR_OFFSET                       (0x10)                                        /**<  (SPI_SR) Status Register  Offset */
@@ -255,6 +267,7 @@ typedef union {
 
 /* -------- SPI_IER : (SPI Offset: 0x14) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RDRF:1;                    /**< bit:      0  Receive Data Register Full Interrupt Enable */
@@ -269,6 +282,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SPI_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SPI_IER_OFFSET                      (0x14)                                        /**<  (SPI_IER) Interrupt Enable Register  Offset */
@@ -300,6 +314,7 @@ typedef union {
 
 /* -------- SPI_IDR : (SPI Offset: 0x18) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RDRF:1;                    /**< bit:      0  Receive Data Register Full Interrupt Disable */
@@ -314,6 +329,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SPI_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SPI_IDR_OFFSET                      (0x18)                                        /**<  (SPI_IDR) Interrupt Disable Register  Offset */
@@ -345,6 +361,7 @@ typedef union {
 
 /* -------- SPI_IMR : (SPI Offset: 0x1c) (R/ 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RDRF:1;                    /**< bit:      0  Receive Data Register Full Interrupt Mask */
@@ -359,6 +376,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SPI_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SPI_IMR_OFFSET                      (0x1C)                                        /**<  (SPI_IMR) Interrupt Mask Register  Offset */
@@ -390,6 +408,7 @@ typedef union {
 
 /* -------- SPI_CSR : (SPI Offset: 0x30) (R/W 32) Chip Select Register 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CPOL:1;                    /**< bit:      0  Clock Polarity                           */
@@ -403,6 +422,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SPI_CSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SPI_CSR_OFFSET                      (0x30)                                        /**<  (SPI_CSR) Chip Select Register 0  Offset */
@@ -455,6 +475,7 @@ typedef union {
 
 /* -------- SPI_WPMR : (SPI Offset: 0xe4) (R/W 32) Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
@@ -463,6 +484,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SPI_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SPI_WPMR_OFFSET                     (0xE4)                                        /**<  (SPI_WPMR) Write Protection Mode Register  Offset */
@@ -481,6 +503,7 @@ typedef union {
 
 /* -------- SPI_WPSR : (SPI Offset: 0xe8) (R/ 32) Write Protection Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPVS:1;                    /**< bit:      0  Write Protection Violation Status        */
@@ -490,6 +513,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SPI_WPSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SPI_WPSR_OFFSET                     (0xE8)                                        /**<  (SPI_WPSR) Write Protection Status Register  Offset */
@@ -516,9 +540,9 @@ typedef struct {
   __O  uint32_t SPI_IER;        /**< (SPI Offset: 0x14) Interrupt Enable Register */
   __O  uint32_t SPI_IDR;        /**< (SPI Offset: 0x18) Interrupt Disable Register */
   __I  uint32_t SPI_IMR;        /**< (SPI Offset: 0x1C) Interrupt Mask Register */
-  RoReg8  Reserved1[0x10];
+  __I  uint8_t                        Reserved1[16];
   __IO uint32_t SPI_CSR[4];     /**< (SPI Offset: 0x30) Chip Select Register 0 */
-  RoReg8  Reserved2[0xA4];
+  __I  uint8_t                        Reserved2[164];
   __IO uint32_t SPI_WPMR;       /**< (SPI Offset: 0xE4) Write Protection Mode Register */
   __I  uint32_t SPI_WPSR;       /**< (SPI Offset: 0xE8) Write Protection Status Register */
 } Spi;
@@ -534,9 +558,9 @@ typedef struct {
   __O  SPI_IER_Type                   SPI_IER;        /**< Offset: 0x14 ( /W  32) Interrupt Enable Register */
   __O  SPI_IDR_Type                   SPI_IDR;        /**< Offset: 0x18 ( /W  32) Interrupt Disable Register */
   __I  SPI_IMR_Type                   SPI_IMR;        /**< Offset: 0x1C (R/   32) Interrupt Mask Register */
-  __I  uint32_t                       Reserved1[4];
+  __I  uint8_t                        Reserved1[16];
   __IO SPI_CSR_Type                   SPI_CSR[4];     /**< Offset: 0x30 (R/W  32) Chip Select Register 0 */
-  __I  uint32_t                       Reserved2[41];
+  __I  uint8_t                        Reserved2[164];
   __IO SPI_WPMR_Type                  SPI_WPMR;       /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
   __I  SPI_WPSR_Type                  SPI_WPSR;       /**< Offset: 0xE8 (R/   32) Write Protection Status Register */
 } Spi;

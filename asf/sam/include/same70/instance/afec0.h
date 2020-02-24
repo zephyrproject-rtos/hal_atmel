@@ -3,11 +3,13 @@
  *
  * \brief Instance description for AFEC0
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -97,7 +99,7 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for AFEC0 peripheral ========== */
-#define AFEC0_INSTANCE_ID                        29        
-#define AFEC0_DMAC_ID_RX                         35        
+#define AFEC0_DMAC_ID_RX                         35         
+#define AFEC0_INSTANCE_ID                        29         
 
 #endif /* _SAME70_AFEC0_INSTANCE_ */

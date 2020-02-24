@@ -3,11 +3,13 @@
  *
  * \brief Component description for GMAC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,12 +47,14 @@
 
 /* -------- GMAC_SAB : (GMAC Offset: 0x00) (R/W 32) Specific Address 1 Bottom Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ADDR:32;                   /**< bit:  0..31  Specific Address 1                       */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_SAB_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_SAB_OFFSET                     (0x00)                                        /**<  (GMAC_SAB) Specific Address 1 Bottom Register  Offset */
@@ -64,6 +68,7 @@ typedef union {
 
 /* -------- GMAC_SAT : (GMAC Offset: 0x04) (R/W 32) Specific Address 1 Top Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ADDR:16;                   /**< bit:  0..15  Specific Address 1                       */
@@ -71,6 +76,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_SAT_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_SAT_OFFSET                     (0x04)                                        /**<  (GMAC_SAT) Specific Address 1 Top Register  Offset */
@@ -84,6 +90,7 @@ typedef union {
 
 /* -------- GMAC_NCR : (GMAC Offset: 0x00) (R/W 32) Network Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -108,6 +115,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_NCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_NCR_OFFSET                     (0x00)                                        /**<  (GMAC_NCR) Network Control Register  Offset */
@@ -166,6 +174,7 @@ typedef union {
 
 /* -------- GMAC_NCFGR : (GMAC Offset: 0x04) (R/W 32) Network Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SPD:1;                     /**< bit:      0  Speed                                    */
@@ -197,6 +206,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_NCFGR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_NCFGR_OFFSET                   (0x04)                                        /**<  (GMAC_NCFGR) Network Configuration Register  Offset */
@@ -288,6 +298,7 @@ typedef union {
 
 /* -------- GMAC_NSR : (GMAC Offset: 0x08) (R/ 32) Network Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -297,6 +308,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_NSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_NSR_OFFSET                     (0x08)                                        /**<  (GMAC_NSR) Network Status Register  Offset */
@@ -313,6 +325,7 @@ typedef union {
 
 /* -------- GMAC_UR : (GMAC Offset: 0x0c) (R/W 32) User Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RMII:1;                    /**< bit:      0  Reduced MII Mode                         */
@@ -320,6 +333,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_UR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_UR_OFFSET                      (0x0C)                                        /**<  (GMAC_UR) User Register  Offset */
@@ -333,6 +347,7 @@ typedef union {
 
 /* -------- GMAC_DCFGR : (GMAC Offset: 0x10) (R/W 32) DMA Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FBLDO:5;                   /**< bit:   0..4  Fixed Burst Length for DMA Data Operations: */
@@ -349,6 +364,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_DCFGR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_DCFGR_OFFSET                   (0x10)                                        /**<  (GMAC_DCFGR) DMA Configuration Register  Offset */
@@ -399,6 +415,7 @@ typedef union {
 
 /* -------- GMAC_TSR : (GMAC Offset: 0x14) (R/W 32) Transmit Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t UBR:1;                     /**< bit:      0  Used Bit Read                            */
@@ -413,6 +430,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TSR_OFFSET                     (0x14)                                        /**<  (GMAC_TSR) Transmit Status Register  Offset */
@@ -444,6 +462,7 @@ typedef union {
 
 /* -------- GMAC_RBQB : (GMAC Offset: 0x18) (R/W 32) Receive Buffer Queue Base Address Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -451,6 +470,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_RBQB_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_RBQB_OFFSET                    (0x18)                                        /**<  (GMAC_RBQB) Receive Buffer Queue Base Address Register  Offset */
@@ -464,6 +484,7 @@ typedef union {
 
 /* -------- GMAC_TBQB : (GMAC Offset: 0x1c) (R/W 32) Transmit Buffer Queue Base Address Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -471,6 +492,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TBQB_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TBQB_OFFSET                    (0x1C)                                        /**<  (GMAC_TBQB) Transmit Buffer Queue Base Address Register  Offset */
@@ -484,6 +506,7 @@ typedef union {
 
 /* -------- GMAC_RSR : (GMAC Offset: 0x20) (R/W 32) Receive Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BNA:1;                     /**< bit:      0  Buffer Not Available                     */
@@ -494,6 +517,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_RSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_RSR_OFFSET                     (0x20)                                        /**<  (GMAC_RSR) Receive Status Register  Offset */
@@ -516,6 +540,7 @@ typedef union {
 
 /* -------- GMAC_ISR : (GMAC Offset: 0x24) (R/ 32) Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MFS:1;                     /**< bit:      0  Management Frame Sent                    */
@@ -548,6 +573,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ISR_OFFSET                     (0x24)                                        /**<  (GMAC_ISR) Interrupt Status Register  Offset */
@@ -627,6 +653,7 @@ typedef union {
 
 /* -------- GMAC_IER : (GMAC Offset: 0x28) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MFS:1;                     /**< bit:      0  Management Frame Sent                    */
@@ -660,6 +687,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_IER_OFFSET                     (0x28)                                        /**<  (GMAC_IER) Interrupt Enable Register  Offset */
@@ -742,6 +770,7 @@ typedef union {
 
 /* -------- GMAC_IDR : (GMAC Offset: 0x2c) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MFS:1;                     /**< bit:      0  Management Frame Sent                    */
@@ -775,6 +804,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_IDR_OFFSET                     (0x2C)                                        /**<  (GMAC_IDR) Interrupt Disable Register  Offset */
@@ -857,6 +887,7 @@ typedef union {
 
 /* -------- GMAC_IMR : (GMAC Offset: 0x30) (R/W 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MFS:1;                     /**< bit:      0  Management Frame Sent                    */
@@ -890,6 +921,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_IMR_OFFSET                     (0x30)                                        /**<  (GMAC_IMR) Interrupt Mask Register  Offset */
@@ -972,6 +1004,7 @@ typedef union {
 
 /* -------- GMAC_MAN : (GMAC Offset: 0x34) (R/W 32) PHY Maintenance Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DATA:16;                   /**< bit:  0..15  PHY Data                                 */
@@ -984,6 +1017,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_MAN_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_MAN_OFFSET                     (0x34)                                        /**<  (GMAC_MAN) PHY Maintenance Register  Offset */
@@ -1015,6 +1049,7 @@ typedef union {
 
 /* -------- GMAC_RPQ : (GMAC Offset: 0x38) (R/ 32) Received Pause Quantum Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RPQ:16;                    /**< bit:  0..15  Received Pause Quantum                   */
@@ -1022,6 +1057,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_RPQ_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_RPQ_OFFSET                     (0x38)                                        /**<  (GMAC_RPQ) Received Pause Quantum Register  Offset */
@@ -1035,6 +1071,7 @@ typedef union {
 
 /* -------- GMAC_TPQ : (GMAC Offset: 0x3c) (R/W 32) Transmit Pause Quantum Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TPQ:16;                    /**< bit:  0..15  Transmit Pause Quantum                   */
@@ -1042,6 +1079,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TPQ_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TPQ_OFFSET                     (0x3C)                                        /**<  (GMAC_TPQ) Transmit Pause Quantum Register  Offset */
@@ -1055,6 +1093,7 @@ typedef union {
 
 /* -------- GMAC_TPSF : (GMAC Offset: 0x40) (R/W 32) TX Partial Store and Forward Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TPB1ADR:12;                /**< bit:  0..11  Transmit Partial Store and Forward Address */
@@ -1063,6 +1102,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TPSF_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TPSF_OFFSET                    (0x40)                                        /**<  (GMAC_TPSF) TX Partial Store and Forward Register  Offset */
@@ -1079,6 +1119,7 @@ typedef union {
 
 /* -------- GMAC_RPSF : (GMAC Offset: 0x44) (R/W 32) RX Partial Store and Forward Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RPB1ADR:12;                /**< bit:  0..11  Receive Partial Store and Forward Address */
@@ -1087,6 +1128,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_RPSF_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_RPSF_OFFSET                    (0x44)                                        /**<  (GMAC_RPSF) RX Partial Store and Forward Register  Offset */
@@ -1103,6 +1145,7 @@ typedef union {
 
 /* -------- GMAC_RJFML : (GMAC Offset: 0x48) (R/W 32) RX Jumbo Frame Max Length Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FML:14;                    /**< bit:  0..13  Frame Max Length                         */
@@ -1110,6 +1153,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_RJFML_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_RJFML_OFFSET                   (0x48)                                        /**<  (GMAC_RJFML) RX Jumbo Frame Max Length Register  Offset */
@@ -1123,12 +1167,14 @@ typedef union {
 
 /* -------- GMAC_HRB : (GMAC Offset: 0x80) (R/W 32) Hash Register Bottom -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ADDR:32;                   /**< bit:  0..31  Hash Address                             */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_HRB_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_HRB_OFFSET                     (0x80)                                        /**<  (GMAC_HRB) Hash Register Bottom  Offset */
@@ -1142,12 +1188,14 @@ typedef union {
 
 /* -------- GMAC_HRT : (GMAC Offset: 0x84) (R/W 32) Hash Register Top -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ADDR:32;                   /**< bit:  0..31  Hash Address                             */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_HRT_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_HRT_OFFSET                     (0x84)                                        /**<  (GMAC_HRT) Hash Register Top  Offset */
@@ -1161,14 +1209,20 @@ typedef union {
 
 /* -------- GMAC_TIDM1 : (GMAC Offset: 0xa8) (R/W 32) Type ID Match 1 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TID:16;                    /**< bit:  0..15  Type ID Match 1                          */
     uint32_t :15;                       /**< bit: 16..30  Reserved */
     uint32_t ENID1:1;                   /**< bit:     31  Enable Copying of TID Matched Frames     */
   } bit;                                /**< Structure used for bit  access */
+  struct {
+    uint32_t :31;                       /**< bit:  0..30  Reserved */
+    uint32_t ENID:1;                    /**< bit:     31  Enable Copying of TID Matched Frames     */
+  } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TIDM1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TIDM1_OFFSET                   (0xA8)                                        /**<  (GMAC_TIDM1) Type ID Match 1 Register  Offset */
@@ -1182,17 +1236,26 @@ typedef union {
 #define GMAC_TIDM1_MASK                     _U_(0x8000FFFF)                                /**< \deprecated (GMAC_TIDM1) Register MASK  (Use GMAC_TIDM1_Msk instead)  */
 #define GMAC_TIDM1_Msk                      _U_(0x8000FFFF)                                /**< (GMAC_TIDM1) Register Mask  */
 
+#define GMAC_TIDM1_ENID_Pos                 31                                             /**< (GMAC_TIDM1 Position) Enable Copying of TID Matched Frames */
+#define GMAC_TIDM1_ENID_Msk                 (_U_(0x1) << GMAC_TIDM1_ENID_Pos)              /**< (GMAC_TIDM1 Mask) ENID */
+#define GMAC_TIDM1_ENID(value)              (GMAC_TIDM1_ENID_Msk & ((value) << GMAC_TIDM1_ENID_Pos))  
 
 /* -------- GMAC_TIDM2 : (GMAC Offset: 0xac) (R/W 32) Type ID Match 2 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TID:16;                    /**< bit:  0..15  Type ID Match 2                          */
     uint32_t :15;                       /**< bit: 16..30  Reserved */
     uint32_t ENID2:1;                   /**< bit:     31  Enable Copying of TID Matched Frames     */
   } bit;                                /**< Structure used for bit  access */
+  struct {
+    uint32_t :31;                       /**< bit:  0..30  Reserved */
+    uint32_t ENID:1;                    /**< bit:     31  Enable Copying of TID Matched Frames     */
+  } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TIDM2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TIDM2_OFFSET                   (0xAC)                                        /**<  (GMAC_TIDM2) Type ID Match 2 Register  Offset */
@@ -1206,17 +1269,26 @@ typedef union {
 #define GMAC_TIDM2_MASK                     _U_(0x8000FFFF)                                /**< \deprecated (GMAC_TIDM2) Register MASK  (Use GMAC_TIDM2_Msk instead)  */
 #define GMAC_TIDM2_Msk                      _U_(0x8000FFFF)                                /**< (GMAC_TIDM2) Register Mask  */
 
+#define GMAC_TIDM2_ENID_Pos                 31                                             /**< (GMAC_TIDM2 Position) Enable Copying of TID Matched Frames */
+#define GMAC_TIDM2_ENID_Msk                 (_U_(0x1) << GMAC_TIDM2_ENID_Pos)              /**< (GMAC_TIDM2 Mask) ENID */
+#define GMAC_TIDM2_ENID(value)              (GMAC_TIDM2_ENID_Msk & ((value) << GMAC_TIDM2_ENID_Pos))  
 
 /* -------- GMAC_TIDM3 : (GMAC Offset: 0xb0) (R/W 32) Type ID Match 3 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TID:16;                    /**< bit:  0..15  Type ID Match 3                          */
     uint32_t :15;                       /**< bit: 16..30  Reserved */
     uint32_t ENID3:1;                   /**< bit:     31  Enable Copying of TID Matched Frames     */
   } bit;                                /**< Structure used for bit  access */
+  struct {
+    uint32_t :31;                       /**< bit:  0..30  Reserved */
+    uint32_t ENID:1;                    /**< bit:     31  Enable Copying of TID Matched Frames     */
+  } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TIDM3_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TIDM3_OFFSET                   (0xB0)                                        /**<  (GMAC_TIDM3) Type ID Match 3 Register  Offset */
@@ -1230,17 +1302,26 @@ typedef union {
 #define GMAC_TIDM3_MASK                     _U_(0x8000FFFF)                                /**< \deprecated (GMAC_TIDM3) Register MASK  (Use GMAC_TIDM3_Msk instead)  */
 #define GMAC_TIDM3_Msk                      _U_(0x8000FFFF)                                /**< (GMAC_TIDM3) Register Mask  */
 
+#define GMAC_TIDM3_ENID_Pos                 31                                             /**< (GMAC_TIDM3 Position) Enable Copying of TID Matched Frames */
+#define GMAC_TIDM3_ENID_Msk                 (_U_(0x1) << GMAC_TIDM3_ENID_Pos)              /**< (GMAC_TIDM3 Mask) ENID */
+#define GMAC_TIDM3_ENID(value)              (GMAC_TIDM3_ENID_Msk & ((value) << GMAC_TIDM3_ENID_Pos))  
 
 /* -------- GMAC_TIDM4 : (GMAC Offset: 0xb4) (R/W 32) Type ID Match 4 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TID:16;                    /**< bit:  0..15  Type ID Match 4                          */
     uint32_t :15;                       /**< bit: 16..30  Reserved */
     uint32_t ENID4:1;                   /**< bit:     31  Enable Copying of TID Matched Frames     */
   } bit;                                /**< Structure used for bit  access */
+  struct {
+    uint32_t :31;                       /**< bit:  0..30  Reserved */
+    uint32_t ENID:1;                    /**< bit:     31  Enable Copying of TID Matched Frames     */
+  } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TIDM4_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TIDM4_OFFSET                   (0xB4)                                        /**<  (GMAC_TIDM4) Type ID Match 4 Register  Offset */
@@ -1254,9 +1335,13 @@ typedef union {
 #define GMAC_TIDM4_MASK                     _U_(0x8000FFFF)                                /**< \deprecated (GMAC_TIDM4) Register MASK  (Use GMAC_TIDM4_Msk instead)  */
 #define GMAC_TIDM4_Msk                      _U_(0x8000FFFF)                                /**< (GMAC_TIDM4) Register Mask  */
 
+#define GMAC_TIDM4_ENID_Pos                 31                                             /**< (GMAC_TIDM4 Position) Enable Copying of TID Matched Frames */
+#define GMAC_TIDM4_ENID_Msk                 (_U_(0x1) << GMAC_TIDM4_ENID_Pos)              /**< (GMAC_TIDM4 Mask) ENID */
+#define GMAC_TIDM4_ENID(value)              (GMAC_TIDM4_ENID_Msk & ((value) << GMAC_TIDM4_ENID_Pos))  
 
 /* -------- GMAC_WOL : (GMAC Offset: 0xb8) (R/W 32) Wake on LAN Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IP:16;                     /**< bit:  0..15  ARP Request IP Address                   */
@@ -1266,8 +1351,14 @@ typedef union {
     uint32_t MTI:1;                     /**< bit:     19  Multicast Hash Event Enable              */
     uint32_t :12;                       /**< bit: 20..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct {
+    uint32_t :18;                       /**< bit:  0..17  Reserved */
+    uint32_t SA:1;                      /**< bit:     18  Specific Address Register x Event Enable */
+    uint32_t :13;                       /**< bit: 19..31 Reserved */
+  } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_WOL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_WOL_OFFSET                     (0xB8)                                        /**<  (GMAC_WOL) Wake on LAN Register  Offset */
@@ -1290,9 +1381,13 @@ typedef union {
 #define GMAC_WOL_MASK                       _U_(0xFFFFF)                                   /**< \deprecated (GMAC_WOL) Register MASK  (Use GMAC_WOL_Msk instead)  */
 #define GMAC_WOL_Msk                        _U_(0xFFFFF)                                   /**< (GMAC_WOL) Register Mask  */
 
+#define GMAC_WOL_SA_Pos                     18                                             /**< (GMAC_WOL Position) Specific Address Register x Event Enable */
+#define GMAC_WOL_SA_Msk                     (_U_(0x1) << GMAC_WOL_SA_Pos)                  /**< (GMAC_WOL Mask) SA */
+#define GMAC_WOL_SA(value)                  (GMAC_WOL_SA_Msk & ((value) << GMAC_WOL_SA_Pos))  
 
 /* -------- GMAC_IPGS : (GMAC Offset: 0xbc) (R/W 32) IPG Stretch Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FL:16;                     /**< bit:  0..15  Frame Length                             */
@@ -1300,6 +1395,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_IPGS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_IPGS_OFFSET                    (0xBC)                                        /**<  (GMAC_IPGS) IPG Stretch Register  Offset */
@@ -1313,6 +1409,7 @@ typedef union {
 
 /* -------- GMAC_SVLAN : (GMAC Offset: 0xc0) (R/W 32) Stacked VLAN Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t VLAN_TYPE:16;              /**< bit:  0..15  User Defined VLAN_TYPE Field             */
@@ -1321,6 +1418,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_SVLAN_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_SVLAN_OFFSET                   (0xC0)                                        /**<  (GMAC_SVLAN) Stacked VLAN Register  Offset */
@@ -1337,6 +1435,7 @@ typedef union {
 
 /* -------- GMAC_TPFCP : (GMAC Offset: 0xc4) (R/W 32) Transmit PFC Pause Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PEV:8;                     /**< bit:   0..7  Priority Enable Vector                   */
@@ -1345,6 +1444,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TPFCP_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TPFCP_OFFSET                   (0xC4)                                        /**<  (GMAC_TPFCP) Transmit PFC Pause Register  Offset */
@@ -1361,12 +1461,14 @@ typedef union {
 
 /* -------- GMAC_SAMB1 : (GMAC Offset: 0xc8) (R/W 32) Specific Address 1 Mask Bottom Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ADDR:32;                   /**< bit:  0..31  Specific Address 1 Mask                  */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_SAMB1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_SAMB1_OFFSET                   (0xC8)                                        /**<  (GMAC_SAMB1) Specific Address 1 Mask Bottom Register  Offset */
@@ -1380,6 +1482,7 @@ typedef union {
 
 /* -------- GMAC_SAMT1 : (GMAC Offset: 0xcc) (R/W 32) Specific Address 1 Mask Top Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ADDR:16;                   /**< bit:  0..15  Specific Address 1 Mask                  */
@@ -1387,6 +1490,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_SAMT1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_SAMT1_OFFSET                   (0xCC)                                        /**<  (GMAC_SAMT1) Specific Address 1 Mask Top Register  Offset */
@@ -1400,6 +1504,7 @@ typedef union {
 
 /* -------- GMAC_NSC : (GMAC Offset: 0xdc) (R/W 32) 1588 Timer Nanosecond Comparison Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NANOSEC:22;                /**< bit:  0..21  1588 Timer Nanosecond Comparison Value   */
@@ -1407,6 +1512,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_NSC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_NSC_OFFSET                     (0xDC)                                        /**<  (GMAC_NSC) 1588 Timer Nanosecond Comparison Register  Offset */
@@ -1420,12 +1526,14 @@ typedef union {
 
 /* -------- GMAC_SCL : (GMAC Offset: 0xe0) (R/W 32) 1588 Timer Second Comparison Low Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SEC:32;                    /**< bit:  0..31  1588 Timer Second Comparison Value       */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_SCL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_SCL_OFFSET                     (0xE0)                                        /**<  (GMAC_SCL) 1588 Timer Second Comparison Low Register  Offset */
@@ -1439,6 +1547,7 @@ typedef union {
 
 /* -------- GMAC_SCH : (GMAC Offset: 0xe4) (R/W 32) 1588 Timer Second Comparison High Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SEC:16;                    /**< bit:  0..15  1588 Timer Second Comparison Value       */
@@ -1446,6 +1555,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_SCH_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_SCH_OFFSET                     (0xE4)                                        /**<  (GMAC_SCH) 1588 Timer Second Comparison High Register  Offset */
@@ -1459,6 +1569,7 @@ typedef union {
 
 /* -------- GMAC_EFTSH : (GMAC Offset: 0xe8) (R/ 32) PTP Event Frame Transmitted Seconds High Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RUD:16;                    /**< bit:  0..15  Register Update                          */
@@ -1466,6 +1577,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_EFTSH_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_EFTSH_OFFSET                   (0xE8)                                        /**<  (GMAC_EFTSH) PTP Event Frame Transmitted Seconds High Register  Offset */
@@ -1479,6 +1591,7 @@ typedef union {
 
 /* -------- GMAC_EFRSH : (GMAC Offset: 0xec) (R/ 32) PTP Event Frame Received Seconds High Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RUD:16;                    /**< bit:  0..15  Register Update                          */
@@ -1486,6 +1599,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_EFRSH_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_EFRSH_OFFSET                   (0xEC)                                        /**<  (GMAC_EFRSH) PTP Event Frame Received Seconds High Register  Offset */
@@ -1499,6 +1613,7 @@ typedef union {
 
 /* -------- GMAC_PEFTSH : (GMAC Offset: 0xf0) (R/ 32) PTP Peer Event Frame Transmitted Seconds High Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RUD:16;                    /**< bit:  0..15  Register Update                          */
@@ -1506,6 +1621,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_PEFTSH_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_PEFTSH_OFFSET                  (0xF0)                                        /**<  (GMAC_PEFTSH) PTP Peer Event Frame Transmitted Seconds High Register  Offset */
@@ -1519,6 +1635,7 @@ typedef union {
 
 /* -------- GMAC_PEFRSH : (GMAC Offset: 0xf4) (R/ 32) PTP Peer Event Frame Received Seconds High Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RUD:16;                    /**< bit:  0..15  Register Update                          */
@@ -1526,6 +1643,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_PEFRSH_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_PEFRSH_OFFSET                  (0xF4)                                        /**<  (GMAC_PEFRSH) PTP Peer Event Frame Received Seconds High Register  Offset */
@@ -1539,12 +1657,14 @@ typedef union {
 
 /* -------- GMAC_OTLO : (GMAC Offset: 0x100) (R/ 32) Octets Transmitted Low Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXO:32;                    /**< bit:  0..31  Transmitted Octets                       */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_OTLO_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_OTLO_OFFSET                    (0x100)                                       /**<  (GMAC_OTLO) Octets Transmitted Low Register  Offset */
@@ -1558,6 +1678,7 @@ typedef union {
 
 /* -------- GMAC_OTHI : (GMAC Offset: 0x104) (R/ 32) Octets Transmitted High Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXO:16;                    /**< bit:  0..15  Transmitted Octets                       */
@@ -1565,6 +1686,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_OTHI_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_OTHI_OFFSET                    (0x104)                                       /**<  (GMAC_OTHI) Octets Transmitted High Register  Offset */
@@ -1578,12 +1700,14 @@ typedef union {
 
 /* -------- GMAC_FT : (GMAC Offset: 0x108) (R/ 32) Frames Transmitted Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FTX:32;                    /**< bit:  0..31  Frames Transmitted without Error         */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_FT_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_FT_OFFSET                      (0x108)                                       /**<  (GMAC_FT) Frames Transmitted Register  Offset */
@@ -1597,12 +1721,14 @@ typedef union {
 
 /* -------- GMAC_BCFT : (GMAC Offset: 0x10c) (R/ 32) Broadcast Frames Transmitted Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BFTX:32;                   /**< bit:  0..31  Broadcast Frames Transmitted without Error */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_BCFT_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_BCFT_OFFSET                    (0x10C)                                       /**<  (GMAC_BCFT) Broadcast Frames Transmitted Register  Offset */
@@ -1616,12 +1742,14 @@ typedef union {
 
 /* -------- GMAC_MFT : (GMAC Offset: 0x110) (R/ 32) Multicast Frames Transmitted Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MFTX:32;                   /**< bit:  0..31  Multicast Frames Transmitted without Error */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_MFT_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_MFT_OFFSET                     (0x110)                                       /**<  (GMAC_MFT) Multicast Frames Transmitted Register  Offset */
@@ -1635,6 +1763,7 @@ typedef union {
 
 /* -------- GMAC_PFT : (GMAC Offset: 0x114) (R/ 32) Pause Frames Transmitted Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PFTX:16;                   /**< bit:  0..15  Pause Frames Transmitted Register        */
@@ -1642,6 +1771,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_PFT_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_PFT_OFFSET                     (0x114)                                       /**<  (GMAC_PFT) Pause Frames Transmitted Register  Offset */
@@ -1655,12 +1785,14 @@ typedef union {
 
 /* -------- GMAC_BFT64 : (GMAC Offset: 0x118) (R/ 32) 64 Byte Frames Transmitted Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NFTX:32;                   /**< bit:  0..31  64 Byte Frames Transmitted without Error */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_BFT64_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_BFT64_OFFSET                   (0x118)                                       /**<  (GMAC_BFT64) 64 Byte Frames Transmitted Register  Offset */
@@ -1674,12 +1806,14 @@ typedef union {
 
 /* -------- GMAC_TBFT127 : (GMAC Offset: 0x11c) (R/ 32) 65 to 127 Byte Frames Transmitted Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NFTX:32;                   /**< bit:  0..31  65 to 127 Byte Frames Transmitted without Error */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TBFT127_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TBFT127_OFFSET                 (0x11C)                                       /**<  (GMAC_TBFT127) 65 to 127 Byte Frames Transmitted Register  Offset */
@@ -1693,12 +1827,14 @@ typedef union {
 
 /* -------- GMAC_TBFT255 : (GMAC Offset: 0x120) (R/ 32) 128 to 255 Byte Frames Transmitted Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NFTX:32;                   /**< bit:  0..31  128 to 255 Byte Frames Transmitted without Error */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TBFT255_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TBFT255_OFFSET                 (0x120)                                       /**<  (GMAC_TBFT255) 128 to 255 Byte Frames Transmitted Register  Offset */
@@ -1712,12 +1848,14 @@ typedef union {
 
 /* -------- GMAC_TBFT511 : (GMAC Offset: 0x124) (R/ 32) 256 to 511 Byte Frames Transmitted Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NFTX:32;                   /**< bit:  0..31  256 to 511 Byte Frames Transmitted without Error */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TBFT511_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TBFT511_OFFSET                 (0x124)                                       /**<  (GMAC_TBFT511) 256 to 511 Byte Frames Transmitted Register  Offset */
@@ -1731,12 +1869,14 @@ typedef union {
 
 /* -------- GMAC_TBFT1023 : (GMAC Offset: 0x128) (R/ 32) 512 to 1023 Byte Frames Transmitted Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NFTX:32;                   /**< bit:  0..31  512 to 1023 Byte Frames Transmitted without Error */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TBFT1023_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TBFT1023_OFFSET                (0x128)                                       /**<  (GMAC_TBFT1023) 512 to 1023 Byte Frames Transmitted Register  Offset */
@@ -1750,12 +1890,14 @@ typedef union {
 
 /* -------- GMAC_TBFT1518 : (GMAC Offset: 0x12c) (R/ 32) 1024 to 1518 Byte Frames Transmitted Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NFTX:32;                   /**< bit:  0..31  1024 to 1518 Byte Frames Transmitted without Error */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TBFT1518_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TBFT1518_OFFSET                (0x12C)                                       /**<  (GMAC_TBFT1518) 1024 to 1518 Byte Frames Transmitted Register  Offset */
@@ -1769,12 +1911,14 @@ typedef union {
 
 /* -------- GMAC_GTBFT1518 : (GMAC Offset: 0x130) (R/ 32) Greater Than 1518 Byte Frames Transmitted Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NFTX:32;                   /**< bit:  0..31  Greater than 1518 Byte Frames Transmitted without Error */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_GTBFT1518_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_GTBFT1518_OFFSET               (0x130)                                       /**<  (GMAC_GTBFT1518) Greater Than 1518 Byte Frames Transmitted Register  Offset */
@@ -1788,6 +1932,7 @@ typedef union {
 
 /* -------- GMAC_TUR : (GMAC Offset: 0x134) (R/ 32) Transmit Underruns Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXUNR:10;                  /**< bit:   0..9  Transmit Underruns                       */
@@ -1795,6 +1940,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TUR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TUR_OFFSET                     (0x134)                                       /**<  (GMAC_TUR) Transmit Underruns Register  Offset */
@@ -1808,6 +1954,7 @@ typedef union {
 
 /* -------- GMAC_SCF : (GMAC Offset: 0x138) (R/ 32) Single Collision Frames Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SCOL:18;                   /**< bit:  0..17  Single Collision                         */
@@ -1815,6 +1962,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_SCF_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_SCF_OFFSET                     (0x138)                                       /**<  (GMAC_SCF) Single Collision Frames Register  Offset */
@@ -1828,6 +1976,7 @@ typedef union {
 
 /* -------- GMAC_MCF : (GMAC Offset: 0x13c) (R/ 32) Multiple Collision Frames Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MCOL:18;                   /**< bit:  0..17  Multiple Collision                       */
@@ -1835,6 +1984,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_MCF_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_MCF_OFFSET                     (0x13C)                                       /**<  (GMAC_MCF) Multiple Collision Frames Register  Offset */
@@ -1848,6 +1998,7 @@ typedef union {
 
 /* -------- GMAC_EC : (GMAC Offset: 0x140) (R/ 32) Excessive Collisions Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t XCOL:10;                   /**< bit:   0..9  Excessive Collisions                     */
@@ -1855,6 +2006,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_EC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_EC_OFFSET                      (0x140)                                       /**<  (GMAC_EC) Excessive Collisions Register  Offset */
@@ -1868,6 +2020,7 @@ typedef union {
 
 /* -------- GMAC_LC : (GMAC Offset: 0x144) (R/ 32) Late Collisions Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t LCOL:10;                   /**< bit:   0..9  Late Collisions                          */
@@ -1875,6 +2028,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_LC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_LC_OFFSET                      (0x144)                                       /**<  (GMAC_LC) Late Collisions Register  Offset */
@@ -1888,6 +2042,7 @@ typedef union {
 
 /* -------- GMAC_DTF : (GMAC Offset: 0x148) (R/ 32) Deferred Transmission Frames Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DEFT:18;                   /**< bit:  0..17  Deferred Transmission                    */
@@ -1895,6 +2050,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_DTF_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_DTF_OFFSET                     (0x148)                                       /**<  (GMAC_DTF) Deferred Transmission Frames Register  Offset */
@@ -1908,6 +2064,7 @@ typedef union {
 
 /* -------- GMAC_CSE : (GMAC Offset: 0x14c) (R/ 32) Carrier Sense Errors Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CSR:10;                    /**< bit:   0..9  Carrier Sense Error                      */
@@ -1915,6 +2072,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_CSE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_CSE_OFFSET                     (0x14C)                                       /**<  (GMAC_CSE) Carrier Sense Errors Register  Offset */
@@ -1928,12 +2086,14 @@ typedef union {
 
 /* -------- GMAC_ORLO : (GMAC Offset: 0x150) (R/ 32) Octets Received Low Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXO:32;                    /**< bit:  0..31  Received Octets                          */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ORLO_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ORLO_OFFSET                    (0x150)                                       /**<  (GMAC_ORLO) Octets Received Low Received Register  Offset */
@@ -1947,6 +2107,7 @@ typedef union {
 
 /* -------- GMAC_ORHI : (GMAC Offset: 0x154) (R/ 32) Octets Received High Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXO:16;                    /**< bit:  0..15  Received Octets                          */
@@ -1954,6 +2115,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ORHI_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ORHI_OFFSET                    (0x154)                                       /**<  (GMAC_ORHI) Octets Received High Received Register  Offset */
@@ -1967,12 +2129,14 @@ typedef union {
 
 /* -------- GMAC_FR : (GMAC Offset: 0x158) (R/ 32) Frames Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FRX:32;                    /**< bit:  0..31  Frames Received without Error            */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_FR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_FR_OFFSET                      (0x158)                                       /**<  (GMAC_FR) Frames Received Register  Offset */
@@ -1986,12 +2150,14 @@ typedef union {
 
 /* -------- GMAC_BCFR : (GMAC Offset: 0x15c) (R/ 32) Broadcast Frames Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BFRX:32;                   /**< bit:  0..31  Broadcast Frames Received without Error  */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_BCFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_BCFR_OFFSET                    (0x15C)                                       /**<  (GMAC_BCFR) Broadcast Frames Received Register  Offset */
@@ -2005,12 +2171,14 @@ typedef union {
 
 /* -------- GMAC_MFR : (GMAC Offset: 0x160) (R/ 32) Multicast Frames Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MFRX:32;                   /**< bit:  0..31  Multicast Frames Received without Error  */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_MFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_MFR_OFFSET                     (0x160)                                       /**<  (GMAC_MFR) Multicast Frames Received Register  Offset */
@@ -2024,6 +2192,7 @@ typedef union {
 
 /* -------- GMAC_PFR : (GMAC Offset: 0x164) (R/ 32) Pause Frames Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PFRX:16;                   /**< bit:  0..15  Pause Frames Received Register           */
@@ -2031,6 +2200,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_PFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_PFR_OFFSET                     (0x164)                                       /**<  (GMAC_PFR) Pause Frames Received Register  Offset */
@@ -2044,12 +2214,14 @@ typedef union {
 
 /* -------- GMAC_BFR64 : (GMAC Offset: 0x168) (R/ 32) 64 Byte Frames Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NFRX:32;                   /**< bit:  0..31  64 Byte Frames Received without Error    */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_BFR64_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_BFR64_OFFSET                   (0x168)                                       /**<  (GMAC_BFR64) 64 Byte Frames Received Register  Offset */
@@ -2063,12 +2235,14 @@ typedef union {
 
 /* -------- GMAC_TBFR127 : (GMAC Offset: 0x16c) (R/ 32) 65 to 127 Byte Frames Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NFRX:32;                   /**< bit:  0..31  65 to 127 Byte Frames Received without Error */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TBFR127_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TBFR127_OFFSET                 (0x16C)                                       /**<  (GMAC_TBFR127) 65 to 127 Byte Frames Received Register  Offset */
@@ -2082,12 +2256,14 @@ typedef union {
 
 /* -------- GMAC_TBFR255 : (GMAC Offset: 0x170) (R/ 32) 128 to 255 Byte Frames Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NFRX:32;                   /**< bit:  0..31  128 to 255 Byte Frames Received without Error */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TBFR255_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TBFR255_OFFSET                 (0x170)                                       /**<  (GMAC_TBFR255) 128 to 255 Byte Frames Received Register  Offset */
@@ -2101,12 +2277,14 @@ typedef union {
 
 /* -------- GMAC_TBFR511 : (GMAC Offset: 0x174) (R/ 32) 256 to 511 Byte Frames Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NFRX:32;                   /**< bit:  0..31  256 to 511 Byte Frames Received without Error */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TBFR511_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TBFR511_OFFSET                 (0x174)                                       /**<  (GMAC_TBFR511) 256 to 511 Byte Frames Received Register  Offset */
@@ -2120,12 +2298,14 @@ typedef union {
 
 /* -------- GMAC_TBFR1023 : (GMAC Offset: 0x178) (R/ 32) 512 to 1023 Byte Frames Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NFRX:32;                   /**< bit:  0..31  512 to 1023 Byte Frames Received without Error */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TBFR1023_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TBFR1023_OFFSET                (0x178)                                       /**<  (GMAC_TBFR1023) 512 to 1023 Byte Frames Received Register  Offset */
@@ -2139,12 +2319,14 @@ typedef union {
 
 /* -------- GMAC_TBFR1518 : (GMAC Offset: 0x17c) (R/ 32) 1024 to 1518 Byte Frames Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NFRX:32;                   /**< bit:  0..31  1024 to 1518 Byte Frames Received without Error */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TBFR1518_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TBFR1518_OFFSET                (0x17C)                                       /**<  (GMAC_TBFR1518) 1024 to 1518 Byte Frames Received Register  Offset */
@@ -2158,12 +2340,14 @@ typedef union {
 
 /* -------- GMAC_TMXBFR : (GMAC Offset: 0x180) (R/ 32) 1519 to Maximum Byte Frames Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NFRX:32;                   /**< bit:  0..31  1519 to Maximum Byte Frames Received without Error */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TMXBFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TMXBFR_OFFSET                  (0x180)                                       /**<  (GMAC_TMXBFR) 1519 to Maximum Byte Frames Received Register  Offset */
@@ -2177,6 +2361,7 @@ typedef union {
 
 /* -------- GMAC_UFR : (GMAC Offset: 0x184) (R/ 32) Undersize Frames Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t UFRX:10;                   /**< bit:   0..9  Undersize Frames Received                */
@@ -2184,6 +2369,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_UFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_UFR_OFFSET                     (0x184)                                       /**<  (GMAC_UFR) Undersize Frames Received Register  Offset */
@@ -2197,6 +2383,7 @@ typedef union {
 
 /* -------- GMAC_OFR : (GMAC Offset: 0x188) (R/ 32) Oversize Frames Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFRX:10;                   /**< bit:   0..9  Oversized Frames Received                */
@@ -2204,6 +2391,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_OFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_OFR_OFFSET                     (0x188)                                       /**<  (GMAC_OFR) Oversize Frames Received Register  Offset */
@@ -2217,6 +2405,7 @@ typedef union {
 
 /* -------- GMAC_JR : (GMAC Offset: 0x18c) (R/ 32) Jabbers Received Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t JRX:10;                    /**< bit:   0..9  Jabbers Received                         */
@@ -2224,6 +2413,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_JR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_JR_OFFSET                      (0x18C)                                       /**<  (GMAC_JR) Jabbers Received Register  Offset */
@@ -2237,6 +2427,7 @@ typedef union {
 
 /* -------- GMAC_FCSE : (GMAC Offset: 0x190) (R/ 32) Frame Check Sequence Errors Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FCKR:10;                   /**< bit:   0..9  Frame Check Sequence Errors              */
@@ -2244,6 +2435,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_FCSE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_FCSE_OFFSET                    (0x190)                                       /**<  (GMAC_FCSE) Frame Check Sequence Errors Register  Offset */
@@ -2257,6 +2449,7 @@ typedef union {
 
 /* -------- GMAC_LFFE : (GMAC Offset: 0x194) (R/ 32) Length Field Frame Errors Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t LFER:10;                   /**< bit:   0..9  Length Field Frame Errors                */
@@ -2264,6 +2457,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_LFFE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_LFFE_OFFSET                    (0x194)                                       /**<  (GMAC_LFFE) Length Field Frame Errors Register  Offset */
@@ -2277,6 +2471,7 @@ typedef union {
 
 /* -------- GMAC_RSE : (GMAC Offset: 0x198) (R/ 32) Receive Symbol Errors Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXSE:10;                   /**< bit:   0..9  Receive Symbol Errors                    */
@@ -2284,6 +2479,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_RSE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_RSE_OFFSET                     (0x198)                                       /**<  (GMAC_RSE) Receive Symbol Errors Register  Offset */
@@ -2297,6 +2493,7 @@ typedef union {
 
 /* -------- GMAC_AE : (GMAC Offset: 0x19c) (R/ 32) Alignment Errors Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t AER:10;                    /**< bit:   0..9  Alignment Errors                         */
@@ -2304,6 +2501,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_AE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_AE_OFFSET                      (0x19C)                                       /**<  (GMAC_AE) Alignment Errors Register  Offset */
@@ -2317,6 +2515,7 @@ typedef union {
 
 /* -------- GMAC_RRE : (GMAC Offset: 0x1a0) (R/ 32) Receive Resource Errors Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXRER:18;                  /**< bit:  0..17  Receive Resource Errors                  */
@@ -2324,6 +2523,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_RRE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_RRE_OFFSET                     (0x1A0)                                       /**<  (GMAC_RRE) Receive Resource Errors Register  Offset */
@@ -2337,6 +2537,7 @@ typedef union {
 
 /* -------- GMAC_ROE : (GMAC Offset: 0x1a4) (R/ 32) Receive Overrun Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXOVR:10;                  /**< bit:   0..9  Receive Overruns                         */
@@ -2344,6 +2545,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ROE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ROE_OFFSET                     (0x1A4)                                       /**<  (GMAC_ROE) Receive Overrun Register  Offset */
@@ -2357,6 +2559,7 @@ typedef union {
 
 /* -------- GMAC_IHCE : (GMAC Offset: 0x1a8) (R/ 32) IP Header Checksum Errors Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t HCKER:8;                   /**< bit:   0..7  IP Header Checksum Errors                */
@@ -2364,6 +2567,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_IHCE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_IHCE_OFFSET                    (0x1A8)                                       /**<  (GMAC_IHCE) IP Header Checksum Errors Register  Offset */
@@ -2377,6 +2581,7 @@ typedef union {
 
 /* -------- GMAC_TCE : (GMAC Offset: 0x1ac) (R/ 32) TCP Checksum Errors Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TCKER:8;                   /**< bit:   0..7  TCP Checksum Errors                      */
@@ -2384,6 +2589,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TCE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TCE_OFFSET                     (0x1AC)                                       /**<  (GMAC_TCE) TCP Checksum Errors Register  Offset */
@@ -2397,6 +2603,7 @@ typedef union {
 
 /* -------- GMAC_UCE : (GMAC Offset: 0x1b0) (R/ 32) UDP Checksum Errors Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t UCKER:8;                   /**< bit:   0..7  UDP Checksum Errors                      */
@@ -2404,6 +2611,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_UCE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_UCE_OFFSET                     (0x1B0)                                       /**<  (GMAC_UCE) UDP Checksum Errors Register  Offset */
@@ -2417,6 +2625,7 @@ typedef union {
 
 /* -------- GMAC_TISUBN : (GMAC Offset: 0x1bc) (R/W 32) 1588 Timer Increment Sub-nanoseconds Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t LSBTIR:16;                 /**< bit:  0..15  Lower Significant Bits of Timer Increment Register */
@@ -2424,6 +2633,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TISUBN_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TISUBN_OFFSET                  (0x1BC)                                       /**<  (GMAC_TISUBN) 1588 Timer Increment Sub-nanoseconds Register  Offset */
@@ -2437,6 +2647,7 @@ typedef union {
 
 /* -------- GMAC_TSH : (GMAC Offset: 0x1c0) (R/W 32) 1588 Timer Seconds High Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TCS:16;                    /**< bit:  0..15  Timer Count in Seconds                   */
@@ -2444,6 +2655,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TSH_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TSH_OFFSET                     (0x1C0)                                       /**<  (GMAC_TSH) 1588 Timer Seconds High Register  Offset */
@@ -2457,12 +2669,14 @@ typedef union {
 
 /* -------- GMAC_TSL : (GMAC Offset: 0x1d0) (R/W 32) 1588 Timer Seconds Low Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TCS:32;                    /**< bit:  0..31  Timer Count in Seconds                   */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TSL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TSL_OFFSET                     (0x1D0)                                       /**<  (GMAC_TSL) 1588 Timer Seconds Low Register  Offset */
@@ -2476,6 +2690,7 @@ typedef union {
 
 /* -------- GMAC_TN : (GMAC Offset: 0x1d4) (R/W 32) 1588 Timer Nanoseconds Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TNS:30;                    /**< bit:  0..29  Timer Count in Nanoseconds               */
@@ -2483,6 +2698,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TN_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TN_OFFSET                      (0x1D4)                                       /**<  (GMAC_TN) 1588 Timer Nanoseconds Register  Offset */
@@ -2496,6 +2712,7 @@ typedef union {
 
 /* -------- GMAC_TA : (GMAC Offset: 0x1d8) (/W 32) 1588 Timer Adjust Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ITDT:30;                   /**< bit:  0..29  Increment/Decrement                      */
@@ -2504,6 +2721,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TA_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TA_OFFSET                      (0x1D8)                                       /**<  (GMAC_TA) 1588 Timer Adjust Register  Offset */
@@ -2520,6 +2738,7 @@ typedef union {
 
 /* -------- GMAC_TI : (GMAC Offset: 0x1dc) (R/W 32) 1588 Timer Increment Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CNS:8;                     /**< bit:   0..7  Count Nanoseconds                        */
@@ -2529,6 +2748,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TI_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_TI_OFFSET                      (0x1DC)                                       /**<  (GMAC_TI) 1588 Timer Increment Register  Offset */
@@ -2548,12 +2768,14 @@ typedef union {
 
 /* -------- GMAC_EFTSL : (GMAC Offset: 0x1e0) (R/ 32) PTP Event Frame Transmitted Seconds Low Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RUD:32;                    /**< bit:  0..31  Register Update                          */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_EFTSL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_EFTSL_OFFSET                   (0x1E0)                                       /**<  (GMAC_EFTSL) PTP Event Frame Transmitted Seconds Low Register  Offset */
@@ -2567,6 +2789,7 @@ typedef union {
 
 /* -------- GMAC_EFTN : (GMAC Offset: 0x1e4) (R/ 32) PTP Event Frame Transmitted Nanoseconds Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RUD:30;                    /**< bit:  0..29  Register Update                          */
@@ -2574,6 +2797,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_EFTN_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_EFTN_OFFSET                    (0x1E4)                                       /**<  (GMAC_EFTN) PTP Event Frame Transmitted Nanoseconds Register  Offset */
@@ -2587,12 +2811,14 @@ typedef union {
 
 /* -------- GMAC_EFRSL : (GMAC Offset: 0x1e8) (R/ 32) PTP Event Frame Received Seconds Low Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RUD:32;                    /**< bit:  0..31  Register Update                          */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_EFRSL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_EFRSL_OFFSET                   (0x1E8)                                       /**<  (GMAC_EFRSL) PTP Event Frame Received Seconds Low Register  Offset */
@@ -2606,6 +2832,7 @@ typedef union {
 
 /* -------- GMAC_EFRN : (GMAC Offset: 0x1ec) (R/ 32) PTP Event Frame Received Nanoseconds Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RUD:30;                    /**< bit:  0..29  Register Update                          */
@@ -2613,6 +2840,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_EFRN_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_EFRN_OFFSET                    (0x1EC)                                       /**<  (GMAC_EFRN) PTP Event Frame Received Nanoseconds Register  Offset */
@@ -2626,12 +2854,14 @@ typedef union {
 
 /* -------- GMAC_PEFTSL : (GMAC Offset: 0x1f0) (R/ 32) PTP Peer Event Frame Transmitted Seconds Low Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RUD:32;                    /**< bit:  0..31  Register Update                          */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_PEFTSL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_PEFTSL_OFFSET                  (0x1F0)                                       /**<  (GMAC_PEFTSL) PTP Peer Event Frame Transmitted Seconds Low Register  Offset */
@@ -2645,6 +2875,7 @@ typedef union {
 
 /* -------- GMAC_PEFTN : (GMAC Offset: 0x1f4) (R/ 32) PTP Peer Event Frame Transmitted Nanoseconds Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RUD:30;                    /**< bit:  0..29  Register Update                          */
@@ -2652,6 +2883,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_PEFTN_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_PEFTN_OFFSET                   (0x1F4)                                       /**<  (GMAC_PEFTN) PTP Peer Event Frame Transmitted Nanoseconds Register  Offset */
@@ -2665,12 +2897,14 @@ typedef union {
 
 /* -------- GMAC_PEFRSL : (GMAC Offset: 0x1f8) (R/ 32) PTP Peer Event Frame Received Seconds Low Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RUD:32;                    /**< bit:  0..31  Register Update                          */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_PEFRSL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_PEFRSL_OFFSET                  (0x1F8)                                       /**<  (GMAC_PEFRSL) PTP Peer Event Frame Received Seconds Low Register  Offset */
@@ -2684,6 +2918,7 @@ typedef union {
 
 /* -------- GMAC_PEFRN : (GMAC Offset: 0x1fc) (R/ 32) PTP Peer Event Frame Received Nanoseconds Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RUD:30;                    /**< bit:  0..29  Register Update                          */
@@ -2691,6 +2926,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_PEFRN_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_PEFRN_OFFSET                   (0x1FC)                                       /**<  (GMAC_PEFRN) PTP Peer Event Frame Received Nanoseconds Register  Offset */
@@ -2702,8 +2938,9 @@ typedef union {
 #define GMAC_PEFRN_Msk                      _U_(0x3FFFFFFF)                                /**< (GMAC_PEFRN) Register Mask  */
 
 
-/* -------- GMAC_ISRPQ : (GMAC Offset: 0x400) (R/ 32) Interrupt Status Register Priority Queue (index = 1) 0 -------- */
+/* -------- GMAC_ISRPQ : (GMAC Offset: 0x3fc) (R/ 32) Interrupt Status Register Priority Queue (index = 1) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -2720,9 +2957,10 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ISRPQ_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define GMAC_ISRPQ_OFFSET                   (0x400)                                       /**<  (GMAC_ISRPQ) Interrupt Status Register Priority Queue (index = 1) 0  Offset */
+#define GMAC_ISRPQ_OFFSET                   (0x3FC)                                       /**<  (GMAC_ISRPQ) Interrupt Status Register Priority Queue (index = 1) 0  Offset */
 
 #define GMAC_ISRPQ_RCOMP_Pos                1                                              /**< (GMAC_ISRPQ) Receive Complete Position */
 #define GMAC_ISRPQ_RCOMP_Msk                (_U_(0x1) << GMAC_ISRPQ_RCOMP_Pos)             /**< (GMAC_ISRPQ) Receive Complete Mask */
@@ -2749,8 +2987,9 @@ typedef union {
 #define GMAC_ISRPQ_Msk                      _U_(0xCE6)                                     /**< (GMAC_ISRPQ) Register Mask  */
 
 
-/* -------- GMAC_TBQBAPQ : (GMAC Offset: 0x440) (R/W 32) Transmit Buffer Queue Base Address Register Priority Queue (index = 1) 0 -------- */
+/* -------- GMAC_TBQBAPQ : (GMAC Offset: 0x43c) (R/W 32) Transmit Buffer Queue Base Address Register Priority Queue (index = 1) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -2758,9 +2997,10 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_TBQBAPQ_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define GMAC_TBQBAPQ_OFFSET                 (0x440)                                       /**<  (GMAC_TBQBAPQ) Transmit Buffer Queue Base Address Register Priority Queue (index = 1) 0  Offset */
+#define GMAC_TBQBAPQ_OFFSET                 (0x43C)                                       /**<  (GMAC_TBQBAPQ) Transmit Buffer Queue Base Address Register Priority Queue (index = 1) 0  Offset */
 
 #define GMAC_TBQBAPQ_TXBQBA_Pos             2                                              /**< (GMAC_TBQBAPQ) Transmit Buffer Queue Base Address Position */
 #define GMAC_TBQBAPQ_TXBQBA_Msk             (_U_(0x3FFFFFFF) << GMAC_TBQBAPQ_TXBQBA_Pos)   /**< (GMAC_TBQBAPQ) Transmit Buffer Queue Base Address Mask */
@@ -2769,8 +3009,9 @@ typedef union {
 #define GMAC_TBQBAPQ_Msk                    _U_(0xFFFFFFFC)                                /**< (GMAC_TBQBAPQ) Register Mask  */
 
 
-/* -------- GMAC_RBQBAPQ : (GMAC Offset: 0x480) (R/W 32) Receive Buffer Queue Base Address Register Priority Queue (index = 1) 0 -------- */
+/* -------- GMAC_RBQBAPQ : (GMAC Offset: 0x47c) (R/W 32) Receive Buffer Queue Base Address Register Priority Queue (index = 1) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -2778,9 +3019,10 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_RBQBAPQ_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define GMAC_RBQBAPQ_OFFSET                 (0x480)                                       /**<  (GMAC_RBQBAPQ) Receive Buffer Queue Base Address Register Priority Queue (index = 1) 0  Offset */
+#define GMAC_RBQBAPQ_OFFSET                 (0x47C)                                       /**<  (GMAC_RBQBAPQ) Receive Buffer Queue Base Address Register Priority Queue (index = 1) 0  Offset */
 
 #define GMAC_RBQBAPQ_RXBQBA_Pos             2                                              /**< (GMAC_RBQBAPQ) Receive Buffer Queue Base Address Position */
 #define GMAC_RBQBAPQ_RXBQBA_Msk             (_U_(0x3FFFFFFF) << GMAC_RBQBAPQ_RXBQBA_Pos)   /**< (GMAC_RBQBAPQ) Receive Buffer Queue Base Address Mask */
@@ -2789,8 +3031,9 @@ typedef union {
 #define GMAC_RBQBAPQ_Msk                    _U_(0xFFFFFFFC)                                /**< (GMAC_RBQBAPQ) Register Mask  */
 
 
-/* -------- GMAC_RBSRPQ : (GMAC Offset: 0x4a0) (R/W 32) Receive Buffer Size Register Priority Queue (index = 1) 0 -------- */
+/* -------- GMAC_RBSRPQ : (GMAC Offset: 0x49c) (R/W 32) Receive Buffer Size Register Priority Queue (index = 1) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RBS:16;                    /**< bit:  0..15  Receive Buffer Size                      */
@@ -2798,9 +3041,10 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_RBSRPQ_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define GMAC_RBSRPQ_OFFSET                  (0x4A0)                                       /**<  (GMAC_RBSRPQ) Receive Buffer Size Register Priority Queue (index = 1) 0  Offset */
+#define GMAC_RBSRPQ_OFFSET                  (0x49C)                                       /**<  (GMAC_RBSRPQ) Receive Buffer Size Register Priority Queue (index = 1) 0  Offset */
 
 #define GMAC_RBSRPQ_RBS_Pos                 0                                              /**< (GMAC_RBSRPQ) Receive Buffer Size Position */
 #define GMAC_RBSRPQ_RBS_Msk                 (_U_(0xFFFF) << GMAC_RBSRPQ_RBS_Pos)           /**< (GMAC_RBSRPQ) Receive Buffer Size Mask */
@@ -2811,6 +3055,7 @@ typedef union {
 
 /* -------- GMAC_CBSCR : (GMAC Offset: 0x4bc) (R/W 32) Credit-Based Shaping Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t QBE:1;                     /**< bit:      0  Queue B CBS Enable                       */
@@ -2819,6 +3064,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_CBSCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_CBSCR_OFFSET                   (0x4BC)                                       /**<  (GMAC_CBSCR) Credit-Based Shaping Control Register  Offset */
@@ -2835,12 +3081,14 @@ typedef union {
 
 /* -------- GMAC_CBSISQA : (GMAC Offset: 0x4c0) (R/W 32) Credit-Based Shaping IdleSlope Register for Queue A -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IS:32;                     /**< bit:  0..31  IdleSlope                                */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_CBSISQA_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_CBSISQA_OFFSET                 (0x4C0)                                       /**<  (GMAC_CBSISQA) Credit-Based Shaping IdleSlope Register for Queue A  Offset */
@@ -2854,12 +3102,14 @@ typedef union {
 
 /* -------- GMAC_CBSISQB : (GMAC Offset: 0x4c4) (R/W 32) Credit-Based Shaping IdleSlope Register for Queue B -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IS:32;                     /**< bit:  0..31  IdleSlope                                */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_CBSISQB_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_CBSISQB_OFFSET                 (0x4C4)                                       /**<  (GMAC_CBSISQB) Credit-Based Shaping IdleSlope Register for Queue B  Offset */
@@ -2873,6 +3123,7 @@ typedef union {
 
 /* -------- GMAC_ST1RPQ : (GMAC Offset: 0x500) (R/W 32) Screening Type 1 Register Priority Queue (index = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t QNB:3;                     /**< bit:   0..2  Queue Number (0-2)                       */
@@ -2885,6 +3136,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST1RPQ_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST1RPQ_OFFSET                  (0x500)                                       /**<  (GMAC_ST1RPQ) Screening Type 1 Register Priority Queue (index = 0) 0  Offset */
@@ -2910,6 +3162,7 @@ typedef union {
 
 /* -------- GMAC_ST2RPQ : (GMAC Offset: 0x540) (R/W 32) Screening Type 2 Register Priority Queue (index = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t QNB:3;                     /**< bit:   0..2  Queue Number (0-2)                       */
@@ -2929,6 +3182,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2RPQ_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2RPQ_OFFSET                  (0x540)                                       /**<  (GMAC_ST2RPQ) Screening Type 2 Register Priority Queue (index = 0) 0  Offset */
@@ -2970,8 +3224,9 @@ typedef union {
 #define GMAC_ST2RPQ_Msk                     _U_(0x7FFFFF77)                                /**< (GMAC_ST2RPQ) Register Mask  */
 
 
-/* -------- GMAC_IERPQ : (GMAC Offset: 0x600) (/W 32) Interrupt Enable Register Priority Queue (index = 1) 0 -------- */
+/* -------- GMAC_IERPQ : (GMAC Offset: 0x5fc) (/W 32) Interrupt Enable Register Priority Queue (index = 1) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -2988,9 +3243,10 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_IERPQ_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define GMAC_IERPQ_OFFSET                   (0x600)                                       /**<  (GMAC_IERPQ) Interrupt Enable Register Priority Queue (index = 1) 0  Offset */
+#define GMAC_IERPQ_OFFSET                   (0x5FC)                                       /**<  (GMAC_IERPQ) Interrupt Enable Register Priority Queue (index = 1) 0  Offset */
 
 #define GMAC_IERPQ_RCOMP_Pos                1                                              /**< (GMAC_IERPQ) Receive Complete Position */
 #define GMAC_IERPQ_RCOMP_Msk                (_U_(0x1) << GMAC_IERPQ_RCOMP_Pos)             /**< (GMAC_IERPQ) Receive Complete Mask */
@@ -3017,8 +3273,9 @@ typedef union {
 #define GMAC_IERPQ_Msk                      _U_(0xCE6)                                     /**< (GMAC_IERPQ) Register Mask  */
 
 
-/* -------- GMAC_IDRPQ : (GMAC Offset: 0x620) (/W 32) Interrupt Disable Register Priority Queue (index = 1) 0 -------- */
+/* -------- GMAC_IDRPQ : (GMAC Offset: 0x61c) (/W 32) Interrupt Disable Register Priority Queue (index = 1) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -3035,9 +3292,10 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_IDRPQ_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define GMAC_IDRPQ_OFFSET                   (0x620)                                       /**<  (GMAC_IDRPQ) Interrupt Disable Register Priority Queue (index = 1) 0  Offset */
+#define GMAC_IDRPQ_OFFSET                   (0x61C)                                       /**<  (GMAC_IDRPQ) Interrupt Disable Register Priority Queue (index = 1) 0  Offset */
 
 #define GMAC_IDRPQ_RCOMP_Pos                1                                              /**< (GMAC_IDRPQ) Receive Complete Position */
 #define GMAC_IDRPQ_RCOMP_Msk                (_U_(0x1) << GMAC_IDRPQ_RCOMP_Pos)             /**< (GMAC_IDRPQ) Receive Complete Mask */
@@ -3064,8 +3322,9 @@ typedef union {
 #define GMAC_IDRPQ_Msk                      _U_(0xCE6)                                     /**< (GMAC_IDRPQ) Register Mask  */
 
 
-/* -------- GMAC_IMRPQ : (GMAC Offset: 0x640) (R/W 32) Interrupt Mask Register Priority Queue (index = 1) 0 -------- */
+/* -------- GMAC_IMRPQ : (GMAC Offset: 0x63c) (R/W 32) Interrupt Mask Register Priority Queue (index = 1) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -3082,9 +3341,10 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_IMRPQ_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define GMAC_IMRPQ_OFFSET                   (0x640)                                       /**<  (GMAC_IMRPQ) Interrupt Mask Register Priority Queue (index = 1) 0  Offset */
+#define GMAC_IMRPQ_OFFSET                   (0x63C)                                       /**<  (GMAC_IMRPQ) Interrupt Mask Register Priority Queue (index = 1) 0  Offset */
 
 #define GMAC_IMRPQ_RCOMP_Pos                1                                              /**< (GMAC_IMRPQ) Receive Complete Position */
 #define GMAC_IMRPQ_RCOMP_Msk                (_U_(0x1) << GMAC_IMRPQ_RCOMP_Pos)             /**< (GMAC_IMRPQ) Receive Complete Mask */
@@ -3113,6 +3373,7 @@ typedef union {
 
 /* -------- GMAC_ST2ER : (GMAC Offset: 0x6e0) (R/W 32) Screening Type 2 Ethertype Register (index = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t COMPVAL:16;                /**< bit:  0..15  Ethertype Compare Value                  */
@@ -3120,6 +3381,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2ER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2ER_OFFSET                   (0x6E0)                                       /**<  (GMAC_ST2ER) Screening Type 2 Ethertype Register (index = 0) 0  Offset */
@@ -3133,6 +3395,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW00 : (GMAC Offset: 0x700) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3140,6 +3403,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW00_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW00_OFFSET                 (0x700)                                       /**<  (GMAC_ST2CW00) Screening Type 2 Compare Word 0 Register (index = 0)  Offset */
@@ -3155,6 +3419,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW10 : (GMAC Offset: 0x704) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3163,6 +3428,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW10_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW10_OFFSET                 (0x704)                                       /**<  (GMAC_ST2CW10) Screening Type 2 Compare Word 1 Register (index = 0)  Offset */
@@ -3187,6 +3453,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW01 : (GMAC Offset: 0x708) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 1) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3194,6 +3461,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW01_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW01_OFFSET                 (0x708)                                       /**<  (GMAC_ST2CW01) Screening Type 2 Compare Word 0 Register (index = 1)  Offset */
@@ -3209,6 +3477,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW11 : (GMAC Offset: 0x70c) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 1) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3217,6 +3486,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW11_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW11_OFFSET                 (0x70C)                                       /**<  (GMAC_ST2CW11) Screening Type 2 Compare Word 1 Register (index = 1)  Offset */
@@ -3241,6 +3511,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW02 : (GMAC Offset: 0x710) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 2) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3248,6 +3519,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW02_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW02_OFFSET                 (0x710)                                       /**<  (GMAC_ST2CW02) Screening Type 2 Compare Word 0 Register (index = 2)  Offset */
@@ -3263,6 +3535,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW12 : (GMAC Offset: 0x714) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 2) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3271,6 +3544,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW12_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW12_OFFSET                 (0x714)                                       /**<  (GMAC_ST2CW12) Screening Type 2 Compare Word 1 Register (index = 2)  Offset */
@@ -3295,6 +3569,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW03 : (GMAC Offset: 0x718) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 3) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3302,6 +3577,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW03_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW03_OFFSET                 (0x718)                                       /**<  (GMAC_ST2CW03) Screening Type 2 Compare Word 0 Register (index = 3)  Offset */
@@ -3317,6 +3593,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW13 : (GMAC Offset: 0x71c) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 3) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3325,6 +3602,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW13_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW13_OFFSET                 (0x71C)                                       /**<  (GMAC_ST2CW13) Screening Type 2 Compare Word 1 Register (index = 3)  Offset */
@@ -3349,6 +3627,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW04 : (GMAC Offset: 0x720) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 4) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3356,6 +3635,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW04_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW04_OFFSET                 (0x720)                                       /**<  (GMAC_ST2CW04) Screening Type 2 Compare Word 0 Register (index = 4)  Offset */
@@ -3371,6 +3651,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW14 : (GMAC Offset: 0x724) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 4) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3379,6 +3660,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW14_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW14_OFFSET                 (0x724)                                       /**<  (GMAC_ST2CW14) Screening Type 2 Compare Word 1 Register (index = 4)  Offset */
@@ -3403,6 +3685,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW05 : (GMAC Offset: 0x728) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 5) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3410,6 +3693,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW05_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW05_OFFSET                 (0x728)                                       /**<  (GMAC_ST2CW05) Screening Type 2 Compare Word 0 Register (index = 5)  Offset */
@@ -3425,6 +3709,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW15 : (GMAC Offset: 0x72c) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 5) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3433,6 +3718,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW15_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW15_OFFSET                 (0x72C)                                       /**<  (GMAC_ST2CW15) Screening Type 2 Compare Word 1 Register (index = 5)  Offset */
@@ -3457,6 +3743,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW06 : (GMAC Offset: 0x730) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 6) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3464,6 +3751,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW06_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW06_OFFSET                 (0x730)                                       /**<  (GMAC_ST2CW06) Screening Type 2 Compare Word 0 Register (index = 6)  Offset */
@@ -3479,6 +3767,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW16 : (GMAC Offset: 0x734) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 6) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3487,6 +3776,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW16_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW16_OFFSET                 (0x734)                                       /**<  (GMAC_ST2CW16) Screening Type 2 Compare Word 1 Register (index = 6)  Offset */
@@ -3511,6 +3801,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW07 : (GMAC Offset: 0x738) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 7) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3518,6 +3809,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW07_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW07_OFFSET                 (0x738)                                       /**<  (GMAC_ST2CW07) Screening Type 2 Compare Word 0 Register (index = 7)  Offset */
@@ -3533,6 +3825,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW17 : (GMAC Offset: 0x73c) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 7) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3541,6 +3834,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW17_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW17_OFFSET                 (0x73C)                                       /**<  (GMAC_ST2CW17) Screening Type 2 Compare Word 1 Register (index = 7)  Offset */
@@ -3565,6 +3859,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW08 : (GMAC Offset: 0x740) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 8) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3572,6 +3867,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW08_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW08_OFFSET                 (0x740)                                       /**<  (GMAC_ST2CW08) Screening Type 2 Compare Word 0 Register (index = 8)  Offset */
@@ -3587,6 +3883,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW18 : (GMAC Offset: 0x744) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 8) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3595,6 +3892,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW18_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW18_OFFSET                 (0x744)                                       /**<  (GMAC_ST2CW18) Screening Type 2 Compare Word 1 Register (index = 8)  Offset */
@@ -3619,6 +3917,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW09 : (GMAC Offset: 0x748) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 9) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3626,6 +3925,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW09_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW09_OFFSET                 (0x748)                                       /**<  (GMAC_ST2CW09) Screening Type 2 Compare Word 0 Register (index = 9)  Offset */
@@ -3641,6 +3941,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW19 : (GMAC Offset: 0x74c) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 9) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3649,6 +3950,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW19_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW19_OFFSET                 (0x74C)                                       /**<  (GMAC_ST2CW19) Screening Type 2 Compare Word 1 Register (index = 9)  Offset */
@@ -3673,6 +3975,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW010 : (GMAC Offset: 0x750) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 10) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3680,6 +3983,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW010_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW010_OFFSET                (0x750)                                       /**<  (GMAC_ST2CW010) Screening Type 2 Compare Word 0 Register (index = 10)  Offset */
@@ -3695,6 +3999,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW110 : (GMAC Offset: 0x754) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 10) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3703,6 +4008,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW110_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW110_OFFSET                (0x754)                                       /**<  (GMAC_ST2CW110) Screening Type 2 Compare Word 1 Register (index = 10)  Offset */
@@ -3727,6 +4033,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW011 : (GMAC Offset: 0x758) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 11) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3734,6 +4041,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW011_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW011_OFFSET                (0x758)                                       /**<  (GMAC_ST2CW011) Screening Type 2 Compare Word 0 Register (index = 11)  Offset */
@@ -3749,6 +4057,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW111 : (GMAC Offset: 0x75c) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 11) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3757,6 +4066,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW111_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW111_OFFSET                (0x75C)                                       /**<  (GMAC_ST2CW111) Screening Type 2 Compare Word 1 Register (index = 11)  Offset */
@@ -3781,6 +4091,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW012 : (GMAC Offset: 0x760) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 12) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3788,6 +4099,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW012_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW012_OFFSET                (0x760)                                       /**<  (GMAC_ST2CW012) Screening Type 2 Compare Word 0 Register (index = 12)  Offset */
@@ -3803,6 +4115,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW112 : (GMAC Offset: 0x764) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 12) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3811,6 +4124,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW112_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW112_OFFSET                (0x764)                                       /**<  (GMAC_ST2CW112) Screening Type 2 Compare Word 1 Register (index = 12)  Offset */
@@ -3835,6 +4149,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW013 : (GMAC Offset: 0x768) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 13) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3842,6 +4157,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW013_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW013_OFFSET                (0x768)                                       /**<  (GMAC_ST2CW013) Screening Type 2 Compare Word 0 Register (index = 13)  Offset */
@@ -3857,6 +4173,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW113 : (GMAC Offset: 0x76c) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 13) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3865,6 +4182,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW113_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW113_OFFSET                (0x76C)                                       /**<  (GMAC_ST2CW113) Screening Type 2 Compare Word 1 Register (index = 13)  Offset */
@@ -3889,6 +4207,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW014 : (GMAC Offset: 0x770) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 14) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3896,6 +4215,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW014_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW014_OFFSET                (0x770)                                       /**<  (GMAC_ST2CW014) Screening Type 2 Compare Word 0 Register (index = 14)  Offset */
@@ -3911,6 +4231,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW114 : (GMAC Offset: 0x774) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 14) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3919,6 +4240,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW114_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW114_OFFSET                (0x774)                                       /**<  (GMAC_ST2CW114) Screening Type 2 Compare Word 1 Register (index = 14)  Offset */
@@ -3943,6 +4265,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW015 : (GMAC Offset: 0x778) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 15) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -3950,6 +4273,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW015_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW015_OFFSET                (0x778)                                       /**<  (GMAC_ST2CW015) Screening Type 2 Compare Word 0 Register (index = 15)  Offset */
@@ -3965,6 +4289,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW115 : (GMAC Offset: 0x77c) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 15) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -3973,6 +4298,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW115_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW115_OFFSET                (0x77C)                                       /**<  (GMAC_ST2CW115) Screening Type 2 Compare Word 1 Register (index = 15)  Offset */
@@ -3997,6 +4323,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW016 : (GMAC Offset: 0x780) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 16) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -4004,6 +4331,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW016_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW016_OFFSET                (0x780)                                       /**<  (GMAC_ST2CW016) Screening Type 2 Compare Word 0 Register (index = 16)  Offset */
@@ -4019,6 +4347,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW116 : (GMAC Offset: 0x784) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 16) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -4027,6 +4356,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW116_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW116_OFFSET                (0x784)                                       /**<  (GMAC_ST2CW116) Screening Type 2 Compare Word 1 Register (index = 16)  Offset */
@@ -4051,6 +4381,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW017 : (GMAC Offset: 0x788) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 17) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -4058,6 +4389,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW017_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW017_OFFSET                (0x788)                                       /**<  (GMAC_ST2CW017) Screening Type 2 Compare Word 0 Register (index = 17)  Offset */
@@ -4073,6 +4405,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW117 : (GMAC Offset: 0x78c) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 17) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -4081,6 +4414,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW117_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW117_OFFSET                (0x78C)                                       /**<  (GMAC_ST2CW117) Screening Type 2 Compare Word 1 Register (index = 17)  Offset */
@@ -4105,6 +4439,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW018 : (GMAC Offset: 0x790) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 18) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -4112,6 +4447,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW018_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW018_OFFSET                (0x790)                                       /**<  (GMAC_ST2CW018) Screening Type 2 Compare Word 0 Register (index = 18)  Offset */
@@ -4127,6 +4463,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW118 : (GMAC Offset: 0x794) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 18) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -4135,6 +4472,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW118_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW118_OFFSET                (0x794)                                       /**<  (GMAC_ST2CW118) Screening Type 2 Compare Word 1 Register (index = 18)  Offset */
@@ -4159,6 +4497,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW019 : (GMAC Offset: 0x798) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 19) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -4166,6 +4505,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW019_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW019_OFFSET                (0x798)                                       /**<  (GMAC_ST2CW019) Screening Type 2 Compare Word 0 Register (index = 19)  Offset */
@@ -4181,6 +4521,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW119 : (GMAC Offset: 0x79c) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 19) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -4189,6 +4530,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW119_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW119_OFFSET                (0x79C)                                       /**<  (GMAC_ST2CW119) Screening Type 2 Compare Word 1 Register (index = 19)  Offset */
@@ -4213,6 +4555,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW020 : (GMAC Offset: 0x7a0) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 20) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -4220,6 +4563,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW020_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW020_OFFSET                (0x7A0)                                       /**<  (GMAC_ST2CW020) Screening Type 2 Compare Word 0 Register (index = 20)  Offset */
@@ -4235,6 +4579,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW120 : (GMAC Offset: 0x7a4) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 20) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -4243,6 +4588,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW120_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW120_OFFSET                (0x7A4)                                       /**<  (GMAC_ST2CW120) Screening Type 2 Compare Word 1 Register (index = 20)  Offset */
@@ -4267,6 +4613,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW021 : (GMAC Offset: 0x7a8) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 21) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -4274,6 +4621,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW021_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW021_OFFSET                (0x7A8)                                       /**<  (GMAC_ST2CW021) Screening Type 2 Compare Word 0 Register (index = 21)  Offset */
@@ -4289,6 +4637,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW121 : (GMAC Offset: 0x7ac) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 21) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -4297,6 +4646,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW121_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW121_OFFSET                (0x7AC)                                       /**<  (GMAC_ST2CW121) Screening Type 2 Compare Word 1 Register (index = 21)  Offset */
@@ -4321,6 +4671,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW022 : (GMAC Offset: 0x7b0) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 22) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -4328,6 +4679,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW022_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW022_OFFSET                (0x7B0)                                       /**<  (GMAC_ST2CW022) Screening Type 2 Compare Word 0 Register (index = 22)  Offset */
@@ -4343,6 +4695,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW122 : (GMAC Offset: 0x7b4) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 22) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -4351,6 +4704,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW122_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW122_OFFSET                (0x7B4)                                       /**<  (GMAC_ST2CW122) Screening Type 2 Compare Word 1 Register (index = 22)  Offset */
@@ -4375,6 +4729,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW023 : (GMAC Offset: 0x7b8) (R/W 32) Screening Type 2 Compare Word 0 Register (index = 23) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MASKVAL:16;                /**< bit:  0..15  Mask Value                               */
@@ -4382,6 +4737,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW023_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW023_OFFSET                (0x7B8)                                       /**<  (GMAC_ST2CW023) Screening Type 2 Compare Word 0 Register (index = 23)  Offset */
@@ -4397,6 +4753,7 @@ typedef union {
 
 /* -------- GMAC_ST2CW123 : (GMAC Offset: 0x7bc) (R/W 32) Screening Type 2 Compare Word 1 Register (index = 23) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSVAL:7;                 /**< bit:   0..6  Offset Value in Bytes                    */
@@ -4405,6 +4762,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } GMAC_ST2CW123_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define GMAC_ST2CW123_OFFSET                (0x7BC)                                       /**<  (GMAC_ST2CW123) Screening Type 2 Compare Word 1 Register (index = 23)  Offset */
@@ -4457,10 +4815,10 @@ typedef struct {
   __IO uint32_t GMAC_TPSF;      /**< (GMAC Offset: 0x40) TX Partial Store and Forward Register */
   __IO uint32_t GMAC_RPSF;      /**< (GMAC Offset: 0x44) RX Partial Store and Forward Register */
   __IO uint32_t GMAC_RJFML;     /**< (GMAC Offset: 0x48) RX Jumbo Frame Max Length Register */
-  RoReg8  Reserved1[0x34];
+  __I  uint8_t                        Reserved1[52];
   __IO uint32_t GMAC_HRB;       /**< (GMAC Offset: 0x80) Hash Register Bottom */
   __IO uint32_t GMAC_HRT;       /**< (GMAC Offset: 0x84) Hash Register Top */
-       GmacSa   GMAC_SA[GMACSA_NUMBER]; /**< Offset: 0x88 Specific Address 1 Bottom Register */
+       GmacSa   GmacSa[GMACSA_NUMBER]; /**< Offset: 0x88 Specific Address 1 Bottom Register */
   __IO uint32_t GMAC_TIDM1;     /**< (GMAC Offset: 0xA8) Type ID Match 1 Register */
   __IO uint32_t GMAC_TIDM2;     /**< (GMAC Offset: 0xAC) Type ID Match 2 Register */
   __IO uint32_t GMAC_TIDM3;     /**< (GMAC Offset: 0xB0) Type ID Match 3 Register */
@@ -4471,7 +4829,7 @@ typedef struct {
   __IO uint32_t GMAC_TPFCP;     /**< (GMAC Offset: 0xC4) Transmit PFC Pause Register */
   __IO uint32_t GMAC_SAMB1;     /**< (GMAC Offset: 0xC8) Specific Address 1 Mask Bottom Register */
   __IO uint32_t GMAC_SAMT1;     /**< (GMAC Offset: 0xCC) Specific Address 1 Mask Top Register */
-  RoReg8  Reserved2[0xC];
+  __I  uint8_t                        Reserved2[12];
   __IO uint32_t GMAC_NSC;       /**< (GMAC Offset: 0xDC) 1588 Timer Nanosecond Comparison Register */
   __IO uint32_t GMAC_SCL;       /**< (GMAC Offset: 0xE0) 1588 Timer Second Comparison Low Register */
   __IO uint32_t GMAC_SCH;       /**< (GMAC Offset: 0xE4) 1588 Timer Second Comparison High Register */
@@ -4479,7 +4837,7 @@ typedef struct {
   __I  uint32_t GMAC_EFRSH;     /**< (GMAC Offset: 0xEC) PTP Event Frame Received Seconds High Register */
   __I  uint32_t GMAC_PEFTSH;    /**< (GMAC Offset: 0xF0) PTP Peer Event Frame Transmitted Seconds High Register */
   __I  uint32_t GMAC_PEFRSH;    /**< (GMAC Offset: 0xF4) PTP Peer Event Frame Received Seconds High Register */
-  RoReg8  Reserved3[0x8];
+  __I  uint8_t                        Reserved3[8];
   __I  uint32_t GMAC_OTLO;      /**< (GMAC Offset: 0x100) Octets Transmitted Low Register */
   __I  uint32_t GMAC_OTHI;      /**< (GMAC Offset: 0x104) Octets Transmitted High Register */
   __I  uint32_t GMAC_FT;        /**< (GMAC Offset: 0x108) Frames Transmitted Register */
@@ -4525,10 +4883,10 @@ typedef struct {
   __I  uint32_t GMAC_IHCE;      /**< (GMAC Offset: 0x1A8) IP Header Checksum Errors Register */
   __I  uint32_t GMAC_TCE;       /**< (GMAC Offset: 0x1AC) TCP Checksum Errors Register */
   __I  uint32_t GMAC_UCE;       /**< (GMAC Offset: 0x1B0) UDP Checksum Errors Register */
-  RoReg8  Reserved4[0x8];
+  __I  uint8_t                        Reserved4[8];
   __IO uint32_t GMAC_TISUBN;    /**< (GMAC Offset: 0x1BC) 1588 Timer Increment Sub-nanoseconds Register */
   __IO uint32_t GMAC_TSH;       /**< (GMAC Offset: 0x1C0) 1588 Timer Seconds High Register */
-  RoReg8  Reserved5[0xC];
+  __I  uint8_t                        Reserved5[12];
   __IO uint32_t GMAC_TSL;       /**< (GMAC Offset: 0x1D0) 1588 Timer Seconds Low Register */
   __IO uint32_t GMAC_TN;        /**< (GMAC Offset: 0x1D4) 1588 Timer Nanoseconds Register */
   __O  uint32_t GMAC_TA;        /**< (GMAC Offset: 0x1D8) 1588 Timer Adjust Register */
@@ -4541,31 +4899,31 @@ typedef struct {
   __I  uint32_t GMAC_PEFTN;     /**< (GMAC Offset: 0x1F4) PTP Peer Event Frame Transmitted Nanoseconds Register */
   __I  uint32_t GMAC_PEFRSL;    /**< (GMAC Offset: 0x1F8) PTP Peer Event Frame Received Seconds Low Register */
   __I  uint32_t GMAC_PEFRN;     /**< (GMAC Offset: 0x1FC) PTP Peer Event Frame Received Nanoseconds Register */
-  RoReg8  Reserved6[0x200];
-  __I  uint32_t GMAC_ISRPQ[2];  /**< (GMAC Offset: 0x400) Interrupt Status Register Priority Queue (index = 1) 0 */
-  RoReg8  Reserved7[0x38];
-  __IO uint32_t GMAC_TBQBAPQ[2]; /**< (GMAC Offset: 0x440) Transmit Buffer Queue Base Address Register Priority Queue (index = 1) 0 */
-  RoReg8  Reserved8[0x38];
-  __IO uint32_t GMAC_RBQBAPQ[2]; /**< (GMAC Offset: 0x480) Receive Buffer Queue Base Address Register Priority Queue (index = 1) 0 */
-  RoReg8  Reserved9[0x18];
-  __IO uint32_t GMAC_RBSRPQ[2]; /**< (GMAC Offset: 0x4A0) Receive Buffer Size Register Priority Queue (index = 1) 0 */
-  RoReg8  Reserved10[0x14];
+  __I  uint8_t                        Reserved6[508];
+  __I  uint32_t GMAC_ISRPQ[2];  /**< (GMAC Offset: 0x3FC) Interrupt Status Register Priority Queue (index = 1) 0 */
+  __I  uint8_t                        Reserved7[56];
+  __IO uint32_t GMAC_TBQBAPQ[2]; /**< (GMAC Offset: 0x43C) Transmit Buffer Queue Base Address Register Priority Queue (index = 1) 0 */
+  __I  uint8_t                        Reserved8[56];
+  __IO uint32_t GMAC_RBQBAPQ[2]; /**< (GMAC Offset: 0x47C) Receive Buffer Queue Base Address Register Priority Queue (index = 1) 0 */
+  __I  uint8_t                        Reserved9[24];
+  __IO uint32_t GMAC_RBSRPQ[2]; /**< (GMAC Offset: 0x49C) Receive Buffer Size Register Priority Queue (index = 1) 0 */
+  __I  uint8_t                        Reserved10[24];
   __IO uint32_t GMAC_CBSCR;     /**< (GMAC Offset: 0x4BC) Credit-Based Shaping Control Register */
   __IO uint32_t GMAC_CBSISQA;   /**< (GMAC Offset: 0x4C0) Credit-Based Shaping IdleSlope Register for Queue A */
   __IO uint32_t GMAC_CBSISQB;   /**< (GMAC Offset: 0x4C4) Credit-Based Shaping IdleSlope Register for Queue B */
-  RoReg8  Reserved11[0x38];
+  __I  uint8_t                        Reserved11[56];
   __IO uint32_t GMAC_ST1RPQ[4]; /**< (GMAC Offset: 0x500) Screening Type 1 Register Priority Queue (index = 0) 0 */
-  RoReg8  Reserved12[0x30];
+  __I  uint8_t                        Reserved12[48];
   __IO uint32_t GMAC_ST2RPQ[8]; /**< (GMAC Offset: 0x540) Screening Type 2 Register Priority Queue (index = 0) 0 */
-  RoReg8  Reserved13[0xA0];
-  __O  uint32_t GMAC_IERPQ[2];  /**< (GMAC Offset: 0x600) Interrupt Enable Register Priority Queue (index = 1) 0 */
-  RoReg8  Reserved14[0x18];
-  __O  uint32_t GMAC_IDRPQ[2];  /**< (GMAC Offset: 0x620) Interrupt Disable Register Priority Queue (index = 1) 0 */
-  RoReg8  Reserved15[0x18];
-  __IO uint32_t GMAC_IMRPQ[2];  /**< (GMAC Offset: 0x640) Interrupt Mask Register Priority Queue (index = 1) 0 */
-  RoReg8  Reserved16[0x98];
+  __I  uint8_t                        Reserved13[156];
+  __O  uint32_t GMAC_IERPQ[2];  /**< (GMAC Offset: 0x5FC) Interrupt Enable Register Priority Queue (index = 1) 0 */
+  __I  uint8_t                        Reserved14[24];
+  __O  uint32_t GMAC_IDRPQ[2];  /**< (GMAC Offset: 0x61C) Interrupt Disable Register Priority Queue (index = 1) 0 */
+  __I  uint8_t                        Reserved15[24];
+  __IO uint32_t GMAC_IMRPQ[2];  /**< (GMAC Offset: 0x63C) Interrupt Mask Register Priority Queue (index = 1) 0 */
+  __I  uint8_t                        Reserved16[156];
   __IO uint32_t GMAC_ST2ER[4];  /**< (GMAC Offset: 0x6E0) Screening Type 2 Ethertype Register (index = 0) 0 */
-  RoReg8  Reserved17[0x10];
+  __I  uint8_t                        Reserved17[16];
   __IO uint32_t GMAC_ST2CW00;   /**< (GMAC Offset: 0x700) Screening Type 2 Compare Word 0 Register (index = 0) */
   __IO uint32_t GMAC_ST2CW10;   /**< (GMAC Offset: 0x704) Screening Type 2 Compare Word 1 Register (index = 0) */
   __IO uint32_t GMAC_ST2CW01;   /**< (GMAC Offset: 0x708) Screening Type 2 Compare Word 0 Register (index = 1) */
@@ -4644,10 +5002,10 @@ typedef struct {
   __IO GMAC_TPSF_Type                 GMAC_TPSF;      /**< Offset: 0x40 (R/W  32) TX Partial Store and Forward Register */
   __IO GMAC_RPSF_Type                 GMAC_RPSF;      /**< Offset: 0x44 (R/W  32) RX Partial Store and Forward Register */
   __IO GMAC_RJFML_Type                GMAC_RJFML;     /**< Offset: 0x48 (R/W  32) RX Jumbo Frame Max Length Register */
-  __I  uint32_t                       Reserved1[13];
+  __I  uint8_t                        Reserved1[52];
   __IO GMAC_HRB_Type                  GMAC_HRB;       /**< Offset: 0x80 (R/W  32) Hash Register Bottom */
   __IO GMAC_HRT_Type                  GMAC_HRT;       /**< Offset: 0x84 (R/W  32) Hash Register Top */
-       GmacSa                         GMAC_SA[4];     /**< Offset: 0x88 Specific Address 1 Bottom Register */
+       GmacSa                         GmacSa[4];      /**< Offset: 0x88 Specific Address 1 Bottom Register */
   __IO GMAC_TIDM1_Type                GMAC_TIDM1;     /**< Offset: 0xA8 (R/W  32) Type ID Match 1 Register */
   __IO GMAC_TIDM2_Type                GMAC_TIDM2;     /**< Offset: 0xAC (R/W  32) Type ID Match 2 Register */
   __IO GMAC_TIDM3_Type                GMAC_TIDM3;     /**< Offset: 0xB0 (R/W  32) Type ID Match 3 Register */
@@ -4658,7 +5016,7 @@ typedef struct {
   __IO GMAC_TPFCP_Type                GMAC_TPFCP;     /**< Offset: 0xC4 (R/W  32) Transmit PFC Pause Register */
   __IO GMAC_SAMB1_Type                GMAC_SAMB1;     /**< Offset: 0xC8 (R/W  32) Specific Address 1 Mask Bottom Register */
   __IO GMAC_SAMT1_Type                GMAC_SAMT1;     /**< Offset: 0xCC (R/W  32) Specific Address 1 Mask Top Register */
-  __I  uint32_t                       Reserved2[3];
+  __I  uint8_t                        Reserved2[12];
   __IO GMAC_NSC_Type                  GMAC_NSC;       /**< Offset: 0xDC (R/W  32) 1588 Timer Nanosecond Comparison Register */
   __IO GMAC_SCL_Type                  GMAC_SCL;       /**< Offset: 0xE0 (R/W  32) 1588 Timer Second Comparison Low Register */
   __IO GMAC_SCH_Type                  GMAC_SCH;       /**< Offset: 0xE4 (R/W  32) 1588 Timer Second Comparison High Register */
@@ -4666,7 +5024,7 @@ typedef struct {
   __I  GMAC_EFRSH_Type                GMAC_EFRSH;     /**< Offset: 0xEC (R/   32) PTP Event Frame Received Seconds High Register */
   __I  GMAC_PEFTSH_Type               GMAC_PEFTSH;    /**< Offset: 0xF0 (R/   32) PTP Peer Event Frame Transmitted Seconds High Register */
   __I  GMAC_PEFRSH_Type               GMAC_PEFRSH;    /**< Offset: 0xF4 (R/   32) PTP Peer Event Frame Received Seconds High Register */
-  __I  uint32_t                       Reserved3[2];
+  __I  uint8_t                        Reserved3[8];
   __I  GMAC_OTLO_Type                 GMAC_OTLO;      /**< Offset: 0x100 (R/   32) Octets Transmitted Low Register */
   __I  GMAC_OTHI_Type                 GMAC_OTHI;      /**< Offset: 0x104 (R/   32) Octets Transmitted High Register */
   __I  GMAC_FT_Type                   GMAC_FT;        /**< Offset: 0x108 (R/   32) Frames Transmitted Register */
@@ -4712,10 +5070,10 @@ typedef struct {
   __I  GMAC_IHCE_Type                 GMAC_IHCE;      /**< Offset: 0x1A8 (R/   32) IP Header Checksum Errors Register */
   __I  GMAC_TCE_Type                  GMAC_TCE;       /**< Offset: 0x1AC (R/   32) TCP Checksum Errors Register */
   __I  GMAC_UCE_Type                  GMAC_UCE;       /**< Offset: 0x1B0 (R/   32) UDP Checksum Errors Register */
-  __I  uint32_t                       Reserved4[2];
+  __I  uint8_t                        Reserved4[8];
   __IO GMAC_TISUBN_Type               GMAC_TISUBN;    /**< Offset: 0x1BC (R/W  32) 1588 Timer Increment Sub-nanoseconds Register */
   __IO GMAC_TSH_Type                  GMAC_TSH;       /**< Offset: 0x1C0 (R/W  32) 1588 Timer Seconds High Register */
-  __I  uint32_t                       Reserved5[3];
+  __I  uint8_t                        Reserved5[12];
   __IO GMAC_TSL_Type                  GMAC_TSL;       /**< Offset: 0x1D0 (R/W  32) 1588 Timer Seconds Low Register */
   __IO GMAC_TN_Type                   GMAC_TN;        /**< Offset: 0x1D4 (R/W  32) 1588 Timer Nanoseconds Register */
   __O  GMAC_TA_Type                   GMAC_TA;        /**< Offset: 0x1D8 ( /W  32) 1588 Timer Adjust Register */
@@ -4728,31 +5086,31 @@ typedef struct {
   __I  GMAC_PEFTN_Type                GMAC_PEFTN;     /**< Offset: 0x1F4 (R/   32) PTP Peer Event Frame Transmitted Nanoseconds Register */
   __I  GMAC_PEFRSL_Type               GMAC_PEFRSL;    /**< Offset: 0x1F8 (R/   32) PTP Peer Event Frame Received Seconds Low Register */
   __I  GMAC_PEFRN_Type                GMAC_PEFRN;     /**< Offset: 0x1FC (R/   32) PTP Peer Event Frame Received Nanoseconds Register */
-  __I  uint32_t                       Reserved6[128];
-  __I  GMAC_ISRPQ_Type                GMAC_ISRPQ[2];  /**< Offset: 0x400 (R/   32) Interrupt Status Register Priority Queue (index = 1) 0 */
-  __I  uint32_t                       Reserved7[14];
-  __IO GMAC_TBQBAPQ_Type              GMAC_TBQBAPQ[2]; /**< Offset: 0x440 (R/W  32) Transmit Buffer Queue Base Address Register Priority Queue (index = 1) 0 */
-  __I  uint32_t                       Reserved8[14];
-  __IO GMAC_RBQBAPQ_Type              GMAC_RBQBAPQ[2]; /**< Offset: 0x480 (R/W  32) Receive Buffer Queue Base Address Register Priority Queue (index = 1) 0 */
-  __I  uint32_t                       Reserved9[6];
-  __IO GMAC_RBSRPQ_Type               GMAC_RBSRPQ[2]; /**< Offset: 0x4A0 (R/W  32) Receive Buffer Size Register Priority Queue (index = 1) 0 */
-  __I  uint32_t                       Reserved10[5];
+  __I  uint8_t                        Reserved6[508];
+  __I  GMAC_ISRPQ_Type                GMAC_ISRPQ[2];  /**< Offset: 0x3FC (R/   32) Interrupt Status Register Priority Queue (index = 1) 0 */
+  __I  uint8_t                        Reserved7[56];
+  __IO GMAC_TBQBAPQ_Type              GMAC_TBQBAPQ[2]; /**< Offset: 0x43C (R/W  32) Transmit Buffer Queue Base Address Register Priority Queue (index = 1) 0 */
+  __I  uint8_t                        Reserved8[56];
+  __IO GMAC_RBQBAPQ_Type              GMAC_RBQBAPQ[2]; /**< Offset: 0x47C (R/W  32) Receive Buffer Queue Base Address Register Priority Queue (index = 1) 0 */
+  __I  uint8_t                        Reserved9[24];
+  __IO GMAC_RBSRPQ_Type               GMAC_RBSRPQ[2]; /**< Offset: 0x49C (R/W  32) Receive Buffer Size Register Priority Queue (index = 1) 0 */
+  __I  uint8_t                        Reserved10[24];
   __IO GMAC_CBSCR_Type                GMAC_CBSCR;     /**< Offset: 0x4BC (R/W  32) Credit-Based Shaping Control Register */
   __IO GMAC_CBSISQA_Type              GMAC_CBSISQA;   /**< Offset: 0x4C0 (R/W  32) Credit-Based Shaping IdleSlope Register for Queue A */
   __IO GMAC_CBSISQB_Type              GMAC_CBSISQB;   /**< Offset: 0x4C4 (R/W  32) Credit-Based Shaping IdleSlope Register for Queue B */
-  __I  uint32_t                       Reserved11[14];
+  __I  uint8_t                        Reserved11[56];
   __IO GMAC_ST1RPQ_Type               GMAC_ST1RPQ[4]; /**< Offset: 0x500 (R/W  32) Screening Type 1 Register Priority Queue (index = 0) 0 */
-  __I  uint32_t                       Reserved12[12];
+  __I  uint8_t                        Reserved12[48];
   __IO GMAC_ST2RPQ_Type               GMAC_ST2RPQ[8]; /**< Offset: 0x540 (R/W  32) Screening Type 2 Register Priority Queue (index = 0) 0 */
-  __I  uint32_t                       Reserved13[40];
-  __O  GMAC_IERPQ_Type                GMAC_IERPQ[2];  /**< Offset: 0x600 ( /W  32) Interrupt Enable Register Priority Queue (index = 1) 0 */
-  __I  uint32_t                       Reserved14[6];
-  __O  GMAC_IDRPQ_Type                GMAC_IDRPQ[2];  /**< Offset: 0x620 ( /W  32) Interrupt Disable Register Priority Queue (index = 1) 0 */
-  __I  uint32_t                       Reserved15[6];
-  __IO GMAC_IMRPQ_Type                GMAC_IMRPQ[2];  /**< Offset: 0x640 (R/W  32) Interrupt Mask Register Priority Queue (index = 1) 0 */
-  __I  uint32_t                       Reserved16[38];
+  __I  uint8_t                        Reserved13[156];
+  __O  GMAC_IERPQ_Type                GMAC_IERPQ[2];  /**< Offset: 0x5FC ( /W  32) Interrupt Enable Register Priority Queue (index = 1) 0 */
+  __I  uint8_t                        Reserved14[24];
+  __O  GMAC_IDRPQ_Type                GMAC_IDRPQ[2];  /**< Offset: 0x61C ( /W  32) Interrupt Disable Register Priority Queue (index = 1) 0 */
+  __I  uint8_t                        Reserved15[24];
+  __IO GMAC_IMRPQ_Type                GMAC_IMRPQ[2];  /**< Offset: 0x63C (R/W  32) Interrupt Mask Register Priority Queue (index = 1) 0 */
+  __I  uint8_t                        Reserved16[156];
   __IO GMAC_ST2ER_Type                GMAC_ST2ER[4];  /**< Offset: 0x6E0 (R/W  32) Screening Type 2 Ethertype Register (index = 0) 0 */
-  __I  uint32_t                       Reserved17[4];
+  __I  uint8_t                        Reserved17[16];
   __IO GMAC_ST2CW00_Type              GMAC_ST2CW00;   /**< Offset: 0x700 (R/W  32) Screening Type 2 Compare Word 0 Register (index = 0) */
   __IO GMAC_ST2CW10_Type              GMAC_ST2CW10;   /**< Offset: 0x704 (R/W  32) Screening Type 2 Compare Word 1 Register (index = 0) */
   __IO GMAC_ST2CW01_Type              GMAC_ST2CW01;   /**< Offset: 0x708 (R/W  32) Screening Type 2 Compare Word 0 Register (index = 1) */

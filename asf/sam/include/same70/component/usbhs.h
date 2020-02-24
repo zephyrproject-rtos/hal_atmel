@@ -3,11 +3,13 @@
  *
  * \brief Component description for USBHS
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,12 +47,14 @@
 
 /* -------- USBHS_DEVDMANXTDSC : (USBHS Offset: 0x00) (R/W 32) Device DMA Channel Next Descriptor Address Register (n = 1) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NXT_DSC_ADD:32;            /**< bit:  0..31  Next Descriptor Address                  */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVDMANXTDSC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVDMANXTDSC_OFFSET           (0x00)                                        /**<  (USBHS_DEVDMANXTDSC) Device DMA Channel Next Descriptor Address Register (n = 1)  Offset */
@@ -64,12 +68,14 @@ typedef union {
 
 /* -------- USBHS_DEVDMAADDRESS : (USBHS Offset: 0x04) (R/W 32) Device DMA Channel Address Register (n = 1) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BUFF_ADD:32;               /**< bit:  0..31  Buffer Address                           */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVDMAADDRESS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVDMAADDRESS_OFFSET          (0x04)                                        /**<  (USBHS_DEVDMAADDRESS) Device DMA Channel Address Register (n = 1)  Offset */
@@ -83,6 +89,7 @@ typedef union {
 
 /* -------- USBHS_DEVDMACONTROL : (USBHS Offset: 0x08) (R/W 32) Device DMA Channel Control Register (n = 1) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CHANN_ENB:1;               /**< bit:      0  Channel Enable Command                   */
@@ -98,6 +105,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVDMACONTROL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVDMACONTROL_OFFSET          (0x08)                                        /**<  (USBHS_DEVDMACONTROL) Device DMA Channel Control Register (n = 1)  Offset */
@@ -135,6 +143,7 @@ typedef union {
 
 /* -------- USBHS_DEVDMASTATUS : (USBHS Offset: 0x0c) (R/W 32) Device DMA Channel Status Register (n = 1) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CHANN_ENB:1;               /**< bit:      0  Channel Enable Status                    */
@@ -148,6 +157,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVDMASTATUS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVDMASTATUS_OFFSET           (0x0C)                                        /**<  (USBHS_DEVDMASTATUS) Device DMA Channel Status Register (n = 1)  Offset */
@@ -176,12 +186,14 @@ typedef union {
 
 /* -------- USBHS_HSTDMANXTDSC : (USBHS Offset: 0x00) (R/W 32) Host DMA Channel Next Descriptor Address Register (n = 1) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NXT_DSC_ADD:32;            /**< bit:  0..31  Next Descriptor Address                  */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTDMANXTDSC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTDMANXTDSC_OFFSET           (0x00)                                        /**<  (USBHS_HSTDMANXTDSC) Host DMA Channel Next Descriptor Address Register (n = 1)  Offset */
@@ -195,12 +207,14 @@ typedef union {
 
 /* -------- USBHS_HSTDMAADDRESS : (USBHS Offset: 0x04) (R/W 32) Host DMA Channel Address Register (n = 1) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BUFF_ADD:32;               /**< bit:  0..31  Buffer Address                           */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTDMAADDRESS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTDMAADDRESS_OFFSET          (0x04)                                        /**<  (USBHS_HSTDMAADDRESS) Host DMA Channel Address Register (n = 1)  Offset */
@@ -214,6 +228,7 @@ typedef union {
 
 /* -------- USBHS_HSTDMACONTROL : (USBHS Offset: 0x08) (R/W 32) Host DMA Channel Control Register (n = 1) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CHANN_ENB:1;               /**< bit:      0  Channel Enable Command                   */
@@ -229,6 +244,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTDMACONTROL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTDMACONTROL_OFFSET          (0x08)                                        /**<  (USBHS_HSTDMACONTROL) Host DMA Channel Control Register (n = 1)  Offset */
@@ -266,6 +282,7 @@ typedef union {
 
 /* -------- USBHS_HSTDMASTATUS : (USBHS Offset: 0x0c) (R/W 32) Host DMA Channel Status Register (n = 1) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CHANN_ENB:1;               /**< bit:      0  Channel Enable Status                    */
@@ -279,6 +296,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTDMASTATUS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTDMASTATUS_OFFSET           (0x0C)                                        /**<  (USBHS_HSTDMASTATUS) Host DMA Channel Status Register (n = 1)  Offset */
@@ -307,6 +325,7 @@ typedef union {
 
 /* -------- USBHS_DEVCTRL : (USBHS Offset: 0x00) (R/W 32) Device General Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t UADD:7;                    /**< bit:   0..6  USB Address                              */
@@ -321,8 +340,14 @@ typedef union {
     uint32_t OPMODE2:1;                 /**< bit:     16  Specific Operational mode                */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct {
+    uint32_t :16;                       /**< bit:  0..15  Reserved */
+    uint32_t OPMODE:1;                  /**< bit:     16  Specific Operational mode                */
+    uint32_t :15;                       /**< bit: 17..31 Reserved */
+  } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVCTRL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVCTRL_OFFSET                (0x00)                                        /**<  (USBHS_DEVCTRL) Device General Control Register  Offset */
@@ -364,9 +389,13 @@ typedef union {
 #define USBHS_DEVCTRL_MASK                  _U_(0x1FFFF)                                   /**< \deprecated (USBHS_DEVCTRL) Register MASK  (Use USBHS_DEVCTRL_Msk instead)  */
 #define USBHS_DEVCTRL_Msk                   _U_(0x1FFFF)                                   /**< (USBHS_DEVCTRL) Register Mask  */
 
+#define USBHS_DEVCTRL_OPMODE_Pos            16                                             /**< (USBHS_DEVCTRL Position) Specific Operational mode */
+#define USBHS_DEVCTRL_OPMODE_Msk            (_U_(0x1) << USBHS_DEVCTRL_OPMODE_Pos)         /**< (USBHS_DEVCTRL Mask) OPMODE */
+#define USBHS_DEVCTRL_OPMODE(value)         (USBHS_DEVCTRL_OPMODE_Msk & ((value) << USBHS_DEVCTRL_OPMODE_Pos))  
 
 /* -------- USBHS_DEVISR : (USBHS Offset: 0x04) (R/ 32) Device Global Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SUSP:1;                    /**< bit:      0  Suspend Interrupt                        */
@@ -406,6 +435,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVISR_OFFSET                 (0x04)                                        /**<  (USBHS_DEVISR) Device Global Interrupt Status Register  Offset */
@@ -500,6 +530,7 @@ typedef union {
 
 /* -------- USBHS_DEVICR : (USBHS Offset: 0x08) (/W 32) Device Global Interrupt Clear Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SUSPC:1;                   /**< bit:      0  Suspend Interrupt Clear                  */
@@ -513,6 +544,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVICR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVICR_OFFSET                 (0x08)                                        /**<  (USBHS_DEVICR) Device Global Interrupt Clear Register  Offset */
@@ -544,6 +576,7 @@ typedef union {
 
 /* -------- USBHS_DEVIFR : (USBHS Offset: 0x0c) (/W 32) Device Global Interrupt Set Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SUSPS:1;                   /**< bit:      0  Suspend Interrupt Set                    */
@@ -568,6 +601,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVIFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVIFR_OFFSET                 (0x0C)                                        /**<  (USBHS_DEVIFR) Device Global Interrupt Set Register  Offset */
@@ -623,6 +657,7 @@ typedef union {
 
 /* -------- USBHS_DEVIMR : (USBHS Offset: 0x10) (R/ 32) Device Global Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SUSPE:1;                   /**< bit:      0  Suspend Interrupt Mask                   */
@@ -662,6 +697,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVIMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVIMR_OFFSET                 (0x10)                                        /**<  (USBHS_DEVIMR) Device Global Interrupt Mask Register  Offset */
@@ -756,6 +792,7 @@ typedef union {
 
 /* -------- USBHS_DEVIDR : (USBHS Offset: 0x14) (/W 32) Device Global Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SUSPEC:1;                  /**< bit:      0  Suspend Interrupt Disable                */
@@ -795,6 +832,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVIDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVIDR_OFFSET                 (0x14)                                        /**<  (USBHS_DEVIDR) Device Global Interrupt Disable Register  Offset */
@@ -889,6 +927,7 @@ typedef union {
 
 /* -------- USBHS_DEVIER : (USBHS Offset: 0x18) (/W 32) Device Global Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SUSPES:1;                  /**< bit:      0  Suspend Interrupt Enable                 */
@@ -928,6 +967,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVIER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVIER_OFFSET                 (0x18)                                        /**<  (USBHS_DEVIER) Device Global Interrupt Enable Register  Offset */
@@ -1022,6 +1062,7 @@ typedef union {
 
 /* -------- USBHS_DEVEPT : (USBHS Offset: 0x1c) (R/W 32) Device Endpoint Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t EPEN0:1;                   /**< bit:      0  Endpoint 0 Enable                        */
@@ -1055,6 +1096,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPT_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVEPT_OFFSET                 (0x1C)                                        /**<  (USBHS_DEVEPT) Device Endpoint Register  Offset */
@@ -1131,6 +1173,7 @@ typedef union {
 
 /* -------- USBHS_DEVFNUM : (USBHS Offset: 0x20) (R/ 32) Device Frame Number Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MFNUM:3;                   /**< bit:   0..2  Micro Frame Number                       */
@@ -1141,6 +1184,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVFNUM_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVFNUM_OFFSET                (0x20)                                        /**<  (USBHS_DEVFNUM) Device Frame Number Register  Offset */
@@ -1160,6 +1204,7 @@ typedef union {
 
 /* -------- USBHS_DEVEPTCFG : (USBHS Offset: 0x100) (R/W 32) Device Endpoint Configuration Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -1176,6 +1221,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPTCFG_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVEPTCFG_OFFSET              (0x100)                                       /**<  (USBHS_DEVEPTCFG) Device Endpoint Configuration Register (n = 0) 0  Offset */
@@ -1249,6 +1295,7 @@ typedef union {
 
 /* -------- USBHS_DEVEPTISR : (USBHS Offset: 0x130) (R/ 32) Device Endpoint Status Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXINI:1;                   /**< bit:      0  Transmitted IN Data Interrupt            */
@@ -1272,6 +1319,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPTISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVEPTISR_OFFSET              (0x130)                                       /**<  (USBHS_DEVEPTISR) Device Endpoint Status Register (n = 0) 0  Offset */
@@ -1349,6 +1397,7 @@ typedef union {
 
 /* -------- USBHS_DEVEPTICR : (USBHS Offset: 0x160) (/W 32) Device Endpoint Clear Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXINIC:1;                  /**< bit:      0  Transmitted IN Data Interrupt Clear      */
@@ -1363,6 +1412,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPTICR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVEPTICR_OFFSET              (0x160)                                       /**<  (USBHS_DEVEPTICR) Device Endpoint Clear Register (n = 0) 0  Offset */
@@ -1397,6 +1447,7 @@ typedef union {
 
 /* -------- USBHS_DEVEPTIFR : (USBHS Offset: 0x190) (/W 32) Device Endpoint Set Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXINIS:1;                  /**< bit:      0  Transmitted IN Data Interrupt Set        */
@@ -1413,6 +1464,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPTIFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVEPTIFR_OFFSET              (0x190)                                       /**<  (USBHS_DEVEPTIFR) Device Endpoint Set Register (n = 0) 0  Offset */
@@ -1450,6 +1502,7 @@ typedef union {
 
 /* -------- USBHS_DEVEPTIMR : (USBHS Offset: 0x1c0) (R/ 32) Device Endpoint Mask Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXINE:1;                   /**< bit:      0  Transmitted IN Data Interrupt            */
@@ -1473,6 +1526,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPTIMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVEPTIMR_OFFSET              (0x1C0)                                       /**<  (USBHS_DEVEPTIMR) Device Endpoint Mask Register (n = 0) 0  Offset */
@@ -1528,6 +1582,7 @@ typedef union {
 
 /* -------- USBHS_DEVEPTIER : (USBHS Offset: 0x1f0) (/W 32) Device Endpoint Enable Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXINES:1;                  /**< bit:      0  Transmitted IN Data Interrupt Enable     */
@@ -1551,6 +1606,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPTIER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVEPTIER_OFFSET              (0x1F0)                                       /**<  (USBHS_DEVEPTIER) Device Endpoint Enable Register (n = 0) 0  Offset */
@@ -1606,6 +1662,7 @@ typedef union {
 
 /* -------- USBHS_DEVEPTIDR : (USBHS Offset: 0x220) (/W 32) Device Endpoint Disable Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXINEC:1;                  /**< bit:      0  Transmitted IN Interrupt Clear           */
@@ -1629,6 +1686,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPTIDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVEPTIDR_OFFSET              (0x220)                                       /**<  (USBHS_DEVEPTIDR) Device Endpoint Disable Register (n = 0) 0  Offset */
@@ -1678,6 +1736,7 @@ typedef union {
 
 /* -------- USBHS_HSTCTRL : (USBHS Offset: 0x400) (R/W 32) Host General Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :8;                        /**< bit:   0..7  Reserved */
@@ -1690,6 +1749,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTCTRL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTCTRL_OFFSET                (0x400)                                       /**<  (USBHS_HSTCTRL) Host General Control Register  Offset */
@@ -1716,6 +1776,7 @@ typedef union {
 
 /* -------- USBHS_HSTISR : (USBHS Offset: 0x404) (R/ 32) Host Global Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DCONNI:1;                  /**< bit:      0  Device Connection Interrupt              */
@@ -1755,6 +1816,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTISR_OFFSET                 (0x404)                                       /**<  (USBHS_HSTISR) Host Global Interrupt Status Register  Offset */
@@ -1849,6 +1911,7 @@ typedef union {
 
 /* -------- USBHS_HSTICR : (USBHS Offset: 0x408) (/W 32) Host Global Interrupt Clear Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DCONNIC:1;                 /**< bit:      0  Device Connection Interrupt Clear        */
@@ -1862,6 +1925,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTICR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTICR_OFFSET                 (0x408)                                       /**<  (USBHS_HSTICR) Host Global Interrupt Clear Register  Offset */
@@ -1893,6 +1957,7 @@ typedef union {
 
 /* -------- USBHS_HSTIFR : (USBHS Offset: 0x40c) (/W 32) Host Global Interrupt Set Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DCONNIS:1;                 /**< bit:      0  Device Connection Interrupt Set          */
@@ -1917,6 +1982,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTIFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTIFR_OFFSET                 (0x40C)                                       /**<  (USBHS_HSTIFR) Host Global Interrupt Set Register  Offset */
@@ -1972,6 +2038,7 @@ typedef union {
 
 /* -------- USBHS_HSTIMR : (USBHS Offset: 0x410) (R/ 32) Host Global Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DCONNIE:1;                 /**< bit:      0  Device Connection Interrupt Enable       */
@@ -2011,6 +2078,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTIMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTIMR_OFFSET                 (0x410)                                       /**<  (USBHS_HSTIMR) Host Global Interrupt Mask Register  Offset */
@@ -2105,6 +2173,7 @@ typedef union {
 
 /* -------- USBHS_HSTIDR : (USBHS Offset: 0x414) (/W 32) Host Global Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DCONNIEC:1;                /**< bit:      0  Device Connection Interrupt Disable      */
@@ -2144,6 +2213,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTIDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTIDR_OFFSET                 (0x414)                                       /**<  (USBHS_HSTIDR) Host Global Interrupt Disable Register  Offset */
@@ -2238,6 +2308,7 @@ typedef union {
 
 /* -------- USBHS_HSTIER : (USBHS Offset: 0x418) (/W 32) Host Global Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DCONNIES:1;                /**< bit:      0  Device Connection Interrupt Enable       */
@@ -2277,6 +2348,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTIER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTIER_OFFSET                 (0x418)                                       /**<  (USBHS_HSTIER) Host Global Interrupt Enable Register  Offset */
@@ -2371,6 +2443,7 @@ typedef union {
 
 /* -------- USBHS_HSTPIP : (USBHS Offset: 0x41c) (R/W 32) Host Pipe Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PEN0:1;                    /**< bit:      0  Pipe 0 Enable                            */
@@ -2402,6 +2475,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIP_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTPIP_OFFSET                 (0x41C)                                       /**<  (USBHS_HSTPIP) Host Pipe Register  Offset */
@@ -2472,6 +2546,7 @@ typedef union {
 
 /* -------- USBHS_HSTFNUM : (USBHS Offset: 0x420) (R/W 32) Host Frame Number Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MFNUM:3;                   /**< bit:   0..2  Micro Frame Number                       */
@@ -2482,6 +2557,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTFNUM_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTFNUM_OFFSET                (0x420)                                       /**<  (USBHS_HSTFNUM) Host Frame Number Register  Offset */
@@ -2501,6 +2577,7 @@ typedef union {
 
 /* -------- USBHS_HSTADDR1 : (USBHS Offset: 0x424) (R/W 32) Host Address 1 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t HSTADDRP0:7;               /**< bit:   0..6  USB Host Address                         */
@@ -2514,6 +2591,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTADDR1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTADDR1_OFFSET               (0x424)                                       /**<  (USBHS_HSTADDR1) Host Address 1 Register  Offset */
@@ -2536,6 +2614,7 @@ typedef union {
 
 /* -------- USBHS_HSTADDR2 : (USBHS Offset: 0x428) (R/W 32) Host Address 2 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t HSTADDRP4:7;               /**< bit:   0..6  USB Host Address                         */
@@ -2549,6 +2628,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTADDR2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTADDR2_OFFSET               (0x428)                                       /**<  (USBHS_HSTADDR2) Host Address 2 Register  Offset */
@@ -2571,6 +2651,7 @@ typedef union {
 
 /* -------- USBHS_HSTADDR3 : (USBHS Offset: 0x42c) (R/W 32) Host Address 3 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t HSTADDRP8:7;               /**< bit:   0..6  USB Host Address                         */
@@ -2580,6 +2661,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTADDR3_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTADDR3_OFFSET               (0x42C)                                       /**<  (USBHS_HSTADDR3) Host Address 3 Register  Offset */
@@ -2596,6 +2678,7 @@ typedef union {
 
 /* -------- USBHS_HSTPIPCFG : (USBHS Offset: 0x500) (R/W 32) Host Pipe Configuration Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -2614,6 +2697,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPCFG_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTPIPCFG_OFFSET              (0x500)                                       /**<  (USBHS_HSTPIPCFG) Host Pipe Configuration Register (n = 0) 0  Offset */
@@ -2684,6 +2768,7 @@ typedef union {
 
 /* -------- USBHS_HSTPIPISR : (USBHS Offset: 0x530) (R/ 32) Host Pipe Status Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXINI:1;                   /**< bit:      0  Received IN Data Interrupt               */
@@ -2707,6 +2792,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTPIPISR_OFFSET              (0x530)                                       /**<  (USBHS_HSTPIPISR) Host Pipe Status Register (n = 0) 0  Offset */
@@ -2777,6 +2863,7 @@ typedef union {
 
 /* -------- USBHS_HSTPIPICR : (USBHS Offset: 0x560) (/W 32) Host Pipe Clear Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXINIC:1;                  /**< bit:      0  Received IN Data Interrupt Clear         */
@@ -2791,6 +2878,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPICR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTPIPICR_OFFSET              (0x560)                                       /**<  (USBHS_HSTPIPICR) Host Pipe Clear Register (n = 0) 0  Offset */
@@ -2822,6 +2910,7 @@ typedef union {
 
 /* -------- USBHS_HSTPIPIFR : (USBHS Offset: 0x590) (/W 32) Host Pipe Set Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXINIS:1;                  /**< bit:      0  Received IN Data Interrupt Set           */
@@ -2838,6 +2927,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPIFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTPIPIFR_OFFSET              (0x590)                                       /**<  (USBHS_HSTPIPIFR) Host Pipe Set Register (n = 0) 0  Offset */
@@ -2875,6 +2965,7 @@ typedef union {
 
 /* -------- USBHS_HSTPIPIMR : (USBHS Offset: 0x5c0) (R/ 32) Host Pipe Mask Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXINE:1;                   /**< bit:      0  Received IN Data Interrupt Enable        */
@@ -2897,6 +2988,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPIMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTPIPIMR_OFFSET              (0x5C0)                                       /**<  (USBHS_HSTPIPIMR) Host Pipe Mask Register (n = 0) 0  Offset */
@@ -2946,6 +3038,7 @@ typedef union {
 
 /* -------- USBHS_HSTPIPIER : (USBHS Offset: 0x5f0) (/W 32) Host Pipe Enable Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXINES:1;                  /**< bit:      0  Received IN Data Interrupt Enable        */
@@ -2966,6 +3059,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPIER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTPIPIER_OFFSET              (0x5F0)                                       /**<  (USBHS_HSTPIPIER) Host Pipe Enable Register (n = 0) 0  Offset */
@@ -3012,6 +3106,7 @@ typedef union {
 
 /* -------- USBHS_HSTPIPIDR : (USBHS Offset: 0x620) (/W 32) Host Pipe Disable Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXINEC:1;                  /**< bit:      0  Received IN Data Interrupt Disable       */
@@ -3033,6 +3128,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPIDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTPIPIDR_OFFSET              (0x620)                                       /**<  (USBHS_HSTPIPIDR) Host Pipe Disable Register (n = 0) 0  Offset */
@@ -3079,6 +3175,7 @@ typedef union {
 
 /* -------- USBHS_HSTPIPINRQ : (USBHS Offset: 0x650) (R/W 32) Host Pipe IN Request Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t INRQ:8;                    /**< bit:   0..7  IN Request Number before Freeze          */
@@ -3087,6 +3184,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPINRQ_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTPIPINRQ_OFFSET             (0x650)                                       /**<  (USBHS_HSTPIPINRQ) Host Pipe IN Request Register (n = 0) 0  Offset */
@@ -3103,6 +3201,7 @@ typedef union {
 
 /* -------- USBHS_HSTPIPERR : (USBHS Offset: 0x680) (R/W 32) Host Pipe Error Register (n = 0) 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DATATGL:1;                 /**< bit:      0  Data Toggle Error                        */
@@ -3113,8 +3212,14 @@ typedef union {
     uint32_t COUNTER:2;                 /**< bit:   5..6  Error Counter                            */
     uint32_t :25;                       /**< bit:  7..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct {
+    uint32_t :4;                        /**< bit:   0..3  Reserved */
+    uint32_t CRC:1;                     /**< bit:      4  CRCx6 Error                              */
+    uint32_t :27;                       /**< bit:  5..31 Reserved */
+  } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPERR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTPIPERR_OFFSET              (0x680)                                       /**<  (USBHS_HSTPIPERR) Host Pipe Error Register (n = 0) 0  Offset */
@@ -3140,9 +3245,13 @@ typedef union {
 #define USBHS_HSTPIPERR_MASK                _U_(0x7F)                                      /**< \deprecated (USBHS_HSTPIPERR) Register MASK  (Use USBHS_HSTPIPERR_Msk instead)  */
 #define USBHS_HSTPIPERR_Msk                 _U_(0x7F)                                      /**< (USBHS_HSTPIPERR) Register Mask  */
 
+#define USBHS_HSTPIPERR_CRC_Pos             4                                              /**< (USBHS_HSTPIPERR Position) CRCx6 Error */
+#define USBHS_HSTPIPERR_CRC_Msk             (_U_(0x1) << USBHS_HSTPIPERR_CRC_Pos)          /**< (USBHS_HSTPIPERR Mask) CRC */
+#define USBHS_HSTPIPERR_CRC(value)          (USBHS_HSTPIPERR_CRC_Msk & ((value) << USBHS_HSTPIPERR_CRC_Pos))  
 
 /* -------- USBHS_CTRL : (USBHS Offset: 0x800) (R/W 32) General Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :4;                        /**< bit:   0..3  Reserved */
@@ -3158,6 +3267,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_CTRL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_CTRL_OFFSET                   (0x800)                                       /**<  (USBHS_CTRL) General Control Register  Offset */
@@ -3187,6 +3297,7 @@ typedef union {
 
 /* -------- USBHS_SR : (USBHS Offset: 0x804) (R/ 32) General Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :4;                        /**< bit:   0..3  Reserved */
@@ -3198,6 +3309,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_SR_OFFSET                     (0x804)                                       /**<  (USBHS_SR) General Status Register  Offset */
@@ -3223,6 +3335,7 @@ typedef union {
 
 /* -------- USBHS_SCR : (USBHS Offset: 0x808) (/W 32) General Status Clear Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :4;                        /**< bit:   0..3  Reserved */
@@ -3231,6 +3344,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_SCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_SCR_OFFSET                    (0x808)                                       /**<  (USBHS_SCR) General Status Clear Register  Offset */
@@ -3244,6 +3358,7 @@ typedef union {
 
 /* -------- USBHS_SFR : (USBHS Offset: 0x80c) (/W 32) General Status Set Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :4;                        /**< bit:   0..3  Reserved */
@@ -3254,6 +3369,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_SFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_SFR_OFFSET                    (0x80C)                                       /**<  (USBHS_SFR) General Status Set Register  Offset */
@@ -3299,23 +3415,23 @@ typedef struct {
   __O  uint32_t USBHS_DEVIER;   /**< (USBHS Offset: 0x18) Device Global Interrupt Enable Register */
   __IO uint32_t USBHS_DEVEPT;   /**< (USBHS Offset: 0x1C) Device Endpoint Register */
   __I  uint32_t USBHS_DEVFNUM;  /**< (USBHS Offset: 0x20) Device Frame Number Register */
-  RoReg8  Reserved1[0xDC];
+  __I  uint8_t                        Reserved1[220];
   __IO uint32_t USBHS_DEVEPTCFG[10]; /**< (USBHS Offset: 0x100) Device Endpoint Configuration Register (n = 0) 0 */
-  RoReg8  Reserved2[0x8];
+  __I  uint8_t                        Reserved2[8];
   __I  uint32_t USBHS_DEVEPTISR[10]; /**< (USBHS Offset: 0x130) Device Endpoint Status Register (n = 0) 0 */
-  RoReg8  Reserved3[0x8];
+  __I  uint8_t                        Reserved3[8];
   __O  uint32_t USBHS_DEVEPTICR[10]; /**< (USBHS Offset: 0x160) Device Endpoint Clear Register (n = 0) 0 */
-  RoReg8  Reserved4[0x8];
+  __I  uint8_t                        Reserved4[8];
   __O  uint32_t USBHS_DEVEPTIFR[10]; /**< (USBHS Offset: 0x190) Device Endpoint Set Register (n = 0) 0 */
-  RoReg8  Reserved5[0x8];
+  __I  uint8_t                        Reserved5[8];
   __I  uint32_t USBHS_DEVEPTIMR[10]; /**< (USBHS Offset: 0x1C0) Device Endpoint Mask Register (n = 0) 0 */
-  RoReg8  Reserved6[0x8];
+  __I  uint8_t                        Reserved6[8];
   __O  uint32_t USBHS_DEVEPTIER[10]; /**< (USBHS Offset: 0x1F0) Device Endpoint Enable Register (n = 0) 0 */
-  RoReg8  Reserved7[0x8];
+  __I  uint8_t                        Reserved7[8];
   __O  uint32_t USBHS_DEVEPTIDR[10]; /**< (USBHS Offset: 0x220) Device Endpoint Disable Register (n = 0) 0 */
-  RoReg8  Reserved8[0xC8];
-       UsbhsDevdma USBHS_DEVDMA[USBHSDEVDMA_NUMBER]; /**< Offset: 0x310 Device DMA Channel Next Descriptor Address Register (n = 1) */
-  RoReg8  Reserved9[0x80];
+  __I  uint8_t                        Reserved8[200];
+       UsbhsDevdma UsbhsDevdma[USBHSDEVDMA_NUMBER]; /**< Offset: 0x310 Device DMA Channel Next Descriptor Address Register (n = 1) */
+  __I  uint8_t                        Reserved9[128];
   __IO uint32_t USBHS_HSTCTRL;  /**< (USBHS Offset: 0x400) Host General Control Register */
   __I  uint32_t USBHS_HSTISR;   /**< (USBHS Offset: 0x404) Host Global Interrupt Status Register */
   __O  uint32_t USBHS_HSTICR;   /**< (USBHS Offset: 0x408) Host Global Interrupt Clear Register */
@@ -3328,27 +3444,27 @@ typedef struct {
   __IO uint32_t USBHS_HSTADDR1; /**< (USBHS Offset: 0x424) Host Address 1 Register */
   __IO uint32_t USBHS_HSTADDR2; /**< (USBHS Offset: 0x428) Host Address 2 Register */
   __IO uint32_t USBHS_HSTADDR3; /**< (USBHS Offset: 0x42C) Host Address 3 Register */
-  RoReg8  Reserved10[0xD0];
+  __I  uint8_t                        Reserved10[208];
   __IO uint32_t USBHS_HSTPIPCFG[10]; /**< (USBHS Offset: 0x500) Host Pipe Configuration Register (n = 0) 0 */
-  RoReg8  Reserved11[0x8];
+  __I  uint8_t                        Reserved11[8];
   __I  uint32_t USBHS_HSTPIPISR[10]; /**< (USBHS Offset: 0x530) Host Pipe Status Register (n = 0) 0 */
-  RoReg8  Reserved12[0x8];
+  __I  uint8_t                        Reserved12[8];
   __O  uint32_t USBHS_HSTPIPICR[10]; /**< (USBHS Offset: 0x560) Host Pipe Clear Register (n = 0) 0 */
-  RoReg8  Reserved13[0x8];
+  __I  uint8_t                        Reserved13[8];
   __O  uint32_t USBHS_HSTPIPIFR[10]; /**< (USBHS Offset: 0x590) Host Pipe Set Register (n = 0) 0 */
-  RoReg8  Reserved14[0x8];
+  __I  uint8_t                        Reserved14[8];
   __I  uint32_t USBHS_HSTPIPIMR[10]; /**< (USBHS Offset: 0x5C0) Host Pipe Mask Register (n = 0) 0 */
-  RoReg8  Reserved15[0x8];
+  __I  uint8_t                        Reserved15[8];
   __O  uint32_t USBHS_HSTPIPIER[10]; /**< (USBHS Offset: 0x5F0) Host Pipe Enable Register (n = 0) 0 */
-  RoReg8  Reserved16[0x8];
+  __I  uint8_t                        Reserved16[8];
   __O  uint32_t USBHS_HSTPIPIDR[10]; /**< (USBHS Offset: 0x620) Host Pipe Disable Register (n = 0) 0 */
-  RoReg8  Reserved17[0x8];
+  __I  uint8_t                        Reserved17[8];
   __IO uint32_t USBHS_HSTPIPINRQ[10]; /**< (USBHS Offset: 0x650) Host Pipe IN Request Register (n = 0) 0 */
-  RoReg8  Reserved18[0x8];
+  __I  uint8_t                        Reserved18[8];
   __IO uint32_t USBHS_HSTPIPERR[10]; /**< (USBHS Offset: 0x680) Host Pipe Error Register (n = 0) 0 */
-  RoReg8  Reserved19[0x68];
-       UsbhsHstdma USBHS_HSTDMA[USBHSHSTDMA_NUMBER]; /**< Offset: 0x710 Host DMA Channel Next Descriptor Address Register (n = 1) */
-  RoReg8  Reserved20[0x80];
+  __I  uint8_t                        Reserved19[104];
+       UsbhsHstdma UsbhsHstdma[USBHSHSTDMA_NUMBER]; /**< Offset: 0x710 Host DMA Channel Next Descriptor Address Register (n = 1) */
+  __I  uint8_t                        Reserved20[128];
   __IO uint32_t USBHS_CTRL;     /**< (USBHS Offset: 0x800) General Control Register */
   __I  uint32_t USBHS_SR;       /**< (USBHS Offset: 0x804) General Status Register */
   __O  uint32_t USBHS_SCR;      /**< (USBHS Offset: 0x808) General Status Clear Register */
@@ -3383,23 +3499,23 @@ typedef struct {
   __O  USBHS_DEVIER_Type              USBHS_DEVIER;   /**< Offset: 0x18 ( /W  32) Device Global Interrupt Enable Register */
   __IO USBHS_DEVEPT_Type              USBHS_DEVEPT;   /**< Offset: 0x1C (R/W  32) Device Endpoint Register */
   __I  USBHS_DEVFNUM_Type             USBHS_DEVFNUM;  /**< Offset: 0x20 (R/   32) Device Frame Number Register */
-  __I  uint32_t                       Reserved1[55];
+  __I  uint8_t                        Reserved1[220];
   __IO USBHS_DEVEPTCFG_Type           USBHS_DEVEPTCFG[10]; /**< Offset: 0x100 (R/W  32) Device Endpoint Configuration Register (n = 0) 0 */
-  __I  uint32_t                       Reserved2[2];
+  __I  uint8_t                        Reserved2[8];
   __I  USBHS_DEVEPTISR_Type           USBHS_DEVEPTISR[10]; /**< Offset: 0x130 (R/   32) Device Endpoint Status Register (n = 0) 0 */
-  __I  uint32_t                       Reserved3[2];
+  __I  uint8_t                        Reserved3[8];
   __O  USBHS_DEVEPTICR_Type           USBHS_DEVEPTICR[10]; /**< Offset: 0x160 ( /W  32) Device Endpoint Clear Register (n = 0) 0 */
-  __I  uint32_t                       Reserved4[2];
+  __I  uint8_t                        Reserved4[8];
   __O  USBHS_DEVEPTIFR_Type           USBHS_DEVEPTIFR[10]; /**< Offset: 0x190 ( /W  32) Device Endpoint Set Register (n = 0) 0 */
-  __I  uint32_t                       Reserved5[2];
+  __I  uint8_t                        Reserved5[8];
   __I  USBHS_DEVEPTIMR_Type           USBHS_DEVEPTIMR[10]; /**< Offset: 0x1C0 (R/   32) Device Endpoint Mask Register (n = 0) 0 */
-  __I  uint32_t                       Reserved6[2];
+  __I  uint8_t                        Reserved6[8];
   __O  USBHS_DEVEPTIER_Type           USBHS_DEVEPTIER[10]; /**< Offset: 0x1F0 ( /W  32) Device Endpoint Enable Register (n = 0) 0 */
-  __I  uint32_t                       Reserved7[2];
+  __I  uint8_t                        Reserved7[8];
   __O  USBHS_DEVEPTIDR_Type           USBHS_DEVEPTIDR[10]; /**< Offset: 0x220 ( /W  32) Device Endpoint Disable Register (n = 0) 0 */
-  __I  uint32_t                       Reserved8[50];
-       UsbhsDevdma                    USBHS_DEVDMA[7]; /**< Offset: 0x310 Device DMA Channel Next Descriptor Address Register (n = 1) */
-  __I  uint32_t                       Reserved9[32];
+  __I  uint8_t                        Reserved8[200];
+       UsbhsDevdma                    UsbhsDevdma[7]; /**< Offset: 0x310 Device DMA Channel Next Descriptor Address Register (n = 1) */
+  __I  uint8_t                        Reserved9[128];
   __IO USBHS_HSTCTRL_Type             USBHS_HSTCTRL;  /**< Offset: 0x400 (R/W  32) Host General Control Register */
   __I  USBHS_HSTISR_Type              USBHS_HSTISR;   /**< Offset: 0x404 (R/   32) Host Global Interrupt Status Register */
   __O  USBHS_HSTICR_Type              USBHS_HSTICR;   /**< Offset: 0x408 ( /W  32) Host Global Interrupt Clear Register */
@@ -3412,27 +3528,27 @@ typedef struct {
   __IO USBHS_HSTADDR1_Type            USBHS_HSTADDR1; /**< Offset: 0x424 (R/W  32) Host Address 1 Register */
   __IO USBHS_HSTADDR2_Type            USBHS_HSTADDR2; /**< Offset: 0x428 (R/W  32) Host Address 2 Register */
   __IO USBHS_HSTADDR3_Type            USBHS_HSTADDR3; /**< Offset: 0x42C (R/W  32) Host Address 3 Register */
-  __I  uint32_t                       Reserved10[52];
+  __I  uint8_t                        Reserved10[208];
   __IO USBHS_HSTPIPCFG_Type           USBHS_HSTPIPCFG[10]; /**< Offset: 0x500 (R/W  32) Host Pipe Configuration Register (n = 0) 0 */
-  __I  uint32_t                       Reserved11[2];
+  __I  uint8_t                        Reserved11[8];
   __I  USBHS_HSTPIPISR_Type           USBHS_HSTPIPISR[10]; /**< Offset: 0x530 (R/   32) Host Pipe Status Register (n = 0) 0 */
-  __I  uint32_t                       Reserved12[2];
+  __I  uint8_t                        Reserved12[8];
   __O  USBHS_HSTPIPICR_Type           USBHS_HSTPIPICR[10]; /**< Offset: 0x560 ( /W  32) Host Pipe Clear Register (n = 0) 0 */
-  __I  uint32_t                       Reserved13[2];
+  __I  uint8_t                        Reserved13[8];
   __O  USBHS_HSTPIPIFR_Type           USBHS_HSTPIPIFR[10]; /**< Offset: 0x590 ( /W  32) Host Pipe Set Register (n = 0) 0 */
-  __I  uint32_t                       Reserved14[2];
+  __I  uint8_t                        Reserved14[8];
   __I  USBHS_HSTPIPIMR_Type           USBHS_HSTPIPIMR[10]; /**< Offset: 0x5C0 (R/   32) Host Pipe Mask Register (n = 0) 0 */
-  __I  uint32_t                       Reserved15[2];
+  __I  uint8_t                        Reserved15[8];
   __O  USBHS_HSTPIPIER_Type           USBHS_HSTPIPIER[10]; /**< Offset: 0x5F0 ( /W  32) Host Pipe Enable Register (n = 0) 0 */
-  __I  uint32_t                       Reserved16[2];
+  __I  uint8_t                        Reserved16[8];
   __O  USBHS_HSTPIPIDR_Type           USBHS_HSTPIPIDR[10]; /**< Offset: 0x620 ( /W  32) Host Pipe Disable Register (n = 0) 0 */
-  __I  uint32_t                       Reserved17[2];
+  __I  uint8_t                        Reserved17[8];
   __IO USBHS_HSTPIPINRQ_Type          USBHS_HSTPIPINRQ[10]; /**< Offset: 0x650 (R/W  32) Host Pipe IN Request Register (n = 0) 0 */
-  __I  uint32_t                       Reserved18[2];
+  __I  uint8_t                        Reserved18[8];
   __IO USBHS_HSTPIPERR_Type           USBHS_HSTPIPERR[10]; /**< Offset: 0x680 (R/W  32) Host Pipe Error Register (n = 0) 0 */
-  __I  uint32_t                       Reserved19[26];
-       UsbhsHstdma                    USBHS_HSTDMA[7]; /**< Offset: 0x710 Host DMA Channel Next Descriptor Address Register (n = 1) */
-  __I  uint32_t                       Reserved20[32];
+  __I  uint8_t                        Reserved19[104];
+       UsbhsHstdma                    UsbhsHstdma[7]; /**< Offset: 0x710 Host DMA Channel Next Descriptor Address Register (n = 1) */
+  __I  uint8_t                        Reserved20[128];
   __IO USBHS_CTRL_Type                USBHS_CTRL;     /**< Offset: 0x800 (R/W  32) General Control Register */
   __I  USBHS_SR_Type                  USBHS_SR;       /**< Offset: 0x804 (R/   32) General Status Register */
   __O  USBHS_SCR_Type                 USBHS_SCR;      /**< Offset: 0x808 ( /W  32) General Status Clear Register */

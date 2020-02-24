@@ -3,11 +3,13 @@
  *
  * \brief Peripheral I/O description for SAME70J19
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -834,34 +836,6 @@
 #define PIN_PA4B_TC0_TCLK0                         _L_(4)       /**< TC0 signal: TCLK0 on PA4 mux B*/
 #define MUX_PA4B_TC0_TCLK0                         _L_(1)       /**< TC0 signal line function value: TCLK0 */
 #define PIO_PA4B_TC0_TCLK0                         (_UL_(1) << 4)
-
-#define PIN_PA28B_TC0_TCLK1                        _L_(28)      /**< TC0 signal: TCLK1 on PA28 mux B*/
-#define MUX_PA28B_TC0_TCLK1                        _L_(1)       /**< TC0 signal line function value: TCLK1 */
-#define PIO_PA28B_TC0_TCLK1                        (_UL_(1) << 28)
-
-#define PIN_PA29B_TC0_TCLK2                        _L_(29)      /**< TC0 signal: TCLK2 on PA29 mux B*/
-#define MUX_PA29B_TC0_TCLK2                        _L_(1)       /**< TC0 signal line function value: TCLK2 */
-#define PIO_PA29B_TC0_TCLK2                        (_UL_(1) << 29)
-
-#define PIN_PA0B_TC0_TIOA0                         _L_(0)       /**< TC0 signal: TIOA0 on PA0 mux B*/
-#define MUX_PA0B_TC0_TIOA0                         _L_(1)       /**< TC0 signal line function value: TIOA0 */
-#define PIO_PA0B_TC0_TIOA0                         (_UL_(1) << 0)
-
-#define PIN_PA15B_TC0_TIOA1                        _L_(15)      /**< TC0 signal: TIOA1 on PA15 mux B*/
-#define MUX_PA15B_TC0_TIOA1                        _L_(1)       /**< TC0 signal line function value: TIOA1 */
-#define PIO_PA15B_TC0_TIOA1                        (_UL_(1) << 15)
-
-#define PIN_PA26B_TC0_TIOA2                        _L_(26)      /**< TC0 signal: TIOA2 on PA26 mux B*/
-#define MUX_PA26B_TC0_TIOA2                        _L_(1)       /**< TC0 signal line function value: TIOA2 */
-#define PIO_PA26B_TC0_TIOA2                        (_UL_(1) << 26)
-
-#define PIN_PA1B_TC0_TIOB0                         _L_(1)       /**< TC0 signal: TIOB0 on PA1 mux B*/
-#define MUX_PA1B_TC0_TIOB0                         _L_(1)       /**< TC0 signal line function value: TIOB0 */
-#define PIO_PA1B_TC0_TIOB0                         (_UL_(1) << 1)
-
-#define PIN_PA16B_TC0_TIOB1                        _L_(16)      /**< TC0 signal: TIOB1 on PA16 mux B*/
-#define MUX_PA16B_TC0_TIOB1                        _L_(1)       /**< TC0 signal line function value: TIOB1 */
-#define PIO_PA16B_TC0_TIOB1                        (_UL_(1) << 16)
 
 #define PIN_PA27B_TC0_TIOB2                        _L_(27)      /**< TC0 signal: TIOB2 on PA27 mux B*/
 #define MUX_PA27B_TC0_TIOB2                        _L_(1)       /**< TC0 signal line function value: TIOB2 */

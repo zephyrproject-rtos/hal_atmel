@@ -3,11 +3,13 @@
  *
  * \brief Instance description for HSMCI
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -599,8 +601,8 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for HSMCI peripheral ========== */
-#define HSMCI_INSTANCE_ID                        18        
-#define HSMCI_DMAC_ID_TX                         0         
-#define HSMCI_DMAC_ID_RX                         0         
+#define HSMCI_DMAC_ID_RX                         0          
+#define HSMCI_DMAC_ID_TX                         0          
+#define HSMCI_INSTANCE_ID                        18         
 
 #endif /* _SAME70_HSMCI_INSTANCE_ */

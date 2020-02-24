@@ -3,11 +3,13 @@
  *
  * \brief Component description for SDRAMC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- SDRAMC_MR : (SDRAMC Offset: 0x00) (R/W 32) SDRAMC Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MODE:3;                    /**< bit:   0..2  SDRAMC Command Mode                      */
@@ -52,6 +55,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_MR_OFFSET                    (0x00)                                        /**<  (SDRAMC_MR) SDRAMC Mode Register  Offset */
@@ -79,6 +83,7 @@ typedef union {
 
 /* -------- SDRAMC_TR : (SDRAMC Offset: 0x04) (R/W 32) SDRAMC Refresh Timer Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t COUNT:12;                  /**< bit:  0..11  SDRAMC Refresh Timer Count               */
@@ -86,6 +91,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_TR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_TR_OFFSET                    (0x04)                                        /**<  (SDRAMC_TR) SDRAMC Refresh Timer Register  Offset */
@@ -99,6 +105,7 @@ typedef union {
 
 /* -------- SDRAMC_CR : (SDRAMC Offset: 0x08) (R/W 32) SDRAMC Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NC:2;                      /**< bit:   0..1  Number of Column Bits                    */
@@ -115,6 +122,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_CR_OFFSET                    (0x08)                                        /**<  (SDRAMC_CR) SDRAMC Configuration Register  Offset */
@@ -182,6 +190,7 @@ typedef union {
 
 /* -------- SDRAMC_LPR : (SDRAMC Offset: 0x10) (R/W 32) SDRAMC Low Power Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t LPCB:2;                    /**< bit:   0..1  Low-power Configuration Bits             */
@@ -195,6 +204,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_LPR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_LPR_OFFSET                   (0x10)                                        /**<  (SDRAMC_LPR) SDRAMC Low Power Register  Offset */
@@ -234,6 +244,7 @@ typedef union {
 
 /* -------- SDRAMC_IER : (SDRAMC Offset: 0x14) (/W 32) SDRAMC Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RES:1;                     /**< bit:      0  Refresh Error Status                     */
@@ -241,6 +252,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_IER_OFFSET                   (0x14)                                        /**<  (SDRAMC_IER) SDRAMC Interrupt Enable Register  Offset */
@@ -254,6 +266,7 @@ typedef union {
 
 /* -------- SDRAMC_IDR : (SDRAMC Offset: 0x18) (/W 32) SDRAMC Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RES:1;                     /**< bit:      0  Refresh Error Status                     */
@@ -261,6 +274,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_IDR_OFFSET                   (0x18)                                        /**<  (SDRAMC_IDR) SDRAMC Interrupt Disable Register  Offset */
@@ -274,6 +288,7 @@ typedef union {
 
 /* -------- SDRAMC_IMR : (SDRAMC Offset: 0x1c) (R/ 32) SDRAMC Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RES:1;                     /**< bit:      0  Refresh Error Status                     */
@@ -281,6 +296,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_IMR_OFFSET                   (0x1C)                                        /**<  (SDRAMC_IMR) SDRAMC Interrupt Mask Register  Offset */
@@ -294,6 +310,7 @@ typedef union {
 
 /* -------- SDRAMC_ISR : (SDRAMC Offset: 0x20) (R/ 32) SDRAMC Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RES:1;                     /**< bit:      0  Refresh Error Status (cleared on read)   */
@@ -301,6 +318,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_ISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_ISR_OFFSET                   (0x20)                                        /**<  (SDRAMC_ISR) SDRAMC Interrupt Status Register  Offset */
@@ -314,6 +332,7 @@ typedef union {
 
 /* -------- SDRAMC_MDR : (SDRAMC Offset: 0x24) (R/W 32) SDRAMC Memory Device Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MD:2;                      /**< bit:   0..1  Memory Device Type                       */
@@ -321,6 +340,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_MDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_MDR_OFFSET                   (0x24)                                        /**<  (SDRAMC_MDR) SDRAMC Memory Device Register  Offset */
@@ -338,6 +358,7 @@ typedef union {
 
 /* -------- SDRAMC_CFR1 : (SDRAMC Offset: 0x28) (R/W 32) SDRAMC Configuration Register 1 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TMRD:4;                    /**< bit:   0..3  Load Mode Register Command to Active or Refresh Command */
@@ -347,6 +368,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_CFR1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_CFR1_OFFSET                  (0x28)                                        /**<  (SDRAMC_CFR1) SDRAMC Configuration Register 1  Offset */
@@ -367,6 +389,7 @@ typedef union {
 
 /* -------- SDRAMC_OCMS : (SDRAMC Offset: 0x2c) (R/W 32) SDRAMC OCMS Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SDR_SE:1;                  /**< bit:      0  SDRAM Memory Controller Scrambling Enable */
@@ -374,6 +397,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_OCMS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_OCMS_OFFSET                  (0x2C)                                        /**<  (SDRAMC_OCMS) SDRAMC OCMS Register  Offset */
@@ -387,12 +411,14 @@ typedef union {
 
 /* -------- SDRAMC_OCMS_KEY1 : (SDRAMC Offset: 0x30) (/W 32) SDRAMC OCMS KEY1 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t KEY1:32;                   /**< bit:  0..31  Off-chip Memory Scrambling (OCMS) Key Part 1 */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_OCMS_KEY1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_OCMS_KEY1_OFFSET             (0x30)                                        /**<  (SDRAMC_OCMS_KEY1) SDRAMC OCMS KEY1 Register  Offset */
@@ -406,12 +432,14 @@ typedef union {
 
 /* -------- SDRAMC_OCMS_KEY2 : (SDRAMC Offset: 0x34) (/W 32) SDRAMC OCMS KEY2 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t KEY2:32;                   /**< bit:  0..31  Off-chip Memory Scrambling (OCMS) Key Part 2 */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_OCMS_KEY2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_OCMS_KEY2_OFFSET             (0x34)                                        /**<  (SDRAMC_OCMS_KEY2) SDRAMC OCMS KEY2 Register  Offset */
@@ -430,7 +458,7 @@ typedef struct {
   __IO uint32_t SDRAMC_MR;      /**< (SDRAMC Offset: 0x00) SDRAMC Mode Register */
   __IO uint32_t SDRAMC_TR;      /**< (SDRAMC Offset: 0x04) SDRAMC Refresh Timer Register */
   __IO uint32_t SDRAMC_CR;      /**< (SDRAMC Offset: 0x08) SDRAMC Configuration Register */
-  RoReg8  Reserved1[0x4];
+  __I  uint8_t                        Reserved1[4];
   __IO uint32_t SDRAMC_LPR;     /**< (SDRAMC Offset: 0x10) SDRAMC Low Power Register */
   __O  uint32_t SDRAMC_IER;     /**< (SDRAMC Offset: 0x14) SDRAMC Interrupt Enable Register */
   __O  uint32_t SDRAMC_IDR;     /**< (SDRAMC Offset: 0x18) SDRAMC Interrupt Disable Register */
@@ -449,7 +477,7 @@ typedef struct {
   __IO SDRAMC_MR_Type                 SDRAMC_MR;      /**< Offset: 0x00 (R/W  32) SDRAMC Mode Register */
   __IO SDRAMC_TR_Type                 SDRAMC_TR;      /**< Offset: 0x04 (R/W  32) SDRAMC Refresh Timer Register */
   __IO SDRAMC_CR_Type                 SDRAMC_CR;      /**< Offset: 0x08 (R/W  32) SDRAMC Configuration Register */
-  __I  uint32_t                       Reserved1[1];
+  __I  uint8_t                        Reserved1[4];
   __IO SDRAMC_LPR_Type                SDRAMC_LPR;     /**< Offset: 0x10 (R/W  32) SDRAMC Low Power Register */
   __O  SDRAMC_IER_Type                SDRAMC_IER;     /**< Offset: 0x14 ( /W  32) SDRAMC Interrupt Enable Register */
   __O  SDRAMC_IDR_Type                SDRAMC_IDR;     /**< Offset: 0x18 ( /W  32) SDRAMC Interrupt Disable Register */

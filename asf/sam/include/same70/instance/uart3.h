@@ -3,11 +3,13 @@
  *
  * \brief Instance description for UART3
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -61,8 +63,8 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for UART3 peripheral ========== */
-#define UART3_INSTANCE_ID                        45        
-#define UART3_DMAC_ID_TX                         26        
-#define UART3_DMAC_ID_RX                         27        
+#define UART3_DMAC_ID_RX                         27         
+#define UART3_DMAC_ID_TX                         26         
+#define UART3_INSTANCE_ID                        45         
 
 #endif /* _SAME70_UART3_INSTANCE_ */

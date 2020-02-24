@@ -3,11 +3,13 @@
  *
  * \brief Component description for USART
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- US_CR : (USART Offset: 0x00) (/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -72,6 +75,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_CR_OFFSET                        (0x00)                                        /**<  (US_CR) Control Register  Offset */
@@ -142,6 +146,7 @@ typedef union {
 
 /* -------- US_MR : (USART Offset: 0x04) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t USART_MODE:4;              /**< bit:   0..3  USART Mode of Operation                  */
@@ -166,8 +171,14 @@ typedef union {
     uint32_t MODSYNC:1;                 /**< bit:     30  Manchester Synchronization Mode          */
     uint32_t ONEBIT:1;                  /**< bit:     31  Start Frame Delimiter Selector           */
   } bit;                                /**< Structure used for bit  access */
+  struct {
+    uint32_t :17;                       /**< bit:  0..16  Reserved */
+    uint32_t MODE:1;                    /**< bit:     17  9-bit Character Length                   */
+    uint32_t :14;                       /**< bit: 18..31 Reserved */
+  } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } US_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_MR_OFFSET                        (0x04)                                        /**<  (US_MR) Mode Register  Offset */
@@ -297,9 +308,13 @@ typedef union {
 #define US_MR_MASK                          _U_(0xF7FFFFFF)                                /**< \deprecated (US_MR) Register MASK  (Use US_MR_Msk instead)  */
 #define US_MR_Msk                           _U_(0xF7FFFFFF)                                /**< (US_MR) Register Mask  */
 
+#define US_MR_MODE_Pos                      17                                             /**< (US_MR Position) 9-bit Character Length */
+#define US_MR_MODE_Msk                      (_U_(0x1) << US_MR_MODE_Pos)                   /**< (US_MR Mask) MODE */
+#define US_MR_MODE(value)                   (US_MR_MODE_Msk & ((value) << US_MR_MODE_Pos))  
 
 /* -------- US_IER : (USART Offset: 0x08) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXRDY:1;                   /**< bit:      0  RXRDY Interrupt Enable                   */
@@ -325,6 +340,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_IER_OFFSET                       (0x08)                                        /**<  (US_IER) Interrupt Enable Register  Offset */
@@ -380,6 +396,7 @@ typedef union {
 
 /* -------- US_IDR : (USART Offset: 0x0c) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXRDY:1;                   /**< bit:      0  RXRDY Interrupt Disable                  */
@@ -405,6 +422,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_IDR_OFFSET                       (0x0C)                                        /**<  (US_IDR) Interrupt Disable Register  Offset */
@@ -460,6 +478,7 @@ typedef union {
 
 /* -------- US_IMR : (USART Offset: 0x10) (R/ 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXRDY:1;                   /**< bit:      0  RXRDY Interrupt Mask                     */
@@ -485,6 +504,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_IMR_OFFSET                       (0x10)                                        /**<  (US_IMR) Interrupt Mask Register  Offset */
@@ -540,6 +560,7 @@ typedef union {
 
 /* -------- US_CSR : (USART Offset: 0x14) (R/ 32) Channel Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXRDY:1;                   /**< bit:      0  Receiver Ready (cleared by reading US_RHR) */
@@ -568,6 +589,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_CSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_CSR_OFFSET                       (0x14)                                        /**<  (US_CSR) Channel Status Register  Offset */
@@ -635,6 +657,7 @@ typedef union {
 
 /* -------- US_RHR : (USART Offset: 0x18) (R/ 32) Receive Holding Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXCHR:9;                   /**< bit:   0..8  Received Character                       */
@@ -644,6 +667,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_RHR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_RHR_OFFSET                       (0x18)                                        /**<  (US_RHR) Receive Holding Register  Offset */
@@ -660,6 +684,7 @@ typedef union {
 
 /* -------- US_THR : (USART Offset: 0x1c) (/W 32) Transmit Holding Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXCHR:9;                   /**< bit:   0..8  Character to be Transmitted              */
@@ -669,6 +694,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_THR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_THR_OFFSET                       (0x1C)                                        /**<  (US_THR) Transmit Holding Register  Offset */
@@ -685,6 +711,7 @@ typedef union {
 
 /* -------- US_BRGR : (USART Offset: 0x20) (R/W 32) Baud Rate Generator Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CD:16;                     /**< bit:  0..15  Clock Divider                            */
@@ -693,6 +720,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_BRGR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_BRGR_OFFSET                      (0x20)                                        /**<  (US_BRGR) Baud Rate Generator Register  Offset */
@@ -709,6 +737,7 @@ typedef union {
 
 /* -------- US_RTOR : (USART Offset: 0x24) (R/W 32) Receiver Time-out Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TO:17;                     /**< bit:  0..16  Time-out Value                           */
@@ -716,6 +745,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_RTOR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_RTOR_OFFSET                      (0x24)                                        /**<  (US_RTOR) Receiver Time-out Register  Offset */
@@ -729,6 +759,7 @@ typedef union {
 
 /* -------- US_TTGR : (USART Offset: 0x28) (R/W 32) Transmitter Timeguard Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TG:8;                      /**< bit:   0..7  Timeguard Value                          */
@@ -736,6 +767,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_TTGR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_TTGR_OFFSET                      (0x28)                                        /**<  (US_TTGR) Transmitter Timeguard Register  Offset */
@@ -749,6 +781,7 @@ typedef union {
 
 /* -------- US_FIDI : (USART Offset: 0x40) (R/W 32) FI DI Ratio Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FI_DI_RATIO:16;            /**< bit:  0..15  FI Over DI Ratio Value                   */
@@ -756,6 +789,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_FIDI_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_FIDI_OFFSET                      (0x40)                                        /**<  (US_FIDI) FI DI Ratio Register  Offset */
@@ -769,6 +803,7 @@ typedef union {
 
 /* -------- US_NER : (USART Offset: 0x44) (R/ 32) Number of Errors Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NB_ERRORS:8;               /**< bit:   0..7  Number of Errors                         */
@@ -776,6 +811,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_NER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_NER_OFFSET                       (0x44)                                        /**<  (US_NER) Number of Errors Register  Offset */
@@ -789,6 +825,7 @@ typedef union {
 
 /* -------- US_IF : (USART Offset: 0x4c) (R/W 32) IrDA Filter Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IRDA_FILTER:8;             /**< bit:   0..7  IrDA Filter                              */
@@ -796,6 +833,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_IF_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_IF_OFFSET                        (0x4C)                                        /**<  (US_IF) IrDA Filter Register  Offset */
@@ -809,6 +847,7 @@ typedef union {
 
 /* -------- US_MAN : (USART Offset: 0x50) (R/W 32) Manchester Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TX_PL:4;                   /**< bit:   0..3  Transmitter Preamble Length              */
@@ -828,6 +867,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_MAN_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_MAN_OFFSET                       (0x50)                                        /**<  (US_MAN) Manchester Configuration Register  Offset */
@@ -881,6 +921,7 @@ typedef union {
 
 /* -------- US_LINMR : (USART Offset: 0x54) (R/W 32) LIN Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NACT:2;                    /**< bit:   0..1  LIN Node Action                          */
@@ -897,6 +938,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_LINMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_LINMR_OFFSET                     (0x54)                                        /**<  (US_LINMR) LIN Mode Register  Offset */
@@ -943,6 +985,7 @@ typedef union {
 
 /* -------- US_LINIR : (USART Offset: 0x58) (R/W 32) LIN Identifier Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IDCHR:8;                   /**< bit:   0..7  Identifier Character                     */
@@ -950,6 +993,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_LINIR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_LINIR_OFFSET                     (0x58)                                        /**<  (US_LINIR) LIN Identifier Register  Offset */
@@ -963,6 +1007,7 @@ typedef union {
 
 /* -------- US_LINBRR : (USART Offset: 0x5c) (R/ 32) LIN Baud Rate Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t LINCD:16;                  /**< bit:  0..15  Clock Divider after Synchronization      */
@@ -971,6 +1016,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_LINBRR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_LINBRR_OFFSET                    (0x5C)                                        /**<  (US_LINBRR) LIN Baud Rate Register  Offset */
@@ -987,6 +1033,7 @@ typedef union {
 
 /* -------- US_LONMR : (USART Offset: 0x60) (R/W 32) LON Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t COMMT:1;                   /**< bit:      0  LON comm_type Parameter Value            */
@@ -1001,6 +1048,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_LONMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_LONMR_OFFSET                     (0x60)                                        /**<  (US_LONMR) LON Mode Register  Offset */
@@ -1032,6 +1080,7 @@ typedef union {
 
 /* -------- US_LONPR : (USART Offset: 0x64) (R/W 32) LON Preamble Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t LONPL:14;                  /**< bit:  0..13  LON Preamble Length                      */
@@ -1039,6 +1088,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_LONPR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_LONPR_OFFSET                     (0x64)                                        /**<  (US_LONPR) LON Preamble Register  Offset */
@@ -1052,6 +1102,7 @@ typedef union {
 
 /* -------- US_LONDL : (USART Offset: 0x68) (R/W 32) LON Data Length Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t LONDL:8;                   /**< bit:   0..7  LON Data Length                          */
@@ -1059,6 +1110,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_LONDL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_LONDL_OFFSET                     (0x68)                                        /**<  (US_LONDL) LON Data Length Register  Offset */
@@ -1072,6 +1124,7 @@ typedef union {
 
 /* -------- US_LONL2HDR : (USART Offset: 0x6c) (R/W 32) LON L2HDR Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BLI:6;                     /**< bit:   0..5  LON Backlog Increment                    */
@@ -1081,6 +1134,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_LONL2HDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_LONL2HDR_OFFSET                  (0x6C)                                        /**<  (US_LONL2HDR) LON L2HDR Register  Offset */
@@ -1100,6 +1154,7 @@ typedef union {
 
 /* -------- US_LONBL : (USART Offset: 0x70) (R/ 32) LON Backlog Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t LONBL:6;                   /**< bit:   0..5  LON Node Backlog Value                   */
@@ -1107,6 +1162,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_LONBL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_LONBL_OFFSET                     (0x70)                                        /**<  (US_LONBL) LON Backlog Register  Offset */
@@ -1120,6 +1176,7 @@ typedef union {
 
 /* -------- US_LONB1TX : (USART Offset: 0x74) (R/W 32) LON Beta1 Tx Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BETA1TX:24;                /**< bit:  0..23  LON Beta1 Length after Transmission      */
@@ -1127,6 +1184,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_LONB1TX_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_LONB1TX_OFFSET                   (0x74)                                        /**<  (US_LONB1TX) LON Beta1 Tx Register  Offset */
@@ -1140,6 +1198,7 @@ typedef union {
 
 /* -------- US_LONB1RX : (USART Offset: 0x78) (R/W 32) LON Beta1 Rx Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BETA1RX:24;                /**< bit:  0..23  LON Beta1 Length after Reception         */
@@ -1147,6 +1206,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_LONB1RX_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_LONB1RX_OFFSET                   (0x78)                                        /**<  (US_LONB1RX) LON Beta1 Rx Register  Offset */
@@ -1160,6 +1220,7 @@ typedef union {
 
 /* -------- US_LONPRIO : (USART Offset: 0x7c) (R/W 32) LON Priority Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PSNB:7;                    /**< bit:   0..6  LON Priority Slot Number                 */
@@ -1169,6 +1230,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_LONPRIO_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_LONPRIO_OFFSET                   (0x7C)                                        /**<  (US_LONPRIO) LON Priority Register  Offset */
@@ -1185,6 +1247,7 @@ typedef union {
 
 /* -------- US_IDTTX : (USART Offset: 0x80) (R/W 32) LON IDT Tx Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IDTTX:24;                  /**< bit:  0..23  LON Indeterminate Time after Transmission (comm_type = 1 mode only) */
@@ -1192,6 +1255,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_IDTTX_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_IDTTX_OFFSET                     (0x80)                                        /**<  (US_IDTTX) LON IDT Tx Register  Offset */
@@ -1205,6 +1269,7 @@ typedef union {
 
 /* -------- US_IDTRX : (USART Offset: 0x84) (R/W 32) LON IDT Rx Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IDTRX:24;                  /**< bit:  0..23  LON Indeterminate Time after Reception (comm_type = 1 mode only) */
@@ -1212,6 +1277,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_IDTRX_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_IDTRX_OFFSET                     (0x84)                                        /**<  (US_IDTRX) LON IDT Rx Register  Offset */
@@ -1225,6 +1291,7 @@ typedef union {
 
 /* -------- US_ICDIFF : (USART Offset: 0x88) (R/W 32) IC DIFF Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ICDIFF:4;                  /**< bit:   0..3  IC Differentiator Number                 */
@@ -1232,6 +1299,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_ICDIFF_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_ICDIFF_OFFSET                    (0x88)                                        /**<  (US_ICDIFF) IC DIFF Register  Offset */
@@ -1245,6 +1313,7 @@ typedef union {
 
 /* -------- US_WPMR : (USART Offset: 0xe4) (R/W 32) Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
@@ -1253,6 +1322,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_WPMR_OFFSET                      (0xE4)                                        /**<  (US_WPMR) Write Protection Mode Register  Offset */
@@ -1271,6 +1341,7 @@ typedef union {
 
 /* -------- US_WPSR : (USART Offset: 0xe8) (R/ 32) Write Protection Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPVS:1;                    /**< bit:      0  Write Protection Violation Status        */
@@ -1280,6 +1351,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } US_WPSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define US_WPSR_OFFSET                      (0xE8)                                        /**<  (US_WPSR) Write Protection Status Register  Offset */
@@ -1309,10 +1381,10 @@ typedef struct {
   __IO uint32_t US_BRGR;        /**< (USART Offset: 0x20) Baud Rate Generator Register */
   __IO uint32_t US_RTOR;        /**< (USART Offset: 0x24) Receiver Time-out Register */
   __IO uint32_t US_TTGR;        /**< (USART Offset: 0x28) Transmitter Timeguard Register */
-  RoReg8  Reserved1[0x14];
+  __I  uint8_t                        Reserved1[20];
   __IO uint32_t US_FIDI;        /**< (USART Offset: 0x40) FI DI Ratio Register */
   __I  uint32_t US_NER;         /**< (USART Offset: 0x44) Number of Errors Register */
-  RoReg8  Reserved2[0x4];
+  __I  uint8_t                        Reserved2[4];
   __IO uint32_t US_IF;          /**< (USART Offset: 0x4C) IrDA Filter Register */
   __IO uint32_t US_MAN;         /**< (USART Offset: 0x50) Manchester Configuration Register */
   __IO uint32_t US_LINMR;       /**< (USART Offset: 0x54) LIN Mode Register */
@@ -1329,7 +1401,7 @@ typedef struct {
   __IO uint32_t US_IDTTX;       /**< (USART Offset: 0x80) LON IDT Tx Register */
   __IO uint32_t US_IDTRX;       /**< (USART Offset: 0x84) LON IDT Rx Register */
   __IO uint32_t US_ICDIFF;      /**< (USART Offset: 0x88) IC DIFF Register */
-  RoReg8  Reserved3[0x58];
+  __I  uint8_t                        Reserved3[88];
   __IO uint32_t US_WPMR;        /**< (USART Offset: 0xE4) Write Protection Mode Register */
   __I  uint32_t US_WPSR;        /**< (USART Offset: 0xE8) Write Protection Status Register */
 } Usart;
@@ -1348,10 +1420,10 @@ typedef struct {
   __IO US_BRGR_Type                   US_BRGR;        /**< Offset: 0x20 (R/W  32) Baud Rate Generator Register */
   __IO US_RTOR_Type                   US_RTOR;        /**< Offset: 0x24 (R/W  32) Receiver Time-out Register */
   __IO US_TTGR_Type                   US_TTGR;        /**< Offset: 0x28 (R/W  32) Transmitter Timeguard Register */
-  __I  uint32_t                       Reserved1[5];
+  __I  uint8_t                        Reserved1[20];
   __IO US_FIDI_Type                   US_FIDI;        /**< Offset: 0x40 (R/W  32) FI DI Ratio Register */
   __I  US_NER_Type                    US_NER;         /**< Offset: 0x44 (R/   32) Number of Errors Register */
-  __I  uint32_t                       Reserved2[1];
+  __I  uint8_t                        Reserved2[4];
   __IO US_IF_Type                     US_IF;          /**< Offset: 0x4C (R/W  32) IrDA Filter Register */
   __IO US_MAN_Type                    US_MAN;         /**< Offset: 0x50 (R/W  32) Manchester Configuration Register */
   __IO US_LINMR_Type                  US_LINMR;       /**< Offset: 0x54 (R/W  32) LIN Mode Register */
@@ -1368,7 +1440,7 @@ typedef struct {
   __IO US_IDTTX_Type                  US_IDTTX;       /**< Offset: 0x80 (R/W  32) LON IDT Tx Register */
   __IO US_IDTRX_Type                  US_IDTRX;       /**< Offset: 0x84 (R/W  32) LON IDT Rx Register */
   __IO US_ICDIFF_Type                 US_ICDIFF;      /**< Offset: 0x88 (R/W  32) IC DIFF Register */
-  __I  uint32_t                       Reserved3[22];
+  __I  uint8_t                        Reserved3[88];
   __IO US_WPMR_Type                   US_WPMR;        /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
   __I  US_WPSR_Type                   US_WPSR;        /**< Offset: 0xE8 (R/   32) Write Protection Status Register */
 } Usart;

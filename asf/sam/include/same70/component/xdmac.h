@@ -3,11 +3,13 @@
  *
  * \brief Component description for XDMAC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- XDMAC_CIE : (XDMAC Offset: 0x00) (/W 32) Channel Interrupt Enable Register (chid = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BIE:1;                     /**< bit:      0  End of Block Interrupt Enable Bit        */
@@ -58,6 +61,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_CIE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_CIE_OFFSET                    (0x00)                                        /**<  (XDMAC_CIE) Channel Interrupt Enable Register (chid = 0)  Offset */
@@ -89,6 +93,7 @@ typedef union {
 
 /* -------- XDMAC_CID : (XDMAC Offset: 0x04) (/W 32) Channel Interrupt Disable Register (chid = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BID:1;                     /**< bit:      0  End of Block Interrupt Disable Bit       */
@@ -102,6 +107,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_CID_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_CID_OFFSET                    (0x04)                                        /**<  (XDMAC_CID) Channel Interrupt Disable Register (chid = 0)  Offset */
@@ -133,6 +139,7 @@ typedef union {
 
 /* -------- XDMAC_CIM : (XDMAC Offset: 0x08) (R/ 32) Channel Interrupt Mask Register (chid = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BIM:1;                     /**< bit:      0  End of Block Interrupt Mask Bit          */
@@ -146,6 +153,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_CIM_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_CIM_OFFSET                    (0x08)                                        /**<  (XDMAC_CIM) Channel Interrupt Mask Register (chid = 0)  Offset */
@@ -177,6 +185,7 @@ typedef union {
 
 /* -------- XDMAC_CIS : (XDMAC Offset: 0x0c) (R/ 32) Channel Interrupt Status Register (chid = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BIS:1;                     /**< bit:      0  End of Block Interrupt Status Bit        */
@@ -190,6 +199,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_CIS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_CIS_OFFSET                    (0x0C)                                        /**<  (XDMAC_CIS) Channel Interrupt Status Register (chid = 0)  Offset */
@@ -221,12 +231,14 @@ typedef union {
 
 /* -------- XDMAC_CSA : (XDMAC Offset: 0x10) (R/W 32) Channel Source Address Register (chid = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SA:32;                     /**< bit:  0..31  Channel x Source Address                 */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_CSA_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_CSA_OFFSET                    (0x10)                                        /**<  (XDMAC_CSA) Channel Source Address Register (chid = 0)  Offset */
@@ -240,12 +252,14 @@ typedef union {
 
 /* -------- XDMAC_CDA : (XDMAC Offset: 0x14) (R/W 32) Channel Destination Address Register (chid = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DA:32;                     /**< bit:  0..31  Channel x Destination Address            */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_CDA_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_CDA_OFFSET                    (0x14)                                        /**<  (XDMAC_CDA) Channel Destination Address Register (chid = 0)  Offset */
@@ -259,6 +273,7 @@ typedef union {
 
 /* -------- XDMAC_CNDA : (XDMAC Offset: 0x18) (R/W 32) Channel Next Descriptor Address Register (chid = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NDAIF:1;                   /**< bit:      0  Channel x Next Descriptor Interface      */
@@ -267,6 +282,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_CNDA_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_CNDA_OFFSET                   (0x18)                                        /**<  (XDMAC_CNDA) Channel Next Descriptor Address Register (chid = 0)  Offset */
@@ -283,6 +299,7 @@ typedef union {
 
 /* -------- XDMAC_CNDC : (XDMAC Offset: 0x1c) (R/W 32) Channel Next Descriptor Control Register (chid = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NDE:1;                     /**< bit:      0  Channel x Next Descriptor Enable         */
@@ -293,6 +310,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_CNDC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_CNDC_OFFSET                   (0x1C)                                        /**<  (XDMAC_CNDC) Channel Next Descriptor Control Register (chid = 0)  Offset */
@@ -335,6 +353,7 @@ typedef union {
 
 /* -------- XDMAC_CUBC : (XDMAC Offset: 0x20) (R/W 32) Channel Microblock Control Register (chid = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t UBLEN:24;                  /**< bit:  0..23  Channel x Microblock Length              */
@@ -342,6 +361,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_CUBC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_CUBC_OFFSET                   (0x20)                                        /**<  (XDMAC_CUBC) Channel Microblock Control Register (chid = 0)  Offset */
@@ -355,6 +375,7 @@ typedef union {
 
 /* -------- XDMAC_CBC : (XDMAC Offset: 0x24) (R/W 32) Channel Block Control Register (chid = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BLEN:12;                   /**< bit:  0..11  Channel x Block Length                   */
@@ -362,6 +383,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_CBC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_CBC_OFFSET                    (0x24)                                        /**<  (XDMAC_CBC) Channel Block Control Register (chid = 0)  Offset */
@@ -375,6 +397,7 @@ typedef union {
 
 /* -------- XDMAC_CC : (XDMAC Offset: 0x28) (R/W 32) Channel Configuration Register (chid = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TYPE:1;                    /**< bit:      0  Channel x Transfer Type                  */
@@ -400,6 +423,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_CC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_CC_OFFSET                     (0x28)                                        /**<  (XDMAC_CC) Channel Configuration Register (chid = 0)  Offset */
@@ -531,6 +555,7 @@ typedef union {
 
 /* -------- XDMAC_CDS_MSP : (XDMAC Offset: 0x2c) (R/W 32) Channel Data Stride Memory Set Pattern (chid = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SDS_MSP:16;                /**< bit:  0..15  Channel x Source Data stride or Memory Set Pattern */
@@ -538,6 +563,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_CDS_MSP_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_CDS_MSP_OFFSET                (0x2C)                                        /**<  (XDMAC_CDS_MSP) Channel Data Stride Memory Set Pattern (chid = 0)  Offset */
@@ -554,6 +580,7 @@ typedef union {
 
 /* -------- XDMAC_CSUS : (XDMAC Offset: 0x30) (R/W 32) Channel Source Microblock Stride (chid = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SUBS:24;                   /**< bit:  0..23  Channel x Source Microblock Stride       */
@@ -561,6 +588,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_CSUS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_CSUS_OFFSET                   (0x30)                                        /**<  (XDMAC_CSUS) Channel Source Microblock Stride (chid = 0)  Offset */
@@ -574,6 +602,7 @@ typedef union {
 
 /* -------- XDMAC_CDUS : (XDMAC Offset: 0x34) (R/W 32) Channel Destination Microblock Stride (chid = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DUBS:24;                   /**< bit:  0..23  Channel x Destination Microblock Stride  */
@@ -581,6 +610,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_CDUS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_CDUS_OFFSET                   (0x34)                                        /**<  (XDMAC_CDUS) Channel Destination Microblock Stride (chid = 0)  Offset */
@@ -594,6 +624,7 @@ typedef union {
 
 /* -------- XDMAC_GTYPE : (XDMAC Offset: 0x00) (R/ 32) Global Type Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NB_CH:5;                   /**< bit:   0..4  Number of Channels Minus One             */
@@ -603,6 +634,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GTYPE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GTYPE_OFFSET                  (0x00)                                        /**<  (XDMAC_GTYPE) Global Type Register  Offset */
@@ -622,6 +654,7 @@ typedef union {
 
 /* -------- XDMAC_GCFG : (XDMAC Offset: 0x04) (R/W 32) Global Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CGDISREG:1;                /**< bit:      0  Configuration Registers Clock Gating Disable */
@@ -634,6 +667,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GCFG_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GCFG_OFFSET                   (0x04)                                        /**<  (XDMAC_GCFG) Global Configuration Register  Offset */
@@ -659,6 +693,7 @@ typedef union {
 
 /* -------- XDMAC_GWAC : (XDMAC Offset: 0x08) (R/W 32) Global Weighted Arbiter Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PW0:4;                     /**< bit:   0..3  Pool Weight 0                            */
@@ -669,6 +704,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GWAC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GWAC_OFFSET                   (0x08)                                        /**<  (XDMAC_GWAC) Global Weighted Arbiter Configuration Register  Offset */
@@ -691,6 +727,7 @@ typedef union {
 
 /* -------- XDMAC_GIE : (XDMAC Offset: 0x0c) (/W 32) Global Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IE0:1;                     /**< bit:      0  XDMAC Channel 0 Interrupt Enable Bit     */
@@ -725,6 +762,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GIE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GIE_OFFSET                    (0x0C)                                        /**<  (XDMAC_GIE) Global Interrupt Enable Register  Offset */
@@ -810,6 +848,7 @@ typedef union {
 
 /* -------- XDMAC_GID : (XDMAC Offset: 0x10) (/W 32) Global Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ID0:1;                     /**< bit:      0  XDMAC Channel 0 Interrupt Disable Bit    */
@@ -844,6 +883,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GID_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GID_OFFSET                    (0x10)                                        /**<  (XDMAC_GID) Global Interrupt Disable Register  Offset */
@@ -929,6 +969,7 @@ typedef union {
 
 /* -------- XDMAC_GIM : (XDMAC Offset: 0x14) (R/ 32) Global Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IM0:1;                     /**< bit:      0  XDMAC Channel 0 Interrupt Mask Bit       */
@@ -963,6 +1004,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GIM_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GIM_OFFSET                    (0x14)                                        /**<  (XDMAC_GIM) Global Interrupt Mask Register  Offset */
@@ -1048,6 +1090,7 @@ typedef union {
 
 /* -------- XDMAC_GIS : (XDMAC Offset: 0x18) (R/ 32) Global Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IS0:1;                     /**< bit:      0  XDMAC Channel 0 Interrupt Status Bit     */
@@ -1082,6 +1125,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GIS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GIS_OFFSET                    (0x18)                                        /**<  (XDMAC_GIS) Global Interrupt Status Register  Offset */
@@ -1167,6 +1211,7 @@ typedef union {
 
 /* -------- XDMAC_GE : (XDMAC Offset: 0x1c) (/W 32) Global Channel Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t EN0:1;                     /**< bit:      0  XDMAC Channel 0 Enable Bit               */
@@ -1201,6 +1246,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GE_OFFSET                     (0x1C)                                        /**<  (XDMAC_GE) Global Channel Enable Register  Offset */
@@ -1286,6 +1332,7 @@ typedef union {
 
 /* -------- XDMAC_GD : (XDMAC Offset: 0x20) (/W 32) Global Channel Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DI0:1;                     /**< bit:      0  XDMAC Channel 0 Disable Bit              */
@@ -1320,6 +1367,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GD_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GD_OFFSET                     (0x20)                                        /**<  (XDMAC_GD) Global Channel Disable Register  Offset */
@@ -1405,6 +1453,7 @@ typedef union {
 
 /* -------- XDMAC_GS : (XDMAC Offset: 0x24) (R/ 32) Global Channel Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ST0:1;                     /**< bit:      0  XDMAC Channel 0 Status Bit               */
@@ -1439,6 +1488,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GS_OFFSET                     (0x24)                                        /**<  (XDMAC_GS) Global Channel Status Register  Offset */
@@ -1524,6 +1574,7 @@ typedef union {
 
 /* -------- XDMAC_GRS : (XDMAC Offset: 0x28) (R/W 32) Global Channel Read Suspend Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RS0:1;                     /**< bit:      0  XDMAC Channel 0 Read Suspend Bit         */
@@ -1558,6 +1609,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GRS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GRS_OFFSET                    (0x28)                                        /**<  (XDMAC_GRS) Global Channel Read Suspend Register  Offset */
@@ -1643,6 +1695,7 @@ typedef union {
 
 /* -------- XDMAC_GWS : (XDMAC Offset: 0x2c) (R/W 32) Global Channel Write Suspend Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WS0:1;                     /**< bit:      0  XDMAC Channel 0 Write Suspend Bit        */
@@ -1677,6 +1730,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GWS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GWS_OFFSET                    (0x2C)                                        /**<  (XDMAC_GWS) Global Channel Write Suspend Register  Offset */
@@ -1762,6 +1816,7 @@ typedef union {
 
 /* -------- XDMAC_GRWS : (XDMAC Offset: 0x30) (/W 32) Global Channel Read Write Suspend Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RWS0:1;                    /**< bit:      0  XDMAC Channel 0 Read Write Suspend Bit   */
@@ -1796,6 +1851,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GRWS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GRWS_OFFSET                   (0x30)                                        /**<  (XDMAC_GRWS) Global Channel Read Write Suspend Register  Offset */
@@ -1881,6 +1937,7 @@ typedef union {
 
 /* -------- XDMAC_GRWR : (XDMAC Offset: 0x34) (/W 32) Global Channel Read Write Resume Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RWR0:1;                    /**< bit:      0  XDMAC Channel 0 Read Write Resume Bit    */
@@ -1915,6 +1972,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GRWR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GRWR_OFFSET                   (0x34)                                        /**<  (XDMAC_GRWR) Global Channel Read Write Resume Register  Offset */
@@ -2000,6 +2058,7 @@ typedef union {
 
 /* -------- XDMAC_GSWR : (XDMAC Offset: 0x38) (/W 32) Global Channel Software Request Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SWREQ0:1;                  /**< bit:      0  XDMAC Channel 0 Software Request Bit     */
@@ -2034,6 +2093,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GSWR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GSWR_OFFSET                   (0x38)                                        /**<  (XDMAC_GSWR) Global Channel Software Request Register  Offset */
@@ -2119,6 +2179,7 @@ typedef union {
 
 /* -------- XDMAC_GSWS : (XDMAC Offset: 0x3c) (R/ 32) Global Channel Software Request Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SWRS0:1;                   /**< bit:      0  XDMAC Channel 0 Software Request Status Bit */
@@ -2153,6 +2214,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GSWS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GSWS_OFFSET                   (0x3C)                                        /**<  (XDMAC_GSWS) Global Channel Software Request Status Register  Offset */
@@ -2238,6 +2300,7 @@ typedef union {
 
 /* -------- XDMAC_GSWF : (XDMAC Offset: 0x40) (/W 32) Global Channel Software Flush Request Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SWF0:1;                    /**< bit:      0  XDMAC Channel 0 Software Flush Request Bit */
@@ -2272,6 +2335,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } XDMAC_GSWF_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define XDMAC_GSWF_OFFSET                   (0x40)                                        /**<  (XDMAC_GSWF) Global Channel Software Flush Request Register  Offset */
@@ -2373,7 +2437,7 @@ typedef struct {
   __IO uint32_t XDMAC_CDS_MSP;  /**< (XDMAC_CHID Offset: 0x2C) Channel Data Stride Memory Set Pattern (chid = 0) */
   __IO uint32_t XDMAC_CSUS;     /**< (XDMAC_CHID Offset: 0x30) Channel Source Microblock Stride (chid = 0) */
   __IO uint32_t XDMAC_CDUS;     /**< (XDMAC_CHID Offset: 0x34) Channel Destination Microblock Stride (chid = 0) */
-       RoReg8                         Reserved1[0x08];
+  __I  uint8_t                        Reserved1[8];
 } XdmacChid;
 
 #define XDMACCHID_NUMBER 24
@@ -2396,8 +2460,8 @@ typedef struct {
   __O  uint32_t XDMAC_GSWR;     /**< (XDMAC Offset: 0x38) Global Channel Software Request Register */
   __I  uint32_t XDMAC_GSWS;     /**< (XDMAC Offset: 0x3C) Global Channel Software Request Status Register */
   __O  uint32_t XDMAC_GSWF;     /**< (XDMAC Offset: 0x40) Global Channel Software Flush Request Register */
-  RoReg8  Reserved1[0x0C];
-       XdmacChid XDMAC_CHID[XDMACCHID_NUMBER]; /**< Offset: 0x50 Channel Interrupt Enable Register (chid = 0) */
+  __I  uint8_t                        Reserved1[12];
+       XdmacChid XdmacChid[XDMACCHID_NUMBER]; /**< Offset: 0x50 Channel Interrupt Enable Register (chid = 0) */
 } Xdmac;
 
 #elif COMPONENT_TYPEDEF_STYLE == 'N'
@@ -2417,7 +2481,7 @@ typedef struct {
   __IO XDMAC_CDS_MSP_Type             XDMAC_CDS_MSP;  /**< Offset: 0x2C (R/W  32) Channel Data Stride Memory Set Pattern (chid = 0) */
   __IO XDMAC_CSUS_Type                XDMAC_CSUS;     /**< Offset: 0x30 (R/W  32) Channel Source Microblock Stride (chid = 0) */
   __IO XDMAC_CDUS_Type                XDMAC_CDUS;     /**< Offset: 0x34 (R/W  32) Channel Destination Microblock Stride (chid = 0) */
-       RoReg8                         Reserved1[0x08];
+  __I  uint8_t                        Reserved1[8];
 } XdmacChid;
 
 /** \brief XDMAC hardware registers */
@@ -2439,8 +2503,8 @@ typedef struct {
   __O  XDMAC_GSWR_Type                XDMAC_GSWR;     /**< Offset: 0x38 ( /W  32) Global Channel Software Request Register */
   __I  XDMAC_GSWS_Type                XDMAC_GSWS;     /**< Offset: 0x3C (R/   32) Global Channel Software Request Status Register */
   __O  XDMAC_GSWF_Type                XDMAC_GSWF;     /**< Offset: 0x40 ( /W  32) Global Channel Software Flush Request Register */
-  __I  uint32_t                       Reserved1[3];
-       XdmacChid                      XDMAC_CHID[24]; /**< Offset: 0x50 Channel Interrupt Enable Register (chid = 0) */
+  __I  uint8_t                        Reserved1[12];
+       XdmacChid                      XdmacChid[24];  /**< Offset: 0x50 Channel Interrupt Enable Register (chid = 0) */
 } Xdmac;
 
 #else /* COMPONENT_TYPEDEF_STYLE */

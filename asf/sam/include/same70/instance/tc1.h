@@ -3,11 +3,13 @@
  *
  * \brief Instance description for TC1
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -133,9 +135,9 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for TC1 peripheral ========== */
-#define TC1_INSTANCE_ID_CHANNEL1                 27        
-#define TC1_INSTANCE_ID_CHANNEL0                 26        
-#define TC1_INSTANCE_ID_CHANNEL2                 28        
-#define TC1_DMAC_ID_RX                           41        
+#define TC1_DMAC_ID_RX                           41         
+#define TC1_INSTANCE_ID_CHANNEL0                 26         
+#define TC1_INSTANCE_ID_CHANNEL1                 27         
+#define TC1_INSTANCE_ID_CHANNEL2                 28         
 
 #endif /* _SAME70_TC1_INSTANCE_ */

@@ -3,11 +3,13 @@
  *
  * \brief Instance description for PWM1
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -257,7 +259,7 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for PWM1 peripheral ========== */
-#define PWM1_INSTANCE_ID                         60        
-#define PWM1_DMAC_ID_TX                          39        
+#define PWM1_DMAC_ID_TX                          39         
+#define PWM1_INSTANCE_ID                         60         
 
 #endif /* _SAME70_PWM1_INSTANCE_ */

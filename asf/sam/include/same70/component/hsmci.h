@@ -3,11 +3,13 @@
  *
  * \brief Component description for HSMCI
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- HSMCI_CR : (HSMCI Offset: 0x00) (/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MCIEN:1;                   /**< bit:      0  Multi-Media Interface Enable             */
@@ -57,6 +60,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_CR_OFFSET                     (0x00)                                        /**<  (HSMCI_CR) Control Register  Offset */
@@ -82,6 +86,7 @@ typedef union {
 
 /* -------- HSMCI_MR : (HSMCI Offset: 0x04) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CLKDIV:8;                  /**< bit:   0..7  Clock Divider                            */
@@ -96,6 +101,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_MR_OFFSET                     (0x04)                                        /**<  (HSMCI_MR) Mode Register  Offset */
@@ -127,6 +133,7 @@ typedef union {
 
 /* -------- HSMCI_DTOR : (HSMCI Offset: 0x08) (R/W 32) Data Timeout Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DTOCYC:4;                  /**< bit:   0..3  Data Timeout Cycle Number                */
@@ -135,6 +142,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_DTOR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_DTOR_OFFSET                   (0x08)                                        /**<  (HSMCI_DTOR) Data Timeout Register  Offset */
@@ -167,6 +175,7 @@ typedef union {
 
 /* -------- HSMCI_SDCR : (HSMCI Offset: 0x0c) (R/W 32) SD/SDIO Card Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SDCSEL:2;                  /**< bit:   0..1  SDCard/SDIO Slot                         */
@@ -176,6 +185,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_SDCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_SDCR_OFFSET                   (0x0C)                                        /**<  (HSMCI_SDCR) SD/SDIO Card Register  Offset */
@@ -200,12 +210,14 @@ typedef union {
 
 /* -------- HSMCI_ARGR : (HSMCI Offset: 0x10) (R/W 32) Argument Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ARG:32;                    /**< bit:  0..31  Command Argument                         */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_ARGR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_ARGR_OFFSET                   (0x10)                                        /**<  (HSMCI_ARGR) Argument Register  Offset */
@@ -219,6 +231,7 @@ typedef union {
 
 /* -------- HSMCI_CMDR : (HSMCI Offset: 0x14) (/W 32) Command Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CMDNB:6;                   /**< bit:   0..5  Command Number                           */
@@ -238,6 +251,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_CMDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_CMDR_OFFSET                   (0x14)                                        /**<  (HSMCI_CMDR) Command Register  Offset */
@@ -343,6 +357,7 @@ typedef union {
 
 /* -------- HSMCI_BLKR : (HSMCI Offset: 0x18) (R/W 32) Block Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BCNT:16;                   /**< bit:  0..15  MMC/SDIO Block Count - SDIO Byte Count   */
@@ -350,6 +365,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_BLKR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_BLKR_OFFSET                   (0x18)                                        /**<  (HSMCI_BLKR) Block Register  Offset */
@@ -366,6 +382,7 @@ typedef union {
 
 /* -------- HSMCI_CSTOR : (HSMCI Offset: 0x1c) (R/W 32) Completion Signal Timeout Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CSTOCYC:4;                 /**< bit:   0..3  Completion Signal Timeout Cycle Number   */
@@ -374,6 +391,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_CSTOR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_CSTOR_OFFSET                  (0x1C)                                        /**<  (HSMCI_CSTOR) Completion Signal Timeout Register  Offset */
@@ -406,12 +424,14 @@ typedef union {
 
 /* -------- HSMCI_RSPR : (HSMCI Offset: 0x20) (R/ 32) Response Register 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RSP:32;                    /**< bit:  0..31  Response                                 */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_RSPR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_RSPR_OFFSET                   (0x20)                                        /**<  (HSMCI_RSPR) Response Register 0  Offset */
@@ -425,12 +445,14 @@ typedef union {
 
 /* -------- HSMCI_RDR : (HSMCI Offset: 0x30) (R/ 32) Receive Data Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DATA:32;                   /**< bit:  0..31  Data to Read                             */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_RDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_RDR_OFFSET                    (0x30)                                        /**<  (HSMCI_RDR) Receive Data Register  Offset */
@@ -444,12 +466,14 @@ typedef union {
 
 /* -------- HSMCI_TDR : (HSMCI Offset: 0x34) (/W 32) Transmit Data Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DATA:32;                   /**< bit:  0..31  Data to Write                            */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_TDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_TDR_OFFSET                    (0x34)                                        /**<  (HSMCI_TDR) Transmit Data Register  Offset */
@@ -463,6 +487,7 @@ typedef union {
 
 /* -------- HSMCI_SR : (HSMCI Offset: 0x40) (R/ 32) Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CMDRDY:1;                  /**< bit:      0  Command Ready (cleared by writing in HSMCI_CMDR) */
@@ -496,6 +521,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_SR_OFFSET                     (0x40)                                        /**<  (HSMCI_SR) Status Register  Offset */
@@ -578,6 +604,7 @@ typedef union {
 
 /* -------- HSMCI_IER : (HSMCI Offset: 0x44) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CMDRDY:1;                  /**< bit:      0  Command Ready Interrupt Enable           */
@@ -611,6 +638,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_IER_OFFSET                    (0x44)                                        /**<  (HSMCI_IER) Interrupt Enable Register  Offset */
@@ -693,6 +721,7 @@ typedef union {
 
 /* -------- HSMCI_IDR : (HSMCI Offset: 0x48) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CMDRDY:1;                  /**< bit:      0  Command Ready Interrupt Disable          */
@@ -726,6 +755,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_IDR_OFFSET                    (0x48)                                        /**<  (HSMCI_IDR) Interrupt Disable Register  Offset */
@@ -808,6 +838,7 @@ typedef union {
 
 /* -------- HSMCI_IMR : (HSMCI Offset: 0x4c) (R/ 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CMDRDY:1;                  /**< bit:      0  Command Ready Interrupt Mask             */
@@ -841,6 +872,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_IMR_OFFSET                    (0x4C)                                        /**<  (HSMCI_IMR) Interrupt Mask Register  Offset */
@@ -923,6 +955,7 @@ typedef union {
 
 /* -------- HSMCI_DMA : (HSMCI Offset: 0x50) (R/W 32) DMA Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :4;                        /**< bit:   0..3  Reserved */
@@ -933,6 +966,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_DMA_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_DMA_OFFSET                    (0x50)                                        /**<  (HSMCI_DMA) DMA Configuration Register  Offset */
@@ -959,6 +993,7 @@ typedef union {
 
 /* -------- HSMCI_CFG : (HSMCI Offset: 0x54) (R/W 32) Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FIFOMODE:1;                /**< bit:      0  HSMCI Internal FIFO control mode         */
@@ -972,6 +1007,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_CFG_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_CFG_OFFSET                    (0x54)                                        /**<  (HSMCI_CFG) Configuration Register  Offset */
@@ -994,6 +1030,7 @@ typedef union {
 
 /* -------- HSMCI_WPMR : (HSMCI Offset: 0xe4) (R/W 32) Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protect Enable                     */
@@ -1002,6 +1039,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_WPMR_OFFSET                   (0xE4)                                        /**<  (HSMCI_WPMR) Write Protection Mode Register  Offset */
@@ -1020,6 +1058,7 @@ typedef union {
 
 /* -------- HSMCI_WPSR : (HSMCI Offset: 0xe8) (R/ 32) Write Protection Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPVS:1;                    /**< bit:      0  Write Protection Violation Status        */
@@ -1029,6 +1068,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_WPSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_WPSR_OFFSET                   (0xE8)                                        /**<  (HSMCI_WPSR) Write Protection Status Register  Offset */
@@ -1045,12 +1085,14 @@ typedef union {
 
 /* -------- HSMCI_FIFO : (HSMCI Offset: 0x200) (R/W 32) FIFO Memory Aperture0 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DATA:32;                   /**< bit:  0..31  Data to Read or Data to Write            */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } HSMCI_FIFO_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HSMCI_FIFO_OFFSET                   (0x200)                                       /**<  (HSMCI_FIFO) FIFO Memory Aperture0 0  Offset */
@@ -1077,17 +1119,17 @@ typedef struct {
   __I  uint32_t HSMCI_RSPR[4];  /**< (HSMCI Offset: 0x20) Response Register 0 */
   __I  uint32_t HSMCI_RDR;      /**< (HSMCI Offset: 0x30) Receive Data Register */
   __O  uint32_t HSMCI_TDR;      /**< (HSMCI Offset: 0x34) Transmit Data Register */
-  RoReg8  Reserved1[0x8];
+  __I  uint8_t                        Reserved1[8];
   __I  uint32_t HSMCI_SR;       /**< (HSMCI Offset: 0x40) Status Register */
   __O  uint32_t HSMCI_IER;      /**< (HSMCI Offset: 0x44) Interrupt Enable Register */
   __O  uint32_t HSMCI_IDR;      /**< (HSMCI Offset: 0x48) Interrupt Disable Register */
   __I  uint32_t HSMCI_IMR;      /**< (HSMCI Offset: 0x4C) Interrupt Mask Register */
   __IO uint32_t HSMCI_DMA;      /**< (HSMCI Offset: 0x50) DMA Configuration Register */
   __IO uint32_t HSMCI_CFG;      /**< (HSMCI Offset: 0x54) Configuration Register */
-  RoReg8  Reserved2[0x8C];
+  __I  uint8_t                        Reserved2[140];
   __IO uint32_t HSMCI_WPMR;     /**< (HSMCI Offset: 0xE4) Write Protection Mode Register */
   __I  uint32_t HSMCI_WPSR;     /**< (HSMCI Offset: 0xE8) Write Protection Status Register */
-  RoReg8  Reserved3[0x114];
+  __I  uint8_t                        Reserved3[276];
   __IO uint32_t HSMCI_FIFO[256]; /**< (HSMCI Offset: 0x200) FIFO Memory Aperture0 0 */
 } Hsmci;
 
@@ -1105,17 +1147,17 @@ typedef struct {
   __I  HSMCI_RSPR_Type                HSMCI_RSPR[4];  /**< Offset: 0x20 (R/   32) Response Register 0 */
   __I  HSMCI_RDR_Type                 HSMCI_RDR;      /**< Offset: 0x30 (R/   32) Receive Data Register */
   __O  HSMCI_TDR_Type                 HSMCI_TDR;      /**< Offset: 0x34 ( /W  32) Transmit Data Register */
-  __I  uint32_t                       Reserved1[2];
+  __I  uint8_t                        Reserved1[8];
   __I  HSMCI_SR_Type                  HSMCI_SR;       /**< Offset: 0x40 (R/   32) Status Register */
   __O  HSMCI_IER_Type                 HSMCI_IER;      /**< Offset: 0x44 ( /W  32) Interrupt Enable Register */
   __O  HSMCI_IDR_Type                 HSMCI_IDR;      /**< Offset: 0x48 ( /W  32) Interrupt Disable Register */
   __I  HSMCI_IMR_Type                 HSMCI_IMR;      /**< Offset: 0x4C (R/   32) Interrupt Mask Register */
   __IO HSMCI_DMA_Type                 HSMCI_DMA;      /**< Offset: 0x50 (R/W  32) DMA Configuration Register */
   __IO HSMCI_CFG_Type                 HSMCI_CFG;      /**< Offset: 0x54 (R/W  32) Configuration Register */
-  __I  uint32_t                       Reserved2[35];
+  __I  uint8_t                        Reserved2[140];
   __IO HSMCI_WPMR_Type                HSMCI_WPMR;     /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
   __I  HSMCI_WPSR_Type                HSMCI_WPSR;     /**< Offset: 0xE8 (R/   32) Write Protection Status Register */
-  __I  uint32_t                       Reserved3[69];
+  __I  uint8_t                        Reserved3[276];
   __IO HSMCI_FIFO_Type                HSMCI_FIFO[256]; /**< Offset: 0x200 (R/W  32) FIFO Memory Aperture0 0 */
 } Hsmci;
 
