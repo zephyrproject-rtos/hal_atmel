@@ -3,11 +3,13 @@
  *
  * \brief Instance description for SPI0
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_SPI0_INSTANCE_H_
 #define _SAME70_SPI0_INSTANCE_H_
 
@@ -40,7 +42,7 @@
 #define REG_SPI0_IER            (0x40008014) /**< (SPI0) Interrupt Enable Register */
 #define REG_SPI0_IDR            (0x40008018) /**< (SPI0) Interrupt Disable Register */
 #define REG_SPI0_IMR            (0x4000801C) /**< (SPI0) Interrupt Mask Register */
-#define REG_SPI0_CSR            (0x40008030) /**< (SPI0) Chip Select Register 0 */
+#define REG_SPI0_CSR            (0x40008030) /**< (SPI0) Chip Select Register */
 #define REG_SPI0_CSR0           (0x40008030) /**< (SPI0) Chip Select Register 0 */
 #define REG_SPI0_CSR1           (0x40008034) /**< (SPI0) Chip Select Register 1 */
 #define REG_SPI0_CSR2           (0x40008038) /**< (SPI0) Chip Select Register 2 */
@@ -58,7 +60,7 @@
 #define REG_SPI0_IER            (*(__O  uint32_t*)0x40008014U) /**< (SPI0) Interrupt Enable Register */
 #define REG_SPI0_IDR            (*(__O  uint32_t*)0x40008018U) /**< (SPI0) Interrupt Disable Register */
 #define REG_SPI0_IMR            (*(__I  uint32_t*)0x4000801CU) /**< (SPI0) Interrupt Mask Register */
-#define REG_SPI0_CSR            (*(__IO uint32_t*)0x40008030U) /**< (SPI0) Chip Select Register 0 */
+#define REG_SPI0_CSR            (*(__IO uint32_t*)0x40008030U) /**< (SPI0) Chip Select Register */
 #define REG_SPI0_CSR0           (*(__IO uint32_t*)0x40008030U) /**< (SPI0) Chip Select Register 0 */
 #define REG_SPI0_CSR1           (*(__IO uint32_t*)0x40008034U) /**< (SPI0) Chip Select Register 1 */
 #define REG_SPI0_CSR2           (*(__IO uint32_t*)0x40008038U) /**< (SPI0) Chip Select Register 2 */
@@ -69,9 +71,9 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for SPI0 peripheral ========== */
-#define SPI0_INSTANCE_ID                         21        
-#define SPI0_CLOCK_ID                            21        
-#define SPI0_DMAC_ID_TX                          1         
-#define SPI0_DMAC_ID_RX                          2         
+#define SPI0_DMAC_ID_RX                          2          
+#define SPI0_DMAC_ID_TX                          1          
+#define SPI0_INSTANCE_ID                         21         
+#define SPI0_CLOCK_ID                            21         
 
 #endif /* _SAME70_SPI0_INSTANCE_ */

@@ -3,11 +3,13 @@
  *
  * \brief Component description for PMC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_PMC_COMPONENT_H_
 #define _SAME70_PMC_COMPONENT_H_
 #define _SAME70_PMC_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -45,6 +47,7 @@
 
 /* -------- PMC_SCER : (PMC Offset: 0x00) (/W 32) System Clock Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :5;                        /**< bit:   0..4  Reserved */
@@ -57,15 +60,17 @@ typedef union {
     uint32_t PCK4:1;                    /**< bit:     12  Programmable Clock 4 Output Enable       */
     uint32_t PCK5:1;                    /**< bit:     13  Programmable Clock 5 Output Enable       */
     uint32_t PCK6:1;                    /**< bit:     14  Programmable Clock 6 Output Enable       */
-    uint32_t :17;                       /**< bit: 15..31  Reserved */
+    uint32_t PCK7:1;                    /**< bit:     15  Programmable Clock 7 Output Enable       */
+    uint32_t :16;                       /**< bit: 16..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :8;                        /**< bit:   0..7  Reserved */
-    uint32_t PCK:7;                     /**< bit:  8..14  Programmable Clock 6 Output Enable       */
-    uint32_t :17;                       /**< bit: 15..31 Reserved */
+    uint32_t PCK:8;                     /**< bit:  8..15  Programmable Clock 7 Output Enable       */
+    uint32_t :16;                       /**< bit: 16..31 Reserved */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_SCER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_SCER_OFFSET                     (0x00)                                        /**<  (PMC_SCER) System Clock Enable Register  Offset */
@@ -94,15 +99,19 @@ typedef union {
 #define PMC_SCER_PCK6_Pos                   14                                             /**< (PMC_SCER) Programmable Clock 6 Output Enable Position */
 #define PMC_SCER_PCK6_Msk                   (_U_(0x1) << PMC_SCER_PCK6_Pos)                /**< (PMC_SCER) Programmable Clock 6 Output Enable Mask */
 #define PMC_SCER_PCK6                       PMC_SCER_PCK6_Msk                              /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SCER_PCK6_Msk instead */
-#define PMC_SCER_MASK                       _U_(0x7F20)                                    /**< \deprecated (PMC_SCER) Register MASK  (Use PMC_SCER_Msk instead)  */
-#define PMC_SCER_Msk                        _U_(0x7F20)                                    /**< (PMC_SCER) Register Mask  */
+#define PMC_SCER_PCK7_Pos                   15                                             /**< (PMC_SCER) Programmable Clock 7 Output Enable Position */
+#define PMC_SCER_PCK7_Msk                   (_U_(0x1) << PMC_SCER_PCK7_Pos)                /**< (PMC_SCER) Programmable Clock 7 Output Enable Mask */
+#define PMC_SCER_PCK7                       PMC_SCER_PCK7_Msk                              /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SCER_PCK7_Msk instead */
+#define PMC_SCER_MASK                       _U_(0xFF20)                                    /**< \deprecated (PMC_SCER) Register MASK  (Use PMC_SCER_Msk instead)  */
+#define PMC_SCER_Msk                        _U_(0xFF20)                                    /**< (PMC_SCER) Register Mask  */
 
-#define PMC_SCER_PCK_Pos                    8                                              /**< (PMC_SCER Position) Programmable Clock 6 Output Enable */
-#define PMC_SCER_PCK_Msk                    (_U_(0x7F) << PMC_SCER_PCK_Pos)                /**< (PMC_SCER Mask) PCK */
+#define PMC_SCER_PCK_Pos                    8                                              /**< (PMC_SCER Position) Programmable Clock 7 Output Enable */
+#define PMC_SCER_PCK_Msk                    (_U_(0xFF) << PMC_SCER_PCK_Pos)                /**< (PMC_SCER Mask) PCK */
 #define PMC_SCER_PCK(value)                 (PMC_SCER_PCK_Msk & ((value) << PMC_SCER_PCK_Pos))  
 
 /* -------- PMC_SCDR : (PMC Offset: 0x04) (/W 32) System Clock Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :5;                        /**< bit:   0..4  Reserved */
@@ -115,15 +124,17 @@ typedef union {
     uint32_t PCK4:1;                    /**< bit:     12  Programmable Clock 4 Output Disable      */
     uint32_t PCK5:1;                    /**< bit:     13  Programmable Clock 5 Output Disable      */
     uint32_t PCK6:1;                    /**< bit:     14  Programmable Clock 6 Output Disable      */
-    uint32_t :17;                       /**< bit: 15..31  Reserved */
+    uint32_t PCK7:1;                    /**< bit:     15  Programmable Clock 7 Output Disable      */
+    uint32_t :16;                       /**< bit: 16..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :8;                        /**< bit:   0..7  Reserved */
-    uint32_t PCK:7;                     /**< bit:  8..14  Programmable Clock 6 Output Disable      */
-    uint32_t :17;                       /**< bit: 15..31 Reserved */
+    uint32_t PCK:8;                     /**< bit:  8..15  Programmable Clock 7 Output Disable      */
+    uint32_t :16;                       /**< bit: 16..31 Reserved */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_SCDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_SCDR_OFFSET                     (0x04)                                        /**<  (PMC_SCDR) System Clock Disable Register  Offset */
@@ -152,15 +163,19 @@ typedef union {
 #define PMC_SCDR_PCK6_Pos                   14                                             /**< (PMC_SCDR) Programmable Clock 6 Output Disable Position */
 #define PMC_SCDR_PCK6_Msk                   (_U_(0x1) << PMC_SCDR_PCK6_Pos)                /**< (PMC_SCDR) Programmable Clock 6 Output Disable Mask */
 #define PMC_SCDR_PCK6                       PMC_SCDR_PCK6_Msk                              /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SCDR_PCK6_Msk instead */
-#define PMC_SCDR_MASK                       _U_(0x7F20)                                    /**< \deprecated (PMC_SCDR) Register MASK  (Use PMC_SCDR_Msk instead)  */
-#define PMC_SCDR_Msk                        _U_(0x7F20)                                    /**< (PMC_SCDR) Register Mask  */
+#define PMC_SCDR_PCK7_Pos                   15                                             /**< (PMC_SCDR) Programmable Clock 7 Output Disable Position */
+#define PMC_SCDR_PCK7_Msk                   (_U_(0x1) << PMC_SCDR_PCK7_Pos)                /**< (PMC_SCDR) Programmable Clock 7 Output Disable Mask */
+#define PMC_SCDR_PCK7                       PMC_SCDR_PCK7_Msk                              /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SCDR_PCK7_Msk instead */
+#define PMC_SCDR_MASK                       _U_(0xFF20)                                    /**< \deprecated (PMC_SCDR) Register MASK  (Use PMC_SCDR_Msk instead)  */
+#define PMC_SCDR_Msk                        _U_(0xFF20)                                    /**< (PMC_SCDR) Register Mask  */
 
-#define PMC_SCDR_PCK_Pos                    8                                              /**< (PMC_SCDR Position) Programmable Clock 6 Output Disable */
-#define PMC_SCDR_PCK_Msk                    (_U_(0x7F) << PMC_SCDR_PCK_Pos)                /**< (PMC_SCDR Mask) PCK */
+#define PMC_SCDR_PCK_Pos                    8                                              /**< (PMC_SCDR Position) Programmable Clock 7 Output Disable */
+#define PMC_SCDR_PCK_Msk                    (_U_(0xFF) << PMC_SCDR_PCK_Pos)                /**< (PMC_SCDR Mask) PCK */
 #define PMC_SCDR_PCK(value)                 (PMC_SCDR_PCK_Msk & ((value) << PMC_SCDR_PCK_Pos))  
 
 /* -------- PMC_SCSR : (PMC Offset: 0x08) (R/ 32) System Clock Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t HCLKS:1;                   /**< bit:      0  HCLK Status                              */
@@ -174,15 +189,17 @@ typedef union {
     uint32_t PCK4:1;                    /**< bit:     12  Programmable Clock 4 Output Status       */
     uint32_t PCK5:1;                    /**< bit:     13  Programmable Clock 5 Output Status       */
     uint32_t PCK6:1;                    /**< bit:     14  Programmable Clock 6 Output Status       */
-    uint32_t :17;                       /**< bit: 15..31  Reserved */
+    uint32_t PCK7:1;                    /**< bit:     15  Programmable Clock 7 Output Status       */
+    uint32_t :16;                       /**< bit: 16..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :8;                        /**< bit:   0..7  Reserved */
-    uint32_t PCK:7;                     /**< bit:  8..14  Programmable Clock 6 Output Status       */
-    uint32_t :17;                       /**< bit: 15..31 Reserved */
+    uint32_t PCK:8;                     /**< bit:  8..15  Programmable Clock 7 Output Status       */
+    uint32_t :16;                       /**< bit: 16..31 Reserved */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_SCSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_SCSR_OFFSET                     (0x08)                                        /**<  (PMC_SCSR) System Clock Status Register  Offset */
@@ -214,21 +231,31 @@ typedef union {
 #define PMC_SCSR_PCK6_Pos                   14                                             /**< (PMC_SCSR) Programmable Clock 6 Output Status Position */
 #define PMC_SCSR_PCK6_Msk                   (_U_(0x1) << PMC_SCSR_PCK6_Pos)                /**< (PMC_SCSR) Programmable Clock 6 Output Status Mask */
 #define PMC_SCSR_PCK6                       PMC_SCSR_PCK6_Msk                              /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SCSR_PCK6_Msk instead */
-#define PMC_SCSR_MASK                       _U_(0x7F21)                                    /**< \deprecated (PMC_SCSR) Register MASK  (Use PMC_SCSR_Msk instead)  */
-#define PMC_SCSR_Msk                        _U_(0x7F21)                                    /**< (PMC_SCSR) Register Mask  */
+#define PMC_SCSR_PCK7_Pos                   15                                             /**< (PMC_SCSR) Programmable Clock 7 Output Status Position */
+#define PMC_SCSR_PCK7_Msk                   (_U_(0x1) << PMC_SCSR_PCK7_Pos)                /**< (PMC_SCSR) Programmable Clock 7 Output Status Mask */
+#define PMC_SCSR_PCK7                       PMC_SCSR_PCK7_Msk                              /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SCSR_PCK7_Msk instead */
+#define PMC_SCSR_MASK                       _U_(0xFF21)                                    /**< \deprecated (PMC_SCSR) Register MASK  (Use PMC_SCSR_Msk instead)  */
+#define PMC_SCSR_Msk                        _U_(0xFF21)                                    /**< (PMC_SCSR) Register Mask  */
 
-#define PMC_SCSR_PCK_Pos                    8                                              /**< (PMC_SCSR Position) Programmable Clock 6 Output Status */
-#define PMC_SCSR_PCK_Msk                    (_U_(0x7F) << PMC_SCSR_PCK_Pos)                /**< (PMC_SCSR Mask) PCK */
+#define PMC_SCSR_PCK_Pos                    8                                              /**< (PMC_SCSR Position) Programmable Clock 7 Output Status */
+#define PMC_SCSR_PCK_Msk                    (_U_(0xFF) << PMC_SCSR_PCK_Pos)                /**< (PMC_SCSR Mask) PCK */
 #define PMC_SCSR_PCK(value)                 (PMC_SCSR_PCK_Msk & ((value) << PMC_SCSR_PCK_Pos))  
 
 /* -------- PMC_PCER0 : (PMC Offset: 0x10) (/W 32) Peripheral Clock Enable Register 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :7;                        /**< bit:   0..6  Reserved */
     uint32_t PID7:1;                    /**< bit:      7  Peripheral Clock 7 Enable                */
     uint32_t PID8:1;                    /**< bit:      8  Peripheral Clock 8 Enable                */
-    uint32_t :7;                        /**< bit:  9..15  Reserved */
+    uint32_t PID9:1;                    /**< bit:      9  Peripheral Clock 9 Enable                */
+    uint32_t PID10:1;                   /**< bit:     10  Peripheral Clock 10 Enable               */
+    uint32_t PID11:1;                   /**< bit:     11  Peripheral Clock 11 Enable               */
+    uint32_t PID12:1;                   /**< bit:     12  Peripheral Clock 12 Enable               */
+    uint32_t PID13:1;                   /**< bit:     13  Peripheral Clock 13 Enable               */
+    uint32_t PID14:1;                   /**< bit:     14  Peripheral Clock 14 Enable               */
+    uint32_t PID15:1;                   /**< bit:     15  Peripheral Clock 15 Enable               */
     uint32_t PID16:1;                   /**< bit:     16  Peripheral Clock 16 Enable               */
     uint32_t PID17:1;                   /**< bit:     17  Peripheral Clock 17 Enable               */
     uint32_t PID18:1;                   /**< bit:     18  Peripheral Clock 18 Enable               */
@@ -248,11 +275,11 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :7;                        /**< bit:   0..6  Reserved */
-    uint32_t PID:18;                    /**< bit:  7..24  Peripheral Clock 3x Enable               */
-    uint32_t :7;                        /**< bit: 25..31 Reserved */
+    uint32_t PID:25;                    /**< bit:  7..31  Peripheral Clock 3x Enable               */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_PCER0_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_PCER0_OFFSET                    (0x10)                                        /**<  (PMC_PCER0) Peripheral Clock Enable Register 0  Offset */
@@ -263,6 +290,27 @@ typedef union {
 #define PMC_PCER0_PID8_Pos                  8                                              /**< (PMC_PCER0) Peripheral Clock 8 Enable Position */
 #define PMC_PCER0_PID8_Msk                  (_U_(0x1) << PMC_PCER0_PID8_Pos)               /**< (PMC_PCER0) Peripheral Clock 8 Enable Mask */
 #define PMC_PCER0_PID8                      PMC_PCER0_PID8_Msk                             /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCER0_PID8_Msk instead */
+#define PMC_PCER0_PID9_Pos                  9                                              /**< (PMC_PCER0) Peripheral Clock 9 Enable Position */
+#define PMC_PCER0_PID9_Msk                  (_U_(0x1) << PMC_PCER0_PID9_Pos)               /**< (PMC_PCER0) Peripheral Clock 9 Enable Mask */
+#define PMC_PCER0_PID9                      PMC_PCER0_PID9_Msk                             /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCER0_PID9_Msk instead */
+#define PMC_PCER0_PID10_Pos                 10                                             /**< (PMC_PCER0) Peripheral Clock 10 Enable Position */
+#define PMC_PCER0_PID10_Msk                 (_U_(0x1) << PMC_PCER0_PID10_Pos)              /**< (PMC_PCER0) Peripheral Clock 10 Enable Mask */
+#define PMC_PCER0_PID10                     PMC_PCER0_PID10_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCER0_PID10_Msk instead */
+#define PMC_PCER0_PID11_Pos                 11                                             /**< (PMC_PCER0) Peripheral Clock 11 Enable Position */
+#define PMC_PCER0_PID11_Msk                 (_U_(0x1) << PMC_PCER0_PID11_Pos)              /**< (PMC_PCER0) Peripheral Clock 11 Enable Mask */
+#define PMC_PCER0_PID11                     PMC_PCER0_PID11_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCER0_PID11_Msk instead */
+#define PMC_PCER0_PID12_Pos                 12                                             /**< (PMC_PCER0) Peripheral Clock 12 Enable Position */
+#define PMC_PCER0_PID12_Msk                 (_U_(0x1) << PMC_PCER0_PID12_Pos)              /**< (PMC_PCER0) Peripheral Clock 12 Enable Mask */
+#define PMC_PCER0_PID12                     PMC_PCER0_PID12_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCER0_PID12_Msk instead */
+#define PMC_PCER0_PID13_Pos                 13                                             /**< (PMC_PCER0) Peripheral Clock 13 Enable Position */
+#define PMC_PCER0_PID13_Msk                 (_U_(0x1) << PMC_PCER0_PID13_Pos)              /**< (PMC_PCER0) Peripheral Clock 13 Enable Mask */
+#define PMC_PCER0_PID13                     PMC_PCER0_PID13_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCER0_PID13_Msk instead */
+#define PMC_PCER0_PID14_Pos                 14                                             /**< (PMC_PCER0) Peripheral Clock 14 Enable Position */
+#define PMC_PCER0_PID14_Msk                 (_U_(0x1) << PMC_PCER0_PID14_Pos)              /**< (PMC_PCER0) Peripheral Clock 14 Enable Mask */
+#define PMC_PCER0_PID14                     PMC_PCER0_PID14_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCER0_PID14_Msk instead */
+#define PMC_PCER0_PID15_Pos                 15                                             /**< (PMC_PCER0) Peripheral Clock 15 Enable Position */
+#define PMC_PCER0_PID15_Msk                 (_U_(0x1) << PMC_PCER0_PID15_Pos)              /**< (PMC_PCER0) Peripheral Clock 15 Enable Mask */
+#define PMC_PCER0_PID15                     PMC_PCER0_PID15_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCER0_PID15_Msk instead */
 #define PMC_PCER0_PID16_Pos                 16                                             /**< (PMC_PCER0) Peripheral Clock 16 Enable Position */
 #define PMC_PCER0_PID16_Msk                 (_U_(0x1) << PMC_PCER0_PID16_Pos)              /**< (PMC_PCER0) Peripheral Clock 16 Enable Mask */
 #define PMC_PCER0_PID16                     PMC_PCER0_PID16_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCER0_PID16_Msk instead */
@@ -311,21 +359,28 @@ typedef union {
 #define PMC_PCER0_PID31_Pos                 31                                             /**< (PMC_PCER0) Peripheral Clock 31 Enable Position */
 #define PMC_PCER0_PID31_Msk                 (_U_(0x1) << PMC_PCER0_PID31_Pos)              /**< (PMC_PCER0) Peripheral Clock 31 Enable Mask */
 #define PMC_PCER0_PID31                     PMC_PCER0_PID31_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCER0_PID31_Msk instead */
-#define PMC_PCER0_MASK                      _U_(0xFFFF0180)                                /**< \deprecated (PMC_PCER0) Register MASK  (Use PMC_PCER0_Msk instead)  */
-#define PMC_PCER0_Msk                       _U_(0xFFFF0180)                                /**< (PMC_PCER0) Register Mask  */
+#define PMC_PCER0_MASK                      _U_(0xFFFFFF80)                                /**< \deprecated (PMC_PCER0) Register MASK  (Use PMC_PCER0_Msk instead)  */
+#define PMC_PCER0_Msk                       _U_(0xFFFFFF80)                                /**< (PMC_PCER0) Register Mask  */
 
 #define PMC_PCER0_PID_Pos                   7                                              /**< (PMC_PCER0 Position) Peripheral Clock 3x Enable */
-#define PMC_PCER0_PID_Msk                   (_U_(0x3FFFF) << PMC_PCER0_PID_Pos)            /**< (PMC_PCER0 Mask) PID */
+#define PMC_PCER0_PID_Msk                   (_U_(0x1FFFFFF) << PMC_PCER0_PID_Pos)          /**< (PMC_PCER0 Mask) PID */
 #define PMC_PCER0_PID(value)                (PMC_PCER0_PID_Msk & ((value) << PMC_PCER0_PID_Pos))  
 
 /* -------- PMC_PCDR0 : (PMC Offset: 0x14) (/W 32) Peripheral Clock Disable Register 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :7;                        /**< bit:   0..6  Reserved */
     uint32_t PID7:1;                    /**< bit:      7  Peripheral Clock 7 Disable               */
     uint32_t PID8:1;                    /**< bit:      8  Peripheral Clock 8 Disable               */
-    uint32_t :7;                        /**< bit:  9..15  Reserved */
+    uint32_t PID9:1;                    /**< bit:      9  Peripheral Clock 9 Disable               */
+    uint32_t PID10:1;                   /**< bit:     10  Peripheral Clock 10 Disable              */
+    uint32_t PID11:1;                   /**< bit:     11  Peripheral Clock 11 Disable              */
+    uint32_t PID12:1;                   /**< bit:     12  Peripheral Clock 12 Disable              */
+    uint32_t PID13:1;                   /**< bit:     13  Peripheral Clock 13 Disable              */
+    uint32_t PID14:1;                   /**< bit:     14  Peripheral Clock 14 Disable              */
+    uint32_t PID15:1;                   /**< bit:     15  Peripheral Clock 15 Disable              */
     uint32_t PID16:1;                   /**< bit:     16  Peripheral Clock 16 Disable              */
     uint32_t PID17:1;                   /**< bit:     17  Peripheral Clock 17 Disable              */
     uint32_t PID18:1;                   /**< bit:     18  Peripheral Clock 18 Disable              */
@@ -345,11 +400,11 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :7;                        /**< bit:   0..6  Reserved */
-    uint32_t PID:18;                    /**< bit:  7..24  Peripheral Clock 3x Disable              */
-    uint32_t :7;                        /**< bit: 25..31 Reserved */
+    uint32_t PID:25;                    /**< bit:  7..31  Peripheral Clock 3x Disable              */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_PCDR0_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_PCDR0_OFFSET                    (0x14)                                        /**<  (PMC_PCDR0) Peripheral Clock Disable Register 0  Offset */
@@ -360,6 +415,27 @@ typedef union {
 #define PMC_PCDR0_PID8_Pos                  8                                              /**< (PMC_PCDR0) Peripheral Clock 8 Disable Position */
 #define PMC_PCDR0_PID8_Msk                  (_U_(0x1) << PMC_PCDR0_PID8_Pos)               /**< (PMC_PCDR0) Peripheral Clock 8 Disable Mask */
 #define PMC_PCDR0_PID8                      PMC_PCDR0_PID8_Msk                             /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCDR0_PID8_Msk instead */
+#define PMC_PCDR0_PID9_Pos                  9                                              /**< (PMC_PCDR0) Peripheral Clock 9 Disable Position */
+#define PMC_PCDR0_PID9_Msk                  (_U_(0x1) << PMC_PCDR0_PID9_Pos)               /**< (PMC_PCDR0) Peripheral Clock 9 Disable Mask */
+#define PMC_PCDR0_PID9                      PMC_PCDR0_PID9_Msk                             /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCDR0_PID9_Msk instead */
+#define PMC_PCDR0_PID10_Pos                 10                                             /**< (PMC_PCDR0) Peripheral Clock 10 Disable Position */
+#define PMC_PCDR0_PID10_Msk                 (_U_(0x1) << PMC_PCDR0_PID10_Pos)              /**< (PMC_PCDR0) Peripheral Clock 10 Disable Mask */
+#define PMC_PCDR0_PID10                     PMC_PCDR0_PID10_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCDR0_PID10_Msk instead */
+#define PMC_PCDR0_PID11_Pos                 11                                             /**< (PMC_PCDR0) Peripheral Clock 11 Disable Position */
+#define PMC_PCDR0_PID11_Msk                 (_U_(0x1) << PMC_PCDR0_PID11_Pos)              /**< (PMC_PCDR0) Peripheral Clock 11 Disable Mask */
+#define PMC_PCDR0_PID11                     PMC_PCDR0_PID11_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCDR0_PID11_Msk instead */
+#define PMC_PCDR0_PID12_Pos                 12                                             /**< (PMC_PCDR0) Peripheral Clock 12 Disable Position */
+#define PMC_PCDR0_PID12_Msk                 (_U_(0x1) << PMC_PCDR0_PID12_Pos)              /**< (PMC_PCDR0) Peripheral Clock 12 Disable Mask */
+#define PMC_PCDR0_PID12                     PMC_PCDR0_PID12_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCDR0_PID12_Msk instead */
+#define PMC_PCDR0_PID13_Pos                 13                                             /**< (PMC_PCDR0) Peripheral Clock 13 Disable Position */
+#define PMC_PCDR0_PID13_Msk                 (_U_(0x1) << PMC_PCDR0_PID13_Pos)              /**< (PMC_PCDR0) Peripheral Clock 13 Disable Mask */
+#define PMC_PCDR0_PID13                     PMC_PCDR0_PID13_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCDR0_PID13_Msk instead */
+#define PMC_PCDR0_PID14_Pos                 14                                             /**< (PMC_PCDR0) Peripheral Clock 14 Disable Position */
+#define PMC_PCDR0_PID14_Msk                 (_U_(0x1) << PMC_PCDR0_PID14_Pos)              /**< (PMC_PCDR0) Peripheral Clock 14 Disable Mask */
+#define PMC_PCDR0_PID14                     PMC_PCDR0_PID14_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCDR0_PID14_Msk instead */
+#define PMC_PCDR0_PID15_Pos                 15                                             /**< (PMC_PCDR0) Peripheral Clock 15 Disable Position */
+#define PMC_PCDR0_PID15_Msk                 (_U_(0x1) << PMC_PCDR0_PID15_Pos)              /**< (PMC_PCDR0) Peripheral Clock 15 Disable Mask */
+#define PMC_PCDR0_PID15                     PMC_PCDR0_PID15_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCDR0_PID15_Msk instead */
 #define PMC_PCDR0_PID16_Pos                 16                                             /**< (PMC_PCDR0) Peripheral Clock 16 Disable Position */
 #define PMC_PCDR0_PID16_Msk                 (_U_(0x1) << PMC_PCDR0_PID16_Pos)              /**< (PMC_PCDR0) Peripheral Clock 16 Disable Mask */
 #define PMC_PCDR0_PID16                     PMC_PCDR0_PID16_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCDR0_PID16_Msk instead */
@@ -408,21 +484,28 @@ typedef union {
 #define PMC_PCDR0_PID31_Pos                 31                                             /**< (PMC_PCDR0) Peripheral Clock 31 Disable Position */
 #define PMC_PCDR0_PID31_Msk                 (_U_(0x1) << PMC_PCDR0_PID31_Pos)              /**< (PMC_PCDR0) Peripheral Clock 31 Disable Mask */
 #define PMC_PCDR0_PID31                     PMC_PCDR0_PID31_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCDR0_PID31_Msk instead */
-#define PMC_PCDR0_MASK                      _U_(0xFFFF0180)                                /**< \deprecated (PMC_PCDR0) Register MASK  (Use PMC_PCDR0_Msk instead)  */
-#define PMC_PCDR0_Msk                       _U_(0xFFFF0180)                                /**< (PMC_PCDR0) Register Mask  */
+#define PMC_PCDR0_MASK                      _U_(0xFFFFFF80)                                /**< \deprecated (PMC_PCDR0) Register MASK  (Use PMC_PCDR0_Msk instead)  */
+#define PMC_PCDR0_Msk                       _U_(0xFFFFFF80)                                /**< (PMC_PCDR0) Register Mask  */
 
 #define PMC_PCDR0_PID_Pos                   7                                              /**< (PMC_PCDR0 Position) Peripheral Clock 3x Disable */
-#define PMC_PCDR0_PID_Msk                   (_U_(0x3FFFF) << PMC_PCDR0_PID_Pos)            /**< (PMC_PCDR0 Mask) PID */
+#define PMC_PCDR0_PID_Msk                   (_U_(0x1FFFFFF) << PMC_PCDR0_PID_Pos)          /**< (PMC_PCDR0 Mask) PID */
 #define PMC_PCDR0_PID(value)                (PMC_PCDR0_PID_Msk & ((value) << PMC_PCDR0_PID_Pos))  
 
 /* -------- PMC_PCSR0 : (PMC Offset: 0x18) (R/ 32) Peripheral Clock Status Register 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :7;                        /**< bit:   0..6  Reserved */
     uint32_t PID7:1;                    /**< bit:      7  Peripheral Clock 7 Status                */
     uint32_t PID8:1;                    /**< bit:      8  Peripheral Clock 8 Status                */
-    uint32_t :7;                        /**< bit:  9..15  Reserved */
+    uint32_t PID9:1;                    /**< bit:      9  Peripheral Clock 9 Status                */
+    uint32_t PID10:1;                   /**< bit:     10  Peripheral Clock 10 Status               */
+    uint32_t PID11:1;                   /**< bit:     11  Peripheral Clock 11 Status               */
+    uint32_t PID12:1;                   /**< bit:     12  Peripheral Clock 12 Status               */
+    uint32_t PID13:1;                   /**< bit:     13  Peripheral Clock 13 Status               */
+    uint32_t PID14:1;                   /**< bit:     14  Peripheral Clock 14 Status               */
+    uint32_t PID15:1;                   /**< bit:     15  Peripheral Clock 15 Status               */
     uint32_t PID16:1;                   /**< bit:     16  Peripheral Clock 16 Status               */
     uint32_t PID17:1;                   /**< bit:     17  Peripheral Clock 17 Status               */
     uint32_t PID18:1;                   /**< bit:     18  Peripheral Clock 18 Status               */
@@ -442,11 +525,11 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :7;                        /**< bit:   0..6  Reserved */
-    uint32_t PID:18;                    /**< bit:  7..24  Peripheral Clock 3x Status               */
-    uint32_t :7;                        /**< bit: 25..31 Reserved */
+    uint32_t PID:25;                    /**< bit:  7..31  Peripheral Clock 3x Status               */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_PCSR0_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_PCSR0_OFFSET                    (0x18)                                        /**<  (PMC_PCSR0) Peripheral Clock Status Register 0  Offset */
@@ -457,6 +540,27 @@ typedef union {
 #define PMC_PCSR0_PID8_Pos                  8                                              /**< (PMC_PCSR0) Peripheral Clock 8 Status Position */
 #define PMC_PCSR0_PID8_Msk                  (_U_(0x1) << PMC_PCSR0_PID8_Pos)               /**< (PMC_PCSR0) Peripheral Clock 8 Status Mask */
 #define PMC_PCSR0_PID8                      PMC_PCSR0_PID8_Msk                             /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCSR0_PID8_Msk instead */
+#define PMC_PCSR0_PID9_Pos                  9                                              /**< (PMC_PCSR0) Peripheral Clock 9 Status Position */
+#define PMC_PCSR0_PID9_Msk                  (_U_(0x1) << PMC_PCSR0_PID9_Pos)               /**< (PMC_PCSR0) Peripheral Clock 9 Status Mask */
+#define PMC_PCSR0_PID9                      PMC_PCSR0_PID9_Msk                             /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCSR0_PID9_Msk instead */
+#define PMC_PCSR0_PID10_Pos                 10                                             /**< (PMC_PCSR0) Peripheral Clock 10 Status Position */
+#define PMC_PCSR0_PID10_Msk                 (_U_(0x1) << PMC_PCSR0_PID10_Pos)              /**< (PMC_PCSR0) Peripheral Clock 10 Status Mask */
+#define PMC_PCSR0_PID10                     PMC_PCSR0_PID10_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCSR0_PID10_Msk instead */
+#define PMC_PCSR0_PID11_Pos                 11                                             /**< (PMC_PCSR0) Peripheral Clock 11 Status Position */
+#define PMC_PCSR0_PID11_Msk                 (_U_(0x1) << PMC_PCSR0_PID11_Pos)              /**< (PMC_PCSR0) Peripheral Clock 11 Status Mask */
+#define PMC_PCSR0_PID11                     PMC_PCSR0_PID11_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCSR0_PID11_Msk instead */
+#define PMC_PCSR0_PID12_Pos                 12                                             /**< (PMC_PCSR0) Peripheral Clock 12 Status Position */
+#define PMC_PCSR0_PID12_Msk                 (_U_(0x1) << PMC_PCSR0_PID12_Pos)              /**< (PMC_PCSR0) Peripheral Clock 12 Status Mask */
+#define PMC_PCSR0_PID12                     PMC_PCSR0_PID12_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCSR0_PID12_Msk instead */
+#define PMC_PCSR0_PID13_Pos                 13                                             /**< (PMC_PCSR0) Peripheral Clock 13 Status Position */
+#define PMC_PCSR0_PID13_Msk                 (_U_(0x1) << PMC_PCSR0_PID13_Pos)              /**< (PMC_PCSR0) Peripheral Clock 13 Status Mask */
+#define PMC_PCSR0_PID13                     PMC_PCSR0_PID13_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCSR0_PID13_Msk instead */
+#define PMC_PCSR0_PID14_Pos                 14                                             /**< (PMC_PCSR0) Peripheral Clock 14 Status Position */
+#define PMC_PCSR0_PID14_Msk                 (_U_(0x1) << PMC_PCSR0_PID14_Pos)              /**< (PMC_PCSR0) Peripheral Clock 14 Status Mask */
+#define PMC_PCSR0_PID14                     PMC_PCSR0_PID14_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCSR0_PID14_Msk instead */
+#define PMC_PCSR0_PID15_Pos                 15                                             /**< (PMC_PCSR0) Peripheral Clock 15 Status Position */
+#define PMC_PCSR0_PID15_Msk                 (_U_(0x1) << PMC_PCSR0_PID15_Pos)              /**< (PMC_PCSR0) Peripheral Clock 15 Status Mask */
+#define PMC_PCSR0_PID15                     PMC_PCSR0_PID15_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCSR0_PID15_Msk instead */
 #define PMC_PCSR0_PID16_Pos                 16                                             /**< (PMC_PCSR0) Peripheral Clock 16 Status Position */
 #define PMC_PCSR0_PID16_Msk                 (_U_(0x1) << PMC_PCSR0_PID16_Pos)              /**< (PMC_PCSR0) Peripheral Clock 16 Status Mask */
 #define PMC_PCSR0_PID16                     PMC_PCSR0_PID16_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCSR0_PID16_Msk instead */
@@ -505,15 +609,16 @@ typedef union {
 #define PMC_PCSR0_PID31_Pos                 31                                             /**< (PMC_PCSR0) Peripheral Clock 31 Status Position */
 #define PMC_PCSR0_PID31_Msk                 (_U_(0x1) << PMC_PCSR0_PID31_Pos)              /**< (PMC_PCSR0) Peripheral Clock 31 Status Mask */
 #define PMC_PCSR0_PID31                     PMC_PCSR0_PID31_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCSR0_PID31_Msk instead */
-#define PMC_PCSR0_MASK                      _U_(0xFFFF0180)                                /**< \deprecated (PMC_PCSR0) Register MASK  (Use PMC_PCSR0_Msk instead)  */
-#define PMC_PCSR0_Msk                       _U_(0xFFFF0180)                                /**< (PMC_PCSR0) Register Mask  */
+#define PMC_PCSR0_MASK                      _U_(0xFFFFFF80)                                /**< \deprecated (PMC_PCSR0) Register MASK  (Use PMC_PCSR0_Msk instead)  */
+#define PMC_PCSR0_Msk                       _U_(0xFFFFFF80)                                /**< (PMC_PCSR0) Register Mask  */
 
 #define PMC_PCSR0_PID_Pos                   7                                              /**< (PMC_PCSR0 Position) Peripheral Clock 3x Status */
-#define PMC_PCSR0_PID_Msk                   (_U_(0x3FFFF) << PMC_PCSR0_PID_Pos)            /**< (PMC_PCSR0 Mask) PID */
+#define PMC_PCSR0_PID_Msk                   (_U_(0x1FFFFFF) << PMC_PCSR0_PID_Pos)          /**< (PMC_PCSR0 Mask) PID */
 #define PMC_PCSR0_PID(value)                (PMC_PCSR0_PID_Msk & ((value) << PMC_PCSR0_PID_Pos))  
 
 /* -------- CKGR_UCKR : (PMC Offset: 0x1c) (R/W 32) UTMI Clock Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :16;                       /**< bit:  0..15  Reserved */
@@ -524,6 +629,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } CKGR_UCKR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CKGR_UCKR_OFFSET                    (0x1C)                                        /**<  (CKGR_UCKR) UTMI Clock Register  Offset */
@@ -540,6 +646,7 @@ typedef union {
 
 /* -------- CKGR_MOR : (PMC Offset: 0x20) (R/W 32) Main Oscillator Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MOSCXTEN:1;                /**< bit:      0  Main Crystal Oscillator Enable           */
@@ -557,6 +664,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } CKGR_MOR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CKGR_MOR_OFFSET                     (0x20)                                        /**<  (CKGR_MOR) Main Oscillator Register  Offset */
@@ -605,6 +713,7 @@ typedef union {
 
 /* -------- CKGR_MCFR : (PMC Offset: 0x24) (R/W 32) Main Clock Frequency Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MAINF:16;                  /**< bit:  0..15  Main Clock Frequency                     */
@@ -617,6 +726,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } CKGR_MCFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CKGR_MCFR_OFFSET                    (0x24)                                        /**<  (CKGR_MCFR) Main Clock Frequency Register  Offset */
@@ -639,6 +749,7 @@ typedef union {
 
 /* -------- CKGR_PLLAR : (PMC Offset: 0x28) (R/W 32) PLLA Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DIVA:8;                    /**< bit:   0..7  PLLA Front End Divider                   */
@@ -651,6 +762,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } CKGR_PLLAR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CKGR_PLLAR_OFFSET                   (0x28)                                        /**<  (CKGR_PLLAR) PLLA Register  Offset */
@@ -677,6 +789,7 @@ typedef union {
 
 /* -------- PMC_MCKR : (PMC Offset: 0x30) (R/W 32) Master Clock Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CSS:2;                     /**< bit:   0..1  Master Clock Source Selection            */
@@ -688,8 +801,14 @@ typedef union {
     uint32_t UPLLDIV2:1;                /**< bit:     13  UPLL Divider by 2                        */
     uint32_t :18;                       /**< bit: 14..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct {
+    uint32_t :13;                       /**< bit:  0..12  Reserved */
+    uint32_t UPLLDIV:1;                 /**< bit:     13  UPLL Divider by 2                        */
+    uint32_t :18;                       /**< bit: 14..31 Reserved */
+  } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_MCKR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_MCKR_OFFSET                     (0x30)                                        /**<  (PMC_MCKR) Master Clock Register  Offset */
@@ -741,9 +860,13 @@ typedef union {
 #define PMC_MCKR_MASK                       _U_(0x2373)                                    /**< \deprecated (PMC_MCKR) Register MASK  (Use PMC_MCKR_Msk instead)  */
 #define PMC_MCKR_Msk                        _U_(0x2373)                                    /**< (PMC_MCKR) Register Mask  */
 
+#define PMC_MCKR_UPLLDIV_Pos                13                                             /**< (PMC_MCKR Position) UPLL Divider by 2 */
+#define PMC_MCKR_UPLLDIV_Msk                (_U_(0x1) << PMC_MCKR_UPLLDIV_Pos)             /**< (PMC_MCKR Mask) UPLLDIV */
+#define PMC_MCKR_UPLLDIV(value)             (PMC_MCKR_UPLLDIV_Msk & ((value) << PMC_MCKR_UPLLDIV_Pos))  
 
 /* -------- PMC_USB : (PMC Offset: 0x38) (R/W 32) USB Clock Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t USBS:1;                    /**< bit:      0  USB Input Clock Selection                */
@@ -753,6 +876,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_USB_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_USB_OFFSET                      (0x38)                                        /**<  (PMC_USB) USB Clock Register  Offset */
@@ -769,6 +893,7 @@ typedef union {
 
 /* -------- PMC_PCK : (PMC Offset: 0x40) (R/W 32) Programmable Clock Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CSS:3;                     /**< bit:   0..2  Programmable Clock Source Selection      */
@@ -778,6 +903,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_PCK_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_PCK_OFFSET                      (0x40)                                        /**<  (PMC_PCK) Programmable Clock Register  Offset */
@@ -804,6 +930,7 @@ typedef union {
 
 /* -------- PMC_IER : (PMC Offset: 0x60) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MOSCXTS:1;                 /**< bit:      0  Main Crystal Oscillator Status Interrupt Enable */
@@ -820,7 +947,7 @@ typedef union {
     uint32_t PCKRDY4:1;                 /**< bit:     12  Programmable Clock Ready 4 Interrupt Enable */
     uint32_t PCKRDY5:1;                 /**< bit:     13  Programmable Clock Ready 5 Interrupt Enable */
     uint32_t PCKRDY6:1;                 /**< bit:     14  Programmable Clock Ready 6 Interrupt Enable */
-    uint32_t :1;                        /**< bit:     15  Reserved */
+    uint32_t PCKRDY7:1;                 /**< bit:     15  Programmable Clock Ready 7 Interrupt Enable */
     uint32_t MOSCSELS:1;                /**< bit:     16  Main Clock Source Oscillator Selection Status Interrupt Enable */
     uint32_t MOSCRCS:1;                 /**< bit:     17  Main RC Oscillator Status Interrupt Enable */
     uint32_t CFDEV:1;                   /**< bit:     18  Clock Failure Detector Event Interrupt Enable */
@@ -830,11 +957,12 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :8;                        /**< bit:   0..7  Reserved */
-    uint32_t PCKRDY:7;                  /**< bit:  8..14  Programmable Clock Ready x Interrupt Enable */
-    uint32_t :17;                       /**< bit: 15..31 Reserved */
+    uint32_t PCKRDY:8;                  /**< bit:  8..15  Programmable Clock Ready x Interrupt Enable */
+    uint32_t :16;                       /**< bit: 16..31 Reserved */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_IER_OFFSET                      (0x60)                                        /**<  (PMC_IER) Interrupt Enable Register  Offset */
@@ -872,6 +1000,9 @@ typedef union {
 #define PMC_IER_PCKRDY6_Pos                 14                                             /**< (PMC_IER) Programmable Clock Ready 6 Interrupt Enable Position */
 #define PMC_IER_PCKRDY6_Msk                 (_U_(0x1) << PMC_IER_PCKRDY6_Pos)              /**< (PMC_IER) Programmable Clock Ready 6 Interrupt Enable Mask */
 #define PMC_IER_PCKRDY6                     PMC_IER_PCKRDY6_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_IER_PCKRDY6_Msk instead */
+#define PMC_IER_PCKRDY7_Pos                 15                                             /**< (PMC_IER) Programmable Clock Ready 7 Interrupt Enable Position */
+#define PMC_IER_PCKRDY7_Msk                 (_U_(0x1) << PMC_IER_PCKRDY7_Pos)              /**< (PMC_IER) Programmable Clock Ready 7 Interrupt Enable Mask */
+#define PMC_IER_PCKRDY7                     PMC_IER_PCKRDY7_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_IER_PCKRDY7_Msk instead */
 #define PMC_IER_MOSCSELS_Pos                16                                             /**< (PMC_IER) Main Clock Source Oscillator Selection Status Interrupt Enable Position */
 #define PMC_IER_MOSCSELS_Msk                (_U_(0x1) << PMC_IER_MOSCSELS_Pos)             /**< (PMC_IER) Main Clock Source Oscillator Selection Status Interrupt Enable Mask */
 #define PMC_IER_MOSCSELS                    PMC_IER_MOSCSELS_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_IER_MOSCSELS_Msk instead */
@@ -884,15 +1015,16 @@ typedef union {
 #define PMC_IER_XT32KERR_Pos                21                                             /**< (PMC_IER) 32.768 kHz Crystal Oscillator Error Interrupt Enable Position */
 #define PMC_IER_XT32KERR_Msk                (_U_(0x1) << PMC_IER_XT32KERR_Pos)             /**< (PMC_IER) 32.768 kHz Crystal Oscillator Error Interrupt Enable Mask */
 #define PMC_IER_XT32KERR                    PMC_IER_XT32KERR_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_IER_XT32KERR_Msk instead */
-#define PMC_IER_MASK                        _U_(0x277F4B)                                  /**< \deprecated (PMC_IER) Register MASK  (Use PMC_IER_Msk instead)  */
-#define PMC_IER_Msk                         _U_(0x277F4B)                                  /**< (PMC_IER) Register Mask  */
+#define PMC_IER_MASK                        _U_(0x27FF4B)                                  /**< \deprecated (PMC_IER) Register MASK  (Use PMC_IER_Msk instead)  */
+#define PMC_IER_Msk                         _U_(0x27FF4B)                                  /**< (PMC_IER) Register Mask  */
 
 #define PMC_IER_PCKRDY_Pos                  8                                              /**< (PMC_IER Position) Programmable Clock Ready x Interrupt Enable */
-#define PMC_IER_PCKRDY_Msk                  (_U_(0x7F) << PMC_IER_PCKRDY_Pos)              /**< (PMC_IER Mask) PCKRDY */
+#define PMC_IER_PCKRDY_Msk                  (_U_(0xFF) << PMC_IER_PCKRDY_Pos)              /**< (PMC_IER Mask) PCKRDY */
 #define PMC_IER_PCKRDY(value)               (PMC_IER_PCKRDY_Msk & ((value) << PMC_IER_PCKRDY_Pos))  
 
 /* -------- PMC_IDR : (PMC Offset: 0x64) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MOSCXTS:1;                 /**< bit:      0  Main Crystal Oscillator Status Interrupt Disable */
@@ -909,7 +1041,7 @@ typedef union {
     uint32_t PCKRDY4:1;                 /**< bit:     12  Programmable Clock Ready 4 Interrupt Disable */
     uint32_t PCKRDY5:1;                 /**< bit:     13  Programmable Clock Ready 5 Interrupt Disable */
     uint32_t PCKRDY6:1;                 /**< bit:     14  Programmable Clock Ready 6 Interrupt Disable */
-    uint32_t :1;                        /**< bit:     15  Reserved */
+    uint32_t PCKRDY7:1;                 /**< bit:     15  Programmable Clock Ready 7 Interrupt Disable */
     uint32_t MOSCSELS:1;                /**< bit:     16  Main Clock Source Oscillator Selection Status Interrupt Disable */
     uint32_t MOSCRCS:1;                 /**< bit:     17  Main RC Status Interrupt Disable         */
     uint32_t CFDEV:1;                   /**< bit:     18  Clock Failure Detector Event Interrupt Disable */
@@ -919,11 +1051,12 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :8;                        /**< bit:   0..7  Reserved */
-    uint32_t PCKRDY:7;                  /**< bit:  8..14  Programmable Clock Ready x Interrupt Disable */
-    uint32_t :17;                       /**< bit: 15..31 Reserved */
+    uint32_t PCKRDY:8;                  /**< bit:  8..15  Programmable Clock Ready x Interrupt Disable */
+    uint32_t :16;                       /**< bit: 16..31 Reserved */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_IDR_OFFSET                      (0x64)                                        /**<  (PMC_IDR) Interrupt Disable Register  Offset */
@@ -961,6 +1094,9 @@ typedef union {
 #define PMC_IDR_PCKRDY6_Pos                 14                                             /**< (PMC_IDR) Programmable Clock Ready 6 Interrupt Disable Position */
 #define PMC_IDR_PCKRDY6_Msk                 (_U_(0x1) << PMC_IDR_PCKRDY6_Pos)              /**< (PMC_IDR) Programmable Clock Ready 6 Interrupt Disable Mask */
 #define PMC_IDR_PCKRDY6                     PMC_IDR_PCKRDY6_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_IDR_PCKRDY6_Msk instead */
+#define PMC_IDR_PCKRDY7_Pos                 15                                             /**< (PMC_IDR) Programmable Clock Ready 7 Interrupt Disable Position */
+#define PMC_IDR_PCKRDY7_Msk                 (_U_(0x1) << PMC_IDR_PCKRDY7_Pos)              /**< (PMC_IDR) Programmable Clock Ready 7 Interrupt Disable Mask */
+#define PMC_IDR_PCKRDY7                     PMC_IDR_PCKRDY7_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_IDR_PCKRDY7_Msk instead */
 #define PMC_IDR_MOSCSELS_Pos                16                                             /**< (PMC_IDR) Main Clock Source Oscillator Selection Status Interrupt Disable Position */
 #define PMC_IDR_MOSCSELS_Msk                (_U_(0x1) << PMC_IDR_MOSCSELS_Pos)             /**< (PMC_IDR) Main Clock Source Oscillator Selection Status Interrupt Disable Mask */
 #define PMC_IDR_MOSCSELS                    PMC_IDR_MOSCSELS_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_IDR_MOSCSELS_Msk instead */
@@ -973,15 +1109,16 @@ typedef union {
 #define PMC_IDR_XT32KERR_Pos                21                                             /**< (PMC_IDR) 32.768 kHz Crystal Oscillator Error Interrupt Disable Position */
 #define PMC_IDR_XT32KERR_Msk                (_U_(0x1) << PMC_IDR_XT32KERR_Pos)             /**< (PMC_IDR) 32.768 kHz Crystal Oscillator Error Interrupt Disable Mask */
 #define PMC_IDR_XT32KERR                    PMC_IDR_XT32KERR_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_IDR_XT32KERR_Msk instead */
-#define PMC_IDR_MASK                        _U_(0x277F4B)                                  /**< \deprecated (PMC_IDR) Register MASK  (Use PMC_IDR_Msk instead)  */
-#define PMC_IDR_Msk                         _U_(0x277F4B)                                  /**< (PMC_IDR) Register Mask  */
+#define PMC_IDR_MASK                        _U_(0x27FF4B)                                  /**< \deprecated (PMC_IDR) Register MASK  (Use PMC_IDR_Msk instead)  */
+#define PMC_IDR_Msk                         _U_(0x27FF4B)                                  /**< (PMC_IDR) Register Mask  */
 
 #define PMC_IDR_PCKRDY_Pos                  8                                              /**< (PMC_IDR Position) Programmable Clock Ready x Interrupt Disable */
-#define PMC_IDR_PCKRDY_Msk                  (_U_(0x7F) << PMC_IDR_PCKRDY_Pos)              /**< (PMC_IDR Mask) PCKRDY */
+#define PMC_IDR_PCKRDY_Msk                  (_U_(0xFF) << PMC_IDR_PCKRDY_Pos)              /**< (PMC_IDR Mask) PCKRDY */
 #define PMC_IDR_PCKRDY(value)               (PMC_IDR_PCKRDY_Msk & ((value) << PMC_IDR_PCKRDY_Pos))  
 
 /* -------- PMC_SR : (PMC Offset: 0x68) (R/ 32) Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MOSCXTS:1;                 /**< bit:      0  Main Crystal Oscillator Status           */
@@ -998,7 +1135,7 @@ typedef union {
     uint32_t PCKRDY4:1;                 /**< bit:     12  Programmable Clock Ready 4 Status        */
     uint32_t PCKRDY5:1;                 /**< bit:     13  Programmable Clock Ready 5 Status        */
     uint32_t PCKRDY6:1;                 /**< bit:     14  Programmable Clock Ready 6 Status        */
-    uint32_t :1;                        /**< bit:     15  Reserved */
+    uint32_t PCKRDY7:1;                 /**< bit:     15  Programmable Clock Ready 7 Status        */
     uint32_t MOSCSELS:1;                /**< bit:     16  Main Clock Source Oscillator Selection Status */
     uint32_t MOSCRCS:1;                 /**< bit:     17  Main RC Oscillator Status                */
     uint32_t CFDEV:1;                   /**< bit:     18  Clock Failure Detector Event             */
@@ -1009,11 +1146,12 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :8;                        /**< bit:   0..7  Reserved */
-    uint32_t PCKRDY:7;                  /**< bit:  8..14  Programmable Clock Ready x Status        */
-    uint32_t :17;                       /**< bit: 15..31 Reserved */
+    uint32_t PCKRDY:8;                  /**< bit:  8..15  Programmable Clock Ready x Status        */
+    uint32_t :16;                       /**< bit: 16..31 Reserved */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_SR_OFFSET                       (0x68)                                        /**<  (PMC_SR) Status Register  Offset */
@@ -1054,6 +1192,9 @@ typedef union {
 #define PMC_SR_PCKRDY6_Pos                  14                                             /**< (PMC_SR) Programmable Clock Ready 6 Status Position */
 #define PMC_SR_PCKRDY6_Msk                  (_U_(0x1) << PMC_SR_PCKRDY6_Pos)               /**< (PMC_SR) Programmable Clock Ready 6 Status Mask */
 #define PMC_SR_PCKRDY6                      PMC_SR_PCKRDY6_Msk                             /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SR_PCKRDY6_Msk instead */
+#define PMC_SR_PCKRDY7_Pos                  15                                             /**< (PMC_SR) Programmable Clock Ready 7 Status Position */
+#define PMC_SR_PCKRDY7_Msk                  (_U_(0x1) << PMC_SR_PCKRDY7_Pos)               /**< (PMC_SR) Programmable Clock Ready 7 Status Mask */
+#define PMC_SR_PCKRDY7                      PMC_SR_PCKRDY7_Msk                             /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SR_PCKRDY7_Msk instead */
 #define PMC_SR_MOSCSELS_Pos                 16                                             /**< (PMC_SR) Main Clock Source Oscillator Selection Status Position */
 #define PMC_SR_MOSCSELS_Msk                 (_U_(0x1) << PMC_SR_MOSCSELS_Pos)              /**< (PMC_SR) Main Clock Source Oscillator Selection Status Mask */
 #define PMC_SR_MOSCSELS                     PMC_SR_MOSCSELS_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SR_MOSCSELS_Msk instead */
@@ -1072,15 +1213,16 @@ typedef union {
 #define PMC_SR_XT32KERR_Pos                 21                                             /**< (PMC_SR) Slow Crystal Oscillator Error Position */
 #define PMC_SR_XT32KERR_Msk                 (_U_(0x1) << PMC_SR_XT32KERR_Pos)              /**< (PMC_SR) Slow Crystal Oscillator Error Mask */
 #define PMC_SR_XT32KERR                     PMC_SR_XT32KERR_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SR_XT32KERR_Msk instead */
-#define PMC_SR_MASK                         _U_(0x3F7FCB)                                  /**< \deprecated (PMC_SR) Register MASK  (Use PMC_SR_Msk instead)  */
-#define PMC_SR_Msk                          _U_(0x3F7FCB)                                  /**< (PMC_SR) Register Mask  */
+#define PMC_SR_MASK                         _U_(0x3FFFCB)                                  /**< \deprecated (PMC_SR) Register MASK  (Use PMC_SR_Msk instead)  */
+#define PMC_SR_Msk                          _U_(0x3FFFCB)                                  /**< (PMC_SR) Register Mask  */
 
 #define PMC_SR_PCKRDY_Pos                   8                                              /**< (PMC_SR Position) Programmable Clock Ready x Status */
-#define PMC_SR_PCKRDY_Msk                   (_U_(0x7F) << PMC_SR_PCKRDY_Pos)               /**< (PMC_SR Mask) PCKRDY */
+#define PMC_SR_PCKRDY_Msk                   (_U_(0xFF) << PMC_SR_PCKRDY_Pos)               /**< (PMC_SR Mask) PCKRDY */
 #define PMC_SR_PCKRDY(value)                (PMC_SR_PCKRDY_Msk & ((value) << PMC_SR_PCKRDY_Pos))  
 
 /* -------- PMC_IMR : (PMC Offset: 0x6c) (R/ 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MOSCXTS:1;                 /**< bit:      0  Main Crystal Oscillator Status Interrupt Mask */
@@ -1097,7 +1239,7 @@ typedef union {
     uint32_t PCKRDY4:1;                 /**< bit:     12  Programmable Clock Ready 4 Interrupt Mask */
     uint32_t PCKRDY5:1;                 /**< bit:     13  Programmable Clock Ready 5 Interrupt Mask */
     uint32_t PCKRDY6:1;                 /**< bit:     14  Programmable Clock Ready 6 Interrupt Mask */
-    uint32_t :1;                        /**< bit:     15  Reserved */
+    uint32_t PCKRDY7:1;                 /**< bit:     15  Programmable Clock Ready 7 Interrupt Mask */
     uint32_t MOSCSELS:1;                /**< bit:     16  Main Clock Source Oscillator Selection Status Interrupt Mask */
     uint32_t MOSCRCS:1;                 /**< bit:     17  Main RC Status Interrupt Mask            */
     uint32_t CFDEV:1;                   /**< bit:     18  Clock Failure Detector Event Interrupt Mask */
@@ -1107,11 +1249,12 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :8;                        /**< bit:   0..7  Reserved */
-    uint32_t PCKRDY:7;                  /**< bit:  8..14  Programmable Clock Ready x Interrupt Mask */
-    uint32_t :17;                       /**< bit: 15..31 Reserved */
+    uint32_t PCKRDY:8;                  /**< bit:  8..15  Programmable Clock Ready x Interrupt Mask */
+    uint32_t :16;                       /**< bit: 16..31 Reserved */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_IMR_OFFSET                      (0x6C)                                        /**<  (PMC_IMR) Interrupt Mask Register  Offset */
@@ -1149,6 +1292,9 @@ typedef union {
 #define PMC_IMR_PCKRDY6_Pos                 14                                             /**< (PMC_IMR) Programmable Clock Ready 6 Interrupt Mask Position */
 #define PMC_IMR_PCKRDY6_Msk                 (_U_(0x1) << PMC_IMR_PCKRDY6_Pos)              /**< (PMC_IMR) Programmable Clock Ready 6 Interrupt Mask Mask */
 #define PMC_IMR_PCKRDY6                     PMC_IMR_PCKRDY6_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_IMR_PCKRDY6_Msk instead */
+#define PMC_IMR_PCKRDY7_Pos                 15                                             /**< (PMC_IMR) Programmable Clock Ready 7 Interrupt Mask Position */
+#define PMC_IMR_PCKRDY7_Msk                 (_U_(0x1) << PMC_IMR_PCKRDY7_Pos)              /**< (PMC_IMR) Programmable Clock Ready 7 Interrupt Mask Mask */
+#define PMC_IMR_PCKRDY7                     PMC_IMR_PCKRDY7_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_IMR_PCKRDY7_Msk instead */
 #define PMC_IMR_MOSCSELS_Pos                16                                             /**< (PMC_IMR) Main Clock Source Oscillator Selection Status Interrupt Mask Position */
 #define PMC_IMR_MOSCSELS_Msk                (_U_(0x1) << PMC_IMR_MOSCSELS_Pos)             /**< (PMC_IMR) Main Clock Source Oscillator Selection Status Interrupt Mask Mask */
 #define PMC_IMR_MOSCSELS                    PMC_IMR_MOSCSELS_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_IMR_MOSCSELS_Msk instead */
@@ -1161,15 +1307,16 @@ typedef union {
 #define PMC_IMR_XT32KERR_Pos                21                                             /**< (PMC_IMR) 32.768 kHz Crystal Oscillator Error Interrupt Mask Position */
 #define PMC_IMR_XT32KERR_Msk                (_U_(0x1) << PMC_IMR_XT32KERR_Pos)             /**< (PMC_IMR) 32.768 kHz Crystal Oscillator Error Interrupt Mask Mask */
 #define PMC_IMR_XT32KERR                    PMC_IMR_XT32KERR_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_IMR_XT32KERR_Msk instead */
-#define PMC_IMR_MASK                        _U_(0x277F4B)                                  /**< \deprecated (PMC_IMR) Register MASK  (Use PMC_IMR_Msk instead)  */
-#define PMC_IMR_Msk                         _U_(0x277F4B)                                  /**< (PMC_IMR) Register Mask  */
+#define PMC_IMR_MASK                        _U_(0x27FF4B)                                  /**< \deprecated (PMC_IMR) Register MASK  (Use PMC_IMR_Msk instead)  */
+#define PMC_IMR_Msk                         _U_(0x27FF4B)                                  /**< (PMC_IMR) Register Mask  */
 
 #define PMC_IMR_PCKRDY_Pos                  8                                              /**< (PMC_IMR Position) Programmable Clock Ready x Interrupt Mask */
-#define PMC_IMR_PCKRDY_Msk                  (_U_(0x7F) << PMC_IMR_PCKRDY_Pos)              /**< (PMC_IMR Mask) PCKRDY */
+#define PMC_IMR_PCKRDY_Msk                  (_U_(0xFF) << PMC_IMR_PCKRDY_Pos)              /**< (PMC_IMR Mask) PCKRDY */
 #define PMC_IMR_PCKRDY(value)               (PMC_IMR_PCKRDY_Msk & ((value) << PMC_IMR_PCKRDY_Pos))  
 
 /* -------- PMC_FSMR : (PMC Offset: 0x70) (R/W 32) Fast Startup Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FSTT0:1;                   /**< bit:      0  Fast Startup Input Enable 0              */
@@ -1203,6 +1350,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_FSMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_FSMR_OFFSET                     (0x70)                                        /**<  (PMC_FSMR) Fast Startup Mode Register  Offset */
@@ -1288,6 +1436,7 @@ typedef union {
 
 /* -------- PMC_FSPR : (PMC Offset: 0x74) (R/W 32) Fast Startup Polarity Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FSTP0:1;                   /**< bit:      0  Fast Startup Input Polarity 0            */
@@ -1314,6 +1463,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_FSPR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_FSPR_OFFSET                     (0x74)                                        /**<  (PMC_FSPR) Fast Startup Polarity Register  Offset */
@@ -1375,6 +1525,7 @@ typedef union {
 
 /* -------- PMC_FOCR : (PMC Offset: 0x78) (/W 32) Fault Output Clear Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FOCLR:1;                   /**< bit:      0  Fault Output Clear                       */
@@ -1382,6 +1533,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_FOCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_FOCR_OFFSET                     (0x78)                                        /**<  (PMC_FOCR) Fault Output Clear Register  Offset */
@@ -1395,6 +1547,7 @@ typedef union {
 
 /* -------- PMC_WPMR : (PMC Offset: 0xe4) (R/W 32) Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
@@ -1403,6 +1556,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_WPMR_OFFSET                     (0xE4)                                        /**<  (PMC_WPMR) Write Protection Mode Register  Offset */
@@ -1421,6 +1575,7 @@ typedef union {
 
 /* -------- PMC_WPSR : (PMC Offset: 0xe8) (R/ 32) Write Protection Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPVS:1;                    /**< bit:      0  Write Protection Violation Status        */
@@ -1430,6 +1585,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_WPSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_WPSR_OFFSET                     (0xE8)                                        /**<  (PMC_WPSR) Write Protection Status Register  Offset */
@@ -1446,6 +1602,7 @@ typedef union {
 
 /* -------- PMC_PCER1 : (PMC Offset: 0x100) (/W 32) Peripheral Clock Enable Register 1 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PID32:1;                   /**< bit:      0  Peripheral Clock 32 Enable               */
@@ -1469,8 +1626,7 @@ typedef union {
     uint32_t PID50:1;                   /**< bit:     18  Peripheral Clock 50 Enable               */
     uint32_t PID51:1;                   /**< bit:     19  Peripheral Clock 51 Enable               */
     uint32_t PID52:1;                   /**< bit:     20  Peripheral Clock 52 Enable               */
-    uint32_t PID53:1;                   /**< bit:     21  Peripheral Clock 53 Enable               */
-    uint32_t :2;                        /**< bit: 22..23  Reserved */
+    uint32_t :3;                        /**< bit: 21..23  Reserved */
     uint32_t PID56:1;                   /**< bit:     24  Peripheral Clock 56 Enable               */
     uint32_t PID57:1;                   /**< bit:     25  Peripheral Clock 57 Enable               */
     uint32_t PID58:1;                   /**< bit:     26  Peripheral Clock 58 Enable               */
@@ -1479,11 +1635,12 @@ typedef union {
     uint32_t :3;                        /**< bit: 29..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
   struct {
-    uint32_t PID:25;                    /**< bit:  0..24  Peripheral Clock 6x Enable               */
-    uint32_t :7;                        /**< bit: 25..31 Reserved */
+    uint32_t PID:24;                    /**< bit:  0..23  Peripheral Clock 6x Enable               */
+    uint32_t :8;                        /**< bit: 24..31 Reserved */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_PCER1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_PCER1_OFFSET                    (0x100)                                       /**<  (PMC_PCER1) Peripheral Clock Enable Register 1  Offset */
@@ -1545,9 +1702,6 @@ typedef union {
 #define PMC_PCER1_PID52_Pos                 20                                             /**< (PMC_PCER1) Peripheral Clock 52 Enable Position */
 #define PMC_PCER1_PID52_Msk                 (_U_(0x1) << PMC_PCER1_PID52_Pos)              /**< (PMC_PCER1) Peripheral Clock 52 Enable Mask */
 #define PMC_PCER1_PID52                     PMC_PCER1_PID52_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCER1_PID52_Msk instead */
-#define PMC_PCER1_PID53_Pos                 21                                             /**< (PMC_PCER1) Peripheral Clock 53 Enable Position */
-#define PMC_PCER1_PID53_Msk                 (_U_(0x1) << PMC_PCER1_PID53_Pos)              /**< (PMC_PCER1) Peripheral Clock 53 Enable Mask */
-#define PMC_PCER1_PID53                     PMC_PCER1_PID53_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCER1_PID53_Msk instead */
 #define PMC_PCER1_PID56_Pos                 24                                             /**< (PMC_PCER1) Peripheral Clock 56 Enable Position */
 #define PMC_PCER1_PID56_Msk                 (_U_(0x1) << PMC_PCER1_PID56_Pos)              /**< (PMC_PCER1) Peripheral Clock 56 Enable Mask */
 #define PMC_PCER1_PID56                     PMC_PCER1_PID56_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCER1_PID56_Msk instead */
@@ -1563,15 +1717,16 @@ typedef union {
 #define PMC_PCER1_PID60_Pos                 28                                             /**< (PMC_PCER1) Peripheral Clock 60 Enable Position */
 #define PMC_PCER1_PID60_Msk                 (_U_(0x1) << PMC_PCER1_PID60_Pos)              /**< (PMC_PCER1) Peripheral Clock 60 Enable Mask */
 #define PMC_PCER1_PID60                     PMC_PCER1_PID60_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCER1_PID60_Msk instead */
-#define PMC_PCER1_MASK                      _U_(0x1F3FFFAF)                                /**< \deprecated (PMC_PCER1) Register MASK  (Use PMC_PCER1_Msk instead)  */
-#define PMC_PCER1_Msk                       _U_(0x1F3FFFAF)                                /**< (PMC_PCER1) Register Mask  */
+#define PMC_PCER1_MASK                      _U_(0x1F1FFFAF)                                /**< \deprecated (PMC_PCER1) Register MASK  (Use PMC_PCER1_Msk instead)  */
+#define PMC_PCER1_Msk                       _U_(0x1F1FFFAF)                                /**< (PMC_PCER1) Register Mask  */
 
 #define PMC_PCER1_PID_Pos                   0                                              /**< (PMC_PCER1 Position) Peripheral Clock 6x Enable */
-#define PMC_PCER1_PID_Msk                   (_U_(0x1FFFFFF) << PMC_PCER1_PID_Pos)          /**< (PMC_PCER1 Mask) PID */
+#define PMC_PCER1_PID_Msk                   (_U_(0xFFFFFF) << PMC_PCER1_PID_Pos)           /**< (PMC_PCER1 Mask) PID */
 #define PMC_PCER1_PID(value)                (PMC_PCER1_PID_Msk & ((value) << PMC_PCER1_PID_Pos))  
 
 /* -------- PMC_PCDR1 : (PMC Offset: 0x104) (/W 32) Peripheral Clock Disable Register 1 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PID32:1;                   /**< bit:      0  Peripheral Clock 32 Disable              */
@@ -1595,8 +1750,7 @@ typedef union {
     uint32_t PID50:1;                   /**< bit:     18  Peripheral Clock 50 Disable              */
     uint32_t PID51:1;                   /**< bit:     19  Peripheral Clock 51 Disable              */
     uint32_t PID52:1;                   /**< bit:     20  Peripheral Clock 52 Disable              */
-    uint32_t PID53:1;                   /**< bit:     21  Peripheral Clock 53 Disable              */
-    uint32_t :2;                        /**< bit: 22..23  Reserved */
+    uint32_t :3;                        /**< bit: 21..23  Reserved */
     uint32_t PID56:1;                   /**< bit:     24  Peripheral Clock 56 Disable              */
     uint32_t PID57:1;                   /**< bit:     25  Peripheral Clock 57 Disable              */
     uint32_t PID58:1;                   /**< bit:     26  Peripheral Clock 58 Disable              */
@@ -1605,11 +1759,12 @@ typedef union {
     uint32_t :3;                        /**< bit: 29..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
   struct {
-    uint32_t PID:25;                    /**< bit:  0..24  Peripheral Clock 6x Disable              */
-    uint32_t :7;                        /**< bit: 25..31 Reserved */
+    uint32_t PID:24;                    /**< bit:  0..23  Peripheral Clock 6x Disable              */
+    uint32_t :8;                        /**< bit: 24..31 Reserved */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_PCDR1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_PCDR1_OFFSET                    (0x104)                                       /**<  (PMC_PCDR1) Peripheral Clock Disable Register 1  Offset */
@@ -1671,9 +1826,6 @@ typedef union {
 #define PMC_PCDR1_PID52_Pos                 20                                             /**< (PMC_PCDR1) Peripheral Clock 52 Disable Position */
 #define PMC_PCDR1_PID52_Msk                 (_U_(0x1) << PMC_PCDR1_PID52_Pos)              /**< (PMC_PCDR1) Peripheral Clock 52 Disable Mask */
 #define PMC_PCDR1_PID52                     PMC_PCDR1_PID52_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCDR1_PID52_Msk instead */
-#define PMC_PCDR1_PID53_Pos                 21                                             /**< (PMC_PCDR1) Peripheral Clock 53 Disable Position */
-#define PMC_PCDR1_PID53_Msk                 (_U_(0x1) << PMC_PCDR1_PID53_Pos)              /**< (PMC_PCDR1) Peripheral Clock 53 Disable Mask */
-#define PMC_PCDR1_PID53                     PMC_PCDR1_PID53_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCDR1_PID53_Msk instead */
 #define PMC_PCDR1_PID56_Pos                 24                                             /**< (PMC_PCDR1) Peripheral Clock 56 Disable Position */
 #define PMC_PCDR1_PID56_Msk                 (_U_(0x1) << PMC_PCDR1_PID56_Pos)              /**< (PMC_PCDR1) Peripheral Clock 56 Disable Mask */
 #define PMC_PCDR1_PID56                     PMC_PCDR1_PID56_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCDR1_PID56_Msk instead */
@@ -1689,15 +1841,16 @@ typedef union {
 #define PMC_PCDR1_PID60_Pos                 28                                             /**< (PMC_PCDR1) Peripheral Clock 60 Disable Position */
 #define PMC_PCDR1_PID60_Msk                 (_U_(0x1) << PMC_PCDR1_PID60_Pos)              /**< (PMC_PCDR1) Peripheral Clock 60 Disable Mask */
 #define PMC_PCDR1_PID60                     PMC_PCDR1_PID60_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCDR1_PID60_Msk instead */
-#define PMC_PCDR1_MASK                      _U_(0x1F3FFFAF)                                /**< \deprecated (PMC_PCDR1) Register MASK  (Use PMC_PCDR1_Msk instead)  */
-#define PMC_PCDR1_Msk                       _U_(0x1F3FFFAF)                                /**< (PMC_PCDR1) Register Mask  */
+#define PMC_PCDR1_MASK                      _U_(0x1F1FFFAF)                                /**< \deprecated (PMC_PCDR1) Register MASK  (Use PMC_PCDR1_Msk instead)  */
+#define PMC_PCDR1_Msk                       _U_(0x1F1FFFAF)                                /**< (PMC_PCDR1) Register Mask  */
 
 #define PMC_PCDR1_PID_Pos                   0                                              /**< (PMC_PCDR1 Position) Peripheral Clock 6x Disable */
-#define PMC_PCDR1_PID_Msk                   (_U_(0x1FFFFFF) << PMC_PCDR1_PID_Pos)          /**< (PMC_PCDR1 Mask) PID */
+#define PMC_PCDR1_PID_Msk                   (_U_(0xFFFFFF) << PMC_PCDR1_PID_Pos)           /**< (PMC_PCDR1 Mask) PID */
 #define PMC_PCDR1_PID(value)                (PMC_PCDR1_PID_Msk & ((value) << PMC_PCDR1_PID_Pos))  
 
 /* -------- PMC_PCSR1 : (PMC Offset: 0x108) (R/ 32) Peripheral Clock Status Register 1 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PID32:1;                   /**< bit:      0  Peripheral Clock 32 Status               */
@@ -1721,8 +1874,7 @@ typedef union {
     uint32_t PID50:1;                   /**< bit:     18  Peripheral Clock 50 Status               */
     uint32_t PID51:1;                   /**< bit:     19  Peripheral Clock 51 Status               */
     uint32_t PID52:1;                   /**< bit:     20  Peripheral Clock 52 Status               */
-    uint32_t PID53:1;                   /**< bit:     21  Peripheral Clock 53 Status               */
-    uint32_t :2;                        /**< bit: 22..23  Reserved */
+    uint32_t :3;                        /**< bit: 21..23  Reserved */
     uint32_t PID56:1;                   /**< bit:     24  Peripheral Clock 56 Status               */
     uint32_t PID57:1;                   /**< bit:     25  Peripheral Clock 57 Status               */
     uint32_t PID58:1;                   /**< bit:     26  Peripheral Clock 58 Status               */
@@ -1731,11 +1883,12 @@ typedef union {
     uint32_t :3;                        /**< bit: 29..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
   struct {
-    uint32_t PID:25;                    /**< bit:  0..24  Peripheral Clock 6x Status               */
-    uint32_t :7;                        /**< bit: 25..31 Reserved */
+    uint32_t PID:24;                    /**< bit:  0..23  Peripheral Clock 6x Status               */
+    uint32_t :8;                        /**< bit: 24..31 Reserved */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_PCSR1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_PCSR1_OFFSET                    (0x108)                                       /**<  (PMC_PCSR1) Peripheral Clock Status Register 1  Offset */
@@ -1797,9 +1950,6 @@ typedef union {
 #define PMC_PCSR1_PID52_Pos                 20                                             /**< (PMC_PCSR1) Peripheral Clock 52 Status Position */
 #define PMC_PCSR1_PID52_Msk                 (_U_(0x1) << PMC_PCSR1_PID52_Pos)              /**< (PMC_PCSR1) Peripheral Clock 52 Status Mask */
 #define PMC_PCSR1_PID52                     PMC_PCSR1_PID52_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCSR1_PID52_Msk instead */
-#define PMC_PCSR1_PID53_Pos                 21                                             /**< (PMC_PCSR1) Peripheral Clock 53 Status Position */
-#define PMC_PCSR1_PID53_Msk                 (_U_(0x1) << PMC_PCSR1_PID53_Pos)              /**< (PMC_PCSR1) Peripheral Clock 53 Status Mask */
-#define PMC_PCSR1_PID53                     PMC_PCSR1_PID53_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCSR1_PID53_Msk instead */
 #define PMC_PCSR1_PID56_Pos                 24                                             /**< (PMC_PCSR1) Peripheral Clock 56 Status Position */
 #define PMC_PCSR1_PID56_Msk                 (_U_(0x1) << PMC_PCSR1_PID56_Pos)              /**< (PMC_PCSR1) Peripheral Clock 56 Status Mask */
 #define PMC_PCSR1_PID56                     PMC_PCSR1_PID56_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCSR1_PID56_Msk instead */
@@ -1815,15 +1965,16 @@ typedef union {
 #define PMC_PCSR1_PID60_Pos                 28                                             /**< (PMC_PCSR1) Peripheral Clock 60 Status Position */
 #define PMC_PCSR1_PID60_Msk                 (_U_(0x1) << PMC_PCSR1_PID60_Pos)              /**< (PMC_PCSR1) Peripheral Clock 60 Status Mask */
 #define PMC_PCSR1_PID60                     PMC_PCSR1_PID60_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_PCSR1_PID60_Msk instead */
-#define PMC_PCSR1_MASK                      _U_(0x1F3FFFAF)                                /**< \deprecated (PMC_PCSR1) Register MASK  (Use PMC_PCSR1_Msk instead)  */
-#define PMC_PCSR1_Msk                       _U_(0x1F3FFFAF)                                /**< (PMC_PCSR1) Register Mask  */
+#define PMC_PCSR1_MASK                      _U_(0x1F1FFFAF)                                /**< \deprecated (PMC_PCSR1) Register MASK  (Use PMC_PCSR1_Msk instead)  */
+#define PMC_PCSR1_Msk                       _U_(0x1F1FFFAF)                                /**< (PMC_PCSR1) Register Mask  */
 
 #define PMC_PCSR1_PID_Pos                   0                                              /**< (PMC_PCSR1 Position) Peripheral Clock 6x Status */
-#define PMC_PCSR1_PID_Msk                   (_U_(0x1FFFFFF) << PMC_PCSR1_PID_Pos)          /**< (PMC_PCSR1 Mask) PID */
+#define PMC_PCSR1_PID_Msk                   (_U_(0xFFFFFF) << PMC_PCSR1_PID_Pos)           /**< (PMC_PCSR1 Mask) PID */
 #define PMC_PCSR1_PID(value)                (PMC_PCSR1_PID_Msk & ((value) << PMC_PCSR1_PID_Pos))  
 
 /* -------- PMC_PCR : (PMC Offset: 0x10c) (R/W 32) Peripheral Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PID:7;                     /**< bit:   0..6  Peripheral ID                            */
@@ -1839,6 +1990,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_PCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_PCR_OFFSET                      (0x10C)                                       /**<  (PMC_PCR) Peripheral Control Register  Offset */
@@ -1877,6 +2029,7 @@ typedef union {
 
 /* -------- PMC_OCR : (PMC Offset: 0x110) (R/W 32) Oscillator Calibration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CAL4:7;                    /**< bit:   0..6  Main RC Oscillator Calibration Bits for 4 MHz */
@@ -1889,6 +2042,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_OCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_OCR_OFFSET                      (0x110)                                       /**<  (PMC_OCR) Oscillator Calibration Register  Offset */
@@ -1917,6 +2071,7 @@ typedef union {
 
 /* -------- PMC_SLPWK_ER0 : (PMC Offset: 0x114) (/W 32) SleepWalking Enable Register 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :7;                        /**< bit:   0..6  Reserved */
@@ -1952,6 +2107,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_SLPWK_ER0_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_SLPWK_ER0_OFFSET                (0x114)                                       /**<  (PMC_SLPWK_ER0) SleepWalking Enable Register 0  Offset */
@@ -2040,6 +2196,7 @@ typedef union {
 
 /* -------- PMC_SLPWK_DR0 : (PMC Offset: 0x118) (/W 32) SleepWalking Disable Register 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :7;                        /**< bit:   0..6  Reserved */
@@ -2075,6 +2232,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_SLPWK_DR0_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_SLPWK_DR0_OFFSET                (0x118)                                       /**<  (PMC_SLPWK_DR0) SleepWalking Disable Register 0  Offset */
@@ -2163,6 +2321,7 @@ typedef union {
 
 /* -------- PMC_SLPWK_SR0 : (PMC Offset: 0x11c) (R/ 32) SleepWalking Status Register 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :7;                        /**< bit:   0..6  Reserved */
@@ -2198,6 +2357,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_SLPWK_SR0_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_SLPWK_SR0_OFFSET                (0x11C)                                       /**<  (PMC_SLPWK_SR0) SleepWalking Status Register 0  Offset */
@@ -2286,6 +2446,7 @@ typedef union {
 
 /* -------- PMC_SLPWK_ASR0 : (PMC Offset: 0x120) (R/ 32) SleepWalking Activity Status Register 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :7;                        /**< bit:   0..6  Reserved */
@@ -2321,6 +2482,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_SLPWK_ASR0_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_SLPWK_ASR0_OFFSET               (0x120)                                       /**<  (PMC_SLPWK_ASR0) SleepWalking Activity Status Register 0  Offset */
@@ -2409,6 +2571,7 @@ typedef union {
 
 /* -------- PMC_PMMR : (PMC Offset: 0x130) (R/W 32) PLL Maximum Multiplier Value Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PLLA_MMAX:11;              /**< bit:  0..10  PLLA Maximum Allowed Multiplier Value    */
@@ -2416,6 +2579,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_PMMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_PMMR_OFFSET                     (0x130)                                       /**<  (PMC_PMMR) PLL Maximum Multiplier Value Register  Offset */
@@ -2429,6 +2593,7 @@ typedef union {
 
 /* -------- PMC_SLPWK_ER1 : (PMC Offset: 0x134) (/W 32) SleepWalking Enable Register 1 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PID32:1;                   /**< bit:      0  Peripheral 32 SleepWalking Enable        */
@@ -2452,8 +2617,7 @@ typedef union {
     uint32_t PID50:1;                   /**< bit:     18  Peripheral 50 SleepWalking Enable        */
     uint32_t PID51:1;                   /**< bit:     19  Peripheral 51 SleepWalking Enable        */
     uint32_t PID52:1;                   /**< bit:     20  Peripheral 52 SleepWalking Enable        */
-    uint32_t PID53:1;                   /**< bit:     21  Peripheral 53 SleepWalking Enable        */
-    uint32_t :2;                        /**< bit: 22..23  Reserved */
+    uint32_t :3;                        /**< bit: 21..23  Reserved */
     uint32_t PID56:1;                   /**< bit:     24  Peripheral 56 SleepWalking Enable        */
     uint32_t PID57:1;                   /**< bit:     25  Peripheral 57 SleepWalking Enable        */
     uint32_t PID58:1;                   /**< bit:     26  Peripheral 58 SleepWalking Enable        */
@@ -2462,11 +2626,12 @@ typedef union {
     uint32_t :3;                        /**< bit: 29..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
   struct {
-    uint32_t PID:25;                    /**< bit:  0..24  Peripheral 6x SleepWalking Enable        */
-    uint32_t :7;                        /**< bit: 25..31 Reserved */
+    uint32_t PID:24;                    /**< bit:  0..23  Peripheral 6x SleepWalking Enable        */
+    uint32_t :8;                        /**< bit: 24..31 Reserved */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_SLPWK_ER1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_SLPWK_ER1_OFFSET                (0x134)                                       /**<  (PMC_SLPWK_ER1) SleepWalking Enable Register 1  Offset */
@@ -2528,9 +2693,6 @@ typedef union {
 #define PMC_SLPWK_ER1_PID52_Pos             20                                             /**< (PMC_SLPWK_ER1) Peripheral 52 SleepWalking Enable Position */
 #define PMC_SLPWK_ER1_PID52_Msk             (_U_(0x1) << PMC_SLPWK_ER1_PID52_Pos)          /**< (PMC_SLPWK_ER1) Peripheral 52 SleepWalking Enable Mask */
 #define PMC_SLPWK_ER1_PID52                 PMC_SLPWK_ER1_PID52_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_ER1_PID52_Msk instead */
-#define PMC_SLPWK_ER1_PID53_Pos             21                                             /**< (PMC_SLPWK_ER1) Peripheral 53 SleepWalking Enable Position */
-#define PMC_SLPWK_ER1_PID53_Msk             (_U_(0x1) << PMC_SLPWK_ER1_PID53_Pos)          /**< (PMC_SLPWK_ER1) Peripheral 53 SleepWalking Enable Mask */
-#define PMC_SLPWK_ER1_PID53                 PMC_SLPWK_ER1_PID53_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_ER1_PID53_Msk instead */
 #define PMC_SLPWK_ER1_PID56_Pos             24                                             /**< (PMC_SLPWK_ER1) Peripheral 56 SleepWalking Enable Position */
 #define PMC_SLPWK_ER1_PID56_Msk             (_U_(0x1) << PMC_SLPWK_ER1_PID56_Pos)          /**< (PMC_SLPWK_ER1) Peripheral 56 SleepWalking Enable Mask */
 #define PMC_SLPWK_ER1_PID56                 PMC_SLPWK_ER1_PID56_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_ER1_PID56_Msk instead */
@@ -2546,15 +2708,16 @@ typedef union {
 #define PMC_SLPWK_ER1_PID60_Pos             28                                             /**< (PMC_SLPWK_ER1) Peripheral 60 SleepWalking Enable Position */
 #define PMC_SLPWK_ER1_PID60_Msk             (_U_(0x1) << PMC_SLPWK_ER1_PID60_Pos)          /**< (PMC_SLPWK_ER1) Peripheral 60 SleepWalking Enable Mask */
 #define PMC_SLPWK_ER1_PID60                 PMC_SLPWK_ER1_PID60_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_ER1_PID60_Msk instead */
-#define PMC_SLPWK_ER1_MASK                  _U_(0x1F3FFFAF)                                /**< \deprecated (PMC_SLPWK_ER1) Register MASK  (Use PMC_SLPWK_ER1_Msk instead)  */
-#define PMC_SLPWK_ER1_Msk                   _U_(0x1F3FFFAF)                                /**< (PMC_SLPWK_ER1) Register Mask  */
+#define PMC_SLPWK_ER1_MASK                  _U_(0x1F1FFFAF)                                /**< \deprecated (PMC_SLPWK_ER1) Register MASK  (Use PMC_SLPWK_ER1_Msk instead)  */
+#define PMC_SLPWK_ER1_Msk                   _U_(0x1F1FFFAF)                                /**< (PMC_SLPWK_ER1) Register Mask  */
 
 #define PMC_SLPWK_ER1_PID_Pos               0                                              /**< (PMC_SLPWK_ER1 Position) Peripheral 6x SleepWalking Enable */
-#define PMC_SLPWK_ER1_PID_Msk               (_U_(0x1FFFFFF) << PMC_SLPWK_ER1_PID_Pos)      /**< (PMC_SLPWK_ER1 Mask) PID */
+#define PMC_SLPWK_ER1_PID_Msk               (_U_(0xFFFFFF) << PMC_SLPWK_ER1_PID_Pos)       /**< (PMC_SLPWK_ER1 Mask) PID */
 #define PMC_SLPWK_ER1_PID(value)            (PMC_SLPWK_ER1_PID_Msk & ((value) << PMC_SLPWK_ER1_PID_Pos))  
 
 /* -------- PMC_SLPWK_DR1 : (PMC Offset: 0x138) (/W 32) SleepWalking Disable Register 1 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PID32:1;                   /**< bit:      0  Peripheral 32 SleepWalking Disable       */
@@ -2578,8 +2741,7 @@ typedef union {
     uint32_t PID50:1;                   /**< bit:     18  Peripheral 50 SleepWalking Disable       */
     uint32_t PID51:1;                   /**< bit:     19  Peripheral 51 SleepWalking Disable       */
     uint32_t PID52:1;                   /**< bit:     20  Peripheral 52 SleepWalking Disable       */
-    uint32_t PID53:1;                   /**< bit:     21  Peripheral 53 SleepWalking Disable       */
-    uint32_t :2;                        /**< bit: 22..23  Reserved */
+    uint32_t :3;                        /**< bit: 21..23  Reserved */
     uint32_t PID56:1;                   /**< bit:     24  Peripheral 56 SleepWalking Disable       */
     uint32_t PID57:1;                   /**< bit:     25  Peripheral 57 SleepWalking Disable       */
     uint32_t PID58:1;                   /**< bit:     26  Peripheral 58 SleepWalking Disable       */
@@ -2588,11 +2750,12 @@ typedef union {
     uint32_t :3;                        /**< bit: 29..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
   struct {
-    uint32_t PID:25;                    /**< bit:  0..24  Peripheral 6x SleepWalking Disable       */
-    uint32_t :7;                        /**< bit: 25..31 Reserved */
+    uint32_t PID:24;                    /**< bit:  0..23  Peripheral 6x SleepWalking Disable       */
+    uint32_t :8;                        /**< bit: 24..31 Reserved */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_SLPWK_DR1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_SLPWK_DR1_OFFSET                (0x138)                                       /**<  (PMC_SLPWK_DR1) SleepWalking Disable Register 1  Offset */
@@ -2654,9 +2817,6 @@ typedef union {
 #define PMC_SLPWK_DR1_PID52_Pos             20                                             /**< (PMC_SLPWK_DR1) Peripheral 52 SleepWalking Disable Position */
 #define PMC_SLPWK_DR1_PID52_Msk             (_U_(0x1) << PMC_SLPWK_DR1_PID52_Pos)          /**< (PMC_SLPWK_DR1) Peripheral 52 SleepWalking Disable Mask */
 #define PMC_SLPWK_DR1_PID52                 PMC_SLPWK_DR1_PID52_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_DR1_PID52_Msk instead */
-#define PMC_SLPWK_DR1_PID53_Pos             21                                             /**< (PMC_SLPWK_DR1) Peripheral 53 SleepWalking Disable Position */
-#define PMC_SLPWK_DR1_PID53_Msk             (_U_(0x1) << PMC_SLPWK_DR1_PID53_Pos)          /**< (PMC_SLPWK_DR1) Peripheral 53 SleepWalking Disable Mask */
-#define PMC_SLPWK_DR1_PID53                 PMC_SLPWK_DR1_PID53_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_DR1_PID53_Msk instead */
 #define PMC_SLPWK_DR1_PID56_Pos             24                                             /**< (PMC_SLPWK_DR1) Peripheral 56 SleepWalking Disable Position */
 #define PMC_SLPWK_DR1_PID56_Msk             (_U_(0x1) << PMC_SLPWK_DR1_PID56_Pos)          /**< (PMC_SLPWK_DR1) Peripheral 56 SleepWalking Disable Mask */
 #define PMC_SLPWK_DR1_PID56                 PMC_SLPWK_DR1_PID56_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_DR1_PID56_Msk instead */
@@ -2672,15 +2832,16 @@ typedef union {
 #define PMC_SLPWK_DR1_PID60_Pos             28                                             /**< (PMC_SLPWK_DR1) Peripheral 60 SleepWalking Disable Position */
 #define PMC_SLPWK_DR1_PID60_Msk             (_U_(0x1) << PMC_SLPWK_DR1_PID60_Pos)          /**< (PMC_SLPWK_DR1) Peripheral 60 SleepWalking Disable Mask */
 #define PMC_SLPWK_DR1_PID60                 PMC_SLPWK_DR1_PID60_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_DR1_PID60_Msk instead */
-#define PMC_SLPWK_DR1_MASK                  _U_(0x1F3FFFAF)                                /**< \deprecated (PMC_SLPWK_DR1) Register MASK  (Use PMC_SLPWK_DR1_Msk instead)  */
-#define PMC_SLPWK_DR1_Msk                   _U_(0x1F3FFFAF)                                /**< (PMC_SLPWK_DR1) Register Mask  */
+#define PMC_SLPWK_DR1_MASK                  _U_(0x1F1FFFAF)                                /**< \deprecated (PMC_SLPWK_DR1) Register MASK  (Use PMC_SLPWK_DR1_Msk instead)  */
+#define PMC_SLPWK_DR1_Msk                   _U_(0x1F1FFFAF)                                /**< (PMC_SLPWK_DR1) Register Mask  */
 
 #define PMC_SLPWK_DR1_PID_Pos               0                                              /**< (PMC_SLPWK_DR1 Position) Peripheral 6x SleepWalking Disable */
-#define PMC_SLPWK_DR1_PID_Msk               (_U_(0x1FFFFFF) << PMC_SLPWK_DR1_PID_Pos)      /**< (PMC_SLPWK_DR1 Mask) PID */
+#define PMC_SLPWK_DR1_PID_Msk               (_U_(0xFFFFFF) << PMC_SLPWK_DR1_PID_Pos)       /**< (PMC_SLPWK_DR1 Mask) PID */
 #define PMC_SLPWK_DR1_PID(value)            (PMC_SLPWK_DR1_PID_Msk & ((value) << PMC_SLPWK_DR1_PID_Pos))  
 
 /* -------- PMC_SLPWK_SR1 : (PMC Offset: 0x13c) (R/ 32) SleepWalking Status Register 1 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PID32:1;                   /**< bit:      0  Peripheral 32 SleepWalking Status        */
@@ -2704,8 +2865,7 @@ typedef union {
     uint32_t PID50:1;                   /**< bit:     18  Peripheral 50 SleepWalking Status        */
     uint32_t PID51:1;                   /**< bit:     19  Peripheral 51 SleepWalking Status        */
     uint32_t PID52:1;                   /**< bit:     20  Peripheral 52 SleepWalking Status        */
-    uint32_t PID53:1;                   /**< bit:     21  Peripheral 53 SleepWalking Status        */
-    uint32_t :2;                        /**< bit: 22..23  Reserved */
+    uint32_t :3;                        /**< bit: 21..23  Reserved */
     uint32_t PID56:1;                   /**< bit:     24  Peripheral 56 SleepWalking Status        */
     uint32_t PID57:1;                   /**< bit:     25  Peripheral 57 SleepWalking Status        */
     uint32_t PID58:1;                   /**< bit:     26  Peripheral 58 SleepWalking Status        */
@@ -2714,11 +2874,12 @@ typedef union {
     uint32_t :3;                        /**< bit: 29..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
   struct {
-    uint32_t PID:25;                    /**< bit:  0..24  Peripheral 6x SleepWalking Status        */
-    uint32_t :7;                        /**< bit: 25..31 Reserved */
+    uint32_t PID:24;                    /**< bit:  0..23  Peripheral 6x SleepWalking Status        */
+    uint32_t :8;                        /**< bit: 24..31 Reserved */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_SLPWK_SR1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_SLPWK_SR1_OFFSET                (0x13C)                                       /**<  (PMC_SLPWK_SR1) SleepWalking Status Register 1  Offset */
@@ -2780,9 +2941,6 @@ typedef union {
 #define PMC_SLPWK_SR1_PID52_Pos             20                                             /**< (PMC_SLPWK_SR1) Peripheral 52 SleepWalking Status Position */
 #define PMC_SLPWK_SR1_PID52_Msk             (_U_(0x1) << PMC_SLPWK_SR1_PID52_Pos)          /**< (PMC_SLPWK_SR1) Peripheral 52 SleepWalking Status Mask */
 #define PMC_SLPWK_SR1_PID52                 PMC_SLPWK_SR1_PID52_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_SR1_PID52_Msk instead */
-#define PMC_SLPWK_SR1_PID53_Pos             21                                             /**< (PMC_SLPWK_SR1) Peripheral 53 SleepWalking Status Position */
-#define PMC_SLPWK_SR1_PID53_Msk             (_U_(0x1) << PMC_SLPWK_SR1_PID53_Pos)          /**< (PMC_SLPWK_SR1) Peripheral 53 SleepWalking Status Mask */
-#define PMC_SLPWK_SR1_PID53                 PMC_SLPWK_SR1_PID53_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_SR1_PID53_Msk instead */
 #define PMC_SLPWK_SR1_PID56_Pos             24                                             /**< (PMC_SLPWK_SR1) Peripheral 56 SleepWalking Status Position */
 #define PMC_SLPWK_SR1_PID56_Msk             (_U_(0x1) << PMC_SLPWK_SR1_PID56_Pos)          /**< (PMC_SLPWK_SR1) Peripheral 56 SleepWalking Status Mask */
 #define PMC_SLPWK_SR1_PID56                 PMC_SLPWK_SR1_PID56_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_SR1_PID56_Msk instead */
@@ -2798,15 +2956,16 @@ typedef union {
 #define PMC_SLPWK_SR1_PID60_Pos             28                                             /**< (PMC_SLPWK_SR1) Peripheral 60 SleepWalking Status Position */
 #define PMC_SLPWK_SR1_PID60_Msk             (_U_(0x1) << PMC_SLPWK_SR1_PID60_Pos)          /**< (PMC_SLPWK_SR1) Peripheral 60 SleepWalking Status Mask */
 #define PMC_SLPWK_SR1_PID60                 PMC_SLPWK_SR1_PID60_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_SR1_PID60_Msk instead */
-#define PMC_SLPWK_SR1_MASK                  _U_(0x1F3FFFAF)                                /**< \deprecated (PMC_SLPWK_SR1) Register MASK  (Use PMC_SLPWK_SR1_Msk instead)  */
-#define PMC_SLPWK_SR1_Msk                   _U_(0x1F3FFFAF)                                /**< (PMC_SLPWK_SR1) Register Mask  */
+#define PMC_SLPWK_SR1_MASK                  _U_(0x1F1FFFAF)                                /**< \deprecated (PMC_SLPWK_SR1) Register MASK  (Use PMC_SLPWK_SR1_Msk instead)  */
+#define PMC_SLPWK_SR1_Msk                   _U_(0x1F1FFFAF)                                /**< (PMC_SLPWK_SR1) Register Mask  */
 
 #define PMC_SLPWK_SR1_PID_Pos               0                                              /**< (PMC_SLPWK_SR1 Position) Peripheral 6x SleepWalking Status */
-#define PMC_SLPWK_SR1_PID_Msk               (_U_(0x1FFFFFF) << PMC_SLPWK_SR1_PID_Pos)      /**< (PMC_SLPWK_SR1 Mask) PID */
+#define PMC_SLPWK_SR1_PID_Msk               (_U_(0xFFFFFF) << PMC_SLPWK_SR1_PID_Pos)       /**< (PMC_SLPWK_SR1 Mask) PID */
 #define PMC_SLPWK_SR1_PID(value)            (PMC_SLPWK_SR1_PID_Msk & ((value) << PMC_SLPWK_SR1_PID_Pos))  
 
 /* -------- PMC_SLPWK_ASR1 : (PMC Offset: 0x140) (R/ 32) SleepWalking Activity Status Register 1 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PID32:1;                   /**< bit:      0  Peripheral 32 Activity Status            */
@@ -2830,8 +2989,7 @@ typedef union {
     uint32_t PID50:1;                   /**< bit:     18  Peripheral 50 Activity Status            */
     uint32_t PID51:1;                   /**< bit:     19  Peripheral 51 Activity Status            */
     uint32_t PID52:1;                   /**< bit:     20  Peripheral 52 Activity Status            */
-    uint32_t PID53:1;                   /**< bit:     21  Peripheral 53 Activity Status            */
-    uint32_t :2;                        /**< bit: 22..23  Reserved */
+    uint32_t :3;                        /**< bit: 21..23  Reserved */
     uint32_t PID56:1;                   /**< bit:     24  Peripheral 56 Activity Status            */
     uint32_t PID57:1;                   /**< bit:     25  Peripheral 57 Activity Status            */
     uint32_t PID58:1;                   /**< bit:     26  Peripheral 58 Activity Status            */
@@ -2840,11 +2998,12 @@ typedef union {
     uint32_t :3;                        /**< bit: 29..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
   struct {
-    uint32_t PID:25;                    /**< bit:  0..24  Peripheral 6x Activity Status            */
-    uint32_t :7;                        /**< bit: 25..31 Reserved */
+    uint32_t PID:24;                    /**< bit:  0..23  Peripheral 6x Activity Status            */
+    uint32_t :8;                        /**< bit: 24..31 Reserved */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_SLPWK_ASR1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_SLPWK_ASR1_OFFSET               (0x140)                                       /**<  (PMC_SLPWK_ASR1) SleepWalking Activity Status Register 1  Offset */
@@ -2906,9 +3065,6 @@ typedef union {
 #define PMC_SLPWK_ASR1_PID52_Pos            20                                             /**< (PMC_SLPWK_ASR1) Peripheral 52 Activity Status Position */
 #define PMC_SLPWK_ASR1_PID52_Msk            (_U_(0x1) << PMC_SLPWK_ASR1_PID52_Pos)         /**< (PMC_SLPWK_ASR1) Peripheral 52 Activity Status Mask */
 #define PMC_SLPWK_ASR1_PID52                PMC_SLPWK_ASR1_PID52_Msk                       /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_ASR1_PID52_Msk instead */
-#define PMC_SLPWK_ASR1_PID53_Pos            21                                             /**< (PMC_SLPWK_ASR1) Peripheral 53 Activity Status Position */
-#define PMC_SLPWK_ASR1_PID53_Msk            (_U_(0x1) << PMC_SLPWK_ASR1_PID53_Pos)         /**< (PMC_SLPWK_ASR1) Peripheral 53 Activity Status Mask */
-#define PMC_SLPWK_ASR1_PID53                PMC_SLPWK_ASR1_PID53_Msk                       /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_ASR1_PID53_Msk instead */
 #define PMC_SLPWK_ASR1_PID56_Pos            24                                             /**< (PMC_SLPWK_ASR1) Peripheral 56 Activity Status Position */
 #define PMC_SLPWK_ASR1_PID56_Msk            (_U_(0x1) << PMC_SLPWK_ASR1_PID56_Pos)         /**< (PMC_SLPWK_ASR1) Peripheral 56 Activity Status Mask */
 #define PMC_SLPWK_ASR1_PID56                PMC_SLPWK_ASR1_PID56_Msk                       /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_ASR1_PID56_Msk instead */
@@ -2924,15 +3080,16 @@ typedef union {
 #define PMC_SLPWK_ASR1_PID60_Pos            28                                             /**< (PMC_SLPWK_ASR1) Peripheral 60 Activity Status Position */
 #define PMC_SLPWK_ASR1_PID60_Msk            (_U_(0x1) << PMC_SLPWK_ASR1_PID60_Pos)         /**< (PMC_SLPWK_ASR1) Peripheral 60 Activity Status Mask */
 #define PMC_SLPWK_ASR1_PID60                PMC_SLPWK_ASR1_PID60_Msk                       /**< \deprecated Old style mask definition for 1 bit bitfield. Use PMC_SLPWK_ASR1_PID60_Msk instead */
-#define PMC_SLPWK_ASR1_MASK                 _U_(0x1F3FFFAF)                                /**< \deprecated (PMC_SLPWK_ASR1) Register MASK  (Use PMC_SLPWK_ASR1_Msk instead)  */
-#define PMC_SLPWK_ASR1_Msk                  _U_(0x1F3FFFAF)                                /**< (PMC_SLPWK_ASR1) Register Mask  */
+#define PMC_SLPWK_ASR1_MASK                 _U_(0x1F1FFFAF)                                /**< \deprecated (PMC_SLPWK_ASR1) Register MASK  (Use PMC_SLPWK_ASR1_Msk instead)  */
+#define PMC_SLPWK_ASR1_Msk                  _U_(0x1F1FFFAF)                                /**< (PMC_SLPWK_ASR1) Register Mask  */
 
 #define PMC_SLPWK_ASR1_PID_Pos              0                                              /**< (PMC_SLPWK_ASR1 Position) Peripheral 6x Activity Status */
-#define PMC_SLPWK_ASR1_PID_Msk              (_U_(0x1FFFFFF) << PMC_SLPWK_ASR1_PID_Pos)     /**< (PMC_SLPWK_ASR1 Mask) PID */
+#define PMC_SLPWK_ASR1_PID_Msk              (_U_(0xFFFFFF) << PMC_SLPWK_ASR1_PID_Pos)      /**< (PMC_SLPWK_ASR1 Mask) PID */
 #define PMC_SLPWK_ASR1_PID(value)           (PMC_SLPWK_ASR1_PID_Msk & ((value) << PMC_SLPWK_ASR1_PID_Pos))  
 
 /* -------- PMC_SLPWK_AIPR : (PMC Offset: 0x144) (R/ 32) SleepWalking Activity In Progress Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t AIP:1;                     /**< bit:      0  Activity In Progress                     */
@@ -2940,6 +3097,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PMC_SLPWK_AIPR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PMC_SLPWK_AIPR_OFFSET               (0x144)                                       /**<  (PMC_SLPWK_AIPR) SleepWalking Activity In Progress Register  Offset */
@@ -2958,7 +3116,7 @@ typedef struct {
   __O  uint32_t PMC_SCER;       /**< (PMC Offset: 0x00) System Clock Enable Register */
   __O  uint32_t PMC_SCDR;       /**< (PMC Offset: 0x04) System Clock Disable Register */
   __I  uint32_t PMC_SCSR;       /**< (PMC Offset: 0x08) System Clock Status Register */
-  RoReg8  Reserved1[0x4];
+  __I  uint8_t                        Reserved1[4];
   __O  uint32_t PMC_PCER0;      /**< (PMC Offset: 0x10) Peripheral Clock Enable Register 0 */
   __O  uint32_t PMC_PCDR0;      /**< (PMC Offset: 0x14) Peripheral Clock Disable Register 0 */
   __I  uint32_t PMC_PCSR0;      /**< (PMC Offset: 0x18) Peripheral Clock Status Register 0 */
@@ -2966,11 +3124,11 @@ typedef struct {
   __IO uint32_t CKGR_MOR;       /**< (PMC Offset: 0x20) Main Oscillator Register */
   __IO uint32_t CKGR_MCFR;      /**< (PMC Offset: 0x24) Main Clock Frequency Register */
   __IO uint32_t CKGR_PLLAR;     /**< (PMC Offset: 0x28) PLLA Register */
-  RoReg8  Reserved2[0x4];
+  __I  uint8_t                        Reserved2[4];
   __IO uint32_t PMC_MCKR;       /**< (PMC Offset: 0x30) Master Clock Register */
-  RoReg8  Reserved3[0x4];
+  __I  uint8_t                        Reserved3[4];
   __IO uint32_t PMC_USB;        /**< (PMC Offset: 0x38) USB Clock Register */
-  RoReg8  Reserved4[0x4];
+  __I  uint8_t                        Reserved4[4];
   __IO uint32_t PMC_PCK[8];     /**< (PMC Offset: 0x40) Programmable Clock Register */
   __O  uint32_t PMC_IER;        /**< (PMC Offset: 0x60) Interrupt Enable Register */
   __O  uint32_t PMC_IDR;        /**< (PMC Offset: 0x64) Interrupt Disable Register */
@@ -2979,10 +3137,10 @@ typedef struct {
   __IO uint32_t PMC_FSMR;       /**< (PMC Offset: 0x70) Fast Startup Mode Register */
   __IO uint32_t PMC_FSPR;       /**< (PMC Offset: 0x74) Fast Startup Polarity Register */
   __O  uint32_t PMC_FOCR;       /**< (PMC Offset: 0x78) Fault Output Clear Register */
-  RoReg8  Reserved5[0x68];
+  __I  uint8_t                        Reserved5[104];
   __IO uint32_t PMC_WPMR;       /**< (PMC Offset: 0xE4) Write Protection Mode Register */
   __I  uint32_t PMC_WPSR;       /**< (PMC Offset: 0xE8) Write Protection Status Register */
-  RoReg8  Reserved6[0x14];
+  __I  uint8_t                        Reserved6[20];
   __O  uint32_t PMC_PCER1;      /**< (PMC Offset: 0x100) Peripheral Clock Enable Register 1 */
   __O  uint32_t PMC_PCDR1;      /**< (PMC Offset: 0x104) Peripheral Clock Disable Register 1 */
   __I  uint32_t PMC_PCSR1;      /**< (PMC Offset: 0x108) Peripheral Clock Status Register 1 */
@@ -2992,7 +3150,7 @@ typedef struct {
   __O  uint32_t PMC_SLPWK_DR0;  /**< (PMC Offset: 0x118) SleepWalking Disable Register 0 */
   __I  uint32_t PMC_SLPWK_SR0;  /**< (PMC Offset: 0x11C) SleepWalking Status Register 0 */
   __I  uint32_t PMC_SLPWK_ASR0; /**< (PMC Offset: 0x120) SleepWalking Activity Status Register 0 */
-  RoReg8  Reserved7[0xC];
+  __I  uint8_t                        Reserved7[12];
   __IO uint32_t PMC_PMMR;       /**< (PMC Offset: 0x130) PLL Maximum Multiplier Value Register */
   __O  uint32_t PMC_SLPWK_ER1;  /**< (PMC Offset: 0x134) SleepWalking Enable Register 1 */
   __O  uint32_t PMC_SLPWK_DR1;  /**< (PMC Offset: 0x138) SleepWalking Disable Register 1 */
@@ -3007,7 +3165,7 @@ typedef struct {
   __O  PMC_SCER_Type                  PMC_SCER;       /**< Offset: 0x00 ( /W  32) System Clock Enable Register */
   __O  PMC_SCDR_Type                  PMC_SCDR;       /**< Offset: 0x04 ( /W  32) System Clock Disable Register */
   __I  PMC_SCSR_Type                  PMC_SCSR;       /**< Offset: 0x08 (R/   32) System Clock Status Register */
-  __I  uint32_t                       Reserved1[1];
+  __I  uint8_t                        Reserved1[4];
   __O  PMC_PCER0_Type                 PMC_PCER0;      /**< Offset: 0x10 ( /W  32) Peripheral Clock Enable Register 0 */
   __O  PMC_PCDR0_Type                 PMC_PCDR0;      /**< Offset: 0x14 ( /W  32) Peripheral Clock Disable Register 0 */
   __I  PMC_PCSR0_Type                 PMC_PCSR0;      /**< Offset: 0x18 (R/   32) Peripheral Clock Status Register 0 */
@@ -3015,11 +3173,11 @@ typedef struct {
   __IO CKGR_MOR_Type                  CKGR_MOR;       /**< Offset: 0x20 (R/W  32) Main Oscillator Register */
   __IO CKGR_MCFR_Type                 CKGR_MCFR;      /**< Offset: 0x24 (R/W  32) Main Clock Frequency Register */
   __IO CKGR_PLLAR_Type                CKGR_PLLAR;     /**< Offset: 0x28 (R/W  32) PLLA Register */
-  __I  uint32_t                       Reserved2[1];
+  __I  uint8_t                        Reserved2[4];
   __IO PMC_MCKR_Type                  PMC_MCKR;       /**< Offset: 0x30 (R/W  32) Master Clock Register */
-  __I  uint32_t                       Reserved3[1];
+  __I  uint8_t                        Reserved3[4];
   __IO PMC_USB_Type                   PMC_USB;        /**< Offset: 0x38 (R/W  32) USB Clock Register */
-  __I  uint32_t                       Reserved4[1];
+  __I  uint8_t                        Reserved4[4];
   __IO PMC_PCK_Type                   PMC_PCK[8];     /**< Offset: 0x40 (R/W  32) Programmable Clock Register */
   __O  PMC_IER_Type                   PMC_IER;        /**< Offset: 0x60 ( /W  32) Interrupt Enable Register */
   __O  PMC_IDR_Type                   PMC_IDR;        /**< Offset: 0x64 ( /W  32) Interrupt Disable Register */
@@ -3028,10 +3186,10 @@ typedef struct {
   __IO PMC_FSMR_Type                  PMC_FSMR;       /**< Offset: 0x70 (R/W  32) Fast Startup Mode Register */
   __IO PMC_FSPR_Type                  PMC_FSPR;       /**< Offset: 0x74 (R/W  32) Fast Startup Polarity Register */
   __O  PMC_FOCR_Type                  PMC_FOCR;       /**< Offset: 0x78 ( /W  32) Fault Output Clear Register */
-  __I  uint32_t                       Reserved5[26];
+  __I  uint8_t                        Reserved5[104];
   __IO PMC_WPMR_Type                  PMC_WPMR;       /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
   __I  PMC_WPSR_Type                  PMC_WPSR;       /**< Offset: 0xE8 (R/   32) Write Protection Status Register */
-  __I  uint32_t                       Reserved6[5];
+  __I  uint8_t                        Reserved6[20];
   __O  PMC_PCER1_Type                 PMC_PCER1;      /**< Offset: 0x100 ( /W  32) Peripheral Clock Enable Register 1 */
   __O  PMC_PCDR1_Type                 PMC_PCDR1;      /**< Offset: 0x104 ( /W  32) Peripheral Clock Disable Register 1 */
   __I  PMC_PCSR1_Type                 PMC_PCSR1;      /**< Offset: 0x108 (R/   32) Peripheral Clock Status Register 1 */
@@ -3041,7 +3199,7 @@ typedef struct {
   __O  PMC_SLPWK_DR0_Type             PMC_SLPWK_DR0;  /**< Offset: 0x118 ( /W  32) SleepWalking Disable Register 0 */
   __I  PMC_SLPWK_SR0_Type             PMC_SLPWK_SR0;  /**< Offset: 0x11C (R/   32) SleepWalking Status Register 0 */
   __I  PMC_SLPWK_ASR0_Type            PMC_SLPWK_ASR0; /**< Offset: 0x120 (R/   32) SleepWalking Activity Status Register 0 */
-  __I  uint32_t                       Reserved7[3];
+  __I  uint8_t                        Reserved7[12];
   __IO PMC_PMMR_Type                  PMC_PMMR;       /**< Offset: 0x130 (R/W  32) PLL Maximum Multiplier Value Register */
   __O  PMC_SLPWK_ER1_Type             PMC_SLPWK_ER1;  /**< Offset: 0x134 ( /W  32) SleepWalking Enable Register 1 */
   __O  PMC_SLPWK_DR1_Type             PMC_SLPWK_DR1;  /**< Offset: 0x138 ( /W  32) SleepWalking Disable Register 1 */

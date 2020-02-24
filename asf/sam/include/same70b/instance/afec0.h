@@ -3,11 +3,13 @@
  *
  * \brief Instance description for AFEC0
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_AFEC0_INSTANCE_H_
 #define _SAME70_AFEC0_INSTANCE_H_
 
@@ -97,8 +99,15 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for AFEC0 peripheral ========== */
-#define AFEC0_INSTANCE_ID                        29        
-#define AFEC0_CLOCK_ID                           29        
-#define AFEC0_DMAC_ID_RX                         35        
+#define AFEC0_DMAC_ID_RX                         35         
+#define AFEC0_INSTANCE_ID                        29         
+#define AFEC0_CLOCK_ID                           29         
+#define AFEC0_TRGSEL_AFEC_TRIG0                  0x0        /* External ADC Trigger Input (AFE0_ADTRG pin) */
+#define AFEC0_TRGSEL_AFEC_TRIG1                  0x1        /* TC0 Channel 0 Output (TIOA0) */
+#define AFEC0_TRGSEL_AFEC_TRIG2                  0x2        /* TC0 Channel 1 Output (TIOA1) */
+#define AFEC0_TRGSEL_AFEC_TRIG3                  0x3        /* TC0 Channel 2 Output (TIOA2) */
+#define AFEC0_TRGSEL_AFEC_TRIG4                  0x4        /* PWM0 event line 0 */
+#define AFEC0_TRGSEL_AFEC_TRIG5                  0x5        /* PWM0 event line 1 */
+#define AFEC0_TRGSEL_AFEC_TRIG6                  0x6        /* Analog Comparator Fault Output */
 
 #endif /* _SAME70_AFEC0_INSTANCE_ */

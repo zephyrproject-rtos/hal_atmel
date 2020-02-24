@@ -3,11 +3,13 @@
  *
  * \brief Component description for SDRAMC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_SDRAMC_COMPONENT_H_
 #define _SAME70_SDRAMC_COMPONENT_H_
 #define _SAME70_SDRAMC_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -45,6 +47,7 @@
 
 /* -------- SDRAMC_MR : (SDRAMC Offset: 0x00) (R/W 32) SDRAMC Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MODE:3;                    /**< bit:   0..2  SDRAMC Command Mode                      */
@@ -52,6 +55,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_MR_OFFSET                    (0x00)                                        /**<  (SDRAMC_MR) SDRAMC Mode Register  Offset */
@@ -59,26 +63,27 @@ typedef union {
 #define SDRAMC_MR_MODE_Pos                  0                                              /**< (SDRAMC_MR) SDRAMC Command Mode Position */
 #define SDRAMC_MR_MODE_Msk                  (_U_(0x7) << SDRAMC_MR_MODE_Pos)               /**< (SDRAMC_MR) SDRAMC Command Mode Mask */
 #define SDRAMC_MR_MODE(value)               (SDRAMC_MR_MODE_Msk & ((value) << SDRAMC_MR_MODE_Pos))
-#define   SDRAMC_MR_MODE_NORMAL_Val         _U_(0x0)                                       /**< (SDRAMC_MR) Normal mode. Any access to the SDRAM is decoded normally. To activate this mode, command must be followed by a write to the SDRAM.  */
-#define   SDRAMC_MR_MODE_NOP_Val            _U_(0x1)                                       /**< (SDRAMC_MR) The SDRAMC issues a NOP command when the SDRAM device is accessed regardless of the cycle. To activate this mode, command must be followed by a write to the SDRAM.  */
-#define   SDRAMC_MR_MODE_ALLBANKS_PRECHARGE_Val _U_(0x2)                                       /**< (SDRAMC_MR) The SDRAMC issues an "All Banks Precharge" command when the SDRAM device is accessed regardless of the cycle. To activate this mode, command must be followed by a write to the SDRAM.  */
-#define   SDRAMC_MR_MODE_LOAD_MODEREG_Val   _U_(0x3)                                       /**< (SDRAMC_MR) The SDRAMC issues a "Load Mode Register" command when the SDRAM device is accessed regardless of the cycle. To activate this mode, command must be followed by a write to the SDRAM.  */
-#define   SDRAMC_MR_MODE_AUTO_REFRESH_Val   _U_(0x4)                                       /**< (SDRAMC_MR) The SDRAMC issues an "Auto-Refresh" Command when the SDRAM device is accessed regardless of the cycle. Previously, an "All Banks Precharge" command must be issued. To activate this mode, command must be followed by a write to the SDRAM.  */
+#define   SDRAMC_MR_MODE_NORMAL_Val         _U_(0x0)                                       /**< (SDRAMC_MR) Normal mode. Any access to the SDRAM is decoded normally. To activate this mode, the command must be followed by a write to the SDRAM.  */
+#define   SDRAMC_MR_MODE_NOP_Val            _U_(0x1)                                       /**< (SDRAMC_MR) The SDRAMC issues a NOP command when the SDRAM device is accessed regardless of the cycle. To activate this mode, the command must be followed by a write to the SDRAM.  */
+#define   SDRAMC_MR_MODE_ALLBANKS_PRECHARGE_Val _U_(0x2)                                       /**< (SDRAMC_MR) The SDRAMC issues an "All Banks Precharge" command when the SDRAM device is accessed regardless of the cycle. To activate this mode, the command must be followed by a write to the SDRAM.  */
+#define   SDRAMC_MR_MODE_LOAD_MODEREG_Val   _U_(0x3)                                       /**< (SDRAMC_MR) The SDRAMC issues a "Load Mode Register" command when the SDRAM device is accessed regardless of the cycle. To activate this mode, the command must be followed by a write to the SDRAM.  */
+#define   SDRAMC_MR_MODE_AUTO_REFRESH_Val   _U_(0x4)                                       /**< (SDRAMC_MR) The SDRAMC issues an "Auto-Refresh" Command when the SDRAM device is accessed regardless of the cycle. Previously, an "All Banks Precharge" command must be issued. To activate this mode, the command must be followed by a write to the SDRAM.  */
 #define   SDRAMC_MR_MODE_EXT_LOAD_MODEREG_Val _U_(0x5)                                       /**< (SDRAMC_MR) The SDRAMC issues an "Extended Load Mode Register" command when the SDRAM device is accessed regardless of the cycle. To activate this mode, the "Extended Load Mode Register" command must be followed by a write to the SDRAM. The write in the SDRAM must be done in the appropriate bank; most low-power SDRAM devices use the bank 1.  */
-#define   SDRAMC_MR_MODE_DEEP_POWERDOWN_Val _U_(0x6)                                       /**< (SDRAMC_MR) Deep power-down mode. Enters deep power-down mode.  */
-#define SDRAMC_MR_MODE_NORMAL               (SDRAMC_MR_MODE_NORMAL_Val << SDRAMC_MR_MODE_Pos)  /**< (SDRAMC_MR) Normal mode. Any access to the SDRAM is decoded normally. To activate this mode, command must be followed by a write to the SDRAM. Position  */
-#define SDRAMC_MR_MODE_NOP                  (SDRAMC_MR_MODE_NOP_Val << SDRAMC_MR_MODE_Pos)  /**< (SDRAMC_MR) The SDRAMC issues a NOP command when the SDRAM device is accessed regardless of the cycle. To activate this mode, command must be followed by a write to the SDRAM. Position  */
-#define SDRAMC_MR_MODE_ALLBANKS_PRECHARGE   (SDRAMC_MR_MODE_ALLBANKS_PRECHARGE_Val << SDRAMC_MR_MODE_Pos)  /**< (SDRAMC_MR) The SDRAMC issues an "All Banks Precharge" command when the SDRAM device is accessed regardless of the cycle. To activate this mode, command must be followed by a write to the SDRAM. Position  */
-#define SDRAMC_MR_MODE_LOAD_MODEREG         (SDRAMC_MR_MODE_LOAD_MODEREG_Val << SDRAMC_MR_MODE_Pos)  /**< (SDRAMC_MR) The SDRAMC issues a "Load Mode Register" command when the SDRAM device is accessed regardless of the cycle. To activate this mode, command must be followed by a write to the SDRAM. Position  */
-#define SDRAMC_MR_MODE_AUTO_REFRESH         (SDRAMC_MR_MODE_AUTO_REFRESH_Val << SDRAMC_MR_MODE_Pos)  /**< (SDRAMC_MR) The SDRAMC issues an "Auto-Refresh" Command when the SDRAM device is accessed regardless of the cycle. Previously, an "All Banks Precharge" command must be issued. To activate this mode, command must be followed by a write to the SDRAM. Position  */
+#define   SDRAMC_MR_MODE_DEEP_POWERDOWN_Val _U_(0x6)                                       /**< (SDRAMC_MR) Deep Power-down mode. Enters Deep Power-down mode.  */
+#define SDRAMC_MR_MODE_NORMAL               (SDRAMC_MR_MODE_NORMAL_Val << SDRAMC_MR_MODE_Pos)  /**< (SDRAMC_MR) Normal mode. Any access to the SDRAM is decoded normally. To activate this mode, the command must be followed by a write to the SDRAM. Position  */
+#define SDRAMC_MR_MODE_NOP                  (SDRAMC_MR_MODE_NOP_Val << SDRAMC_MR_MODE_Pos)  /**< (SDRAMC_MR) The SDRAMC issues a NOP command when the SDRAM device is accessed regardless of the cycle. To activate this mode, the command must be followed by a write to the SDRAM. Position  */
+#define SDRAMC_MR_MODE_ALLBANKS_PRECHARGE   (SDRAMC_MR_MODE_ALLBANKS_PRECHARGE_Val << SDRAMC_MR_MODE_Pos)  /**< (SDRAMC_MR) The SDRAMC issues an "All Banks Precharge" command when the SDRAM device is accessed regardless of the cycle. To activate this mode, the command must be followed by a write to the SDRAM. Position  */
+#define SDRAMC_MR_MODE_LOAD_MODEREG         (SDRAMC_MR_MODE_LOAD_MODEREG_Val << SDRAMC_MR_MODE_Pos)  /**< (SDRAMC_MR) The SDRAMC issues a "Load Mode Register" command when the SDRAM device is accessed regardless of the cycle. To activate this mode, the command must be followed by a write to the SDRAM. Position  */
+#define SDRAMC_MR_MODE_AUTO_REFRESH         (SDRAMC_MR_MODE_AUTO_REFRESH_Val << SDRAMC_MR_MODE_Pos)  /**< (SDRAMC_MR) The SDRAMC issues an "Auto-Refresh" Command when the SDRAM device is accessed regardless of the cycle. Previously, an "All Banks Precharge" command must be issued. To activate this mode, the command must be followed by a write to the SDRAM. Position  */
 #define SDRAMC_MR_MODE_EXT_LOAD_MODEREG     (SDRAMC_MR_MODE_EXT_LOAD_MODEREG_Val << SDRAMC_MR_MODE_Pos)  /**< (SDRAMC_MR) The SDRAMC issues an "Extended Load Mode Register" command when the SDRAM device is accessed regardless of the cycle. To activate this mode, the "Extended Load Mode Register" command must be followed by a write to the SDRAM. The write in the SDRAM must be done in the appropriate bank; most low-power SDRAM devices use the bank 1. Position  */
-#define SDRAMC_MR_MODE_DEEP_POWERDOWN       (SDRAMC_MR_MODE_DEEP_POWERDOWN_Val << SDRAMC_MR_MODE_Pos)  /**< (SDRAMC_MR) Deep power-down mode. Enters deep power-down mode. Position  */
+#define SDRAMC_MR_MODE_DEEP_POWERDOWN       (SDRAMC_MR_MODE_DEEP_POWERDOWN_Val << SDRAMC_MR_MODE_Pos)  /**< (SDRAMC_MR) Deep Power-down mode. Enters Deep Power-down mode. Position  */
 #define SDRAMC_MR_MASK                      _U_(0x07)                                      /**< \deprecated (SDRAMC_MR) Register MASK  (Use SDRAMC_MR_Msk instead)  */
 #define SDRAMC_MR_Msk                       _U_(0x07)                                      /**< (SDRAMC_MR) Register Mask  */
 
 
 /* -------- SDRAMC_TR : (SDRAMC Offset: 0x04) (R/W 32) SDRAMC Refresh Timer Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t COUNT:12;                  /**< bit:  0..11  SDRAMC Refresh Timer Count               */
@@ -86,6 +91,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_TR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_TR_OFFSET                    (0x04)                                        /**<  (SDRAMC_TR) SDRAMC Refresh Timer Register  Offset */
@@ -99,6 +105,7 @@ typedef union {
 
 /* -------- SDRAMC_CR : (SDRAMC Offset: 0x08) (R/W 32) SDRAMC Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NC:2;                      /**< bit:   0..1  Number of Column Bits                    */
@@ -111,10 +118,11 @@ typedef union {
     uint32_t TRP:4;                     /**< bit: 16..19  Row Precharge Delay                      */
     uint32_t TRCD:4;                    /**< bit: 20..23  Row to Column Delay                      */
     uint32_t TRAS:4;                    /**< bit: 24..27  Active to Precharge Delay                */
-    uint32_t TXSR:4;                    /**< bit: 28..31  Exit Self Refresh to Active Delay        */
+    uint32_t TXSR:4;                    /**< bit: 28..31  Exit Self-Refresh to Active Delay        */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_CR_OFFSET                    (0x08)                                        /**<  (SDRAMC_CR) SDRAMC Configuration Register  Offset */
@@ -173,8 +181,8 @@ typedef union {
 #define SDRAMC_CR_TRAS_Pos                  24                                             /**< (SDRAMC_CR) Active to Precharge Delay Position */
 #define SDRAMC_CR_TRAS_Msk                  (_U_(0xF) << SDRAMC_CR_TRAS_Pos)               /**< (SDRAMC_CR) Active to Precharge Delay Mask */
 #define SDRAMC_CR_TRAS(value)               (SDRAMC_CR_TRAS_Msk & ((value) << SDRAMC_CR_TRAS_Pos))
-#define SDRAMC_CR_TXSR_Pos                  28                                             /**< (SDRAMC_CR) Exit Self Refresh to Active Delay Position */
-#define SDRAMC_CR_TXSR_Msk                  (_U_(0xF) << SDRAMC_CR_TXSR_Pos)               /**< (SDRAMC_CR) Exit Self Refresh to Active Delay Mask */
+#define SDRAMC_CR_TXSR_Pos                  28                                             /**< (SDRAMC_CR) Exit Self-Refresh to Active Delay Position */
+#define SDRAMC_CR_TXSR_Msk                  (_U_(0xF) << SDRAMC_CR_TXSR_Pos)               /**< (SDRAMC_CR) Exit Self-Refresh to Active Delay Mask */
 #define SDRAMC_CR_TXSR(value)               (SDRAMC_CR_TXSR_Msk & ((value) << SDRAMC_CR_TXSR_Pos))
 #define SDRAMC_CR_MASK                      _U_(0xFFFFFFFF)                                /**< \deprecated (SDRAMC_CR) Register MASK  (Use SDRAMC_CR_Msk instead)  */
 #define SDRAMC_CR_Msk                       _U_(0xFFFFFFFF)                                /**< (SDRAMC_CR) Register Mask  */
@@ -182,6 +190,7 @@ typedef union {
 
 /* -------- SDRAMC_LPR : (SDRAMC Offset: 0x10) (R/W 32) SDRAMC Low Power Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t LPCB:2;                    /**< bit:   0..1  Low-power Configuration Bits             */
@@ -195,6 +204,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_LPR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_LPR_OFFSET                   (0x10)                                        /**<  (SDRAMC_LPR) SDRAMC Low Power Register  Offset */
@@ -202,13 +212,13 @@ typedef union {
 #define SDRAMC_LPR_LPCB_Pos                 0                                              /**< (SDRAMC_LPR) Low-power Configuration Bits Position */
 #define SDRAMC_LPR_LPCB_Msk                 (_U_(0x3) << SDRAMC_LPR_LPCB_Pos)              /**< (SDRAMC_LPR) Low-power Configuration Bits Mask */
 #define SDRAMC_LPR_LPCB(value)              (SDRAMC_LPR_LPCB_Msk & ((value) << SDRAMC_LPR_LPCB_Pos))
-#define   SDRAMC_LPR_LPCB_DISABLED_Val      _U_(0x0)                                       /**< (SDRAMC_LPR) Low Power Feature is inhibited: no Power-down, Self-refresh or Deep Power-down command is issued to the SDRAM device.  */
-#define   SDRAMC_LPR_LPCB_SELF_REFRESH_Val  _U_(0x1)                                       /**< (SDRAMC_LPR) The SDRAMC issues a Self-refresh command to the SDRAM device, the SDCK clock is deactivated and the SDCKE signal is set low. The SDRAM device leaves the Self Refresh Mode when accessed and enters it after the access.  */
-#define   SDRAMC_LPR_LPCB_POWER_DOWN_Val    _U_(0x2)                                       /**< (SDRAMC_LPR) The SDRAMC issues a Power-down Command to the SDRAM device after each access, the SDCKE signal is set to low. The SDRAM device leaves the Power-down Mode when accessed and enters it after the access.  */
+#define   SDRAMC_LPR_LPCB_DISABLED_Val      _U_(0x0)                                       /**< (SDRAMC_LPR) The low-power feature is inhibited: no Power-down, Self-refresh or Deep Power-down command is issued to the SDRAM device.  */
+#define   SDRAMC_LPR_LPCB_SELF_REFRESH_Val  _U_(0x1)                                       /**< (SDRAMC_LPR) The SDRAMC issues a Self-refresh command to the SDRAM device, the SDCK clock is deactivated and the SDCKE signal is set low. The SDRAM device leaves the Self-refresh mode when accessed and enters it after the access.  */
+#define   SDRAMC_LPR_LPCB_POWER_DOWN_Val    _U_(0x2)                                       /**< (SDRAMC_LPR) The SDRAMC issues a Power-down Command to the SDRAM device after each access, the SDCKE signal is set to low. The SDRAM device leaves the Power-down mode when accessed and enters it after the access.  */
 #define   SDRAMC_LPR_LPCB_DEEP_POWER_DOWN_Val _U_(0x3)                                       /**< (SDRAMC_LPR) The SDRAMC issues a Deep Power-down command to the SDRAM device. This mode is unique to low-power SDRAM.  */
-#define SDRAMC_LPR_LPCB_DISABLED            (SDRAMC_LPR_LPCB_DISABLED_Val << SDRAMC_LPR_LPCB_Pos)  /**< (SDRAMC_LPR) Low Power Feature is inhibited: no Power-down, Self-refresh or Deep Power-down command is issued to the SDRAM device. Position  */
-#define SDRAMC_LPR_LPCB_SELF_REFRESH        (SDRAMC_LPR_LPCB_SELF_REFRESH_Val << SDRAMC_LPR_LPCB_Pos)  /**< (SDRAMC_LPR) The SDRAMC issues a Self-refresh command to the SDRAM device, the SDCK clock is deactivated and the SDCKE signal is set low. The SDRAM device leaves the Self Refresh Mode when accessed and enters it after the access. Position  */
-#define SDRAMC_LPR_LPCB_POWER_DOWN          (SDRAMC_LPR_LPCB_POWER_DOWN_Val << SDRAMC_LPR_LPCB_Pos)  /**< (SDRAMC_LPR) The SDRAMC issues a Power-down Command to the SDRAM device after each access, the SDCKE signal is set to low. The SDRAM device leaves the Power-down Mode when accessed and enters it after the access. Position  */
+#define SDRAMC_LPR_LPCB_DISABLED            (SDRAMC_LPR_LPCB_DISABLED_Val << SDRAMC_LPR_LPCB_Pos)  /**< (SDRAMC_LPR) The low-power feature is inhibited: no Power-down, Self-refresh or Deep Power-down command is issued to the SDRAM device. Position  */
+#define SDRAMC_LPR_LPCB_SELF_REFRESH        (SDRAMC_LPR_LPCB_SELF_REFRESH_Val << SDRAMC_LPR_LPCB_Pos)  /**< (SDRAMC_LPR) The SDRAMC issues a Self-refresh command to the SDRAM device, the SDCK clock is deactivated and the SDCKE signal is set low. The SDRAM device leaves the Self-refresh mode when accessed and enters it after the access. Position  */
+#define SDRAMC_LPR_LPCB_POWER_DOWN          (SDRAMC_LPR_LPCB_POWER_DOWN_Val << SDRAMC_LPR_LPCB_Pos)  /**< (SDRAMC_LPR) The SDRAMC issues a Power-down Command to the SDRAM device after each access, the SDCKE signal is set to low. The SDRAM device leaves the Power-down mode when accessed and enters it after the access. Position  */
 #define SDRAMC_LPR_LPCB_DEEP_POWER_DOWN     (SDRAMC_LPR_LPCB_DEEP_POWER_DOWN_Val << SDRAMC_LPR_LPCB_Pos)  /**< (SDRAMC_LPR) The SDRAMC issues a Deep Power-down command to the SDRAM device. This mode is unique to low-power SDRAM. Position  */
 #define SDRAMC_LPR_PASR_Pos                 4                                              /**< (SDRAMC_LPR) Partial Array Self-refresh (only for low-power SDRAM) Position */
 #define SDRAMC_LPR_PASR_Msk                 (_U_(0x7) << SDRAMC_LPR_PASR_Pos)              /**< (SDRAMC_LPR) Partial Array Self-refresh (only for low-power SDRAM) Mask */
@@ -222,31 +232,33 @@ typedef union {
 #define SDRAMC_LPR_TIMEOUT_Pos              12                                             /**< (SDRAMC_LPR) Time to Define When Low-power Mode Is Enabled Position */
 #define SDRAMC_LPR_TIMEOUT_Msk              (_U_(0x3) << SDRAMC_LPR_TIMEOUT_Pos)           /**< (SDRAMC_LPR) Time to Define When Low-power Mode Is Enabled Mask */
 #define SDRAMC_LPR_TIMEOUT(value)           (SDRAMC_LPR_TIMEOUT_Msk & ((value) << SDRAMC_LPR_TIMEOUT_Pos))
-#define   SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_Val _U_(0x0)                                       /**< (SDRAMC_LPR) The SDRAMC activates the SDRAM low-power mode immediately after the end of the last transfer.  */
-#define   SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_64_Val _U_(0x1)                                       /**< (SDRAMC_LPR) The SDRAMC activates the SDRAM low-power mode 64 clock cycles after the end of the last transfer.  */
-#define   SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_128_Val _U_(0x2)                                       /**< (SDRAMC_LPR) The SDRAMC activates the SDRAM low-power mode 128 clock cycles after the end of the last transfer.  */
-#define SDRAMC_LPR_TIMEOUT_LP_LAST_XFER     (SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_Val << SDRAMC_LPR_TIMEOUT_Pos)  /**< (SDRAMC_LPR) The SDRAMC activates the SDRAM low-power mode immediately after the end of the last transfer. Position  */
-#define SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_64  (SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_64_Val << SDRAMC_LPR_TIMEOUT_Pos)  /**< (SDRAMC_LPR) The SDRAMC activates the SDRAM low-power mode 64 clock cycles after the end of the last transfer. Position  */
-#define SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_128 (SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_128_Val << SDRAMC_LPR_TIMEOUT_Pos)  /**< (SDRAMC_LPR) The SDRAMC activates the SDRAM low-power mode 128 clock cycles after the end of the last transfer. Position  */
+#define   SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_Val _U_(0x0)                                       /**< (SDRAMC_LPR) The SDRAMC activates the SDRAM Low-power mode immediately after the end of the last transfer.  */
+#define   SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_64_Val _U_(0x1)                                       /**< (SDRAMC_LPR) The SDRAMC activates the SDRAM Low-power mode 64 clock cycles after the end of the last transfer.  */
+#define   SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_128_Val _U_(0x2)                                       /**< (SDRAMC_LPR) The SDRAMC activates the SDRAM Low-power mode 128 clock cycles after the end of the last transfer.  */
+#define SDRAMC_LPR_TIMEOUT_LP_LAST_XFER     (SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_Val << SDRAMC_LPR_TIMEOUT_Pos)  /**< (SDRAMC_LPR) The SDRAMC activates the SDRAM Low-power mode immediately after the end of the last transfer. Position  */
+#define SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_64  (SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_64_Val << SDRAMC_LPR_TIMEOUT_Pos)  /**< (SDRAMC_LPR) The SDRAMC activates the SDRAM Low-power mode 64 clock cycles after the end of the last transfer. Position  */
+#define SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_128 (SDRAMC_LPR_TIMEOUT_LP_LAST_XFER_128_Val << SDRAMC_LPR_TIMEOUT_Pos)  /**< (SDRAMC_LPR) The SDRAMC activates the SDRAM Low-power mode 128 clock cycles after the end of the last transfer. Position  */
 #define SDRAMC_LPR_MASK                     _U_(0x3F73)                                    /**< \deprecated (SDRAMC_LPR) Register MASK  (Use SDRAMC_LPR_Msk instead)  */
 #define SDRAMC_LPR_Msk                      _U_(0x3F73)                                    /**< (SDRAMC_LPR) Register Mask  */
 
 
 /* -------- SDRAMC_IER : (SDRAMC Offset: 0x14) (/W 32) SDRAMC Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
-    uint32_t RES:1;                     /**< bit:      0  Refresh Error Status                     */
+    uint32_t RES:1;                     /**< bit:      0  Refresh Error Interrupt Enable           */
     uint32_t :31;                       /**< bit:  1..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_IER_OFFSET                   (0x14)                                        /**<  (SDRAMC_IER) SDRAMC Interrupt Enable Register  Offset */
 
-#define SDRAMC_IER_RES_Pos                  0                                              /**< (SDRAMC_IER) Refresh Error Status Position */
-#define SDRAMC_IER_RES_Msk                  (_U_(0x1) << SDRAMC_IER_RES_Pos)               /**< (SDRAMC_IER) Refresh Error Status Mask */
+#define SDRAMC_IER_RES_Pos                  0                                              /**< (SDRAMC_IER) Refresh Error Interrupt Enable Position */
+#define SDRAMC_IER_RES_Msk                  (_U_(0x1) << SDRAMC_IER_RES_Pos)               /**< (SDRAMC_IER) Refresh Error Interrupt Enable Mask */
 #define SDRAMC_IER_RES                      SDRAMC_IER_RES_Msk                             /**< \deprecated Old style mask definition for 1 bit bitfield. Use SDRAMC_IER_RES_Msk instead */
 #define SDRAMC_IER_MASK                     _U_(0x01)                                      /**< \deprecated (SDRAMC_IER) Register MASK  (Use SDRAMC_IER_Msk instead)  */
 #define SDRAMC_IER_Msk                      _U_(0x01)                                      /**< (SDRAMC_IER) Register Mask  */
@@ -254,19 +266,21 @@ typedef union {
 
 /* -------- SDRAMC_IDR : (SDRAMC Offset: 0x18) (/W 32) SDRAMC Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
-    uint32_t RES:1;                     /**< bit:      0  Refresh Error Status                     */
+    uint32_t RES:1;                     /**< bit:      0  Refresh Error Interrupt Disable          */
     uint32_t :31;                       /**< bit:  1..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_IDR_OFFSET                   (0x18)                                        /**<  (SDRAMC_IDR) SDRAMC Interrupt Disable Register  Offset */
 
-#define SDRAMC_IDR_RES_Pos                  0                                              /**< (SDRAMC_IDR) Refresh Error Status Position */
-#define SDRAMC_IDR_RES_Msk                  (_U_(0x1) << SDRAMC_IDR_RES_Pos)               /**< (SDRAMC_IDR) Refresh Error Status Mask */
+#define SDRAMC_IDR_RES_Pos                  0                                              /**< (SDRAMC_IDR) Refresh Error Interrupt Disable Position */
+#define SDRAMC_IDR_RES_Msk                  (_U_(0x1) << SDRAMC_IDR_RES_Pos)               /**< (SDRAMC_IDR) Refresh Error Interrupt Disable Mask */
 #define SDRAMC_IDR_RES                      SDRAMC_IDR_RES_Msk                             /**< \deprecated Old style mask definition for 1 bit bitfield. Use SDRAMC_IDR_RES_Msk instead */
 #define SDRAMC_IDR_MASK                     _U_(0x01)                                      /**< \deprecated (SDRAMC_IDR) Register MASK  (Use SDRAMC_IDR_Msk instead)  */
 #define SDRAMC_IDR_Msk                      _U_(0x01)                                      /**< (SDRAMC_IDR) Register Mask  */
@@ -274,19 +288,21 @@ typedef union {
 
 /* -------- SDRAMC_IMR : (SDRAMC Offset: 0x1c) (R/ 32) SDRAMC Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
-    uint32_t RES:1;                     /**< bit:      0  Refresh Error Status                     */
+    uint32_t RES:1;                     /**< bit:      0  Refresh Error Interrupt Mask             */
     uint32_t :31;                       /**< bit:  1..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_IMR_OFFSET                   (0x1C)                                        /**<  (SDRAMC_IMR) SDRAMC Interrupt Mask Register  Offset */
 
-#define SDRAMC_IMR_RES_Pos                  0                                              /**< (SDRAMC_IMR) Refresh Error Status Position */
-#define SDRAMC_IMR_RES_Msk                  (_U_(0x1) << SDRAMC_IMR_RES_Pos)               /**< (SDRAMC_IMR) Refresh Error Status Mask */
+#define SDRAMC_IMR_RES_Pos                  0                                              /**< (SDRAMC_IMR) Refresh Error Interrupt Mask Position */
+#define SDRAMC_IMR_RES_Msk                  (_U_(0x1) << SDRAMC_IMR_RES_Pos)               /**< (SDRAMC_IMR) Refresh Error Interrupt Mask Mask */
 #define SDRAMC_IMR_RES                      SDRAMC_IMR_RES_Msk                             /**< \deprecated Old style mask definition for 1 bit bitfield. Use SDRAMC_IMR_RES_Msk instead */
 #define SDRAMC_IMR_MASK                     _U_(0x01)                                      /**< \deprecated (SDRAMC_IMR) Register MASK  (Use SDRAMC_IMR_Msk instead)  */
 #define SDRAMC_IMR_Msk                      _U_(0x01)                                      /**< (SDRAMC_IMR) Register Mask  */
@@ -294,6 +310,7 @@ typedef union {
 
 /* -------- SDRAMC_ISR : (SDRAMC Offset: 0x20) (R/ 32) SDRAMC Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RES:1;                     /**< bit:      0  Refresh Error Status (cleared on read)   */
@@ -301,6 +318,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_ISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_ISR_OFFSET                   (0x20)                                        /**<  (SDRAMC_ISR) SDRAMC Interrupt Status Register  Offset */
@@ -314,6 +332,7 @@ typedef union {
 
 /* -------- SDRAMC_MDR : (SDRAMC Offset: 0x24) (R/W 32) SDRAMC Memory Device Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MD:2;                      /**< bit:   0..1  Memory Device Type                       */
@@ -321,6 +340,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_MDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_MDR_OFFSET                   (0x24)                                        /**<  (SDRAMC_MDR) SDRAMC Memory Device Register  Offset */
@@ -338,6 +358,7 @@ typedef union {
 
 /* -------- SDRAMC_CFR1 : (SDRAMC Offset: 0x28) (R/W 32) SDRAMC Configuration Register 1 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TMRD:4;                    /**< bit:   0..3  Load Mode Register Command to Active or Refresh Command */
@@ -347,6 +368,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_CFR1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_CFR1_OFFSET                  (0x28)                                        /**<  (SDRAMC_CFR1) SDRAMC Configuration Register 1  Offset */
@@ -367,6 +389,7 @@ typedef union {
 
 /* -------- SDRAMC_OCMS : (SDRAMC Offset: 0x2c) (R/W 32) SDRAMC OCMS Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SDR_SE:1;                  /**< bit:      0  SDRAM Memory Controller Scrambling Enable */
@@ -374,6 +397,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_OCMS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_OCMS_OFFSET                  (0x2C)                                        /**<  (SDRAMC_OCMS) SDRAMC OCMS Register  Offset */
@@ -387,12 +411,14 @@ typedef union {
 
 /* -------- SDRAMC_OCMS_KEY1 : (SDRAMC Offset: 0x30) (/W 32) SDRAMC OCMS KEY1 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t KEY1:32;                   /**< bit:  0..31  Off-chip Memory Scrambling (OCMS) Key Part 1 */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_OCMS_KEY1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_OCMS_KEY1_OFFSET             (0x30)                                        /**<  (SDRAMC_OCMS_KEY1) SDRAMC OCMS KEY1 Register  Offset */
@@ -406,12 +432,14 @@ typedef union {
 
 /* -------- SDRAMC_OCMS_KEY2 : (SDRAMC Offset: 0x34) (/W 32) SDRAMC OCMS KEY2 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t KEY2:32;                   /**< bit:  0..31  Off-chip Memory Scrambling (OCMS) Key Part 2 */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SDRAMC_OCMS_KEY2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SDRAMC_OCMS_KEY2_OFFSET             (0x34)                                        /**<  (SDRAMC_OCMS_KEY2) SDRAMC OCMS KEY2 Register  Offset */
@@ -430,7 +458,7 @@ typedef struct {
   __IO uint32_t SDRAMC_MR;      /**< (SDRAMC Offset: 0x00) SDRAMC Mode Register */
   __IO uint32_t SDRAMC_TR;      /**< (SDRAMC Offset: 0x04) SDRAMC Refresh Timer Register */
   __IO uint32_t SDRAMC_CR;      /**< (SDRAMC Offset: 0x08) SDRAMC Configuration Register */
-  RoReg8  Reserved1[0x4];
+  __I  uint8_t                        Reserved1[4];
   __IO uint32_t SDRAMC_LPR;     /**< (SDRAMC Offset: 0x10) SDRAMC Low Power Register */
   __O  uint32_t SDRAMC_IER;     /**< (SDRAMC Offset: 0x14) SDRAMC Interrupt Enable Register */
   __O  uint32_t SDRAMC_IDR;     /**< (SDRAMC Offset: 0x18) SDRAMC Interrupt Disable Register */
@@ -449,7 +477,7 @@ typedef struct {
   __IO SDRAMC_MR_Type                 SDRAMC_MR;      /**< Offset: 0x00 (R/W  32) SDRAMC Mode Register */
   __IO SDRAMC_TR_Type                 SDRAMC_TR;      /**< Offset: 0x04 (R/W  32) SDRAMC Refresh Timer Register */
   __IO SDRAMC_CR_Type                 SDRAMC_CR;      /**< Offset: 0x08 (R/W  32) SDRAMC Configuration Register */
-  __I  uint32_t                       Reserved1[1];
+  __I  uint8_t                        Reserved1[4];
   __IO SDRAMC_LPR_Type                SDRAMC_LPR;     /**< Offset: 0x10 (R/W  32) SDRAMC Low Power Register */
   __O  SDRAMC_IER_Type                SDRAMC_IER;     /**< Offset: 0x14 ( /W  32) SDRAMC Interrupt Enable Register */
   __O  SDRAMC_IDR_Type                SDRAMC_IDR;     /**< Offset: 0x18 ( /W  32) SDRAMC Interrupt Disable Register */

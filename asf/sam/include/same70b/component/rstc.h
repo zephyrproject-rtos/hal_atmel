@@ -3,11 +3,13 @@
  *
  * \brief Component description for RSTC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_RSTC_COMPONENT_H_
 #define _SAME70_RSTC_COMPONENT_H_
 #define _SAME70_RSTC_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -45,6 +47,7 @@
 
 /* -------- RSTC_CR : (RSTC Offset: 0x00) (/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PROCRST:1;                 /**< bit:      0  Processor Reset                          */
@@ -55,6 +58,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RSTC_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RSTC_CR_OFFSET                      (0x00)                                        /**<  (RSTC_CR) Control Register  Offset */
@@ -76,6 +80,7 @@ typedef union {
 
 /* -------- RSTC_SR : (RSTC Offset: 0x04) (R/ 32) Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t URSTS:1;                   /**< bit:      0  User Reset Status                        */
@@ -88,6 +93,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RSTC_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RSTC_SR_OFFSET                      (0x04)                                        /**<  (RSTC_SR) Status Register  Offset */
@@ -120,6 +126,7 @@ typedef union {
 
 /* -------- RSTC_MR : (RSTC Offset: 0x08) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t URSTEN:1;                  /**< bit:      0  User Reset Enable                        */
@@ -132,6 +139,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RSTC_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RSTC_MR_OFFSET                      (0x08)                                        /**<  (RSTC_MR) Mode Register  Offset */

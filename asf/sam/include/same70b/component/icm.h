@@ -3,11 +3,13 @@
  *
  * \brief Component description for ICM
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_ICM_COMPONENT_H_
 #define _SAME70_ICM_COMPONENT_H_
 #define _SAME70_ICM_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -45,6 +47,7 @@
 
 /* -------- ICM_CFG : (ICM Offset: 0x00) (R/W 32) Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WBDIS:1;                   /**< bit:      0  Write Back Disable                       */
@@ -61,6 +64,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ICM_CFG_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ICM_CFG_OFFSET                      (0x00)                                        /**<  (ICM_CFG) Configuration Register  Offset */
@@ -101,6 +105,7 @@ typedef union {
 
 /* -------- ICM_CTRL : (ICM Offset: 0x04) (/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ENABLE:1;                  /**< bit:      0  ICM Enable                               */
@@ -114,6 +119,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ICM_CTRL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ICM_CTRL_OFFSET                     (0x04)                                        /**<  (ICM_CTRL) Control Register  Offset */
@@ -142,6 +148,7 @@ typedef union {
 
 /* -------- ICM_SR : (ICM Offset: 0x08) (R/ 32) Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ENABLE:1;                  /**< bit:      0  ICM Controller Enable Register           */
@@ -152,6 +159,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ICM_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ICM_SR_OFFSET                       (0x08)                                        /**<  (ICM_SR) Status Register  Offset */
@@ -171,6 +179,7 @@ typedef union {
 
 /* -------- ICM_IER : (ICM Offset: 0x10) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RHC:4;                     /**< bit:   0..3  Region Hash Completed Interrupt Enable   */
@@ -184,6 +193,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ICM_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ICM_IER_OFFSET                      (0x10)                                        /**<  (ICM_IER) Interrupt Enable Register  Offset */
@@ -215,6 +225,7 @@ typedef union {
 
 /* -------- ICM_IDR : (ICM Offset: 0x14) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RHC:4;                     /**< bit:   0..3  Region Hash Completed Interrupt Disable  */
@@ -228,6 +239,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ICM_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ICM_IDR_OFFSET                      (0x14)                                        /**<  (ICM_IDR) Interrupt Disable Register  Offset */
@@ -259,6 +271,7 @@ typedef union {
 
 /* -------- ICM_IMR : (ICM Offset: 0x18) (R/ 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RHC:4;                     /**< bit:   0..3  Region Hash Completed Interrupt Mask     */
@@ -272,6 +285,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ICM_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ICM_IMR_OFFSET                      (0x18)                                        /**<  (ICM_IMR) Interrupt Mask Register  Offset */
@@ -303,6 +317,7 @@ typedef union {
 
 /* -------- ICM_ISR : (ICM Offset: 0x1c) (R/ 32) Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RHC:4;                     /**< bit:   0..3  Region Hash Completed                    */
@@ -316,6 +331,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ICM_ISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ICM_ISR_OFFSET                      (0x1C)                                        /**<  (ICM_ISR) Interrupt Status Register  Offset */
@@ -347,6 +363,7 @@ typedef union {
 
 /* -------- ICM_UASR : (ICM Offset: 0x20) (R/ 32) Undefined Access Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t URAT:3;                    /**< bit:   0..2  Undefined Register Access Trace          */
@@ -354,6 +371,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ICM_UASR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ICM_UASR_OFFSET                     (0x20)                                        /**<  (ICM_UASR) Undefined Access Status Register  Offset */
@@ -377,6 +395,7 @@ typedef union {
 
 /* -------- ICM_DSCR : (ICM Offset: 0x30) (R/W 32) Region Descriptor Area Start Address Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :6;                        /**< bit:   0..5  Reserved */
@@ -384,6 +403,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ICM_DSCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ICM_DSCR_OFFSET                     (0x30)                                        /**<  (ICM_DSCR) Region Descriptor Area Start Address Register  Offset */
@@ -397,6 +417,7 @@ typedef union {
 
 /* -------- ICM_HASH : (ICM Offset: 0x34) (R/W 32) Region Hash Area Start Address Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :7;                        /**< bit:   0..6  Reserved */
@@ -404,6 +425,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ICM_HASH_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ICM_HASH_OFFSET                     (0x34)                                        /**<  (ICM_HASH) Region Hash Area Start Address Register  Offset */
@@ -417,12 +439,14 @@ typedef union {
 
 /* -------- ICM_UIHVAL : (ICM Offset: 0x38) (/W 32) User Initial Hash Value 0 Register 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t VAL:32;                    /**< bit:  0..31  Initial Hash Value                       */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ICM_UIHVAL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ICM_UIHVAL_OFFSET                   (0x38)                                        /**<  (ICM_UIHVAL) User Initial Hash Value 0 Register 0  Offset */
@@ -441,13 +465,13 @@ typedef struct {
   __IO uint32_t ICM_CFG;        /**< (ICM Offset: 0x00) Configuration Register */
   __O  uint32_t ICM_CTRL;       /**< (ICM Offset: 0x04) Control Register */
   __I  uint32_t ICM_SR;         /**< (ICM Offset: 0x08) Status Register */
-  RoReg8  Reserved1[0x4];
+  __I  uint8_t                        Reserved1[4];
   __O  uint32_t ICM_IER;        /**< (ICM Offset: 0x10) Interrupt Enable Register */
   __O  uint32_t ICM_IDR;        /**< (ICM Offset: 0x14) Interrupt Disable Register */
   __I  uint32_t ICM_IMR;        /**< (ICM Offset: 0x18) Interrupt Mask Register */
   __I  uint32_t ICM_ISR;        /**< (ICM Offset: 0x1C) Interrupt Status Register */
   __I  uint32_t ICM_UASR;       /**< (ICM Offset: 0x20) Undefined Access Status Register */
-  RoReg8  Reserved2[0xC];
+  __I  uint8_t                        Reserved2[12];
   __IO uint32_t ICM_DSCR;       /**< (ICM Offset: 0x30) Region Descriptor Area Start Address Register */
   __IO uint32_t ICM_HASH;       /**< (ICM Offset: 0x34) Region Hash Area Start Address Register */
   __O  uint32_t ICM_UIHVAL[8];  /**< (ICM Offset: 0x38) User Initial Hash Value 0 Register 0 */
@@ -459,13 +483,13 @@ typedef struct {
   __IO ICM_CFG_Type                   ICM_CFG;        /**< Offset: 0x00 (R/W  32) Configuration Register */
   __O  ICM_CTRL_Type                  ICM_CTRL;       /**< Offset: 0x04 ( /W  32) Control Register */
   __I  ICM_SR_Type                    ICM_SR;         /**< Offset: 0x08 (R/   32) Status Register */
-  __I  uint32_t                       Reserved1[1];
+  __I  uint8_t                        Reserved1[4];
   __O  ICM_IER_Type                   ICM_IER;        /**< Offset: 0x10 ( /W  32) Interrupt Enable Register */
   __O  ICM_IDR_Type                   ICM_IDR;        /**< Offset: 0x14 ( /W  32) Interrupt Disable Register */
   __I  ICM_IMR_Type                   ICM_IMR;        /**< Offset: 0x18 (R/   32) Interrupt Mask Register */
   __I  ICM_ISR_Type                   ICM_ISR;        /**< Offset: 0x1C (R/   32) Interrupt Status Register */
   __I  ICM_UASR_Type                  ICM_UASR;       /**< Offset: 0x20 (R/   32) Undefined Access Status Register */
-  __I  uint32_t                       Reserved2[3];
+  __I  uint8_t                        Reserved2[12];
   __IO ICM_DSCR_Type                  ICM_DSCR;       /**< Offset: 0x30 (R/W  32) Region Descriptor Area Start Address Register */
   __IO ICM_HASH_Type                  ICM_HASH;       /**< Offset: 0x34 (R/W  32) Region Hash Area Start Address Register */
   __O  ICM_UIHVAL_Type                ICM_UIHVAL[8];  /**< Offset: 0x38 ( /W  32) User Initial Hash Value 0 Register 0 */

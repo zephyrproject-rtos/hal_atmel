@@ -3,11 +3,13 @@
  *
  * \brief Component description for CHIPID
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_CHIPID_COMPONENT_H_
 #define _SAME70_CHIPID_COMPONENT_H_
 #define _SAME70_CHIPID_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -45,6 +47,7 @@
 
 /* -------- CHIPID_CIDR : (CHIPID Offset: 0x00) (R/ 32) Chip ID Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t VERSION:5;                 /**< bit:   0..4  Version of the Device                    */
@@ -58,6 +61,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } CHIPID_CIDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CHIPID_CIDR_OFFSET                  (0x00)                                        /**<  (CHIPID_CIDR) Chip ID Register  Offset */
@@ -200,12 +204,14 @@ typedef union {
 
 /* -------- CHIPID_EXID : (CHIPID Offset: 0x04) (R/ 32) Chip ID Extension Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t EXID:32;                   /**< bit:  0..31  Chip ID Extension                        */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } CHIPID_EXID_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CHIPID_EXID_OFFSET                  (0x04)                                        /**<  (CHIPID_EXID) Chip ID Extension Register  Offset */

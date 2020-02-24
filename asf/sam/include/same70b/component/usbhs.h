@@ -3,11 +3,13 @@
  *
  * \brief Component description for USBHS
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_USBHS_COMPONENT_H_
 #define _SAME70_USBHS_COMPONENT_H_
 #define _SAME70_USBHS_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -43,17 +45,19 @@
 #define USBHS_11292                      /**< (USBHS) Module ID */
 #define REV_USBHS G                      /**< (USBHS) Module revision */
 
-/* -------- USBHS_DEVDMANXTDSC : (USBHS Offset: 0x00) (R/W 32) Device DMA Channel Next Descriptor Address Register (n = 1) -------- */
+/* -------- USBHS_DEVDMANXTDSC : (USBHS Offset: 0x00) (R/W 32) Device DMA Channel Next Descriptor Address Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NXT_DSC_ADD:32;            /**< bit:  0..31  Next Descriptor Address                  */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVDMANXTDSC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_DEVDMANXTDSC_OFFSET           (0x00)                                        /**<  (USBHS_DEVDMANXTDSC) Device DMA Channel Next Descriptor Address Register (n = 1)  Offset */
+#define USBHS_DEVDMANXTDSC_OFFSET           (0x00)                                        /**<  (USBHS_DEVDMANXTDSC) Device DMA Channel Next Descriptor Address Register  Offset */
 
 #define USBHS_DEVDMANXTDSC_NXT_DSC_ADD_Pos  0                                              /**< (USBHS_DEVDMANXTDSC) Next Descriptor Address Position */
 #define USBHS_DEVDMANXTDSC_NXT_DSC_ADD_Msk  (_U_(0xFFFFFFFF) << USBHS_DEVDMANXTDSC_NXT_DSC_ADD_Pos)  /**< (USBHS_DEVDMANXTDSC) Next Descriptor Address Mask */
@@ -62,17 +66,19 @@ typedef union {
 #define USBHS_DEVDMANXTDSC_Msk              _U_(0xFFFFFFFF)                                /**< (USBHS_DEVDMANXTDSC) Register Mask  */
 
 
-/* -------- USBHS_DEVDMAADDRESS : (USBHS Offset: 0x04) (R/W 32) Device DMA Channel Address Register (n = 1) -------- */
+/* -------- USBHS_DEVDMAADDRESS : (USBHS Offset: 0x04) (R/W 32) Device DMA Channel Address Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BUFF_ADD:32;               /**< bit:  0..31  Buffer Address                           */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVDMAADDRESS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_DEVDMAADDRESS_OFFSET          (0x04)                                        /**<  (USBHS_DEVDMAADDRESS) Device DMA Channel Address Register (n = 1)  Offset */
+#define USBHS_DEVDMAADDRESS_OFFSET          (0x04)                                        /**<  (USBHS_DEVDMAADDRESS) Device DMA Channel Address Register  Offset */
 
 #define USBHS_DEVDMAADDRESS_BUFF_ADD_Pos    0                                              /**< (USBHS_DEVDMAADDRESS) Buffer Address Position */
 #define USBHS_DEVDMAADDRESS_BUFF_ADD_Msk    (_U_(0xFFFFFFFF) << USBHS_DEVDMAADDRESS_BUFF_ADD_Pos)  /**< (USBHS_DEVDMAADDRESS) Buffer Address Mask */
@@ -81,8 +87,9 @@ typedef union {
 #define USBHS_DEVDMAADDRESS_Msk             _U_(0xFFFFFFFF)                                /**< (USBHS_DEVDMAADDRESS) Register Mask  */
 
 
-/* -------- USBHS_DEVDMACONTROL : (USBHS Offset: 0x08) (R/W 32) Device DMA Channel Control Register (n = 1) -------- */
+/* -------- USBHS_DEVDMACONTROL : (USBHS Offset: 0x08) (R/W 32) Device DMA Channel Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CHANN_ENB:1;               /**< bit:      0  Channel Enable Command                   */
@@ -98,9 +105,10 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVDMACONTROL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_DEVDMACONTROL_OFFSET          (0x08)                                        /**<  (USBHS_DEVDMACONTROL) Device DMA Channel Control Register (n = 1)  Offset */
+#define USBHS_DEVDMACONTROL_OFFSET          (0x08)                                        /**<  (USBHS_DEVDMACONTROL) Device DMA Channel Control Register  Offset */
 
 #define USBHS_DEVDMACONTROL_CHANN_ENB_Pos   0                                              /**< (USBHS_DEVDMACONTROL) Channel Enable Command Position */
 #define USBHS_DEVDMACONTROL_CHANN_ENB_Msk   (_U_(0x1) << USBHS_DEVDMACONTROL_CHANN_ENB_Pos)  /**< (USBHS_DEVDMACONTROL) Channel Enable Command Mask */
@@ -133,8 +141,9 @@ typedef union {
 #define USBHS_DEVDMACONTROL_Msk             _U_(0xFFFF00FF)                                /**< (USBHS_DEVDMACONTROL) Register Mask  */
 
 
-/* -------- USBHS_DEVDMASTATUS : (USBHS Offset: 0x0c) (R/W 32) Device DMA Channel Status Register (n = 1) -------- */
+/* -------- USBHS_DEVDMASTATUS : (USBHS Offset: 0x0c) (R/W 32) Device DMA Channel Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CHANN_ENB:1;               /**< bit:      0  Channel Enable Status                    */
@@ -148,9 +157,10 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVDMASTATUS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_DEVDMASTATUS_OFFSET           (0x0C)                                        /**<  (USBHS_DEVDMASTATUS) Device DMA Channel Status Register (n = 1)  Offset */
+#define USBHS_DEVDMASTATUS_OFFSET           (0x0C)                                        /**<  (USBHS_DEVDMASTATUS) Device DMA Channel Status Register  Offset */
 
 #define USBHS_DEVDMASTATUS_CHANN_ENB_Pos    0                                              /**< (USBHS_DEVDMASTATUS) Channel Enable Status Position */
 #define USBHS_DEVDMASTATUS_CHANN_ENB_Msk    (_U_(0x1) << USBHS_DEVDMASTATUS_CHANN_ENB_Pos)  /**< (USBHS_DEVDMASTATUS) Channel Enable Status Mask */
@@ -174,17 +184,19 @@ typedef union {
 #define USBHS_DEVDMASTATUS_Msk              _U_(0xFFFF0073)                                /**< (USBHS_DEVDMASTATUS) Register Mask  */
 
 
-/* -------- USBHS_HSTDMANXTDSC : (USBHS Offset: 0x00) (R/W 32) Host DMA Channel Next Descriptor Address Register (n = 1) -------- */
+/* -------- USBHS_HSTDMANXTDSC : (USBHS Offset: 0x00) (R/W 32) Host DMA Channel Next Descriptor Address Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NXT_DSC_ADD:32;            /**< bit:  0..31  Next Descriptor Address                  */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTDMANXTDSC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_HSTDMANXTDSC_OFFSET           (0x00)                                        /**<  (USBHS_HSTDMANXTDSC) Host DMA Channel Next Descriptor Address Register (n = 1)  Offset */
+#define USBHS_HSTDMANXTDSC_OFFSET           (0x00)                                        /**<  (USBHS_HSTDMANXTDSC) Host DMA Channel Next Descriptor Address Register  Offset */
 
 #define USBHS_HSTDMANXTDSC_NXT_DSC_ADD_Pos  0                                              /**< (USBHS_HSTDMANXTDSC) Next Descriptor Address Position */
 #define USBHS_HSTDMANXTDSC_NXT_DSC_ADD_Msk  (_U_(0xFFFFFFFF) << USBHS_HSTDMANXTDSC_NXT_DSC_ADD_Pos)  /**< (USBHS_HSTDMANXTDSC) Next Descriptor Address Mask */
@@ -193,17 +205,19 @@ typedef union {
 #define USBHS_HSTDMANXTDSC_Msk              _U_(0xFFFFFFFF)                                /**< (USBHS_HSTDMANXTDSC) Register Mask  */
 
 
-/* -------- USBHS_HSTDMAADDRESS : (USBHS Offset: 0x04) (R/W 32) Host DMA Channel Address Register (n = 1) -------- */
+/* -------- USBHS_HSTDMAADDRESS : (USBHS Offset: 0x04) (R/W 32) Host DMA Channel Address Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BUFF_ADD:32;               /**< bit:  0..31  Buffer Address                           */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTDMAADDRESS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_HSTDMAADDRESS_OFFSET          (0x04)                                        /**<  (USBHS_HSTDMAADDRESS) Host DMA Channel Address Register (n = 1)  Offset */
+#define USBHS_HSTDMAADDRESS_OFFSET          (0x04)                                        /**<  (USBHS_HSTDMAADDRESS) Host DMA Channel Address Register  Offset */
 
 #define USBHS_HSTDMAADDRESS_BUFF_ADD_Pos    0                                              /**< (USBHS_HSTDMAADDRESS) Buffer Address Position */
 #define USBHS_HSTDMAADDRESS_BUFF_ADD_Msk    (_U_(0xFFFFFFFF) << USBHS_HSTDMAADDRESS_BUFF_ADD_Pos)  /**< (USBHS_HSTDMAADDRESS) Buffer Address Mask */
@@ -212,8 +226,9 @@ typedef union {
 #define USBHS_HSTDMAADDRESS_Msk             _U_(0xFFFFFFFF)                                /**< (USBHS_HSTDMAADDRESS) Register Mask  */
 
 
-/* -------- USBHS_HSTDMACONTROL : (USBHS Offset: 0x08) (R/W 32) Host DMA Channel Control Register (n = 1) -------- */
+/* -------- USBHS_HSTDMACONTROL : (USBHS Offset: 0x08) (R/W 32) Host DMA Channel Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CHANN_ENB:1;               /**< bit:      0  Channel Enable Command                   */
@@ -229,9 +244,10 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTDMACONTROL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_HSTDMACONTROL_OFFSET          (0x08)                                        /**<  (USBHS_HSTDMACONTROL) Host DMA Channel Control Register (n = 1)  Offset */
+#define USBHS_HSTDMACONTROL_OFFSET          (0x08)                                        /**<  (USBHS_HSTDMACONTROL) Host DMA Channel Control Register  Offset */
 
 #define USBHS_HSTDMACONTROL_CHANN_ENB_Pos   0                                              /**< (USBHS_HSTDMACONTROL) Channel Enable Command Position */
 #define USBHS_HSTDMACONTROL_CHANN_ENB_Msk   (_U_(0x1) << USBHS_HSTDMACONTROL_CHANN_ENB_Pos)  /**< (USBHS_HSTDMACONTROL) Channel Enable Command Mask */
@@ -264,8 +280,9 @@ typedef union {
 #define USBHS_HSTDMACONTROL_Msk             _U_(0xFFFF00FF)                                /**< (USBHS_HSTDMACONTROL) Register Mask  */
 
 
-/* -------- USBHS_HSTDMASTATUS : (USBHS Offset: 0x0c) (R/W 32) Host DMA Channel Status Register (n = 1) -------- */
+/* -------- USBHS_HSTDMASTATUS : (USBHS Offset: 0x0c) (R/W 32) Host DMA Channel Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CHANN_ENB:1;               /**< bit:      0  Channel Enable Status                    */
@@ -279,9 +296,10 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTDMASTATUS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_HSTDMASTATUS_OFFSET           (0x0C)                                        /**<  (USBHS_HSTDMASTATUS) Host DMA Channel Status Register (n = 1)  Offset */
+#define USBHS_HSTDMASTATUS_OFFSET           (0x0C)                                        /**<  (USBHS_HSTDMASTATUS) Host DMA Channel Status Register  Offset */
 
 #define USBHS_HSTDMASTATUS_CHANN_ENB_Pos    0                                              /**< (USBHS_HSTDMASTATUS) Channel Enable Status Position */
 #define USBHS_HSTDMASTATUS_CHANN_ENB_Msk    (_U_(0x1) << USBHS_HSTDMASTATUS_CHANN_ENB_Pos)  /**< (USBHS_HSTDMASTATUS) Channel Enable Status Mask */
@@ -307,6 +325,7 @@ typedef union {
 
 /* -------- USBHS_DEVCTRL : (USBHS Offset: 0x00) (R/W 32) Device General Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t UADD:7;                    /**< bit:   0..6  USB Address                              */
@@ -321,8 +340,14 @@ typedef union {
     uint32_t OPMODE2:1;                 /**< bit:     16  Specific Operational mode                */
     uint32_t :15;                       /**< bit: 17..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct {
+    uint32_t :16;                       /**< bit:  0..15  Reserved */
+    uint32_t OPMODE:1;                  /**< bit:     16  Specific Operational mode                */
+    uint32_t :15;                       /**< bit: 17..31 Reserved */
+  } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVCTRL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVCTRL_OFFSET                (0x00)                                        /**<  (USBHS_DEVCTRL) Device General Control Register  Offset */
@@ -344,8 +369,12 @@ typedef union {
 #define USBHS_DEVCTRL_SPDCONF(value)        (USBHS_DEVCTRL_SPDCONF_Msk & ((value) << USBHS_DEVCTRL_SPDCONF_Pos))
 #define   USBHS_DEVCTRL_SPDCONF_NORMAL_Val  _U_(0x0)                                       /**< (USBHS_DEVCTRL) The peripheral starts in Full-speed mode and performs a high-speed reset to switch to High-speed mode if the host is high-speed-capable.  */
 #define   USBHS_DEVCTRL_SPDCONF_LOW_POWER_Val _U_(0x1)                                       /**< (USBHS_DEVCTRL) For a better consumption, if high speed is not needed.  */
+#define   USBHS_DEVCTRL_SPDCONF_HIGH_SPEED_Val _U_(0x2)                                       /**< (USBHS_DEVCTRL) Forced high speed.  */
+#define   USBHS_DEVCTRL_SPDCONF_FORCED_FS_Val _U_(0x3)                                       /**< (USBHS_DEVCTRL) The peripheral remains in Full-speed mode whatever the host speed capability.  */
 #define USBHS_DEVCTRL_SPDCONF_NORMAL        (USBHS_DEVCTRL_SPDCONF_NORMAL_Val << USBHS_DEVCTRL_SPDCONF_Pos)  /**< (USBHS_DEVCTRL) The peripheral starts in Full-speed mode and performs a high-speed reset to switch to High-speed mode if the host is high-speed-capable. Position  */
 #define USBHS_DEVCTRL_SPDCONF_LOW_POWER     (USBHS_DEVCTRL_SPDCONF_LOW_POWER_Val << USBHS_DEVCTRL_SPDCONF_Pos)  /**< (USBHS_DEVCTRL) For a better consumption, if high speed is not needed. Position  */
+#define USBHS_DEVCTRL_SPDCONF_HIGH_SPEED    (USBHS_DEVCTRL_SPDCONF_HIGH_SPEED_Val << USBHS_DEVCTRL_SPDCONF_Pos)  /**< (USBHS_DEVCTRL) Forced high speed. Position  */
+#define USBHS_DEVCTRL_SPDCONF_FORCED_FS     (USBHS_DEVCTRL_SPDCONF_FORCED_FS_Val << USBHS_DEVCTRL_SPDCONF_Pos)  /**< (USBHS_DEVCTRL) The peripheral remains in Full-speed mode whatever the host speed capability. Position  */
 #define USBHS_DEVCTRL_LS_Pos                12                                             /**< (USBHS_DEVCTRL) Low-Speed Mode Force Position */
 #define USBHS_DEVCTRL_LS_Msk                (_U_(0x1) << USBHS_DEVCTRL_LS_Pos)             /**< (USBHS_DEVCTRL) Low-Speed Mode Force Mask */
 #define USBHS_DEVCTRL_LS                    USBHS_DEVCTRL_LS_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVCTRL_LS_Msk instead */
@@ -364,9 +393,13 @@ typedef union {
 #define USBHS_DEVCTRL_MASK                  _U_(0x1FFFF)                                   /**< \deprecated (USBHS_DEVCTRL) Register MASK  (Use USBHS_DEVCTRL_Msk instead)  */
 #define USBHS_DEVCTRL_Msk                   _U_(0x1FFFF)                                   /**< (USBHS_DEVCTRL) Register Mask  */
 
+#define USBHS_DEVCTRL_OPMODE_Pos            16                                             /**< (USBHS_DEVCTRL Position) Specific Operational mode */
+#define USBHS_DEVCTRL_OPMODE_Msk            (_U_(0x1) << USBHS_DEVCTRL_OPMODE_Pos)         /**< (USBHS_DEVCTRL Mask) OPMODE */
+#define USBHS_DEVCTRL_OPMODE(value)         (USBHS_DEVCTRL_OPMODE_Msk & ((value) << USBHS_DEVCTRL_OPMODE_Pos))  
 
 /* -------- USBHS_DEVISR : (USBHS Offset: 0x04) (R/ 32) Device Global Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SUSP:1;                    /**< bit:      0  Suspend Interrupt                        */
@@ -387,9 +420,7 @@ typedef union {
     uint32_t PEP_7:1;                   /**< bit:     19  Endpoint 7 Interrupt                     */
     uint32_t PEP_8:1;                   /**< bit:     20  Endpoint 8 Interrupt                     */
     uint32_t PEP_9:1;                   /**< bit:     21  Endpoint 9 Interrupt                     */
-    uint32_t PEP_10:1;                  /**< bit:     22  Endpoint 10 Interrupt                    */
-    uint32_t PEP_11:1;                  /**< bit:     23  Endpoint 11 Interrupt                    */
-    uint32_t :1;                        /**< bit:     24  Reserved */
+    uint32_t :3;                        /**< bit: 22..24  Reserved */
     uint32_t DMA_1:1;                   /**< bit:     25  DMA Channel 1 Interrupt                  */
     uint32_t DMA_2:1;                   /**< bit:     26  DMA Channel 2 Interrupt                  */
     uint32_t DMA_3:1;                   /**< bit:     27  DMA Channel 3 Interrupt                  */
@@ -400,12 +431,13 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :12;                       /**< bit:  0..11  Reserved */
-    uint32_t PEP_:12;                   /**< bit: 12..23  Endpoint x Interrupt                     */
-    uint32_t :1;                        /**< bit:     24  Reserved */
+    uint32_t PEP_:10;                   /**< bit: 12..21  Endpoint x Interrupt                     */
+    uint32_t :3;                        /**< bit: 22..24  Reserved */
     uint32_t DMA_:7;                    /**< bit: 25..31  DMA Channel 7 Interrupt                  */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVISR_OFFSET                 (0x04)                                        /**<  (USBHS_DEVISR) Device Global Interrupt Status Register  Offset */
@@ -461,12 +493,6 @@ typedef union {
 #define USBHS_DEVISR_PEP_9_Pos              21                                             /**< (USBHS_DEVISR) Endpoint 9 Interrupt Position */
 #define USBHS_DEVISR_PEP_9_Msk              (_U_(0x1) << USBHS_DEVISR_PEP_9_Pos)           /**< (USBHS_DEVISR) Endpoint 9 Interrupt Mask */
 #define USBHS_DEVISR_PEP_9                  USBHS_DEVISR_PEP_9_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVISR_PEP_9_Msk instead */
-#define USBHS_DEVISR_PEP_10_Pos             22                                             /**< (USBHS_DEVISR) Endpoint 10 Interrupt Position */
-#define USBHS_DEVISR_PEP_10_Msk             (_U_(0x1) << USBHS_DEVISR_PEP_10_Pos)          /**< (USBHS_DEVISR) Endpoint 10 Interrupt Mask */
-#define USBHS_DEVISR_PEP_10                 USBHS_DEVISR_PEP_10_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVISR_PEP_10_Msk instead */
-#define USBHS_DEVISR_PEP_11_Pos             23                                             /**< (USBHS_DEVISR) Endpoint 11 Interrupt Position */
-#define USBHS_DEVISR_PEP_11_Msk             (_U_(0x1) << USBHS_DEVISR_PEP_11_Pos)          /**< (USBHS_DEVISR) Endpoint 11 Interrupt Mask */
-#define USBHS_DEVISR_PEP_11                 USBHS_DEVISR_PEP_11_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVISR_PEP_11_Msk instead */
 #define USBHS_DEVISR_DMA_1_Pos              25                                             /**< (USBHS_DEVISR) DMA Channel 1 Interrupt Position */
 #define USBHS_DEVISR_DMA_1_Msk              (_U_(0x1) << USBHS_DEVISR_DMA_1_Pos)           /**< (USBHS_DEVISR) DMA Channel 1 Interrupt Mask */
 #define USBHS_DEVISR_DMA_1                  USBHS_DEVISR_DMA_1_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVISR_DMA_1_Msk instead */
@@ -488,11 +514,11 @@ typedef union {
 #define USBHS_DEVISR_DMA_7_Pos              31                                             /**< (USBHS_DEVISR) DMA Channel 7 Interrupt Position */
 #define USBHS_DEVISR_DMA_7_Msk              (_U_(0x1) << USBHS_DEVISR_DMA_7_Pos)           /**< (USBHS_DEVISR) DMA Channel 7 Interrupt Mask */
 #define USBHS_DEVISR_DMA_7                  USBHS_DEVISR_DMA_7_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVISR_DMA_7_Msk instead */
-#define USBHS_DEVISR_MASK                   _U_(0xFEFFF07F)                                /**< \deprecated (USBHS_DEVISR) Register MASK  (Use USBHS_DEVISR_Msk instead)  */
-#define USBHS_DEVISR_Msk                    _U_(0xFEFFF07F)                                /**< (USBHS_DEVISR) Register Mask  */
+#define USBHS_DEVISR_MASK                   _U_(0xFE3FF07F)                                /**< \deprecated (USBHS_DEVISR) Register MASK  (Use USBHS_DEVISR_Msk instead)  */
+#define USBHS_DEVISR_Msk                    _U_(0xFE3FF07F)                                /**< (USBHS_DEVISR) Register Mask  */
 
 #define USBHS_DEVISR_PEP__Pos               12                                             /**< (USBHS_DEVISR Position) Endpoint x Interrupt */
-#define USBHS_DEVISR_PEP__Msk               (_U_(0xFFF) << USBHS_DEVISR_PEP__Pos)          /**< (USBHS_DEVISR Mask) PEP_ */
+#define USBHS_DEVISR_PEP__Msk               (_U_(0x3FF) << USBHS_DEVISR_PEP__Pos)          /**< (USBHS_DEVISR Mask) PEP_ */
 #define USBHS_DEVISR_PEP_(value)            (USBHS_DEVISR_PEP__Msk & ((value) << USBHS_DEVISR_PEP__Pos))  
 #define USBHS_DEVISR_DMA__Pos               25                                             /**< (USBHS_DEVISR Position) DMA Channel 7 Interrupt */
 #define USBHS_DEVISR_DMA__Msk               (_U_(0x7F) << USBHS_DEVISR_DMA__Pos)           /**< (USBHS_DEVISR Mask) DMA_ */
@@ -500,6 +526,7 @@ typedef union {
 
 /* -------- USBHS_DEVICR : (USBHS Offset: 0x08) (/W 32) Device Global Interrupt Clear Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SUSPC:1;                   /**< bit:      0  Suspend Interrupt Clear                  */
@@ -513,6 +540,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVICR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVICR_OFFSET                 (0x08)                                        /**<  (USBHS_DEVICR) Device Global Interrupt Clear Register  Offset */
@@ -544,6 +572,7 @@ typedef union {
 
 /* -------- USBHS_DEVIFR : (USBHS Offset: 0x0c) (/W 32) Device Global Interrupt Set Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SUSPS:1;                   /**< bit:      0  Suspend Interrupt Set                    */
@@ -568,6 +597,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVIFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVIFR_OFFSET                 (0x0C)                                        /**<  (USBHS_DEVIFR) Device Global Interrupt Set Register  Offset */
@@ -623,6 +653,7 @@ typedef union {
 
 /* -------- USBHS_DEVIMR : (USBHS Offset: 0x10) (R/ 32) Device Global Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SUSPE:1;                   /**< bit:      0  Suspend Interrupt Mask                   */
@@ -643,9 +674,7 @@ typedef union {
     uint32_t PEP_7:1;                   /**< bit:     19  Endpoint 7 Interrupt Mask                */
     uint32_t PEP_8:1;                   /**< bit:     20  Endpoint 8 Interrupt Mask                */
     uint32_t PEP_9:1;                   /**< bit:     21  Endpoint 9 Interrupt Mask                */
-    uint32_t PEP_10:1;                  /**< bit:     22  Endpoint 10 Interrupt Mask               */
-    uint32_t PEP_11:1;                  /**< bit:     23  Endpoint 11 Interrupt Mask               */
-    uint32_t :1;                        /**< bit:     24  Reserved */
+    uint32_t :3;                        /**< bit: 22..24  Reserved */
     uint32_t DMA_1:1;                   /**< bit:     25  DMA Channel 1 Interrupt Mask             */
     uint32_t DMA_2:1;                   /**< bit:     26  DMA Channel 2 Interrupt Mask             */
     uint32_t DMA_3:1;                   /**< bit:     27  DMA Channel 3 Interrupt Mask             */
@@ -656,12 +685,13 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :12;                       /**< bit:  0..11  Reserved */
-    uint32_t PEP_:12;                   /**< bit: 12..23  Endpoint x Interrupt Mask                */
-    uint32_t :1;                        /**< bit:     24  Reserved */
+    uint32_t PEP_:10;                   /**< bit: 12..21  Endpoint x Interrupt Mask                */
+    uint32_t :3;                        /**< bit: 22..24  Reserved */
     uint32_t DMA_:7;                    /**< bit: 25..31  DMA Channel 7 Interrupt Mask             */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVIMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVIMR_OFFSET                 (0x10)                                        /**<  (USBHS_DEVIMR) Device Global Interrupt Mask Register  Offset */
@@ -717,12 +747,6 @@ typedef union {
 #define USBHS_DEVIMR_PEP_9_Pos              21                                             /**< (USBHS_DEVIMR) Endpoint 9 Interrupt Mask Position */
 #define USBHS_DEVIMR_PEP_9_Msk              (_U_(0x1) << USBHS_DEVIMR_PEP_9_Pos)           /**< (USBHS_DEVIMR) Endpoint 9 Interrupt Mask Mask */
 #define USBHS_DEVIMR_PEP_9                  USBHS_DEVIMR_PEP_9_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVIMR_PEP_9_Msk instead */
-#define USBHS_DEVIMR_PEP_10_Pos             22                                             /**< (USBHS_DEVIMR) Endpoint 10 Interrupt Mask Position */
-#define USBHS_DEVIMR_PEP_10_Msk             (_U_(0x1) << USBHS_DEVIMR_PEP_10_Pos)          /**< (USBHS_DEVIMR) Endpoint 10 Interrupt Mask Mask */
-#define USBHS_DEVIMR_PEP_10                 USBHS_DEVIMR_PEP_10_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVIMR_PEP_10_Msk instead */
-#define USBHS_DEVIMR_PEP_11_Pos             23                                             /**< (USBHS_DEVIMR) Endpoint 11 Interrupt Mask Position */
-#define USBHS_DEVIMR_PEP_11_Msk             (_U_(0x1) << USBHS_DEVIMR_PEP_11_Pos)          /**< (USBHS_DEVIMR) Endpoint 11 Interrupt Mask Mask */
-#define USBHS_DEVIMR_PEP_11                 USBHS_DEVIMR_PEP_11_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVIMR_PEP_11_Msk instead */
 #define USBHS_DEVIMR_DMA_1_Pos              25                                             /**< (USBHS_DEVIMR) DMA Channel 1 Interrupt Mask Position */
 #define USBHS_DEVIMR_DMA_1_Msk              (_U_(0x1) << USBHS_DEVIMR_DMA_1_Pos)           /**< (USBHS_DEVIMR) DMA Channel 1 Interrupt Mask Mask */
 #define USBHS_DEVIMR_DMA_1                  USBHS_DEVIMR_DMA_1_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVIMR_DMA_1_Msk instead */
@@ -744,11 +768,11 @@ typedef union {
 #define USBHS_DEVIMR_DMA_7_Pos              31                                             /**< (USBHS_DEVIMR) DMA Channel 7 Interrupt Mask Position */
 #define USBHS_DEVIMR_DMA_7_Msk              (_U_(0x1) << USBHS_DEVIMR_DMA_7_Pos)           /**< (USBHS_DEVIMR) DMA Channel 7 Interrupt Mask Mask */
 #define USBHS_DEVIMR_DMA_7                  USBHS_DEVIMR_DMA_7_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVIMR_DMA_7_Msk instead */
-#define USBHS_DEVIMR_MASK                   _U_(0xFEFFF07F)                                /**< \deprecated (USBHS_DEVIMR) Register MASK  (Use USBHS_DEVIMR_Msk instead)  */
-#define USBHS_DEVIMR_Msk                    _U_(0xFEFFF07F)                                /**< (USBHS_DEVIMR) Register Mask  */
+#define USBHS_DEVIMR_MASK                   _U_(0xFE3FF07F)                                /**< \deprecated (USBHS_DEVIMR) Register MASK  (Use USBHS_DEVIMR_Msk instead)  */
+#define USBHS_DEVIMR_Msk                    _U_(0xFE3FF07F)                                /**< (USBHS_DEVIMR) Register Mask  */
 
 #define USBHS_DEVIMR_PEP__Pos               12                                             /**< (USBHS_DEVIMR Position) Endpoint x Interrupt Mask */
-#define USBHS_DEVIMR_PEP__Msk               (_U_(0xFFF) << USBHS_DEVIMR_PEP__Pos)          /**< (USBHS_DEVIMR Mask) PEP_ */
+#define USBHS_DEVIMR_PEP__Msk               (_U_(0x3FF) << USBHS_DEVIMR_PEP__Pos)          /**< (USBHS_DEVIMR Mask) PEP_ */
 #define USBHS_DEVIMR_PEP_(value)            (USBHS_DEVIMR_PEP__Msk & ((value) << USBHS_DEVIMR_PEP__Pos))  
 #define USBHS_DEVIMR_DMA__Pos               25                                             /**< (USBHS_DEVIMR Position) DMA Channel 7 Interrupt Mask */
 #define USBHS_DEVIMR_DMA__Msk               (_U_(0x7F) << USBHS_DEVIMR_DMA__Pos)           /**< (USBHS_DEVIMR Mask) DMA_ */
@@ -756,6 +780,7 @@ typedef union {
 
 /* -------- USBHS_DEVIDR : (USBHS Offset: 0x14) (/W 32) Device Global Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SUSPEC:1;                  /**< bit:      0  Suspend Interrupt Disable                */
@@ -776,9 +801,7 @@ typedef union {
     uint32_t PEP_7:1;                   /**< bit:     19  Endpoint 7 Interrupt Disable             */
     uint32_t PEP_8:1;                   /**< bit:     20  Endpoint 8 Interrupt Disable             */
     uint32_t PEP_9:1;                   /**< bit:     21  Endpoint 9 Interrupt Disable             */
-    uint32_t PEP_10:1;                  /**< bit:     22  Endpoint 10 Interrupt Disable            */
-    uint32_t PEP_11:1;                  /**< bit:     23  Endpoint 11 Interrupt Disable            */
-    uint32_t :1;                        /**< bit:     24  Reserved */
+    uint32_t :3;                        /**< bit: 22..24  Reserved */
     uint32_t DMA_1:1;                   /**< bit:     25  DMA Channel 1 Interrupt Disable          */
     uint32_t DMA_2:1;                   /**< bit:     26  DMA Channel 2 Interrupt Disable          */
     uint32_t DMA_3:1;                   /**< bit:     27  DMA Channel 3 Interrupt Disable          */
@@ -789,12 +812,13 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :12;                       /**< bit:  0..11  Reserved */
-    uint32_t PEP_:12;                   /**< bit: 12..23  Endpoint x Interrupt Disable             */
-    uint32_t :1;                        /**< bit:     24  Reserved */
+    uint32_t PEP_:10;                   /**< bit: 12..21  Endpoint x Interrupt Disable             */
+    uint32_t :3;                        /**< bit: 22..24  Reserved */
     uint32_t DMA_:7;                    /**< bit: 25..31  DMA Channel 7 Interrupt Disable          */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVIDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVIDR_OFFSET                 (0x14)                                        /**<  (USBHS_DEVIDR) Device Global Interrupt Disable Register  Offset */
@@ -850,12 +874,6 @@ typedef union {
 #define USBHS_DEVIDR_PEP_9_Pos              21                                             /**< (USBHS_DEVIDR) Endpoint 9 Interrupt Disable Position */
 #define USBHS_DEVIDR_PEP_9_Msk              (_U_(0x1) << USBHS_DEVIDR_PEP_9_Pos)           /**< (USBHS_DEVIDR) Endpoint 9 Interrupt Disable Mask */
 #define USBHS_DEVIDR_PEP_9                  USBHS_DEVIDR_PEP_9_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVIDR_PEP_9_Msk instead */
-#define USBHS_DEVIDR_PEP_10_Pos             22                                             /**< (USBHS_DEVIDR) Endpoint 10 Interrupt Disable Position */
-#define USBHS_DEVIDR_PEP_10_Msk             (_U_(0x1) << USBHS_DEVIDR_PEP_10_Pos)          /**< (USBHS_DEVIDR) Endpoint 10 Interrupt Disable Mask */
-#define USBHS_DEVIDR_PEP_10                 USBHS_DEVIDR_PEP_10_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVIDR_PEP_10_Msk instead */
-#define USBHS_DEVIDR_PEP_11_Pos             23                                             /**< (USBHS_DEVIDR) Endpoint 11 Interrupt Disable Position */
-#define USBHS_DEVIDR_PEP_11_Msk             (_U_(0x1) << USBHS_DEVIDR_PEP_11_Pos)          /**< (USBHS_DEVIDR) Endpoint 11 Interrupt Disable Mask */
-#define USBHS_DEVIDR_PEP_11                 USBHS_DEVIDR_PEP_11_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVIDR_PEP_11_Msk instead */
 #define USBHS_DEVIDR_DMA_1_Pos              25                                             /**< (USBHS_DEVIDR) DMA Channel 1 Interrupt Disable Position */
 #define USBHS_DEVIDR_DMA_1_Msk              (_U_(0x1) << USBHS_DEVIDR_DMA_1_Pos)           /**< (USBHS_DEVIDR) DMA Channel 1 Interrupt Disable Mask */
 #define USBHS_DEVIDR_DMA_1                  USBHS_DEVIDR_DMA_1_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVIDR_DMA_1_Msk instead */
@@ -877,11 +895,11 @@ typedef union {
 #define USBHS_DEVIDR_DMA_7_Pos              31                                             /**< (USBHS_DEVIDR) DMA Channel 7 Interrupt Disable Position */
 #define USBHS_DEVIDR_DMA_7_Msk              (_U_(0x1) << USBHS_DEVIDR_DMA_7_Pos)           /**< (USBHS_DEVIDR) DMA Channel 7 Interrupt Disable Mask */
 #define USBHS_DEVIDR_DMA_7                  USBHS_DEVIDR_DMA_7_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVIDR_DMA_7_Msk instead */
-#define USBHS_DEVIDR_MASK                   _U_(0xFEFFF07F)                                /**< \deprecated (USBHS_DEVIDR) Register MASK  (Use USBHS_DEVIDR_Msk instead)  */
-#define USBHS_DEVIDR_Msk                    _U_(0xFEFFF07F)                                /**< (USBHS_DEVIDR) Register Mask  */
+#define USBHS_DEVIDR_MASK                   _U_(0xFE3FF07F)                                /**< \deprecated (USBHS_DEVIDR) Register MASK  (Use USBHS_DEVIDR_Msk instead)  */
+#define USBHS_DEVIDR_Msk                    _U_(0xFE3FF07F)                                /**< (USBHS_DEVIDR) Register Mask  */
 
 #define USBHS_DEVIDR_PEP__Pos               12                                             /**< (USBHS_DEVIDR Position) Endpoint x Interrupt Disable */
-#define USBHS_DEVIDR_PEP__Msk               (_U_(0xFFF) << USBHS_DEVIDR_PEP__Pos)          /**< (USBHS_DEVIDR Mask) PEP_ */
+#define USBHS_DEVIDR_PEP__Msk               (_U_(0x3FF) << USBHS_DEVIDR_PEP__Pos)          /**< (USBHS_DEVIDR Mask) PEP_ */
 #define USBHS_DEVIDR_PEP_(value)            (USBHS_DEVIDR_PEP__Msk & ((value) << USBHS_DEVIDR_PEP__Pos))  
 #define USBHS_DEVIDR_DMA__Pos               25                                             /**< (USBHS_DEVIDR Position) DMA Channel 7 Interrupt Disable */
 #define USBHS_DEVIDR_DMA__Msk               (_U_(0x7F) << USBHS_DEVIDR_DMA__Pos)           /**< (USBHS_DEVIDR Mask) DMA_ */
@@ -889,6 +907,7 @@ typedef union {
 
 /* -------- USBHS_DEVIER : (USBHS Offset: 0x18) (/W 32) Device Global Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SUSPES:1;                  /**< bit:      0  Suspend Interrupt Enable                 */
@@ -909,9 +928,7 @@ typedef union {
     uint32_t PEP_7:1;                   /**< bit:     19  Endpoint 7 Interrupt Enable              */
     uint32_t PEP_8:1;                   /**< bit:     20  Endpoint 8 Interrupt Enable              */
     uint32_t PEP_9:1;                   /**< bit:     21  Endpoint 9 Interrupt Enable              */
-    uint32_t PEP_10:1;                  /**< bit:     22  Endpoint 10 Interrupt Enable             */
-    uint32_t PEP_11:1;                  /**< bit:     23  Endpoint 11 Interrupt Enable             */
-    uint32_t :1;                        /**< bit:     24  Reserved */
+    uint32_t :3;                        /**< bit: 22..24  Reserved */
     uint32_t DMA_1:1;                   /**< bit:     25  DMA Channel 1 Interrupt Enable           */
     uint32_t DMA_2:1;                   /**< bit:     26  DMA Channel 2 Interrupt Enable           */
     uint32_t DMA_3:1;                   /**< bit:     27  DMA Channel 3 Interrupt Enable           */
@@ -922,12 +939,13 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :12;                       /**< bit:  0..11  Reserved */
-    uint32_t PEP_:12;                   /**< bit: 12..23  Endpoint x Interrupt Enable              */
-    uint32_t :1;                        /**< bit:     24  Reserved */
+    uint32_t PEP_:10;                   /**< bit: 12..21  Endpoint x Interrupt Enable              */
+    uint32_t :3;                        /**< bit: 22..24  Reserved */
     uint32_t DMA_:7;                    /**< bit: 25..31  DMA Channel 7 Interrupt Enable           */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVIER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVIER_OFFSET                 (0x18)                                        /**<  (USBHS_DEVIER) Device Global Interrupt Enable Register  Offset */
@@ -983,12 +1001,6 @@ typedef union {
 #define USBHS_DEVIER_PEP_9_Pos              21                                             /**< (USBHS_DEVIER) Endpoint 9 Interrupt Enable Position */
 #define USBHS_DEVIER_PEP_9_Msk              (_U_(0x1) << USBHS_DEVIER_PEP_9_Pos)           /**< (USBHS_DEVIER) Endpoint 9 Interrupt Enable Mask */
 #define USBHS_DEVIER_PEP_9                  USBHS_DEVIER_PEP_9_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVIER_PEP_9_Msk instead */
-#define USBHS_DEVIER_PEP_10_Pos             22                                             /**< (USBHS_DEVIER) Endpoint 10 Interrupt Enable Position */
-#define USBHS_DEVIER_PEP_10_Msk             (_U_(0x1) << USBHS_DEVIER_PEP_10_Pos)          /**< (USBHS_DEVIER) Endpoint 10 Interrupt Enable Mask */
-#define USBHS_DEVIER_PEP_10                 USBHS_DEVIER_PEP_10_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVIER_PEP_10_Msk instead */
-#define USBHS_DEVIER_PEP_11_Pos             23                                             /**< (USBHS_DEVIER) Endpoint 11 Interrupt Enable Position */
-#define USBHS_DEVIER_PEP_11_Msk             (_U_(0x1) << USBHS_DEVIER_PEP_11_Pos)          /**< (USBHS_DEVIER) Endpoint 11 Interrupt Enable Mask */
-#define USBHS_DEVIER_PEP_11                 USBHS_DEVIER_PEP_11_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVIER_PEP_11_Msk instead */
 #define USBHS_DEVIER_DMA_1_Pos              25                                             /**< (USBHS_DEVIER) DMA Channel 1 Interrupt Enable Position */
 #define USBHS_DEVIER_DMA_1_Msk              (_U_(0x1) << USBHS_DEVIER_DMA_1_Pos)           /**< (USBHS_DEVIER) DMA Channel 1 Interrupt Enable Mask */
 #define USBHS_DEVIER_DMA_1                  USBHS_DEVIER_DMA_1_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVIER_DMA_1_Msk instead */
@@ -1010,11 +1022,11 @@ typedef union {
 #define USBHS_DEVIER_DMA_7_Pos              31                                             /**< (USBHS_DEVIER) DMA Channel 7 Interrupt Enable Position */
 #define USBHS_DEVIER_DMA_7_Msk              (_U_(0x1) << USBHS_DEVIER_DMA_7_Pos)           /**< (USBHS_DEVIER) DMA Channel 7 Interrupt Enable Mask */
 #define USBHS_DEVIER_DMA_7                  USBHS_DEVIER_DMA_7_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVIER_DMA_7_Msk instead */
-#define USBHS_DEVIER_MASK                   _U_(0xFEFFF07F)                                /**< \deprecated (USBHS_DEVIER) Register MASK  (Use USBHS_DEVIER_Msk instead)  */
-#define USBHS_DEVIER_Msk                    _U_(0xFEFFF07F)                                /**< (USBHS_DEVIER) Register Mask  */
+#define USBHS_DEVIER_MASK                   _U_(0xFE3FF07F)                                /**< \deprecated (USBHS_DEVIER) Register MASK  (Use USBHS_DEVIER_Msk instead)  */
+#define USBHS_DEVIER_Msk                    _U_(0xFE3FF07F)                                /**< (USBHS_DEVIER) Register Mask  */
 
 #define USBHS_DEVIER_PEP__Pos               12                                             /**< (USBHS_DEVIER Position) Endpoint x Interrupt Enable */
-#define USBHS_DEVIER_PEP__Msk               (_U_(0xFFF) << USBHS_DEVIER_PEP__Pos)          /**< (USBHS_DEVIER Mask) PEP_ */
+#define USBHS_DEVIER_PEP__Msk               (_U_(0x3FF) << USBHS_DEVIER_PEP__Pos)          /**< (USBHS_DEVIER Mask) PEP_ */
 #define USBHS_DEVIER_PEP_(value)            (USBHS_DEVIER_PEP__Msk & ((value) << USBHS_DEVIER_PEP__Pos))  
 #define USBHS_DEVIER_DMA__Pos               25                                             /**< (USBHS_DEVIER Position) DMA Channel 7 Interrupt Enable */
 #define USBHS_DEVIER_DMA__Msk               (_U_(0x7F) << USBHS_DEVIER_DMA__Pos)           /**< (USBHS_DEVIER Mask) DMA_ */
@@ -1022,6 +1034,7 @@ typedef union {
 
 /* -------- USBHS_DEVEPT : (USBHS Offset: 0x1c) (R/W 32) Device Endpoint Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t EPEN0:1;                   /**< bit:      0  Endpoint 0 Enable                        */
@@ -1055,6 +1068,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPT_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVEPT_OFFSET                 (0x1C)                                        /**<  (USBHS_DEVEPT) Device Endpoint Register  Offset */
@@ -1131,6 +1145,7 @@ typedef union {
 
 /* -------- USBHS_DEVFNUM : (USBHS Offset: 0x20) (R/ 32) Device Frame Number Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MFNUM:3;                   /**< bit:   0..2  Micro Frame Number                       */
@@ -1141,6 +1156,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVFNUM_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_DEVFNUM_OFFSET                (0x20)                                        /**<  (USBHS_DEVFNUM) Device Frame Number Register  Offset */
@@ -1158,8 +1174,9 @@ typedef union {
 #define USBHS_DEVFNUM_Msk                   _U_(0xBFFF)                                    /**< (USBHS_DEVFNUM) Register Mask  */
 
 
-/* -------- USBHS_DEVEPTCFG : (USBHS Offset: 0x100) (R/W 32) Device Endpoint Configuration Register (n = 0) 0 -------- */
+/* -------- USBHS_DEVEPTCFG : (USBHS Offset: 0x100) (R/W 32) Device Endpoint Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -1176,9 +1193,10 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPTCFG_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_DEVEPTCFG_OFFSET              (0x100)                                       /**<  (USBHS_DEVEPTCFG) Device Endpoint Configuration Register (n = 0) 0  Offset */
+#define USBHS_DEVEPTCFG_OFFSET              (0x100)                                       /**<  (USBHS_DEVEPTCFG) Device Endpoint Configuration Register  Offset */
 
 #define USBHS_DEVEPTCFG_ALLOC_Pos           1                                              /**< (USBHS_DEVEPTCFG) Endpoint Memory Allocate Position */
 #define USBHS_DEVEPTCFG_ALLOC_Msk           (_U_(0x1) << USBHS_DEVEPTCFG_ALLOC_Pos)        /**< (USBHS_DEVEPTCFG) Endpoint Memory Allocate Mask */
@@ -1247,34 +1265,78 @@ typedef union {
 #define USBHS_DEVEPTCFG_Msk                 _U_(0x7B7E)                                    /**< (USBHS_DEVEPTCFG) Register Mask  */
 
 
-/* -------- USBHS_DEVEPTISR : (USBHS Offset: 0x130) (R/ 32) Device Endpoint Status Register (n = 0) 0 -------- */
+/* -------- USBHS_DEVEPTISR : (USBHS Offset: 0x130) (R/ 32) Device Endpoint Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXINI:1;                   /**< bit:      0  Transmitted IN Data Interrupt            */
     uint32_t RXOUTI:1;                  /**< bit:      1  Received OUT Data Interrupt              */
-    uint32_t RXSTPI:1;                  /**< bit:      2  Received SETUP Interrupt                 */
-    uint32_t NAKOUTI:1;                 /**< bit:      3  NAKed OUT Interrupt                      */
-    uint32_t NAKINI:1;                  /**< bit:      4  NAKed IN Interrupt                       */
+    uint32_t :3;                        /**< bit:   2..4  Reserved */
     uint32_t OVERFI:1;                  /**< bit:      5  Overflow Interrupt                       */
-    uint32_t STALLEDI:1;                /**< bit:      6  STALLed Interrupt                        */
+    uint32_t :1;                        /**< bit:      6  Reserved */
     uint32_t SHORTPACKET:1;             /**< bit:      7  Short Packet Interrupt                   */
     uint32_t DTSEQ:2;                   /**< bit:   8..9  Data Toggle Sequence                     */
     uint32_t :2;                        /**< bit: 10..11  Reserved */
     uint32_t NBUSYBK:2;                 /**< bit: 12..13  Number of Busy Banks                     */
     uint32_t CURRBK:2;                  /**< bit: 14..15  Current Bank                             */
     uint32_t RWALL:1;                   /**< bit:     16  Read/Write Allowed                       */
-    uint32_t CTRLDIR:1;                 /**< bit:     17  Control Direction                        */
+    uint32_t :1;                        /**< bit:     17  Reserved */
     uint32_t CFGOK:1;                   /**< bit:     18  Configuration OK Status                  */
     uint32_t :1;                        /**< bit:     19  Reserved */
     uint32_t BYCT:11;                   /**< bit: 20..30  Byte Count                               */
     uint32_t :1;                        /**< bit:     31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct { // CTRL mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPI:1;                  /**< bit:      2  Received SETUP Interrupt                 */
+    uint32_t NAKOUTI:1;                 /**< bit:      3  NAKed OUT Interrupt                      */
+    uint32_t NAKINI:1;                  /**< bit:      4  NAKed IN Interrupt                       */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDI:1;                /**< bit:      6  STALLed Interrupt                        */
+    uint32_t :10;                       /**< bit:  7..16  Reserved */
+    uint32_t CTRLDIR:1;                 /**< bit:     17  Control Direction                        */
+    uint32_t :14;                       /**< bit: 18..31  Reserved */
+  } CTRL;                                /**< Structure used for CTRL mode access */
+  struct { // ISO mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFI:1;                 /**< bit:      2  Underflow Interrupt                      */
+    uint32_t HBISOINERRI:1;             /**< bit:      3  High Bandwidth Isochronous IN Underflow Error Interrupt */
+    uint32_t HBISOFLUSHI:1;             /**< bit:      4  High Bandwidth Isochronous IN Flush Interrupt */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t CRCERRI:1;                 /**< bit:      6  CRC Error Interrupt                      */
+    uint32_t :3;                        /**< bit:   7..9  Reserved */
+    uint32_t ERRORTRANS:1;              /**< bit:     10  High-bandwidth Isochronous OUT Endpoint Transaction Error Interrupt */
+    uint32_t :21;                       /**< bit: 11..31  Reserved */
+  } ISO;                                /**< Structure used for ISO mode access */
+  struct { // BLK mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPI:1;                  /**< bit:      2  Received SETUP Interrupt                 */
+    uint32_t NAKOUTI:1;                 /**< bit:      3  NAKed OUT Interrupt                      */
+    uint32_t NAKINI:1;                  /**< bit:      4  NAKed IN Interrupt                       */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDI:1;                /**< bit:      6  STALLed Interrupt                        */
+    uint32_t :10;                       /**< bit:  7..16  Reserved */
+    uint32_t CTRLDIR:1;                 /**< bit:     17  Control Direction                        */
+    uint32_t :14;                       /**< bit: 18..31  Reserved */
+  } BLK;                                /**< Structure used for BLK mode access */
+  struct { // INTRPT mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPI:1;                  /**< bit:      2  Received SETUP Interrupt                 */
+    uint32_t NAKOUTI:1;                 /**< bit:      3  NAKed OUT Interrupt                      */
+    uint32_t NAKINI:1;                  /**< bit:      4  NAKed IN Interrupt                       */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDI:1;                /**< bit:      6  STALLed Interrupt                        */
+    uint32_t :10;                       /**< bit:  7..16  Reserved */
+    uint32_t CTRLDIR:1;                 /**< bit:     17  Control Direction                        */
+    uint32_t :14;                       /**< bit: 18..31  Reserved */
+  } INTRPT;                                /**< Structure used for INTRPT mode access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPTISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_DEVEPTISR_OFFSET              (0x130)                                       /**<  (USBHS_DEVEPTISR) Device Endpoint Status Register (n = 0) 0  Offset */
+#define USBHS_DEVEPTISR_OFFSET              (0x130)                                       /**<  (USBHS_DEVEPTISR) Device Endpoint Interrupt Status Register  Offset */
 
 #define USBHS_DEVEPTISR_TXINI_Pos           0                                              /**< (USBHS_DEVEPTISR) Transmitted IN Data Interrupt Position */
 #define USBHS_DEVEPTISR_TXINI_Msk           (_U_(0x1) << USBHS_DEVEPTISR_TXINI_Pos)        /**< (USBHS_DEVEPTISR) Transmitted IN Data Interrupt Mask */
@@ -1282,21 +1344,9 @@ typedef union {
 #define USBHS_DEVEPTISR_RXOUTI_Pos          1                                              /**< (USBHS_DEVEPTISR) Received OUT Data Interrupt Position */
 #define USBHS_DEVEPTISR_RXOUTI_Msk          (_U_(0x1) << USBHS_DEVEPTISR_RXOUTI_Pos)       /**< (USBHS_DEVEPTISR) Received OUT Data Interrupt Mask */
 #define USBHS_DEVEPTISR_RXOUTI              USBHS_DEVEPTISR_RXOUTI_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_RXOUTI_Msk instead */
-#define USBHS_DEVEPTISR_RXSTPI_Pos          2                                              /**< (USBHS_DEVEPTISR) Received SETUP Interrupt Position */
-#define USBHS_DEVEPTISR_RXSTPI_Msk          (_U_(0x1) << USBHS_DEVEPTISR_RXSTPI_Pos)       /**< (USBHS_DEVEPTISR) Received SETUP Interrupt Mask */
-#define USBHS_DEVEPTISR_RXSTPI              USBHS_DEVEPTISR_RXSTPI_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_RXSTPI_Msk instead */
-#define USBHS_DEVEPTISR_NAKOUTI_Pos         3                                              /**< (USBHS_DEVEPTISR) NAKed OUT Interrupt Position */
-#define USBHS_DEVEPTISR_NAKOUTI_Msk         (_U_(0x1) << USBHS_DEVEPTISR_NAKOUTI_Pos)      /**< (USBHS_DEVEPTISR) NAKed OUT Interrupt Mask */
-#define USBHS_DEVEPTISR_NAKOUTI             USBHS_DEVEPTISR_NAKOUTI_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_NAKOUTI_Msk instead */
-#define USBHS_DEVEPTISR_NAKINI_Pos          4                                              /**< (USBHS_DEVEPTISR) NAKed IN Interrupt Position */
-#define USBHS_DEVEPTISR_NAKINI_Msk          (_U_(0x1) << USBHS_DEVEPTISR_NAKINI_Pos)       /**< (USBHS_DEVEPTISR) NAKed IN Interrupt Mask */
-#define USBHS_DEVEPTISR_NAKINI              USBHS_DEVEPTISR_NAKINI_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_NAKINI_Msk instead */
 #define USBHS_DEVEPTISR_OVERFI_Pos          5                                              /**< (USBHS_DEVEPTISR) Overflow Interrupt Position */
 #define USBHS_DEVEPTISR_OVERFI_Msk          (_U_(0x1) << USBHS_DEVEPTISR_OVERFI_Pos)       /**< (USBHS_DEVEPTISR) Overflow Interrupt Mask */
 #define USBHS_DEVEPTISR_OVERFI              USBHS_DEVEPTISR_OVERFI_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_OVERFI_Msk instead */
-#define USBHS_DEVEPTISR_STALLEDI_Pos        6                                              /**< (USBHS_DEVEPTISR) STALLed Interrupt Position */
-#define USBHS_DEVEPTISR_STALLEDI_Msk        (_U_(0x1) << USBHS_DEVEPTISR_STALLEDI_Pos)     /**< (USBHS_DEVEPTISR) STALLed Interrupt Mask */
-#define USBHS_DEVEPTISR_STALLEDI            USBHS_DEVEPTISR_STALLEDI_Msk                   /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_STALLEDI_Msk instead */
 #define USBHS_DEVEPTISR_SHORTPACKET_Pos     7                                              /**< (USBHS_DEVEPTISR) Short Packet Interrupt Position */
 #define USBHS_DEVEPTISR_SHORTPACKET_Msk     (_U_(0x1) << USBHS_DEVEPTISR_SHORTPACKET_Pos)  /**< (USBHS_DEVEPTISR) Short Packet Interrupt Mask */
 #define USBHS_DEVEPTISR_SHORTPACKET         USBHS_DEVEPTISR_SHORTPACKET_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_SHORTPACKET_Msk instead */
@@ -1334,38 +1384,147 @@ typedef union {
 #define USBHS_DEVEPTISR_RWALL_Pos           16                                             /**< (USBHS_DEVEPTISR) Read/Write Allowed Position */
 #define USBHS_DEVEPTISR_RWALL_Msk           (_U_(0x1) << USBHS_DEVEPTISR_RWALL_Pos)        /**< (USBHS_DEVEPTISR) Read/Write Allowed Mask */
 #define USBHS_DEVEPTISR_RWALL               USBHS_DEVEPTISR_RWALL_Msk                      /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_RWALL_Msk instead */
-#define USBHS_DEVEPTISR_CTRLDIR_Pos         17                                             /**< (USBHS_DEVEPTISR) Control Direction Position */
-#define USBHS_DEVEPTISR_CTRLDIR_Msk         (_U_(0x1) << USBHS_DEVEPTISR_CTRLDIR_Pos)      /**< (USBHS_DEVEPTISR) Control Direction Mask */
-#define USBHS_DEVEPTISR_CTRLDIR             USBHS_DEVEPTISR_CTRLDIR_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_CTRLDIR_Msk instead */
 #define USBHS_DEVEPTISR_CFGOK_Pos           18                                             /**< (USBHS_DEVEPTISR) Configuration OK Status Position */
 #define USBHS_DEVEPTISR_CFGOK_Msk           (_U_(0x1) << USBHS_DEVEPTISR_CFGOK_Pos)        /**< (USBHS_DEVEPTISR) Configuration OK Status Mask */
 #define USBHS_DEVEPTISR_CFGOK               USBHS_DEVEPTISR_CFGOK_Msk                      /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_CFGOK_Msk instead */
 #define USBHS_DEVEPTISR_BYCT_Pos            20                                             /**< (USBHS_DEVEPTISR) Byte Count Position */
 #define USBHS_DEVEPTISR_BYCT_Msk            (_U_(0x7FF) << USBHS_DEVEPTISR_BYCT_Pos)       /**< (USBHS_DEVEPTISR) Byte Count Mask */
 #define USBHS_DEVEPTISR_BYCT(value)         (USBHS_DEVEPTISR_BYCT_Msk & ((value) << USBHS_DEVEPTISR_BYCT_Pos))
-#define USBHS_DEVEPTISR_MASK                _U_(0x7FF7F3FF)                                /**< \deprecated (USBHS_DEVEPTISR) Register MASK  (Use USBHS_DEVEPTISR_Msk instead)  */
-#define USBHS_DEVEPTISR_Msk                 _U_(0x7FF7F3FF)                                /**< (USBHS_DEVEPTISR) Register Mask  */
+#define USBHS_DEVEPTISR_MASK                _U_(0x7FF5F3A3)                                /**< \deprecated (USBHS_DEVEPTISR) Register MASK  (Use USBHS_DEVEPTISR_Msk instead)  */
+#define USBHS_DEVEPTISR_Msk                 _U_(0x7FF5F3A3)                                /**< (USBHS_DEVEPTISR) Register Mask  */
+
+/* CTRL mode */
+#define USBHS_DEVEPTISR_CTRL_RXSTPI_Pos     2                                              /**< (USBHS_DEVEPTISR) Received SETUP Interrupt Position */
+#define USBHS_DEVEPTISR_CTRL_RXSTPI_Msk     (_U_(0x1) << USBHS_DEVEPTISR_CTRL_RXSTPI_Pos)  /**< (USBHS_DEVEPTISR) Received SETUP Interrupt Mask */
+#define USBHS_DEVEPTISR_CTRL_RXSTPI         USBHS_DEVEPTISR_CTRL_RXSTPI_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_CTRL_RXSTPI_Msk instead */
+#define USBHS_DEVEPTISR_CTRL_NAKOUTI_Pos    3                                              /**< (USBHS_DEVEPTISR) NAKed OUT Interrupt Position */
+#define USBHS_DEVEPTISR_CTRL_NAKOUTI_Msk    (_U_(0x1) << USBHS_DEVEPTISR_CTRL_NAKOUTI_Pos)  /**< (USBHS_DEVEPTISR) NAKed OUT Interrupt Mask */
+#define USBHS_DEVEPTISR_CTRL_NAKOUTI        USBHS_DEVEPTISR_CTRL_NAKOUTI_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_CTRL_NAKOUTI_Msk instead */
+#define USBHS_DEVEPTISR_CTRL_NAKINI_Pos     4                                              /**< (USBHS_DEVEPTISR) NAKed IN Interrupt Position */
+#define USBHS_DEVEPTISR_CTRL_NAKINI_Msk     (_U_(0x1) << USBHS_DEVEPTISR_CTRL_NAKINI_Pos)  /**< (USBHS_DEVEPTISR) NAKed IN Interrupt Mask */
+#define USBHS_DEVEPTISR_CTRL_NAKINI         USBHS_DEVEPTISR_CTRL_NAKINI_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_CTRL_NAKINI_Msk instead */
+#define USBHS_DEVEPTISR_CTRL_STALLEDI_Pos   6                                              /**< (USBHS_DEVEPTISR) STALLed Interrupt Position */
+#define USBHS_DEVEPTISR_CTRL_STALLEDI_Msk   (_U_(0x1) << USBHS_DEVEPTISR_CTRL_STALLEDI_Pos)  /**< (USBHS_DEVEPTISR) STALLed Interrupt Mask */
+#define USBHS_DEVEPTISR_CTRL_STALLEDI       USBHS_DEVEPTISR_CTRL_STALLEDI_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_CTRL_STALLEDI_Msk instead */
+#define USBHS_DEVEPTISR_CTRL_CTRLDIR_Pos    17                                             /**< (USBHS_DEVEPTISR) Control Direction Position */
+#define USBHS_DEVEPTISR_CTRL_CTRLDIR_Msk    (_U_(0x1) << USBHS_DEVEPTISR_CTRL_CTRLDIR_Pos)  /**< (USBHS_DEVEPTISR) Control Direction Mask */
+#define USBHS_DEVEPTISR_CTRL_CTRLDIR        USBHS_DEVEPTISR_CTRL_CTRLDIR_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_CTRL_CTRLDIR_Msk instead */
+#define USBHS_DEVEPTISR_CTRL_MASK           _U_(0x2005C)                                   /**< \deprecated (USBHS_DEVEPTISR_CTRL) Register MASK  (Use USBHS_DEVEPTISR_CTRL_Msk instead)  */
+#define USBHS_DEVEPTISR_CTRL_Msk            _U_(0x2005C)                                   /**< (USBHS_DEVEPTISR_CTRL) Register Mask  */
+
+/* ISO mode */
+#define USBHS_DEVEPTISR_ISO_UNDERFI_Pos     2                                              /**< (USBHS_DEVEPTISR) Underflow Interrupt Position */
+#define USBHS_DEVEPTISR_ISO_UNDERFI_Msk     (_U_(0x1) << USBHS_DEVEPTISR_ISO_UNDERFI_Pos)  /**< (USBHS_DEVEPTISR) Underflow Interrupt Mask */
+#define USBHS_DEVEPTISR_ISO_UNDERFI         USBHS_DEVEPTISR_ISO_UNDERFI_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_ISO_UNDERFI_Msk instead */
+#define USBHS_DEVEPTISR_ISO_HBISOINERRI_Pos 3                                              /**< (USBHS_DEVEPTISR) High Bandwidth Isochronous IN Underflow Error Interrupt Position */
+#define USBHS_DEVEPTISR_ISO_HBISOINERRI_Msk (_U_(0x1) << USBHS_DEVEPTISR_ISO_HBISOINERRI_Pos)  /**< (USBHS_DEVEPTISR) High Bandwidth Isochronous IN Underflow Error Interrupt Mask */
+#define USBHS_DEVEPTISR_ISO_HBISOINERRI     USBHS_DEVEPTISR_ISO_HBISOINERRI_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_ISO_HBISOINERRI_Msk instead */
+#define USBHS_DEVEPTISR_ISO_HBISOFLUSHI_Pos 4                                              /**< (USBHS_DEVEPTISR) High Bandwidth Isochronous IN Flush Interrupt Position */
+#define USBHS_DEVEPTISR_ISO_HBISOFLUSHI_Msk (_U_(0x1) << USBHS_DEVEPTISR_ISO_HBISOFLUSHI_Pos)  /**< (USBHS_DEVEPTISR) High Bandwidth Isochronous IN Flush Interrupt Mask */
+#define USBHS_DEVEPTISR_ISO_HBISOFLUSHI     USBHS_DEVEPTISR_ISO_HBISOFLUSHI_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_ISO_HBISOFLUSHI_Msk instead */
+#define USBHS_DEVEPTISR_ISO_CRCERRI_Pos     6                                              /**< (USBHS_DEVEPTISR) CRC Error Interrupt Position */
+#define USBHS_DEVEPTISR_ISO_CRCERRI_Msk     (_U_(0x1) << USBHS_DEVEPTISR_ISO_CRCERRI_Pos)  /**< (USBHS_DEVEPTISR) CRC Error Interrupt Mask */
+#define USBHS_DEVEPTISR_ISO_CRCERRI         USBHS_DEVEPTISR_ISO_CRCERRI_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_ISO_CRCERRI_Msk instead */
+#define USBHS_DEVEPTISR_ISO_ERRORTRANS_Pos  10                                             /**< (USBHS_DEVEPTISR) High-bandwidth Isochronous OUT Endpoint Transaction Error Interrupt Position */
+#define USBHS_DEVEPTISR_ISO_ERRORTRANS_Msk  (_U_(0x1) << USBHS_DEVEPTISR_ISO_ERRORTRANS_Pos)  /**< (USBHS_DEVEPTISR) High-bandwidth Isochronous OUT Endpoint Transaction Error Interrupt Mask */
+#define USBHS_DEVEPTISR_ISO_ERRORTRANS      USBHS_DEVEPTISR_ISO_ERRORTRANS_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_ISO_ERRORTRANS_Msk instead */
+#define USBHS_DEVEPTISR_ISO_MASK            _U_(0x45C)                                     /**< \deprecated (USBHS_DEVEPTISR_ISO) Register MASK  (Use USBHS_DEVEPTISR_ISO_Msk instead)  */
+#define USBHS_DEVEPTISR_ISO_Msk             _U_(0x45C)                                     /**< (USBHS_DEVEPTISR_ISO) Register Mask  */
+
+/* BLK mode */
+#define USBHS_DEVEPTISR_BLK_RXSTPI_Pos      2                                              /**< (USBHS_DEVEPTISR) Received SETUP Interrupt Position */
+#define USBHS_DEVEPTISR_BLK_RXSTPI_Msk      (_U_(0x1) << USBHS_DEVEPTISR_BLK_RXSTPI_Pos)   /**< (USBHS_DEVEPTISR) Received SETUP Interrupt Mask */
+#define USBHS_DEVEPTISR_BLK_RXSTPI          USBHS_DEVEPTISR_BLK_RXSTPI_Msk                 /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_BLK_RXSTPI_Msk instead */
+#define USBHS_DEVEPTISR_BLK_NAKOUTI_Pos     3                                              /**< (USBHS_DEVEPTISR) NAKed OUT Interrupt Position */
+#define USBHS_DEVEPTISR_BLK_NAKOUTI_Msk     (_U_(0x1) << USBHS_DEVEPTISR_BLK_NAKOUTI_Pos)  /**< (USBHS_DEVEPTISR) NAKed OUT Interrupt Mask */
+#define USBHS_DEVEPTISR_BLK_NAKOUTI         USBHS_DEVEPTISR_BLK_NAKOUTI_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_BLK_NAKOUTI_Msk instead */
+#define USBHS_DEVEPTISR_BLK_NAKINI_Pos      4                                              /**< (USBHS_DEVEPTISR) NAKed IN Interrupt Position */
+#define USBHS_DEVEPTISR_BLK_NAKINI_Msk      (_U_(0x1) << USBHS_DEVEPTISR_BLK_NAKINI_Pos)   /**< (USBHS_DEVEPTISR) NAKed IN Interrupt Mask */
+#define USBHS_DEVEPTISR_BLK_NAKINI          USBHS_DEVEPTISR_BLK_NAKINI_Msk                 /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_BLK_NAKINI_Msk instead */
+#define USBHS_DEVEPTISR_BLK_STALLEDI_Pos    6                                              /**< (USBHS_DEVEPTISR) STALLed Interrupt Position */
+#define USBHS_DEVEPTISR_BLK_STALLEDI_Msk    (_U_(0x1) << USBHS_DEVEPTISR_BLK_STALLEDI_Pos)  /**< (USBHS_DEVEPTISR) STALLed Interrupt Mask */
+#define USBHS_DEVEPTISR_BLK_STALLEDI        USBHS_DEVEPTISR_BLK_STALLEDI_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_BLK_STALLEDI_Msk instead */
+#define USBHS_DEVEPTISR_BLK_CTRLDIR_Pos     17                                             /**< (USBHS_DEVEPTISR) Control Direction Position */
+#define USBHS_DEVEPTISR_BLK_CTRLDIR_Msk     (_U_(0x1) << USBHS_DEVEPTISR_BLK_CTRLDIR_Pos)  /**< (USBHS_DEVEPTISR) Control Direction Mask */
+#define USBHS_DEVEPTISR_BLK_CTRLDIR         USBHS_DEVEPTISR_BLK_CTRLDIR_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_BLK_CTRLDIR_Msk instead */
+#define USBHS_DEVEPTISR_BLK_MASK            _U_(0x2005C)                                   /**< \deprecated (USBHS_DEVEPTISR_BLK) Register MASK  (Use USBHS_DEVEPTISR_BLK_Msk instead)  */
+#define USBHS_DEVEPTISR_BLK_Msk             _U_(0x2005C)                                   /**< (USBHS_DEVEPTISR_BLK) Register Mask  */
+
+/* INTRPT mode */
+#define USBHS_DEVEPTISR_INTRPT_RXSTPI_Pos   2                                              /**< (USBHS_DEVEPTISR) Received SETUP Interrupt Position */
+#define USBHS_DEVEPTISR_INTRPT_RXSTPI_Msk   (_U_(0x1) << USBHS_DEVEPTISR_INTRPT_RXSTPI_Pos)  /**< (USBHS_DEVEPTISR) Received SETUP Interrupt Mask */
+#define USBHS_DEVEPTISR_INTRPT_RXSTPI       USBHS_DEVEPTISR_INTRPT_RXSTPI_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_INTRPT_RXSTPI_Msk instead */
+#define USBHS_DEVEPTISR_INTRPT_NAKOUTI_Pos  3                                              /**< (USBHS_DEVEPTISR) NAKed OUT Interrupt Position */
+#define USBHS_DEVEPTISR_INTRPT_NAKOUTI_Msk  (_U_(0x1) << USBHS_DEVEPTISR_INTRPT_NAKOUTI_Pos)  /**< (USBHS_DEVEPTISR) NAKed OUT Interrupt Mask */
+#define USBHS_DEVEPTISR_INTRPT_NAKOUTI      USBHS_DEVEPTISR_INTRPT_NAKOUTI_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_INTRPT_NAKOUTI_Msk instead */
+#define USBHS_DEVEPTISR_INTRPT_NAKINI_Pos   4                                              /**< (USBHS_DEVEPTISR) NAKed IN Interrupt Position */
+#define USBHS_DEVEPTISR_INTRPT_NAKINI_Msk   (_U_(0x1) << USBHS_DEVEPTISR_INTRPT_NAKINI_Pos)  /**< (USBHS_DEVEPTISR) NAKed IN Interrupt Mask */
+#define USBHS_DEVEPTISR_INTRPT_NAKINI       USBHS_DEVEPTISR_INTRPT_NAKINI_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_INTRPT_NAKINI_Msk instead */
+#define USBHS_DEVEPTISR_INTRPT_STALLEDI_Pos 6                                              /**< (USBHS_DEVEPTISR) STALLed Interrupt Position */
+#define USBHS_DEVEPTISR_INTRPT_STALLEDI_Msk (_U_(0x1) << USBHS_DEVEPTISR_INTRPT_STALLEDI_Pos)  /**< (USBHS_DEVEPTISR) STALLed Interrupt Mask */
+#define USBHS_DEVEPTISR_INTRPT_STALLEDI     USBHS_DEVEPTISR_INTRPT_STALLEDI_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_INTRPT_STALLEDI_Msk instead */
+#define USBHS_DEVEPTISR_INTRPT_CTRLDIR_Pos  17                                             /**< (USBHS_DEVEPTISR) Control Direction Position */
+#define USBHS_DEVEPTISR_INTRPT_CTRLDIR_Msk  (_U_(0x1) << USBHS_DEVEPTISR_INTRPT_CTRLDIR_Pos)  /**< (USBHS_DEVEPTISR) Control Direction Mask */
+#define USBHS_DEVEPTISR_INTRPT_CTRLDIR      USBHS_DEVEPTISR_INTRPT_CTRLDIR_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTISR_INTRPT_CTRLDIR_Msk instead */
+#define USBHS_DEVEPTISR_INTRPT_MASK         _U_(0x2005C)                                   /**< \deprecated (USBHS_DEVEPTISR_INTRPT) Register MASK  (Use USBHS_DEVEPTISR_INTRPT_Msk instead)  */
+#define USBHS_DEVEPTISR_INTRPT_Msk          _U_(0x2005C)                                   /**< (USBHS_DEVEPTISR_INTRPT) Register Mask  */
 
 
-/* -------- USBHS_DEVEPTICR : (USBHS Offset: 0x160) (/W 32) Device Endpoint Clear Register (n = 0) 0 -------- */
+/* -------- USBHS_DEVEPTICR : (USBHS Offset: 0x160) (/W 32) Device Endpoint Interrupt Clear Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXINIC:1;                  /**< bit:      0  Transmitted IN Data Interrupt Clear      */
     uint32_t RXOUTIC:1;                 /**< bit:      1  Received OUT Data Interrupt Clear        */
-    uint32_t RXSTPIC:1;                 /**< bit:      2  Received SETUP Interrupt Clear           */
-    uint32_t NAKOUTIC:1;                /**< bit:      3  NAKed OUT Interrupt Clear                */
-    uint32_t NAKINIC:1;                 /**< bit:      4  NAKed IN Interrupt Clear                 */
+    uint32_t :3;                        /**< bit:   2..4  Reserved */
     uint32_t OVERFIC:1;                 /**< bit:      5  Overflow Interrupt Clear                 */
-    uint32_t STALLEDIC:1;               /**< bit:      6  STALLed Interrupt Clear                  */
+    uint32_t :1;                        /**< bit:      6  Reserved */
     uint32_t SHORTPACKETC:1;            /**< bit:      7  Short Packet Interrupt Clear             */
     uint32_t :24;                       /**< bit:  8..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct { // CTRL mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPIC:1;                 /**< bit:      2  Received SETUP Interrupt Clear           */
+    uint32_t NAKOUTIC:1;                /**< bit:      3  NAKed OUT Interrupt Clear                */
+    uint32_t NAKINIC:1;                 /**< bit:      4  NAKed IN Interrupt Clear                 */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDIC:1;               /**< bit:      6  STALLed Interrupt Clear                  */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } CTRL;                                /**< Structure used for CTRL mode access */
+  struct { // ISO mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFIC:1;                /**< bit:      2  Underflow Interrupt Clear                */
+    uint32_t HBISOINERRIC:1;            /**< bit:      3  High Bandwidth Isochronous IN Underflow Error Interrupt Clear */
+    uint32_t HBISOFLUSHIC:1;            /**< bit:      4  High Bandwidth Isochronous IN Flush Interrupt Clear */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t CRCERRIC:1;                /**< bit:      6  CRC Error Interrupt Clear                */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } ISO;                                /**< Structure used for ISO mode access */
+  struct { // BLK mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPIC:1;                 /**< bit:      2  Received SETUP Interrupt Clear           */
+    uint32_t NAKOUTIC:1;                /**< bit:      3  NAKed OUT Interrupt Clear                */
+    uint32_t NAKINIC:1;                 /**< bit:      4  NAKed IN Interrupt Clear                 */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDIC:1;               /**< bit:      6  STALLed Interrupt Clear                  */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } BLK;                                /**< Structure used for BLK mode access */
+  struct { // INTRPT mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPIC:1;                 /**< bit:      2  Received SETUP Interrupt Clear           */
+    uint32_t NAKOUTIC:1;                /**< bit:      3  NAKed OUT Interrupt Clear                */
+    uint32_t NAKINIC:1;                 /**< bit:      4  NAKed IN Interrupt Clear                 */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDIC:1;               /**< bit:      6  STALLed Interrupt Clear                  */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } INTRPT;                                /**< Structure used for INTRPT mode access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPTICR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_DEVEPTICR_OFFSET              (0x160)                                       /**<  (USBHS_DEVEPTICR) Device Endpoint Clear Register (n = 0) 0  Offset */
+#define USBHS_DEVEPTICR_OFFSET              (0x160)                                       /**<  (USBHS_DEVEPTICR) Device Endpoint Interrupt Clear Register  Offset */
 
 #define USBHS_DEVEPTICR_TXINIC_Pos          0                                              /**< (USBHS_DEVEPTICR) Transmitted IN Data Interrupt Clear Position */
 #define USBHS_DEVEPTICR_TXINIC_Msk          (_U_(0x1) << USBHS_DEVEPTICR_TXINIC_Pos)       /**< (USBHS_DEVEPTICR) Transmitted IN Data Interrupt Clear Mask */
@@ -1373,49 +1532,137 @@ typedef union {
 #define USBHS_DEVEPTICR_RXOUTIC_Pos         1                                              /**< (USBHS_DEVEPTICR) Received OUT Data Interrupt Clear Position */
 #define USBHS_DEVEPTICR_RXOUTIC_Msk         (_U_(0x1) << USBHS_DEVEPTICR_RXOUTIC_Pos)      /**< (USBHS_DEVEPTICR) Received OUT Data Interrupt Clear Mask */
 #define USBHS_DEVEPTICR_RXOUTIC             USBHS_DEVEPTICR_RXOUTIC_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_RXOUTIC_Msk instead */
-#define USBHS_DEVEPTICR_RXSTPIC_Pos         2                                              /**< (USBHS_DEVEPTICR) Received SETUP Interrupt Clear Position */
-#define USBHS_DEVEPTICR_RXSTPIC_Msk         (_U_(0x1) << USBHS_DEVEPTICR_RXSTPIC_Pos)      /**< (USBHS_DEVEPTICR) Received SETUP Interrupt Clear Mask */
-#define USBHS_DEVEPTICR_RXSTPIC             USBHS_DEVEPTICR_RXSTPIC_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_RXSTPIC_Msk instead */
-#define USBHS_DEVEPTICR_NAKOUTIC_Pos        3                                              /**< (USBHS_DEVEPTICR) NAKed OUT Interrupt Clear Position */
-#define USBHS_DEVEPTICR_NAKOUTIC_Msk        (_U_(0x1) << USBHS_DEVEPTICR_NAKOUTIC_Pos)     /**< (USBHS_DEVEPTICR) NAKed OUT Interrupt Clear Mask */
-#define USBHS_DEVEPTICR_NAKOUTIC            USBHS_DEVEPTICR_NAKOUTIC_Msk                   /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_NAKOUTIC_Msk instead */
-#define USBHS_DEVEPTICR_NAKINIC_Pos         4                                              /**< (USBHS_DEVEPTICR) NAKed IN Interrupt Clear Position */
-#define USBHS_DEVEPTICR_NAKINIC_Msk         (_U_(0x1) << USBHS_DEVEPTICR_NAKINIC_Pos)      /**< (USBHS_DEVEPTICR) NAKed IN Interrupt Clear Mask */
-#define USBHS_DEVEPTICR_NAKINIC             USBHS_DEVEPTICR_NAKINIC_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_NAKINIC_Msk instead */
 #define USBHS_DEVEPTICR_OVERFIC_Pos         5                                              /**< (USBHS_DEVEPTICR) Overflow Interrupt Clear Position */
 #define USBHS_DEVEPTICR_OVERFIC_Msk         (_U_(0x1) << USBHS_DEVEPTICR_OVERFIC_Pos)      /**< (USBHS_DEVEPTICR) Overflow Interrupt Clear Mask */
 #define USBHS_DEVEPTICR_OVERFIC             USBHS_DEVEPTICR_OVERFIC_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_OVERFIC_Msk instead */
-#define USBHS_DEVEPTICR_STALLEDIC_Pos       6                                              /**< (USBHS_DEVEPTICR) STALLed Interrupt Clear Position */
-#define USBHS_DEVEPTICR_STALLEDIC_Msk       (_U_(0x1) << USBHS_DEVEPTICR_STALLEDIC_Pos)    /**< (USBHS_DEVEPTICR) STALLed Interrupt Clear Mask */
-#define USBHS_DEVEPTICR_STALLEDIC           USBHS_DEVEPTICR_STALLEDIC_Msk                  /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_STALLEDIC_Msk instead */
 #define USBHS_DEVEPTICR_SHORTPACKETC_Pos    7                                              /**< (USBHS_DEVEPTICR) Short Packet Interrupt Clear Position */
 #define USBHS_DEVEPTICR_SHORTPACKETC_Msk    (_U_(0x1) << USBHS_DEVEPTICR_SHORTPACKETC_Pos)  /**< (USBHS_DEVEPTICR) Short Packet Interrupt Clear Mask */
 #define USBHS_DEVEPTICR_SHORTPACKETC        USBHS_DEVEPTICR_SHORTPACKETC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_SHORTPACKETC_Msk instead */
-#define USBHS_DEVEPTICR_MASK                _U_(0xFF)                                      /**< \deprecated (USBHS_DEVEPTICR) Register MASK  (Use USBHS_DEVEPTICR_Msk instead)  */
-#define USBHS_DEVEPTICR_Msk                 _U_(0xFF)                                      /**< (USBHS_DEVEPTICR) Register Mask  */
+#define USBHS_DEVEPTICR_MASK                _U_(0xA3)                                      /**< \deprecated (USBHS_DEVEPTICR) Register MASK  (Use USBHS_DEVEPTICR_Msk instead)  */
+#define USBHS_DEVEPTICR_Msk                 _U_(0xA3)                                      /**< (USBHS_DEVEPTICR) Register Mask  */
+
+/* CTRL mode */
+#define USBHS_DEVEPTICR_CTRL_RXSTPIC_Pos    2                                              /**< (USBHS_DEVEPTICR) Received SETUP Interrupt Clear Position */
+#define USBHS_DEVEPTICR_CTRL_RXSTPIC_Msk    (_U_(0x1) << USBHS_DEVEPTICR_CTRL_RXSTPIC_Pos)  /**< (USBHS_DEVEPTICR) Received SETUP Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_CTRL_RXSTPIC        USBHS_DEVEPTICR_CTRL_RXSTPIC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_CTRL_RXSTPIC_Msk instead */
+#define USBHS_DEVEPTICR_CTRL_NAKOUTIC_Pos   3                                              /**< (USBHS_DEVEPTICR) NAKed OUT Interrupt Clear Position */
+#define USBHS_DEVEPTICR_CTRL_NAKOUTIC_Msk   (_U_(0x1) << USBHS_DEVEPTICR_CTRL_NAKOUTIC_Pos)  /**< (USBHS_DEVEPTICR) NAKed OUT Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_CTRL_NAKOUTIC       USBHS_DEVEPTICR_CTRL_NAKOUTIC_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_CTRL_NAKOUTIC_Msk instead */
+#define USBHS_DEVEPTICR_CTRL_NAKINIC_Pos    4                                              /**< (USBHS_DEVEPTICR) NAKed IN Interrupt Clear Position */
+#define USBHS_DEVEPTICR_CTRL_NAKINIC_Msk    (_U_(0x1) << USBHS_DEVEPTICR_CTRL_NAKINIC_Pos)  /**< (USBHS_DEVEPTICR) NAKed IN Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_CTRL_NAKINIC        USBHS_DEVEPTICR_CTRL_NAKINIC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_CTRL_NAKINIC_Msk instead */
+#define USBHS_DEVEPTICR_CTRL_STALLEDIC_Pos  6                                              /**< (USBHS_DEVEPTICR) STALLed Interrupt Clear Position */
+#define USBHS_DEVEPTICR_CTRL_STALLEDIC_Msk  (_U_(0x1) << USBHS_DEVEPTICR_CTRL_STALLEDIC_Pos)  /**< (USBHS_DEVEPTICR) STALLed Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_CTRL_STALLEDIC      USBHS_DEVEPTICR_CTRL_STALLEDIC_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_CTRL_STALLEDIC_Msk instead */
+#define USBHS_DEVEPTICR_CTRL_MASK           _U_(0x5C)                                      /**< \deprecated (USBHS_DEVEPTICR_CTRL) Register MASK  (Use USBHS_DEVEPTICR_CTRL_Msk instead)  */
+#define USBHS_DEVEPTICR_CTRL_Msk            _U_(0x5C)                                      /**< (USBHS_DEVEPTICR_CTRL) Register Mask  */
+
+/* ISO mode */
+#define USBHS_DEVEPTICR_ISO_UNDERFIC_Pos    2                                              /**< (USBHS_DEVEPTICR) Underflow Interrupt Clear Position */
+#define USBHS_DEVEPTICR_ISO_UNDERFIC_Msk    (_U_(0x1) << USBHS_DEVEPTICR_ISO_UNDERFIC_Pos)  /**< (USBHS_DEVEPTICR) Underflow Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_ISO_UNDERFIC        USBHS_DEVEPTICR_ISO_UNDERFIC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_ISO_UNDERFIC_Msk instead */
+#define USBHS_DEVEPTICR_ISO_HBISOINERRIC_Pos 3                                              /**< (USBHS_DEVEPTICR) High Bandwidth Isochronous IN Underflow Error Interrupt Clear Position */
+#define USBHS_DEVEPTICR_ISO_HBISOINERRIC_Msk (_U_(0x1) << USBHS_DEVEPTICR_ISO_HBISOINERRIC_Pos)  /**< (USBHS_DEVEPTICR) High Bandwidth Isochronous IN Underflow Error Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_ISO_HBISOINERRIC    USBHS_DEVEPTICR_ISO_HBISOINERRIC_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_ISO_HBISOINERRIC_Msk instead */
+#define USBHS_DEVEPTICR_ISO_HBISOFLUSHIC_Pos 4                                              /**< (USBHS_DEVEPTICR) High Bandwidth Isochronous IN Flush Interrupt Clear Position */
+#define USBHS_DEVEPTICR_ISO_HBISOFLUSHIC_Msk (_U_(0x1) << USBHS_DEVEPTICR_ISO_HBISOFLUSHIC_Pos)  /**< (USBHS_DEVEPTICR) High Bandwidth Isochronous IN Flush Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_ISO_HBISOFLUSHIC    USBHS_DEVEPTICR_ISO_HBISOFLUSHIC_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_ISO_HBISOFLUSHIC_Msk instead */
+#define USBHS_DEVEPTICR_ISO_CRCERRIC_Pos    6                                              /**< (USBHS_DEVEPTICR) CRC Error Interrupt Clear Position */
+#define USBHS_DEVEPTICR_ISO_CRCERRIC_Msk    (_U_(0x1) << USBHS_DEVEPTICR_ISO_CRCERRIC_Pos)  /**< (USBHS_DEVEPTICR) CRC Error Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_ISO_CRCERRIC        USBHS_DEVEPTICR_ISO_CRCERRIC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_ISO_CRCERRIC_Msk instead */
+#define USBHS_DEVEPTICR_ISO_MASK            _U_(0x5C)                                      /**< \deprecated (USBHS_DEVEPTICR_ISO) Register MASK  (Use USBHS_DEVEPTICR_ISO_Msk instead)  */
+#define USBHS_DEVEPTICR_ISO_Msk             _U_(0x5C)                                      /**< (USBHS_DEVEPTICR_ISO) Register Mask  */
+
+/* BLK mode */
+#define USBHS_DEVEPTICR_BLK_RXSTPIC_Pos     2                                              /**< (USBHS_DEVEPTICR) Received SETUP Interrupt Clear Position */
+#define USBHS_DEVEPTICR_BLK_RXSTPIC_Msk     (_U_(0x1) << USBHS_DEVEPTICR_BLK_RXSTPIC_Pos)  /**< (USBHS_DEVEPTICR) Received SETUP Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_BLK_RXSTPIC         USBHS_DEVEPTICR_BLK_RXSTPIC_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_BLK_RXSTPIC_Msk instead */
+#define USBHS_DEVEPTICR_BLK_NAKOUTIC_Pos    3                                              /**< (USBHS_DEVEPTICR) NAKed OUT Interrupt Clear Position */
+#define USBHS_DEVEPTICR_BLK_NAKOUTIC_Msk    (_U_(0x1) << USBHS_DEVEPTICR_BLK_NAKOUTIC_Pos)  /**< (USBHS_DEVEPTICR) NAKed OUT Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_BLK_NAKOUTIC        USBHS_DEVEPTICR_BLK_NAKOUTIC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_BLK_NAKOUTIC_Msk instead */
+#define USBHS_DEVEPTICR_BLK_NAKINIC_Pos     4                                              /**< (USBHS_DEVEPTICR) NAKed IN Interrupt Clear Position */
+#define USBHS_DEVEPTICR_BLK_NAKINIC_Msk     (_U_(0x1) << USBHS_DEVEPTICR_BLK_NAKINIC_Pos)  /**< (USBHS_DEVEPTICR) NAKed IN Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_BLK_NAKINIC         USBHS_DEVEPTICR_BLK_NAKINIC_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_BLK_NAKINIC_Msk instead */
+#define USBHS_DEVEPTICR_BLK_STALLEDIC_Pos   6                                              /**< (USBHS_DEVEPTICR) STALLed Interrupt Clear Position */
+#define USBHS_DEVEPTICR_BLK_STALLEDIC_Msk   (_U_(0x1) << USBHS_DEVEPTICR_BLK_STALLEDIC_Pos)  /**< (USBHS_DEVEPTICR) STALLed Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_BLK_STALLEDIC       USBHS_DEVEPTICR_BLK_STALLEDIC_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_BLK_STALLEDIC_Msk instead */
+#define USBHS_DEVEPTICR_BLK_MASK            _U_(0x5C)                                      /**< \deprecated (USBHS_DEVEPTICR_BLK) Register MASK  (Use USBHS_DEVEPTICR_BLK_Msk instead)  */
+#define USBHS_DEVEPTICR_BLK_Msk             _U_(0x5C)                                      /**< (USBHS_DEVEPTICR_BLK) Register Mask  */
+
+/* INTRPT mode */
+#define USBHS_DEVEPTICR_INTRPT_RXSTPIC_Pos  2                                              /**< (USBHS_DEVEPTICR) Received SETUP Interrupt Clear Position */
+#define USBHS_DEVEPTICR_INTRPT_RXSTPIC_Msk  (_U_(0x1) << USBHS_DEVEPTICR_INTRPT_RXSTPIC_Pos)  /**< (USBHS_DEVEPTICR) Received SETUP Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_INTRPT_RXSTPIC      USBHS_DEVEPTICR_INTRPT_RXSTPIC_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_INTRPT_RXSTPIC_Msk instead */
+#define USBHS_DEVEPTICR_INTRPT_NAKOUTIC_Pos 3                                              /**< (USBHS_DEVEPTICR) NAKed OUT Interrupt Clear Position */
+#define USBHS_DEVEPTICR_INTRPT_NAKOUTIC_Msk (_U_(0x1) << USBHS_DEVEPTICR_INTRPT_NAKOUTIC_Pos)  /**< (USBHS_DEVEPTICR) NAKed OUT Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_INTRPT_NAKOUTIC     USBHS_DEVEPTICR_INTRPT_NAKOUTIC_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_INTRPT_NAKOUTIC_Msk instead */
+#define USBHS_DEVEPTICR_INTRPT_NAKINIC_Pos  4                                              /**< (USBHS_DEVEPTICR) NAKed IN Interrupt Clear Position */
+#define USBHS_DEVEPTICR_INTRPT_NAKINIC_Msk  (_U_(0x1) << USBHS_DEVEPTICR_INTRPT_NAKINIC_Pos)  /**< (USBHS_DEVEPTICR) NAKed IN Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_INTRPT_NAKINIC      USBHS_DEVEPTICR_INTRPT_NAKINIC_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_INTRPT_NAKINIC_Msk instead */
+#define USBHS_DEVEPTICR_INTRPT_STALLEDIC_Pos 6                                              /**< (USBHS_DEVEPTICR) STALLed Interrupt Clear Position */
+#define USBHS_DEVEPTICR_INTRPT_STALLEDIC_Msk (_U_(0x1) << USBHS_DEVEPTICR_INTRPT_STALLEDIC_Pos)  /**< (USBHS_DEVEPTICR) STALLed Interrupt Clear Mask */
+#define USBHS_DEVEPTICR_INTRPT_STALLEDIC    USBHS_DEVEPTICR_INTRPT_STALLEDIC_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTICR_INTRPT_STALLEDIC_Msk instead */
+#define USBHS_DEVEPTICR_INTRPT_MASK         _U_(0x5C)                                      /**< \deprecated (USBHS_DEVEPTICR_INTRPT) Register MASK  (Use USBHS_DEVEPTICR_INTRPT_Msk instead)  */
+#define USBHS_DEVEPTICR_INTRPT_Msk          _U_(0x5C)                                      /**< (USBHS_DEVEPTICR_INTRPT) Register Mask  */
 
 
-/* -------- USBHS_DEVEPTIFR : (USBHS Offset: 0x190) (/W 32) Device Endpoint Set Register (n = 0) 0 -------- */
+/* -------- USBHS_DEVEPTIFR : (USBHS Offset: 0x190) (/W 32) Device Endpoint Interrupt Set Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXINIS:1;                  /**< bit:      0  Transmitted IN Data Interrupt Set        */
     uint32_t RXOUTIS:1;                 /**< bit:      1  Received OUT Data Interrupt Set          */
-    uint32_t RXSTPIS:1;                 /**< bit:      2  Received SETUP Interrupt Set             */
-    uint32_t NAKOUTIS:1;                /**< bit:      3  NAKed OUT Interrupt Set                  */
-    uint32_t NAKINIS:1;                 /**< bit:      4  NAKed IN Interrupt Set                   */
+    uint32_t :3;                        /**< bit:   2..4  Reserved */
     uint32_t OVERFIS:1;                 /**< bit:      5  Overflow Interrupt Set                   */
-    uint32_t STALLEDIS:1;               /**< bit:      6  STALLed Interrupt Set                    */
+    uint32_t :1;                        /**< bit:      6  Reserved */
     uint32_t SHORTPACKETS:1;            /**< bit:      7  Short Packet Interrupt Set               */
     uint32_t :4;                        /**< bit:  8..11  Reserved */
     uint32_t NBUSYBKS:1;                /**< bit:     12  Number of Busy Banks Interrupt Set       */
     uint32_t :19;                       /**< bit: 13..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct { // CTRL mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPIS:1;                 /**< bit:      2  Received SETUP Interrupt Set             */
+    uint32_t NAKOUTIS:1;                /**< bit:      3  NAKed OUT Interrupt Set                  */
+    uint32_t NAKINIS:1;                 /**< bit:      4  NAKed IN Interrupt Set                   */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDIS:1;               /**< bit:      6  STALLed Interrupt Set                    */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } CTRL;                                /**< Structure used for CTRL mode access */
+  struct { // ISO mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFIS:1;                /**< bit:      2  Underflow Interrupt Set                  */
+    uint32_t HBISOINERRIS:1;            /**< bit:      3  High Bandwidth Isochronous IN Underflow Error Interrupt Set */
+    uint32_t HBISOFLUSHIS:1;            /**< bit:      4  High Bandwidth Isochronous IN Flush Interrupt Set */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t CRCERRIS:1;                /**< bit:      6  CRC Error Interrupt Set                  */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } ISO;                                /**< Structure used for ISO mode access */
+  struct { // BLK mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPIS:1;                 /**< bit:      2  Received SETUP Interrupt Set             */
+    uint32_t NAKOUTIS:1;                /**< bit:      3  NAKed OUT Interrupt Set                  */
+    uint32_t NAKINIS:1;                 /**< bit:      4  NAKed IN Interrupt Set                   */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDIS:1;               /**< bit:      6  STALLed Interrupt Set                    */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } BLK;                                /**< Structure used for BLK mode access */
+  struct { // INTRPT mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPIS:1;                 /**< bit:      2  Received SETUP Interrupt Set             */
+    uint32_t NAKOUTIS:1;                /**< bit:      3  NAKed OUT Interrupt Set                  */
+    uint32_t NAKINIS:1;                 /**< bit:      4  NAKed IN Interrupt Set                   */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDIS:1;               /**< bit:      6  STALLed Interrupt Set                    */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } INTRPT;                                /**< Structure used for INTRPT mode access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPTIFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_DEVEPTIFR_OFFSET              (0x190)                                       /**<  (USBHS_DEVEPTIFR) Device Endpoint Set Register (n = 0) 0  Offset */
+#define USBHS_DEVEPTIFR_OFFSET              (0x190)                                       /**<  (USBHS_DEVEPTIFR) Device Endpoint Interrupt Set Register  Offset */
 
 #define USBHS_DEVEPTIFR_TXINIS_Pos          0                                              /**< (USBHS_DEVEPTIFR) Transmitted IN Data Interrupt Set Position */
 #define USBHS_DEVEPTIFR_TXINIS_Msk          (_U_(0x1) << USBHS_DEVEPTIFR_TXINIS_Pos)       /**< (USBHS_DEVEPTIFR) Transmitted IN Data Interrupt Set Mask */
@@ -1423,42 +1670,93 @@ typedef union {
 #define USBHS_DEVEPTIFR_RXOUTIS_Pos         1                                              /**< (USBHS_DEVEPTIFR) Received OUT Data Interrupt Set Position */
 #define USBHS_DEVEPTIFR_RXOUTIS_Msk         (_U_(0x1) << USBHS_DEVEPTIFR_RXOUTIS_Pos)      /**< (USBHS_DEVEPTIFR) Received OUT Data Interrupt Set Mask */
 #define USBHS_DEVEPTIFR_RXOUTIS             USBHS_DEVEPTIFR_RXOUTIS_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_RXOUTIS_Msk instead */
-#define USBHS_DEVEPTIFR_RXSTPIS_Pos         2                                              /**< (USBHS_DEVEPTIFR) Received SETUP Interrupt Set Position */
-#define USBHS_DEVEPTIFR_RXSTPIS_Msk         (_U_(0x1) << USBHS_DEVEPTIFR_RXSTPIS_Pos)      /**< (USBHS_DEVEPTIFR) Received SETUP Interrupt Set Mask */
-#define USBHS_DEVEPTIFR_RXSTPIS             USBHS_DEVEPTIFR_RXSTPIS_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_RXSTPIS_Msk instead */
-#define USBHS_DEVEPTIFR_NAKOUTIS_Pos        3                                              /**< (USBHS_DEVEPTIFR) NAKed OUT Interrupt Set Position */
-#define USBHS_DEVEPTIFR_NAKOUTIS_Msk        (_U_(0x1) << USBHS_DEVEPTIFR_NAKOUTIS_Pos)     /**< (USBHS_DEVEPTIFR) NAKed OUT Interrupt Set Mask */
-#define USBHS_DEVEPTIFR_NAKOUTIS            USBHS_DEVEPTIFR_NAKOUTIS_Msk                   /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_NAKOUTIS_Msk instead */
-#define USBHS_DEVEPTIFR_NAKINIS_Pos         4                                              /**< (USBHS_DEVEPTIFR) NAKed IN Interrupt Set Position */
-#define USBHS_DEVEPTIFR_NAKINIS_Msk         (_U_(0x1) << USBHS_DEVEPTIFR_NAKINIS_Pos)      /**< (USBHS_DEVEPTIFR) NAKed IN Interrupt Set Mask */
-#define USBHS_DEVEPTIFR_NAKINIS             USBHS_DEVEPTIFR_NAKINIS_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_NAKINIS_Msk instead */
 #define USBHS_DEVEPTIFR_OVERFIS_Pos         5                                              /**< (USBHS_DEVEPTIFR) Overflow Interrupt Set Position */
 #define USBHS_DEVEPTIFR_OVERFIS_Msk         (_U_(0x1) << USBHS_DEVEPTIFR_OVERFIS_Pos)      /**< (USBHS_DEVEPTIFR) Overflow Interrupt Set Mask */
 #define USBHS_DEVEPTIFR_OVERFIS             USBHS_DEVEPTIFR_OVERFIS_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_OVERFIS_Msk instead */
-#define USBHS_DEVEPTIFR_STALLEDIS_Pos       6                                              /**< (USBHS_DEVEPTIFR) STALLed Interrupt Set Position */
-#define USBHS_DEVEPTIFR_STALLEDIS_Msk       (_U_(0x1) << USBHS_DEVEPTIFR_STALLEDIS_Pos)    /**< (USBHS_DEVEPTIFR) STALLed Interrupt Set Mask */
-#define USBHS_DEVEPTIFR_STALLEDIS           USBHS_DEVEPTIFR_STALLEDIS_Msk                  /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_STALLEDIS_Msk instead */
 #define USBHS_DEVEPTIFR_SHORTPACKETS_Pos    7                                              /**< (USBHS_DEVEPTIFR) Short Packet Interrupt Set Position */
 #define USBHS_DEVEPTIFR_SHORTPACKETS_Msk    (_U_(0x1) << USBHS_DEVEPTIFR_SHORTPACKETS_Pos)  /**< (USBHS_DEVEPTIFR) Short Packet Interrupt Set Mask */
 #define USBHS_DEVEPTIFR_SHORTPACKETS        USBHS_DEVEPTIFR_SHORTPACKETS_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_SHORTPACKETS_Msk instead */
 #define USBHS_DEVEPTIFR_NBUSYBKS_Pos        12                                             /**< (USBHS_DEVEPTIFR) Number of Busy Banks Interrupt Set Position */
 #define USBHS_DEVEPTIFR_NBUSYBKS_Msk        (_U_(0x1) << USBHS_DEVEPTIFR_NBUSYBKS_Pos)     /**< (USBHS_DEVEPTIFR) Number of Busy Banks Interrupt Set Mask */
 #define USBHS_DEVEPTIFR_NBUSYBKS            USBHS_DEVEPTIFR_NBUSYBKS_Msk                   /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_NBUSYBKS_Msk instead */
-#define USBHS_DEVEPTIFR_MASK                _U_(0x10FF)                                    /**< \deprecated (USBHS_DEVEPTIFR) Register MASK  (Use USBHS_DEVEPTIFR_Msk instead)  */
-#define USBHS_DEVEPTIFR_Msk                 _U_(0x10FF)                                    /**< (USBHS_DEVEPTIFR) Register Mask  */
+#define USBHS_DEVEPTIFR_MASK                _U_(0x10A3)                                    /**< \deprecated (USBHS_DEVEPTIFR) Register MASK  (Use USBHS_DEVEPTIFR_Msk instead)  */
+#define USBHS_DEVEPTIFR_Msk                 _U_(0x10A3)                                    /**< (USBHS_DEVEPTIFR) Register Mask  */
+
+/* CTRL mode */
+#define USBHS_DEVEPTIFR_CTRL_RXSTPIS_Pos    2                                              /**< (USBHS_DEVEPTIFR) Received SETUP Interrupt Set Position */
+#define USBHS_DEVEPTIFR_CTRL_RXSTPIS_Msk    (_U_(0x1) << USBHS_DEVEPTIFR_CTRL_RXSTPIS_Pos)  /**< (USBHS_DEVEPTIFR) Received SETUP Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_CTRL_RXSTPIS        USBHS_DEVEPTIFR_CTRL_RXSTPIS_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_CTRL_RXSTPIS_Msk instead */
+#define USBHS_DEVEPTIFR_CTRL_NAKOUTIS_Pos   3                                              /**< (USBHS_DEVEPTIFR) NAKed OUT Interrupt Set Position */
+#define USBHS_DEVEPTIFR_CTRL_NAKOUTIS_Msk   (_U_(0x1) << USBHS_DEVEPTIFR_CTRL_NAKOUTIS_Pos)  /**< (USBHS_DEVEPTIFR) NAKed OUT Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_CTRL_NAKOUTIS       USBHS_DEVEPTIFR_CTRL_NAKOUTIS_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_CTRL_NAKOUTIS_Msk instead */
+#define USBHS_DEVEPTIFR_CTRL_NAKINIS_Pos    4                                              /**< (USBHS_DEVEPTIFR) NAKed IN Interrupt Set Position */
+#define USBHS_DEVEPTIFR_CTRL_NAKINIS_Msk    (_U_(0x1) << USBHS_DEVEPTIFR_CTRL_NAKINIS_Pos)  /**< (USBHS_DEVEPTIFR) NAKed IN Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_CTRL_NAKINIS        USBHS_DEVEPTIFR_CTRL_NAKINIS_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_CTRL_NAKINIS_Msk instead */
+#define USBHS_DEVEPTIFR_CTRL_STALLEDIS_Pos  6                                              /**< (USBHS_DEVEPTIFR) STALLed Interrupt Set Position */
+#define USBHS_DEVEPTIFR_CTRL_STALLEDIS_Msk  (_U_(0x1) << USBHS_DEVEPTIFR_CTRL_STALLEDIS_Pos)  /**< (USBHS_DEVEPTIFR) STALLed Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_CTRL_STALLEDIS      USBHS_DEVEPTIFR_CTRL_STALLEDIS_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_CTRL_STALLEDIS_Msk instead */
+#define USBHS_DEVEPTIFR_CTRL_MASK           _U_(0x5C)                                      /**< \deprecated (USBHS_DEVEPTIFR_CTRL) Register MASK  (Use USBHS_DEVEPTIFR_CTRL_Msk instead)  */
+#define USBHS_DEVEPTIFR_CTRL_Msk            _U_(0x5C)                                      /**< (USBHS_DEVEPTIFR_CTRL) Register Mask  */
+
+/* ISO mode */
+#define USBHS_DEVEPTIFR_ISO_UNDERFIS_Pos    2                                              /**< (USBHS_DEVEPTIFR) Underflow Interrupt Set Position */
+#define USBHS_DEVEPTIFR_ISO_UNDERFIS_Msk    (_U_(0x1) << USBHS_DEVEPTIFR_ISO_UNDERFIS_Pos)  /**< (USBHS_DEVEPTIFR) Underflow Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_ISO_UNDERFIS        USBHS_DEVEPTIFR_ISO_UNDERFIS_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_ISO_UNDERFIS_Msk instead */
+#define USBHS_DEVEPTIFR_ISO_HBISOINERRIS_Pos 3                                              /**< (USBHS_DEVEPTIFR) High Bandwidth Isochronous IN Underflow Error Interrupt Set Position */
+#define USBHS_DEVEPTIFR_ISO_HBISOINERRIS_Msk (_U_(0x1) << USBHS_DEVEPTIFR_ISO_HBISOINERRIS_Pos)  /**< (USBHS_DEVEPTIFR) High Bandwidth Isochronous IN Underflow Error Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_ISO_HBISOINERRIS    USBHS_DEVEPTIFR_ISO_HBISOINERRIS_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_ISO_HBISOINERRIS_Msk instead */
+#define USBHS_DEVEPTIFR_ISO_HBISOFLUSHIS_Pos 4                                              /**< (USBHS_DEVEPTIFR) High Bandwidth Isochronous IN Flush Interrupt Set Position */
+#define USBHS_DEVEPTIFR_ISO_HBISOFLUSHIS_Msk (_U_(0x1) << USBHS_DEVEPTIFR_ISO_HBISOFLUSHIS_Pos)  /**< (USBHS_DEVEPTIFR) High Bandwidth Isochronous IN Flush Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_ISO_HBISOFLUSHIS    USBHS_DEVEPTIFR_ISO_HBISOFLUSHIS_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_ISO_HBISOFLUSHIS_Msk instead */
+#define USBHS_DEVEPTIFR_ISO_CRCERRIS_Pos    6                                              /**< (USBHS_DEVEPTIFR) CRC Error Interrupt Set Position */
+#define USBHS_DEVEPTIFR_ISO_CRCERRIS_Msk    (_U_(0x1) << USBHS_DEVEPTIFR_ISO_CRCERRIS_Pos)  /**< (USBHS_DEVEPTIFR) CRC Error Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_ISO_CRCERRIS        USBHS_DEVEPTIFR_ISO_CRCERRIS_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_ISO_CRCERRIS_Msk instead */
+#define USBHS_DEVEPTIFR_ISO_MASK            _U_(0x5C)                                      /**< \deprecated (USBHS_DEVEPTIFR_ISO) Register MASK  (Use USBHS_DEVEPTIFR_ISO_Msk instead)  */
+#define USBHS_DEVEPTIFR_ISO_Msk             _U_(0x5C)                                      /**< (USBHS_DEVEPTIFR_ISO) Register Mask  */
+
+/* BLK mode */
+#define USBHS_DEVEPTIFR_BLK_RXSTPIS_Pos     2                                              /**< (USBHS_DEVEPTIFR) Received SETUP Interrupt Set Position */
+#define USBHS_DEVEPTIFR_BLK_RXSTPIS_Msk     (_U_(0x1) << USBHS_DEVEPTIFR_BLK_RXSTPIS_Pos)  /**< (USBHS_DEVEPTIFR) Received SETUP Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_BLK_RXSTPIS         USBHS_DEVEPTIFR_BLK_RXSTPIS_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_BLK_RXSTPIS_Msk instead */
+#define USBHS_DEVEPTIFR_BLK_NAKOUTIS_Pos    3                                              /**< (USBHS_DEVEPTIFR) NAKed OUT Interrupt Set Position */
+#define USBHS_DEVEPTIFR_BLK_NAKOUTIS_Msk    (_U_(0x1) << USBHS_DEVEPTIFR_BLK_NAKOUTIS_Pos)  /**< (USBHS_DEVEPTIFR) NAKed OUT Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_BLK_NAKOUTIS        USBHS_DEVEPTIFR_BLK_NAKOUTIS_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_BLK_NAKOUTIS_Msk instead */
+#define USBHS_DEVEPTIFR_BLK_NAKINIS_Pos     4                                              /**< (USBHS_DEVEPTIFR) NAKed IN Interrupt Set Position */
+#define USBHS_DEVEPTIFR_BLK_NAKINIS_Msk     (_U_(0x1) << USBHS_DEVEPTIFR_BLK_NAKINIS_Pos)  /**< (USBHS_DEVEPTIFR) NAKed IN Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_BLK_NAKINIS         USBHS_DEVEPTIFR_BLK_NAKINIS_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_BLK_NAKINIS_Msk instead */
+#define USBHS_DEVEPTIFR_BLK_STALLEDIS_Pos   6                                              /**< (USBHS_DEVEPTIFR) STALLed Interrupt Set Position */
+#define USBHS_DEVEPTIFR_BLK_STALLEDIS_Msk   (_U_(0x1) << USBHS_DEVEPTIFR_BLK_STALLEDIS_Pos)  /**< (USBHS_DEVEPTIFR) STALLed Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_BLK_STALLEDIS       USBHS_DEVEPTIFR_BLK_STALLEDIS_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_BLK_STALLEDIS_Msk instead */
+#define USBHS_DEVEPTIFR_BLK_MASK            _U_(0x5C)                                      /**< \deprecated (USBHS_DEVEPTIFR_BLK) Register MASK  (Use USBHS_DEVEPTIFR_BLK_Msk instead)  */
+#define USBHS_DEVEPTIFR_BLK_Msk             _U_(0x5C)                                      /**< (USBHS_DEVEPTIFR_BLK) Register Mask  */
+
+/* INTRPT mode */
+#define USBHS_DEVEPTIFR_INTRPT_RXSTPIS_Pos  2                                              /**< (USBHS_DEVEPTIFR) Received SETUP Interrupt Set Position */
+#define USBHS_DEVEPTIFR_INTRPT_RXSTPIS_Msk  (_U_(0x1) << USBHS_DEVEPTIFR_INTRPT_RXSTPIS_Pos)  /**< (USBHS_DEVEPTIFR) Received SETUP Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_INTRPT_RXSTPIS      USBHS_DEVEPTIFR_INTRPT_RXSTPIS_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_INTRPT_RXSTPIS_Msk instead */
+#define USBHS_DEVEPTIFR_INTRPT_NAKOUTIS_Pos 3                                              /**< (USBHS_DEVEPTIFR) NAKed OUT Interrupt Set Position */
+#define USBHS_DEVEPTIFR_INTRPT_NAKOUTIS_Msk (_U_(0x1) << USBHS_DEVEPTIFR_INTRPT_NAKOUTIS_Pos)  /**< (USBHS_DEVEPTIFR) NAKed OUT Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_INTRPT_NAKOUTIS     USBHS_DEVEPTIFR_INTRPT_NAKOUTIS_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_INTRPT_NAKOUTIS_Msk instead */
+#define USBHS_DEVEPTIFR_INTRPT_NAKINIS_Pos  4                                              /**< (USBHS_DEVEPTIFR) NAKed IN Interrupt Set Position */
+#define USBHS_DEVEPTIFR_INTRPT_NAKINIS_Msk  (_U_(0x1) << USBHS_DEVEPTIFR_INTRPT_NAKINIS_Pos)  /**< (USBHS_DEVEPTIFR) NAKed IN Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_INTRPT_NAKINIS      USBHS_DEVEPTIFR_INTRPT_NAKINIS_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_INTRPT_NAKINIS_Msk instead */
+#define USBHS_DEVEPTIFR_INTRPT_STALLEDIS_Pos 6                                              /**< (USBHS_DEVEPTIFR) STALLed Interrupt Set Position */
+#define USBHS_DEVEPTIFR_INTRPT_STALLEDIS_Msk (_U_(0x1) << USBHS_DEVEPTIFR_INTRPT_STALLEDIS_Pos)  /**< (USBHS_DEVEPTIFR) STALLed Interrupt Set Mask */
+#define USBHS_DEVEPTIFR_INTRPT_STALLEDIS    USBHS_DEVEPTIFR_INTRPT_STALLEDIS_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIFR_INTRPT_STALLEDIS_Msk instead */
+#define USBHS_DEVEPTIFR_INTRPT_MASK         _U_(0x5C)                                      /**< \deprecated (USBHS_DEVEPTIFR_INTRPT) Register MASK  (Use USBHS_DEVEPTIFR_INTRPT_Msk instead)  */
+#define USBHS_DEVEPTIFR_INTRPT_Msk          _U_(0x5C)                                      /**< (USBHS_DEVEPTIFR_INTRPT) Register Mask  */
 
 
-/* -------- USBHS_DEVEPTIMR : (USBHS Offset: 0x1c0) (R/ 32) Device Endpoint Mask Register (n = 0) 0 -------- */
+/* -------- USBHS_DEVEPTIMR : (USBHS Offset: 0x1c0) (R/ 32) Device Endpoint Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXINE:1;                   /**< bit:      0  Transmitted IN Data Interrupt            */
     uint32_t RXOUTE:1;                  /**< bit:      1  Received OUT Data Interrupt              */
-    uint32_t RXSTPE:1;                  /**< bit:      2  Received SETUP Interrupt                 */
-    uint32_t NAKOUTE:1;                 /**< bit:      3  NAKed OUT Interrupt                      */
-    uint32_t NAKINE:1;                  /**< bit:      4  NAKed IN Interrupt                       */
+    uint32_t :3;                        /**< bit:   2..4  Reserved */
     uint32_t OVERFE:1;                  /**< bit:      5  Overflow Interrupt                       */
-    uint32_t STALLEDE:1;                /**< bit:      6  STALLed Interrupt                        */
+    uint32_t :1;                        /**< bit:      6  Reserved */
     uint32_t SHORTPACKETE:1;            /**< bit:      7  Short Packet Interrupt                   */
     uint32_t :4;                        /**< bit:  8..11  Reserved */
     uint32_t NBUSYBKE:1;                /**< bit:     12  Number of Busy Banks Interrupt           */
@@ -1466,16 +1764,68 @@ typedef union {
     uint32_t FIFOCON:1;                 /**< bit:     14  FIFO Control                             */
     uint32_t :1;                        /**< bit:     15  Reserved */
     uint32_t EPDISHDMA:1;               /**< bit:     16  Endpoint Interrupts Disable HDMA Request */
-    uint32_t NYETDIS:1;                 /**< bit:     17  NYET Token Disable                       */
+    uint32_t :1;                        /**< bit:     17  Reserved */
     uint32_t RSTDT:1;                   /**< bit:     18  Reset Data Toggle                        */
+    uint32_t :13;                       /**< bit: 19..31  Reserved */
+  } bit;                                /**< Structure used for bit  access */
+  struct { // CTRL mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPE:1;                  /**< bit:      2  Received SETUP Interrupt                 */
+    uint32_t NAKOUTE:1;                 /**< bit:      3  NAKed OUT Interrupt                      */
+    uint32_t NAKINE:1;                  /**< bit:      4  NAKed IN Interrupt                       */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDE:1;                /**< bit:      6  STALLed Interrupt                        */
+    uint32_t :10;                       /**< bit:  7..16  Reserved */
+    uint32_t NYETDIS:1;                 /**< bit:     17  NYET Token Disable                       */
+    uint32_t :1;                        /**< bit:     18  Reserved */
     uint32_t STALLRQ:1;                 /**< bit:     19  STALL Request                            */
     uint32_t :12;                       /**< bit: 20..31  Reserved */
-  } bit;                                /**< Structure used for bit  access */
+  } CTRL;                                /**< Structure used for CTRL mode access */
+  struct { // ISO mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFE:1;                 /**< bit:      2  Underflow Interrupt                      */
+    uint32_t HBISOINERRE:1;             /**< bit:      3  High Bandwidth Isochronous IN Underflow Error Interrupt */
+    uint32_t HBISOFLUSHE:1;             /**< bit:      4  High Bandwidth Isochronous IN Flush Interrupt */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t CRCERRE:1;                 /**< bit:      6  CRC Error Interrupt                      */
+    uint32_t :1;                        /**< bit:      7  Reserved */
+    uint32_t MDATAE:1;                  /**< bit:      8  MData Interrupt                          */
+    uint32_t DATAXE:1;                  /**< bit:      9  DataX Interrupt                          */
+    uint32_t ERRORTRANSE:1;             /**< bit:     10  Transaction Error Interrupt              */
+    uint32_t :21;                       /**< bit: 11..31  Reserved */
+  } ISO;                                /**< Structure used for ISO mode access */
+  struct { // BLK mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPE:1;                  /**< bit:      2  Received SETUP Interrupt                 */
+    uint32_t NAKOUTE:1;                 /**< bit:      3  NAKed OUT Interrupt                      */
+    uint32_t NAKINE:1;                  /**< bit:      4  NAKed IN Interrupt                       */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDE:1;                /**< bit:      6  STALLed Interrupt                        */
+    uint32_t :10;                       /**< bit:  7..16  Reserved */
+    uint32_t NYETDIS:1;                 /**< bit:     17  NYET Token Disable                       */
+    uint32_t :1;                        /**< bit:     18  Reserved */
+    uint32_t STALLRQ:1;                 /**< bit:     19  STALL Request                            */
+    uint32_t :12;                       /**< bit: 20..31  Reserved */
+  } BLK;                                /**< Structure used for BLK mode access */
+  struct { // INTRPT mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPE:1;                  /**< bit:      2  Received SETUP Interrupt                 */
+    uint32_t NAKOUTE:1;                 /**< bit:      3  NAKed OUT Interrupt                      */
+    uint32_t NAKINE:1;                  /**< bit:      4  NAKed IN Interrupt                       */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDE:1;                /**< bit:      6  STALLed Interrupt                        */
+    uint32_t :10;                       /**< bit:  7..16  Reserved */
+    uint32_t NYETDIS:1;                 /**< bit:     17  NYET Token Disable                       */
+    uint32_t :1;                        /**< bit:     18  Reserved */
+    uint32_t STALLRQ:1;                 /**< bit:     19  STALL Request                            */
+    uint32_t :12;                       /**< bit: 20..31  Reserved */
+  } INTRPT;                                /**< Structure used for INTRPT mode access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPTIMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_DEVEPTIMR_OFFSET              (0x1C0)                                       /**<  (USBHS_DEVEPTIMR) Device Endpoint Mask Register (n = 0) 0  Offset */
+#define USBHS_DEVEPTIMR_OFFSET              (0x1C0)                                       /**<  (USBHS_DEVEPTIMR) Device Endpoint Interrupt Mask Register  Offset */
 
 #define USBHS_DEVEPTIMR_TXINE_Pos           0                                              /**< (USBHS_DEVEPTIMR) Transmitted IN Data Interrupt Position */
 #define USBHS_DEVEPTIMR_TXINE_Msk           (_U_(0x1) << USBHS_DEVEPTIMR_TXINE_Pos)        /**< (USBHS_DEVEPTIMR) Transmitted IN Data Interrupt Mask */
@@ -1483,21 +1833,9 @@ typedef union {
 #define USBHS_DEVEPTIMR_RXOUTE_Pos          1                                              /**< (USBHS_DEVEPTIMR) Received OUT Data Interrupt Position */
 #define USBHS_DEVEPTIMR_RXOUTE_Msk          (_U_(0x1) << USBHS_DEVEPTIMR_RXOUTE_Pos)       /**< (USBHS_DEVEPTIMR) Received OUT Data Interrupt Mask */
 #define USBHS_DEVEPTIMR_RXOUTE              USBHS_DEVEPTIMR_RXOUTE_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_RXOUTE_Msk instead */
-#define USBHS_DEVEPTIMR_RXSTPE_Pos          2                                              /**< (USBHS_DEVEPTIMR) Received SETUP Interrupt Position */
-#define USBHS_DEVEPTIMR_RXSTPE_Msk          (_U_(0x1) << USBHS_DEVEPTIMR_RXSTPE_Pos)       /**< (USBHS_DEVEPTIMR) Received SETUP Interrupt Mask */
-#define USBHS_DEVEPTIMR_RXSTPE              USBHS_DEVEPTIMR_RXSTPE_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_RXSTPE_Msk instead */
-#define USBHS_DEVEPTIMR_NAKOUTE_Pos         3                                              /**< (USBHS_DEVEPTIMR) NAKed OUT Interrupt Position */
-#define USBHS_DEVEPTIMR_NAKOUTE_Msk         (_U_(0x1) << USBHS_DEVEPTIMR_NAKOUTE_Pos)      /**< (USBHS_DEVEPTIMR) NAKed OUT Interrupt Mask */
-#define USBHS_DEVEPTIMR_NAKOUTE             USBHS_DEVEPTIMR_NAKOUTE_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_NAKOUTE_Msk instead */
-#define USBHS_DEVEPTIMR_NAKINE_Pos          4                                              /**< (USBHS_DEVEPTIMR) NAKed IN Interrupt Position */
-#define USBHS_DEVEPTIMR_NAKINE_Msk          (_U_(0x1) << USBHS_DEVEPTIMR_NAKINE_Pos)       /**< (USBHS_DEVEPTIMR) NAKed IN Interrupt Mask */
-#define USBHS_DEVEPTIMR_NAKINE              USBHS_DEVEPTIMR_NAKINE_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_NAKINE_Msk instead */
 #define USBHS_DEVEPTIMR_OVERFE_Pos          5                                              /**< (USBHS_DEVEPTIMR) Overflow Interrupt Position */
 #define USBHS_DEVEPTIMR_OVERFE_Msk          (_U_(0x1) << USBHS_DEVEPTIMR_OVERFE_Pos)       /**< (USBHS_DEVEPTIMR) Overflow Interrupt Mask */
 #define USBHS_DEVEPTIMR_OVERFE              USBHS_DEVEPTIMR_OVERFE_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_OVERFE_Msk instead */
-#define USBHS_DEVEPTIMR_STALLEDE_Pos        6                                              /**< (USBHS_DEVEPTIMR) STALLed Interrupt Position */
-#define USBHS_DEVEPTIMR_STALLEDE_Msk        (_U_(0x1) << USBHS_DEVEPTIMR_STALLEDE_Pos)     /**< (USBHS_DEVEPTIMR) STALLed Interrupt Mask */
-#define USBHS_DEVEPTIMR_STALLEDE            USBHS_DEVEPTIMR_STALLEDE_Msk                   /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_STALLEDE_Msk instead */
 #define USBHS_DEVEPTIMR_SHORTPACKETE_Pos    7                                              /**< (USBHS_DEVEPTIMR) Short Packet Interrupt Position */
 #define USBHS_DEVEPTIMR_SHORTPACKETE_Msk    (_U_(0x1) << USBHS_DEVEPTIMR_SHORTPACKETE_Pos)  /**< (USBHS_DEVEPTIMR) Short Packet Interrupt Mask */
 #define USBHS_DEVEPTIMR_SHORTPACKETE        USBHS_DEVEPTIMR_SHORTPACKETE_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_SHORTPACKETE_Msk instead */
@@ -1513,30 +1851,114 @@ typedef union {
 #define USBHS_DEVEPTIMR_EPDISHDMA_Pos       16                                             /**< (USBHS_DEVEPTIMR) Endpoint Interrupts Disable HDMA Request Position */
 #define USBHS_DEVEPTIMR_EPDISHDMA_Msk       (_U_(0x1) << USBHS_DEVEPTIMR_EPDISHDMA_Pos)    /**< (USBHS_DEVEPTIMR) Endpoint Interrupts Disable HDMA Request Mask */
 #define USBHS_DEVEPTIMR_EPDISHDMA           USBHS_DEVEPTIMR_EPDISHDMA_Msk                  /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_EPDISHDMA_Msk instead */
-#define USBHS_DEVEPTIMR_NYETDIS_Pos         17                                             /**< (USBHS_DEVEPTIMR) NYET Token Disable Position */
-#define USBHS_DEVEPTIMR_NYETDIS_Msk         (_U_(0x1) << USBHS_DEVEPTIMR_NYETDIS_Pos)      /**< (USBHS_DEVEPTIMR) NYET Token Disable Mask */
-#define USBHS_DEVEPTIMR_NYETDIS             USBHS_DEVEPTIMR_NYETDIS_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_NYETDIS_Msk instead */
 #define USBHS_DEVEPTIMR_RSTDT_Pos           18                                             /**< (USBHS_DEVEPTIMR) Reset Data Toggle Position */
 #define USBHS_DEVEPTIMR_RSTDT_Msk           (_U_(0x1) << USBHS_DEVEPTIMR_RSTDT_Pos)        /**< (USBHS_DEVEPTIMR) Reset Data Toggle Mask */
 #define USBHS_DEVEPTIMR_RSTDT               USBHS_DEVEPTIMR_RSTDT_Msk                      /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_RSTDT_Msk instead */
-#define USBHS_DEVEPTIMR_STALLRQ_Pos         19                                             /**< (USBHS_DEVEPTIMR) STALL Request Position */
-#define USBHS_DEVEPTIMR_STALLRQ_Msk         (_U_(0x1) << USBHS_DEVEPTIMR_STALLRQ_Pos)      /**< (USBHS_DEVEPTIMR) STALL Request Mask */
-#define USBHS_DEVEPTIMR_STALLRQ             USBHS_DEVEPTIMR_STALLRQ_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_STALLRQ_Msk instead */
-#define USBHS_DEVEPTIMR_MASK                _U_(0xF70FF)                                   /**< \deprecated (USBHS_DEVEPTIMR) Register MASK  (Use USBHS_DEVEPTIMR_Msk instead)  */
-#define USBHS_DEVEPTIMR_Msk                 _U_(0xF70FF)                                   /**< (USBHS_DEVEPTIMR) Register Mask  */
+#define USBHS_DEVEPTIMR_MASK                _U_(0x570A3)                                   /**< \deprecated (USBHS_DEVEPTIMR) Register MASK  (Use USBHS_DEVEPTIMR_Msk instead)  */
+#define USBHS_DEVEPTIMR_Msk                 _U_(0x570A3)                                   /**< (USBHS_DEVEPTIMR) Register Mask  */
+
+/* CTRL mode */
+#define USBHS_DEVEPTIMR_CTRL_RXSTPE_Pos     2                                              /**< (USBHS_DEVEPTIMR) Received SETUP Interrupt Position */
+#define USBHS_DEVEPTIMR_CTRL_RXSTPE_Msk     (_U_(0x1) << USBHS_DEVEPTIMR_CTRL_RXSTPE_Pos)  /**< (USBHS_DEVEPTIMR) Received SETUP Interrupt Mask */
+#define USBHS_DEVEPTIMR_CTRL_RXSTPE         USBHS_DEVEPTIMR_CTRL_RXSTPE_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_CTRL_RXSTPE_Msk instead */
+#define USBHS_DEVEPTIMR_CTRL_NAKOUTE_Pos    3                                              /**< (USBHS_DEVEPTIMR) NAKed OUT Interrupt Position */
+#define USBHS_DEVEPTIMR_CTRL_NAKOUTE_Msk    (_U_(0x1) << USBHS_DEVEPTIMR_CTRL_NAKOUTE_Pos)  /**< (USBHS_DEVEPTIMR) NAKed OUT Interrupt Mask */
+#define USBHS_DEVEPTIMR_CTRL_NAKOUTE        USBHS_DEVEPTIMR_CTRL_NAKOUTE_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_CTRL_NAKOUTE_Msk instead */
+#define USBHS_DEVEPTIMR_CTRL_NAKINE_Pos     4                                              /**< (USBHS_DEVEPTIMR) NAKed IN Interrupt Position */
+#define USBHS_DEVEPTIMR_CTRL_NAKINE_Msk     (_U_(0x1) << USBHS_DEVEPTIMR_CTRL_NAKINE_Pos)  /**< (USBHS_DEVEPTIMR) NAKed IN Interrupt Mask */
+#define USBHS_DEVEPTIMR_CTRL_NAKINE         USBHS_DEVEPTIMR_CTRL_NAKINE_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_CTRL_NAKINE_Msk instead */
+#define USBHS_DEVEPTIMR_CTRL_STALLEDE_Pos   6                                              /**< (USBHS_DEVEPTIMR) STALLed Interrupt Position */
+#define USBHS_DEVEPTIMR_CTRL_STALLEDE_Msk   (_U_(0x1) << USBHS_DEVEPTIMR_CTRL_STALLEDE_Pos)  /**< (USBHS_DEVEPTIMR) STALLed Interrupt Mask */
+#define USBHS_DEVEPTIMR_CTRL_STALLEDE       USBHS_DEVEPTIMR_CTRL_STALLEDE_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_CTRL_STALLEDE_Msk instead */
+#define USBHS_DEVEPTIMR_CTRL_NYETDIS_Pos    17                                             /**< (USBHS_DEVEPTIMR) NYET Token Disable Position */
+#define USBHS_DEVEPTIMR_CTRL_NYETDIS_Msk    (_U_(0x1) << USBHS_DEVEPTIMR_CTRL_NYETDIS_Pos)  /**< (USBHS_DEVEPTIMR) NYET Token Disable Mask */
+#define USBHS_DEVEPTIMR_CTRL_NYETDIS        USBHS_DEVEPTIMR_CTRL_NYETDIS_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_CTRL_NYETDIS_Msk instead */
+#define USBHS_DEVEPTIMR_CTRL_STALLRQ_Pos    19                                             /**< (USBHS_DEVEPTIMR) STALL Request Position */
+#define USBHS_DEVEPTIMR_CTRL_STALLRQ_Msk    (_U_(0x1) << USBHS_DEVEPTIMR_CTRL_STALLRQ_Pos)  /**< (USBHS_DEVEPTIMR) STALL Request Mask */
+#define USBHS_DEVEPTIMR_CTRL_STALLRQ        USBHS_DEVEPTIMR_CTRL_STALLRQ_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_CTRL_STALLRQ_Msk instead */
+#define USBHS_DEVEPTIMR_CTRL_MASK           _U_(0xA005C)                                   /**< \deprecated (USBHS_DEVEPTIMR_CTRL) Register MASK  (Use USBHS_DEVEPTIMR_CTRL_Msk instead)  */
+#define USBHS_DEVEPTIMR_CTRL_Msk            _U_(0xA005C)                                   /**< (USBHS_DEVEPTIMR_CTRL) Register Mask  */
+
+/* ISO mode */
+#define USBHS_DEVEPTIMR_ISO_UNDERFE_Pos     2                                              /**< (USBHS_DEVEPTIMR) Underflow Interrupt Position */
+#define USBHS_DEVEPTIMR_ISO_UNDERFE_Msk     (_U_(0x1) << USBHS_DEVEPTIMR_ISO_UNDERFE_Pos)  /**< (USBHS_DEVEPTIMR) Underflow Interrupt Mask */
+#define USBHS_DEVEPTIMR_ISO_UNDERFE         USBHS_DEVEPTIMR_ISO_UNDERFE_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_ISO_UNDERFE_Msk instead */
+#define USBHS_DEVEPTIMR_ISO_HBISOINERRE_Pos 3                                              /**< (USBHS_DEVEPTIMR) High Bandwidth Isochronous IN Underflow Error Interrupt Position */
+#define USBHS_DEVEPTIMR_ISO_HBISOINERRE_Msk (_U_(0x1) << USBHS_DEVEPTIMR_ISO_HBISOINERRE_Pos)  /**< (USBHS_DEVEPTIMR) High Bandwidth Isochronous IN Underflow Error Interrupt Mask */
+#define USBHS_DEVEPTIMR_ISO_HBISOINERRE     USBHS_DEVEPTIMR_ISO_HBISOINERRE_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_ISO_HBISOINERRE_Msk instead */
+#define USBHS_DEVEPTIMR_ISO_HBISOFLUSHE_Pos 4                                              /**< (USBHS_DEVEPTIMR) High Bandwidth Isochronous IN Flush Interrupt Position */
+#define USBHS_DEVEPTIMR_ISO_HBISOFLUSHE_Msk (_U_(0x1) << USBHS_DEVEPTIMR_ISO_HBISOFLUSHE_Pos)  /**< (USBHS_DEVEPTIMR) High Bandwidth Isochronous IN Flush Interrupt Mask */
+#define USBHS_DEVEPTIMR_ISO_HBISOFLUSHE     USBHS_DEVEPTIMR_ISO_HBISOFLUSHE_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_ISO_HBISOFLUSHE_Msk instead */
+#define USBHS_DEVEPTIMR_ISO_CRCERRE_Pos     6                                              /**< (USBHS_DEVEPTIMR) CRC Error Interrupt Position */
+#define USBHS_DEVEPTIMR_ISO_CRCERRE_Msk     (_U_(0x1) << USBHS_DEVEPTIMR_ISO_CRCERRE_Pos)  /**< (USBHS_DEVEPTIMR) CRC Error Interrupt Mask */
+#define USBHS_DEVEPTIMR_ISO_CRCERRE         USBHS_DEVEPTIMR_ISO_CRCERRE_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_ISO_CRCERRE_Msk instead */
+#define USBHS_DEVEPTIMR_ISO_MDATAE_Pos      8                                              /**< (USBHS_DEVEPTIMR) MData Interrupt Position */
+#define USBHS_DEVEPTIMR_ISO_MDATAE_Msk      (_U_(0x1) << USBHS_DEVEPTIMR_ISO_MDATAE_Pos)   /**< (USBHS_DEVEPTIMR) MData Interrupt Mask */
+#define USBHS_DEVEPTIMR_ISO_MDATAE          USBHS_DEVEPTIMR_ISO_MDATAE_Msk                 /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_ISO_MDATAE_Msk instead */
+#define USBHS_DEVEPTIMR_ISO_DATAXE_Pos      9                                              /**< (USBHS_DEVEPTIMR) DataX Interrupt Position */
+#define USBHS_DEVEPTIMR_ISO_DATAXE_Msk      (_U_(0x1) << USBHS_DEVEPTIMR_ISO_DATAXE_Pos)   /**< (USBHS_DEVEPTIMR) DataX Interrupt Mask */
+#define USBHS_DEVEPTIMR_ISO_DATAXE          USBHS_DEVEPTIMR_ISO_DATAXE_Msk                 /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_ISO_DATAXE_Msk instead */
+#define USBHS_DEVEPTIMR_ISO_ERRORTRANSE_Pos 10                                             /**< (USBHS_DEVEPTIMR) Transaction Error Interrupt Position */
+#define USBHS_DEVEPTIMR_ISO_ERRORTRANSE_Msk (_U_(0x1) << USBHS_DEVEPTIMR_ISO_ERRORTRANSE_Pos)  /**< (USBHS_DEVEPTIMR) Transaction Error Interrupt Mask */
+#define USBHS_DEVEPTIMR_ISO_ERRORTRANSE     USBHS_DEVEPTIMR_ISO_ERRORTRANSE_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_ISO_ERRORTRANSE_Msk instead */
+#define USBHS_DEVEPTIMR_ISO_MASK            _U_(0x75C)                                     /**< \deprecated (USBHS_DEVEPTIMR_ISO) Register MASK  (Use USBHS_DEVEPTIMR_ISO_Msk instead)  */
+#define USBHS_DEVEPTIMR_ISO_Msk             _U_(0x75C)                                     /**< (USBHS_DEVEPTIMR_ISO) Register Mask  */
+
+/* BLK mode */
+#define USBHS_DEVEPTIMR_BLK_RXSTPE_Pos      2                                              /**< (USBHS_DEVEPTIMR) Received SETUP Interrupt Position */
+#define USBHS_DEVEPTIMR_BLK_RXSTPE_Msk      (_U_(0x1) << USBHS_DEVEPTIMR_BLK_RXSTPE_Pos)   /**< (USBHS_DEVEPTIMR) Received SETUP Interrupt Mask */
+#define USBHS_DEVEPTIMR_BLK_RXSTPE          USBHS_DEVEPTIMR_BLK_RXSTPE_Msk                 /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_BLK_RXSTPE_Msk instead */
+#define USBHS_DEVEPTIMR_BLK_NAKOUTE_Pos     3                                              /**< (USBHS_DEVEPTIMR) NAKed OUT Interrupt Position */
+#define USBHS_DEVEPTIMR_BLK_NAKOUTE_Msk     (_U_(0x1) << USBHS_DEVEPTIMR_BLK_NAKOUTE_Pos)  /**< (USBHS_DEVEPTIMR) NAKed OUT Interrupt Mask */
+#define USBHS_DEVEPTIMR_BLK_NAKOUTE         USBHS_DEVEPTIMR_BLK_NAKOUTE_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_BLK_NAKOUTE_Msk instead */
+#define USBHS_DEVEPTIMR_BLK_NAKINE_Pos      4                                              /**< (USBHS_DEVEPTIMR) NAKed IN Interrupt Position */
+#define USBHS_DEVEPTIMR_BLK_NAKINE_Msk      (_U_(0x1) << USBHS_DEVEPTIMR_BLK_NAKINE_Pos)   /**< (USBHS_DEVEPTIMR) NAKed IN Interrupt Mask */
+#define USBHS_DEVEPTIMR_BLK_NAKINE          USBHS_DEVEPTIMR_BLK_NAKINE_Msk                 /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_BLK_NAKINE_Msk instead */
+#define USBHS_DEVEPTIMR_BLK_STALLEDE_Pos    6                                              /**< (USBHS_DEVEPTIMR) STALLed Interrupt Position */
+#define USBHS_DEVEPTIMR_BLK_STALLEDE_Msk    (_U_(0x1) << USBHS_DEVEPTIMR_BLK_STALLEDE_Pos)  /**< (USBHS_DEVEPTIMR) STALLed Interrupt Mask */
+#define USBHS_DEVEPTIMR_BLK_STALLEDE        USBHS_DEVEPTIMR_BLK_STALLEDE_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_BLK_STALLEDE_Msk instead */
+#define USBHS_DEVEPTIMR_BLK_NYETDIS_Pos     17                                             /**< (USBHS_DEVEPTIMR) NYET Token Disable Position */
+#define USBHS_DEVEPTIMR_BLK_NYETDIS_Msk     (_U_(0x1) << USBHS_DEVEPTIMR_BLK_NYETDIS_Pos)  /**< (USBHS_DEVEPTIMR) NYET Token Disable Mask */
+#define USBHS_DEVEPTIMR_BLK_NYETDIS         USBHS_DEVEPTIMR_BLK_NYETDIS_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_BLK_NYETDIS_Msk instead */
+#define USBHS_DEVEPTIMR_BLK_STALLRQ_Pos     19                                             /**< (USBHS_DEVEPTIMR) STALL Request Position */
+#define USBHS_DEVEPTIMR_BLK_STALLRQ_Msk     (_U_(0x1) << USBHS_DEVEPTIMR_BLK_STALLRQ_Pos)  /**< (USBHS_DEVEPTIMR) STALL Request Mask */
+#define USBHS_DEVEPTIMR_BLK_STALLRQ         USBHS_DEVEPTIMR_BLK_STALLRQ_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_BLK_STALLRQ_Msk instead */
+#define USBHS_DEVEPTIMR_BLK_MASK            _U_(0xA005C)                                   /**< \deprecated (USBHS_DEVEPTIMR_BLK) Register MASK  (Use USBHS_DEVEPTIMR_BLK_Msk instead)  */
+#define USBHS_DEVEPTIMR_BLK_Msk             _U_(0xA005C)                                   /**< (USBHS_DEVEPTIMR_BLK) Register Mask  */
+
+/* INTRPT mode */
+#define USBHS_DEVEPTIMR_INTRPT_RXSTPE_Pos   2                                              /**< (USBHS_DEVEPTIMR) Received SETUP Interrupt Position */
+#define USBHS_DEVEPTIMR_INTRPT_RXSTPE_Msk   (_U_(0x1) << USBHS_DEVEPTIMR_INTRPT_RXSTPE_Pos)  /**< (USBHS_DEVEPTIMR) Received SETUP Interrupt Mask */
+#define USBHS_DEVEPTIMR_INTRPT_RXSTPE       USBHS_DEVEPTIMR_INTRPT_RXSTPE_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_INTRPT_RXSTPE_Msk instead */
+#define USBHS_DEVEPTIMR_INTRPT_NAKOUTE_Pos  3                                              /**< (USBHS_DEVEPTIMR) NAKed OUT Interrupt Position */
+#define USBHS_DEVEPTIMR_INTRPT_NAKOUTE_Msk  (_U_(0x1) << USBHS_DEVEPTIMR_INTRPT_NAKOUTE_Pos)  /**< (USBHS_DEVEPTIMR) NAKed OUT Interrupt Mask */
+#define USBHS_DEVEPTIMR_INTRPT_NAKOUTE      USBHS_DEVEPTIMR_INTRPT_NAKOUTE_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_INTRPT_NAKOUTE_Msk instead */
+#define USBHS_DEVEPTIMR_INTRPT_NAKINE_Pos   4                                              /**< (USBHS_DEVEPTIMR) NAKed IN Interrupt Position */
+#define USBHS_DEVEPTIMR_INTRPT_NAKINE_Msk   (_U_(0x1) << USBHS_DEVEPTIMR_INTRPT_NAKINE_Pos)  /**< (USBHS_DEVEPTIMR) NAKed IN Interrupt Mask */
+#define USBHS_DEVEPTIMR_INTRPT_NAKINE       USBHS_DEVEPTIMR_INTRPT_NAKINE_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_INTRPT_NAKINE_Msk instead */
+#define USBHS_DEVEPTIMR_INTRPT_STALLEDE_Pos 6                                              /**< (USBHS_DEVEPTIMR) STALLed Interrupt Position */
+#define USBHS_DEVEPTIMR_INTRPT_STALLEDE_Msk (_U_(0x1) << USBHS_DEVEPTIMR_INTRPT_STALLEDE_Pos)  /**< (USBHS_DEVEPTIMR) STALLed Interrupt Mask */
+#define USBHS_DEVEPTIMR_INTRPT_STALLEDE     USBHS_DEVEPTIMR_INTRPT_STALLEDE_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_INTRPT_STALLEDE_Msk instead */
+#define USBHS_DEVEPTIMR_INTRPT_NYETDIS_Pos  17                                             /**< (USBHS_DEVEPTIMR) NYET Token Disable Position */
+#define USBHS_DEVEPTIMR_INTRPT_NYETDIS_Msk  (_U_(0x1) << USBHS_DEVEPTIMR_INTRPT_NYETDIS_Pos)  /**< (USBHS_DEVEPTIMR) NYET Token Disable Mask */
+#define USBHS_DEVEPTIMR_INTRPT_NYETDIS      USBHS_DEVEPTIMR_INTRPT_NYETDIS_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_INTRPT_NYETDIS_Msk instead */
+#define USBHS_DEVEPTIMR_INTRPT_STALLRQ_Pos  19                                             /**< (USBHS_DEVEPTIMR) STALL Request Position */
+#define USBHS_DEVEPTIMR_INTRPT_STALLRQ_Msk  (_U_(0x1) << USBHS_DEVEPTIMR_INTRPT_STALLRQ_Pos)  /**< (USBHS_DEVEPTIMR) STALL Request Mask */
+#define USBHS_DEVEPTIMR_INTRPT_STALLRQ      USBHS_DEVEPTIMR_INTRPT_STALLRQ_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIMR_INTRPT_STALLRQ_Msk instead */
+#define USBHS_DEVEPTIMR_INTRPT_MASK         _U_(0xA005C)                                   /**< \deprecated (USBHS_DEVEPTIMR_INTRPT) Register MASK  (Use USBHS_DEVEPTIMR_INTRPT_Msk instead)  */
+#define USBHS_DEVEPTIMR_INTRPT_Msk          _U_(0xA005C)                                   /**< (USBHS_DEVEPTIMR_INTRPT) Register Mask  */
 
 
-/* -------- USBHS_DEVEPTIER : (USBHS Offset: 0x1f0) (/W 32) Device Endpoint Enable Register (n = 0) 0 -------- */
+/* -------- USBHS_DEVEPTIER : (USBHS Offset: 0x1f0) (/W 32) Device Endpoint Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXINES:1;                  /**< bit:      0  Transmitted IN Data Interrupt Enable     */
     uint32_t RXOUTES:1;                 /**< bit:      1  Received OUT Data Interrupt Enable       */
-    uint32_t RXSTPES:1;                 /**< bit:      2  Received SETUP Interrupt Enable          */
-    uint32_t NAKOUTES:1;                /**< bit:      3  NAKed OUT Interrupt Enable               */
-    uint32_t NAKINES:1;                 /**< bit:      4  NAKed IN Interrupt Enable                */
+    uint32_t :3;                        /**< bit:   2..4  Reserved */
     uint32_t OVERFES:1;                 /**< bit:      5  Overflow Interrupt Enable                */
-    uint32_t STALLEDES:1;               /**< bit:      6  STALLed Interrupt Enable                 */
+    uint32_t :1;                        /**< bit:      6  Reserved */
     uint32_t SHORTPACKETES:1;           /**< bit:      7  Short Packet Interrupt Enable            */
     uint32_t :4;                        /**< bit:  8..11  Reserved */
     uint32_t NBUSYBKES:1;               /**< bit:     12  Number of Busy Banks Interrupt Enable    */
@@ -1544,16 +1966,68 @@ typedef union {
     uint32_t FIFOCONS:1;                /**< bit:     14  FIFO Control                             */
     uint32_t :1;                        /**< bit:     15  Reserved */
     uint32_t EPDISHDMAS:1;              /**< bit:     16  Endpoint Interrupts Disable HDMA Request Enable */
-    uint32_t NYETDISS:1;                /**< bit:     17  NYET Token Disable Enable                */
+    uint32_t :1;                        /**< bit:     17  Reserved */
     uint32_t RSTDTS:1;                  /**< bit:     18  Reset Data Toggle Enable                 */
+    uint32_t :13;                       /**< bit: 19..31  Reserved */
+  } bit;                                /**< Structure used for bit  access */
+  struct { // CTRL mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPES:1;                 /**< bit:      2  Received SETUP Interrupt Enable          */
+    uint32_t NAKOUTES:1;                /**< bit:      3  NAKed OUT Interrupt Enable               */
+    uint32_t NAKINES:1;                 /**< bit:      4  NAKed IN Interrupt Enable                */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDES:1;               /**< bit:      6  STALLed Interrupt Enable                 */
+    uint32_t :10;                       /**< bit:  7..16  Reserved */
+    uint32_t NYETDISS:1;                /**< bit:     17  NYET Token Disable Enable                */
+    uint32_t :1;                        /**< bit:     18  Reserved */
     uint32_t STALLRQS:1;                /**< bit:     19  STALL Request Enable                     */
     uint32_t :12;                       /**< bit: 20..31  Reserved */
-  } bit;                                /**< Structure used for bit  access */
+  } CTRL;                                /**< Structure used for CTRL mode access */
+  struct { // ISO mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFES:1;                /**< bit:      2  Underflow Interrupt Enable               */
+    uint32_t HBISOINERRES:1;            /**< bit:      3  High Bandwidth Isochronous IN Underflow Error Interrupt Enable */
+    uint32_t HBISOFLUSHES:1;            /**< bit:      4  High Bandwidth Isochronous IN Flush Interrupt Enable */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t CRCERRES:1;                /**< bit:      6  CRC Error Interrupt Enable               */
+    uint32_t :1;                        /**< bit:      7  Reserved */
+    uint32_t MDATAES:1;                 /**< bit:      8  MData Interrupt Enable                   */
+    uint32_t DATAXES:1;                 /**< bit:      9  DataX Interrupt Enable                   */
+    uint32_t ERRORTRANSES:1;            /**< bit:     10  Transaction Error Interrupt Enable       */
+    uint32_t :21;                       /**< bit: 11..31  Reserved */
+  } ISO;                                /**< Structure used for ISO mode access */
+  struct { // BLK mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPES:1;                 /**< bit:      2  Received SETUP Interrupt Enable          */
+    uint32_t NAKOUTES:1;                /**< bit:      3  NAKed OUT Interrupt Enable               */
+    uint32_t NAKINES:1;                 /**< bit:      4  NAKed IN Interrupt Enable                */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDES:1;               /**< bit:      6  STALLed Interrupt Enable                 */
+    uint32_t :10;                       /**< bit:  7..16  Reserved */
+    uint32_t NYETDISS:1;                /**< bit:     17  NYET Token Disable Enable                */
+    uint32_t :1;                        /**< bit:     18  Reserved */
+    uint32_t STALLRQS:1;                /**< bit:     19  STALL Request Enable                     */
+    uint32_t :12;                       /**< bit: 20..31  Reserved */
+  } BLK;                                /**< Structure used for BLK mode access */
+  struct { // INTRPT mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPES:1;                 /**< bit:      2  Received SETUP Interrupt Enable          */
+    uint32_t NAKOUTES:1;                /**< bit:      3  NAKed OUT Interrupt Enable               */
+    uint32_t NAKINES:1;                 /**< bit:      4  NAKed IN Interrupt Enable                */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDES:1;               /**< bit:      6  STALLed Interrupt Enable                 */
+    uint32_t :10;                       /**< bit:  7..16  Reserved */
+    uint32_t NYETDISS:1;                /**< bit:     17  NYET Token Disable Enable                */
+    uint32_t :1;                        /**< bit:     18  Reserved */
+    uint32_t STALLRQS:1;                /**< bit:     19  STALL Request Enable                     */
+    uint32_t :12;                       /**< bit: 20..31  Reserved */
+  } INTRPT;                                /**< Structure used for INTRPT mode access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPTIER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_DEVEPTIER_OFFSET              (0x1F0)                                       /**<  (USBHS_DEVEPTIER) Device Endpoint Enable Register (n = 0) 0  Offset */
+#define USBHS_DEVEPTIER_OFFSET              (0x1F0)                                       /**<  (USBHS_DEVEPTIER) Device Endpoint Interrupt Enable Register  Offset */
 
 #define USBHS_DEVEPTIER_TXINES_Pos          0                                              /**< (USBHS_DEVEPTIER) Transmitted IN Data Interrupt Enable Position */
 #define USBHS_DEVEPTIER_TXINES_Msk          (_U_(0x1) << USBHS_DEVEPTIER_TXINES_Pos)       /**< (USBHS_DEVEPTIER) Transmitted IN Data Interrupt Enable Mask */
@@ -1561,21 +2035,9 @@ typedef union {
 #define USBHS_DEVEPTIER_RXOUTES_Pos         1                                              /**< (USBHS_DEVEPTIER) Received OUT Data Interrupt Enable Position */
 #define USBHS_DEVEPTIER_RXOUTES_Msk         (_U_(0x1) << USBHS_DEVEPTIER_RXOUTES_Pos)      /**< (USBHS_DEVEPTIER) Received OUT Data Interrupt Enable Mask */
 #define USBHS_DEVEPTIER_RXOUTES             USBHS_DEVEPTIER_RXOUTES_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_RXOUTES_Msk instead */
-#define USBHS_DEVEPTIER_RXSTPES_Pos         2                                              /**< (USBHS_DEVEPTIER) Received SETUP Interrupt Enable Position */
-#define USBHS_DEVEPTIER_RXSTPES_Msk         (_U_(0x1) << USBHS_DEVEPTIER_RXSTPES_Pos)      /**< (USBHS_DEVEPTIER) Received SETUP Interrupt Enable Mask */
-#define USBHS_DEVEPTIER_RXSTPES             USBHS_DEVEPTIER_RXSTPES_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_RXSTPES_Msk instead */
-#define USBHS_DEVEPTIER_NAKOUTES_Pos        3                                              /**< (USBHS_DEVEPTIER) NAKed OUT Interrupt Enable Position */
-#define USBHS_DEVEPTIER_NAKOUTES_Msk        (_U_(0x1) << USBHS_DEVEPTIER_NAKOUTES_Pos)     /**< (USBHS_DEVEPTIER) NAKed OUT Interrupt Enable Mask */
-#define USBHS_DEVEPTIER_NAKOUTES            USBHS_DEVEPTIER_NAKOUTES_Msk                   /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_NAKOUTES_Msk instead */
-#define USBHS_DEVEPTIER_NAKINES_Pos         4                                              /**< (USBHS_DEVEPTIER) NAKed IN Interrupt Enable Position */
-#define USBHS_DEVEPTIER_NAKINES_Msk         (_U_(0x1) << USBHS_DEVEPTIER_NAKINES_Pos)      /**< (USBHS_DEVEPTIER) NAKed IN Interrupt Enable Mask */
-#define USBHS_DEVEPTIER_NAKINES             USBHS_DEVEPTIER_NAKINES_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_NAKINES_Msk instead */
 #define USBHS_DEVEPTIER_OVERFES_Pos         5                                              /**< (USBHS_DEVEPTIER) Overflow Interrupt Enable Position */
 #define USBHS_DEVEPTIER_OVERFES_Msk         (_U_(0x1) << USBHS_DEVEPTIER_OVERFES_Pos)      /**< (USBHS_DEVEPTIER) Overflow Interrupt Enable Mask */
 #define USBHS_DEVEPTIER_OVERFES             USBHS_DEVEPTIER_OVERFES_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_OVERFES_Msk instead */
-#define USBHS_DEVEPTIER_STALLEDES_Pos       6                                              /**< (USBHS_DEVEPTIER) STALLed Interrupt Enable Position */
-#define USBHS_DEVEPTIER_STALLEDES_Msk       (_U_(0x1) << USBHS_DEVEPTIER_STALLEDES_Pos)    /**< (USBHS_DEVEPTIER) STALLed Interrupt Enable Mask */
-#define USBHS_DEVEPTIER_STALLEDES           USBHS_DEVEPTIER_STALLEDES_Msk                  /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_STALLEDES_Msk instead */
 #define USBHS_DEVEPTIER_SHORTPACKETES_Pos   7                                              /**< (USBHS_DEVEPTIER) Short Packet Interrupt Enable Position */
 #define USBHS_DEVEPTIER_SHORTPACKETES_Msk   (_U_(0x1) << USBHS_DEVEPTIER_SHORTPACKETES_Pos)  /**< (USBHS_DEVEPTIER) Short Packet Interrupt Enable Mask */
 #define USBHS_DEVEPTIER_SHORTPACKETES       USBHS_DEVEPTIER_SHORTPACKETES_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_SHORTPACKETES_Msk instead */
@@ -1591,30 +2053,114 @@ typedef union {
 #define USBHS_DEVEPTIER_EPDISHDMAS_Pos      16                                             /**< (USBHS_DEVEPTIER) Endpoint Interrupts Disable HDMA Request Enable Position */
 #define USBHS_DEVEPTIER_EPDISHDMAS_Msk      (_U_(0x1) << USBHS_DEVEPTIER_EPDISHDMAS_Pos)   /**< (USBHS_DEVEPTIER) Endpoint Interrupts Disable HDMA Request Enable Mask */
 #define USBHS_DEVEPTIER_EPDISHDMAS          USBHS_DEVEPTIER_EPDISHDMAS_Msk                 /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_EPDISHDMAS_Msk instead */
-#define USBHS_DEVEPTIER_NYETDISS_Pos        17                                             /**< (USBHS_DEVEPTIER) NYET Token Disable Enable Position */
-#define USBHS_DEVEPTIER_NYETDISS_Msk        (_U_(0x1) << USBHS_DEVEPTIER_NYETDISS_Pos)     /**< (USBHS_DEVEPTIER) NYET Token Disable Enable Mask */
-#define USBHS_DEVEPTIER_NYETDISS            USBHS_DEVEPTIER_NYETDISS_Msk                   /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_NYETDISS_Msk instead */
 #define USBHS_DEVEPTIER_RSTDTS_Pos          18                                             /**< (USBHS_DEVEPTIER) Reset Data Toggle Enable Position */
 #define USBHS_DEVEPTIER_RSTDTS_Msk          (_U_(0x1) << USBHS_DEVEPTIER_RSTDTS_Pos)       /**< (USBHS_DEVEPTIER) Reset Data Toggle Enable Mask */
 #define USBHS_DEVEPTIER_RSTDTS              USBHS_DEVEPTIER_RSTDTS_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_RSTDTS_Msk instead */
-#define USBHS_DEVEPTIER_STALLRQS_Pos        19                                             /**< (USBHS_DEVEPTIER) STALL Request Enable Position */
-#define USBHS_DEVEPTIER_STALLRQS_Msk        (_U_(0x1) << USBHS_DEVEPTIER_STALLRQS_Pos)     /**< (USBHS_DEVEPTIER) STALL Request Enable Mask */
-#define USBHS_DEVEPTIER_STALLRQS            USBHS_DEVEPTIER_STALLRQS_Msk                   /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_STALLRQS_Msk instead */
-#define USBHS_DEVEPTIER_MASK                _U_(0xF70FF)                                   /**< \deprecated (USBHS_DEVEPTIER) Register MASK  (Use USBHS_DEVEPTIER_Msk instead)  */
-#define USBHS_DEVEPTIER_Msk                 _U_(0xF70FF)                                   /**< (USBHS_DEVEPTIER) Register Mask  */
+#define USBHS_DEVEPTIER_MASK                _U_(0x570A3)                                   /**< \deprecated (USBHS_DEVEPTIER) Register MASK  (Use USBHS_DEVEPTIER_Msk instead)  */
+#define USBHS_DEVEPTIER_Msk                 _U_(0x570A3)                                   /**< (USBHS_DEVEPTIER) Register Mask  */
+
+/* CTRL mode */
+#define USBHS_DEVEPTIER_CTRL_RXSTPES_Pos    2                                              /**< (USBHS_DEVEPTIER) Received SETUP Interrupt Enable Position */
+#define USBHS_DEVEPTIER_CTRL_RXSTPES_Msk    (_U_(0x1) << USBHS_DEVEPTIER_CTRL_RXSTPES_Pos)  /**< (USBHS_DEVEPTIER) Received SETUP Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_CTRL_RXSTPES        USBHS_DEVEPTIER_CTRL_RXSTPES_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_CTRL_RXSTPES_Msk instead */
+#define USBHS_DEVEPTIER_CTRL_NAKOUTES_Pos   3                                              /**< (USBHS_DEVEPTIER) NAKed OUT Interrupt Enable Position */
+#define USBHS_DEVEPTIER_CTRL_NAKOUTES_Msk   (_U_(0x1) << USBHS_DEVEPTIER_CTRL_NAKOUTES_Pos)  /**< (USBHS_DEVEPTIER) NAKed OUT Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_CTRL_NAKOUTES       USBHS_DEVEPTIER_CTRL_NAKOUTES_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_CTRL_NAKOUTES_Msk instead */
+#define USBHS_DEVEPTIER_CTRL_NAKINES_Pos    4                                              /**< (USBHS_DEVEPTIER) NAKed IN Interrupt Enable Position */
+#define USBHS_DEVEPTIER_CTRL_NAKINES_Msk    (_U_(0x1) << USBHS_DEVEPTIER_CTRL_NAKINES_Pos)  /**< (USBHS_DEVEPTIER) NAKed IN Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_CTRL_NAKINES        USBHS_DEVEPTIER_CTRL_NAKINES_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_CTRL_NAKINES_Msk instead */
+#define USBHS_DEVEPTIER_CTRL_STALLEDES_Pos  6                                              /**< (USBHS_DEVEPTIER) STALLed Interrupt Enable Position */
+#define USBHS_DEVEPTIER_CTRL_STALLEDES_Msk  (_U_(0x1) << USBHS_DEVEPTIER_CTRL_STALLEDES_Pos)  /**< (USBHS_DEVEPTIER) STALLed Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_CTRL_STALLEDES      USBHS_DEVEPTIER_CTRL_STALLEDES_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_CTRL_STALLEDES_Msk instead */
+#define USBHS_DEVEPTIER_CTRL_NYETDISS_Pos   17                                             /**< (USBHS_DEVEPTIER) NYET Token Disable Enable Position */
+#define USBHS_DEVEPTIER_CTRL_NYETDISS_Msk   (_U_(0x1) << USBHS_DEVEPTIER_CTRL_NYETDISS_Pos)  /**< (USBHS_DEVEPTIER) NYET Token Disable Enable Mask */
+#define USBHS_DEVEPTIER_CTRL_NYETDISS       USBHS_DEVEPTIER_CTRL_NYETDISS_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_CTRL_NYETDISS_Msk instead */
+#define USBHS_DEVEPTIER_CTRL_STALLRQS_Pos   19                                             /**< (USBHS_DEVEPTIER) STALL Request Enable Position */
+#define USBHS_DEVEPTIER_CTRL_STALLRQS_Msk   (_U_(0x1) << USBHS_DEVEPTIER_CTRL_STALLRQS_Pos)  /**< (USBHS_DEVEPTIER) STALL Request Enable Mask */
+#define USBHS_DEVEPTIER_CTRL_STALLRQS       USBHS_DEVEPTIER_CTRL_STALLRQS_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_CTRL_STALLRQS_Msk instead */
+#define USBHS_DEVEPTIER_CTRL_MASK           _U_(0xA005C)                                   /**< \deprecated (USBHS_DEVEPTIER_CTRL) Register MASK  (Use USBHS_DEVEPTIER_CTRL_Msk instead)  */
+#define USBHS_DEVEPTIER_CTRL_Msk            _U_(0xA005C)                                   /**< (USBHS_DEVEPTIER_CTRL) Register Mask  */
+
+/* ISO mode */
+#define USBHS_DEVEPTIER_ISO_UNDERFES_Pos    2                                              /**< (USBHS_DEVEPTIER) Underflow Interrupt Enable Position */
+#define USBHS_DEVEPTIER_ISO_UNDERFES_Msk    (_U_(0x1) << USBHS_DEVEPTIER_ISO_UNDERFES_Pos)  /**< (USBHS_DEVEPTIER) Underflow Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_ISO_UNDERFES        USBHS_DEVEPTIER_ISO_UNDERFES_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_ISO_UNDERFES_Msk instead */
+#define USBHS_DEVEPTIER_ISO_HBISOINERRES_Pos 3                                              /**< (USBHS_DEVEPTIER) High Bandwidth Isochronous IN Underflow Error Interrupt Enable Position */
+#define USBHS_DEVEPTIER_ISO_HBISOINERRES_Msk (_U_(0x1) << USBHS_DEVEPTIER_ISO_HBISOINERRES_Pos)  /**< (USBHS_DEVEPTIER) High Bandwidth Isochronous IN Underflow Error Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_ISO_HBISOINERRES    USBHS_DEVEPTIER_ISO_HBISOINERRES_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_ISO_HBISOINERRES_Msk instead */
+#define USBHS_DEVEPTIER_ISO_HBISOFLUSHES_Pos 4                                              /**< (USBHS_DEVEPTIER) High Bandwidth Isochronous IN Flush Interrupt Enable Position */
+#define USBHS_DEVEPTIER_ISO_HBISOFLUSHES_Msk (_U_(0x1) << USBHS_DEVEPTIER_ISO_HBISOFLUSHES_Pos)  /**< (USBHS_DEVEPTIER) High Bandwidth Isochronous IN Flush Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_ISO_HBISOFLUSHES    USBHS_DEVEPTIER_ISO_HBISOFLUSHES_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_ISO_HBISOFLUSHES_Msk instead */
+#define USBHS_DEVEPTIER_ISO_CRCERRES_Pos    6                                              /**< (USBHS_DEVEPTIER) CRC Error Interrupt Enable Position */
+#define USBHS_DEVEPTIER_ISO_CRCERRES_Msk    (_U_(0x1) << USBHS_DEVEPTIER_ISO_CRCERRES_Pos)  /**< (USBHS_DEVEPTIER) CRC Error Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_ISO_CRCERRES        USBHS_DEVEPTIER_ISO_CRCERRES_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_ISO_CRCERRES_Msk instead */
+#define USBHS_DEVEPTIER_ISO_MDATAES_Pos     8                                              /**< (USBHS_DEVEPTIER) MData Interrupt Enable Position */
+#define USBHS_DEVEPTIER_ISO_MDATAES_Msk     (_U_(0x1) << USBHS_DEVEPTIER_ISO_MDATAES_Pos)  /**< (USBHS_DEVEPTIER) MData Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_ISO_MDATAES         USBHS_DEVEPTIER_ISO_MDATAES_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_ISO_MDATAES_Msk instead */
+#define USBHS_DEVEPTIER_ISO_DATAXES_Pos     9                                              /**< (USBHS_DEVEPTIER) DataX Interrupt Enable Position */
+#define USBHS_DEVEPTIER_ISO_DATAXES_Msk     (_U_(0x1) << USBHS_DEVEPTIER_ISO_DATAXES_Pos)  /**< (USBHS_DEVEPTIER) DataX Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_ISO_DATAXES         USBHS_DEVEPTIER_ISO_DATAXES_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_ISO_DATAXES_Msk instead */
+#define USBHS_DEVEPTIER_ISO_ERRORTRANSES_Pos 10                                             /**< (USBHS_DEVEPTIER) Transaction Error Interrupt Enable Position */
+#define USBHS_DEVEPTIER_ISO_ERRORTRANSES_Msk (_U_(0x1) << USBHS_DEVEPTIER_ISO_ERRORTRANSES_Pos)  /**< (USBHS_DEVEPTIER) Transaction Error Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_ISO_ERRORTRANSES    USBHS_DEVEPTIER_ISO_ERRORTRANSES_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_ISO_ERRORTRANSES_Msk instead */
+#define USBHS_DEVEPTIER_ISO_MASK            _U_(0x75C)                                     /**< \deprecated (USBHS_DEVEPTIER_ISO) Register MASK  (Use USBHS_DEVEPTIER_ISO_Msk instead)  */
+#define USBHS_DEVEPTIER_ISO_Msk             _U_(0x75C)                                     /**< (USBHS_DEVEPTIER_ISO) Register Mask  */
+
+/* BLK mode */
+#define USBHS_DEVEPTIER_BLK_RXSTPES_Pos     2                                              /**< (USBHS_DEVEPTIER) Received SETUP Interrupt Enable Position */
+#define USBHS_DEVEPTIER_BLK_RXSTPES_Msk     (_U_(0x1) << USBHS_DEVEPTIER_BLK_RXSTPES_Pos)  /**< (USBHS_DEVEPTIER) Received SETUP Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_BLK_RXSTPES         USBHS_DEVEPTIER_BLK_RXSTPES_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_BLK_RXSTPES_Msk instead */
+#define USBHS_DEVEPTIER_BLK_NAKOUTES_Pos    3                                              /**< (USBHS_DEVEPTIER) NAKed OUT Interrupt Enable Position */
+#define USBHS_DEVEPTIER_BLK_NAKOUTES_Msk    (_U_(0x1) << USBHS_DEVEPTIER_BLK_NAKOUTES_Pos)  /**< (USBHS_DEVEPTIER) NAKed OUT Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_BLK_NAKOUTES        USBHS_DEVEPTIER_BLK_NAKOUTES_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_BLK_NAKOUTES_Msk instead */
+#define USBHS_DEVEPTIER_BLK_NAKINES_Pos     4                                              /**< (USBHS_DEVEPTIER) NAKed IN Interrupt Enable Position */
+#define USBHS_DEVEPTIER_BLK_NAKINES_Msk     (_U_(0x1) << USBHS_DEVEPTIER_BLK_NAKINES_Pos)  /**< (USBHS_DEVEPTIER) NAKed IN Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_BLK_NAKINES         USBHS_DEVEPTIER_BLK_NAKINES_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_BLK_NAKINES_Msk instead */
+#define USBHS_DEVEPTIER_BLK_STALLEDES_Pos   6                                              /**< (USBHS_DEVEPTIER) STALLed Interrupt Enable Position */
+#define USBHS_DEVEPTIER_BLK_STALLEDES_Msk   (_U_(0x1) << USBHS_DEVEPTIER_BLK_STALLEDES_Pos)  /**< (USBHS_DEVEPTIER) STALLed Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_BLK_STALLEDES       USBHS_DEVEPTIER_BLK_STALLEDES_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_BLK_STALLEDES_Msk instead */
+#define USBHS_DEVEPTIER_BLK_NYETDISS_Pos    17                                             /**< (USBHS_DEVEPTIER) NYET Token Disable Enable Position */
+#define USBHS_DEVEPTIER_BLK_NYETDISS_Msk    (_U_(0x1) << USBHS_DEVEPTIER_BLK_NYETDISS_Pos)  /**< (USBHS_DEVEPTIER) NYET Token Disable Enable Mask */
+#define USBHS_DEVEPTIER_BLK_NYETDISS        USBHS_DEVEPTIER_BLK_NYETDISS_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_BLK_NYETDISS_Msk instead */
+#define USBHS_DEVEPTIER_BLK_STALLRQS_Pos    19                                             /**< (USBHS_DEVEPTIER) STALL Request Enable Position */
+#define USBHS_DEVEPTIER_BLK_STALLRQS_Msk    (_U_(0x1) << USBHS_DEVEPTIER_BLK_STALLRQS_Pos)  /**< (USBHS_DEVEPTIER) STALL Request Enable Mask */
+#define USBHS_DEVEPTIER_BLK_STALLRQS        USBHS_DEVEPTIER_BLK_STALLRQS_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_BLK_STALLRQS_Msk instead */
+#define USBHS_DEVEPTIER_BLK_MASK            _U_(0xA005C)                                   /**< \deprecated (USBHS_DEVEPTIER_BLK) Register MASK  (Use USBHS_DEVEPTIER_BLK_Msk instead)  */
+#define USBHS_DEVEPTIER_BLK_Msk             _U_(0xA005C)                                   /**< (USBHS_DEVEPTIER_BLK) Register Mask  */
+
+/* INTRPT mode */
+#define USBHS_DEVEPTIER_INTRPT_RXSTPES_Pos  2                                              /**< (USBHS_DEVEPTIER) Received SETUP Interrupt Enable Position */
+#define USBHS_DEVEPTIER_INTRPT_RXSTPES_Msk  (_U_(0x1) << USBHS_DEVEPTIER_INTRPT_RXSTPES_Pos)  /**< (USBHS_DEVEPTIER) Received SETUP Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_INTRPT_RXSTPES      USBHS_DEVEPTIER_INTRPT_RXSTPES_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_INTRPT_RXSTPES_Msk instead */
+#define USBHS_DEVEPTIER_INTRPT_NAKOUTES_Pos 3                                              /**< (USBHS_DEVEPTIER) NAKed OUT Interrupt Enable Position */
+#define USBHS_DEVEPTIER_INTRPT_NAKOUTES_Msk (_U_(0x1) << USBHS_DEVEPTIER_INTRPT_NAKOUTES_Pos)  /**< (USBHS_DEVEPTIER) NAKed OUT Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_INTRPT_NAKOUTES     USBHS_DEVEPTIER_INTRPT_NAKOUTES_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_INTRPT_NAKOUTES_Msk instead */
+#define USBHS_DEVEPTIER_INTRPT_NAKINES_Pos  4                                              /**< (USBHS_DEVEPTIER) NAKed IN Interrupt Enable Position */
+#define USBHS_DEVEPTIER_INTRPT_NAKINES_Msk  (_U_(0x1) << USBHS_DEVEPTIER_INTRPT_NAKINES_Pos)  /**< (USBHS_DEVEPTIER) NAKed IN Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_INTRPT_NAKINES      USBHS_DEVEPTIER_INTRPT_NAKINES_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_INTRPT_NAKINES_Msk instead */
+#define USBHS_DEVEPTIER_INTRPT_STALLEDES_Pos 6                                              /**< (USBHS_DEVEPTIER) STALLed Interrupt Enable Position */
+#define USBHS_DEVEPTIER_INTRPT_STALLEDES_Msk (_U_(0x1) << USBHS_DEVEPTIER_INTRPT_STALLEDES_Pos)  /**< (USBHS_DEVEPTIER) STALLed Interrupt Enable Mask */
+#define USBHS_DEVEPTIER_INTRPT_STALLEDES    USBHS_DEVEPTIER_INTRPT_STALLEDES_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_INTRPT_STALLEDES_Msk instead */
+#define USBHS_DEVEPTIER_INTRPT_NYETDISS_Pos 17                                             /**< (USBHS_DEVEPTIER) NYET Token Disable Enable Position */
+#define USBHS_DEVEPTIER_INTRPT_NYETDISS_Msk (_U_(0x1) << USBHS_DEVEPTIER_INTRPT_NYETDISS_Pos)  /**< (USBHS_DEVEPTIER) NYET Token Disable Enable Mask */
+#define USBHS_DEVEPTIER_INTRPT_NYETDISS     USBHS_DEVEPTIER_INTRPT_NYETDISS_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_INTRPT_NYETDISS_Msk instead */
+#define USBHS_DEVEPTIER_INTRPT_STALLRQS_Pos 19                                             /**< (USBHS_DEVEPTIER) STALL Request Enable Position */
+#define USBHS_DEVEPTIER_INTRPT_STALLRQS_Msk (_U_(0x1) << USBHS_DEVEPTIER_INTRPT_STALLRQS_Pos)  /**< (USBHS_DEVEPTIER) STALL Request Enable Mask */
+#define USBHS_DEVEPTIER_INTRPT_STALLRQS     USBHS_DEVEPTIER_INTRPT_STALLRQS_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIER_INTRPT_STALLRQS_Msk instead */
+#define USBHS_DEVEPTIER_INTRPT_MASK         _U_(0xA005C)                                   /**< \deprecated (USBHS_DEVEPTIER_INTRPT) Register MASK  (Use USBHS_DEVEPTIER_INTRPT_Msk instead)  */
+#define USBHS_DEVEPTIER_INTRPT_Msk          _U_(0xA005C)                                   /**< (USBHS_DEVEPTIER_INTRPT) Register Mask  */
 
 
-/* -------- USBHS_DEVEPTIDR : (USBHS Offset: 0x220) (/W 32) Device Endpoint Disable Register (n = 0) 0 -------- */
+/* -------- USBHS_DEVEPTIDR : (USBHS Offset: 0x220) (/W 32) Device Endpoint Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXINEC:1;                  /**< bit:      0  Transmitted IN Interrupt Clear           */
     uint32_t RXOUTEC:1;                 /**< bit:      1  Received OUT Data Interrupt Clear        */
-    uint32_t RXSTPEC:1;                 /**< bit:      2  Received SETUP Interrupt Clear           */
-    uint32_t NAKOUTEC:1;                /**< bit:      3  NAKed OUT Interrupt Clear                */
-    uint32_t NAKINEC:1;                 /**< bit:      4  NAKed IN Interrupt Clear                 */
+    uint32_t :3;                        /**< bit:   2..4  Reserved */
     uint32_t OVERFEC:1;                 /**< bit:      5  Overflow Interrupt Clear                 */
-    uint32_t STALLEDEC:1;               /**< bit:      6  STALLed Interrupt Clear                  */
+    uint32_t :1;                        /**< bit:      6  Reserved */
     uint32_t SHORTPACKETEC:1;           /**< bit:      7  Shortpacket Interrupt Clear              */
     uint32_t :4;                        /**< bit:  8..11  Reserved */
     uint32_t NBUSYBKEC:1;               /**< bit:     12  Number of Busy Banks Interrupt Clear     */
@@ -1622,16 +2168,64 @@ typedef union {
     uint32_t FIFOCONC:1;                /**< bit:     14  FIFO Control Clear                       */
     uint32_t :1;                        /**< bit:     15  Reserved */
     uint32_t EPDISHDMAC:1;              /**< bit:     16  Endpoint Interrupts Disable HDMA Request Clear */
+    uint32_t :15;                       /**< bit: 17..31  Reserved */
+  } bit;                                /**< Structure used for bit  access */
+  struct { // CTRL mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPEC:1;                 /**< bit:      2  Received SETUP Interrupt Clear           */
+    uint32_t NAKOUTEC:1;                /**< bit:      3  NAKed OUT Interrupt Clear                */
+    uint32_t NAKINEC:1;                 /**< bit:      4  NAKed IN Interrupt Clear                 */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDEC:1;               /**< bit:      6  STALLed Interrupt Clear                  */
+    uint32_t :10;                       /**< bit:  7..16  Reserved */
     uint32_t NYETDISC:1;                /**< bit:     17  NYET Token Disable Clear                 */
     uint32_t :1;                        /**< bit:     18  Reserved */
     uint32_t STALLRQC:1;                /**< bit:     19  STALL Request Clear                      */
     uint32_t :12;                       /**< bit: 20..31  Reserved */
-  } bit;                                /**< Structure used for bit  access */
+  } CTRL;                                /**< Structure used for CTRL mode access */
+  struct { // ISO mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFEC:1;                /**< bit:      2  Underflow Interrupt Clear                */
+    uint32_t HBISOINERREC:1;            /**< bit:      3  High Bandwidth Isochronous IN Underflow Error Interrupt Clear */
+    uint32_t HBISOFLUSHEC:1;            /**< bit:      4  High Bandwidth Isochronous IN Flush Interrupt Clear */
+    uint32_t :3;                        /**< bit:   5..7  Reserved */
+    uint32_t MDATAEC:1;                 /**< bit:      8  MData Interrupt Clear                    */
+    uint32_t DATAXEC:1;                 /**< bit:      9  DataX Interrupt Clear                    */
+    uint32_t ERRORTRANSEC:1;            /**< bit:     10  Transaction Error Interrupt Clear        */
+    uint32_t :21;                       /**< bit: 11..31  Reserved */
+  } ISO;                                /**< Structure used for ISO mode access */
+  struct { // BLK mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPEC:1;                 /**< bit:      2  Received SETUP Interrupt Clear           */
+    uint32_t NAKOUTEC:1;                /**< bit:      3  NAKed OUT Interrupt Clear                */
+    uint32_t NAKINEC:1;                 /**< bit:      4  NAKed IN Interrupt Clear                 */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDEC:1;               /**< bit:      6  STALLed Interrupt Clear                  */
+    uint32_t :10;                       /**< bit:  7..16  Reserved */
+    uint32_t NYETDISC:1;                /**< bit:     17  NYET Token Disable Clear                 */
+    uint32_t :1;                        /**< bit:     18  Reserved */
+    uint32_t STALLRQC:1;                /**< bit:     19  STALL Request Clear                      */
+    uint32_t :12;                       /**< bit: 20..31  Reserved */
+  } BLK;                                /**< Structure used for BLK mode access */
+  struct { // INTRPT mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t RXSTPEC:1;                 /**< bit:      2  Received SETUP Interrupt Clear           */
+    uint32_t NAKOUTEC:1;                /**< bit:      3  NAKed OUT Interrupt Clear                */
+    uint32_t NAKINEC:1;                 /**< bit:      4  NAKed IN Interrupt Clear                 */
+    uint32_t :1;                        /**< bit:      5  Reserved */
+    uint32_t STALLEDEC:1;               /**< bit:      6  STALLed Interrupt Clear                  */
+    uint32_t :10;                       /**< bit:  7..16  Reserved */
+    uint32_t NYETDISC:1;                /**< bit:     17  NYET Token Disable Clear                 */
+    uint32_t :1;                        /**< bit:     18  Reserved */
+    uint32_t STALLRQC:1;                /**< bit:     19  STALL Request Clear                      */
+    uint32_t :12;                       /**< bit: 20..31  Reserved */
+  } INTRPT;                                /**< Structure used for INTRPT mode access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_DEVEPTIDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_DEVEPTIDR_OFFSET              (0x220)                                       /**<  (USBHS_DEVEPTIDR) Device Endpoint Disable Register (n = 0) 0  Offset */
+#define USBHS_DEVEPTIDR_OFFSET              (0x220)                                       /**<  (USBHS_DEVEPTIDR) Device Endpoint Interrupt Disable Register  Offset */
 
 #define USBHS_DEVEPTIDR_TXINEC_Pos          0                                              /**< (USBHS_DEVEPTIDR) Transmitted IN Interrupt Clear Position */
 #define USBHS_DEVEPTIDR_TXINEC_Msk          (_U_(0x1) << USBHS_DEVEPTIDR_TXINEC_Pos)       /**< (USBHS_DEVEPTIDR) Transmitted IN Interrupt Clear Mask */
@@ -1639,21 +2233,9 @@ typedef union {
 #define USBHS_DEVEPTIDR_RXOUTEC_Pos         1                                              /**< (USBHS_DEVEPTIDR) Received OUT Data Interrupt Clear Position */
 #define USBHS_DEVEPTIDR_RXOUTEC_Msk         (_U_(0x1) << USBHS_DEVEPTIDR_RXOUTEC_Pos)      /**< (USBHS_DEVEPTIDR) Received OUT Data Interrupt Clear Mask */
 #define USBHS_DEVEPTIDR_RXOUTEC             USBHS_DEVEPTIDR_RXOUTEC_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_RXOUTEC_Msk instead */
-#define USBHS_DEVEPTIDR_RXSTPEC_Pos         2                                              /**< (USBHS_DEVEPTIDR) Received SETUP Interrupt Clear Position */
-#define USBHS_DEVEPTIDR_RXSTPEC_Msk         (_U_(0x1) << USBHS_DEVEPTIDR_RXSTPEC_Pos)      /**< (USBHS_DEVEPTIDR) Received SETUP Interrupt Clear Mask */
-#define USBHS_DEVEPTIDR_RXSTPEC             USBHS_DEVEPTIDR_RXSTPEC_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_RXSTPEC_Msk instead */
-#define USBHS_DEVEPTIDR_NAKOUTEC_Pos        3                                              /**< (USBHS_DEVEPTIDR) NAKed OUT Interrupt Clear Position */
-#define USBHS_DEVEPTIDR_NAKOUTEC_Msk        (_U_(0x1) << USBHS_DEVEPTIDR_NAKOUTEC_Pos)     /**< (USBHS_DEVEPTIDR) NAKed OUT Interrupt Clear Mask */
-#define USBHS_DEVEPTIDR_NAKOUTEC            USBHS_DEVEPTIDR_NAKOUTEC_Msk                   /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_NAKOUTEC_Msk instead */
-#define USBHS_DEVEPTIDR_NAKINEC_Pos         4                                              /**< (USBHS_DEVEPTIDR) NAKed IN Interrupt Clear Position */
-#define USBHS_DEVEPTIDR_NAKINEC_Msk         (_U_(0x1) << USBHS_DEVEPTIDR_NAKINEC_Pos)      /**< (USBHS_DEVEPTIDR) NAKed IN Interrupt Clear Mask */
-#define USBHS_DEVEPTIDR_NAKINEC             USBHS_DEVEPTIDR_NAKINEC_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_NAKINEC_Msk instead */
 #define USBHS_DEVEPTIDR_OVERFEC_Pos         5                                              /**< (USBHS_DEVEPTIDR) Overflow Interrupt Clear Position */
 #define USBHS_DEVEPTIDR_OVERFEC_Msk         (_U_(0x1) << USBHS_DEVEPTIDR_OVERFEC_Pos)      /**< (USBHS_DEVEPTIDR) Overflow Interrupt Clear Mask */
 #define USBHS_DEVEPTIDR_OVERFEC             USBHS_DEVEPTIDR_OVERFEC_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_OVERFEC_Msk instead */
-#define USBHS_DEVEPTIDR_STALLEDEC_Pos       6                                              /**< (USBHS_DEVEPTIDR) STALLed Interrupt Clear Position */
-#define USBHS_DEVEPTIDR_STALLEDEC_Msk       (_U_(0x1) << USBHS_DEVEPTIDR_STALLEDEC_Pos)    /**< (USBHS_DEVEPTIDR) STALLed Interrupt Clear Mask */
-#define USBHS_DEVEPTIDR_STALLEDEC           USBHS_DEVEPTIDR_STALLEDEC_Msk                  /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_STALLEDEC_Msk instead */
 #define USBHS_DEVEPTIDR_SHORTPACKETEC_Pos   7                                              /**< (USBHS_DEVEPTIDR) Shortpacket Interrupt Clear Position */
 #define USBHS_DEVEPTIDR_SHORTPACKETEC_Msk   (_U_(0x1) << USBHS_DEVEPTIDR_SHORTPACKETEC_Pos)  /**< (USBHS_DEVEPTIDR) Shortpacket Interrupt Clear Mask */
 #define USBHS_DEVEPTIDR_SHORTPACKETEC       USBHS_DEVEPTIDR_SHORTPACKETEC_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_SHORTPACKETEC_Msk instead */
@@ -1666,18 +2248,101 @@ typedef union {
 #define USBHS_DEVEPTIDR_EPDISHDMAC_Pos      16                                             /**< (USBHS_DEVEPTIDR) Endpoint Interrupts Disable HDMA Request Clear Position */
 #define USBHS_DEVEPTIDR_EPDISHDMAC_Msk      (_U_(0x1) << USBHS_DEVEPTIDR_EPDISHDMAC_Pos)   /**< (USBHS_DEVEPTIDR) Endpoint Interrupts Disable HDMA Request Clear Mask */
 #define USBHS_DEVEPTIDR_EPDISHDMAC          USBHS_DEVEPTIDR_EPDISHDMAC_Msk                 /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_EPDISHDMAC_Msk instead */
-#define USBHS_DEVEPTIDR_NYETDISC_Pos        17                                             /**< (USBHS_DEVEPTIDR) NYET Token Disable Clear Position */
-#define USBHS_DEVEPTIDR_NYETDISC_Msk        (_U_(0x1) << USBHS_DEVEPTIDR_NYETDISC_Pos)     /**< (USBHS_DEVEPTIDR) NYET Token Disable Clear Mask */
-#define USBHS_DEVEPTIDR_NYETDISC            USBHS_DEVEPTIDR_NYETDISC_Msk                   /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_NYETDISC_Msk instead */
-#define USBHS_DEVEPTIDR_STALLRQC_Pos        19                                             /**< (USBHS_DEVEPTIDR) STALL Request Clear Position */
-#define USBHS_DEVEPTIDR_STALLRQC_Msk        (_U_(0x1) << USBHS_DEVEPTIDR_STALLRQC_Pos)     /**< (USBHS_DEVEPTIDR) STALL Request Clear Mask */
-#define USBHS_DEVEPTIDR_STALLRQC            USBHS_DEVEPTIDR_STALLRQC_Msk                   /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_STALLRQC_Msk instead */
-#define USBHS_DEVEPTIDR_MASK                _U_(0xB50FF)                                   /**< \deprecated (USBHS_DEVEPTIDR) Register MASK  (Use USBHS_DEVEPTIDR_Msk instead)  */
-#define USBHS_DEVEPTIDR_Msk                 _U_(0xB50FF)                                   /**< (USBHS_DEVEPTIDR) Register Mask  */
+#define USBHS_DEVEPTIDR_MASK                _U_(0x150A3)                                   /**< \deprecated (USBHS_DEVEPTIDR) Register MASK  (Use USBHS_DEVEPTIDR_Msk instead)  */
+#define USBHS_DEVEPTIDR_Msk                 _U_(0x150A3)                                   /**< (USBHS_DEVEPTIDR) Register Mask  */
+
+/* CTRL mode */
+#define USBHS_DEVEPTIDR_CTRL_RXSTPEC_Pos    2                                              /**< (USBHS_DEVEPTIDR) Received SETUP Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_CTRL_RXSTPEC_Msk    (_U_(0x1) << USBHS_DEVEPTIDR_CTRL_RXSTPEC_Pos)  /**< (USBHS_DEVEPTIDR) Received SETUP Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_CTRL_RXSTPEC        USBHS_DEVEPTIDR_CTRL_RXSTPEC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_CTRL_RXSTPEC_Msk instead */
+#define USBHS_DEVEPTIDR_CTRL_NAKOUTEC_Pos   3                                              /**< (USBHS_DEVEPTIDR) NAKed OUT Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_CTRL_NAKOUTEC_Msk   (_U_(0x1) << USBHS_DEVEPTIDR_CTRL_NAKOUTEC_Pos)  /**< (USBHS_DEVEPTIDR) NAKed OUT Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_CTRL_NAKOUTEC       USBHS_DEVEPTIDR_CTRL_NAKOUTEC_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_CTRL_NAKOUTEC_Msk instead */
+#define USBHS_DEVEPTIDR_CTRL_NAKINEC_Pos    4                                              /**< (USBHS_DEVEPTIDR) NAKed IN Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_CTRL_NAKINEC_Msk    (_U_(0x1) << USBHS_DEVEPTIDR_CTRL_NAKINEC_Pos)  /**< (USBHS_DEVEPTIDR) NAKed IN Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_CTRL_NAKINEC        USBHS_DEVEPTIDR_CTRL_NAKINEC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_CTRL_NAKINEC_Msk instead */
+#define USBHS_DEVEPTIDR_CTRL_STALLEDEC_Pos  6                                              /**< (USBHS_DEVEPTIDR) STALLed Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_CTRL_STALLEDEC_Msk  (_U_(0x1) << USBHS_DEVEPTIDR_CTRL_STALLEDEC_Pos)  /**< (USBHS_DEVEPTIDR) STALLed Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_CTRL_STALLEDEC      USBHS_DEVEPTIDR_CTRL_STALLEDEC_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_CTRL_STALLEDEC_Msk instead */
+#define USBHS_DEVEPTIDR_CTRL_NYETDISC_Pos   17                                             /**< (USBHS_DEVEPTIDR) NYET Token Disable Clear Position */
+#define USBHS_DEVEPTIDR_CTRL_NYETDISC_Msk   (_U_(0x1) << USBHS_DEVEPTIDR_CTRL_NYETDISC_Pos)  /**< (USBHS_DEVEPTIDR) NYET Token Disable Clear Mask */
+#define USBHS_DEVEPTIDR_CTRL_NYETDISC       USBHS_DEVEPTIDR_CTRL_NYETDISC_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_CTRL_NYETDISC_Msk instead */
+#define USBHS_DEVEPTIDR_CTRL_STALLRQC_Pos   19                                             /**< (USBHS_DEVEPTIDR) STALL Request Clear Position */
+#define USBHS_DEVEPTIDR_CTRL_STALLRQC_Msk   (_U_(0x1) << USBHS_DEVEPTIDR_CTRL_STALLRQC_Pos)  /**< (USBHS_DEVEPTIDR) STALL Request Clear Mask */
+#define USBHS_DEVEPTIDR_CTRL_STALLRQC       USBHS_DEVEPTIDR_CTRL_STALLRQC_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_CTRL_STALLRQC_Msk instead */
+#define USBHS_DEVEPTIDR_CTRL_MASK           _U_(0xA005C)                                   /**< \deprecated (USBHS_DEVEPTIDR_CTRL) Register MASK  (Use USBHS_DEVEPTIDR_CTRL_Msk instead)  */
+#define USBHS_DEVEPTIDR_CTRL_Msk            _U_(0xA005C)                                   /**< (USBHS_DEVEPTIDR_CTRL) Register Mask  */
+
+/* ISO mode */
+#define USBHS_DEVEPTIDR_ISO_UNDERFEC_Pos    2                                              /**< (USBHS_DEVEPTIDR) Underflow Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_ISO_UNDERFEC_Msk    (_U_(0x1) << USBHS_DEVEPTIDR_ISO_UNDERFEC_Pos)  /**< (USBHS_DEVEPTIDR) Underflow Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_ISO_UNDERFEC        USBHS_DEVEPTIDR_ISO_UNDERFEC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_ISO_UNDERFEC_Msk instead */
+#define USBHS_DEVEPTIDR_ISO_HBISOINERREC_Pos 3                                              /**< (USBHS_DEVEPTIDR) High Bandwidth Isochronous IN Underflow Error Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_ISO_HBISOINERREC_Msk (_U_(0x1) << USBHS_DEVEPTIDR_ISO_HBISOINERREC_Pos)  /**< (USBHS_DEVEPTIDR) High Bandwidth Isochronous IN Underflow Error Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_ISO_HBISOINERREC    USBHS_DEVEPTIDR_ISO_HBISOINERREC_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_ISO_HBISOINERREC_Msk instead */
+#define USBHS_DEVEPTIDR_ISO_HBISOFLUSHEC_Pos 4                                              /**< (USBHS_DEVEPTIDR) High Bandwidth Isochronous IN Flush Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_ISO_HBISOFLUSHEC_Msk (_U_(0x1) << USBHS_DEVEPTIDR_ISO_HBISOFLUSHEC_Pos)  /**< (USBHS_DEVEPTIDR) High Bandwidth Isochronous IN Flush Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_ISO_HBISOFLUSHEC    USBHS_DEVEPTIDR_ISO_HBISOFLUSHEC_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_ISO_HBISOFLUSHEC_Msk instead */
+#define USBHS_DEVEPTIDR_ISO_MDATAEC_Pos     8                                              /**< (USBHS_DEVEPTIDR) MData Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_ISO_MDATAEC_Msk     (_U_(0x1) << USBHS_DEVEPTIDR_ISO_MDATAEC_Pos)  /**< (USBHS_DEVEPTIDR) MData Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_ISO_MDATAEC         USBHS_DEVEPTIDR_ISO_MDATAEC_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_ISO_MDATAEC_Msk instead */
+#define USBHS_DEVEPTIDR_ISO_DATAXEC_Pos     9                                              /**< (USBHS_DEVEPTIDR) DataX Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_ISO_DATAXEC_Msk     (_U_(0x1) << USBHS_DEVEPTIDR_ISO_DATAXEC_Pos)  /**< (USBHS_DEVEPTIDR) DataX Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_ISO_DATAXEC         USBHS_DEVEPTIDR_ISO_DATAXEC_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_ISO_DATAXEC_Msk instead */
+#define USBHS_DEVEPTIDR_ISO_ERRORTRANSEC_Pos 10                                             /**< (USBHS_DEVEPTIDR) Transaction Error Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_ISO_ERRORTRANSEC_Msk (_U_(0x1) << USBHS_DEVEPTIDR_ISO_ERRORTRANSEC_Pos)  /**< (USBHS_DEVEPTIDR) Transaction Error Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_ISO_ERRORTRANSEC    USBHS_DEVEPTIDR_ISO_ERRORTRANSEC_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_ISO_ERRORTRANSEC_Msk instead */
+#define USBHS_DEVEPTIDR_ISO_MASK            _U_(0x71C)                                     /**< \deprecated (USBHS_DEVEPTIDR_ISO) Register MASK  (Use USBHS_DEVEPTIDR_ISO_Msk instead)  */
+#define USBHS_DEVEPTIDR_ISO_Msk             _U_(0x71C)                                     /**< (USBHS_DEVEPTIDR_ISO) Register Mask  */
+
+/* BLK mode */
+#define USBHS_DEVEPTIDR_BLK_RXSTPEC_Pos     2                                              /**< (USBHS_DEVEPTIDR) Received SETUP Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_BLK_RXSTPEC_Msk     (_U_(0x1) << USBHS_DEVEPTIDR_BLK_RXSTPEC_Pos)  /**< (USBHS_DEVEPTIDR) Received SETUP Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_BLK_RXSTPEC         USBHS_DEVEPTIDR_BLK_RXSTPEC_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_BLK_RXSTPEC_Msk instead */
+#define USBHS_DEVEPTIDR_BLK_NAKOUTEC_Pos    3                                              /**< (USBHS_DEVEPTIDR) NAKed OUT Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_BLK_NAKOUTEC_Msk    (_U_(0x1) << USBHS_DEVEPTIDR_BLK_NAKOUTEC_Pos)  /**< (USBHS_DEVEPTIDR) NAKed OUT Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_BLK_NAKOUTEC        USBHS_DEVEPTIDR_BLK_NAKOUTEC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_BLK_NAKOUTEC_Msk instead */
+#define USBHS_DEVEPTIDR_BLK_NAKINEC_Pos     4                                              /**< (USBHS_DEVEPTIDR) NAKed IN Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_BLK_NAKINEC_Msk     (_U_(0x1) << USBHS_DEVEPTIDR_BLK_NAKINEC_Pos)  /**< (USBHS_DEVEPTIDR) NAKed IN Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_BLK_NAKINEC         USBHS_DEVEPTIDR_BLK_NAKINEC_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_BLK_NAKINEC_Msk instead */
+#define USBHS_DEVEPTIDR_BLK_STALLEDEC_Pos   6                                              /**< (USBHS_DEVEPTIDR) STALLed Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_BLK_STALLEDEC_Msk   (_U_(0x1) << USBHS_DEVEPTIDR_BLK_STALLEDEC_Pos)  /**< (USBHS_DEVEPTIDR) STALLed Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_BLK_STALLEDEC       USBHS_DEVEPTIDR_BLK_STALLEDEC_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_BLK_STALLEDEC_Msk instead */
+#define USBHS_DEVEPTIDR_BLK_NYETDISC_Pos    17                                             /**< (USBHS_DEVEPTIDR) NYET Token Disable Clear Position */
+#define USBHS_DEVEPTIDR_BLK_NYETDISC_Msk    (_U_(0x1) << USBHS_DEVEPTIDR_BLK_NYETDISC_Pos)  /**< (USBHS_DEVEPTIDR) NYET Token Disable Clear Mask */
+#define USBHS_DEVEPTIDR_BLK_NYETDISC        USBHS_DEVEPTIDR_BLK_NYETDISC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_BLK_NYETDISC_Msk instead */
+#define USBHS_DEVEPTIDR_BLK_STALLRQC_Pos    19                                             /**< (USBHS_DEVEPTIDR) STALL Request Clear Position */
+#define USBHS_DEVEPTIDR_BLK_STALLRQC_Msk    (_U_(0x1) << USBHS_DEVEPTIDR_BLK_STALLRQC_Pos)  /**< (USBHS_DEVEPTIDR) STALL Request Clear Mask */
+#define USBHS_DEVEPTIDR_BLK_STALLRQC        USBHS_DEVEPTIDR_BLK_STALLRQC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_BLK_STALLRQC_Msk instead */
+#define USBHS_DEVEPTIDR_BLK_MASK            _U_(0xA005C)                                   /**< \deprecated (USBHS_DEVEPTIDR_BLK) Register MASK  (Use USBHS_DEVEPTIDR_BLK_Msk instead)  */
+#define USBHS_DEVEPTIDR_BLK_Msk             _U_(0xA005C)                                   /**< (USBHS_DEVEPTIDR_BLK) Register Mask  */
+
+/* INTRPT mode */
+#define USBHS_DEVEPTIDR_INTRPT_RXSTPEC_Pos  2                                              /**< (USBHS_DEVEPTIDR) Received SETUP Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_INTRPT_RXSTPEC_Msk  (_U_(0x1) << USBHS_DEVEPTIDR_INTRPT_RXSTPEC_Pos)  /**< (USBHS_DEVEPTIDR) Received SETUP Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_INTRPT_RXSTPEC      USBHS_DEVEPTIDR_INTRPT_RXSTPEC_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_INTRPT_RXSTPEC_Msk instead */
+#define USBHS_DEVEPTIDR_INTRPT_NAKOUTEC_Pos 3                                              /**< (USBHS_DEVEPTIDR) NAKed OUT Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_INTRPT_NAKOUTEC_Msk (_U_(0x1) << USBHS_DEVEPTIDR_INTRPT_NAKOUTEC_Pos)  /**< (USBHS_DEVEPTIDR) NAKed OUT Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_INTRPT_NAKOUTEC     USBHS_DEVEPTIDR_INTRPT_NAKOUTEC_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_INTRPT_NAKOUTEC_Msk instead */
+#define USBHS_DEVEPTIDR_INTRPT_NAKINEC_Pos  4                                              /**< (USBHS_DEVEPTIDR) NAKed IN Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_INTRPT_NAKINEC_Msk  (_U_(0x1) << USBHS_DEVEPTIDR_INTRPT_NAKINEC_Pos)  /**< (USBHS_DEVEPTIDR) NAKed IN Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_INTRPT_NAKINEC      USBHS_DEVEPTIDR_INTRPT_NAKINEC_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_INTRPT_NAKINEC_Msk instead */
+#define USBHS_DEVEPTIDR_INTRPT_STALLEDEC_Pos 6                                              /**< (USBHS_DEVEPTIDR) STALLed Interrupt Clear Position */
+#define USBHS_DEVEPTIDR_INTRPT_STALLEDEC_Msk (_U_(0x1) << USBHS_DEVEPTIDR_INTRPT_STALLEDEC_Pos)  /**< (USBHS_DEVEPTIDR) STALLed Interrupt Clear Mask */
+#define USBHS_DEVEPTIDR_INTRPT_STALLEDEC    USBHS_DEVEPTIDR_INTRPT_STALLEDEC_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_INTRPT_STALLEDEC_Msk instead */
+#define USBHS_DEVEPTIDR_INTRPT_NYETDISC_Pos 17                                             /**< (USBHS_DEVEPTIDR) NYET Token Disable Clear Position */
+#define USBHS_DEVEPTIDR_INTRPT_NYETDISC_Msk (_U_(0x1) << USBHS_DEVEPTIDR_INTRPT_NYETDISC_Pos)  /**< (USBHS_DEVEPTIDR) NYET Token Disable Clear Mask */
+#define USBHS_DEVEPTIDR_INTRPT_NYETDISC     USBHS_DEVEPTIDR_INTRPT_NYETDISC_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_INTRPT_NYETDISC_Msk instead */
+#define USBHS_DEVEPTIDR_INTRPT_STALLRQC_Pos 19                                             /**< (USBHS_DEVEPTIDR) STALL Request Clear Position */
+#define USBHS_DEVEPTIDR_INTRPT_STALLRQC_Msk (_U_(0x1) << USBHS_DEVEPTIDR_INTRPT_STALLRQC_Pos)  /**< (USBHS_DEVEPTIDR) STALL Request Clear Mask */
+#define USBHS_DEVEPTIDR_INTRPT_STALLRQC     USBHS_DEVEPTIDR_INTRPT_STALLRQC_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_DEVEPTIDR_INTRPT_STALLRQC_Msk instead */
+#define USBHS_DEVEPTIDR_INTRPT_MASK         _U_(0xA005C)                                   /**< \deprecated (USBHS_DEVEPTIDR_INTRPT) Register MASK  (Use USBHS_DEVEPTIDR_INTRPT_Msk instead)  */
+#define USBHS_DEVEPTIDR_INTRPT_Msk          _U_(0xA005C)                                   /**< (USBHS_DEVEPTIDR_INTRPT) Register Mask  */
 
 
 /* -------- USBHS_HSTCTRL : (USBHS Offset: 0x400) (R/W 32) Host General Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :8;                        /**< bit:   0..7  Reserved */
@@ -1690,6 +2355,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTCTRL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTCTRL_OFFSET                (0x400)                                       /**<  (USBHS_HSTCTRL) Host General Control Register  Offset */
@@ -1708,14 +2374,19 @@ typedef union {
 #define USBHS_HSTCTRL_SPDCONF(value)        (USBHS_HSTCTRL_SPDCONF_Msk & ((value) << USBHS_HSTCTRL_SPDCONF_Pos))
 #define   USBHS_HSTCTRL_SPDCONF_NORMAL_Val  _U_(0x0)                                       /**< (USBHS_HSTCTRL) The host starts in Full-speed mode and performs a high-speed reset to switch to High-speed mode if the downstream peripheral is high-speed capable.  */
 #define   USBHS_HSTCTRL_SPDCONF_LOW_POWER_Val _U_(0x1)                                       /**< (USBHS_HSTCTRL) For a better consumption, if high speed is not needed.  */
+#define   USBHS_HSTCTRL_SPDCONF_HIGH_SPEED_Val _U_(0x2)                                       /**< (USBHS_HSTCTRL) Forced high speed.  */
+#define   USBHS_HSTCTRL_SPDCONF_FORCED_FS_Val _U_(0x3)                                       /**< (USBHS_HSTCTRL) The host remains in Full-speed mode whatever the peripheral speed capability.  */
 #define USBHS_HSTCTRL_SPDCONF_NORMAL        (USBHS_HSTCTRL_SPDCONF_NORMAL_Val << USBHS_HSTCTRL_SPDCONF_Pos)  /**< (USBHS_HSTCTRL) The host starts in Full-speed mode and performs a high-speed reset to switch to High-speed mode if the downstream peripheral is high-speed capable. Position  */
 #define USBHS_HSTCTRL_SPDCONF_LOW_POWER     (USBHS_HSTCTRL_SPDCONF_LOW_POWER_Val << USBHS_HSTCTRL_SPDCONF_Pos)  /**< (USBHS_HSTCTRL) For a better consumption, if high speed is not needed. Position  */
+#define USBHS_HSTCTRL_SPDCONF_HIGH_SPEED    (USBHS_HSTCTRL_SPDCONF_HIGH_SPEED_Val << USBHS_HSTCTRL_SPDCONF_Pos)  /**< (USBHS_HSTCTRL) Forced high speed. Position  */
+#define USBHS_HSTCTRL_SPDCONF_FORCED_FS     (USBHS_HSTCTRL_SPDCONF_FORCED_FS_Val << USBHS_HSTCTRL_SPDCONF_Pos)  /**< (USBHS_HSTCTRL) The host remains in Full-speed mode whatever the peripheral speed capability. Position  */
 #define USBHS_HSTCTRL_MASK                  _U_(0x3700)                                    /**< \deprecated (USBHS_HSTCTRL) Register MASK  (Use USBHS_HSTCTRL_Msk instead)  */
 #define USBHS_HSTCTRL_Msk                   _U_(0x3700)                                    /**< (USBHS_HSTCTRL) Register Mask  */
 
 
 /* -------- USBHS_HSTISR : (USBHS Offset: 0x404) (R/ 32) Host Global Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DCONNI:1;                  /**< bit:      0  Device Connection Interrupt              */
@@ -1736,25 +2407,24 @@ typedef union {
     uint32_t PEP_7:1;                   /**< bit:     15  Pipe 7 Interrupt                         */
     uint32_t PEP_8:1;                   /**< bit:     16  Pipe 8 Interrupt                         */
     uint32_t PEP_9:1;                   /**< bit:     17  Pipe 9 Interrupt                         */
-    uint32_t PEP_10:1;                  /**< bit:     18  Pipe 10 Interrupt                        */
-    uint32_t PEP_11:1;                  /**< bit:     19  Pipe 11 Interrupt                        */
-    uint32_t :5;                        /**< bit: 20..24  Reserved */
-    uint32_t DMA_1:1;                   /**< bit:     25  DMA Channel 1 Interrupt                  */
-    uint32_t DMA_2:1;                   /**< bit:     26  DMA Channel 2 Interrupt                  */
-    uint32_t DMA_3:1;                   /**< bit:     27  DMA Channel 3 Interrupt                  */
-    uint32_t DMA_4:1;                   /**< bit:     28  DMA Channel 4 Interrupt                  */
-    uint32_t DMA_5:1;                   /**< bit:     29  DMA Channel 5 Interrupt                  */
-    uint32_t DMA_6:1;                   /**< bit:     30  DMA Channel 6 Interrupt                  */
-    uint32_t DMA_7:1;                   /**< bit:     31  DMA Channel 7 Interrupt                  */
+    uint32_t :7;                        /**< bit: 18..24  Reserved */
+    uint32_t DMA_0:1;                   /**< bit:     25  DMA Channel 0 Interrupt                  */
+    uint32_t DMA_1:1;                   /**< bit:     26  DMA Channel 1 Interrupt                  */
+    uint32_t DMA_2:1;                   /**< bit:     27  DMA Channel 2 Interrupt                  */
+    uint32_t DMA_3:1;                   /**< bit:     28  DMA Channel 3 Interrupt                  */
+    uint32_t DMA_4:1;                   /**< bit:     29  DMA Channel 4 Interrupt                  */
+    uint32_t DMA_5:1;                   /**< bit:     30  DMA Channel 5 Interrupt                  */
+    uint32_t DMA_6:1;                   /**< bit:     31  DMA Channel 6 Interrupt                  */
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :8;                        /**< bit:   0..7  Reserved */
-    uint32_t PEP_:12;                   /**< bit:  8..19  Pipe x Interrupt                         */
-    uint32_t :5;                        /**< bit: 20..24  Reserved */
-    uint32_t DMA_:7;                    /**< bit: 25..31  DMA Channel 7 Interrupt                  */
+    uint32_t PEP_:10;                   /**< bit:  8..17  Pipe x Interrupt                         */
+    uint32_t :7;                        /**< bit: 18..24  Reserved */
+    uint32_t DMA_:7;                    /**< bit: 25..31  DMA Channel 6 Interrupt                  */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTISR_OFFSET                 (0x404)                                       /**<  (USBHS_HSTISR) Host Global Interrupt Status Register  Offset */
@@ -1810,45 +2480,40 @@ typedef union {
 #define USBHS_HSTISR_PEP_9_Pos              17                                             /**< (USBHS_HSTISR) Pipe 9 Interrupt Position */
 #define USBHS_HSTISR_PEP_9_Msk              (_U_(0x1) << USBHS_HSTISR_PEP_9_Pos)           /**< (USBHS_HSTISR) Pipe 9 Interrupt Mask */
 #define USBHS_HSTISR_PEP_9                  USBHS_HSTISR_PEP_9_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTISR_PEP_9_Msk instead */
-#define USBHS_HSTISR_PEP_10_Pos             18                                             /**< (USBHS_HSTISR) Pipe 10 Interrupt Position */
-#define USBHS_HSTISR_PEP_10_Msk             (_U_(0x1) << USBHS_HSTISR_PEP_10_Pos)          /**< (USBHS_HSTISR) Pipe 10 Interrupt Mask */
-#define USBHS_HSTISR_PEP_10                 USBHS_HSTISR_PEP_10_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTISR_PEP_10_Msk instead */
-#define USBHS_HSTISR_PEP_11_Pos             19                                             /**< (USBHS_HSTISR) Pipe 11 Interrupt Position */
-#define USBHS_HSTISR_PEP_11_Msk             (_U_(0x1) << USBHS_HSTISR_PEP_11_Pos)          /**< (USBHS_HSTISR) Pipe 11 Interrupt Mask */
-#define USBHS_HSTISR_PEP_11                 USBHS_HSTISR_PEP_11_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTISR_PEP_11_Msk instead */
-#define USBHS_HSTISR_DMA_1_Pos              25                                             /**< (USBHS_HSTISR) DMA Channel 1 Interrupt Position */
+#define USBHS_HSTISR_DMA_0_Pos              25                                             /**< (USBHS_HSTISR) DMA Channel 0 Interrupt Position */
+#define USBHS_HSTISR_DMA_0_Msk              (_U_(0x1) << USBHS_HSTISR_DMA_0_Pos)           /**< (USBHS_HSTISR) DMA Channel 0 Interrupt Mask */
+#define USBHS_HSTISR_DMA_0                  USBHS_HSTISR_DMA_0_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTISR_DMA_0_Msk instead */
+#define USBHS_HSTISR_DMA_1_Pos              26                                             /**< (USBHS_HSTISR) DMA Channel 1 Interrupt Position */
 #define USBHS_HSTISR_DMA_1_Msk              (_U_(0x1) << USBHS_HSTISR_DMA_1_Pos)           /**< (USBHS_HSTISR) DMA Channel 1 Interrupt Mask */
 #define USBHS_HSTISR_DMA_1                  USBHS_HSTISR_DMA_1_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTISR_DMA_1_Msk instead */
-#define USBHS_HSTISR_DMA_2_Pos              26                                             /**< (USBHS_HSTISR) DMA Channel 2 Interrupt Position */
+#define USBHS_HSTISR_DMA_2_Pos              27                                             /**< (USBHS_HSTISR) DMA Channel 2 Interrupt Position */
 #define USBHS_HSTISR_DMA_2_Msk              (_U_(0x1) << USBHS_HSTISR_DMA_2_Pos)           /**< (USBHS_HSTISR) DMA Channel 2 Interrupt Mask */
 #define USBHS_HSTISR_DMA_2                  USBHS_HSTISR_DMA_2_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTISR_DMA_2_Msk instead */
-#define USBHS_HSTISR_DMA_3_Pos              27                                             /**< (USBHS_HSTISR) DMA Channel 3 Interrupt Position */
+#define USBHS_HSTISR_DMA_3_Pos              28                                             /**< (USBHS_HSTISR) DMA Channel 3 Interrupt Position */
 #define USBHS_HSTISR_DMA_3_Msk              (_U_(0x1) << USBHS_HSTISR_DMA_3_Pos)           /**< (USBHS_HSTISR) DMA Channel 3 Interrupt Mask */
 #define USBHS_HSTISR_DMA_3                  USBHS_HSTISR_DMA_3_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTISR_DMA_3_Msk instead */
-#define USBHS_HSTISR_DMA_4_Pos              28                                             /**< (USBHS_HSTISR) DMA Channel 4 Interrupt Position */
+#define USBHS_HSTISR_DMA_4_Pos              29                                             /**< (USBHS_HSTISR) DMA Channel 4 Interrupt Position */
 #define USBHS_HSTISR_DMA_4_Msk              (_U_(0x1) << USBHS_HSTISR_DMA_4_Pos)           /**< (USBHS_HSTISR) DMA Channel 4 Interrupt Mask */
 #define USBHS_HSTISR_DMA_4                  USBHS_HSTISR_DMA_4_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTISR_DMA_4_Msk instead */
-#define USBHS_HSTISR_DMA_5_Pos              29                                             /**< (USBHS_HSTISR) DMA Channel 5 Interrupt Position */
+#define USBHS_HSTISR_DMA_5_Pos              30                                             /**< (USBHS_HSTISR) DMA Channel 5 Interrupt Position */
 #define USBHS_HSTISR_DMA_5_Msk              (_U_(0x1) << USBHS_HSTISR_DMA_5_Pos)           /**< (USBHS_HSTISR) DMA Channel 5 Interrupt Mask */
 #define USBHS_HSTISR_DMA_5                  USBHS_HSTISR_DMA_5_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTISR_DMA_5_Msk instead */
-#define USBHS_HSTISR_DMA_6_Pos              30                                             /**< (USBHS_HSTISR) DMA Channel 6 Interrupt Position */
+#define USBHS_HSTISR_DMA_6_Pos              31                                             /**< (USBHS_HSTISR) DMA Channel 6 Interrupt Position */
 #define USBHS_HSTISR_DMA_6_Msk              (_U_(0x1) << USBHS_HSTISR_DMA_6_Pos)           /**< (USBHS_HSTISR) DMA Channel 6 Interrupt Mask */
 #define USBHS_HSTISR_DMA_6                  USBHS_HSTISR_DMA_6_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTISR_DMA_6_Msk instead */
-#define USBHS_HSTISR_DMA_7_Pos              31                                             /**< (USBHS_HSTISR) DMA Channel 7 Interrupt Position */
-#define USBHS_HSTISR_DMA_7_Msk              (_U_(0x1) << USBHS_HSTISR_DMA_7_Pos)           /**< (USBHS_HSTISR) DMA Channel 7 Interrupt Mask */
-#define USBHS_HSTISR_DMA_7                  USBHS_HSTISR_DMA_7_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTISR_DMA_7_Msk instead */
-#define USBHS_HSTISR_MASK                   _U_(0xFE0FFF7F)                                /**< \deprecated (USBHS_HSTISR) Register MASK  (Use USBHS_HSTISR_Msk instead)  */
-#define USBHS_HSTISR_Msk                    _U_(0xFE0FFF7F)                                /**< (USBHS_HSTISR) Register Mask  */
+#define USBHS_HSTISR_MASK                   _U_(0xFE03FF7F)                                /**< \deprecated (USBHS_HSTISR) Register MASK  (Use USBHS_HSTISR_Msk instead)  */
+#define USBHS_HSTISR_Msk                    _U_(0xFE03FF7F)                                /**< (USBHS_HSTISR) Register Mask  */
 
 #define USBHS_HSTISR_PEP__Pos               8                                              /**< (USBHS_HSTISR Position) Pipe x Interrupt */
-#define USBHS_HSTISR_PEP__Msk               (_U_(0xFFF) << USBHS_HSTISR_PEP__Pos)          /**< (USBHS_HSTISR Mask) PEP_ */
+#define USBHS_HSTISR_PEP__Msk               (_U_(0x3FF) << USBHS_HSTISR_PEP__Pos)          /**< (USBHS_HSTISR Mask) PEP_ */
 #define USBHS_HSTISR_PEP_(value)            (USBHS_HSTISR_PEP__Msk & ((value) << USBHS_HSTISR_PEP__Pos))  
-#define USBHS_HSTISR_DMA__Pos               25                                             /**< (USBHS_HSTISR Position) DMA Channel 7 Interrupt */
+#define USBHS_HSTISR_DMA__Pos               25                                             /**< (USBHS_HSTISR Position) DMA Channel 6 Interrupt */
 #define USBHS_HSTISR_DMA__Msk               (_U_(0x7F) << USBHS_HSTISR_DMA__Pos)           /**< (USBHS_HSTISR Mask) DMA_ */
 #define USBHS_HSTISR_DMA_(value)            (USBHS_HSTISR_DMA__Msk & ((value) << USBHS_HSTISR_DMA__Pos))  
 
 /* -------- USBHS_HSTICR : (USBHS Offset: 0x408) (/W 32) Host Global Interrupt Clear Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DCONNIC:1;                 /**< bit:      0  Device Connection Interrupt Clear        */
@@ -1862,6 +2527,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTICR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTICR_OFFSET                 (0x408)                                       /**<  (USBHS_HSTICR) Host Global Interrupt Clear Register  Offset */
@@ -1893,6 +2559,7 @@ typedef union {
 
 /* -------- USBHS_HSTIFR : (USBHS Offset: 0x40c) (/W 32) Host Global Interrupt Set Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DCONNIS:1;                 /**< bit:      0  Device Connection Interrupt Set          */
@@ -1903,20 +2570,21 @@ typedef union {
     uint32_t HSOFIS:1;                  /**< bit:      5  Host Start of Frame Interrupt Set        */
     uint32_t HWUPIS:1;                  /**< bit:      6  Host Wake-Up Interrupt Set               */
     uint32_t :18;                       /**< bit:  7..24  Reserved */
-    uint32_t DMA_1:1;                   /**< bit:     25  DMA Channel 1 Interrupt Set              */
-    uint32_t DMA_2:1;                   /**< bit:     26  DMA Channel 2 Interrupt Set              */
-    uint32_t DMA_3:1;                   /**< bit:     27  DMA Channel 3 Interrupt Set              */
-    uint32_t DMA_4:1;                   /**< bit:     28  DMA Channel 4 Interrupt Set              */
-    uint32_t DMA_5:1;                   /**< bit:     29  DMA Channel 5 Interrupt Set              */
-    uint32_t DMA_6:1;                   /**< bit:     30  DMA Channel 6 Interrupt Set              */
-    uint32_t DMA_7:1;                   /**< bit:     31  DMA Channel 7 Interrupt Set              */
+    uint32_t DMA_0:1;                   /**< bit:     25  DMA Channel 0 Interrupt Set              */
+    uint32_t DMA_1:1;                   /**< bit:     26  DMA Channel 1 Interrupt Set              */
+    uint32_t DMA_2:1;                   /**< bit:     27  DMA Channel 2 Interrupt Set              */
+    uint32_t DMA_3:1;                   /**< bit:     28  DMA Channel 3 Interrupt Set              */
+    uint32_t DMA_4:1;                   /**< bit:     29  DMA Channel 4 Interrupt Set              */
+    uint32_t DMA_5:1;                   /**< bit:     30  DMA Channel 5 Interrupt Set              */
+    uint32_t DMA_6:1;                   /**< bit:     31  DMA Channel 6 Interrupt Set              */
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :25;                       /**< bit:  0..24  Reserved */
-    uint32_t DMA_:7;                    /**< bit: 25..31  DMA Channel 7 Interrupt Set              */
+    uint32_t DMA_:7;                    /**< bit: 25..31  DMA Channel 6 Interrupt Set              */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTIFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTIFR_OFFSET                 (0x40C)                                       /**<  (USBHS_HSTIFR) Host Global Interrupt Set Register  Offset */
@@ -1942,36 +2610,37 @@ typedef union {
 #define USBHS_HSTIFR_HWUPIS_Pos             6                                              /**< (USBHS_HSTIFR) Host Wake-Up Interrupt Set Position */
 #define USBHS_HSTIFR_HWUPIS_Msk             (_U_(0x1) << USBHS_HSTIFR_HWUPIS_Pos)          /**< (USBHS_HSTIFR) Host Wake-Up Interrupt Set Mask */
 #define USBHS_HSTIFR_HWUPIS                 USBHS_HSTIFR_HWUPIS_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIFR_HWUPIS_Msk instead */
-#define USBHS_HSTIFR_DMA_1_Pos              25                                             /**< (USBHS_HSTIFR) DMA Channel 1 Interrupt Set Position */
+#define USBHS_HSTIFR_DMA_0_Pos              25                                             /**< (USBHS_HSTIFR) DMA Channel 0 Interrupt Set Position */
+#define USBHS_HSTIFR_DMA_0_Msk              (_U_(0x1) << USBHS_HSTIFR_DMA_0_Pos)           /**< (USBHS_HSTIFR) DMA Channel 0 Interrupt Set Mask */
+#define USBHS_HSTIFR_DMA_0                  USBHS_HSTIFR_DMA_0_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIFR_DMA_0_Msk instead */
+#define USBHS_HSTIFR_DMA_1_Pos              26                                             /**< (USBHS_HSTIFR) DMA Channel 1 Interrupt Set Position */
 #define USBHS_HSTIFR_DMA_1_Msk              (_U_(0x1) << USBHS_HSTIFR_DMA_1_Pos)           /**< (USBHS_HSTIFR) DMA Channel 1 Interrupt Set Mask */
 #define USBHS_HSTIFR_DMA_1                  USBHS_HSTIFR_DMA_1_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIFR_DMA_1_Msk instead */
-#define USBHS_HSTIFR_DMA_2_Pos              26                                             /**< (USBHS_HSTIFR) DMA Channel 2 Interrupt Set Position */
+#define USBHS_HSTIFR_DMA_2_Pos              27                                             /**< (USBHS_HSTIFR) DMA Channel 2 Interrupt Set Position */
 #define USBHS_HSTIFR_DMA_2_Msk              (_U_(0x1) << USBHS_HSTIFR_DMA_2_Pos)           /**< (USBHS_HSTIFR) DMA Channel 2 Interrupt Set Mask */
 #define USBHS_HSTIFR_DMA_2                  USBHS_HSTIFR_DMA_2_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIFR_DMA_2_Msk instead */
-#define USBHS_HSTIFR_DMA_3_Pos              27                                             /**< (USBHS_HSTIFR) DMA Channel 3 Interrupt Set Position */
+#define USBHS_HSTIFR_DMA_3_Pos              28                                             /**< (USBHS_HSTIFR) DMA Channel 3 Interrupt Set Position */
 #define USBHS_HSTIFR_DMA_3_Msk              (_U_(0x1) << USBHS_HSTIFR_DMA_3_Pos)           /**< (USBHS_HSTIFR) DMA Channel 3 Interrupt Set Mask */
 #define USBHS_HSTIFR_DMA_3                  USBHS_HSTIFR_DMA_3_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIFR_DMA_3_Msk instead */
-#define USBHS_HSTIFR_DMA_4_Pos              28                                             /**< (USBHS_HSTIFR) DMA Channel 4 Interrupt Set Position */
+#define USBHS_HSTIFR_DMA_4_Pos              29                                             /**< (USBHS_HSTIFR) DMA Channel 4 Interrupt Set Position */
 #define USBHS_HSTIFR_DMA_4_Msk              (_U_(0x1) << USBHS_HSTIFR_DMA_4_Pos)           /**< (USBHS_HSTIFR) DMA Channel 4 Interrupt Set Mask */
 #define USBHS_HSTIFR_DMA_4                  USBHS_HSTIFR_DMA_4_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIFR_DMA_4_Msk instead */
-#define USBHS_HSTIFR_DMA_5_Pos              29                                             /**< (USBHS_HSTIFR) DMA Channel 5 Interrupt Set Position */
+#define USBHS_HSTIFR_DMA_5_Pos              30                                             /**< (USBHS_HSTIFR) DMA Channel 5 Interrupt Set Position */
 #define USBHS_HSTIFR_DMA_5_Msk              (_U_(0x1) << USBHS_HSTIFR_DMA_5_Pos)           /**< (USBHS_HSTIFR) DMA Channel 5 Interrupt Set Mask */
 #define USBHS_HSTIFR_DMA_5                  USBHS_HSTIFR_DMA_5_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIFR_DMA_5_Msk instead */
-#define USBHS_HSTIFR_DMA_6_Pos              30                                             /**< (USBHS_HSTIFR) DMA Channel 6 Interrupt Set Position */
+#define USBHS_HSTIFR_DMA_6_Pos              31                                             /**< (USBHS_HSTIFR) DMA Channel 6 Interrupt Set Position */
 #define USBHS_HSTIFR_DMA_6_Msk              (_U_(0x1) << USBHS_HSTIFR_DMA_6_Pos)           /**< (USBHS_HSTIFR) DMA Channel 6 Interrupt Set Mask */
 #define USBHS_HSTIFR_DMA_6                  USBHS_HSTIFR_DMA_6_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIFR_DMA_6_Msk instead */
-#define USBHS_HSTIFR_DMA_7_Pos              31                                             /**< (USBHS_HSTIFR) DMA Channel 7 Interrupt Set Position */
-#define USBHS_HSTIFR_DMA_7_Msk              (_U_(0x1) << USBHS_HSTIFR_DMA_7_Pos)           /**< (USBHS_HSTIFR) DMA Channel 7 Interrupt Set Mask */
-#define USBHS_HSTIFR_DMA_7                  USBHS_HSTIFR_DMA_7_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIFR_DMA_7_Msk instead */
 #define USBHS_HSTIFR_MASK                   _U_(0xFE00007F)                                /**< \deprecated (USBHS_HSTIFR) Register MASK  (Use USBHS_HSTIFR_Msk instead)  */
 #define USBHS_HSTIFR_Msk                    _U_(0xFE00007F)                                /**< (USBHS_HSTIFR) Register Mask  */
 
-#define USBHS_HSTIFR_DMA__Pos               25                                             /**< (USBHS_HSTIFR Position) DMA Channel 7 Interrupt Set */
+#define USBHS_HSTIFR_DMA__Pos               25                                             /**< (USBHS_HSTIFR Position) DMA Channel 6 Interrupt Set */
 #define USBHS_HSTIFR_DMA__Msk               (_U_(0x7F) << USBHS_HSTIFR_DMA__Pos)           /**< (USBHS_HSTIFR Mask) DMA_ */
 #define USBHS_HSTIFR_DMA_(value)            (USBHS_HSTIFR_DMA__Msk & ((value) << USBHS_HSTIFR_DMA__Pos))  
 
 /* -------- USBHS_HSTIMR : (USBHS Offset: 0x410) (R/ 32) Host Global Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DCONNIE:1;                 /**< bit:      0  Device Connection Interrupt Enable       */
@@ -1992,25 +2661,24 @@ typedef union {
     uint32_t PEP_7:1;                   /**< bit:     15  Pipe 7 Interrupt Enable                  */
     uint32_t PEP_8:1;                   /**< bit:     16  Pipe 8 Interrupt Enable                  */
     uint32_t PEP_9:1;                   /**< bit:     17  Pipe 9 Interrupt Enable                  */
-    uint32_t PEP_10:1;                  /**< bit:     18  Pipe 10 Interrupt Enable                 */
-    uint32_t PEP_11:1;                  /**< bit:     19  Pipe 11 Interrupt Enable                 */
-    uint32_t :5;                        /**< bit: 20..24  Reserved */
-    uint32_t DMA_1:1;                   /**< bit:     25  DMA Channel 1 Interrupt Enable           */
-    uint32_t DMA_2:1;                   /**< bit:     26  DMA Channel 2 Interrupt Enable           */
-    uint32_t DMA_3:1;                   /**< bit:     27  DMA Channel 3 Interrupt Enable           */
-    uint32_t DMA_4:1;                   /**< bit:     28  DMA Channel 4 Interrupt Enable           */
-    uint32_t DMA_5:1;                   /**< bit:     29  DMA Channel 5 Interrupt Enable           */
-    uint32_t DMA_6:1;                   /**< bit:     30  DMA Channel 6 Interrupt Enable           */
-    uint32_t DMA_7:1;                   /**< bit:     31  DMA Channel 7 Interrupt Enable           */
+    uint32_t :7;                        /**< bit: 18..24  Reserved */
+    uint32_t DMA_0:1;                   /**< bit:     25  DMA Channel 0 Interrupt Enable           */
+    uint32_t DMA_1:1;                   /**< bit:     26  DMA Channel 1 Interrupt Enable           */
+    uint32_t DMA_2:1;                   /**< bit:     27  DMA Channel 2 Interrupt Enable           */
+    uint32_t DMA_3:1;                   /**< bit:     28  DMA Channel 3 Interrupt Enable           */
+    uint32_t DMA_4:1;                   /**< bit:     29  DMA Channel 4 Interrupt Enable           */
+    uint32_t DMA_5:1;                   /**< bit:     30  DMA Channel 5 Interrupt Enable           */
+    uint32_t DMA_6:1;                   /**< bit:     31  DMA Channel 6 Interrupt Enable           */
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :8;                        /**< bit:   0..7  Reserved */
-    uint32_t PEP_:12;                   /**< bit:  8..19  Pipe x Interrupt Enable                  */
-    uint32_t :5;                        /**< bit: 20..24  Reserved */
-    uint32_t DMA_:7;                    /**< bit: 25..31  DMA Channel 7 Interrupt Enable           */
+    uint32_t PEP_:10;                   /**< bit:  8..17  Pipe x Interrupt Enable                  */
+    uint32_t :7;                        /**< bit: 18..24  Reserved */
+    uint32_t DMA_:7;                    /**< bit: 25..31  DMA Channel 6 Interrupt Enable           */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTIMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTIMR_OFFSET                 (0x410)                                       /**<  (USBHS_HSTIMR) Host Global Interrupt Mask Register  Offset */
@@ -2066,45 +2734,40 @@ typedef union {
 #define USBHS_HSTIMR_PEP_9_Pos              17                                             /**< (USBHS_HSTIMR) Pipe 9 Interrupt Enable Position */
 #define USBHS_HSTIMR_PEP_9_Msk              (_U_(0x1) << USBHS_HSTIMR_PEP_9_Pos)           /**< (USBHS_HSTIMR) Pipe 9 Interrupt Enable Mask */
 #define USBHS_HSTIMR_PEP_9                  USBHS_HSTIMR_PEP_9_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIMR_PEP_9_Msk instead */
-#define USBHS_HSTIMR_PEP_10_Pos             18                                             /**< (USBHS_HSTIMR) Pipe 10 Interrupt Enable Position */
-#define USBHS_HSTIMR_PEP_10_Msk             (_U_(0x1) << USBHS_HSTIMR_PEP_10_Pos)          /**< (USBHS_HSTIMR) Pipe 10 Interrupt Enable Mask */
-#define USBHS_HSTIMR_PEP_10                 USBHS_HSTIMR_PEP_10_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIMR_PEP_10_Msk instead */
-#define USBHS_HSTIMR_PEP_11_Pos             19                                             /**< (USBHS_HSTIMR) Pipe 11 Interrupt Enable Position */
-#define USBHS_HSTIMR_PEP_11_Msk             (_U_(0x1) << USBHS_HSTIMR_PEP_11_Pos)          /**< (USBHS_HSTIMR) Pipe 11 Interrupt Enable Mask */
-#define USBHS_HSTIMR_PEP_11                 USBHS_HSTIMR_PEP_11_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIMR_PEP_11_Msk instead */
-#define USBHS_HSTIMR_DMA_1_Pos              25                                             /**< (USBHS_HSTIMR) DMA Channel 1 Interrupt Enable Position */
+#define USBHS_HSTIMR_DMA_0_Pos              25                                             /**< (USBHS_HSTIMR) DMA Channel 0 Interrupt Enable Position */
+#define USBHS_HSTIMR_DMA_0_Msk              (_U_(0x1) << USBHS_HSTIMR_DMA_0_Pos)           /**< (USBHS_HSTIMR) DMA Channel 0 Interrupt Enable Mask */
+#define USBHS_HSTIMR_DMA_0                  USBHS_HSTIMR_DMA_0_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIMR_DMA_0_Msk instead */
+#define USBHS_HSTIMR_DMA_1_Pos              26                                             /**< (USBHS_HSTIMR) DMA Channel 1 Interrupt Enable Position */
 #define USBHS_HSTIMR_DMA_1_Msk              (_U_(0x1) << USBHS_HSTIMR_DMA_1_Pos)           /**< (USBHS_HSTIMR) DMA Channel 1 Interrupt Enable Mask */
 #define USBHS_HSTIMR_DMA_1                  USBHS_HSTIMR_DMA_1_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIMR_DMA_1_Msk instead */
-#define USBHS_HSTIMR_DMA_2_Pos              26                                             /**< (USBHS_HSTIMR) DMA Channel 2 Interrupt Enable Position */
+#define USBHS_HSTIMR_DMA_2_Pos              27                                             /**< (USBHS_HSTIMR) DMA Channel 2 Interrupt Enable Position */
 #define USBHS_HSTIMR_DMA_2_Msk              (_U_(0x1) << USBHS_HSTIMR_DMA_2_Pos)           /**< (USBHS_HSTIMR) DMA Channel 2 Interrupt Enable Mask */
 #define USBHS_HSTIMR_DMA_2                  USBHS_HSTIMR_DMA_2_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIMR_DMA_2_Msk instead */
-#define USBHS_HSTIMR_DMA_3_Pos              27                                             /**< (USBHS_HSTIMR) DMA Channel 3 Interrupt Enable Position */
+#define USBHS_HSTIMR_DMA_3_Pos              28                                             /**< (USBHS_HSTIMR) DMA Channel 3 Interrupt Enable Position */
 #define USBHS_HSTIMR_DMA_3_Msk              (_U_(0x1) << USBHS_HSTIMR_DMA_3_Pos)           /**< (USBHS_HSTIMR) DMA Channel 3 Interrupt Enable Mask */
 #define USBHS_HSTIMR_DMA_3                  USBHS_HSTIMR_DMA_3_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIMR_DMA_3_Msk instead */
-#define USBHS_HSTIMR_DMA_4_Pos              28                                             /**< (USBHS_HSTIMR) DMA Channel 4 Interrupt Enable Position */
+#define USBHS_HSTIMR_DMA_4_Pos              29                                             /**< (USBHS_HSTIMR) DMA Channel 4 Interrupt Enable Position */
 #define USBHS_HSTIMR_DMA_4_Msk              (_U_(0x1) << USBHS_HSTIMR_DMA_4_Pos)           /**< (USBHS_HSTIMR) DMA Channel 4 Interrupt Enable Mask */
 #define USBHS_HSTIMR_DMA_4                  USBHS_HSTIMR_DMA_4_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIMR_DMA_4_Msk instead */
-#define USBHS_HSTIMR_DMA_5_Pos              29                                             /**< (USBHS_HSTIMR) DMA Channel 5 Interrupt Enable Position */
+#define USBHS_HSTIMR_DMA_5_Pos              30                                             /**< (USBHS_HSTIMR) DMA Channel 5 Interrupt Enable Position */
 #define USBHS_HSTIMR_DMA_5_Msk              (_U_(0x1) << USBHS_HSTIMR_DMA_5_Pos)           /**< (USBHS_HSTIMR) DMA Channel 5 Interrupt Enable Mask */
 #define USBHS_HSTIMR_DMA_5                  USBHS_HSTIMR_DMA_5_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIMR_DMA_5_Msk instead */
-#define USBHS_HSTIMR_DMA_6_Pos              30                                             /**< (USBHS_HSTIMR) DMA Channel 6 Interrupt Enable Position */
+#define USBHS_HSTIMR_DMA_6_Pos              31                                             /**< (USBHS_HSTIMR) DMA Channel 6 Interrupt Enable Position */
 #define USBHS_HSTIMR_DMA_6_Msk              (_U_(0x1) << USBHS_HSTIMR_DMA_6_Pos)           /**< (USBHS_HSTIMR) DMA Channel 6 Interrupt Enable Mask */
 #define USBHS_HSTIMR_DMA_6                  USBHS_HSTIMR_DMA_6_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIMR_DMA_6_Msk instead */
-#define USBHS_HSTIMR_DMA_7_Pos              31                                             /**< (USBHS_HSTIMR) DMA Channel 7 Interrupt Enable Position */
-#define USBHS_HSTIMR_DMA_7_Msk              (_U_(0x1) << USBHS_HSTIMR_DMA_7_Pos)           /**< (USBHS_HSTIMR) DMA Channel 7 Interrupt Enable Mask */
-#define USBHS_HSTIMR_DMA_7                  USBHS_HSTIMR_DMA_7_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIMR_DMA_7_Msk instead */
-#define USBHS_HSTIMR_MASK                   _U_(0xFE0FFF7F)                                /**< \deprecated (USBHS_HSTIMR) Register MASK  (Use USBHS_HSTIMR_Msk instead)  */
-#define USBHS_HSTIMR_Msk                    _U_(0xFE0FFF7F)                                /**< (USBHS_HSTIMR) Register Mask  */
+#define USBHS_HSTIMR_MASK                   _U_(0xFE03FF7F)                                /**< \deprecated (USBHS_HSTIMR) Register MASK  (Use USBHS_HSTIMR_Msk instead)  */
+#define USBHS_HSTIMR_Msk                    _U_(0xFE03FF7F)                                /**< (USBHS_HSTIMR) Register Mask  */
 
 #define USBHS_HSTIMR_PEP__Pos               8                                              /**< (USBHS_HSTIMR Position) Pipe x Interrupt Enable */
-#define USBHS_HSTIMR_PEP__Msk               (_U_(0xFFF) << USBHS_HSTIMR_PEP__Pos)          /**< (USBHS_HSTIMR Mask) PEP_ */
+#define USBHS_HSTIMR_PEP__Msk               (_U_(0x3FF) << USBHS_HSTIMR_PEP__Pos)          /**< (USBHS_HSTIMR Mask) PEP_ */
 #define USBHS_HSTIMR_PEP_(value)            (USBHS_HSTIMR_PEP__Msk & ((value) << USBHS_HSTIMR_PEP__Pos))  
-#define USBHS_HSTIMR_DMA__Pos               25                                             /**< (USBHS_HSTIMR Position) DMA Channel 7 Interrupt Enable */
+#define USBHS_HSTIMR_DMA__Pos               25                                             /**< (USBHS_HSTIMR Position) DMA Channel 6 Interrupt Enable */
 #define USBHS_HSTIMR_DMA__Msk               (_U_(0x7F) << USBHS_HSTIMR_DMA__Pos)           /**< (USBHS_HSTIMR Mask) DMA_ */
 #define USBHS_HSTIMR_DMA_(value)            (USBHS_HSTIMR_DMA__Msk & ((value) << USBHS_HSTIMR_DMA__Pos))  
 
 /* -------- USBHS_HSTIDR : (USBHS Offset: 0x414) (/W 32) Host Global Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DCONNIEC:1;                /**< bit:      0  Device Connection Interrupt Disable      */
@@ -2125,25 +2788,24 @@ typedef union {
     uint32_t PEP_7:1;                   /**< bit:     15  Pipe 7 Interrupt Disable                 */
     uint32_t PEP_8:1;                   /**< bit:     16  Pipe 8 Interrupt Disable                 */
     uint32_t PEP_9:1;                   /**< bit:     17  Pipe 9 Interrupt Disable                 */
-    uint32_t PEP_10:1;                  /**< bit:     18  Pipe 10 Interrupt Disable                */
-    uint32_t PEP_11:1;                  /**< bit:     19  Pipe 11 Interrupt Disable                */
-    uint32_t :5;                        /**< bit: 20..24  Reserved */
-    uint32_t DMA_1:1;                   /**< bit:     25  DMA Channel 1 Interrupt Disable          */
-    uint32_t DMA_2:1;                   /**< bit:     26  DMA Channel 2 Interrupt Disable          */
-    uint32_t DMA_3:1;                   /**< bit:     27  DMA Channel 3 Interrupt Disable          */
-    uint32_t DMA_4:1;                   /**< bit:     28  DMA Channel 4 Interrupt Disable          */
-    uint32_t DMA_5:1;                   /**< bit:     29  DMA Channel 5 Interrupt Disable          */
-    uint32_t DMA_6:1;                   /**< bit:     30  DMA Channel 6 Interrupt Disable          */
-    uint32_t DMA_7:1;                   /**< bit:     31  DMA Channel 7 Interrupt Disable          */
+    uint32_t :7;                        /**< bit: 18..24  Reserved */
+    uint32_t DMA_0:1;                   /**< bit:     25  DMA Channel 0 Interrupt Disable          */
+    uint32_t DMA_1:1;                   /**< bit:     26  DMA Channel 1 Interrupt Disable          */
+    uint32_t DMA_2:1;                   /**< bit:     27  DMA Channel 2 Interrupt Disable          */
+    uint32_t DMA_3:1;                   /**< bit:     28  DMA Channel 3 Interrupt Disable          */
+    uint32_t DMA_4:1;                   /**< bit:     29  DMA Channel 4 Interrupt Disable          */
+    uint32_t DMA_5:1;                   /**< bit:     30  DMA Channel 5 Interrupt Disable          */
+    uint32_t DMA_6:1;                   /**< bit:     31  DMA Channel 6 Interrupt Disable          */
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :8;                        /**< bit:   0..7  Reserved */
-    uint32_t PEP_:12;                   /**< bit:  8..19  Pipe x Interrupt Disable                 */
-    uint32_t :5;                        /**< bit: 20..24  Reserved */
-    uint32_t DMA_:7;                    /**< bit: 25..31  DMA Channel 7 Interrupt Disable          */
+    uint32_t PEP_:10;                   /**< bit:  8..17  Pipe x Interrupt Disable                 */
+    uint32_t :7;                        /**< bit: 18..24  Reserved */
+    uint32_t DMA_:7;                    /**< bit: 25..31  DMA Channel 6 Interrupt Disable          */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTIDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTIDR_OFFSET                 (0x414)                                       /**<  (USBHS_HSTIDR) Host Global Interrupt Disable Register  Offset */
@@ -2199,45 +2861,40 @@ typedef union {
 #define USBHS_HSTIDR_PEP_9_Pos              17                                             /**< (USBHS_HSTIDR) Pipe 9 Interrupt Disable Position */
 #define USBHS_HSTIDR_PEP_9_Msk              (_U_(0x1) << USBHS_HSTIDR_PEP_9_Pos)           /**< (USBHS_HSTIDR) Pipe 9 Interrupt Disable Mask */
 #define USBHS_HSTIDR_PEP_9                  USBHS_HSTIDR_PEP_9_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIDR_PEP_9_Msk instead */
-#define USBHS_HSTIDR_PEP_10_Pos             18                                             /**< (USBHS_HSTIDR) Pipe 10 Interrupt Disable Position */
-#define USBHS_HSTIDR_PEP_10_Msk             (_U_(0x1) << USBHS_HSTIDR_PEP_10_Pos)          /**< (USBHS_HSTIDR) Pipe 10 Interrupt Disable Mask */
-#define USBHS_HSTIDR_PEP_10                 USBHS_HSTIDR_PEP_10_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIDR_PEP_10_Msk instead */
-#define USBHS_HSTIDR_PEP_11_Pos             19                                             /**< (USBHS_HSTIDR) Pipe 11 Interrupt Disable Position */
-#define USBHS_HSTIDR_PEP_11_Msk             (_U_(0x1) << USBHS_HSTIDR_PEP_11_Pos)          /**< (USBHS_HSTIDR) Pipe 11 Interrupt Disable Mask */
-#define USBHS_HSTIDR_PEP_11                 USBHS_HSTIDR_PEP_11_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIDR_PEP_11_Msk instead */
-#define USBHS_HSTIDR_DMA_1_Pos              25                                             /**< (USBHS_HSTIDR) DMA Channel 1 Interrupt Disable Position */
+#define USBHS_HSTIDR_DMA_0_Pos              25                                             /**< (USBHS_HSTIDR) DMA Channel 0 Interrupt Disable Position */
+#define USBHS_HSTIDR_DMA_0_Msk              (_U_(0x1) << USBHS_HSTIDR_DMA_0_Pos)           /**< (USBHS_HSTIDR) DMA Channel 0 Interrupt Disable Mask */
+#define USBHS_HSTIDR_DMA_0                  USBHS_HSTIDR_DMA_0_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIDR_DMA_0_Msk instead */
+#define USBHS_HSTIDR_DMA_1_Pos              26                                             /**< (USBHS_HSTIDR) DMA Channel 1 Interrupt Disable Position */
 #define USBHS_HSTIDR_DMA_1_Msk              (_U_(0x1) << USBHS_HSTIDR_DMA_1_Pos)           /**< (USBHS_HSTIDR) DMA Channel 1 Interrupt Disable Mask */
 #define USBHS_HSTIDR_DMA_1                  USBHS_HSTIDR_DMA_1_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIDR_DMA_1_Msk instead */
-#define USBHS_HSTIDR_DMA_2_Pos              26                                             /**< (USBHS_HSTIDR) DMA Channel 2 Interrupt Disable Position */
+#define USBHS_HSTIDR_DMA_2_Pos              27                                             /**< (USBHS_HSTIDR) DMA Channel 2 Interrupt Disable Position */
 #define USBHS_HSTIDR_DMA_2_Msk              (_U_(0x1) << USBHS_HSTIDR_DMA_2_Pos)           /**< (USBHS_HSTIDR) DMA Channel 2 Interrupt Disable Mask */
 #define USBHS_HSTIDR_DMA_2                  USBHS_HSTIDR_DMA_2_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIDR_DMA_2_Msk instead */
-#define USBHS_HSTIDR_DMA_3_Pos              27                                             /**< (USBHS_HSTIDR) DMA Channel 3 Interrupt Disable Position */
+#define USBHS_HSTIDR_DMA_3_Pos              28                                             /**< (USBHS_HSTIDR) DMA Channel 3 Interrupt Disable Position */
 #define USBHS_HSTIDR_DMA_3_Msk              (_U_(0x1) << USBHS_HSTIDR_DMA_3_Pos)           /**< (USBHS_HSTIDR) DMA Channel 3 Interrupt Disable Mask */
 #define USBHS_HSTIDR_DMA_3                  USBHS_HSTIDR_DMA_3_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIDR_DMA_3_Msk instead */
-#define USBHS_HSTIDR_DMA_4_Pos              28                                             /**< (USBHS_HSTIDR) DMA Channel 4 Interrupt Disable Position */
+#define USBHS_HSTIDR_DMA_4_Pos              29                                             /**< (USBHS_HSTIDR) DMA Channel 4 Interrupt Disable Position */
 #define USBHS_HSTIDR_DMA_4_Msk              (_U_(0x1) << USBHS_HSTIDR_DMA_4_Pos)           /**< (USBHS_HSTIDR) DMA Channel 4 Interrupt Disable Mask */
 #define USBHS_HSTIDR_DMA_4                  USBHS_HSTIDR_DMA_4_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIDR_DMA_4_Msk instead */
-#define USBHS_HSTIDR_DMA_5_Pos              29                                             /**< (USBHS_HSTIDR) DMA Channel 5 Interrupt Disable Position */
+#define USBHS_HSTIDR_DMA_5_Pos              30                                             /**< (USBHS_HSTIDR) DMA Channel 5 Interrupt Disable Position */
 #define USBHS_HSTIDR_DMA_5_Msk              (_U_(0x1) << USBHS_HSTIDR_DMA_5_Pos)           /**< (USBHS_HSTIDR) DMA Channel 5 Interrupt Disable Mask */
 #define USBHS_HSTIDR_DMA_5                  USBHS_HSTIDR_DMA_5_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIDR_DMA_5_Msk instead */
-#define USBHS_HSTIDR_DMA_6_Pos              30                                             /**< (USBHS_HSTIDR) DMA Channel 6 Interrupt Disable Position */
+#define USBHS_HSTIDR_DMA_6_Pos              31                                             /**< (USBHS_HSTIDR) DMA Channel 6 Interrupt Disable Position */
 #define USBHS_HSTIDR_DMA_6_Msk              (_U_(0x1) << USBHS_HSTIDR_DMA_6_Pos)           /**< (USBHS_HSTIDR) DMA Channel 6 Interrupt Disable Mask */
 #define USBHS_HSTIDR_DMA_6                  USBHS_HSTIDR_DMA_6_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIDR_DMA_6_Msk instead */
-#define USBHS_HSTIDR_DMA_7_Pos              31                                             /**< (USBHS_HSTIDR) DMA Channel 7 Interrupt Disable Position */
-#define USBHS_HSTIDR_DMA_7_Msk              (_U_(0x1) << USBHS_HSTIDR_DMA_7_Pos)           /**< (USBHS_HSTIDR) DMA Channel 7 Interrupt Disable Mask */
-#define USBHS_HSTIDR_DMA_7                  USBHS_HSTIDR_DMA_7_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIDR_DMA_7_Msk instead */
-#define USBHS_HSTIDR_MASK                   _U_(0xFE0FFF7F)                                /**< \deprecated (USBHS_HSTIDR) Register MASK  (Use USBHS_HSTIDR_Msk instead)  */
-#define USBHS_HSTIDR_Msk                    _U_(0xFE0FFF7F)                                /**< (USBHS_HSTIDR) Register Mask  */
+#define USBHS_HSTIDR_MASK                   _U_(0xFE03FF7F)                                /**< \deprecated (USBHS_HSTIDR) Register MASK  (Use USBHS_HSTIDR_Msk instead)  */
+#define USBHS_HSTIDR_Msk                    _U_(0xFE03FF7F)                                /**< (USBHS_HSTIDR) Register Mask  */
 
 #define USBHS_HSTIDR_PEP__Pos               8                                              /**< (USBHS_HSTIDR Position) Pipe x Interrupt Disable */
-#define USBHS_HSTIDR_PEP__Msk               (_U_(0xFFF) << USBHS_HSTIDR_PEP__Pos)          /**< (USBHS_HSTIDR Mask) PEP_ */
+#define USBHS_HSTIDR_PEP__Msk               (_U_(0x3FF) << USBHS_HSTIDR_PEP__Pos)          /**< (USBHS_HSTIDR Mask) PEP_ */
 #define USBHS_HSTIDR_PEP_(value)            (USBHS_HSTIDR_PEP__Msk & ((value) << USBHS_HSTIDR_PEP__Pos))  
-#define USBHS_HSTIDR_DMA__Pos               25                                             /**< (USBHS_HSTIDR Position) DMA Channel 7 Interrupt Disable */
+#define USBHS_HSTIDR_DMA__Pos               25                                             /**< (USBHS_HSTIDR Position) DMA Channel 6 Interrupt Disable */
 #define USBHS_HSTIDR_DMA__Msk               (_U_(0x7F) << USBHS_HSTIDR_DMA__Pos)           /**< (USBHS_HSTIDR Mask) DMA_ */
 #define USBHS_HSTIDR_DMA_(value)            (USBHS_HSTIDR_DMA__Msk & ((value) << USBHS_HSTIDR_DMA__Pos))  
 
 /* -------- USBHS_HSTIER : (USBHS Offset: 0x418) (/W 32) Host Global Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DCONNIES:1;                /**< bit:      0  Device Connection Interrupt Enable       */
@@ -2258,25 +2915,24 @@ typedef union {
     uint32_t PEP_7:1;                   /**< bit:     15  Pipe 7 Interrupt Enable                  */
     uint32_t PEP_8:1;                   /**< bit:     16  Pipe 8 Interrupt Enable                  */
     uint32_t PEP_9:1;                   /**< bit:     17  Pipe 9 Interrupt Enable                  */
-    uint32_t PEP_10:1;                  /**< bit:     18  Pipe 10 Interrupt Enable                 */
-    uint32_t PEP_11:1;                  /**< bit:     19  Pipe 11 Interrupt Enable                 */
-    uint32_t :5;                        /**< bit: 20..24  Reserved */
-    uint32_t DMA_1:1;                   /**< bit:     25  DMA Channel 1 Interrupt Enable           */
-    uint32_t DMA_2:1;                   /**< bit:     26  DMA Channel 2 Interrupt Enable           */
-    uint32_t DMA_3:1;                   /**< bit:     27  DMA Channel 3 Interrupt Enable           */
-    uint32_t DMA_4:1;                   /**< bit:     28  DMA Channel 4 Interrupt Enable           */
-    uint32_t DMA_5:1;                   /**< bit:     29  DMA Channel 5 Interrupt Enable           */
-    uint32_t DMA_6:1;                   /**< bit:     30  DMA Channel 6 Interrupt Enable           */
-    uint32_t DMA_7:1;                   /**< bit:     31  DMA Channel 7 Interrupt Enable           */
+    uint32_t :7;                        /**< bit: 18..24  Reserved */
+    uint32_t DMA_0:1;                   /**< bit:     25  DMA Channel 0 Interrupt Enable           */
+    uint32_t DMA_1:1;                   /**< bit:     26  DMA Channel 1 Interrupt Enable           */
+    uint32_t DMA_2:1;                   /**< bit:     27  DMA Channel 2 Interrupt Enable           */
+    uint32_t DMA_3:1;                   /**< bit:     28  DMA Channel 3 Interrupt Enable           */
+    uint32_t DMA_4:1;                   /**< bit:     29  DMA Channel 4 Interrupt Enable           */
+    uint32_t DMA_5:1;                   /**< bit:     30  DMA Channel 5 Interrupt Enable           */
+    uint32_t DMA_6:1;                   /**< bit:     31  DMA Channel 6 Interrupt Enable           */
   } bit;                                /**< Structure used for bit  access */
   struct {
     uint32_t :8;                        /**< bit:   0..7  Reserved */
-    uint32_t PEP_:12;                   /**< bit:  8..19  Pipe x Interrupt Enable                  */
-    uint32_t :5;                        /**< bit: 20..24  Reserved */
-    uint32_t DMA_:7;                    /**< bit: 25..31  DMA Channel 7 Interrupt Enable           */
+    uint32_t PEP_:10;                   /**< bit:  8..17  Pipe x Interrupt Enable                  */
+    uint32_t :7;                        /**< bit: 18..24  Reserved */
+    uint32_t DMA_:7;                    /**< bit: 25..31  DMA Channel 6 Interrupt Enable           */
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTIER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTIER_OFFSET                 (0x418)                                       /**<  (USBHS_HSTIER) Host Global Interrupt Enable Register  Offset */
@@ -2332,45 +2988,40 @@ typedef union {
 #define USBHS_HSTIER_PEP_9_Pos              17                                             /**< (USBHS_HSTIER) Pipe 9 Interrupt Enable Position */
 #define USBHS_HSTIER_PEP_9_Msk              (_U_(0x1) << USBHS_HSTIER_PEP_9_Pos)           /**< (USBHS_HSTIER) Pipe 9 Interrupt Enable Mask */
 #define USBHS_HSTIER_PEP_9                  USBHS_HSTIER_PEP_9_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIER_PEP_9_Msk instead */
-#define USBHS_HSTIER_PEP_10_Pos             18                                             /**< (USBHS_HSTIER) Pipe 10 Interrupt Enable Position */
-#define USBHS_HSTIER_PEP_10_Msk             (_U_(0x1) << USBHS_HSTIER_PEP_10_Pos)          /**< (USBHS_HSTIER) Pipe 10 Interrupt Enable Mask */
-#define USBHS_HSTIER_PEP_10                 USBHS_HSTIER_PEP_10_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIER_PEP_10_Msk instead */
-#define USBHS_HSTIER_PEP_11_Pos             19                                             /**< (USBHS_HSTIER) Pipe 11 Interrupt Enable Position */
-#define USBHS_HSTIER_PEP_11_Msk             (_U_(0x1) << USBHS_HSTIER_PEP_11_Pos)          /**< (USBHS_HSTIER) Pipe 11 Interrupt Enable Mask */
-#define USBHS_HSTIER_PEP_11                 USBHS_HSTIER_PEP_11_Msk                        /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIER_PEP_11_Msk instead */
-#define USBHS_HSTIER_DMA_1_Pos              25                                             /**< (USBHS_HSTIER) DMA Channel 1 Interrupt Enable Position */
+#define USBHS_HSTIER_DMA_0_Pos              25                                             /**< (USBHS_HSTIER) DMA Channel 0 Interrupt Enable Position */
+#define USBHS_HSTIER_DMA_0_Msk              (_U_(0x1) << USBHS_HSTIER_DMA_0_Pos)           /**< (USBHS_HSTIER) DMA Channel 0 Interrupt Enable Mask */
+#define USBHS_HSTIER_DMA_0                  USBHS_HSTIER_DMA_0_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIER_DMA_0_Msk instead */
+#define USBHS_HSTIER_DMA_1_Pos              26                                             /**< (USBHS_HSTIER) DMA Channel 1 Interrupt Enable Position */
 #define USBHS_HSTIER_DMA_1_Msk              (_U_(0x1) << USBHS_HSTIER_DMA_1_Pos)           /**< (USBHS_HSTIER) DMA Channel 1 Interrupt Enable Mask */
 #define USBHS_HSTIER_DMA_1                  USBHS_HSTIER_DMA_1_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIER_DMA_1_Msk instead */
-#define USBHS_HSTIER_DMA_2_Pos              26                                             /**< (USBHS_HSTIER) DMA Channel 2 Interrupt Enable Position */
+#define USBHS_HSTIER_DMA_2_Pos              27                                             /**< (USBHS_HSTIER) DMA Channel 2 Interrupt Enable Position */
 #define USBHS_HSTIER_DMA_2_Msk              (_U_(0x1) << USBHS_HSTIER_DMA_2_Pos)           /**< (USBHS_HSTIER) DMA Channel 2 Interrupt Enable Mask */
 #define USBHS_HSTIER_DMA_2                  USBHS_HSTIER_DMA_2_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIER_DMA_2_Msk instead */
-#define USBHS_HSTIER_DMA_3_Pos              27                                             /**< (USBHS_HSTIER) DMA Channel 3 Interrupt Enable Position */
+#define USBHS_HSTIER_DMA_3_Pos              28                                             /**< (USBHS_HSTIER) DMA Channel 3 Interrupt Enable Position */
 #define USBHS_HSTIER_DMA_3_Msk              (_U_(0x1) << USBHS_HSTIER_DMA_3_Pos)           /**< (USBHS_HSTIER) DMA Channel 3 Interrupt Enable Mask */
 #define USBHS_HSTIER_DMA_3                  USBHS_HSTIER_DMA_3_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIER_DMA_3_Msk instead */
-#define USBHS_HSTIER_DMA_4_Pos              28                                             /**< (USBHS_HSTIER) DMA Channel 4 Interrupt Enable Position */
+#define USBHS_HSTIER_DMA_4_Pos              29                                             /**< (USBHS_HSTIER) DMA Channel 4 Interrupt Enable Position */
 #define USBHS_HSTIER_DMA_4_Msk              (_U_(0x1) << USBHS_HSTIER_DMA_4_Pos)           /**< (USBHS_HSTIER) DMA Channel 4 Interrupt Enable Mask */
 #define USBHS_HSTIER_DMA_4                  USBHS_HSTIER_DMA_4_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIER_DMA_4_Msk instead */
-#define USBHS_HSTIER_DMA_5_Pos              29                                             /**< (USBHS_HSTIER) DMA Channel 5 Interrupt Enable Position */
+#define USBHS_HSTIER_DMA_5_Pos              30                                             /**< (USBHS_HSTIER) DMA Channel 5 Interrupt Enable Position */
 #define USBHS_HSTIER_DMA_5_Msk              (_U_(0x1) << USBHS_HSTIER_DMA_5_Pos)           /**< (USBHS_HSTIER) DMA Channel 5 Interrupt Enable Mask */
 #define USBHS_HSTIER_DMA_5                  USBHS_HSTIER_DMA_5_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIER_DMA_5_Msk instead */
-#define USBHS_HSTIER_DMA_6_Pos              30                                             /**< (USBHS_HSTIER) DMA Channel 6 Interrupt Enable Position */
+#define USBHS_HSTIER_DMA_6_Pos              31                                             /**< (USBHS_HSTIER) DMA Channel 6 Interrupt Enable Position */
 #define USBHS_HSTIER_DMA_6_Msk              (_U_(0x1) << USBHS_HSTIER_DMA_6_Pos)           /**< (USBHS_HSTIER) DMA Channel 6 Interrupt Enable Mask */
 #define USBHS_HSTIER_DMA_6                  USBHS_HSTIER_DMA_6_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIER_DMA_6_Msk instead */
-#define USBHS_HSTIER_DMA_7_Pos              31                                             /**< (USBHS_HSTIER) DMA Channel 7 Interrupt Enable Position */
-#define USBHS_HSTIER_DMA_7_Msk              (_U_(0x1) << USBHS_HSTIER_DMA_7_Pos)           /**< (USBHS_HSTIER) DMA Channel 7 Interrupt Enable Mask */
-#define USBHS_HSTIER_DMA_7                  USBHS_HSTIER_DMA_7_Msk                         /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTIER_DMA_7_Msk instead */
-#define USBHS_HSTIER_MASK                   _U_(0xFE0FFF7F)                                /**< \deprecated (USBHS_HSTIER) Register MASK  (Use USBHS_HSTIER_Msk instead)  */
-#define USBHS_HSTIER_Msk                    _U_(0xFE0FFF7F)                                /**< (USBHS_HSTIER) Register Mask  */
+#define USBHS_HSTIER_MASK                   _U_(0xFE03FF7F)                                /**< \deprecated (USBHS_HSTIER) Register MASK  (Use USBHS_HSTIER_Msk instead)  */
+#define USBHS_HSTIER_Msk                    _U_(0xFE03FF7F)                                /**< (USBHS_HSTIER) Register Mask  */
 
 #define USBHS_HSTIER_PEP__Pos               8                                              /**< (USBHS_HSTIER Position) Pipe x Interrupt Enable */
-#define USBHS_HSTIER_PEP__Msk               (_U_(0xFFF) << USBHS_HSTIER_PEP__Pos)          /**< (USBHS_HSTIER Mask) PEP_ */
+#define USBHS_HSTIER_PEP__Msk               (_U_(0x3FF) << USBHS_HSTIER_PEP__Pos)          /**< (USBHS_HSTIER Mask) PEP_ */
 #define USBHS_HSTIER_PEP_(value)            (USBHS_HSTIER_PEP__Msk & ((value) << USBHS_HSTIER_PEP__Pos))  
-#define USBHS_HSTIER_DMA__Pos               25                                             /**< (USBHS_HSTIER Position) DMA Channel 7 Interrupt Enable */
+#define USBHS_HSTIER_DMA__Pos               25                                             /**< (USBHS_HSTIER Position) DMA Channel 6 Interrupt Enable */
 #define USBHS_HSTIER_DMA__Msk               (_U_(0x7F) << USBHS_HSTIER_DMA__Pos)           /**< (USBHS_HSTIER Mask) DMA_ */
 #define USBHS_HSTIER_DMA_(value)            (USBHS_HSTIER_DMA__Msk & ((value) << USBHS_HSTIER_DMA__Pos))  
 
 /* -------- USBHS_HSTPIP : (USBHS Offset: 0x41c) (R/W 32) Host Pipe Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PEN0:1;                    /**< bit:      0  Pipe 0 Enable                            */
@@ -2402,6 +3053,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIP_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTPIP_OFFSET                 (0x41C)                                       /**<  (USBHS_HSTPIP) Host Pipe Register  Offset */
@@ -2472,6 +3124,7 @@ typedef union {
 
 /* -------- USBHS_HSTFNUM : (USBHS Offset: 0x420) (R/W 32) Host Frame Number Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MFNUM:3;                   /**< bit:   0..2  Micro Frame Number                       */
@@ -2482,6 +3135,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTFNUM_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTFNUM_OFFSET                (0x420)                                       /**<  (USBHS_HSTFNUM) Host Frame Number Register  Offset */
@@ -2501,6 +3155,7 @@ typedef union {
 
 /* -------- USBHS_HSTADDR1 : (USBHS Offset: 0x424) (R/W 32) Host Address 1 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t HSTADDRP0:7;               /**< bit:   0..6  USB Host Address                         */
@@ -2514,6 +3169,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTADDR1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTADDR1_OFFSET               (0x424)                                       /**<  (USBHS_HSTADDR1) Host Address 1 Register  Offset */
@@ -2536,6 +3192,7 @@ typedef union {
 
 /* -------- USBHS_HSTADDR2 : (USBHS Offset: 0x428) (R/W 32) Host Address 2 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t HSTADDRP4:7;               /**< bit:   0..6  USB Host Address                         */
@@ -2549,6 +3206,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTADDR2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTADDR2_OFFSET               (0x428)                                       /**<  (USBHS_HSTADDR2) Host Address 2 Register  Offset */
@@ -2571,6 +3229,7 @@ typedef union {
 
 /* -------- USBHS_HSTADDR3 : (USBHS Offset: 0x42c) (R/W 32) Host Address 3 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t HSTADDRP8:7;               /**< bit:   0..6  USB Host Address                         */
@@ -2580,6 +3239,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTADDR3_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_HSTADDR3_OFFSET               (0x42C)                                       /**<  (USBHS_HSTADDR3) Host Address 3 Register  Offset */
@@ -2594,8 +3254,9 @@ typedef union {
 #define USBHS_HSTADDR3_Msk                  _U_(0x7F7F)                                    /**< (USBHS_HSTADDR3) Register Mask  */
 
 
-/* -------- USBHS_HSTPIPCFG : (USBHS Offset: 0x500) (R/W 32) Host Pipe Configuration Register (n = 0) 0 -------- */
+/* -------- USBHS_HSTPIPCFG : (USBHS Offset: 0x500) (R/W 32) Host Pipe Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -2612,11 +3273,18 @@ typedef union {
     uint32_t :4;                        /**< bit: 20..23  Reserved */
     uint32_t INTFRQ:8;                  /**< bit: 24..31  Pipe Interrupt Request Frequency         */
   } bit;                                /**< Structure used for bit  access */
+  struct { // CTRL_BULK mode
+    uint32_t :20;                       /**< bit:  0..19  Reserved */
+    uint32_t PINGEN:1;                  /**< bit:     20  Ping Enable                              */
+    uint32_t :3;                        /**< bit: 21..23  Reserved */
+    uint32_t BINTERVAL:8;               /**< bit: 24..31  bInterval Parameter for the Bulk-Out/Ping Transaction */
+  } CTRL_BULK;                                /**< Structure used for CTRL_BULK mode access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPCFG_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_HSTPIPCFG_OFFSET              (0x500)                                       /**<  (USBHS_HSTPIPCFG) Host Pipe Configuration Register (n = 0) 0  Offset */
+#define USBHS_HSTPIPCFG_OFFSET              (0x500)                                       /**<  (USBHS_HSTPIPCFG) Host Pipe Configuration Register  Offset */
 
 #define USBHS_HSTPIPCFG_ALLOC_Pos           1                                              /**< (USBHS_HSTPIPCFG) Pipe Memory Allocate Position */
 #define USBHS_HSTPIPCFG_ALLOC_Msk           (_U_(0x1) << USBHS_HSTPIPCFG_ALLOC_Pos)        /**< (USBHS_HSTPIPCFG) Pipe Memory Allocate Mask */
@@ -2681,18 +3349,29 @@ typedef union {
 #define USBHS_HSTPIPCFG_MASK                _U_(0xFF0F377E)                                /**< \deprecated (USBHS_HSTPIPCFG) Register MASK  (Use USBHS_HSTPIPCFG_Msk instead)  */
 #define USBHS_HSTPIPCFG_Msk                 _U_(0xFF0F377E)                                /**< (USBHS_HSTPIPCFG) Register Mask  */
 
+/* CTRL_BULK mode */
+#define USBHS_HSTPIPCFG_CTRL_BULK_PINGEN_Pos 20                                             /**< (USBHS_HSTPIPCFG) Ping Enable Position */
+#define USBHS_HSTPIPCFG_CTRL_BULK_PINGEN_Msk (_U_(0x1) << USBHS_HSTPIPCFG_CTRL_BULK_PINGEN_Pos)  /**< (USBHS_HSTPIPCFG) Ping Enable Mask */
+#define USBHS_HSTPIPCFG_CTRL_BULK_PINGEN    USBHS_HSTPIPCFG_CTRL_BULK_PINGEN_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPCFG_CTRL_BULK_PINGEN_Msk instead */
+#define USBHS_HSTPIPCFG_CTRL_BULK_BINTERVAL_Pos 24                                             /**< (USBHS_HSTPIPCFG) bInterval Parameter for the Bulk-Out/Ping Transaction Position */
+#define USBHS_HSTPIPCFG_CTRL_BULK_BINTERVAL_Msk (_U_(0xFF) << USBHS_HSTPIPCFG_CTRL_BULK_BINTERVAL_Pos)  /**< (USBHS_HSTPIPCFG) bInterval Parameter for the Bulk-Out/Ping Transaction Mask */
+#define USBHS_HSTPIPCFG_CTRL_BULK_BINTERVAL(value) (USBHS_HSTPIPCFG_CTRL_BULK_BINTERVAL_Msk & ((value) << USBHS_HSTPIPCFG_CTRL_BULK_BINTERVAL_Pos))
+#define USBHS_HSTPIPCFG_CTRL_BULK_MASK      _U_(0xFF100000)                                /**< \deprecated (USBHS_HSTPIPCFG_CTRL_BULK) Register MASK  (Use USBHS_HSTPIPCFG_CTRL_BULK_Msk instead)  */
+#define USBHS_HSTPIPCFG_CTRL_BULK_Msk       _U_(0xFF100000)                                /**< (USBHS_HSTPIPCFG_CTRL_BULK) Register Mask  */
 
-/* -------- USBHS_HSTPIPISR : (USBHS Offset: 0x530) (R/ 32) Host Pipe Status Register (n = 0) 0 -------- */
+
+/* -------- USBHS_HSTPIPISR : (USBHS Offset: 0x530) (R/ 32) Host Pipe Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXINI:1;                   /**< bit:      0  Received IN Data Interrupt               */
     uint32_t TXOUTI:1;                  /**< bit:      1  Transmitted OUT Data Interrupt           */
-    uint32_t TXSTPI:1;                  /**< bit:      2  Transmitted SETUP Interrupt              */
+    uint32_t :1;                        /**< bit:      2  Reserved */
     uint32_t PERRI:1;                   /**< bit:      3  Pipe Error Interrupt                     */
     uint32_t NAKEDI:1;                  /**< bit:      4  NAKed Interrupt                          */
     uint32_t OVERFI:1;                  /**< bit:      5  Overflow Interrupt                       */
-    uint32_t RXSTALLDI:1;               /**< bit:      6  Received STALLed Interrupt               */
+    uint32_t :1;                        /**< bit:      6  Reserved */
     uint32_t SHORTPACKETI:1;            /**< bit:      7  Short Packet Interrupt                   */
     uint32_t DTSEQ:2;                   /**< bit:   8..9  Data Toggle Sequence                     */
     uint32_t :2;                        /**< bit: 10..11  Reserved */
@@ -2705,11 +3384,40 @@ typedef union {
     uint32_t PBYCT:11;                  /**< bit: 20..30  Pipe Byte Count                          */
     uint32_t :1;                        /**< bit:     31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct { // CTRL mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t TXSTPI:1;                  /**< bit:      2  Transmitted SETUP Interrupt              */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDI:1;               /**< bit:      6  Received STALLed Interrupt               */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } CTRL;                                /**< Structure used for CTRL mode access */
+  struct { // ISO mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFI:1;                 /**< bit:      2  Underflow Interrupt                      */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t CRCERRI:1;                 /**< bit:      6  CRC Error Interrupt                      */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } ISO;                                /**< Structure used for ISO mode access */
+  struct { // BLK mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t TXSTPI:1;                  /**< bit:      2  Transmitted SETUP Interrupt              */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDI:1;               /**< bit:      6  Received STALLed Interrupt               */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } BLK;                                /**< Structure used for BLK mode access */
+  struct { // INTRPT mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFI:1;                 /**< bit:      2  Underflow Interrupt                      */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDI:1;               /**< bit:      6  Received STALLed Interrupt               */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } INTRPT;                                /**< Structure used for INTRPT mode access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_HSTPIPISR_OFFSET              (0x530)                                       /**<  (USBHS_HSTPIPISR) Host Pipe Status Register (n = 0) 0  Offset */
+#define USBHS_HSTPIPISR_OFFSET              (0x530)                                       /**<  (USBHS_HSTPIPISR) Host Pipe Status Register  Offset */
 
 #define USBHS_HSTPIPISR_RXINI_Pos           0                                              /**< (USBHS_HSTPIPISR) Received IN Data Interrupt Position */
 #define USBHS_HSTPIPISR_RXINI_Msk           (_U_(0x1) << USBHS_HSTPIPISR_RXINI_Pos)        /**< (USBHS_HSTPIPISR) Received IN Data Interrupt Mask */
@@ -2717,9 +3425,6 @@ typedef union {
 #define USBHS_HSTPIPISR_TXOUTI_Pos          1                                              /**< (USBHS_HSTPIPISR) Transmitted OUT Data Interrupt Position */
 #define USBHS_HSTPIPISR_TXOUTI_Msk          (_U_(0x1) << USBHS_HSTPIPISR_TXOUTI_Pos)       /**< (USBHS_HSTPIPISR) Transmitted OUT Data Interrupt Mask */
 #define USBHS_HSTPIPISR_TXOUTI              USBHS_HSTPIPISR_TXOUTI_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPISR_TXOUTI_Msk instead */
-#define USBHS_HSTPIPISR_TXSTPI_Pos          2                                              /**< (USBHS_HSTPIPISR) Transmitted SETUP Interrupt Position */
-#define USBHS_HSTPIPISR_TXSTPI_Msk          (_U_(0x1) << USBHS_HSTPIPISR_TXSTPI_Pos)       /**< (USBHS_HSTPIPISR) Transmitted SETUP Interrupt Mask */
-#define USBHS_HSTPIPISR_TXSTPI              USBHS_HSTPIPISR_TXSTPI_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPISR_TXSTPI_Msk instead */
 #define USBHS_HSTPIPISR_PERRI_Pos           3                                              /**< (USBHS_HSTPIPISR) Pipe Error Interrupt Position */
 #define USBHS_HSTPIPISR_PERRI_Msk           (_U_(0x1) << USBHS_HSTPIPISR_PERRI_Pos)        /**< (USBHS_HSTPIPISR) Pipe Error Interrupt Mask */
 #define USBHS_HSTPIPISR_PERRI               USBHS_HSTPIPISR_PERRI_Msk                      /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPISR_PERRI_Msk instead */
@@ -2729,9 +3434,6 @@ typedef union {
 #define USBHS_HSTPIPISR_OVERFI_Pos          5                                              /**< (USBHS_HSTPIPISR) Overflow Interrupt Position */
 #define USBHS_HSTPIPISR_OVERFI_Msk          (_U_(0x1) << USBHS_HSTPIPISR_OVERFI_Pos)       /**< (USBHS_HSTPIPISR) Overflow Interrupt Mask */
 #define USBHS_HSTPIPISR_OVERFI              USBHS_HSTPIPISR_OVERFI_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPISR_OVERFI_Msk instead */
-#define USBHS_HSTPIPISR_RXSTALLDI_Pos       6                                              /**< (USBHS_HSTPIPISR) Received STALLed Interrupt Position */
-#define USBHS_HSTPIPISR_RXSTALLDI_Msk       (_U_(0x1) << USBHS_HSTPIPISR_RXSTALLDI_Pos)    /**< (USBHS_HSTPIPISR) Received STALLed Interrupt Mask */
-#define USBHS_HSTPIPISR_RXSTALLDI           USBHS_HSTPIPISR_RXSTALLDI_Msk                  /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPISR_RXSTALLDI_Msk instead */
 #define USBHS_HSTPIPISR_SHORTPACKETI_Pos    7                                              /**< (USBHS_HSTPIPISR) Short Packet Interrupt Position */
 #define USBHS_HSTPIPISR_SHORTPACKETI_Msk    (_U_(0x1) << USBHS_HSTPIPISR_SHORTPACKETI_Pos)  /**< (USBHS_HSTPIPISR) Short Packet Interrupt Mask */
 #define USBHS_HSTPIPISR_SHORTPACKETI        USBHS_HSTPIPISR_SHORTPACKETI_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPISR_SHORTPACKETI_Msk instead */
@@ -2771,29 +3473,98 @@ typedef union {
 #define USBHS_HSTPIPISR_PBYCT_Pos           20                                             /**< (USBHS_HSTPIPISR) Pipe Byte Count Position */
 #define USBHS_HSTPIPISR_PBYCT_Msk           (_U_(0x7FF) << USBHS_HSTPIPISR_PBYCT_Pos)      /**< (USBHS_HSTPIPISR) Pipe Byte Count Mask */
 #define USBHS_HSTPIPISR_PBYCT(value)        (USBHS_HSTPIPISR_PBYCT_Msk & ((value) << USBHS_HSTPIPISR_PBYCT_Pos))
-#define USBHS_HSTPIPISR_MASK                _U_(0x7FF5F3FF)                                /**< \deprecated (USBHS_HSTPIPISR) Register MASK  (Use USBHS_HSTPIPISR_Msk instead)  */
-#define USBHS_HSTPIPISR_Msk                 _U_(0x7FF5F3FF)                                /**< (USBHS_HSTPIPISR) Register Mask  */
+#define USBHS_HSTPIPISR_MASK                _U_(0x7FF5F3BB)                                /**< \deprecated (USBHS_HSTPIPISR) Register MASK  (Use USBHS_HSTPIPISR_Msk instead)  */
+#define USBHS_HSTPIPISR_Msk                 _U_(0x7FF5F3BB)                                /**< (USBHS_HSTPIPISR) Register Mask  */
+
+/* CTRL mode */
+#define USBHS_HSTPIPISR_CTRL_TXSTPI_Pos     2                                              /**< (USBHS_HSTPIPISR) Transmitted SETUP Interrupt Position */
+#define USBHS_HSTPIPISR_CTRL_TXSTPI_Msk     (_U_(0x1) << USBHS_HSTPIPISR_CTRL_TXSTPI_Pos)  /**< (USBHS_HSTPIPISR) Transmitted SETUP Interrupt Mask */
+#define USBHS_HSTPIPISR_CTRL_TXSTPI         USBHS_HSTPIPISR_CTRL_TXSTPI_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPISR_CTRL_TXSTPI_Msk instead */
+#define USBHS_HSTPIPISR_CTRL_RXSTALLDI_Pos  6                                              /**< (USBHS_HSTPIPISR) Received STALLed Interrupt Position */
+#define USBHS_HSTPIPISR_CTRL_RXSTALLDI_Msk  (_U_(0x1) << USBHS_HSTPIPISR_CTRL_RXSTALLDI_Pos)  /**< (USBHS_HSTPIPISR) Received STALLed Interrupt Mask */
+#define USBHS_HSTPIPISR_CTRL_RXSTALLDI      USBHS_HSTPIPISR_CTRL_RXSTALLDI_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPISR_CTRL_RXSTALLDI_Msk instead */
+#define USBHS_HSTPIPISR_CTRL_MASK           _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPISR_CTRL) Register MASK  (Use USBHS_HSTPIPISR_CTRL_Msk instead)  */
+#define USBHS_HSTPIPISR_CTRL_Msk            _U_(0x44)                                      /**< (USBHS_HSTPIPISR_CTRL) Register Mask  */
+
+/* ISO mode */
+#define USBHS_HSTPIPISR_ISO_UNDERFI_Pos     2                                              /**< (USBHS_HSTPIPISR) Underflow Interrupt Position */
+#define USBHS_HSTPIPISR_ISO_UNDERFI_Msk     (_U_(0x1) << USBHS_HSTPIPISR_ISO_UNDERFI_Pos)  /**< (USBHS_HSTPIPISR) Underflow Interrupt Mask */
+#define USBHS_HSTPIPISR_ISO_UNDERFI         USBHS_HSTPIPISR_ISO_UNDERFI_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPISR_ISO_UNDERFI_Msk instead */
+#define USBHS_HSTPIPISR_ISO_CRCERRI_Pos     6                                              /**< (USBHS_HSTPIPISR) CRC Error Interrupt Position */
+#define USBHS_HSTPIPISR_ISO_CRCERRI_Msk     (_U_(0x1) << USBHS_HSTPIPISR_ISO_CRCERRI_Pos)  /**< (USBHS_HSTPIPISR) CRC Error Interrupt Mask */
+#define USBHS_HSTPIPISR_ISO_CRCERRI         USBHS_HSTPIPISR_ISO_CRCERRI_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPISR_ISO_CRCERRI_Msk instead */
+#define USBHS_HSTPIPISR_ISO_MASK            _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPISR_ISO) Register MASK  (Use USBHS_HSTPIPISR_ISO_Msk instead)  */
+#define USBHS_HSTPIPISR_ISO_Msk             _U_(0x44)                                      /**< (USBHS_HSTPIPISR_ISO) Register Mask  */
+
+/* BLK mode */
+#define USBHS_HSTPIPISR_BLK_TXSTPI_Pos      2                                              /**< (USBHS_HSTPIPISR) Transmitted SETUP Interrupt Position */
+#define USBHS_HSTPIPISR_BLK_TXSTPI_Msk      (_U_(0x1) << USBHS_HSTPIPISR_BLK_TXSTPI_Pos)   /**< (USBHS_HSTPIPISR) Transmitted SETUP Interrupt Mask */
+#define USBHS_HSTPIPISR_BLK_TXSTPI          USBHS_HSTPIPISR_BLK_TXSTPI_Msk                 /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPISR_BLK_TXSTPI_Msk instead */
+#define USBHS_HSTPIPISR_BLK_RXSTALLDI_Pos   6                                              /**< (USBHS_HSTPIPISR) Received STALLed Interrupt Position */
+#define USBHS_HSTPIPISR_BLK_RXSTALLDI_Msk   (_U_(0x1) << USBHS_HSTPIPISR_BLK_RXSTALLDI_Pos)  /**< (USBHS_HSTPIPISR) Received STALLed Interrupt Mask */
+#define USBHS_HSTPIPISR_BLK_RXSTALLDI       USBHS_HSTPIPISR_BLK_RXSTALLDI_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPISR_BLK_RXSTALLDI_Msk instead */
+#define USBHS_HSTPIPISR_BLK_MASK            _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPISR_BLK) Register MASK  (Use USBHS_HSTPIPISR_BLK_Msk instead)  */
+#define USBHS_HSTPIPISR_BLK_Msk             _U_(0x44)                                      /**< (USBHS_HSTPIPISR_BLK) Register Mask  */
+
+/* INTRPT mode */
+#define USBHS_HSTPIPISR_INTRPT_UNDERFI_Pos  2                                              /**< (USBHS_HSTPIPISR) Underflow Interrupt Position */
+#define USBHS_HSTPIPISR_INTRPT_UNDERFI_Msk  (_U_(0x1) << USBHS_HSTPIPISR_INTRPT_UNDERFI_Pos)  /**< (USBHS_HSTPIPISR) Underflow Interrupt Mask */
+#define USBHS_HSTPIPISR_INTRPT_UNDERFI      USBHS_HSTPIPISR_INTRPT_UNDERFI_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPISR_INTRPT_UNDERFI_Msk instead */
+#define USBHS_HSTPIPISR_INTRPT_RXSTALLDI_Pos 6                                              /**< (USBHS_HSTPIPISR) Received STALLed Interrupt Position */
+#define USBHS_HSTPIPISR_INTRPT_RXSTALLDI_Msk (_U_(0x1) << USBHS_HSTPIPISR_INTRPT_RXSTALLDI_Pos)  /**< (USBHS_HSTPIPISR) Received STALLed Interrupt Mask */
+#define USBHS_HSTPIPISR_INTRPT_RXSTALLDI    USBHS_HSTPIPISR_INTRPT_RXSTALLDI_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPISR_INTRPT_RXSTALLDI_Msk instead */
+#define USBHS_HSTPIPISR_INTRPT_MASK         _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPISR_INTRPT) Register MASK  (Use USBHS_HSTPIPISR_INTRPT_Msk instead)  */
+#define USBHS_HSTPIPISR_INTRPT_Msk          _U_(0x44)                                      /**< (USBHS_HSTPIPISR_INTRPT) Register Mask  */
 
 
-/* -------- USBHS_HSTPIPICR : (USBHS Offset: 0x560) (/W 32) Host Pipe Clear Register (n = 0) 0 -------- */
+/* -------- USBHS_HSTPIPICR : (USBHS Offset: 0x560) (/W 32) Host Pipe Clear Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXINIC:1;                  /**< bit:      0  Received IN Data Interrupt Clear         */
     uint32_t TXOUTIC:1;                 /**< bit:      1  Transmitted OUT Data Interrupt Clear     */
-    uint32_t TXSTPIC:1;                 /**< bit:      2  Transmitted SETUP Interrupt Clear        */
-    uint32_t :1;                        /**< bit:      3  Reserved */
+    uint32_t :2;                        /**< bit:   2..3  Reserved */
     uint32_t NAKEDIC:1;                 /**< bit:      4  NAKed Interrupt Clear                    */
     uint32_t OVERFIC:1;                 /**< bit:      5  Overflow Interrupt Clear                 */
-    uint32_t RXSTALLDIC:1;              /**< bit:      6  Received STALLed Interrupt Clear         */
+    uint32_t :1;                        /**< bit:      6  Reserved */
     uint32_t SHORTPACKETIC:1;           /**< bit:      7  Short Packet Interrupt Clear             */
     uint32_t :24;                       /**< bit:  8..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct { // CTRL mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t TXSTPIC:1;                 /**< bit:      2  Transmitted SETUP Interrupt Clear        */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDIC:1;              /**< bit:      6  Received STALLed Interrupt Clear         */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } CTRL;                                /**< Structure used for CTRL mode access */
+  struct { // ISO mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFIC:1;                /**< bit:      2  Underflow Interrupt Clear                */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t CRCERRIC:1;                /**< bit:      6  CRC Error Interrupt Clear                */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } ISO;                                /**< Structure used for ISO mode access */
+  struct { // BLK mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t TXSTPIC:1;                 /**< bit:      2  Transmitted SETUP Interrupt Clear        */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDIC:1;              /**< bit:      6  Received STALLed Interrupt Clear         */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } BLK;                                /**< Structure used for BLK mode access */
+  struct { // INTRPT mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFIC:1;                /**< bit:      2  Underflow Interrupt Clear                */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDIC:1;              /**< bit:      6  Received STALLed Interrupt Clear         */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } INTRPT;                                /**< Structure used for INTRPT mode access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPICR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_HSTPIPICR_OFFSET              (0x560)                                       /**<  (USBHS_HSTPIPICR) Host Pipe Clear Register (n = 0) 0  Offset */
+#define USBHS_HSTPIPICR_OFFSET              (0x560)                                       /**<  (USBHS_HSTPIPICR) Host Pipe Clear Register  Offset */
 
 #define USBHS_HSTPIPICR_RXINIC_Pos          0                                              /**< (USBHS_HSTPIPICR) Received IN Data Interrupt Clear Position */
 #define USBHS_HSTPIPICR_RXINIC_Msk          (_U_(0x1) << USBHS_HSTPIPICR_RXINIC_Pos)       /**< (USBHS_HSTPIPICR) Received IN Data Interrupt Clear Mask */
@@ -2801,46 +3572,110 @@ typedef union {
 #define USBHS_HSTPIPICR_TXOUTIC_Pos         1                                              /**< (USBHS_HSTPIPICR) Transmitted OUT Data Interrupt Clear Position */
 #define USBHS_HSTPIPICR_TXOUTIC_Msk         (_U_(0x1) << USBHS_HSTPIPICR_TXOUTIC_Pos)      /**< (USBHS_HSTPIPICR) Transmitted OUT Data Interrupt Clear Mask */
 #define USBHS_HSTPIPICR_TXOUTIC             USBHS_HSTPIPICR_TXOUTIC_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPICR_TXOUTIC_Msk instead */
-#define USBHS_HSTPIPICR_TXSTPIC_Pos         2                                              /**< (USBHS_HSTPIPICR) Transmitted SETUP Interrupt Clear Position */
-#define USBHS_HSTPIPICR_TXSTPIC_Msk         (_U_(0x1) << USBHS_HSTPIPICR_TXSTPIC_Pos)      /**< (USBHS_HSTPIPICR) Transmitted SETUP Interrupt Clear Mask */
-#define USBHS_HSTPIPICR_TXSTPIC             USBHS_HSTPIPICR_TXSTPIC_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPICR_TXSTPIC_Msk instead */
 #define USBHS_HSTPIPICR_NAKEDIC_Pos         4                                              /**< (USBHS_HSTPIPICR) NAKed Interrupt Clear Position */
 #define USBHS_HSTPIPICR_NAKEDIC_Msk         (_U_(0x1) << USBHS_HSTPIPICR_NAKEDIC_Pos)      /**< (USBHS_HSTPIPICR) NAKed Interrupt Clear Mask */
 #define USBHS_HSTPIPICR_NAKEDIC             USBHS_HSTPIPICR_NAKEDIC_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPICR_NAKEDIC_Msk instead */
 #define USBHS_HSTPIPICR_OVERFIC_Pos         5                                              /**< (USBHS_HSTPIPICR) Overflow Interrupt Clear Position */
 #define USBHS_HSTPIPICR_OVERFIC_Msk         (_U_(0x1) << USBHS_HSTPIPICR_OVERFIC_Pos)      /**< (USBHS_HSTPIPICR) Overflow Interrupt Clear Mask */
 #define USBHS_HSTPIPICR_OVERFIC             USBHS_HSTPIPICR_OVERFIC_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPICR_OVERFIC_Msk instead */
-#define USBHS_HSTPIPICR_RXSTALLDIC_Pos      6                                              /**< (USBHS_HSTPIPICR) Received STALLed Interrupt Clear Position */
-#define USBHS_HSTPIPICR_RXSTALLDIC_Msk      (_U_(0x1) << USBHS_HSTPIPICR_RXSTALLDIC_Pos)   /**< (USBHS_HSTPIPICR) Received STALLed Interrupt Clear Mask */
-#define USBHS_HSTPIPICR_RXSTALLDIC          USBHS_HSTPIPICR_RXSTALLDIC_Msk                 /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPICR_RXSTALLDIC_Msk instead */
 #define USBHS_HSTPIPICR_SHORTPACKETIC_Pos   7                                              /**< (USBHS_HSTPIPICR) Short Packet Interrupt Clear Position */
 #define USBHS_HSTPIPICR_SHORTPACKETIC_Msk   (_U_(0x1) << USBHS_HSTPIPICR_SHORTPACKETIC_Pos)  /**< (USBHS_HSTPIPICR) Short Packet Interrupt Clear Mask */
 #define USBHS_HSTPIPICR_SHORTPACKETIC       USBHS_HSTPIPICR_SHORTPACKETIC_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPICR_SHORTPACKETIC_Msk instead */
-#define USBHS_HSTPIPICR_MASK                _U_(0xF7)                                      /**< \deprecated (USBHS_HSTPIPICR) Register MASK  (Use USBHS_HSTPIPICR_Msk instead)  */
-#define USBHS_HSTPIPICR_Msk                 _U_(0xF7)                                      /**< (USBHS_HSTPIPICR) Register Mask  */
+#define USBHS_HSTPIPICR_MASK                _U_(0xB3)                                      /**< \deprecated (USBHS_HSTPIPICR) Register MASK  (Use USBHS_HSTPIPICR_Msk instead)  */
+#define USBHS_HSTPIPICR_Msk                 _U_(0xB3)                                      /**< (USBHS_HSTPIPICR) Register Mask  */
+
+/* CTRL mode */
+#define USBHS_HSTPIPICR_CTRL_TXSTPIC_Pos    2                                              /**< (USBHS_HSTPIPICR) Transmitted SETUP Interrupt Clear Position */
+#define USBHS_HSTPIPICR_CTRL_TXSTPIC_Msk    (_U_(0x1) << USBHS_HSTPIPICR_CTRL_TXSTPIC_Pos)  /**< (USBHS_HSTPIPICR) Transmitted SETUP Interrupt Clear Mask */
+#define USBHS_HSTPIPICR_CTRL_TXSTPIC        USBHS_HSTPIPICR_CTRL_TXSTPIC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPICR_CTRL_TXSTPIC_Msk instead */
+#define USBHS_HSTPIPICR_CTRL_RXSTALLDIC_Pos 6                                              /**< (USBHS_HSTPIPICR) Received STALLed Interrupt Clear Position */
+#define USBHS_HSTPIPICR_CTRL_RXSTALLDIC_Msk (_U_(0x1) << USBHS_HSTPIPICR_CTRL_RXSTALLDIC_Pos)  /**< (USBHS_HSTPIPICR) Received STALLed Interrupt Clear Mask */
+#define USBHS_HSTPIPICR_CTRL_RXSTALLDIC     USBHS_HSTPIPICR_CTRL_RXSTALLDIC_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPICR_CTRL_RXSTALLDIC_Msk instead */
+#define USBHS_HSTPIPICR_CTRL_MASK           _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPICR_CTRL) Register MASK  (Use USBHS_HSTPIPICR_CTRL_Msk instead)  */
+#define USBHS_HSTPIPICR_CTRL_Msk            _U_(0x44)                                      /**< (USBHS_HSTPIPICR_CTRL) Register Mask  */
+
+/* ISO mode */
+#define USBHS_HSTPIPICR_ISO_UNDERFIC_Pos    2                                              /**< (USBHS_HSTPIPICR) Underflow Interrupt Clear Position */
+#define USBHS_HSTPIPICR_ISO_UNDERFIC_Msk    (_U_(0x1) << USBHS_HSTPIPICR_ISO_UNDERFIC_Pos)  /**< (USBHS_HSTPIPICR) Underflow Interrupt Clear Mask */
+#define USBHS_HSTPIPICR_ISO_UNDERFIC        USBHS_HSTPIPICR_ISO_UNDERFIC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPICR_ISO_UNDERFIC_Msk instead */
+#define USBHS_HSTPIPICR_ISO_CRCERRIC_Pos    6                                              /**< (USBHS_HSTPIPICR) CRC Error Interrupt Clear Position */
+#define USBHS_HSTPIPICR_ISO_CRCERRIC_Msk    (_U_(0x1) << USBHS_HSTPIPICR_ISO_CRCERRIC_Pos)  /**< (USBHS_HSTPIPICR) CRC Error Interrupt Clear Mask */
+#define USBHS_HSTPIPICR_ISO_CRCERRIC        USBHS_HSTPIPICR_ISO_CRCERRIC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPICR_ISO_CRCERRIC_Msk instead */
+#define USBHS_HSTPIPICR_ISO_MASK            _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPICR_ISO) Register MASK  (Use USBHS_HSTPIPICR_ISO_Msk instead)  */
+#define USBHS_HSTPIPICR_ISO_Msk             _U_(0x44)                                      /**< (USBHS_HSTPIPICR_ISO) Register Mask  */
+
+/* BLK mode */
+#define USBHS_HSTPIPICR_BLK_TXSTPIC_Pos     2                                              /**< (USBHS_HSTPIPICR) Transmitted SETUP Interrupt Clear Position */
+#define USBHS_HSTPIPICR_BLK_TXSTPIC_Msk     (_U_(0x1) << USBHS_HSTPIPICR_BLK_TXSTPIC_Pos)  /**< (USBHS_HSTPIPICR) Transmitted SETUP Interrupt Clear Mask */
+#define USBHS_HSTPIPICR_BLK_TXSTPIC         USBHS_HSTPIPICR_BLK_TXSTPIC_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPICR_BLK_TXSTPIC_Msk instead */
+#define USBHS_HSTPIPICR_BLK_RXSTALLDIC_Pos  6                                              /**< (USBHS_HSTPIPICR) Received STALLed Interrupt Clear Position */
+#define USBHS_HSTPIPICR_BLK_RXSTALLDIC_Msk  (_U_(0x1) << USBHS_HSTPIPICR_BLK_RXSTALLDIC_Pos)  /**< (USBHS_HSTPIPICR) Received STALLed Interrupt Clear Mask */
+#define USBHS_HSTPIPICR_BLK_RXSTALLDIC      USBHS_HSTPIPICR_BLK_RXSTALLDIC_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPICR_BLK_RXSTALLDIC_Msk instead */
+#define USBHS_HSTPIPICR_BLK_MASK            _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPICR_BLK) Register MASK  (Use USBHS_HSTPIPICR_BLK_Msk instead)  */
+#define USBHS_HSTPIPICR_BLK_Msk             _U_(0x44)                                      /**< (USBHS_HSTPIPICR_BLK) Register Mask  */
+
+/* INTRPT mode */
+#define USBHS_HSTPIPICR_INTRPT_UNDERFIC_Pos 2                                              /**< (USBHS_HSTPIPICR) Underflow Interrupt Clear Position */
+#define USBHS_HSTPIPICR_INTRPT_UNDERFIC_Msk (_U_(0x1) << USBHS_HSTPIPICR_INTRPT_UNDERFIC_Pos)  /**< (USBHS_HSTPIPICR) Underflow Interrupt Clear Mask */
+#define USBHS_HSTPIPICR_INTRPT_UNDERFIC     USBHS_HSTPIPICR_INTRPT_UNDERFIC_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPICR_INTRPT_UNDERFIC_Msk instead */
+#define USBHS_HSTPIPICR_INTRPT_RXSTALLDIC_Pos 6                                              /**< (USBHS_HSTPIPICR) Received STALLed Interrupt Clear Position */
+#define USBHS_HSTPIPICR_INTRPT_RXSTALLDIC_Msk (_U_(0x1) << USBHS_HSTPIPICR_INTRPT_RXSTALLDIC_Pos)  /**< (USBHS_HSTPIPICR) Received STALLed Interrupt Clear Mask */
+#define USBHS_HSTPIPICR_INTRPT_RXSTALLDIC   USBHS_HSTPIPICR_INTRPT_RXSTALLDIC_Msk          /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPICR_INTRPT_RXSTALLDIC_Msk instead */
+#define USBHS_HSTPIPICR_INTRPT_MASK         _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPICR_INTRPT) Register MASK  (Use USBHS_HSTPIPICR_INTRPT_Msk instead)  */
+#define USBHS_HSTPIPICR_INTRPT_Msk          _U_(0x44)                                      /**< (USBHS_HSTPIPICR_INTRPT) Register Mask  */
 
 
-/* -------- USBHS_HSTPIPIFR : (USBHS Offset: 0x590) (/W 32) Host Pipe Set Register (n = 0) 0 -------- */
+/* -------- USBHS_HSTPIPIFR : (USBHS Offset: 0x590) (/W 32) Host Pipe Set Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXINIS:1;                  /**< bit:      0  Received IN Data Interrupt Set           */
     uint32_t TXOUTIS:1;                 /**< bit:      1  Transmitted OUT Data Interrupt Set       */
-    uint32_t TXSTPIS:1;                 /**< bit:      2  Transmitted SETUP Interrupt Set          */
+    uint32_t :1;                        /**< bit:      2  Reserved */
     uint32_t PERRIS:1;                  /**< bit:      3  Pipe Error Interrupt Set                 */
     uint32_t NAKEDIS:1;                 /**< bit:      4  NAKed Interrupt Set                      */
     uint32_t OVERFIS:1;                 /**< bit:      5  Overflow Interrupt Set                   */
-    uint32_t RXSTALLDIS:1;              /**< bit:      6  Received STALLed Interrupt Set           */
+    uint32_t :1;                        /**< bit:      6  Reserved */
     uint32_t SHORTPACKETIS:1;           /**< bit:      7  Short Packet Interrupt Set               */
     uint32_t :4;                        /**< bit:  8..11  Reserved */
     uint32_t NBUSYBKS:1;                /**< bit:     12  Number of Busy Banks Set                 */
     uint32_t :19;                       /**< bit: 13..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct { // CTRL mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t TXSTPIS:1;                 /**< bit:      2  Transmitted SETUP Interrupt Set          */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDIS:1;              /**< bit:      6  Received STALLed Interrupt Set           */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } CTRL;                                /**< Structure used for CTRL mode access */
+  struct { // ISO mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFIS:1;                /**< bit:      2  Underflow Interrupt Set                  */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t CRCERRIS:1;                /**< bit:      6  CRC Error Interrupt Set                  */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } ISO;                                /**< Structure used for ISO mode access */
+  struct { // BLK mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t TXSTPIS:1;                 /**< bit:      2  Transmitted SETUP Interrupt Set          */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDIS:1;              /**< bit:      6  Received STALLed Interrupt Set           */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } BLK;                                /**< Structure used for BLK mode access */
+  struct { // INTRPT mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFIS:1;                /**< bit:      2  Underflow Interrupt Set                  */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDIS:1;              /**< bit:      6  Received STALLed Interrupt Set           */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } INTRPT;                                /**< Structure used for INTRPT mode access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPIFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_HSTPIPIFR_OFFSET              (0x590)                                       /**<  (USBHS_HSTPIPIFR) Host Pipe Set Register (n = 0) 0  Offset */
+#define USBHS_HSTPIPIFR_OFFSET              (0x590)                                       /**<  (USBHS_HSTPIPIFR) Host Pipe Set Register  Offset */
 
 #define USBHS_HSTPIPIFR_RXINIS_Pos          0                                              /**< (USBHS_HSTPIPIFR) Received IN Data Interrupt Set Position */
 #define USBHS_HSTPIPIFR_RXINIS_Msk          (_U_(0x1) << USBHS_HSTPIPIFR_RXINIS_Pos)       /**< (USBHS_HSTPIPIFR) Received IN Data Interrupt Set Mask */
@@ -2848,9 +3683,6 @@ typedef union {
 #define USBHS_HSTPIPIFR_TXOUTIS_Pos         1                                              /**< (USBHS_HSTPIPIFR) Transmitted OUT Data Interrupt Set Position */
 #define USBHS_HSTPIPIFR_TXOUTIS_Msk         (_U_(0x1) << USBHS_HSTPIPIFR_TXOUTIS_Pos)      /**< (USBHS_HSTPIPIFR) Transmitted OUT Data Interrupt Set Mask */
 #define USBHS_HSTPIPIFR_TXOUTIS             USBHS_HSTPIPIFR_TXOUTIS_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIFR_TXOUTIS_Msk instead */
-#define USBHS_HSTPIPIFR_TXSTPIS_Pos         2                                              /**< (USBHS_HSTPIPIFR) Transmitted SETUP Interrupt Set Position */
-#define USBHS_HSTPIPIFR_TXSTPIS_Msk         (_U_(0x1) << USBHS_HSTPIPIFR_TXSTPIS_Pos)      /**< (USBHS_HSTPIPIFR) Transmitted SETUP Interrupt Set Mask */
-#define USBHS_HSTPIPIFR_TXSTPIS             USBHS_HSTPIPIFR_TXSTPIS_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIFR_TXSTPIS_Msk instead */
 #define USBHS_HSTPIPIFR_PERRIS_Pos          3                                              /**< (USBHS_HSTPIPIFR) Pipe Error Interrupt Set Position */
 #define USBHS_HSTPIPIFR_PERRIS_Msk          (_U_(0x1) << USBHS_HSTPIPIFR_PERRIS_Pos)       /**< (USBHS_HSTPIPIFR) Pipe Error Interrupt Set Mask */
 #define USBHS_HSTPIPIFR_PERRIS              USBHS_HSTPIPIFR_PERRIS_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIFR_PERRIS_Msk instead */
@@ -2860,30 +3692,68 @@ typedef union {
 #define USBHS_HSTPIPIFR_OVERFIS_Pos         5                                              /**< (USBHS_HSTPIPIFR) Overflow Interrupt Set Position */
 #define USBHS_HSTPIPIFR_OVERFIS_Msk         (_U_(0x1) << USBHS_HSTPIPIFR_OVERFIS_Pos)      /**< (USBHS_HSTPIPIFR) Overflow Interrupt Set Mask */
 #define USBHS_HSTPIPIFR_OVERFIS             USBHS_HSTPIPIFR_OVERFIS_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIFR_OVERFIS_Msk instead */
-#define USBHS_HSTPIPIFR_RXSTALLDIS_Pos      6                                              /**< (USBHS_HSTPIPIFR) Received STALLed Interrupt Set Position */
-#define USBHS_HSTPIPIFR_RXSTALLDIS_Msk      (_U_(0x1) << USBHS_HSTPIPIFR_RXSTALLDIS_Pos)   /**< (USBHS_HSTPIPIFR) Received STALLed Interrupt Set Mask */
-#define USBHS_HSTPIPIFR_RXSTALLDIS          USBHS_HSTPIPIFR_RXSTALLDIS_Msk                 /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIFR_RXSTALLDIS_Msk instead */
 #define USBHS_HSTPIPIFR_SHORTPACKETIS_Pos   7                                              /**< (USBHS_HSTPIPIFR) Short Packet Interrupt Set Position */
 #define USBHS_HSTPIPIFR_SHORTPACKETIS_Msk   (_U_(0x1) << USBHS_HSTPIPIFR_SHORTPACKETIS_Pos)  /**< (USBHS_HSTPIPIFR) Short Packet Interrupt Set Mask */
 #define USBHS_HSTPIPIFR_SHORTPACKETIS       USBHS_HSTPIPIFR_SHORTPACKETIS_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIFR_SHORTPACKETIS_Msk instead */
 #define USBHS_HSTPIPIFR_NBUSYBKS_Pos        12                                             /**< (USBHS_HSTPIPIFR) Number of Busy Banks Set Position */
 #define USBHS_HSTPIPIFR_NBUSYBKS_Msk        (_U_(0x1) << USBHS_HSTPIPIFR_NBUSYBKS_Pos)     /**< (USBHS_HSTPIPIFR) Number of Busy Banks Set Mask */
 #define USBHS_HSTPIPIFR_NBUSYBKS            USBHS_HSTPIPIFR_NBUSYBKS_Msk                   /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIFR_NBUSYBKS_Msk instead */
-#define USBHS_HSTPIPIFR_MASK                _U_(0x10FF)                                    /**< \deprecated (USBHS_HSTPIPIFR) Register MASK  (Use USBHS_HSTPIPIFR_Msk instead)  */
-#define USBHS_HSTPIPIFR_Msk                 _U_(0x10FF)                                    /**< (USBHS_HSTPIPIFR) Register Mask  */
+#define USBHS_HSTPIPIFR_MASK                _U_(0x10BB)                                    /**< \deprecated (USBHS_HSTPIPIFR) Register MASK  (Use USBHS_HSTPIPIFR_Msk instead)  */
+#define USBHS_HSTPIPIFR_Msk                 _U_(0x10BB)                                    /**< (USBHS_HSTPIPIFR) Register Mask  */
+
+/* CTRL mode */
+#define USBHS_HSTPIPIFR_CTRL_TXSTPIS_Pos    2                                              /**< (USBHS_HSTPIPIFR) Transmitted SETUP Interrupt Set Position */
+#define USBHS_HSTPIPIFR_CTRL_TXSTPIS_Msk    (_U_(0x1) << USBHS_HSTPIPIFR_CTRL_TXSTPIS_Pos)  /**< (USBHS_HSTPIPIFR) Transmitted SETUP Interrupt Set Mask */
+#define USBHS_HSTPIPIFR_CTRL_TXSTPIS        USBHS_HSTPIPIFR_CTRL_TXSTPIS_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIFR_CTRL_TXSTPIS_Msk instead */
+#define USBHS_HSTPIPIFR_CTRL_RXSTALLDIS_Pos 6                                              /**< (USBHS_HSTPIPIFR) Received STALLed Interrupt Set Position */
+#define USBHS_HSTPIPIFR_CTRL_RXSTALLDIS_Msk (_U_(0x1) << USBHS_HSTPIPIFR_CTRL_RXSTALLDIS_Pos)  /**< (USBHS_HSTPIPIFR) Received STALLed Interrupt Set Mask */
+#define USBHS_HSTPIPIFR_CTRL_RXSTALLDIS     USBHS_HSTPIPIFR_CTRL_RXSTALLDIS_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIFR_CTRL_RXSTALLDIS_Msk instead */
+#define USBHS_HSTPIPIFR_CTRL_MASK           _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIFR_CTRL) Register MASK  (Use USBHS_HSTPIPIFR_CTRL_Msk instead)  */
+#define USBHS_HSTPIPIFR_CTRL_Msk            _U_(0x44)                                      /**< (USBHS_HSTPIPIFR_CTRL) Register Mask  */
+
+/* ISO mode */
+#define USBHS_HSTPIPIFR_ISO_UNDERFIS_Pos    2                                              /**< (USBHS_HSTPIPIFR) Underflow Interrupt Set Position */
+#define USBHS_HSTPIPIFR_ISO_UNDERFIS_Msk    (_U_(0x1) << USBHS_HSTPIPIFR_ISO_UNDERFIS_Pos)  /**< (USBHS_HSTPIPIFR) Underflow Interrupt Set Mask */
+#define USBHS_HSTPIPIFR_ISO_UNDERFIS        USBHS_HSTPIPIFR_ISO_UNDERFIS_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIFR_ISO_UNDERFIS_Msk instead */
+#define USBHS_HSTPIPIFR_ISO_CRCERRIS_Pos    6                                              /**< (USBHS_HSTPIPIFR) CRC Error Interrupt Set Position */
+#define USBHS_HSTPIPIFR_ISO_CRCERRIS_Msk    (_U_(0x1) << USBHS_HSTPIPIFR_ISO_CRCERRIS_Pos)  /**< (USBHS_HSTPIPIFR) CRC Error Interrupt Set Mask */
+#define USBHS_HSTPIPIFR_ISO_CRCERRIS        USBHS_HSTPIPIFR_ISO_CRCERRIS_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIFR_ISO_CRCERRIS_Msk instead */
+#define USBHS_HSTPIPIFR_ISO_MASK            _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIFR_ISO) Register MASK  (Use USBHS_HSTPIPIFR_ISO_Msk instead)  */
+#define USBHS_HSTPIPIFR_ISO_Msk             _U_(0x44)                                      /**< (USBHS_HSTPIPIFR_ISO) Register Mask  */
+
+/* BLK mode */
+#define USBHS_HSTPIPIFR_BLK_TXSTPIS_Pos     2                                              /**< (USBHS_HSTPIPIFR) Transmitted SETUP Interrupt Set Position */
+#define USBHS_HSTPIPIFR_BLK_TXSTPIS_Msk     (_U_(0x1) << USBHS_HSTPIPIFR_BLK_TXSTPIS_Pos)  /**< (USBHS_HSTPIPIFR) Transmitted SETUP Interrupt Set Mask */
+#define USBHS_HSTPIPIFR_BLK_TXSTPIS         USBHS_HSTPIPIFR_BLK_TXSTPIS_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIFR_BLK_TXSTPIS_Msk instead */
+#define USBHS_HSTPIPIFR_BLK_RXSTALLDIS_Pos  6                                              /**< (USBHS_HSTPIPIFR) Received STALLed Interrupt Set Position */
+#define USBHS_HSTPIPIFR_BLK_RXSTALLDIS_Msk  (_U_(0x1) << USBHS_HSTPIPIFR_BLK_RXSTALLDIS_Pos)  /**< (USBHS_HSTPIPIFR) Received STALLed Interrupt Set Mask */
+#define USBHS_HSTPIPIFR_BLK_RXSTALLDIS      USBHS_HSTPIPIFR_BLK_RXSTALLDIS_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIFR_BLK_RXSTALLDIS_Msk instead */
+#define USBHS_HSTPIPIFR_BLK_MASK            _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIFR_BLK) Register MASK  (Use USBHS_HSTPIPIFR_BLK_Msk instead)  */
+#define USBHS_HSTPIPIFR_BLK_Msk             _U_(0x44)                                      /**< (USBHS_HSTPIPIFR_BLK) Register Mask  */
+
+/* INTRPT mode */
+#define USBHS_HSTPIPIFR_INTRPT_UNDERFIS_Pos 2                                              /**< (USBHS_HSTPIPIFR) Underflow Interrupt Set Position */
+#define USBHS_HSTPIPIFR_INTRPT_UNDERFIS_Msk (_U_(0x1) << USBHS_HSTPIPIFR_INTRPT_UNDERFIS_Pos)  /**< (USBHS_HSTPIPIFR) Underflow Interrupt Set Mask */
+#define USBHS_HSTPIPIFR_INTRPT_UNDERFIS     USBHS_HSTPIPIFR_INTRPT_UNDERFIS_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIFR_INTRPT_UNDERFIS_Msk instead */
+#define USBHS_HSTPIPIFR_INTRPT_RXSTALLDIS_Pos 6                                              /**< (USBHS_HSTPIPIFR) Received STALLed Interrupt Set Position */
+#define USBHS_HSTPIPIFR_INTRPT_RXSTALLDIS_Msk (_U_(0x1) << USBHS_HSTPIPIFR_INTRPT_RXSTALLDIS_Pos)  /**< (USBHS_HSTPIPIFR) Received STALLed Interrupt Set Mask */
+#define USBHS_HSTPIPIFR_INTRPT_RXSTALLDIS   USBHS_HSTPIPIFR_INTRPT_RXSTALLDIS_Msk          /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIFR_INTRPT_RXSTALLDIS_Msk instead */
+#define USBHS_HSTPIPIFR_INTRPT_MASK         _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIFR_INTRPT) Register MASK  (Use USBHS_HSTPIPIFR_INTRPT_Msk instead)  */
+#define USBHS_HSTPIPIFR_INTRPT_Msk          _U_(0x44)                                      /**< (USBHS_HSTPIPIFR_INTRPT) Register Mask  */
 
 
-/* -------- USBHS_HSTPIPIMR : (USBHS Offset: 0x5c0) (R/ 32) Host Pipe Mask Register (n = 0) 0 -------- */
+/* -------- USBHS_HSTPIPIMR : (USBHS Offset: 0x5c0) (R/ 32) Host Pipe Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXINE:1;                   /**< bit:      0  Received IN Data Interrupt Enable        */
     uint32_t TXOUTE:1;                  /**< bit:      1  Transmitted OUT Data Interrupt Enable    */
-    uint32_t TXSTPE:1;                  /**< bit:      2  Transmitted SETUP Interrupt Enable       */
+    uint32_t :1;                        /**< bit:      2  Reserved */
     uint32_t PERRE:1;                   /**< bit:      3  Pipe Error Interrupt Enable              */
     uint32_t NAKEDE:1;                  /**< bit:      4  NAKed Interrupt Enable                   */
     uint32_t OVERFIE:1;                 /**< bit:      5  Overflow Interrupt Enable                */
-    uint32_t RXSTALLDE:1;               /**< bit:      6  Received STALLed Interrupt Enable        */
+    uint32_t :1;                        /**< bit:      6  Reserved */
     uint32_t SHORTPACKETIE:1;           /**< bit:      7  Short Packet Interrupt Enable            */
     uint32_t :4;                        /**< bit:  8..11  Reserved */
     uint32_t NBUSYBKE:1;                /**< bit:     12  Number of Busy Banks Interrupt Enable    */
@@ -2895,11 +3765,40 @@ typedef union {
     uint32_t RSTDT:1;                   /**< bit:     18  Reset Data Toggle                        */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct { // CTRL mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t TXSTPE:1;                  /**< bit:      2  Transmitted SETUP Interrupt Enable       */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDE:1;               /**< bit:      6  Received STALLed Interrupt Enable        */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } CTRL;                                /**< Structure used for CTRL mode access */
+  struct { // ISO mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFIE:1;                /**< bit:      2  Underflow Interrupt Enable               */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t CRCERRE:1;                 /**< bit:      6  CRC Error Interrupt Enable               */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } ISO;                                /**< Structure used for ISO mode access */
+  struct { // BLK mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t TXSTPE:1;                  /**< bit:      2  Transmitted SETUP Interrupt Enable       */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDE:1;               /**< bit:      6  Received STALLed Interrupt Enable        */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } BLK;                                /**< Structure used for BLK mode access */
+  struct { // INTRPT mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFIE:1;                /**< bit:      2  Underflow Interrupt Enable               */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDE:1;               /**< bit:      6  Received STALLed Interrupt Enable        */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } INTRPT;                                /**< Structure used for INTRPT mode access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPIMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_HSTPIPIMR_OFFSET              (0x5C0)                                       /**<  (USBHS_HSTPIPIMR) Host Pipe Mask Register (n = 0) 0  Offset */
+#define USBHS_HSTPIPIMR_OFFSET              (0x5C0)                                       /**<  (USBHS_HSTPIPIMR) Host Pipe Mask Register  Offset */
 
 #define USBHS_HSTPIPIMR_RXINE_Pos           0                                              /**< (USBHS_HSTPIPIMR) Received IN Data Interrupt Enable Position */
 #define USBHS_HSTPIPIMR_RXINE_Msk           (_U_(0x1) << USBHS_HSTPIPIMR_RXINE_Pos)        /**< (USBHS_HSTPIPIMR) Received IN Data Interrupt Enable Mask */
@@ -2907,9 +3806,6 @@ typedef union {
 #define USBHS_HSTPIPIMR_TXOUTE_Pos          1                                              /**< (USBHS_HSTPIPIMR) Transmitted OUT Data Interrupt Enable Position */
 #define USBHS_HSTPIPIMR_TXOUTE_Msk          (_U_(0x1) << USBHS_HSTPIPIMR_TXOUTE_Pos)       /**< (USBHS_HSTPIPIMR) Transmitted OUT Data Interrupt Enable Mask */
 #define USBHS_HSTPIPIMR_TXOUTE              USBHS_HSTPIPIMR_TXOUTE_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIMR_TXOUTE_Msk instead */
-#define USBHS_HSTPIPIMR_TXSTPE_Pos          2                                              /**< (USBHS_HSTPIPIMR) Transmitted SETUP Interrupt Enable Position */
-#define USBHS_HSTPIPIMR_TXSTPE_Msk          (_U_(0x1) << USBHS_HSTPIPIMR_TXSTPE_Pos)       /**< (USBHS_HSTPIPIMR) Transmitted SETUP Interrupt Enable Mask */
-#define USBHS_HSTPIPIMR_TXSTPE              USBHS_HSTPIPIMR_TXSTPE_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIMR_TXSTPE_Msk instead */
 #define USBHS_HSTPIPIMR_PERRE_Pos           3                                              /**< (USBHS_HSTPIPIMR) Pipe Error Interrupt Enable Position */
 #define USBHS_HSTPIPIMR_PERRE_Msk           (_U_(0x1) << USBHS_HSTPIPIMR_PERRE_Pos)        /**< (USBHS_HSTPIPIMR) Pipe Error Interrupt Enable Mask */
 #define USBHS_HSTPIPIMR_PERRE               USBHS_HSTPIPIMR_PERRE_Msk                      /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIMR_PERRE_Msk instead */
@@ -2919,9 +3815,6 @@ typedef union {
 #define USBHS_HSTPIPIMR_OVERFIE_Pos         5                                              /**< (USBHS_HSTPIPIMR) Overflow Interrupt Enable Position */
 #define USBHS_HSTPIPIMR_OVERFIE_Msk         (_U_(0x1) << USBHS_HSTPIPIMR_OVERFIE_Pos)      /**< (USBHS_HSTPIPIMR) Overflow Interrupt Enable Mask */
 #define USBHS_HSTPIPIMR_OVERFIE             USBHS_HSTPIPIMR_OVERFIE_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIMR_OVERFIE_Msk instead */
-#define USBHS_HSTPIPIMR_RXSTALLDE_Pos       6                                              /**< (USBHS_HSTPIPIMR) Received STALLed Interrupt Enable Position */
-#define USBHS_HSTPIPIMR_RXSTALLDE_Msk       (_U_(0x1) << USBHS_HSTPIPIMR_RXSTALLDE_Pos)    /**< (USBHS_HSTPIPIMR) Received STALLed Interrupt Enable Mask */
-#define USBHS_HSTPIPIMR_RXSTALLDE           USBHS_HSTPIPIMR_RXSTALLDE_Msk                  /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIMR_RXSTALLDE_Msk instead */
 #define USBHS_HSTPIPIMR_SHORTPACKETIE_Pos   7                                              /**< (USBHS_HSTPIPIMR) Short Packet Interrupt Enable Position */
 #define USBHS_HSTPIPIMR_SHORTPACKETIE_Msk   (_U_(0x1) << USBHS_HSTPIPIMR_SHORTPACKETIE_Pos)  /**< (USBHS_HSTPIPIMR) Short Packet Interrupt Enable Mask */
 #define USBHS_HSTPIPIMR_SHORTPACKETIE       USBHS_HSTPIPIMR_SHORTPACKETIE_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIMR_SHORTPACKETIE_Msk instead */
@@ -2940,21 +3833,62 @@ typedef union {
 #define USBHS_HSTPIPIMR_RSTDT_Pos           18                                             /**< (USBHS_HSTPIPIMR) Reset Data Toggle Position */
 #define USBHS_HSTPIPIMR_RSTDT_Msk           (_U_(0x1) << USBHS_HSTPIPIMR_RSTDT_Pos)        /**< (USBHS_HSTPIPIMR) Reset Data Toggle Mask */
 #define USBHS_HSTPIPIMR_RSTDT               USBHS_HSTPIPIMR_RSTDT_Msk                      /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIMR_RSTDT_Msk instead */
-#define USBHS_HSTPIPIMR_MASK                _U_(0x750FF)                                   /**< \deprecated (USBHS_HSTPIPIMR) Register MASK  (Use USBHS_HSTPIPIMR_Msk instead)  */
-#define USBHS_HSTPIPIMR_Msk                 _U_(0x750FF)                                   /**< (USBHS_HSTPIPIMR) Register Mask  */
+#define USBHS_HSTPIPIMR_MASK                _U_(0x750BB)                                   /**< \deprecated (USBHS_HSTPIPIMR) Register MASK  (Use USBHS_HSTPIPIMR_Msk instead)  */
+#define USBHS_HSTPIPIMR_Msk                 _U_(0x750BB)                                   /**< (USBHS_HSTPIPIMR) Register Mask  */
+
+/* CTRL mode */
+#define USBHS_HSTPIPIMR_CTRL_TXSTPE_Pos     2                                              /**< (USBHS_HSTPIPIMR) Transmitted SETUP Interrupt Enable Position */
+#define USBHS_HSTPIPIMR_CTRL_TXSTPE_Msk     (_U_(0x1) << USBHS_HSTPIPIMR_CTRL_TXSTPE_Pos)  /**< (USBHS_HSTPIPIMR) Transmitted SETUP Interrupt Enable Mask */
+#define USBHS_HSTPIPIMR_CTRL_TXSTPE         USBHS_HSTPIPIMR_CTRL_TXSTPE_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIMR_CTRL_TXSTPE_Msk instead */
+#define USBHS_HSTPIPIMR_CTRL_RXSTALLDE_Pos  6                                              /**< (USBHS_HSTPIPIMR) Received STALLed Interrupt Enable Position */
+#define USBHS_HSTPIPIMR_CTRL_RXSTALLDE_Msk  (_U_(0x1) << USBHS_HSTPIPIMR_CTRL_RXSTALLDE_Pos)  /**< (USBHS_HSTPIPIMR) Received STALLed Interrupt Enable Mask */
+#define USBHS_HSTPIPIMR_CTRL_RXSTALLDE      USBHS_HSTPIPIMR_CTRL_RXSTALLDE_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIMR_CTRL_RXSTALLDE_Msk instead */
+#define USBHS_HSTPIPIMR_CTRL_MASK           _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIMR_CTRL) Register MASK  (Use USBHS_HSTPIPIMR_CTRL_Msk instead)  */
+#define USBHS_HSTPIPIMR_CTRL_Msk            _U_(0x44)                                      /**< (USBHS_HSTPIPIMR_CTRL) Register Mask  */
+
+/* ISO mode */
+#define USBHS_HSTPIPIMR_ISO_UNDERFIE_Pos    2                                              /**< (USBHS_HSTPIPIMR) Underflow Interrupt Enable Position */
+#define USBHS_HSTPIPIMR_ISO_UNDERFIE_Msk    (_U_(0x1) << USBHS_HSTPIPIMR_ISO_UNDERFIE_Pos)  /**< (USBHS_HSTPIPIMR) Underflow Interrupt Enable Mask */
+#define USBHS_HSTPIPIMR_ISO_UNDERFIE        USBHS_HSTPIPIMR_ISO_UNDERFIE_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIMR_ISO_UNDERFIE_Msk instead */
+#define USBHS_HSTPIPIMR_ISO_CRCERRE_Pos     6                                              /**< (USBHS_HSTPIPIMR) CRC Error Interrupt Enable Position */
+#define USBHS_HSTPIPIMR_ISO_CRCERRE_Msk     (_U_(0x1) << USBHS_HSTPIPIMR_ISO_CRCERRE_Pos)  /**< (USBHS_HSTPIPIMR) CRC Error Interrupt Enable Mask */
+#define USBHS_HSTPIPIMR_ISO_CRCERRE         USBHS_HSTPIPIMR_ISO_CRCERRE_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIMR_ISO_CRCERRE_Msk instead */
+#define USBHS_HSTPIPIMR_ISO_MASK            _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIMR_ISO) Register MASK  (Use USBHS_HSTPIPIMR_ISO_Msk instead)  */
+#define USBHS_HSTPIPIMR_ISO_Msk             _U_(0x44)                                      /**< (USBHS_HSTPIPIMR_ISO) Register Mask  */
+
+/* BLK mode */
+#define USBHS_HSTPIPIMR_BLK_TXSTPE_Pos      2                                              /**< (USBHS_HSTPIPIMR) Transmitted SETUP Interrupt Enable Position */
+#define USBHS_HSTPIPIMR_BLK_TXSTPE_Msk      (_U_(0x1) << USBHS_HSTPIPIMR_BLK_TXSTPE_Pos)   /**< (USBHS_HSTPIPIMR) Transmitted SETUP Interrupt Enable Mask */
+#define USBHS_HSTPIPIMR_BLK_TXSTPE          USBHS_HSTPIPIMR_BLK_TXSTPE_Msk                 /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIMR_BLK_TXSTPE_Msk instead */
+#define USBHS_HSTPIPIMR_BLK_RXSTALLDE_Pos   6                                              /**< (USBHS_HSTPIPIMR) Received STALLed Interrupt Enable Position */
+#define USBHS_HSTPIPIMR_BLK_RXSTALLDE_Msk   (_U_(0x1) << USBHS_HSTPIPIMR_BLK_RXSTALLDE_Pos)  /**< (USBHS_HSTPIPIMR) Received STALLed Interrupt Enable Mask */
+#define USBHS_HSTPIPIMR_BLK_RXSTALLDE       USBHS_HSTPIPIMR_BLK_RXSTALLDE_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIMR_BLK_RXSTALLDE_Msk instead */
+#define USBHS_HSTPIPIMR_BLK_MASK            _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIMR_BLK) Register MASK  (Use USBHS_HSTPIPIMR_BLK_Msk instead)  */
+#define USBHS_HSTPIPIMR_BLK_Msk             _U_(0x44)                                      /**< (USBHS_HSTPIPIMR_BLK) Register Mask  */
+
+/* INTRPT mode */
+#define USBHS_HSTPIPIMR_INTRPT_UNDERFIE_Pos 2                                              /**< (USBHS_HSTPIPIMR) Underflow Interrupt Enable Position */
+#define USBHS_HSTPIPIMR_INTRPT_UNDERFIE_Msk (_U_(0x1) << USBHS_HSTPIPIMR_INTRPT_UNDERFIE_Pos)  /**< (USBHS_HSTPIPIMR) Underflow Interrupt Enable Mask */
+#define USBHS_HSTPIPIMR_INTRPT_UNDERFIE     USBHS_HSTPIPIMR_INTRPT_UNDERFIE_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIMR_INTRPT_UNDERFIE_Msk instead */
+#define USBHS_HSTPIPIMR_INTRPT_RXSTALLDE_Pos 6                                              /**< (USBHS_HSTPIPIMR) Received STALLed Interrupt Enable Position */
+#define USBHS_HSTPIPIMR_INTRPT_RXSTALLDE_Msk (_U_(0x1) << USBHS_HSTPIPIMR_INTRPT_RXSTALLDE_Pos)  /**< (USBHS_HSTPIPIMR) Received STALLed Interrupt Enable Mask */
+#define USBHS_HSTPIPIMR_INTRPT_RXSTALLDE    USBHS_HSTPIPIMR_INTRPT_RXSTALLDE_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIMR_INTRPT_RXSTALLDE_Msk instead */
+#define USBHS_HSTPIPIMR_INTRPT_MASK         _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIMR_INTRPT) Register MASK  (Use USBHS_HSTPIPIMR_INTRPT_Msk instead)  */
+#define USBHS_HSTPIPIMR_INTRPT_Msk          _U_(0x44)                                      /**< (USBHS_HSTPIPIMR_INTRPT) Register Mask  */
 
 
-/* -------- USBHS_HSTPIPIER : (USBHS Offset: 0x5f0) (/W 32) Host Pipe Enable Register (n = 0) 0 -------- */
+/* -------- USBHS_HSTPIPIER : (USBHS Offset: 0x5f0) (/W 32) Host Pipe Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXINES:1;                  /**< bit:      0  Received IN Data Interrupt Enable        */
     uint32_t TXOUTES:1;                 /**< bit:      1  Transmitted OUT Data Interrupt Enable    */
-    uint32_t TXSTPES:1;                 /**< bit:      2  Transmitted SETUP Interrupt Enable       */
+    uint32_t :1;                        /**< bit:      2  Reserved */
     uint32_t PERRES:1;                  /**< bit:      3  Pipe Error Interrupt Enable              */
     uint32_t NAKEDES:1;                 /**< bit:      4  NAKed Interrupt Enable                   */
     uint32_t OVERFIES:1;                /**< bit:      5  Overflow Interrupt Enable                */
-    uint32_t RXSTALLDES:1;              /**< bit:      6  Received STALLed Interrupt Enable        */
+    uint32_t :1;                        /**< bit:      6  Reserved */
     uint32_t SHORTPACKETIES:1;          /**< bit:      7  Short Packet Interrupt Enable            */
     uint32_t :4;                        /**< bit:  8..11  Reserved */
     uint32_t NBUSYBKES:1;               /**< bit:     12  Number of Busy Banks Enable              */
@@ -2964,11 +3898,40 @@ typedef union {
     uint32_t RSTDTS:1;                  /**< bit:     18  Reset Data Toggle Enable                 */
     uint32_t :13;                       /**< bit: 19..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct { // CTRL mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t TXSTPES:1;                 /**< bit:      2  Transmitted SETUP Interrupt Enable       */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDES:1;              /**< bit:      6  Received STALLed Interrupt Enable        */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } CTRL;                                /**< Structure used for CTRL mode access */
+  struct { // ISO mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFIES:1;               /**< bit:      2  Underflow Interrupt Enable               */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t CRCERRES:1;                /**< bit:      6  CRC Error Interrupt Enable               */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } ISO;                                /**< Structure used for ISO mode access */
+  struct { // BLK mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t TXSTPES:1;                 /**< bit:      2  Transmitted SETUP Interrupt Enable       */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDES:1;              /**< bit:      6  Received STALLed Interrupt Enable        */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } BLK;                                /**< Structure used for BLK mode access */
+  struct { // INTRPT mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFIES:1;               /**< bit:      2  Underflow Interrupt Enable               */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDES:1;              /**< bit:      6  Received STALLed Interrupt Enable        */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } INTRPT;                                /**< Structure used for INTRPT mode access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPIER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_HSTPIPIER_OFFSET              (0x5F0)                                       /**<  (USBHS_HSTPIPIER) Host Pipe Enable Register (n = 0) 0  Offset */
+#define USBHS_HSTPIPIER_OFFSET              (0x5F0)                                       /**<  (USBHS_HSTPIPIER) Host Pipe Enable Register  Offset */
 
 #define USBHS_HSTPIPIER_RXINES_Pos          0                                              /**< (USBHS_HSTPIPIER) Received IN Data Interrupt Enable Position */
 #define USBHS_HSTPIPIER_RXINES_Msk          (_U_(0x1) << USBHS_HSTPIPIER_RXINES_Pos)       /**< (USBHS_HSTPIPIER) Received IN Data Interrupt Enable Mask */
@@ -2976,9 +3939,6 @@ typedef union {
 #define USBHS_HSTPIPIER_TXOUTES_Pos         1                                              /**< (USBHS_HSTPIPIER) Transmitted OUT Data Interrupt Enable Position */
 #define USBHS_HSTPIPIER_TXOUTES_Msk         (_U_(0x1) << USBHS_HSTPIPIER_TXOUTES_Pos)      /**< (USBHS_HSTPIPIER) Transmitted OUT Data Interrupt Enable Mask */
 #define USBHS_HSTPIPIER_TXOUTES             USBHS_HSTPIPIER_TXOUTES_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIER_TXOUTES_Msk instead */
-#define USBHS_HSTPIPIER_TXSTPES_Pos         2                                              /**< (USBHS_HSTPIPIER) Transmitted SETUP Interrupt Enable Position */
-#define USBHS_HSTPIPIER_TXSTPES_Msk         (_U_(0x1) << USBHS_HSTPIPIER_TXSTPES_Pos)      /**< (USBHS_HSTPIPIER) Transmitted SETUP Interrupt Enable Mask */
-#define USBHS_HSTPIPIER_TXSTPES             USBHS_HSTPIPIER_TXSTPES_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIER_TXSTPES_Msk instead */
 #define USBHS_HSTPIPIER_PERRES_Pos          3                                              /**< (USBHS_HSTPIPIER) Pipe Error Interrupt Enable Position */
 #define USBHS_HSTPIPIER_PERRES_Msk          (_U_(0x1) << USBHS_HSTPIPIER_PERRES_Pos)       /**< (USBHS_HSTPIPIER) Pipe Error Interrupt Enable Mask */
 #define USBHS_HSTPIPIER_PERRES              USBHS_HSTPIPIER_PERRES_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIER_PERRES_Msk instead */
@@ -2988,9 +3948,6 @@ typedef union {
 #define USBHS_HSTPIPIER_OVERFIES_Pos        5                                              /**< (USBHS_HSTPIPIER) Overflow Interrupt Enable Position */
 #define USBHS_HSTPIPIER_OVERFIES_Msk        (_U_(0x1) << USBHS_HSTPIPIER_OVERFIES_Pos)     /**< (USBHS_HSTPIPIER) Overflow Interrupt Enable Mask */
 #define USBHS_HSTPIPIER_OVERFIES            USBHS_HSTPIPIER_OVERFIES_Msk                   /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIER_OVERFIES_Msk instead */
-#define USBHS_HSTPIPIER_RXSTALLDES_Pos      6                                              /**< (USBHS_HSTPIPIER) Received STALLed Interrupt Enable Position */
-#define USBHS_HSTPIPIER_RXSTALLDES_Msk      (_U_(0x1) << USBHS_HSTPIPIER_RXSTALLDES_Pos)   /**< (USBHS_HSTPIPIER) Received STALLed Interrupt Enable Mask */
-#define USBHS_HSTPIPIER_RXSTALLDES          USBHS_HSTPIPIER_RXSTALLDES_Msk                 /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIER_RXSTALLDES_Msk instead */
 #define USBHS_HSTPIPIER_SHORTPACKETIES_Pos  7                                              /**< (USBHS_HSTPIPIER) Short Packet Interrupt Enable Position */
 #define USBHS_HSTPIPIER_SHORTPACKETIES_Msk  (_U_(0x1) << USBHS_HSTPIPIER_SHORTPACKETIES_Pos)  /**< (USBHS_HSTPIPIER) Short Packet Interrupt Enable Mask */
 #define USBHS_HSTPIPIER_SHORTPACKETIES      USBHS_HSTPIPIER_SHORTPACKETIES_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIER_SHORTPACKETIES_Msk instead */
@@ -3006,21 +3963,62 @@ typedef union {
 #define USBHS_HSTPIPIER_RSTDTS_Pos          18                                             /**< (USBHS_HSTPIPIER) Reset Data Toggle Enable Position */
 #define USBHS_HSTPIPIER_RSTDTS_Msk          (_U_(0x1) << USBHS_HSTPIPIER_RSTDTS_Pos)       /**< (USBHS_HSTPIPIER) Reset Data Toggle Enable Mask */
 #define USBHS_HSTPIPIER_RSTDTS              USBHS_HSTPIPIER_RSTDTS_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIER_RSTDTS_Msk instead */
-#define USBHS_HSTPIPIER_MASK                _U_(0x710FF)                                   /**< \deprecated (USBHS_HSTPIPIER) Register MASK  (Use USBHS_HSTPIPIER_Msk instead)  */
-#define USBHS_HSTPIPIER_Msk                 _U_(0x710FF)                                   /**< (USBHS_HSTPIPIER) Register Mask  */
+#define USBHS_HSTPIPIER_MASK                _U_(0x710BB)                                   /**< \deprecated (USBHS_HSTPIPIER) Register MASK  (Use USBHS_HSTPIPIER_Msk instead)  */
+#define USBHS_HSTPIPIER_Msk                 _U_(0x710BB)                                   /**< (USBHS_HSTPIPIER) Register Mask  */
+
+/* CTRL mode */
+#define USBHS_HSTPIPIER_CTRL_TXSTPES_Pos    2                                              /**< (USBHS_HSTPIPIER) Transmitted SETUP Interrupt Enable Position */
+#define USBHS_HSTPIPIER_CTRL_TXSTPES_Msk    (_U_(0x1) << USBHS_HSTPIPIER_CTRL_TXSTPES_Pos)  /**< (USBHS_HSTPIPIER) Transmitted SETUP Interrupt Enable Mask */
+#define USBHS_HSTPIPIER_CTRL_TXSTPES        USBHS_HSTPIPIER_CTRL_TXSTPES_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIER_CTRL_TXSTPES_Msk instead */
+#define USBHS_HSTPIPIER_CTRL_RXSTALLDES_Pos 6                                              /**< (USBHS_HSTPIPIER) Received STALLed Interrupt Enable Position */
+#define USBHS_HSTPIPIER_CTRL_RXSTALLDES_Msk (_U_(0x1) << USBHS_HSTPIPIER_CTRL_RXSTALLDES_Pos)  /**< (USBHS_HSTPIPIER) Received STALLed Interrupt Enable Mask */
+#define USBHS_HSTPIPIER_CTRL_RXSTALLDES     USBHS_HSTPIPIER_CTRL_RXSTALLDES_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIER_CTRL_RXSTALLDES_Msk instead */
+#define USBHS_HSTPIPIER_CTRL_MASK           _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIER_CTRL) Register MASK  (Use USBHS_HSTPIPIER_CTRL_Msk instead)  */
+#define USBHS_HSTPIPIER_CTRL_Msk            _U_(0x44)                                      /**< (USBHS_HSTPIPIER_CTRL) Register Mask  */
+
+/* ISO mode */
+#define USBHS_HSTPIPIER_ISO_UNDERFIES_Pos   2                                              /**< (USBHS_HSTPIPIER) Underflow Interrupt Enable Position */
+#define USBHS_HSTPIPIER_ISO_UNDERFIES_Msk   (_U_(0x1) << USBHS_HSTPIPIER_ISO_UNDERFIES_Pos)  /**< (USBHS_HSTPIPIER) Underflow Interrupt Enable Mask */
+#define USBHS_HSTPIPIER_ISO_UNDERFIES       USBHS_HSTPIPIER_ISO_UNDERFIES_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIER_ISO_UNDERFIES_Msk instead */
+#define USBHS_HSTPIPIER_ISO_CRCERRES_Pos    6                                              /**< (USBHS_HSTPIPIER) CRC Error Interrupt Enable Position */
+#define USBHS_HSTPIPIER_ISO_CRCERRES_Msk    (_U_(0x1) << USBHS_HSTPIPIER_ISO_CRCERRES_Pos)  /**< (USBHS_HSTPIPIER) CRC Error Interrupt Enable Mask */
+#define USBHS_HSTPIPIER_ISO_CRCERRES        USBHS_HSTPIPIER_ISO_CRCERRES_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIER_ISO_CRCERRES_Msk instead */
+#define USBHS_HSTPIPIER_ISO_MASK            _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIER_ISO) Register MASK  (Use USBHS_HSTPIPIER_ISO_Msk instead)  */
+#define USBHS_HSTPIPIER_ISO_Msk             _U_(0x44)                                      /**< (USBHS_HSTPIPIER_ISO) Register Mask  */
+
+/* BLK mode */
+#define USBHS_HSTPIPIER_BLK_TXSTPES_Pos     2                                              /**< (USBHS_HSTPIPIER) Transmitted SETUP Interrupt Enable Position */
+#define USBHS_HSTPIPIER_BLK_TXSTPES_Msk     (_U_(0x1) << USBHS_HSTPIPIER_BLK_TXSTPES_Pos)  /**< (USBHS_HSTPIPIER) Transmitted SETUP Interrupt Enable Mask */
+#define USBHS_HSTPIPIER_BLK_TXSTPES         USBHS_HSTPIPIER_BLK_TXSTPES_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIER_BLK_TXSTPES_Msk instead */
+#define USBHS_HSTPIPIER_BLK_RXSTALLDES_Pos  6                                              /**< (USBHS_HSTPIPIER) Received STALLed Interrupt Enable Position */
+#define USBHS_HSTPIPIER_BLK_RXSTALLDES_Msk  (_U_(0x1) << USBHS_HSTPIPIER_BLK_RXSTALLDES_Pos)  /**< (USBHS_HSTPIPIER) Received STALLed Interrupt Enable Mask */
+#define USBHS_HSTPIPIER_BLK_RXSTALLDES      USBHS_HSTPIPIER_BLK_RXSTALLDES_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIER_BLK_RXSTALLDES_Msk instead */
+#define USBHS_HSTPIPIER_BLK_MASK            _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIER_BLK) Register MASK  (Use USBHS_HSTPIPIER_BLK_Msk instead)  */
+#define USBHS_HSTPIPIER_BLK_Msk             _U_(0x44)                                      /**< (USBHS_HSTPIPIER_BLK) Register Mask  */
+
+/* INTRPT mode */
+#define USBHS_HSTPIPIER_INTRPT_UNDERFIES_Pos 2                                              /**< (USBHS_HSTPIPIER) Underflow Interrupt Enable Position */
+#define USBHS_HSTPIPIER_INTRPT_UNDERFIES_Msk (_U_(0x1) << USBHS_HSTPIPIER_INTRPT_UNDERFIES_Pos)  /**< (USBHS_HSTPIPIER) Underflow Interrupt Enable Mask */
+#define USBHS_HSTPIPIER_INTRPT_UNDERFIES    USBHS_HSTPIPIER_INTRPT_UNDERFIES_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIER_INTRPT_UNDERFIES_Msk instead */
+#define USBHS_HSTPIPIER_INTRPT_RXSTALLDES_Pos 6                                              /**< (USBHS_HSTPIPIER) Received STALLed Interrupt Enable Position */
+#define USBHS_HSTPIPIER_INTRPT_RXSTALLDES_Msk (_U_(0x1) << USBHS_HSTPIPIER_INTRPT_RXSTALLDES_Pos)  /**< (USBHS_HSTPIPIER) Received STALLed Interrupt Enable Mask */
+#define USBHS_HSTPIPIER_INTRPT_RXSTALLDES   USBHS_HSTPIPIER_INTRPT_RXSTALLDES_Msk          /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIER_INTRPT_RXSTALLDES_Msk instead */
+#define USBHS_HSTPIPIER_INTRPT_MASK         _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIER_INTRPT) Register MASK  (Use USBHS_HSTPIPIER_INTRPT_Msk instead)  */
+#define USBHS_HSTPIPIER_INTRPT_Msk          _U_(0x44)                                      /**< (USBHS_HSTPIPIER_INTRPT) Register Mask  */
 
 
-/* -------- USBHS_HSTPIPIDR : (USBHS Offset: 0x620) (/W 32) Host Pipe Disable Register (n = 0) 0 -------- */
+/* -------- USBHS_HSTPIPIDR : (USBHS Offset: 0x620) (/W 32) Host Pipe Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXINEC:1;                  /**< bit:      0  Received IN Data Interrupt Disable       */
     uint32_t TXOUTEC:1;                 /**< bit:      1  Transmitted OUT Data Interrupt Disable   */
-    uint32_t TXSTPEC:1;                 /**< bit:      2  Transmitted SETUP Interrupt Disable      */
+    uint32_t :1;                        /**< bit:      2  Reserved */
     uint32_t PERREC:1;                  /**< bit:      3  Pipe Error Interrupt Disable             */
     uint32_t NAKEDEC:1;                 /**< bit:      4  NAKed Interrupt Disable                  */
     uint32_t OVERFIEC:1;                /**< bit:      5  Overflow Interrupt Disable               */
-    uint32_t RXSTALLDEC:1;              /**< bit:      6  Received STALLed Interrupt Disable       */
+    uint32_t :1;                        /**< bit:      6  Reserved */
     uint32_t SHORTPACKETIEC:1;          /**< bit:      7  Short Packet Interrupt Disable           */
     uint32_t :4;                        /**< bit:  8..11  Reserved */
     uint32_t NBUSYBKEC:1;               /**< bit:     12  Number of Busy Banks Disable             */
@@ -3031,11 +4029,40 @@ typedef union {
     uint32_t PFREEZEC:1;                /**< bit:     17  Pipe Freeze Disable                      */
     uint32_t :14;                       /**< bit: 18..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct { // CTRL mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t TXSTPEC:1;                 /**< bit:      2  Transmitted SETUP Interrupt Disable      */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDEC:1;              /**< bit:      6  Received STALLed Interrupt Disable       */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } CTRL;                                /**< Structure used for CTRL mode access */
+  struct { // ISO mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFIEC:1;               /**< bit:      2  Underflow Interrupt Disable              */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t CRCERREC:1;                /**< bit:      6  CRC Error Interrupt Disable              */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } ISO;                                /**< Structure used for ISO mode access */
+  struct { // BLK mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t TXSTPEC:1;                 /**< bit:      2  Transmitted SETUP Interrupt Disable      */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDEC:1;              /**< bit:      6  Received STALLed Interrupt Disable       */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } BLK;                                /**< Structure used for BLK mode access */
+  struct { // INTRPT mode
+    uint32_t :2;                        /**< bit:   0..1  Reserved */
+    uint32_t UNDERFIEC:1;               /**< bit:      2  Underflow Interrupt Disable              */
+    uint32_t :3;                        /**< bit:   3..5  Reserved */
+    uint32_t RXSTALLDEC:1;              /**< bit:      6  Received STALLed Interrupt Disable       */
+    uint32_t :25;                       /**< bit:  7..31  Reserved */
+  } INTRPT;                                /**< Structure used for INTRPT mode access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPIDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_HSTPIPIDR_OFFSET              (0x620)                                       /**<  (USBHS_HSTPIPIDR) Host Pipe Disable Register (n = 0) 0  Offset */
+#define USBHS_HSTPIPIDR_OFFSET              (0x620)                                       /**<  (USBHS_HSTPIPIDR) Host Pipe Disable Register  Offset */
 
 #define USBHS_HSTPIPIDR_RXINEC_Pos          0                                              /**< (USBHS_HSTPIPIDR) Received IN Data Interrupt Disable Position */
 #define USBHS_HSTPIPIDR_RXINEC_Msk          (_U_(0x1) << USBHS_HSTPIPIDR_RXINEC_Pos)       /**< (USBHS_HSTPIPIDR) Received IN Data Interrupt Disable Mask */
@@ -3043,9 +4070,6 @@ typedef union {
 #define USBHS_HSTPIPIDR_TXOUTEC_Pos         1                                              /**< (USBHS_HSTPIPIDR) Transmitted OUT Data Interrupt Disable Position */
 #define USBHS_HSTPIPIDR_TXOUTEC_Msk         (_U_(0x1) << USBHS_HSTPIPIDR_TXOUTEC_Pos)      /**< (USBHS_HSTPIPIDR) Transmitted OUT Data Interrupt Disable Mask */
 #define USBHS_HSTPIPIDR_TXOUTEC             USBHS_HSTPIPIDR_TXOUTEC_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIDR_TXOUTEC_Msk instead */
-#define USBHS_HSTPIPIDR_TXSTPEC_Pos         2                                              /**< (USBHS_HSTPIPIDR) Transmitted SETUP Interrupt Disable Position */
-#define USBHS_HSTPIPIDR_TXSTPEC_Msk         (_U_(0x1) << USBHS_HSTPIPIDR_TXSTPEC_Pos)      /**< (USBHS_HSTPIPIDR) Transmitted SETUP Interrupt Disable Mask */
-#define USBHS_HSTPIPIDR_TXSTPEC             USBHS_HSTPIPIDR_TXSTPEC_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIDR_TXSTPEC_Msk instead */
 #define USBHS_HSTPIPIDR_PERREC_Pos          3                                              /**< (USBHS_HSTPIPIDR) Pipe Error Interrupt Disable Position */
 #define USBHS_HSTPIPIDR_PERREC_Msk          (_U_(0x1) << USBHS_HSTPIPIDR_PERREC_Pos)       /**< (USBHS_HSTPIPIDR) Pipe Error Interrupt Disable Mask */
 #define USBHS_HSTPIPIDR_PERREC              USBHS_HSTPIPIDR_PERREC_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIDR_PERREC_Msk instead */
@@ -3055,9 +4079,6 @@ typedef union {
 #define USBHS_HSTPIPIDR_OVERFIEC_Pos        5                                              /**< (USBHS_HSTPIPIDR) Overflow Interrupt Disable Position */
 #define USBHS_HSTPIPIDR_OVERFIEC_Msk        (_U_(0x1) << USBHS_HSTPIPIDR_OVERFIEC_Pos)     /**< (USBHS_HSTPIPIDR) Overflow Interrupt Disable Mask */
 #define USBHS_HSTPIPIDR_OVERFIEC            USBHS_HSTPIPIDR_OVERFIEC_Msk                   /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIDR_OVERFIEC_Msk instead */
-#define USBHS_HSTPIPIDR_RXSTALLDEC_Pos      6                                              /**< (USBHS_HSTPIPIDR) Received STALLed Interrupt Disable Position */
-#define USBHS_HSTPIPIDR_RXSTALLDEC_Msk      (_U_(0x1) << USBHS_HSTPIPIDR_RXSTALLDEC_Pos)   /**< (USBHS_HSTPIPIDR) Received STALLed Interrupt Disable Mask */
-#define USBHS_HSTPIPIDR_RXSTALLDEC          USBHS_HSTPIPIDR_RXSTALLDEC_Msk                 /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIDR_RXSTALLDEC_Msk instead */
 #define USBHS_HSTPIPIDR_SHORTPACKETIEC_Pos  7                                              /**< (USBHS_HSTPIPIDR) Short Packet Interrupt Disable Position */
 #define USBHS_HSTPIPIDR_SHORTPACKETIEC_Msk  (_U_(0x1) << USBHS_HSTPIPIDR_SHORTPACKETIEC_Pos)  /**< (USBHS_HSTPIPIDR) Short Packet Interrupt Disable Mask */
 #define USBHS_HSTPIPIDR_SHORTPACKETIEC      USBHS_HSTPIPIDR_SHORTPACKETIEC_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIDR_SHORTPACKETIEC_Msk instead */
@@ -3073,12 +4094,53 @@ typedef union {
 #define USBHS_HSTPIPIDR_PFREEZEC_Pos        17                                             /**< (USBHS_HSTPIPIDR) Pipe Freeze Disable Position */
 #define USBHS_HSTPIPIDR_PFREEZEC_Msk        (_U_(0x1) << USBHS_HSTPIPIDR_PFREEZEC_Pos)     /**< (USBHS_HSTPIPIDR) Pipe Freeze Disable Mask */
 #define USBHS_HSTPIPIDR_PFREEZEC            USBHS_HSTPIPIDR_PFREEZEC_Msk                   /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIDR_PFREEZEC_Msk instead */
-#define USBHS_HSTPIPIDR_MASK                _U_(0x350FF)                                   /**< \deprecated (USBHS_HSTPIPIDR) Register MASK  (Use USBHS_HSTPIPIDR_Msk instead)  */
-#define USBHS_HSTPIPIDR_Msk                 _U_(0x350FF)                                   /**< (USBHS_HSTPIPIDR) Register Mask  */
+#define USBHS_HSTPIPIDR_MASK                _U_(0x350BB)                                   /**< \deprecated (USBHS_HSTPIPIDR) Register MASK  (Use USBHS_HSTPIPIDR_Msk instead)  */
+#define USBHS_HSTPIPIDR_Msk                 _U_(0x350BB)                                   /**< (USBHS_HSTPIPIDR) Register Mask  */
+
+/* CTRL mode */
+#define USBHS_HSTPIPIDR_CTRL_TXSTPEC_Pos    2                                              /**< (USBHS_HSTPIPIDR) Transmitted SETUP Interrupt Disable Position */
+#define USBHS_HSTPIPIDR_CTRL_TXSTPEC_Msk    (_U_(0x1) << USBHS_HSTPIPIDR_CTRL_TXSTPEC_Pos)  /**< (USBHS_HSTPIPIDR) Transmitted SETUP Interrupt Disable Mask */
+#define USBHS_HSTPIPIDR_CTRL_TXSTPEC        USBHS_HSTPIPIDR_CTRL_TXSTPEC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIDR_CTRL_TXSTPEC_Msk instead */
+#define USBHS_HSTPIPIDR_CTRL_RXSTALLDEC_Pos 6                                              /**< (USBHS_HSTPIPIDR) Received STALLed Interrupt Disable Position */
+#define USBHS_HSTPIPIDR_CTRL_RXSTALLDEC_Msk (_U_(0x1) << USBHS_HSTPIPIDR_CTRL_RXSTALLDEC_Pos)  /**< (USBHS_HSTPIPIDR) Received STALLed Interrupt Disable Mask */
+#define USBHS_HSTPIPIDR_CTRL_RXSTALLDEC     USBHS_HSTPIPIDR_CTRL_RXSTALLDEC_Msk            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIDR_CTRL_RXSTALLDEC_Msk instead */
+#define USBHS_HSTPIPIDR_CTRL_MASK           _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIDR_CTRL) Register MASK  (Use USBHS_HSTPIPIDR_CTRL_Msk instead)  */
+#define USBHS_HSTPIPIDR_CTRL_Msk            _U_(0x44)                                      /**< (USBHS_HSTPIPIDR_CTRL) Register Mask  */
+
+/* ISO mode */
+#define USBHS_HSTPIPIDR_ISO_UNDERFIEC_Pos   2                                              /**< (USBHS_HSTPIPIDR) Underflow Interrupt Disable Position */
+#define USBHS_HSTPIPIDR_ISO_UNDERFIEC_Msk   (_U_(0x1) << USBHS_HSTPIPIDR_ISO_UNDERFIEC_Pos)  /**< (USBHS_HSTPIPIDR) Underflow Interrupt Disable Mask */
+#define USBHS_HSTPIPIDR_ISO_UNDERFIEC       USBHS_HSTPIPIDR_ISO_UNDERFIEC_Msk              /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIDR_ISO_UNDERFIEC_Msk instead */
+#define USBHS_HSTPIPIDR_ISO_CRCERREC_Pos    6                                              /**< (USBHS_HSTPIPIDR) CRC Error Interrupt Disable Position */
+#define USBHS_HSTPIPIDR_ISO_CRCERREC_Msk    (_U_(0x1) << USBHS_HSTPIPIDR_ISO_CRCERREC_Pos)  /**< (USBHS_HSTPIPIDR) CRC Error Interrupt Disable Mask */
+#define USBHS_HSTPIPIDR_ISO_CRCERREC        USBHS_HSTPIPIDR_ISO_CRCERREC_Msk               /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIDR_ISO_CRCERREC_Msk instead */
+#define USBHS_HSTPIPIDR_ISO_MASK            _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIDR_ISO) Register MASK  (Use USBHS_HSTPIPIDR_ISO_Msk instead)  */
+#define USBHS_HSTPIPIDR_ISO_Msk             _U_(0x44)                                      /**< (USBHS_HSTPIPIDR_ISO) Register Mask  */
+
+/* BLK mode */
+#define USBHS_HSTPIPIDR_BLK_TXSTPEC_Pos     2                                              /**< (USBHS_HSTPIPIDR) Transmitted SETUP Interrupt Disable Position */
+#define USBHS_HSTPIPIDR_BLK_TXSTPEC_Msk     (_U_(0x1) << USBHS_HSTPIPIDR_BLK_TXSTPEC_Pos)  /**< (USBHS_HSTPIPIDR) Transmitted SETUP Interrupt Disable Mask */
+#define USBHS_HSTPIPIDR_BLK_TXSTPEC         USBHS_HSTPIPIDR_BLK_TXSTPEC_Msk                /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIDR_BLK_TXSTPEC_Msk instead */
+#define USBHS_HSTPIPIDR_BLK_RXSTALLDEC_Pos  6                                              /**< (USBHS_HSTPIPIDR) Received STALLed Interrupt Disable Position */
+#define USBHS_HSTPIPIDR_BLK_RXSTALLDEC_Msk  (_U_(0x1) << USBHS_HSTPIPIDR_BLK_RXSTALLDEC_Pos)  /**< (USBHS_HSTPIPIDR) Received STALLed Interrupt Disable Mask */
+#define USBHS_HSTPIPIDR_BLK_RXSTALLDEC      USBHS_HSTPIPIDR_BLK_RXSTALLDEC_Msk             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIDR_BLK_RXSTALLDEC_Msk instead */
+#define USBHS_HSTPIPIDR_BLK_MASK            _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIDR_BLK) Register MASK  (Use USBHS_HSTPIPIDR_BLK_Msk instead)  */
+#define USBHS_HSTPIPIDR_BLK_Msk             _U_(0x44)                                      /**< (USBHS_HSTPIPIDR_BLK) Register Mask  */
+
+/* INTRPT mode */
+#define USBHS_HSTPIPIDR_INTRPT_UNDERFIEC_Pos 2                                              /**< (USBHS_HSTPIPIDR) Underflow Interrupt Disable Position */
+#define USBHS_HSTPIPIDR_INTRPT_UNDERFIEC_Msk (_U_(0x1) << USBHS_HSTPIPIDR_INTRPT_UNDERFIEC_Pos)  /**< (USBHS_HSTPIPIDR) Underflow Interrupt Disable Mask */
+#define USBHS_HSTPIPIDR_INTRPT_UNDERFIEC    USBHS_HSTPIPIDR_INTRPT_UNDERFIEC_Msk           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIDR_INTRPT_UNDERFIEC_Msk instead */
+#define USBHS_HSTPIPIDR_INTRPT_RXSTALLDEC_Pos 6                                              /**< (USBHS_HSTPIPIDR) Received STALLed Interrupt Disable Position */
+#define USBHS_HSTPIPIDR_INTRPT_RXSTALLDEC_Msk (_U_(0x1) << USBHS_HSTPIPIDR_INTRPT_RXSTALLDEC_Pos)  /**< (USBHS_HSTPIPIDR) Received STALLed Interrupt Disable Mask */
+#define USBHS_HSTPIPIDR_INTRPT_RXSTALLDEC   USBHS_HSTPIPIDR_INTRPT_RXSTALLDEC_Msk          /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_HSTPIPIDR_INTRPT_RXSTALLDEC_Msk instead */
+#define USBHS_HSTPIPIDR_INTRPT_MASK         _U_(0x44)                                      /**< \deprecated (USBHS_HSTPIPIDR_INTRPT) Register MASK  (Use USBHS_HSTPIPIDR_INTRPT_Msk instead)  */
+#define USBHS_HSTPIPIDR_INTRPT_Msk          _U_(0x44)                                      /**< (USBHS_HSTPIPIDR_INTRPT) Register Mask  */
 
 
-/* -------- USBHS_HSTPIPINRQ : (USBHS Offset: 0x650) (R/W 32) Host Pipe IN Request Register (n = 0) 0 -------- */
+/* -------- USBHS_HSTPIPINRQ : (USBHS Offset: 0x650) (R/W 32) Host Pipe IN Request Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t INRQ:8;                    /**< bit:   0..7  IN Request Number before Freeze          */
@@ -3087,9 +4149,10 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPINRQ_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_HSTPIPINRQ_OFFSET             (0x650)                                       /**<  (USBHS_HSTPIPINRQ) Host Pipe IN Request Register (n = 0) 0  Offset */
+#define USBHS_HSTPIPINRQ_OFFSET             (0x650)                                       /**<  (USBHS_HSTPIPINRQ) Host Pipe IN Request Register  Offset */
 
 #define USBHS_HSTPIPINRQ_INRQ_Pos           0                                              /**< (USBHS_HSTPIPINRQ) IN Request Number before Freeze Position */
 #define USBHS_HSTPIPINRQ_INRQ_Msk           (_U_(0xFF) << USBHS_HSTPIPINRQ_INRQ_Pos)       /**< (USBHS_HSTPIPINRQ) IN Request Number before Freeze Mask */
@@ -3101,8 +4164,9 @@ typedef union {
 #define USBHS_HSTPIPINRQ_Msk                _U_(0x1FF)                                     /**< (USBHS_HSTPIPINRQ) Register Mask  */
 
 
-/* -------- USBHS_HSTPIPERR : (USBHS Offset: 0x680) (R/W 32) Host Pipe Error Register (n = 0) 0 -------- */
+/* -------- USBHS_HSTPIPERR : (USBHS Offset: 0x680) (R/W 32) Host Pipe Error Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DATATGL:1;                 /**< bit:      0  Data Toggle Error                        */
@@ -3113,11 +4177,17 @@ typedef union {
     uint32_t COUNTER:2;                 /**< bit:   5..6  Error Counter                            */
     uint32_t :25;                       /**< bit:  7..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct {
+    uint32_t :4;                        /**< bit:   0..3  Reserved */
+    uint32_t CRC:1;                     /**< bit:      4  CRCx6 Error                              */
+    uint32_t :27;                       /**< bit:  5..31 Reserved */
+  } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_HSTPIPERR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define USBHS_HSTPIPERR_OFFSET              (0x680)                                       /**<  (USBHS_HSTPIPERR) Host Pipe Error Register (n = 0) 0  Offset */
+#define USBHS_HSTPIPERR_OFFSET              (0x680)                                       /**<  (USBHS_HSTPIPERR) Host Pipe Error Register  Offset */
 
 #define USBHS_HSTPIPERR_DATATGL_Pos         0                                              /**< (USBHS_HSTPIPERR) Data Toggle Error Position */
 #define USBHS_HSTPIPERR_DATATGL_Msk         (_U_(0x1) << USBHS_HSTPIPERR_DATATGL_Pos)      /**< (USBHS_HSTPIPERR) Data Toggle Error Mask */
@@ -3140,9 +4210,13 @@ typedef union {
 #define USBHS_HSTPIPERR_MASK                _U_(0x7F)                                      /**< \deprecated (USBHS_HSTPIPERR) Register MASK  (Use USBHS_HSTPIPERR_Msk instead)  */
 #define USBHS_HSTPIPERR_Msk                 _U_(0x7F)                                      /**< (USBHS_HSTPIPERR) Register Mask  */
 
+#define USBHS_HSTPIPERR_CRC_Pos             4                                              /**< (USBHS_HSTPIPERR Position) CRCx6 Error */
+#define USBHS_HSTPIPERR_CRC_Msk             (_U_(0x1) << USBHS_HSTPIPERR_CRC_Pos)          /**< (USBHS_HSTPIPERR Mask) CRC */
+#define USBHS_HSTPIPERR_CRC(value)          (USBHS_HSTPIPERR_CRC_Msk & ((value) << USBHS_HSTPIPERR_CRC_Pos))  
 
 /* -------- USBHS_CTRL : (USBHS Offset: 0x800) (R/W 32) General Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :4;                        /**< bit:   0..3  Reserved */
@@ -3152,12 +4226,14 @@ typedef union {
     uint32_t :5;                        /**< bit:  9..13  Reserved */
     uint32_t FRZCLK:1;                  /**< bit:     14  Freeze USB Clock                         */
     uint32_t USBE:1;                    /**< bit:     15  USBHS Enable                             */
-    uint32_t :9;                        /**< bit: 16..24  Reserved */
+    uint32_t :8;                        /**< bit: 16..23  Reserved */
+    uint32_t UID:1;                     /**< bit:     24  UID Pin Enable                           */
     uint32_t UIMOD:1;                   /**< bit:     25  USBHS Mode                               */
     uint32_t :6;                        /**< bit: 26..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_CTRL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_CTRL_OFFSET                   (0x800)                                       /**<  (USBHS_CTRL) General Control Register  Offset */
@@ -3174,6 +4250,9 @@ typedef union {
 #define USBHS_CTRL_USBE_Pos                 15                                             /**< (USBHS_CTRL) USBHS Enable Position */
 #define USBHS_CTRL_USBE_Msk                 (_U_(0x1) << USBHS_CTRL_USBE_Pos)              /**< (USBHS_CTRL) USBHS Enable Mask */
 #define USBHS_CTRL_USBE                     USBHS_CTRL_USBE_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_CTRL_USBE_Msk instead */
+#define USBHS_CTRL_UID_Pos                  24                                             /**< (USBHS_CTRL) UID Pin Enable Position */
+#define USBHS_CTRL_UID_Msk                  (_U_(0x1) << USBHS_CTRL_UID_Pos)               /**< (USBHS_CTRL) UID Pin Enable Mask */
+#define USBHS_CTRL_UID                      USBHS_CTRL_UID_Msk                             /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_CTRL_UID_Msk instead */
 #define USBHS_CTRL_UIMOD_Pos                25                                             /**< (USBHS_CTRL) USBHS Mode Position */
 #define USBHS_CTRL_UIMOD_Msk                (_U_(0x1) << USBHS_CTRL_UIMOD_Pos)             /**< (USBHS_CTRL) USBHS Mode Mask */
 #define USBHS_CTRL_UIMOD                    USBHS_CTRL_UIMOD_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use USBHS_CTRL_UIMOD_Msk instead */
@@ -3181,12 +4260,13 @@ typedef union {
 #define   USBHS_CTRL_UIMOD_DEVICE_Val       _U_(0x1)                                       /**< (USBHS_CTRL) The module is in USB Device mode.  */
 #define USBHS_CTRL_UIMOD_HOST               (USBHS_CTRL_UIMOD_HOST_Val << USBHS_CTRL_UIMOD_Pos)  /**< (USBHS_CTRL) The module is in USB Host mode. Position  */
 #define USBHS_CTRL_UIMOD_DEVICE             (USBHS_CTRL_UIMOD_DEVICE_Val << USBHS_CTRL_UIMOD_Pos)  /**< (USBHS_CTRL) The module is in USB Device mode. Position  */
-#define USBHS_CTRL_MASK                     _U_(0x200C110)                                 /**< \deprecated (USBHS_CTRL) Register MASK  (Use USBHS_CTRL_Msk instead)  */
-#define USBHS_CTRL_Msk                      _U_(0x200C110)                                 /**< (USBHS_CTRL) Register Mask  */
+#define USBHS_CTRL_MASK                     _U_(0x300C110)                                 /**< \deprecated (USBHS_CTRL) Register MASK  (Use USBHS_CTRL_Msk instead)  */
+#define USBHS_CTRL_Msk                      _U_(0x300C110)                                 /**< (USBHS_CTRL) Register Mask  */
 
 
 /* -------- USBHS_SR : (USBHS Offset: 0x804) (R/ 32) General Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :4;                        /**< bit:   0..3  Reserved */
@@ -3198,6 +4278,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_SR_OFFSET                     (0x804)                                       /**<  (USBHS_SR) General Status Register  Offset */
@@ -3223,6 +4304,7 @@ typedef union {
 
 /* -------- USBHS_SCR : (USBHS Offset: 0x808) (/W 32) General Status Clear Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :4;                        /**< bit:   0..3  Reserved */
@@ -3231,6 +4313,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_SCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_SCR_OFFSET                    (0x808)                                       /**<  (USBHS_SCR) General Status Clear Register  Offset */
@@ -3244,6 +4327,7 @@ typedef union {
 
 /* -------- USBHS_SFR : (USBHS Offset: 0x80c) (/W 32) General Status Set Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :4;                        /**< bit:   0..3  Reserved */
@@ -3254,6 +4338,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } USBHS_SFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define USBHS_SFR_OFFSET                    (0x80C)                                       /**<  (USBHS_SFR) General Status Set Register  Offset */
@@ -3272,18 +4357,18 @@ typedef union {
 #if COMPONENT_TYPEDEF_STYLE == 'R'
 /** \brief USBHS_DEVDMA hardware registers */
 typedef struct {  
-  __IO uint32_t USBHS_DEVDMANXTDSC; /**< (USBHS_DEVDMA Offset: 0x00) Device DMA Channel Next Descriptor Address Register (n = 1) */
-  __IO uint32_t USBHS_DEVDMAADDRESS; /**< (USBHS_DEVDMA Offset: 0x04) Device DMA Channel Address Register (n = 1) */
-  __IO uint32_t USBHS_DEVDMACONTROL; /**< (USBHS_DEVDMA Offset: 0x08) Device DMA Channel Control Register (n = 1) */
-  __IO uint32_t USBHS_DEVDMASTATUS; /**< (USBHS_DEVDMA Offset: 0x0C) Device DMA Channel Status Register (n = 1) */
+  __IO uint32_t USBHS_DEVDMANXTDSC; /**< (USBHS_DEVDMA Offset: 0x00) Device DMA Channel Next Descriptor Address Register */
+  __IO uint32_t USBHS_DEVDMAADDRESS; /**< (USBHS_DEVDMA Offset: 0x04) Device DMA Channel Address Register */
+  __IO uint32_t USBHS_DEVDMACONTROL; /**< (USBHS_DEVDMA Offset: 0x08) Device DMA Channel Control Register */
+  __IO uint32_t USBHS_DEVDMASTATUS; /**< (USBHS_DEVDMA Offset: 0x0C) Device DMA Channel Status Register */
 } UsbhsDevdma;
 
 /** \brief USBHS_HSTDMA hardware registers */
 typedef struct {  
-  __IO uint32_t USBHS_HSTDMANXTDSC; /**< (USBHS_HSTDMA Offset: 0x00) Host DMA Channel Next Descriptor Address Register (n = 1) */
-  __IO uint32_t USBHS_HSTDMAADDRESS; /**< (USBHS_HSTDMA Offset: 0x04) Host DMA Channel Address Register (n = 1) */
-  __IO uint32_t USBHS_HSTDMACONTROL; /**< (USBHS_HSTDMA Offset: 0x08) Host DMA Channel Control Register (n = 1) */
-  __IO uint32_t USBHS_HSTDMASTATUS; /**< (USBHS_HSTDMA Offset: 0x0C) Host DMA Channel Status Register (n = 1) */
+  __IO uint32_t USBHS_HSTDMANXTDSC; /**< (USBHS_HSTDMA Offset: 0x00) Host DMA Channel Next Descriptor Address Register */
+  __IO uint32_t USBHS_HSTDMAADDRESS; /**< (USBHS_HSTDMA Offset: 0x04) Host DMA Channel Address Register */
+  __IO uint32_t USBHS_HSTDMACONTROL; /**< (USBHS_HSTDMA Offset: 0x08) Host DMA Channel Control Register */
+  __IO uint32_t USBHS_HSTDMASTATUS; /**< (USBHS_HSTDMA Offset: 0x0C) Host DMA Channel Status Register */
 } UsbhsHstdma;
 
 #define USBHSDEVDMA_NUMBER 7
@@ -3299,23 +4384,23 @@ typedef struct {
   __O  uint32_t USBHS_DEVIER;   /**< (USBHS Offset: 0x18) Device Global Interrupt Enable Register */
   __IO uint32_t USBHS_DEVEPT;   /**< (USBHS Offset: 0x1C) Device Endpoint Register */
   __I  uint32_t USBHS_DEVFNUM;  /**< (USBHS Offset: 0x20) Device Frame Number Register */
-  RoReg8  Reserved1[0xDC];
-  __IO uint32_t USBHS_DEVEPTCFG[10]; /**< (USBHS Offset: 0x100) Device Endpoint Configuration Register (n = 0) 0 */
-  RoReg8  Reserved2[0x8];
-  __I  uint32_t USBHS_DEVEPTISR[10]; /**< (USBHS Offset: 0x130) Device Endpoint Status Register (n = 0) 0 */
-  RoReg8  Reserved3[0x8];
-  __O  uint32_t USBHS_DEVEPTICR[10]; /**< (USBHS Offset: 0x160) Device Endpoint Clear Register (n = 0) 0 */
-  RoReg8  Reserved4[0x8];
-  __O  uint32_t USBHS_DEVEPTIFR[10]; /**< (USBHS Offset: 0x190) Device Endpoint Set Register (n = 0) 0 */
-  RoReg8  Reserved5[0x8];
-  __I  uint32_t USBHS_DEVEPTIMR[10]; /**< (USBHS Offset: 0x1C0) Device Endpoint Mask Register (n = 0) 0 */
-  RoReg8  Reserved6[0x8];
-  __O  uint32_t USBHS_DEVEPTIER[10]; /**< (USBHS Offset: 0x1F0) Device Endpoint Enable Register (n = 0) 0 */
-  RoReg8  Reserved7[0x8];
-  __O  uint32_t USBHS_DEVEPTIDR[10]; /**< (USBHS Offset: 0x220) Device Endpoint Disable Register (n = 0) 0 */
-  RoReg8  Reserved8[0xC8];
-       UsbhsDevdma USBHS_DEVDMA[USBHSDEVDMA_NUMBER]; /**< Offset: 0x310 Device DMA Channel Next Descriptor Address Register (n = 1) */
-  RoReg8  Reserved9[0x80];
+  __I  uint8_t                        Reserved1[220];
+  __IO uint32_t USBHS_DEVEPTCFG[10]; /**< (USBHS Offset: 0x100) Device Endpoint Configuration Register */
+  __I  uint8_t                        Reserved2[8];
+  __I  uint32_t USBHS_DEVEPTISR[10]; /**< (USBHS Offset: 0x130) Device Endpoint Interrupt Status Register */
+  __I  uint8_t                        Reserved3[8];
+  __O  uint32_t USBHS_DEVEPTICR[10]; /**< (USBHS Offset: 0x160) Device Endpoint Interrupt Clear Register */
+  __I  uint8_t                        Reserved4[8];
+  __O  uint32_t USBHS_DEVEPTIFR[10]; /**< (USBHS Offset: 0x190) Device Endpoint Interrupt Set Register */
+  __I  uint8_t                        Reserved5[8];
+  __I  uint32_t USBHS_DEVEPTIMR[10]; /**< (USBHS Offset: 0x1C0) Device Endpoint Interrupt Mask Register */
+  __I  uint8_t                        Reserved6[8];
+  __O  uint32_t USBHS_DEVEPTIER[10]; /**< (USBHS Offset: 0x1F0) Device Endpoint Interrupt Enable Register */
+  __I  uint8_t                        Reserved7[8];
+  __O  uint32_t USBHS_DEVEPTIDR[10]; /**< (USBHS Offset: 0x220) Device Endpoint Interrupt Disable Register */
+  __I  uint8_t                        Reserved8[200];
+       UsbhsDevdma UsbhsDevdma[USBHSDEVDMA_NUMBER]; /**< Offset: 0x310 Device DMA Channel Next Descriptor Address Register */
+  __I  uint8_t                        Reserved9[128];
   __IO uint32_t USBHS_HSTCTRL;  /**< (USBHS Offset: 0x400) Host General Control Register */
   __I  uint32_t USBHS_HSTISR;   /**< (USBHS Offset: 0x404) Host Global Interrupt Status Register */
   __O  uint32_t USBHS_HSTICR;   /**< (USBHS Offset: 0x408) Host Global Interrupt Clear Register */
@@ -3328,27 +4413,27 @@ typedef struct {
   __IO uint32_t USBHS_HSTADDR1; /**< (USBHS Offset: 0x424) Host Address 1 Register */
   __IO uint32_t USBHS_HSTADDR2; /**< (USBHS Offset: 0x428) Host Address 2 Register */
   __IO uint32_t USBHS_HSTADDR3; /**< (USBHS Offset: 0x42C) Host Address 3 Register */
-  RoReg8  Reserved10[0xD0];
-  __IO uint32_t USBHS_HSTPIPCFG[10]; /**< (USBHS Offset: 0x500) Host Pipe Configuration Register (n = 0) 0 */
-  RoReg8  Reserved11[0x8];
-  __I  uint32_t USBHS_HSTPIPISR[10]; /**< (USBHS Offset: 0x530) Host Pipe Status Register (n = 0) 0 */
-  RoReg8  Reserved12[0x8];
-  __O  uint32_t USBHS_HSTPIPICR[10]; /**< (USBHS Offset: 0x560) Host Pipe Clear Register (n = 0) 0 */
-  RoReg8  Reserved13[0x8];
-  __O  uint32_t USBHS_HSTPIPIFR[10]; /**< (USBHS Offset: 0x590) Host Pipe Set Register (n = 0) 0 */
-  RoReg8  Reserved14[0x8];
-  __I  uint32_t USBHS_HSTPIPIMR[10]; /**< (USBHS Offset: 0x5C0) Host Pipe Mask Register (n = 0) 0 */
-  RoReg8  Reserved15[0x8];
-  __O  uint32_t USBHS_HSTPIPIER[10]; /**< (USBHS Offset: 0x5F0) Host Pipe Enable Register (n = 0) 0 */
-  RoReg8  Reserved16[0x8];
-  __O  uint32_t USBHS_HSTPIPIDR[10]; /**< (USBHS Offset: 0x620) Host Pipe Disable Register (n = 0) 0 */
-  RoReg8  Reserved17[0x8];
-  __IO uint32_t USBHS_HSTPIPINRQ[10]; /**< (USBHS Offset: 0x650) Host Pipe IN Request Register (n = 0) 0 */
-  RoReg8  Reserved18[0x8];
-  __IO uint32_t USBHS_HSTPIPERR[10]; /**< (USBHS Offset: 0x680) Host Pipe Error Register (n = 0) 0 */
-  RoReg8  Reserved19[0x68];
-       UsbhsHstdma USBHS_HSTDMA[USBHSHSTDMA_NUMBER]; /**< Offset: 0x710 Host DMA Channel Next Descriptor Address Register (n = 1) */
-  RoReg8  Reserved20[0x80];
+  __I  uint8_t                        Reserved10[208];
+  __IO uint32_t USBHS_HSTPIPCFG[10]; /**< (USBHS Offset: 0x500) Host Pipe Configuration Register */
+  __I  uint8_t                        Reserved11[8];
+  __I  uint32_t USBHS_HSTPIPISR[10]; /**< (USBHS Offset: 0x530) Host Pipe Status Register */
+  __I  uint8_t                        Reserved12[8];
+  __O  uint32_t USBHS_HSTPIPICR[10]; /**< (USBHS Offset: 0x560) Host Pipe Clear Register */
+  __I  uint8_t                        Reserved13[8];
+  __O  uint32_t USBHS_HSTPIPIFR[10]; /**< (USBHS Offset: 0x590) Host Pipe Set Register */
+  __I  uint8_t                        Reserved14[8];
+  __I  uint32_t USBHS_HSTPIPIMR[10]; /**< (USBHS Offset: 0x5C0) Host Pipe Mask Register */
+  __I  uint8_t                        Reserved15[8];
+  __O  uint32_t USBHS_HSTPIPIER[10]; /**< (USBHS Offset: 0x5F0) Host Pipe Enable Register */
+  __I  uint8_t                        Reserved16[8];
+  __O  uint32_t USBHS_HSTPIPIDR[10]; /**< (USBHS Offset: 0x620) Host Pipe Disable Register */
+  __I  uint8_t                        Reserved17[8];
+  __IO uint32_t USBHS_HSTPIPINRQ[10]; /**< (USBHS Offset: 0x650) Host Pipe IN Request Register */
+  __I  uint8_t                        Reserved18[8];
+  __IO uint32_t USBHS_HSTPIPERR[10]; /**< (USBHS Offset: 0x680) Host Pipe Error Register */
+  __I  uint8_t                        Reserved19[104];
+       UsbhsHstdma UsbhsHstdma[USBHSHSTDMA_NUMBER]; /**< Offset: 0x710 Host DMA Channel Next Descriptor Address Register */
+  __I  uint8_t                        Reserved20[128];
   __IO uint32_t USBHS_CTRL;     /**< (USBHS Offset: 0x800) General Control Register */
   __I  uint32_t USBHS_SR;       /**< (USBHS Offset: 0x804) General Status Register */
   __O  uint32_t USBHS_SCR;      /**< (USBHS Offset: 0x808) General Status Clear Register */
@@ -3358,18 +4443,18 @@ typedef struct {
 #elif COMPONENT_TYPEDEF_STYLE == 'N'
 /** \brief USBHS_DEVDMA hardware registers */
 typedef struct {  
-  __IO USBHS_DEVDMANXTDSC_Type        USBHS_DEVDMANXTDSC; /**< Offset: 0x00 (R/W  32) Device DMA Channel Next Descriptor Address Register (n = 1) */
-  __IO USBHS_DEVDMAADDRESS_Type       USBHS_DEVDMAADDRESS; /**< Offset: 0x04 (R/W  32) Device DMA Channel Address Register (n = 1) */
-  __IO USBHS_DEVDMACONTROL_Type       USBHS_DEVDMACONTROL; /**< Offset: 0x08 (R/W  32) Device DMA Channel Control Register (n = 1) */
-  __IO USBHS_DEVDMASTATUS_Type        USBHS_DEVDMASTATUS; /**< Offset: 0x0C (R/W  32) Device DMA Channel Status Register (n = 1) */
+  __IO USBHS_DEVDMANXTDSC_Type        USBHS_DEVDMANXTDSC; /**< Offset: 0x00 (R/W  32) Device DMA Channel Next Descriptor Address Register */
+  __IO USBHS_DEVDMAADDRESS_Type       USBHS_DEVDMAADDRESS; /**< Offset: 0x04 (R/W  32) Device DMA Channel Address Register */
+  __IO USBHS_DEVDMACONTROL_Type       USBHS_DEVDMACONTROL; /**< Offset: 0x08 (R/W  32) Device DMA Channel Control Register */
+  __IO USBHS_DEVDMASTATUS_Type        USBHS_DEVDMASTATUS; /**< Offset: 0x0C (R/W  32) Device DMA Channel Status Register */
 } UsbhsDevdma;
 
 /** \brief USBHS_HSTDMA hardware registers */
 typedef struct {  
-  __IO USBHS_HSTDMANXTDSC_Type        USBHS_HSTDMANXTDSC; /**< Offset: 0x00 (R/W  32) Host DMA Channel Next Descriptor Address Register (n = 1) */
-  __IO USBHS_HSTDMAADDRESS_Type       USBHS_HSTDMAADDRESS; /**< Offset: 0x04 (R/W  32) Host DMA Channel Address Register (n = 1) */
-  __IO USBHS_HSTDMACONTROL_Type       USBHS_HSTDMACONTROL; /**< Offset: 0x08 (R/W  32) Host DMA Channel Control Register (n = 1) */
-  __IO USBHS_HSTDMASTATUS_Type        USBHS_HSTDMASTATUS; /**< Offset: 0x0C (R/W  32) Host DMA Channel Status Register (n = 1) */
+  __IO USBHS_HSTDMANXTDSC_Type        USBHS_HSTDMANXTDSC; /**< Offset: 0x00 (R/W  32) Host DMA Channel Next Descriptor Address Register */
+  __IO USBHS_HSTDMAADDRESS_Type       USBHS_HSTDMAADDRESS; /**< Offset: 0x04 (R/W  32) Host DMA Channel Address Register */
+  __IO USBHS_HSTDMACONTROL_Type       USBHS_HSTDMACONTROL; /**< Offset: 0x08 (R/W  32) Host DMA Channel Control Register */
+  __IO USBHS_HSTDMASTATUS_Type        USBHS_HSTDMASTATUS; /**< Offset: 0x0C (R/W  32) Host DMA Channel Status Register */
 } UsbhsHstdma;
 
 /** \brief USBHS hardware registers */
@@ -3383,23 +4468,23 @@ typedef struct {
   __O  USBHS_DEVIER_Type              USBHS_DEVIER;   /**< Offset: 0x18 ( /W  32) Device Global Interrupt Enable Register */
   __IO USBHS_DEVEPT_Type              USBHS_DEVEPT;   /**< Offset: 0x1C (R/W  32) Device Endpoint Register */
   __I  USBHS_DEVFNUM_Type             USBHS_DEVFNUM;  /**< Offset: 0x20 (R/   32) Device Frame Number Register */
-  __I  uint32_t                       Reserved1[55];
-  __IO USBHS_DEVEPTCFG_Type           USBHS_DEVEPTCFG[10]; /**< Offset: 0x100 (R/W  32) Device Endpoint Configuration Register (n = 0) 0 */
-  __I  uint32_t                       Reserved2[2];
-  __I  USBHS_DEVEPTISR_Type           USBHS_DEVEPTISR[10]; /**< Offset: 0x130 (R/   32) Device Endpoint Status Register (n = 0) 0 */
-  __I  uint32_t                       Reserved3[2];
-  __O  USBHS_DEVEPTICR_Type           USBHS_DEVEPTICR[10]; /**< Offset: 0x160 ( /W  32) Device Endpoint Clear Register (n = 0) 0 */
-  __I  uint32_t                       Reserved4[2];
-  __O  USBHS_DEVEPTIFR_Type           USBHS_DEVEPTIFR[10]; /**< Offset: 0x190 ( /W  32) Device Endpoint Set Register (n = 0) 0 */
-  __I  uint32_t                       Reserved5[2];
-  __I  USBHS_DEVEPTIMR_Type           USBHS_DEVEPTIMR[10]; /**< Offset: 0x1C0 (R/   32) Device Endpoint Mask Register (n = 0) 0 */
-  __I  uint32_t                       Reserved6[2];
-  __O  USBHS_DEVEPTIER_Type           USBHS_DEVEPTIER[10]; /**< Offset: 0x1F0 ( /W  32) Device Endpoint Enable Register (n = 0) 0 */
-  __I  uint32_t                       Reserved7[2];
-  __O  USBHS_DEVEPTIDR_Type           USBHS_DEVEPTIDR[10]; /**< Offset: 0x220 ( /W  32) Device Endpoint Disable Register (n = 0) 0 */
-  __I  uint32_t                       Reserved8[50];
-       UsbhsDevdma                    USBHS_DEVDMA[7]; /**< Offset: 0x310 Device DMA Channel Next Descriptor Address Register (n = 1) */
-  __I  uint32_t                       Reserved9[32];
+  __I  uint8_t                        Reserved1[220];
+  __IO USBHS_DEVEPTCFG_Type           USBHS_DEVEPTCFG[10]; /**< Offset: 0x100 (R/W  32) Device Endpoint Configuration Register */
+  __I  uint8_t                        Reserved2[8];
+  __I  USBHS_DEVEPTISR_Type           USBHS_DEVEPTISR[10]; /**< Offset: 0x130 (R/   32) Device Endpoint Interrupt Status Register */
+  __I  uint8_t                        Reserved3[8];
+  __O  USBHS_DEVEPTICR_Type           USBHS_DEVEPTICR[10]; /**< Offset: 0x160 ( /W  32) Device Endpoint Interrupt Clear Register */
+  __I  uint8_t                        Reserved4[8];
+  __O  USBHS_DEVEPTIFR_Type           USBHS_DEVEPTIFR[10]; /**< Offset: 0x190 ( /W  32) Device Endpoint Interrupt Set Register */
+  __I  uint8_t                        Reserved5[8];
+  __I  USBHS_DEVEPTIMR_Type           USBHS_DEVEPTIMR[10]; /**< Offset: 0x1C0 (R/   32) Device Endpoint Interrupt Mask Register */
+  __I  uint8_t                        Reserved6[8];
+  __O  USBHS_DEVEPTIER_Type           USBHS_DEVEPTIER[10]; /**< Offset: 0x1F0 ( /W  32) Device Endpoint Interrupt Enable Register */
+  __I  uint8_t                        Reserved7[8];
+  __O  USBHS_DEVEPTIDR_Type           USBHS_DEVEPTIDR[10]; /**< Offset: 0x220 ( /W  32) Device Endpoint Interrupt Disable Register */
+  __I  uint8_t                        Reserved8[200];
+       UsbhsDevdma                    UsbhsDevdma[7]; /**< Offset: 0x310 Device DMA Channel Next Descriptor Address Register */
+  __I  uint8_t                        Reserved9[128];
   __IO USBHS_HSTCTRL_Type             USBHS_HSTCTRL;  /**< Offset: 0x400 (R/W  32) Host General Control Register */
   __I  USBHS_HSTISR_Type              USBHS_HSTISR;   /**< Offset: 0x404 (R/   32) Host Global Interrupt Status Register */
   __O  USBHS_HSTICR_Type              USBHS_HSTICR;   /**< Offset: 0x408 ( /W  32) Host Global Interrupt Clear Register */
@@ -3412,27 +4497,27 @@ typedef struct {
   __IO USBHS_HSTADDR1_Type            USBHS_HSTADDR1; /**< Offset: 0x424 (R/W  32) Host Address 1 Register */
   __IO USBHS_HSTADDR2_Type            USBHS_HSTADDR2; /**< Offset: 0x428 (R/W  32) Host Address 2 Register */
   __IO USBHS_HSTADDR3_Type            USBHS_HSTADDR3; /**< Offset: 0x42C (R/W  32) Host Address 3 Register */
-  __I  uint32_t                       Reserved10[52];
-  __IO USBHS_HSTPIPCFG_Type           USBHS_HSTPIPCFG[10]; /**< Offset: 0x500 (R/W  32) Host Pipe Configuration Register (n = 0) 0 */
-  __I  uint32_t                       Reserved11[2];
-  __I  USBHS_HSTPIPISR_Type           USBHS_HSTPIPISR[10]; /**< Offset: 0x530 (R/   32) Host Pipe Status Register (n = 0) 0 */
-  __I  uint32_t                       Reserved12[2];
-  __O  USBHS_HSTPIPICR_Type           USBHS_HSTPIPICR[10]; /**< Offset: 0x560 ( /W  32) Host Pipe Clear Register (n = 0) 0 */
-  __I  uint32_t                       Reserved13[2];
-  __O  USBHS_HSTPIPIFR_Type           USBHS_HSTPIPIFR[10]; /**< Offset: 0x590 ( /W  32) Host Pipe Set Register (n = 0) 0 */
-  __I  uint32_t                       Reserved14[2];
-  __I  USBHS_HSTPIPIMR_Type           USBHS_HSTPIPIMR[10]; /**< Offset: 0x5C0 (R/   32) Host Pipe Mask Register (n = 0) 0 */
-  __I  uint32_t                       Reserved15[2];
-  __O  USBHS_HSTPIPIER_Type           USBHS_HSTPIPIER[10]; /**< Offset: 0x5F0 ( /W  32) Host Pipe Enable Register (n = 0) 0 */
-  __I  uint32_t                       Reserved16[2];
-  __O  USBHS_HSTPIPIDR_Type           USBHS_HSTPIPIDR[10]; /**< Offset: 0x620 ( /W  32) Host Pipe Disable Register (n = 0) 0 */
-  __I  uint32_t                       Reserved17[2];
-  __IO USBHS_HSTPIPINRQ_Type          USBHS_HSTPIPINRQ[10]; /**< Offset: 0x650 (R/W  32) Host Pipe IN Request Register (n = 0) 0 */
-  __I  uint32_t                       Reserved18[2];
-  __IO USBHS_HSTPIPERR_Type           USBHS_HSTPIPERR[10]; /**< Offset: 0x680 (R/W  32) Host Pipe Error Register (n = 0) 0 */
-  __I  uint32_t                       Reserved19[26];
-       UsbhsHstdma                    USBHS_HSTDMA[7]; /**< Offset: 0x710 Host DMA Channel Next Descriptor Address Register (n = 1) */
-  __I  uint32_t                       Reserved20[32];
+  __I  uint8_t                        Reserved10[208];
+  __IO USBHS_HSTPIPCFG_Type           USBHS_HSTPIPCFG[10]; /**< Offset: 0x500 (R/W  32) Host Pipe Configuration Register */
+  __I  uint8_t                        Reserved11[8];
+  __I  USBHS_HSTPIPISR_Type           USBHS_HSTPIPISR[10]; /**< Offset: 0x530 (R/   32) Host Pipe Status Register */
+  __I  uint8_t                        Reserved12[8];
+  __O  USBHS_HSTPIPICR_Type           USBHS_HSTPIPICR[10]; /**< Offset: 0x560 ( /W  32) Host Pipe Clear Register */
+  __I  uint8_t                        Reserved13[8];
+  __O  USBHS_HSTPIPIFR_Type           USBHS_HSTPIPIFR[10]; /**< Offset: 0x590 ( /W  32) Host Pipe Set Register */
+  __I  uint8_t                        Reserved14[8];
+  __I  USBHS_HSTPIPIMR_Type           USBHS_HSTPIPIMR[10]; /**< Offset: 0x5C0 (R/   32) Host Pipe Mask Register */
+  __I  uint8_t                        Reserved15[8];
+  __O  USBHS_HSTPIPIER_Type           USBHS_HSTPIPIER[10]; /**< Offset: 0x5F0 ( /W  32) Host Pipe Enable Register */
+  __I  uint8_t                        Reserved16[8];
+  __O  USBHS_HSTPIPIDR_Type           USBHS_HSTPIPIDR[10]; /**< Offset: 0x620 ( /W  32) Host Pipe Disable Register */
+  __I  uint8_t                        Reserved17[8];
+  __IO USBHS_HSTPIPINRQ_Type          USBHS_HSTPIPINRQ[10]; /**< Offset: 0x650 (R/W  32) Host Pipe IN Request Register */
+  __I  uint8_t                        Reserved18[8];
+  __IO USBHS_HSTPIPERR_Type           USBHS_HSTPIPERR[10]; /**< Offset: 0x680 (R/W  32) Host Pipe Error Register */
+  __I  uint8_t                        Reserved19[104];
+       UsbhsHstdma                    UsbhsHstdma[7]; /**< Offset: 0x710 Host DMA Channel Next Descriptor Address Register */
+  __I  uint8_t                        Reserved20[128];
   __IO USBHS_CTRL_Type                USBHS_CTRL;     /**< Offset: 0x800 (R/W  32) General Control Register */
   __I  USBHS_SR_Type                  USBHS_SR;       /**< Offset: 0x804 (R/   32) General Status Register */
   __O  USBHS_SCR_Type                 USBHS_SCR;      /**< Offset: 0x808 ( /W  32) General Status Clear Register */
@@ -3446,4 +4531,7 @@ typedef struct {
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 /** @}  end of USB High-Speed Interface */
 
+#if !(defined(DO_NOT_USE_DEPRECATED_MACROS))
+#include "deprecated/usbhs.h"
+#endif /* DO_NOT_USE_DEPRECATED_MACROS */
 #endif /* _SAME70_USBHS_COMPONENT_H_ */

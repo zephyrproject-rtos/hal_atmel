@@ -3,11 +3,13 @@
  *
  * \brief Component description for I2SC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_I2SC_COMPONENT_H_
 #define _SAME70_I2SC_COMPONENT_H_
 #define _SAME70_I2SC_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -45,6 +47,7 @@
 
 /* -------- I2SC_CR : (I2SC Offset: 0x00) (/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXEN:1;                    /**< bit:      0  Receiver Enable                          */
@@ -59,6 +62,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } I2SC_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define I2SC_CR_OFFSET                      (0x00)                                        /**<  (I2SC_CR) Control Register  Offset */
@@ -90,13 +94,13 @@ typedef union {
 
 /* -------- I2SC_MR : (I2SC Offset: 0x04) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MODE:1;                    /**< bit:      0  Inter-IC Sound Controller Mode           */
     uint32_t :1;                        /**< bit:      1  Reserved */
     uint32_t DATALENGTH:3;              /**< bit:   2..4  Data Word Length                         */
-    uint32_t :1;                        /**< bit:      5  Reserved */
-    uint32_t FORMAT:2;                  /**< bit:   6..7  Data Format                              */
+    uint32_t :3;                        /**< bit:   5..7  Reserved */
     uint32_t RXMONO:1;                  /**< bit:      8  Receive Mono                             */
     uint32_t RXDMA:1;                   /**< bit:      9  Single or Multiple DMA Controller Channels for Receiver */
     uint32_t RXLOOP:1;                  /**< bit:     10  Loopback Test Mode                       */
@@ -113,6 +117,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } I2SC_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define I2SC_MR_OFFSET                      (0x04)                                        /**<  (I2SC_MR) Mode Register  Offset */
@@ -143,13 +148,6 @@ typedef union {
 #define I2SC_MR_DATALENGTH_16_BITS_COMPACT  (I2SC_MR_DATALENGTH_16_BITS_COMPACT_Val << I2SC_MR_DATALENGTH_Pos)  /**< (I2SC_MR) Data length is set to 16-bit compact stereo. Left sample in bits 15:0 and right sample in bits 31:16 of same word. Position  */
 #define I2SC_MR_DATALENGTH_8_BITS           (I2SC_MR_DATALENGTH_8_BITS_Val << I2SC_MR_DATALENGTH_Pos)  /**< (I2SC_MR) Data length is set to 8 bits Position  */
 #define I2SC_MR_DATALENGTH_8_BITS_COMPACT   (I2SC_MR_DATALENGTH_8_BITS_COMPACT_Val << I2SC_MR_DATALENGTH_Pos)  /**< (I2SC_MR) Data length is set to 8-bit compact stereo. Left sample in bits 7:0 and right sample in bits 15:8 of the same word. Position  */
-#define I2SC_MR_FORMAT_Pos                  6                                              /**< (I2SC_MR) Data Format Position */
-#define I2SC_MR_FORMAT_Msk                  (_U_(0x3) << I2SC_MR_FORMAT_Pos)               /**< (I2SC_MR) Data Format Mask */
-#define I2SC_MR_FORMAT(value)               (I2SC_MR_FORMAT_Msk & ((value) << I2SC_MR_FORMAT_Pos))
-#define   I2SC_MR_FORMAT_I2S_Val            _U_(0x0)                                       /**< (I2SC_MR) I2S format, stereo with I2SC_WS low for left channel, and MSB of sample starting one I2SC_CK period after I2SC_WS edge  */
-#define   I2SC_MR_FORMAT_LJ_Val             _U_(0x1)                                       /**< (I2SC_MR) Left-justified format, stereo with I2SC_WS high for left channel, and MSB of sample starting on I2SC_WS edge  */
-#define I2SC_MR_FORMAT_I2S                  (I2SC_MR_FORMAT_I2S_Val << I2SC_MR_FORMAT_Pos)  /**< (I2SC_MR) I2S format, stereo with I2SC_WS low for left channel, and MSB of sample starting one I2SC_CK period after I2SC_WS edge Position  */
-#define I2SC_MR_FORMAT_LJ                   (I2SC_MR_FORMAT_LJ_Val << I2SC_MR_FORMAT_Pos)  /**< (I2SC_MR) Left-justified format, stereo with I2SC_WS high for left channel, and MSB of sample starting on I2SC_WS edge Position  */
 #define I2SC_MR_RXMONO_Pos                  8                                              /**< (I2SC_MR) Receive Mono Position */
 #define I2SC_MR_RXMONO_Msk                  (_U_(0x1) << I2SC_MR_RXMONO_Pos)               /**< (I2SC_MR) Receive Mono Mask */
 #define I2SC_MR_RXMONO                      I2SC_MR_RXMONO_Msk                             /**< \deprecated Old style mask definition for 1 bit bitfield. Use I2SC_MR_RXMONO_Msk instead */
@@ -204,12 +202,13 @@ typedef union {
 #define I2SC_MR_IWS_Pos                     31                                             /**< (I2SC_MR) I2SC_WS Slot Width Position */
 #define I2SC_MR_IWS_Msk                     (_U_(0x1) << I2SC_MR_IWS_Pos)                  /**< (I2SC_MR) I2SC_WS Slot Width Mask */
 #define I2SC_MR_IWS                         I2SC_MR_IWS_Msk                                /**< \deprecated Old style mask definition for 1 bit bitfield. Use I2SC_MR_IWS_Msk instead */
-#define I2SC_MR_MASK                        _U_(0xFF3F77DD)                                /**< \deprecated (I2SC_MR) Register MASK  (Use I2SC_MR_Msk instead)  */
-#define I2SC_MR_Msk                         _U_(0xFF3F77DD)                                /**< (I2SC_MR) Register Mask  */
+#define I2SC_MR_MASK                        _U_(0xFF3F771D)                                /**< \deprecated (I2SC_MR) Register MASK  (Use I2SC_MR_Msk instead)  */
+#define I2SC_MR_Msk                         _U_(0xFF3F771D)                                /**< (I2SC_MR) Register Mask  */
 
 
 /* -------- I2SC_SR : (I2SC Offset: 0x08) (R/ 32) Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXEN:1;                    /**< bit:      0  Receiver Enabled                         */
@@ -227,6 +226,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } I2SC_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define I2SC_SR_OFFSET                      (0x08)                                        /**<  (I2SC_SR) Status Register  Offset */
@@ -261,6 +261,7 @@ typedef union {
 
 /* -------- I2SC_SCR : (I2SC Offset: 0x0c) (/W 32) Status Clear Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -275,6 +276,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } I2SC_SCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define I2SC_SCR_OFFSET                     (0x0C)                                        /**<  (I2SC_SCR) Status Clear Register  Offset */
@@ -297,6 +299,7 @@ typedef union {
 
 /* -------- I2SC_SSR : (I2SC Offset: 0x10) (/W 32) Status Set Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -311,6 +314,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } I2SC_SSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define I2SC_SSR_OFFSET                     (0x10)                                        /**<  (I2SC_SSR) Status Set Register  Offset */
@@ -333,6 +337,7 @@ typedef union {
 
 /* -------- I2SC_IER : (I2SC Offset: 0x14) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -345,6 +350,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } I2SC_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define I2SC_IER_OFFSET                     (0x14)                                        /**<  (I2SC_IER) Interrupt Enable Register  Offset */
@@ -367,6 +373,7 @@ typedef union {
 
 /* -------- I2SC_IDR : (I2SC Offset: 0x18) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -379,6 +386,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } I2SC_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define I2SC_IDR_OFFSET                     (0x18)                                        /**<  (I2SC_IDR) Interrupt Disable Register  Offset */
@@ -401,6 +409,7 @@ typedef union {
 
 /* -------- I2SC_IMR : (I2SC Offset: 0x1c) (R/ 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -413,6 +422,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } I2SC_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define I2SC_IMR_OFFSET                     (0x1C)                                        /**<  (I2SC_IMR) Interrupt Mask Register  Offset */
@@ -435,12 +445,14 @@ typedef union {
 
 /* -------- I2SC_RHR : (I2SC Offset: 0x20) (R/ 32) Receiver Holding Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RHR:32;                    /**< bit:  0..31  Receiver Holding Register                */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } I2SC_RHR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define I2SC_RHR_OFFSET                     (0x20)                                        /**<  (I2SC_RHR) Receiver Holding Register  Offset */
@@ -454,12 +466,14 @@ typedef union {
 
 /* -------- I2SC_THR : (I2SC Offset: 0x24) (/W 32) Transmitter Holding Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t THR:32;                    /**< bit:  0..31  Transmitter Holding Register             */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } I2SC_THR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define I2SC_THR_OFFSET                     (0x24)                                        /**<  (I2SC_THR) Transmitter Holding Register  Offset */

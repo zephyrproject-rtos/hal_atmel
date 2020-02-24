@@ -3,11 +3,13 @@
  *
  * \brief Component description for RTT
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_RTT_COMPONENT_H_
 #define _SAME70_RTT_COMPONENT_H_
 #define _SAME70_RTT_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -45,6 +47,7 @@
 
 /* -------- RTT_MR : (RTT Offset: 0x00) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RTPRES:16;                 /**< bit:  0..15  Real-time Timer Prescaler Value          */
@@ -59,6 +62,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTT_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTT_MR_OFFSET                       (0x00)                                        /**<  (RTT_MR) Mode Register  Offset */
@@ -87,12 +91,14 @@ typedef union {
 
 /* -------- RTT_AR : (RTT Offset: 0x04) (R/W 32) Alarm Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ALMV:32;                   /**< bit:  0..31  Alarm Value                              */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTT_AR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTT_AR_OFFSET                       (0x04)                                        /**<  (RTT_AR) Alarm Register  Offset */
@@ -106,12 +112,14 @@ typedef union {
 
 /* -------- RTT_VR : (RTT Offset: 0x08) (R/ 32) Value Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CRTV:32;                   /**< bit:  0..31  Current Real-time Value                  */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTT_VR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTT_VR_OFFSET                       (0x08)                                        /**<  (RTT_VR) Value Register  Offset */
@@ -125,6 +133,7 @@ typedef union {
 
 /* -------- RTT_SR : (RTT Offset: 0x0c) (R/ 32) Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ALMS:1;                    /**< bit:      0  Real-time Alarm Status (cleared on read) */
@@ -133,6 +142,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTT_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTT_SR_OFFSET                       (0x0C)                                        /**<  (RTT_SR) Status Register  Offset */

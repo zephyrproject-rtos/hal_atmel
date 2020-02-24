@@ -3,11 +3,13 @@
  *
  * \brief Header file for ATSAME70Q21B
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70Q21B_H_
 #define _SAME70Q21B_H_
 
@@ -69,7 +71,7 @@ typedef volatile       uint8_t  RoReg8;  /**< Read only  8-bit register (volatil
 #endif
 typedef volatile       uint32_t WoReg;   /**< Write only 32-bit register (volatile unsigned int) */
 typedef volatile       uint16_t WoReg16; /**< Write only 16-bit register (volatile unsigned int) */
-typedef volatile       uint32_t WoReg8;  /**< Write only  8-bit register (volatile unsigned int) */
+typedef volatile       uint8_t  WoReg8;  /**< Write only  8-bit register (volatile unsigned int) */
 typedef volatile       uint32_t RwReg;   /**< Read-Write 32-bit register (volatile unsigned int) */
 typedef volatile       uint16_t RwReg16; /**< Read-Write 16-bit register (volatile unsigned int) */
 typedef volatile       uint8_t  RwReg8;  /**< Read-Write  8-bit register (volatile unsigned int) */
@@ -182,14 +184,14 @@ typedef enum IRQn
   XDMAC_IRQn                = 58 , /**< 58  SAME70Q21B Extensible DMA Controller (XDMAC) */
   ISI_IRQn                  = 59 , /**< 59  SAME70Q21B Image Sensor Interface (ISI) */
   PWM1_IRQn                 = 60 , /**< 60  SAME70Q21B Pulse Width Modulation Controller (PWM1) */
-  FPU_IRQn                  = 61 , /**< 61  SAME70Q21B Floating Point Unit Registers (FPU) */
+  FPU_IRQn                  = 61 , /**< 61  SAME70Q21B Floating Point Unit (FPU) */
   SDRAMC_IRQn               = 62 , /**< 62  SAME70Q21B SDRAM Controller (SDRAMC) */
   RSWDT_IRQn                = 63 , /**< 63  SAME70Q21B Reinforced Safety Watchdog Timer (RSWDT) */
-  CCW_IRQn                  = 64 , /**< 64  SAME70Q21B System Control Registers (SystemControl) */
-  CCF_IRQn                  = 65 , /**< 65  SAME70Q21B System Control Registers (SystemControl) */
+  CCW_IRQn                  = 64 , /**< 64  SAME70Q21B System Control Block (SCB) */
+  CCF_IRQn                  = 65 , /**< 65  SAME70Q21B System Control Block (SCB) */
   GMAC_Q1_IRQn              = 66 , /**< 66  SAME70Q21B Gigabit Ethernet MAC (GMAC) */
   GMAC_Q2_IRQn              = 67 , /**< 67  SAME70Q21B Gigabit Ethernet MAC (GMAC) */
-  IXC_IRQn                  = 68 , /**< 68  SAME70Q21B Floating Point Unit Registers (FPU) */
+  IXC_IRQn                  = 68 , /**< 68  SAME70Q21B Floating Point Unit (FPU) */
   I2SC0_IRQn                = 69 , /**< 69  SAME70Q21B Inter-IC Sound Controller (I2SC0) */
   I2SC1_IRQn                = 70 , /**< 70  SAME70Q21B Inter-IC Sound Controller (I2SC1) */
   GMAC_Q3_IRQn              = 71 , /**< 71  SAME70Q21B Gigabit Ethernet MAC (GMAC) */
@@ -221,6 +223,7 @@ typedef struct _DeviceVectors
   void* pvReservedC3;
   void* pfnPendSV_Handler;                       /*  -2 Pendable request for system service  */
   void* pfnSysTick_Handler;                      /*  -1 System Tick Timer                    */
+
 
   /* Peripheral handlers */
   void* pfnSUPC_Handler;                         /* 0   SAME70Q21B Supply Controller (SUPC) */
@@ -284,20 +287,27 @@ typedef struct _DeviceVectors
   void* pfnXDMAC_Handler;                        /* 58  SAME70Q21B Extensible DMA Controller (XDMAC) */
   void* pfnISI_Handler;                          /* 59  SAME70Q21B Image Sensor Interface (ISI) */
   void* pfnPWM1_Handler;                         /* 60  SAME70Q21B Pulse Width Modulation Controller (PWM1) */
-  void* pfnFPU_Handler;                          /* 61  SAME70Q21B Floating Point Unit Registers (FPU) */
+  void* pfnFPU_Handler;                          /* 61  SAME70Q21B Floating Point Unit (FPU) */
   void* pfnSDRAMC_Handler;                       /* 62  SAME70Q21B SDRAM Controller (SDRAMC) */
   void* pfnRSWDT_Handler;                        /* 63  SAME70Q21B Reinforced Safety Watchdog Timer (RSWDT) */
-  void* pfnCCW_Handler;                          /* 64  SAME70Q21B System Control Registers (SystemControl) */
-  void* pfnCCF_Handler;                          /* 65  SAME70Q21B System Control Registers (SystemControl) */
+  void* pfnCCW_Handler;                          /* 64  SAME70Q21B System Control Block (SCB) */
+  void* pfnCCF_Handler;                          /* 65  SAME70Q21B System Control Block (SCB) */
   void* pfnGMAC_Q1_Handler;                      /* 66  SAME70Q21B Gigabit Ethernet MAC (GMAC) */
   void* pfnGMAC_Q2_Handler;                      /* 67  SAME70Q21B Gigabit Ethernet MAC (GMAC) */
-  void* pfnIXC_Handler;                          /* 68  SAME70Q21B Floating Point Unit Registers (FPU) */
+  void* pfnIXC_Handler;                          /* 68  SAME70Q21B Floating Point Unit (FPU) */
   void* pfnI2SC0_Handler;                        /* 69  SAME70Q21B Inter-IC Sound Controller (I2SC0) */
   void* pfnI2SC1_Handler;                        /* 70  SAME70Q21B Inter-IC Sound Controller (I2SC1) */
   void* pfnGMAC_Q3_Handler;                      /* 71  SAME70Q21B Gigabit Ethernet MAC (GMAC) */
   void* pfnGMAC_Q4_Handler;                      /* 72  SAME70Q21B Gigabit Ethernet MAC (GMAC) */
   void* pfnGMAC_Q5_Handler;                      /* 73  SAME70Q21B Gigabit Ethernet MAC (GMAC) */
 } DeviceVectors;
+
+/* Defines for Deprecated Interrupt and Exceptions handler names */
+#define pfnMemManage_Handler      pfnMemoryManagement_Handler     /**< \deprecated  Backward compatibility for ASF */
+#define pfnDebugMon_Handler       pfnDebugMonitor_Handler         /**< \deprecated  Backward compatibility for ASF */
+#define pfnNMI_Handler            pfnNonMaskableInt_Handler       /**< \deprecated  Backward compatibility for ASF */
+#define pfnSVC_Handler            pfnSVCall_Handler               /**< \deprecated  Backward compatibility for ASF */
+
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
@@ -390,6 +400,14 @@ void USBHS_Handler                 ( void );
 void WDT_Handler                   ( void );
 void XDMAC_Handler                 ( void );
 #endif /* DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS */
+
+
+/* Defines for Deprecated Interrupt and Exceptions handler names */
+#define MemManage_Handler         MemoryManagement_Handler        /**< \deprecated  Backward compatibility for ASF */
+#define DebugMon_Handler          DebugMonitor_Handler            /**< \deprecated  Backward compatibility for ASF */
+#define NMI_Handler               NonMaskableInt_Handler          /**< \deprecated  Backward compatibility for ASF */
+#define SVC_Handler               SVCall_Handler                  /**< \deprecated  Backward compatibility for ASF */
+
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 
@@ -410,7 +428,7 @@ void XDMAC_Handler                 ( void );
 #define __DTCM_PRESENT                 1 /**< Data TCM present                                                          */
 #define __DEBUG_LVL                    1
 #define __TRACE_LVL                    1
-#define LITTLE_ENDIAN                  1
+#define __LITTLE_ENDIAN                1
 #define __ARCH_ARM                     1
 #define __ARCH_ARM_CORTEX_M            1
 #define __DEVICE_IS_SAM                1
@@ -613,18 +631,18 @@ void XDMAC_Handler                 ( void );
 /* ************************************************************************** */
 /*  LEGACY PERIPHERAL ID DEFINITIONS FOR SAME70Q21B */
 /* ************************************************************************** */
-#define ID_TC0                   ID_TC0_CHANNEL0
-#define ID_TC1                   ID_TC0_CHANNEL1
-#define ID_TC2                   ID_TC0_CHANNEL2
-#define ID_TC3                   ID_TC1_CHANNEL0
-#define ID_TC4                   ID_TC1_CHANNEL1
-#define ID_TC5                   ID_TC1_CHANNEL2
-#define ID_TC6                   ID_TC2_CHANNEL0
-#define ID_TC7                   ID_TC2_CHANNEL1
-#define ID_TC8                   ID_TC2_CHANNEL2
-#define ID_TC9                   ID_TC3_CHANNEL0
-#define ID_TC10                  ID_TC3_CHANNEL1
-#define ID_TC11                  ID_TC3_CHANNEL2
+#define ID_TC0                   TC0_INSTANCE_ID_CHANNEL0
+#define ID_TC1                   TC0_INSTANCE_ID_CHANNEL1
+#define ID_TC2                   TC0_INSTANCE_ID_CHANNEL2
+#define ID_TC3                   TC1_INSTANCE_ID_CHANNEL0
+#define ID_TC4                   TC1_INSTANCE_ID_CHANNEL1
+#define ID_TC5                   TC1_INSTANCE_ID_CHANNEL2
+#define ID_TC6                   TC2_INSTANCE_ID_CHANNEL0
+#define ID_TC7                   TC2_INSTANCE_ID_CHANNEL1
+#define ID_TC8                   TC2_INSTANCE_ID_CHANNEL2
+#define ID_TC9                   TC3_INSTANCE_ID_CHANNEL0
+#define ID_TC10                  TC3_INSTANCE_ID_CHANNEL1
+#define ID_TC11                  TC3_INSTANCE_ID_CHANNEL2
 /** @}  end of Legacy Peripheral Ids Definitions */
 
 /** \addtogroup SAME70Q21B_base Peripheral Base Address Definitions
@@ -936,6 +954,8 @@ void XDMAC_Handler                 ( void );
 #define CHIP_FREQ_FWS_5                _UL_(138000000) /**< \brief Maximum operating frequency when FWS is 5*/
 #define CHIP_FREQ_FWS_6                _UL_(150000000) /**< \brief Maximum operating frequency when FWS is 6*/
 #define CHIP_FREQ_FWS_NUMBER           _UL_(7)         /**< \brief Number of FWS ranges*/
+
+
 
 #ifdef __cplusplus
 }

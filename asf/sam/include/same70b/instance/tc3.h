@@ -3,11 +3,13 @@
  *
  * \brief Instance description for TC3
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_TC3_INSTANCE_H_
 #define _SAME70_TC3_INSTANCE_H_
 
@@ -133,9 +135,23 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for TC3 peripheral ========== */
-#define TC3_INSTANCE_ID_CHANNEL1                 51        
-#define TC3_INSTANCE_ID_CHANNEL0                 50        
-#define TC3_INSTANCE_ID_CHANNEL2                 52        
-#define TC3_DMAC_ID_RX                           43        
+#define TC3_DMAC_ID_RX                           43         
+#define TC3_INSTANCE_ID_CHANNEL0                 50         
+#define TC3_INSTANCE_ID_CHANNEL1                 51         
+#define TC3_INSTANCE_ID_CHANNEL2                 52         
+#define TC3_CLOCK_ID_CHANNEL0                    50         
+#define TC3_CLOCK_ID_CHANNEL1                    51         
+#define TC3_CLOCK_ID_CHANNEL2                    52         
+#define TC3_TCCLKS_                              0          /* MCK */
+#define TC3_TCCLKS_TIMER_CLOCK1                  1          /* PCK6 */
+#define TC3_TCCLKS_TIMER_CLOCK2                  2          /* MCK/8 */
+#define TC3_TCCLKS_TIMER_CLOCK3                  3          /* MCK/32 */
+#define TC3_TCCLKS_TIMER_CLOCK4                  4          /* MCK/128 */
+#define TC3_TCCLKS_TIMER_CLOCK5                  5          /* SLCK */
+#define TC3_TCCLKS_XC0                           6          /* XC0 */
+#define TC3_TCCLKS_XC1                           7          /* XC1 */
+#define TC3_TCCLKS_XC2                           8          /* XC2 */
+#define TC3_NUM_INTERRUPT_LINES                  3          
+#define TC3_TIMER_WIDTH                          16         
 
 #endif /* _SAME70_TC3_INSTANCE_ */

@@ -3,11 +3,13 @@
  *
  * \brief Instance description for PIOA
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_PIOA_INSTANCE_H_
 #define _SAME70_PIOA_INSTANCE_H_
 
@@ -151,8 +153,8 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for PIOA peripheral ========== */
-#define PIOA_INSTANCE_ID                         10        
-#define PIOA_CLOCK_ID                            10        
-#define PIOA_DMAC_ID_RX                          34        
+#define PIOA_DMAC_ID_RX                          34         
+#define PIOA_INSTANCE_ID                         10         
+#define PIOA_CLOCK_ID                            10         
 
 #endif /* _SAME70_PIOA_INSTANCE_ */

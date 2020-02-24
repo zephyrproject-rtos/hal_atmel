@@ -3,11 +3,13 @@
  *
  * \brief Instance description for USART0
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_USART0_INSTANCE_H_
 #define _SAME70_USART0_INSTANCE_H_
 
@@ -41,7 +43,7 @@
 #define REG_USART0_US_RHR       (0x40024018) /**< (USART0) Receive Holding Register */
 #define REG_USART0_US_THR       (0x4002401C) /**< (USART0) Transmit Holding Register */
 #define REG_USART0_US_BRGR      (0x40024020) /**< (USART0) Baud Rate Generator Register */
-#define REG_USART0_US_RTOR      (0x40024024) /**< (USART0) Receiver Time-out Register */
+#define REG_USART0_US_RTOR      (0x40024024) /**< (USART0) Receiver Timeout Register */
 #define REG_USART0_US_TTGR      (0x40024028) /**< (USART0) Transmitter Timeguard Register */
 #define REG_USART0_US_FIDI      (0x40024040) /**< (USART0) FI DI Ratio Register */
 #define REG_USART0_US_NER       (0x40024044) /**< (USART0) Number of Errors Register */
@@ -75,7 +77,7 @@
 #define REG_USART0_US_RHR       (*(__I  uint32_t*)0x40024018U) /**< (USART0) Receive Holding Register */
 #define REG_USART0_US_THR       (*(__O  uint32_t*)0x4002401CU) /**< (USART0) Transmit Holding Register */
 #define REG_USART0_US_BRGR      (*(__IO uint32_t*)0x40024020U) /**< (USART0) Baud Rate Generator Register */
-#define REG_USART0_US_RTOR      (*(__IO uint32_t*)0x40024024U) /**< (USART0) Receiver Time-out Register */
+#define REG_USART0_US_RTOR      (*(__IO uint32_t*)0x40024024U) /**< (USART0) Receiver Timeout Register */
 #define REG_USART0_US_TTGR      (*(__IO uint32_t*)0x40024028U) /**< (USART0) Transmitter Timeguard Register */
 #define REG_USART0_US_FIDI      (*(__IO uint32_t*)0x40024040U) /**< (USART0) FI DI Ratio Register */
 #define REG_USART0_US_NER       (*(__I  uint32_t*)0x40024044U) /**< (USART0) Number of Errors Register */
@@ -101,9 +103,13 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for USART0 peripheral ========== */
-#define USART0_INSTANCE_ID                       13        
-#define USART0_CLOCK_ID                          13        
-#define USART0_DMAC_ID_TX                        7         
-#define USART0_DMAC_ID_RX                        8         
+#define USART0_DMAC_ID_RX                        8          
+#define USART0_DMAC_ID_TX                        7          
+#define USART0_INSTANCE_ID                       13         
+#define USART0_CLOCK_ID                          13         
+#define USART0_USCLKS_MCK                        0          /* MCK */
+#define USART0_USCLKS_DIV                        1          /* MCK/8 */
+#define USART0_USCLKS_PCK                        2          /* PCK4 */
+#define USART0_USCLKS_SCK                        3          /* SCK */
 
 #endif /* _SAME70_USART0_INSTANCE_ */
