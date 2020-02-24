@@ -3,11 +3,13 @@
  *
  * \brief Component description for AFEC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- AFEC_CR : (AFEC Offset: 0x00) (/W 32) AFEC Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SWRST:1;                   /**< bit:      0  Software Reset                           */
@@ -53,6 +56,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_CR_OFFSET                      (0x00)                                        /**<  (AFEC_CR) AFEC Control Register  Offset */
@@ -69,6 +73,7 @@ typedef union {
 
 /* -------- AFEC_MR : (AFEC Offset: 0x04) (R/W 32) AFEC Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TRGEN:1;                   /**< bit:      0  Trigger Enable                           */
@@ -88,6 +93,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_MR_OFFSET                      (0x04)                                        /**<  (AFEC_MR) AFEC Mode Register  Offset */
@@ -197,6 +203,7 @@ typedef union {
 
 /* -------- AFEC_EMR : (AFEC Offset: 0x08) (R/W 32) AFEC Extended Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CMPMODE:2;                 /**< bit:   0..1  Comparison Mode                          */
@@ -217,6 +224,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_EMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_EMR_OFFSET                     (0x08)                                        /**<  (AFEC_EMR) AFEC Extended Mode Register  Offset */
@@ -277,6 +285,7 @@ typedef union {
 
 /* -------- AFEC_SEQ1R : (AFEC Offset: 0x0c) (R/W 32) AFEC Channel Sequence 1 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t USCH0:4;                   /**< bit:   0..3  User Sequence Number 0                   */
@@ -290,6 +299,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_SEQ1R_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_SEQ1R_OFFSET                   (0x0C)                                        /**<  (AFEC_SEQ1R) AFEC Channel Sequence 1 Register  Offset */
@@ -324,6 +334,7 @@ typedef union {
 
 /* -------- AFEC_SEQ2R : (AFEC Offset: 0x10) (R/W 32) AFEC Channel Sequence 2 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t USCH8:4;                   /**< bit:   0..3  User Sequence Number 8                   */
@@ -334,6 +345,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_SEQ2R_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_SEQ2R_OFFSET                   (0x10)                                        /**<  (AFEC_SEQ2R) AFEC Channel Sequence 2 Register  Offset */
@@ -356,6 +368,7 @@ typedef union {
 
 /* -------- AFEC_CHER : (AFEC Offset: 0x14) (/W 32) AFEC Channel Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CH0:1;                     /**< bit:      0  Channel 0 Enable                         */
@@ -378,6 +391,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_CHER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_CHER_OFFSET                    (0x14)                                        /**<  (AFEC_CHER) AFEC Channel Enable Register  Offset */
@@ -427,6 +441,7 @@ typedef union {
 
 /* -------- AFEC_CHDR : (AFEC Offset: 0x18) (/W 32) AFEC Channel Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CH0:1;                     /**< bit:      0  Channel 0 Disable                        */
@@ -449,6 +464,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_CHDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_CHDR_OFFSET                    (0x18)                                        /**<  (AFEC_CHDR) AFEC Channel Disable Register  Offset */
@@ -498,6 +514,7 @@ typedef union {
 
 /* -------- AFEC_CHSR : (AFEC Offset: 0x1c) (R/ 32) AFEC Channel Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CH0:1;                     /**< bit:      0  Channel 0 Status                         */
@@ -520,6 +537,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_CHSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_CHSR_OFFSET                    (0x1C)                                        /**<  (AFEC_CHSR) AFEC Channel Status Register  Offset */
@@ -569,6 +587,7 @@ typedef union {
 
 /* -------- AFEC_LCDR : (AFEC Offset: 0x20) (R/ 32) AFEC Last Converted Data Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t LDATA:16;                  /**< bit:  0..15  Last Data Converted                      */
@@ -578,6 +597,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_LCDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_LCDR_OFFSET                    (0x20)                                        /**<  (AFEC_LCDR) AFEC Last Converted Data Register  Offset */
@@ -594,6 +614,7 @@ typedef union {
 
 /* -------- AFEC_IER : (AFEC Offset: 0x24) (/W 32) AFEC Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t EOC0:1;                    /**< bit:      0  End of Conversion Interrupt Enable 0     */
@@ -622,6 +643,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_IER_OFFSET                     (0x24)                                        /**<  (AFEC_IER) AFEC Interrupt Enable Register  Offset */
@@ -683,6 +705,7 @@ typedef union {
 
 /* -------- AFEC_IDR : (AFEC Offset: 0x28) (/W 32) AFEC Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t EOC0:1;                    /**< bit:      0  End of Conversion Interrupt Disable 0    */
@@ -711,6 +734,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_IDR_OFFSET                     (0x28)                                        /**<  (AFEC_IDR) AFEC Interrupt Disable Register  Offset */
@@ -772,6 +796,7 @@ typedef union {
 
 /* -------- AFEC_IMR : (AFEC Offset: 0x2c) (R/ 32) AFEC Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t EOC0:1;                    /**< bit:      0  End of Conversion Interrupt Mask 0       */
@@ -800,6 +825,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_IMR_OFFSET                     (0x2C)                                        /**<  (AFEC_IMR) AFEC Interrupt Mask Register  Offset */
@@ -861,6 +887,7 @@ typedef union {
 
 /* -------- AFEC_ISR : (AFEC Offset: 0x30) (R/ 32) AFEC Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t EOC0:1;                    /**< bit:      0  End of Conversion 0 (cleared by reading AFEC_CDRx) */
@@ -889,6 +916,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_ISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_ISR_OFFSET                     (0x30)                                        /**<  (AFEC_ISR) AFEC Interrupt Status Register  Offset */
@@ -950,6 +978,7 @@ typedef union {
 
 /* -------- AFEC_OVER : (AFEC Offset: 0x4c) (R/ 32) AFEC Overrun Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OVRE0:1;                   /**< bit:      0  Overrun Error 0                          */
@@ -972,6 +1001,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_OVER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_OVER_OFFSET                    (0x4C)                                        /**<  (AFEC_OVER) AFEC Overrun Status Register  Offset */
@@ -1021,6 +1051,7 @@ typedef union {
 
 /* -------- AFEC_CWR : (AFEC Offset: 0x50) (R/W 32) AFEC Compare Window Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t LOWTHRES:16;               /**< bit:  0..15  Low Threshold                            */
@@ -1028,6 +1059,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_CWR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_CWR_OFFSET                     (0x50)                                        /**<  (AFEC_CWR) AFEC Compare Window Register  Offset */
@@ -1044,6 +1076,7 @@ typedef union {
 
 /* -------- AFEC_CGR : (AFEC Offset: 0x54) (R/W 32) AFEC Channel Gain Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t GAIN0:2;                   /**< bit:   0..1  Gain for Channel 0                       */
@@ -1062,6 +1095,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_CGR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_CGR_OFFSET                     (0x54)                                        /**<  (AFEC_CGR) AFEC Channel Gain Register  Offset */
@@ -1108,6 +1142,7 @@ typedef union {
 
 /* -------- AFEC_DIFFR : (AFEC Offset: 0x60) (R/W 32) AFEC Channel Differential Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DIFF0:1;                   /**< bit:      0  Differential inputs for channel 0        */
@@ -1130,6 +1165,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_DIFFR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_DIFFR_OFFSET                   (0x60)                                        /**<  (AFEC_DIFFR) AFEC Channel Differential Register  Offset */
@@ -1179,6 +1215,7 @@ typedef union {
 
 /* -------- AFEC_CSELR : (AFEC Offset: 0x64) (R/W 32) AFEC Channel Selection Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CSEL:4;                    /**< bit:   0..3  Channel Selection                        */
@@ -1186,6 +1223,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_CSELR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_CSELR_OFFSET                   (0x64)                                        /**<  (AFEC_CSELR) AFEC Channel Selection Register  Offset */
@@ -1199,6 +1237,7 @@ typedef union {
 
 /* -------- AFEC_CDR : (AFEC Offset: 0x68) (R/ 32) AFEC Channel Data Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DATA:16;                   /**< bit:  0..15  Converted Data                           */
@@ -1206,6 +1245,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_CDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_CDR_OFFSET                     (0x68)                                        /**<  (AFEC_CDR) AFEC Channel Data Register  Offset */
@@ -1219,6 +1259,7 @@ typedef union {
 
 /* -------- AFEC_COCR : (AFEC Offset: 0x6c) (R/W 32) AFEC Channel Offset Compensation Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t AOFF:10;                   /**< bit:   0..9  Analog Offset                            */
@@ -1226,6 +1267,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_COCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_COCR_OFFSET                    (0x6C)                                        /**<  (AFEC_COCR) AFEC Channel Offset Compensation Register  Offset */
@@ -1239,6 +1281,7 @@ typedef union {
 
 /* -------- AFEC_TEMPMR : (AFEC Offset: 0x70) (R/W 32) AFEC Temperature Sensor Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RTCT:1;                    /**< bit:      0  Temperature Sensor RTC Trigger Mode      */
@@ -1248,6 +1291,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_TEMPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_TEMPMR_OFFSET                  (0x70)                                        /**<  (AFEC_TEMPMR) AFEC Temperature Sensor Mode Register  Offset */
@@ -1272,6 +1316,7 @@ typedef union {
 
 /* -------- AFEC_TEMPCWR : (AFEC Offset: 0x74) (R/W 32) AFEC Temperature Compare Window Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TLOWTHRES:16;              /**< bit:  0..15  Temperature Low Threshold                */
@@ -1279,6 +1324,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_TEMPCWR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_TEMPCWR_OFFSET                 (0x74)                                        /**<  (AFEC_TEMPCWR) AFEC Temperature Compare Window Register  Offset */
@@ -1295,6 +1341,7 @@ typedef union {
 
 /* -------- AFEC_ACR : (AFEC Offset: 0x94) (R/W 32) AFEC Analog Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -1306,6 +1353,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_ACR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_ACR_OFFSET                     (0x94)                                        /**<  (AFEC_ACR) AFEC Analog Control Register  Offset */
@@ -1325,6 +1373,7 @@ typedef union {
 
 /* -------- AFEC_SHMR : (AFEC Offset: 0xa0) (R/W 32) AFEC Sample & Hold Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DUAL0:1;                   /**< bit:      0  Dual Sample & Hold for channel 0         */
@@ -1347,6 +1396,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_SHMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_SHMR_OFFSET                    (0xA0)                                        /**<  (AFEC_SHMR) AFEC Sample & Hold Mode Register  Offset */
@@ -1396,6 +1446,7 @@ typedef union {
 
 /* -------- AFEC_COSR : (AFEC Offset: 0xd0) (R/W 32) AFEC Correction Select Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CSEL:1;                    /**< bit:      0  Sample & Hold unit Correction Select     */
@@ -1403,6 +1454,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_COSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_COSR_OFFSET                    (0xD0)                                        /**<  (AFEC_COSR) AFEC Correction Select Register  Offset */
@@ -1416,6 +1468,7 @@ typedef union {
 
 /* -------- AFEC_CVR : (AFEC Offset: 0xd4) (R/W 32) AFEC Correction Values Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OFFSETCORR:16;             /**< bit:  0..15  Offset Correction                        */
@@ -1423,6 +1476,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_CVR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_CVR_OFFSET                     (0xD4)                                        /**<  (AFEC_CVR) AFEC Correction Values Register  Offset */
@@ -1439,6 +1493,7 @@ typedef union {
 
 /* -------- AFEC_CECR : (AFEC Offset: 0xd8) (R/W 32) AFEC Channel Error Correction Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ECORR0:1;                  /**< bit:      0  Error Correction Enable for channel 0    */
@@ -1461,6 +1516,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_CECR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_CECR_OFFSET                    (0xD8)                                        /**<  (AFEC_CECR) AFEC Channel Error Correction Register  Offset */
@@ -1510,6 +1566,7 @@ typedef union {
 
 /* -------- AFEC_WPMR : (AFEC Offset: 0xe4) (R/W 32) AFEC Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
@@ -1518,6 +1575,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_WPMR_OFFSET                    (0xE4)                                        /**<  (AFEC_WPMR) AFEC Write Protection Mode Register  Offset */
@@ -1536,6 +1594,7 @@ typedef union {
 
 /* -------- AFEC_WPSR : (AFEC Offset: 0xe8) (R/ 32) AFEC Write Protection Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPVS:1;                    /**< bit:      0  Write Protect Violation Status           */
@@ -1545,6 +1604,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AFEC_WPSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AFEC_WPSR_OFFSET                    (0xE8)                                        /**<  (AFEC_WPSR) AFEC Write Protection Status Register  Offset */
@@ -1576,26 +1636,26 @@ typedef struct {
   __O  uint32_t AFEC_IDR;       /**< (AFEC Offset: 0x28) AFEC Interrupt Disable Register */
   __I  uint32_t AFEC_IMR;       /**< (AFEC Offset: 0x2C) AFEC Interrupt Mask Register */
   __I  uint32_t AFEC_ISR;       /**< (AFEC Offset: 0x30) AFEC Interrupt Status Register */
-  RoReg8  Reserved1[0x18];
+  __I  uint8_t                        Reserved1[24];
   __I  uint32_t AFEC_OVER;      /**< (AFEC Offset: 0x4C) AFEC Overrun Status Register */
   __IO uint32_t AFEC_CWR;       /**< (AFEC Offset: 0x50) AFEC Compare Window Register */
   __IO uint32_t AFEC_CGR;       /**< (AFEC Offset: 0x54) AFEC Channel Gain Register */
-  RoReg8  Reserved2[0x8];
+  __I  uint8_t                        Reserved2[8];
   __IO uint32_t AFEC_DIFFR;     /**< (AFEC Offset: 0x60) AFEC Channel Differential Register */
   __IO uint32_t AFEC_CSELR;     /**< (AFEC Offset: 0x64) AFEC Channel Selection Register */
   __I  uint32_t AFEC_CDR;       /**< (AFEC Offset: 0x68) AFEC Channel Data Register */
   __IO uint32_t AFEC_COCR;      /**< (AFEC Offset: 0x6C) AFEC Channel Offset Compensation Register */
   __IO uint32_t AFEC_TEMPMR;    /**< (AFEC Offset: 0x70) AFEC Temperature Sensor Mode Register */
   __IO uint32_t AFEC_TEMPCWR;   /**< (AFEC Offset: 0x74) AFEC Temperature Compare Window Register */
-  RoReg8  Reserved3[0x1C];
+  __I  uint8_t                        Reserved3[28];
   __IO uint32_t AFEC_ACR;       /**< (AFEC Offset: 0x94) AFEC Analog Control Register */
-  RoReg8  Reserved4[0x8];
+  __I  uint8_t                        Reserved4[8];
   __IO uint32_t AFEC_SHMR;      /**< (AFEC Offset: 0xA0) AFEC Sample & Hold Mode Register */
-  RoReg8  Reserved5[0x2C];
+  __I  uint8_t                        Reserved5[44];
   __IO uint32_t AFEC_COSR;      /**< (AFEC Offset: 0xD0) AFEC Correction Select Register */
   __IO uint32_t AFEC_CVR;       /**< (AFEC Offset: 0xD4) AFEC Correction Values Register */
   __IO uint32_t AFEC_CECR;      /**< (AFEC Offset: 0xD8) AFEC Channel Error Correction Register */
-  RoReg8  Reserved6[0x8];
+  __I  uint8_t                        Reserved6[8];
   __IO uint32_t AFEC_WPMR;      /**< (AFEC Offset: 0xE4) AFEC Write Protection Mode Register */
   __I  uint32_t AFEC_WPSR;      /**< (AFEC Offset: 0xE8) AFEC Write Protection Status Register */
 } Afec;
@@ -1616,26 +1676,26 @@ typedef struct {
   __O  AFEC_IDR_Type                  AFEC_IDR;       /**< Offset: 0x28 ( /W  32) AFEC Interrupt Disable Register */
   __I  AFEC_IMR_Type                  AFEC_IMR;       /**< Offset: 0x2C (R/   32) AFEC Interrupt Mask Register */
   __I  AFEC_ISR_Type                  AFEC_ISR;       /**< Offset: 0x30 (R/   32) AFEC Interrupt Status Register */
-  __I  uint32_t                       Reserved1[6];
+  __I  uint8_t                        Reserved1[24];
   __I  AFEC_OVER_Type                 AFEC_OVER;      /**< Offset: 0x4C (R/   32) AFEC Overrun Status Register */
   __IO AFEC_CWR_Type                  AFEC_CWR;       /**< Offset: 0x50 (R/W  32) AFEC Compare Window Register */
   __IO AFEC_CGR_Type                  AFEC_CGR;       /**< Offset: 0x54 (R/W  32) AFEC Channel Gain Register */
-  __I  uint32_t                       Reserved2[2];
+  __I  uint8_t                        Reserved2[8];
   __IO AFEC_DIFFR_Type                AFEC_DIFFR;     /**< Offset: 0x60 (R/W  32) AFEC Channel Differential Register */
   __IO AFEC_CSELR_Type                AFEC_CSELR;     /**< Offset: 0x64 (R/W  32) AFEC Channel Selection Register */
   __I  AFEC_CDR_Type                  AFEC_CDR;       /**< Offset: 0x68 (R/   32) AFEC Channel Data Register */
   __IO AFEC_COCR_Type                 AFEC_COCR;      /**< Offset: 0x6C (R/W  32) AFEC Channel Offset Compensation Register */
   __IO AFEC_TEMPMR_Type               AFEC_TEMPMR;    /**< Offset: 0x70 (R/W  32) AFEC Temperature Sensor Mode Register */
   __IO AFEC_TEMPCWR_Type              AFEC_TEMPCWR;   /**< Offset: 0x74 (R/W  32) AFEC Temperature Compare Window Register */
-  __I  uint32_t                       Reserved3[7];
+  __I  uint8_t                        Reserved3[28];
   __IO AFEC_ACR_Type                  AFEC_ACR;       /**< Offset: 0x94 (R/W  32) AFEC Analog Control Register */
-  __I  uint32_t                       Reserved4[2];
+  __I  uint8_t                        Reserved4[8];
   __IO AFEC_SHMR_Type                 AFEC_SHMR;      /**< Offset: 0xA0 (R/W  32) AFEC Sample & Hold Mode Register */
-  __I  uint32_t                       Reserved5[11];
+  __I  uint8_t                        Reserved5[44];
   __IO AFEC_COSR_Type                 AFEC_COSR;      /**< Offset: 0xD0 (R/W  32) AFEC Correction Select Register */
   __IO AFEC_CVR_Type                  AFEC_CVR;       /**< Offset: 0xD4 (R/W  32) AFEC Correction Values Register */
   __IO AFEC_CECR_Type                 AFEC_CECR;      /**< Offset: 0xD8 (R/W  32) AFEC Channel Error Correction Register */
-  __I  uint32_t                       Reserved6[2];
+  __I  uint8_t                        Reserved6[8];
   __IO AFEC_WPMR_Type                 AFEC_WPMR;      /**< Offset: 0xE4 (R/W  32) AFEC Write Protection Mode Register */
   __I  AFEC_WPSR_Type                 AFEC_WPSR;      /**< Offset: 0xE8 (R/   32) AFEC Write Protection Status Register */
 } Afec;

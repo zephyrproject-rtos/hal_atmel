@@ -3,11 +3,13 @@
  *
  * \brief Component description for SSC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- SSC_CR : (SSC Offset: 0x00) (/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RXEN:1;                    /**< bit:      0  Receive Enable                           */
@@ -58,6 +61,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_CR_OFFSET                       (0x00)                                        /**<  (SSC_CR) Control Register  Offset */
@@ -83,6 +87,7 @@ typedef union {
 
 /* -------- SSC_CMR : (SSC Offset: 0x04) (R/W 32) Clock Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DIV:12;                    /**< bit:  0..11  Clock Divider                            */
@@ -90,6 +95,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_CMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_CMR_OFFSET                      (0x04)                                        /**<  (SSC_CMR) Clock Mode Register  Offset */
@@ -103,6 +109,7 @@ typedef union {
 
 /* -------- SSC_RCMR : (SSC Offset: 0x10) (R/W 32) Receive Clock Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CKS:2;                     /**< bit:   0..1  Receive Clock Selection                  */
@@ -117,6 +124,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_RCMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_RCMR_OFFSET                     (0x10)                                        /**<  (SSC_RCMR) Receive Clock Mode Register  Offset */
@@ -187,6 +195,7 @@ typedef union {
 
 /* -------- SSC_RFMR : (SSC Offset: 0x14) (R/W 32) Receive Frame Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DATLEN:5;                  /**< bit:   0..4  Data Length                              */
@@ -204,6 +213,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_RFMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_RFMR_OFFSET                     (0x14)                                        /**<  (SSC_RFMR) Receive Frame Mode Register  Offset */
@@ -254,6 +264,7 @@ typedef union {
 
 /* -------- SSC_TCMR : (SSC Offset: 0x18) (R/W 32) Transmit Clock Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CKS:2;                     /**< bit:   0..1  Transmit Clock Selection                 */
@@ -267,6 +278,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_TCMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_TCMR_OFFSET                     (0x18)                                        /**<  (SSC_TCMR) Transmit Clock Mode Register  Offset */
@@ -332,6 +344,7 @@ typedef union {
 
 /* -------- SSC_TFMR : (SSC Offset: 0x1c) (R/W 32) Transmit Frame Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DATLEN:5;                  /**< bit:   0..4  Data Length                              */
@@ -349,6 +362,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_TFMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_TFMR_OFFSET                     (0x1C)                                        /**<  (SSC_TFMR) Transmit Frame Mode Register  Offset */
@@ -402,12 +416,14 @@ typedef union {
 
 /* -------- SSC_RHR : (SSC Offset: 0x20) (R/ 32) Receive Holding Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RDAT:32;                   /**< bit:  0..31  Receive Data                             */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_RHR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_RHR_OFFSET                      (0x20)                                        /**<  (SSC_RHR) Receive Holding Register  Offset */
@@ -421,12 +437,14 @@ typedef union {
 
 /* -------- SSC_THR : (SSC Offset: 0x24) (/W 32) Transmit Holding Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TDAT:32;                   /**< bit:  0..31  Transmit Data                            */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_THR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_THR_OFFSET                      (0x24)                                        /**<  (SSC_THR) Transmit Holding Register  Offset */
@@ -440,6 +458,7 @@ typedef union {
 
 /* -------- SSC_RSHR : (SSC Offset: 0x30) (R/ 32) Receive Sync. Holding Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RSDAT:16;                  /**< bit:  0..15  Receive Synchronization Data             */
@@ -447,6 +466,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_RSHR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_RSHR_OFFSET                     (0x30)                                        /**<  (SSC_RSHR) Receive Sync. Holding Register  Offset */
@@ -460,6 +480,7 @@ typedef union {
 
 /* -------- SSC_TSHR : (SSC Offset: 0x34) (R/W 32) Transmit Sync. Holding Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TSDAT:16;                  /**< bit:  0..15  Transmit Synchronization Data            */
@@ -467,6 +488,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_TSHR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_TSHR_OFFSET                     (0x34)                                        /**<  (SSC_TSHR) Transmit Sync. Holding Register  Offset */
@@ -480,6 +502,7 @@ typedef union {
 
 /* -------- SSC_RC0R : (SSC Offset: 0x38) (R/W 32) Receive Compare 0 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CP0:16;                    /**< bit:  0..15  Receive Compare Data 0                   */
@@ -487,6 +510,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_RC0R_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_RC0R_OFFSET                     (0x38)                                        /**<  (SSC_RC0R) Receive Compare 0 Register  Offset */
@@ -500,6 +524,7 @@ typedef union {
 
 /* -------- SSC_RC1R : (SSC Offset: 0x3c) (R/W 32) Receive Compare 1 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CP1:16;                    /**< bit:  0..15  Receive Compare Data 1                   */
@@ -507,6 +532,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_RC1R_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_RC1R_OFFSET                     (0x3C)                                        /**<  (SSC_RC1R) Receive Compare 1 Register  Offset */
@@ -520,6 +546,7 @@ typedef union {
 
 /* -------- SSC_SR : (SSC Offset: 0x40) (R/ 32) Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXRDY:1;                   /**< bit:      0  Transmit Ready                           */
@@ -544,6 +571,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_SR_OFFSET                       (0x40)                                        /**<  (SSC_SR) Status Register  Offset */
@@ -587,6 +615,7 @@ typedef union {
 
 /* -------- SSC_IER : (SSC Offset: 0x44) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXRDY:1;                   /**< bit:      0  Transmit Ready Interrupt Enable          */
@@ -608,6 +637,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_IER_OFFSET                      (0x44)                                        /**<  (SSC_IER) Interrupt Enable Register  Offset */
@@ -645,6 +675,7 @@ typedef union {
 
 /* -------- SSC_IDR : (SSC Offset: 0x48) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXRDY:1;                   /**< bit:      0  Transmit Ready Interrupt Disable         */
@@ -666,6 +697,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_IDR_OFFSET                      (0x48)                                        /**<  (SSC_IDR) Interrupt Disable Register  Offset */
@@ -703,6 +735,7 @@ typedef union {
 
 /* -------- SSC_IMR : (SSC Offset: 0x4c) (R/ 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXRDY:1;                   /**< bit:      0  Transmit Ready Interrupt Mask            */
@@ -724,6 +757,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_IMR_OFFSET                      (0x4C)                                        /**<  (SSC_IMR) Interrupt Mask Register  Offset */
@@ -761,6 +795,7 @@ typedef union {
 
 /* -------- SSC_WPMR : (SSC Offset: 0xe4) (R/W 32) Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
@@ -769,6 +804,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_WPMR_OFFSET                     (0xE4)                                        /**<  (SSC_WPMR) Write Protection Mode Register  Offset */
@@ -787,6 +823,7 @@ typedef union {
 
 /* -------- SSC_WPSR : (SSC Offset: 0xe8) (R/ 32) Write Protection Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPVS:1;                    /**< bit:      0  Write Protection Violation Status        */
@@ -796,6 +833,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } SSC_WPSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define SSC_WPSR_OFFSET                     (0xE8)                                        /**<  (SSC_WPSR) Write Protection Status Register  Offset */
@@ -816,14 +854,14 @@ typedef union {
 typedef struct {  
   __O  uint32_t SSC_CR;         /**< (SSC Offset: 0x00) Control Register */
   __IO uint32_t SSC_CMR;        /**< (SSC Offset: 0x04) Clock Mode Register */
-  RoReg8  Reserved1[0x8];
+  __I  uint8_t                        Reserved1[8];
   __IO uint32_t SSC_RCMR;       /**< (SSC Offset: 0x10) Receive Clock Mode Register */
   __IO uint32_t SSC_RFMR;       /**< (SSC Offset: 0x14) Receive Frame Mode Register */
   __IO uint32_t SSC_TCMR;       /**< (SSC Offset: 0x18) Transmit Clock Mode Register */
   __IO uint32_t SSC_TFMR;       /**< (SSC Offset: 0x1C) Transmit Frame Mode Register */
   __I  uint32_t SSC_RHR;        /**< (SSC Offset: 0x20) Receive Holding Register */
   __O  uint32_t SSC_THR;        /**< (SSC Offset: 0x24) Transmit Holding Register */
-  RoReg8  Reserved2[0x8];
+  __I  uint8_t                        Reserved2[8];
   __I  uint32_t SSC_RSHR;       /**< (SSC Offset: 0x30) Receive Sync. Holding Register */
   __IO uint32_t SSC_TSHR;       /**< (SSC Offset: 0x34) Transmit Sync. Holding Register */
   __IO uint32_t SSC_RC0R;       /**< (SSC Offset: 0x38) Receive Compare 0 Register */
@@ -832,7 +870,7 @@ typedef struct {
   __O  uint32_t SSC_IER;        /**< (SSC Offset: 0x44) Interrupt Enable Register */
   __O  uint32_t SSC_IDR;        /**< (SSC Offset: 0x48) Interrupt Disable Register */
   __I  uint32_t SSC_IMR;        /**< (SSC Offset: 0x4C) Interrupt Mask Register */
-  RoReg8  Reserved3[0x94];
+  __I  uint8_t                        Reserved3[148];
   __IO uint32_t SSC_WPMR;       /**< (SSC Offset: 0xE4) Write Protection Mode Register */
   __I  uint32_t SSC_WPSR;       /**< (SSC Offset: 0xE8) Write Protection Status Register */
 } Ssc;
@@ -842,14 +880,14 @@ typedef struct {
 typedef struct {  
   __O  SSC_CR_Type                    SSC_CR;         /**< Offset: 0x00 ( /W  32) Control Register */
   __IO SSC_CMR_Type                   SSC_CMR;        /**< Offset: 0x04 (R/W  32) Clock Mode Register */
-  __I  uint32_t                       Reserved1[2];
+  __I  uint8_t                        Reserved1[8];
   __IO SSC_RCMR_Type                  SSC_RCMR;       /**< Offset: 0x10 (R/W  32) Receive Clock Mode Register */
   __IO SSC_RFMR_Type                  SSC_RFMR;       /**< Offset: 0x14 (R/W  32) Receive Frame Mode Register */
   __IO SSC_TCMR_Type                  SSC_TCMR;       /**< Offset: 0x18 (R/W  32) Transmit Clock Mode Register */
   __IO SSC_TFMR_Type                  SSC_TFMR;       /**< Offset: 0x1C (R/W  32) Transmit Frame Mode Register */
   __I  SSC_RHR_Type                   SSC_RHR;        /**< Offset: 0x20 (R/   32) Receive Holding Register */
   __O  SSC_THR_Type                   SSC_THR;        /**< Offset: 0x24 ( /W  32) Transmit Holding Register */
-  __I  uint32_t                       Reserved2[2];
+  __I  uint8_t                        Reserved2[8];
   __I  SSC_RSHR_Type                  SSC_RSHR;       /**< Offset: 0x30 (R/   32) Receive Sync. Holding Register */
   __IO SSC_TSHR_Type                  SSC_TSHR;       /**< Offset: 0x34 (R/W  32) Transmit Sync. Holding Register */
   __IO SSC_RC0R_Type                  SSC_RC0R;       /**< Offset: 0x38 (R/W  32) Receive Compare 0 Register */
@@ -858,7 +896,7 @@ typedef struct {
   __O  SSC_IER_Type                   SSC_IER;        /**< Offset: 0x44 ( /W  32) Interrupt Enable Register */
   __O  SSC_IDR_Type                   SSC_IDR;        /**< Offset: 0x48 ( /W  32) Interrupt Disable Register */
   __I  SSC_IMR_Type                   SSC_IMR;        /**< Offset: 0x4C (R/   32) Interrupt Mask Register */
-  __I  uint32_t                       Reserved3[37];
+  __I  uint8_t                        Reserved3[148];
   __IO SSC_WPMR_Type                  SSC_WPMR;       /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
   __I  SSC_WPSR_Type                  SSC_WPSR;       /**< Offset: 0xE8 (R/   32) Write Protection Status Register */
 } Ssc;

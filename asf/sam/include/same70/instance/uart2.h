@@ -3,11 +3,13 @@
  *
  * \brief Instance description for UART2
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -61,8 +63,8 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for UART2 peripheral ========== */
-#define UART2_INSTANCE_ID                        44        
-#define UART2_DMAC_ID_TX                         24        
-#define UART2_DMAC_ID_RX                         25        
+#define UART2_DMAC_ID_RX                         25         
+#define UART2_DMAC_ID_TX                         24         
+#define UART2_INSTANCE_ID                        44         
 
 #endif /* _SAME70_UART2_INSTANCE_ */

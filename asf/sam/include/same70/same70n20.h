@@ -3,11 +3,13 @@
  *
  * \brief Header file for ATSAME70N20
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -69,7 +71,7 @@ typedef volatile       uint8_t  RoReg8;  /**< Read only  8-bit register (volatil
 #endif
 typedef volatile       uint32_t WoReg;   /**< Write only 32-bit register (volatile unsigned int) */
 typedef volatile       uint16_t WoReg16; /**< Write only 16-bit register (volatile unsigned int) */
-typedef volatile       uint32_t WoReg8;  /**< Write only  8-bit register (volatile unsigned int) */
+typedef volatile       uint8_t  WoReg8;  /**< Write only  8-bit register (volatile unsigned int) */
 typedef volatile       uint32_t RwReg;   /**< Read-Write 32-bit register (volatile unsigned int) */
 typedef volatile       uint16_t RwReg16; /**< Read-Write 16-bit register (volatile unsigned int) */
 typedef volatile       uint8_t  RwReg8;  /**< Read-Write  8-bit register (volatile unsigned int) */
@@ -148,6 +150,9 @@ typedef enum IRQn
   TC0_IRQn                  = 23 , /**< 23  SAME70N20 Timer Counter (TC0)       */
   TC1_IRQn                  = 24 , /**< 24  SAME70N20 Timer Counter (TC0)       */
   TC2_IRQn                  = 25 , /**< 25  SAME70N20 Timer Counter (TC0)       */
+  TC3_IRQn                  = 26 , /**< 26  SAME70N20 Timer Counter (TC1)       */
+  TC4_IRQn                  = 27 , /**< 27  SAME70N20 Timer Counter (TC1)       */
+  TC5_IRQn                  = 28 , /**< 28  SAME70N20 Timer Counter (TC1)       */
   AFEC0_IRQn                = 29 , /**< 29  SAME70N20 Analog Front-End Controller (AFEC0) */
   DACC_IRQn                 = 30 , /**< 30  SAME70N20 Digital-to-Analog Converter Controller (DACC) */
   PWM0_IRQn                 = 31 , /**< 31  SAME70N20 Pulse Width Modulation Controller (PWM0) */
@@ -165,6 +170,9 @@ typedef enum IRQn
   UART2_IRQn                = 44 , /**< 44  SAME70N20 Universal Asynchronous Receiver Transmitter (UART2) */
   UART3_IRQn                = 45 , /**< 45  SAME70N20 Universal Asynchronous Receiver Transmitter (UART3) */
   UART4_IRQn                = 46 , /**< 46  SAME70N20 Universal Asynchronous Receiver Transmitter (UART4) */
+  TC6_IRQn                  = 47 , /**< 47  SAME70N20 Timer Counter (TC2)       */
+  TC7_IRQn                  = 48 , /**< 48  SAME70N20 Timer Counter (TC2)       */
+  TC8_IRQn                  = 49 , /**< 49  SAME70N20 Timer Counter (TC2)       */
   TC9_IRQn                  = 50 , /**< 50  SAME70N20 Timer Counter (TC3)       */
   TC10_IRQn                 = 51 , /**< 51  SAME70N20 Timer Counter (TC3)       */
   TC11_IRQn                 = 52 , /**< 52  SAME70N20 Timer Counter (TC3)       */
@@ -173,13 +181,11 @@ typedef enum IRQn
   XDMAC_IRQn                = 58 , /**< 58  SAME70N20 Extensible DMA Controller (XDMAC) */
   ISI_IRQn                  = 59 , /**< 59  SAME70N20 Image Sensor Interface (ISI) */
   PWM1_IRQn                 = 60 , /**< 60  SAME70N20 Pulse Width Modulation Controller (PWM1) */
-  FPU_IRQn                  = 61 , /**< 61  SAME70N20 Floating Point Unit Registers (FPU) */
+  FPU_IRQn                  = 61 , /**< 61  SAME70N20 Floating Point Unit (FPU) */
   RSWDT_IRQn                = 63 , /**< 63  SAME70N20 Reinforced Safety Watchdog Timer (RSWDT) */
-  CCW_IRQn                  = 64 , /**< 64  SAME70N20 System Control Registers (SystemControl) */
-  CCF_IRQn                  = 65 , /**< 65  SAME70N20 System Control Registers (SystemControl) */
   GMAC_Q1_IRQn              = 66 , /**< 66  SAME70N20 Gigabit Ethernet MAC (GMAC) */
   GMAC_Q2_IRQn              = 67 , /**< 67  SAME70N20 Gigabit Ethernet MAC (GMAC) */
-  IXC_IRQn                  = 68 , /**< 68  SAME70N20 Floating Point Unit Registers (FPU) */
+  IXC_IRQn                  = 68 , /**< 68  SAME70N20 Floating Point Unit (FPU) */
 
   PERIPH_COUNT_IRQn        = 69  /**< Number of peripheral IDs */
 } IRQn_Type;
@@ -206,6 +212,7 @@ typedef struct _DeviceVectors
   void* pvReservedC3;
   void* pfnPendSV_Handler;                       /*  -2 Pendable request for system service  */
   void* pfnSysTick_Handler;                      /*  -1 System Tick Timer                    */
+
 
   /* Peripheral handlers */
   void* pfnSUPC_Handler;                         /* 0   SAME70N20 Supply Controller (SUPC) */
@@ -234,9 +241,9 @@ typedef struct _DeviceVectors
   void* pfnTC0_Handler;                          /* 23  SAME70N20 Timer Counter (TC0)  */
   void* pfnTC1_Handler;                          /* 24  SAME70N20 Timer Counter (TC0)  */
   void* pfnTC2_Handler;                          /* 25  SAME70N20 Timer Counter (TC0)  */
-  void* pvReserved26;
-  void* pvReserved27;
-  void* pvReserved28;
+  void* pfnTC3_Handler;                          /* 26  SAME70N20 Timer Counter (TC1)  */
+  void* pfnTC4_Handler;                          /* 27  SAME70N20 Timer Counter (TC1)  */
+  void* pfnTC5_Handler;                          /* 28  SAME70N20 Timer Counter (TC1)  */
   void* pfnAFEC0_Handler;                        /* 29  SAME70N20 Analog Front-End Controller (AFEC0) */
   void* pfnDACC_Handler;                         /* 30  SAME70N20 Digital-to-Analog Converter Controller (DACC) */
   void* pfnPWM0_Handler;                         /* 31  SAME70N20 Pulse Width Modulation Controller (PWM0) */
@@ -255,9 +262,9 @@ typedef struct _DeviceVectors
   void* pfnUART2_Handler;                        /* 44  SAME70N20 Universal Asynchronous Receiver Transmitter (UART2) */
   void* pfnUART3_Handler;                        /* 45  SAME70N20 Universal Asynchronous Receiver Transmitter (UART3) */
   void* pfnUART4_Handler;                        /* 46  SAME70N20 Universal Asynchronous Receiver Transmitter (UART4) */
-  void* pvReserved47;
-  void* pvReserved48;
-  void* pvReserved49;
+  void* pfnTC6_Handler;                          /* 47  SAME70N20 Timer Counter (TC2)  */
+  void* pfnTC7_Handler;                          /* 48  SAME70N20 Timer Counter (TC2)  */
+  void* pfnTC8_Handler;                          /* 49  SAME70N20 Timer Counter (TC2)  */
   void* pfnTC9_Handler;                          /* 50  SAME70N20 Timer Counter (TC3)  */
   void* pfnTC10_Handler;                         /* 51  SAME70N20 Timer Counter (TC3)  */
   void* pfnTC11_Handler;                         /* 52  SAME70N20 Timer Counter (TC3)  */
@@ -269,15 +276,22 @@ typedef struct _DeviceVectors
   void* pfnXDMAC_Handler;                        /* 58  SAME70N20 Extensible DMA Controller (XDMAC) */
   void* pfnISI_Handler;                          /* 59  SAME70N20 Image Sensor Interface (ISI) */
   void* pfnPWM1_Handler;                         /* 60  SAME70N20 Pulse Width Modulation Controller (PWM1) */
-  void* pfnFPU_Handler;                          /* 61  SAME70N20 Floating Point Unit Registers (FPU) */
+  void* pfnFPU_Handler;                          /* 61  SAME70N20 Floating Point Unit (FPU) */
   void* pvReserved62;
   void* pfnRSWDT_Handler;                        /* 63  SAME70N20 Reinforced Safety Watchdog Timer (RSWDT) */
-  void* pfnCCW_Handler;                          /* 64  SAME70N20 System Control Registers (SystemControl) */
-  void* pfnCCF_Handler;                          /* 65  SAME70N20 System Control Registers (SystemControl) */
+  void* pvReserved64;
+  void* pvReserved65;
   void* pfnGMAC_Q1_Handler;                      /* 66  SAME70N20 Gigabit Ethernet MAC (GMAC) */
   void* pfnGMAC_Q2_Handler;                      /* 67  SAME70N20 Gigabit Ethernet MAC (GMAC) */
-  void* pfnIXC_Handler;                          /* 68  SAME70N20 Floating Point Unit Registers (FPU) */
+  void* pfnIXC_Handler;                          /* 68  SAME70N20 Floating Point Unit (FPU) */
 } DeviceVectors;
+
+/* Defines for Deprecated Interrupt and Exceptions handler names */
+#define pfnMemManage_Handler      pfnMemoryManagement_Handler     /**< \deprecated  Backward compatibility for ASF */
+#define pfnDebugMon_Handler       pfnDebugMonitor_Handler         /**< \deprecated  Backward compatibility for ASF */
+#define pfnNMI_Handler            pfnNonMaskableInt_Handler       /**< \deprecated  Backward compatibility for ASF */
+#define pfnSVC_Handler            pfnSVCall_Handler               /**< \deprecated  Backward compatibility for ASF */
+
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
@@ -303,8 +317,6 @@ void ACC_Handler                   ( void );
 void AES_Handler                   ( void );
 void AFEC0_Handler                 ( void );
 void AFEC1_Handler                 ( void );
-void CCF_Handler                   ( void );
-void CCW_Handler                   ( void );
 void DACC_Handler                  ( void );
 void EFC_Handler                   ( void );
 void FPU_Handler                   ( void );
@@ -338,6 +350,12 @@ void TC10_Handler                  ( void );
 void TC11_Handler                  ( void );
 void TC1_Handler                   ( void );
 void TC2_Handler                   ( void );
+void TC3_Handler                   ( void );
+void TC4_Handler                   ( void );
+void TC5_Handler                   ( void );
+void TC6_Handler                   ( void );
+void TC7_Handler                   ( void );
+void TC8_Handler                   ( void );
 void TC9_Handler                   ( void );
 void TRNG_Handler                  ( void );
 void TWIHS0_Handler                ( void );
@@ -355,6 +373,14 @@ void USBHS_Handler                 ( void );
 void WDT_Handler                   ( void );
 void XDMAC_Handler                 ( void );
 #endif /* DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS */
+
+
+/* Defines for Deprecated Interrupt and Exceptions handler names */
+#define MemManage_Handler         MemoryManagement_Handler        /**< \deprecated  Backward compatibility for ASF */
+#define DebugMon_Handler          DebugMonitor_Handler            /**< \deprecated  Backward compatibility for ASF */
+#define NMI_Handler               NonMaskableInt_Handler          /**< \deprecated  Backward compatibility for ASF */
+#define SVC_Handler               SVCall_Handler                  /**< \deprecated  Backward compatibility for ASF */
+
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 
@@ -375,7 +401,7 @@ void XDMAC_Handler                 ( void );
 #define __DTCM_PRESENT                 1 /**< Data TCM present                                                          */
 #define __DEBUG_LVL                    1
 #define __TRACE_LVL                    1
-#define LITTLE_ENDIAN                  1
+#define __LITTLE_ENDIAN                1
 #define __ARCH_ARM                     1
 #define __ARCH_ARM_CORTEX_M            1
 #define __DEVICE_IS_SAM                1
@@ -469,6 +495,8 @@ void XDMAC_Handler                 ( void );
 #include "instance/ssc.h"
 #include "instance/supc.h"
 #include "instance/tc0.h"
+#include "instance/tc1.h"
+#include "instance/tc2.h"
 #include "instance/tc3.h"
 #include "instance/trng.h"
 #include "instance/twihs0.h"
@@ -518,6 +546,9 @@ void XDMAC_Handler                 ( void );
 #define ID_TC0_CHANNEL0 ( 23) /**< \brief Timer Counter (TC0_CHANNEL0) */
 #define ID_TC0_CHANNEL1 ( 24) /**< \brief Timer Counter (TC0_CHANNEL1) */
 #define ID_TC0_CHANNEL2 ( 25) /**< \brief Timer Counter (TC0_CHANNEL2) */
+#define ID_TC1_CHANNEL0 ( 26) /**< \brief Timer Counter (TC1_CHANNEL0) */
+#define ID_TC1_CHANNEL1 ( 27) /**< \brief Timer Counter (TC1_CHANNEL1) */
+#define ID_TC1_CHANNEL2 ( 28) /**< \brief Timer Counter (TC1_CHANNEL2) */
 #define ID_AFEC0        ( 29) /**< \brief Analog Front-End Controller (AFEC0) */
 #define ID_DACC         ( 30) /**< \brief Digital-to-Analog Converter Controller (DACC) */
 #define ID_PWM0         ( 31) /**< \brief Pulse Width Modulation Controller (PWM0) */
@@ -533,6 +564,9 @@ void XDMAC_Handler                 ( void );
 #define ID_UART2        ( 44) /**< \brief Universal Asynchronous Receiver Transmitter (UART2) */
 #define ID_UART3        ( 45) /**< \brief Universal Asynchronous Receiver Transmitter (UART3) */
 #define ID_UART4        ( 46) /**< \brief Universal Asynchronous Receiver Transmitter (UART4) */
+#define ID_TC2_CHANNEL0 ( 47) /**< \brief Timer Counter (TC2_CHANNEL0) */
+#define ID_TC2_CHANNEL1 ( 48) /**< \brief Timer Counter (TC2_CHANNEL1) */
+#define ID_TC2_CHANNEL2 ( 49) /**< \brief Timer Counter (TC2_CHANNEL2) */
 #define ID_TC3_CHANNEL0 ( 50) /**< \brief Timer Counter (TC3_CHANNEL0) */
 #define ID_TC3_CHANNEL1 ( 51) /**< \brief Timer Counter (TC3_CHANNEL1) */
 #define ID_TC3_CHANNEL2 ( 52) /**< \brief Timer Counter (TC3_CHANNEL2) */
@@ -605,6 +639,8 @@ void XDMAC_Handler                 ( void );
 #define SSC                    (0x40004000)                   /**< \brief (SSC       ) Base Address */
 #define SUPC                   (0x400E1810)                   /**< \brief (SUPC      ) Base Address */
 #define TC0                    (0x4000C000)                   /**< \brief (TC0       ) Base Address */
+#define TC1                    (0x40010000)                   /**< \brief (TC1       ) Base Address */
+#define TC2                    (0x40014000)                   /**< \brief (TC2       ) Base Address */
 #define TC3                    (0x40054000)                   /**< \brief (TC3       ) Base Address */
 #define TRNG                   (0x40070000)                   /**< \brief (TRNG      ) Base Address */
 #define TWIHS0                 (0x40018000)                   /**< \brief (TWIHS0    ) Base Address */
@@ -727,9 +763,11 @@ void XDMAC_Handler                 ( void );
 #define SUPC_INSTS             { SUPC }                       /**< \brief (SUPC      ) Instances List */
 
 #define TC0                    ((Tc *)0x4000C000U)            /**< \brief (TC0       ) Base Address */
+#define TC1                    ((Tc *)0x40010000U)            /**< \brief (TC1       ) Base Address */
+#define TC2                    ((Tc *)0x40014000U)            /**< \brief (TC2       ) Base Address */
 #define TC3                    ((Tc *)0x40054000U)            /**< \brief (TC3       ) Base Address */
-#define TC_INST_NUM            2                              /**< \brief (TC        ) Number of instances */
-#define TC_INSTS               { TC0, TC3 }                   /**< \brief (TC        ) Instances List */
+#define TC_INST_NUM            4                              /**< \brief (TC        ) Number of instances */
+#define TC_INSTS               { TC0, TC1, TC2, TC3 }         /**< \brief (TC        ) Instances List */
 
 #define TRNG                   ((Trng *)0x40070000U)          /**< \brief (TRNG      ) Base Address */
 #define TRNG_INST_NUM          1                              /**< \brief (TRNG      ) Number of instances */
@@ -841,6 +879,8 @@ void XDMAC_Handler                 ( void );
 #define CHIP_FREQ_FWS_5                _UL_(138000000) /**< \brief Maximum operating frequency when FWS is 5*/
 #define CHIP_FREQ_FWS_6                _UL_(150000000) /**< \brief Maximum operating frequency when FWS is 6*/
 #define CHIP_FREQ_FWS_NUMBER           _UL_(7)         /**< \brief Number of FWS ranges*/
+
+
 
 #ifdef __cplusplus
 }

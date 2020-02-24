@@ -3,11 +3,13 @@
  *
  * \brief Header file for ATSAME70Q20
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -69,7 +71,7 @@ typedef volatile       uint8_t  RoReg8;  /**< Read only  8-bit register (volatil
 #endif
 typedef volatile       uint32_t WoReg;   /**< Write only 32-bit register (volatile unsigned int) */
 typedef volatile       uint16_t WoReg16; /**< Write only 16-bit register (volatile unsigned int) */
-typedef volatile       uint32_t WoReg8;  /**< Write only  8-bit register (volatile unsigned int) */
+typedef volatile       uint8_t  WoReg8;  /**< Write only  8-bit register (volatile unsigned int) */
 typedef volatile       uint32_t RwReg;   /**< Read-Write 32-bit register (volatile unsigned int) */
 typedef volatile       uint16_t RwReg16; /**< Read-Write 16-bit register (volatile unsigned int) */
 typedef volatile       uint8_t  RwReg8;  /**< Read-Write  8-bit register (volatile unsigned int) */
@@ -182,14 +184,12 @@ typedef enum IRQn
   XDMAC_IRQn                = 58 , /**< 58  SAME70Q20 Extensible DMA Controller (XDMAC) */
   ISI_IRQn                  = 59 , /**< 59  SAME70Q20 Image Sensor Interface (ISI) */
   PWM1_IRQn                 = 60 , /**< 60  SAME70Q20 Pulse Width Modulation Controller (PWM1) */
-  FPU_IRQn                  = 61 , /**< 61  SAME70Q20 Floating Point Unit Registers (FPU) */
+  FPU_IRQn                  = 61 , /**< 61  SAME70Q20 Floating Point Unit (FPU) */
   SDRAMC_IRQn               = 62 , /**< 62  SAME70Q20 SDRAM Controller (SDRAMC) */
   RSWDT_IRQn                = 63 , /**< 63  SAME70Q20 Reinforced Safety Watchdog Timer (RSWDT) */
-  CCW_IRQn                  = 64 , /**< 64  SAME70Q20 System Control Registers (SystemControl) */
-  CCF_IRQn                  = 65 , /**< 65  SAME70Q20 System Control Registers (SystemControl) */
   GMAC_Q1_IRQn              = 66 , /**< 66  SAME70Q20 Gigabit Ethernet MAC (GMAC) */
   GMAC_Q2_IRQn              = 67 , /**< 67  SAME70Q20 Gigabit Ethernet MAC (GMAC) */
-  IXC_IRQn                  = 68 , /**< 68  SAME70Q20 Floating Point Unit Registers (FPU) */
+  IXC_IRQn                  = 68 , /**< 68  SAME70Q20 Floating Point Unit (FPU) */
 
   PERIPH_COUNT_IRQn        = 69  /**< Number of peripheral IDs */
 } IRQn_Type;
@@ -216,6 +216,7 @@ typedef struct _DeviceVectors
   void* pvReservedC3;
   void* pfnPendSV_Handler;                       /*  -2 Pendable request for system service  */
   void* pfnSysTick_Handler;                      /*  -1 System Tick Timer                    */
+
 
   /* Peripheral handlers */
   void* pfnSUPC_Handler;                         /* 0   SAME70Q20 Supply Controller (SUPC) */
@@ -279,15 +280,22 @@ typedef struct _DeviceVectors
   void* pfnXDMAC_Handler;                        /* 58  SAME70Q20 Extensible DMA Controller (XDMAC) */
   void* pfnISI_Handler;                          /* 59  SAME70Q20 Image Sensor Interface (ISI) */
   void* pfnPWM1_Handler;                         /* 60  SAME70Q20 Pulse Width Modulation Controller (PWM1) */
-  void* pfnFPU_Handler;                          /* 61  SAME70Q20 Floating Point Unit Registers (FPU) */
+  void* pfnFPU_Handler;                          /* 61  SAME70Q20 Floating Point Unit (FPU) */
   void* pfnSDRAMC_Handler;                       /* 62  SAME70Q20 SDRAM Controller (SDRAMC) */
   void* pfnRSWDT_Handler;                        /* 63  SAME70Q20 Reinforced Safety Watchdog Timer (RSWDT) */
-  void* pfnCCW_Handler;                          /* 64  SAME70Q20 System Control Registers (SystemControl) */
-  void* pfnCCF_Handler;                          /* 65  SAME70Q20 System Control Registers (SystemControl) */
+  void* pvReserved64;
+  void* pvReserved65;
   void* pfnGMAC_Q1_Handler;                      /* 66  SAME70Q20 Gigabit Ethernet MAC (GMAC) */
   void* pfnGMAC_Q2_Handler;                      /* 67  SAME70Q20 Gigabit Ethernet MAC (GMAC) */
-  void* pfnIXC_Handler;                          /* 68  SAME70Q20 Floating Point Unit Registers (FPU) */
+  void* pfnIXC_Handler;                          /* 68  SAME70Q20 Floating Point Unit (FPU) */
 } DeviceVectors;
+
+/* Defines for Deprecated Interrupt and Exceptions handler names */
+#define pfnMemManage_Handler      pfnMemoryManagement_Handler     /**< \deprecated  Backward compatibility for ASF */
+#define pfnDebugMon_Handler       pfnDebugMonitor_Handler         /**< \deprecated  Backward compatibility for ASF */
+#define pfnNMI_Handler            pfnNonMaskableInt_Handler       /**< \deprecated  Backward compatibility for ASF */
+#define pfnSVC_Handler            pfnSVCall_Handler               /**< \deprecated  Backward compatibility for ASF */
+
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
@@ -313,8 +321,6 @@ void ACC_Handler                   ( void );
 void AES_Handler                   ( void );
 void AFEC0_Handler                 ( void );
 void AFEC1_Handler                 ( void );
-void CCF_Handler                   ( void );
-void CCW_Handler                   ( void );
 void DACC_Handler                  ( void );
 void EFC_Handler                   ( void );
 void FPU_Handler                   ( void );
@@ -375,6 +381,14 @@ void USBHS_Handler                 ( void );
 void WDT_Handler                   ( void );
 void XDMAC_Handler                 ( void );
 #endif /* DONT_USE_PREDEFINED_PERIPHERALS_HANDLERS */
+
+
+/* Defines for Deprecated Interrupt and Exceptions handler names */
+#define MemManage_Handler         MemoryManagement_Handler        /**< \deprecated  Backward compatibility for ASF */
+#define DebugMon_Handler          DebugMonitor_Handler            /**< \deprecated  Backward compatibility for ASF */
+#define NMI_Handler               NonMaskableInt_Handler          /**< \deprecated  Backward compatibility for ASF */
+#define SVC_Handler               SVCall_Handler                  /**< \deprecated  Backward compatibility for ASF */
+
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 
@@ -395,7 +409,7 @@ void XDMAC_Handler                 ( void );
 #define __DTCM_PRESENT                 1 /**< Data TCM present                                                          */
 #define __DEBUG_LVL                    1
 #define __TRACE_LVL                    1
-#define LITTLE_ENDIAN                  1
+#define __LITTLE_ENDIAN                1
 #define __ARCH_ARM                     1
 #define __ARCH_ARM_CORTEX_M            1
 #define __DEVICE_IS_SAM                1
@@ -909,6 +923,8 @@ void XDMAC_Handler                 ( void );
 #define CHIP_FREQ_FWS_5                _UL_(138000000) /**< \brief Maximum operating frequency when FWS is 5*/
 #define CHIP_FREQ_FWS_6                _UL_(150000000) /**< \brief Maximum operating frequency when FWS is 6*/
 #define CHIP_FREQ_FWS_NUMBER           _UL_(7)         /**< \brief Number of FWS ranges*/
+
+
 
 #ifdef __cplusplus
 }

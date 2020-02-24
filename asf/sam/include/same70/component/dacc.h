@@ -3,11 +3,13 @@
  *
  * \brief Component description for DACC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- DACC_CR : (DACC Offset: 0x00) (/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SWRST:1;                   /**< bit:      0  Software Reset                           */
@@ -52,6 +55,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } DACC_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define DACC_CR_OFFSET                      (0x00)                                        /**<  (DACC_CR) Control Register  Offset */
@@ -65,6 +69,7 @@ typedef union {
 
 /* -------- DACC_MR : (DACC Offset: 0x04) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MAXS0:1;                   /**< bit:      0  Max Speed Mode for Channel 0             */
@@ -83,6 +88,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } DACC_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define DACC_MR_OFFSET                      (0x04)                                        /**<  (DACC_MR) Mode Register  Offset */
@@ -130,6 +136,7 @@ typedef union {
 
 /* -------- DACC_TRIGR : (DACC Offset: 0x08) (R/W 32) Trigger Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TRGEN0:1;                  /**< bit:      0  Trigger Enable of Channel 0              */
@@ -150,6 +157,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } DACC_TRIGR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define DACC_TRIGR_OFFSET                   (0x08)                                        /**<  (DACC_TRIGR) Trigger Register  Offset */
@@ -245,6 +253,7 @@ typedef union {
 
 /* -------- DACC_CHER : (DACC Offset: 0x10) (/W 32) Channel Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CH0:1;                     /**< bit:      0  Channel 0 Enable                         */
@@ -257,6 +266,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } DACC_CHER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define DACC_CHER_OFFSET                    (0x10)                                        /**<  (DACC_CHER) Channel Enable Register  Offset */
@@ -276,6 +286,7 @@ typedef union {
 
 /* -------- DACC_CHDR : (DACC Offset: 0x14) (/W 32) Channel Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CH0:1;                     /**< bit:      0  Channel 0 Disable                        */
@@ -288,6 +299,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } DACC_CHDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define DACC_CHDR_OFFSET                    (0x14)                                        /**<  (DACC_CHDR) Channel Disable Register  Offset */
@@ -307,6 +319,7 @@ typedef union {
 
 /* -------- DACC_CHSR : (DACC Offset: 0x18) (R/ 32) Channel Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CH0:1;                     /**< bit:      0  Channel 0 Status                         */
@@ -324,6 +337,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } DACC_CHSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define DACC_CHSR_OFFSET                    (0x18)                                        /**<  (DACC_CHSR) Channel Status Register  Offset */
@@ -352,6 +366,7 @@ typedef union {
 
 /* -------- DACC_CDR : (DACC Offset: 0x1c) (/W 32) Conversion Data Register 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DATA0:16;                  /**< bit:  0..15  Data to Convert for channel 0            */
@@ -359,6 +374,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } DACC_CDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define DACC_CDR_OFFSET                     (0x1C)                                        /**<  (DACC_CDR) Conversion Data Register 0  Offset */
@@ -375,6 +391,7 @@ typedef union {
 
 /* -------- DACC_IER : (DACC Offset: 0x24) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXRDY0:1;                  /**< bit:      0  Transmit Ready Interrupt Enable of channel 0 */
@@ -392,6 +409,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } DACC_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define DACC_IER_OFFSET                     (0x24)                                        /**<  (DACC_IER) Interrupt Enable Register  Offset */
@@ -420,6 +438,7 @@ typedef union {
 
 /* -------- DACC_IDR : (DACC Offset: 0x28) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXRDY0:1;                  /**< bit:      0  Transmit Ready Interrupt Disable of channel 0 */
@@ -437,6 +456,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } DACC_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define DACC_IDR_OFFSET                     (0x28)                                        /**<  (DACC_IDR) Interrupt Disable Register  Offset */
@@ -465,6 +485,7 @@ typedef union {
 
 /* -------- DACC_IMR : (DACC Offset: 0x2c) (R/ 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXRDY0:1;                  /**< bit:      0  Transmit Ready Interrupt Mask of channel 0 */
@@ -482,6 +503,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } DACC_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define DACC_IMR_OFFSET                     (0x2C)                                        /**<  (DACC_IMR) Interrupt Mask Register  Offset */
@@ -510,6 +532,7 @@ typedef union {
 
 /* -------- DACC_ISR : (DACC Offset: 0x30) (R/ 32) Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TXRDY0:1;                  /**< bit:      0  Transmit Ready Interrupt Flag of channel 0 */
@@ -527,6 +550,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } DACC_ISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define DACC_ISR_OFFSET                     (0x30)                                        /**<  (DACC_ISR) Interrupt Status Register  Offset */
@@ -555,6 +579,7 @@ typedef union {
 
 /* -------- DACC_ACR : (DACC Offset: 0x94) (R/W 32) Analog Current Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IBCTLCH0:2;                /**< bit:   0..1  Analog Output Current Control            */
@@ -563,6 +588,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } DACC_ACR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define DACC_ACR_OFFSET                     (0x94)                                        /**<  (DACC_ACR) Analog Current Register  Offset */
@@ -579,6 +605,7 @@ typedef union {
 
 /* -------- DACC_WPMR : (DACC Offset: 0xe4) (R/W 32) Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
@@ -587,6 +614,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } DACC_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define DACC_WPMR_OFFSET                    (0xE4)                                        /**<  (DACC_WPMR) Write Protection Mode Register  Offset */
@@ -605,6 +633,7 @@ typedef union {
 
 /* -------- DACC_WPSR : (DACC Offset: 0xe8) (R/ 32) Write Protection Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPVS:1;                    /**< bit:      0  Write Protection Violation Status        */
@@ -614,6 +643,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } DACC_WPSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define DACC_WPSR_OFFSET                    (0xE8)                                        /**<  (DACC_WPSR) Write Protection Status Register  Offset */
@@ -635,7 +665,7 @@ typedef struct {
   __O  uint32_t DACC_CR;        /**< (DACC Offset: 0x00) Control Register */
   __IO uint32_t DACC_MR;        /**< (DACC Offset: 0x04) Mode Register */
   __IO uint32_t DACC_TRIGR;     /**< (DACC Offset: 0x08) Trigger Register */
-  RoReg8  Reserved1[0x4];
+  __I  uint8_t                        Reserved1[4];
   __O  uint32_t DACC_CHER;      /**< (DACC Offset: 0x10) Channel Enable Register */
   __O  uint32_t DACC_CHDR;      /**< (DACC Offset: 0x14) Channel Disable Register */
   __I  uint32_t DACC_CHSR;      /**< (DACC Offset: 0x18) Channel Status Register */
@@ -644,9 +674,9 @@ typedef struct {
   __O  uint32_t DACC_IDR;       /**< (DACC Offset: 0x28) Interrupt Disable Register */
   __I  uint32_t DACC_IMR;       /**< (DACC Offset: 0x2C) Interrupt Mask Register */
   __I  uint32_t DACC_ISR;       /**< (DACC Offset: 0x30) Interrupt Status Register */
-  RoReg8  Reserved2[0x60];
+  __I  uint8_t                        Reserved2[96];
   __IO uint32_t DACC_ACR;       /**< (DACC Offset: 0x94) Analog Current Register */
-  RoReg8  Reserved3[0x4C];
+  __I  uint8_t                        Reserved3[76];
   __IO uint32_t DACC_WPMR;      /**< (DACC Offset: 0xE4) Write Protection Mode Register */
   __I  uint32_t DACC_WPSR;      /**< (DACC Offset: 0xE8) Write Protection Status Register */
 } Dacc;
@@ -657,7 +687,7 @@ typedef struct {
   __O  DACC_CR_Type                   DACC_CR;        /**< Offset: 0x00 ( /W  32) Control Register */
   __IO DACC_MR_Type                   DACC_MR;        /**< Offset: 0x04 (R/W  32) Mode Register */
   __IO DACC_TRIGR_Type                DACC_TRIGR;     /**< Offset: 0x08 (R/W  32) Trigger Register */
-  __I  uint32_t                       Reserved1[1];
+  __I  uint8_t                        Reserved1[4];
   __O  DACC_CHER_Type                 DACC_CHER;      /**< Offset: 0x10 ( /W  32) Channel Enable Register */
   __O  DACC_CHDR_Type                 DACC_CHDR;      /**< Offset: 0x14 ( /W  32) Channel Disable Register */
   __I  DACC_CHSR_Type                 DACC_CHSR;      /**< Offset: 0x18 (R/   32) Channel Status Register */
@@ -666,9 +696,9 @@ typedef struct {
   __O  DACC_IDR_Type                  DACC_IDR;       /**< Offset: 0x28 ( /W  32) Interrupt Disable Register */
   __I  DACC_IMR_Type                  DACC_IMR;       /**< Offset: 0x2C (R/   32) Interrupt Mask Register */
   __I  DACC_ISR_Type                  DACC_ISR;       /**< Offset: 0x30 (R/   32) Interrupt Status Register */
-  __I  uint32_t                       Reserved2[24];
+  __I  uint8_t                        Reserved2[96];
   __IO DACC_ACR_Type                  DACC_ACR;       /**< Offset: 0x94 (R/W  32) Analog Current Register */
-  __I  uint32_t                       Reserved3[19];
+  __I  uint8_t                        Reserved3[76];
   __IO DACC_WPMR_Type                 DACC_WPMR;      /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
   __I  DACC_WPSR_Type                 DACC_WPSR;      /**< Offset: 0xE8 (R/   32) Write Protection Status Register */
 } Dacc;

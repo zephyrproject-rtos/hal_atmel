@@ -3,11 +3,13 @@
  *
  * \brief Component description for ISI
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- ISI_CFG1 : (ISI Offset: 0x00) (R/W 32) ISI Configuration 1 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -64,6 +67,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_CFG1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_CFG1_OFFSET                     (0x00)                                        /**<  (ISI_CFG1) ISI Configuration 1 Register  Offset */
@@ -115,6 +119,7 @@ typedef union {
 
 /* -------- ISI_CFG2 : (ISI Offset: 0x04) (R/W 32) ISI Configuration 2 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IM_VSIZE:11;               /**< bit:  0..10  Vertical Size of the Image Sensor [0..2047] */
@@ -130,6 +135,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_CFG2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_CFG2_OFFSET                     (0x04)                                        /**<  (ISI_CFG2) ISI Configuration 2 Register  Offset */
@@ -183,6 +189,7 @@ typedef union {
 
 /* -------- ISI_PSIZE : (ISI Offset: 0x08) (R/W 32) ISI Preview Size Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t PREV_VSIZE:10;             /**< bit:   0..9  Vertical Size for the Preview Path       */
@@ -192,6 +199,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_PSIZE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_PSIZE_OFFSET                    (0x08)                                        /**<  (ISI_PSIZE) ISI Preview Size Register  Offset */
@@ -208,6 +216,7 @@ typedef union {
 
 /* -------- ISI_PDECF : (ISI Offset: 0x0c) (R/W 32) ISI Preview Decimation Factor Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DEC_FACTOR:8;              /**< bit:   0..7  Decimation Factor                        */
@@ -215,6 +224,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_PDECF_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_PDECF_OFFSET                    (0x0C)                                        /**<  (ISI_PDECF) ISI Preview Decimation Factor Register  Offset */
@@ -228,6 +238,7 @@ typedef union {
 
 /* -------- ISI_Y2R_SET0 : (ISI Offset: 0x10) (R/W 32) ISI Color Space Conversion YCrCb To RGB Set 0 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t C0:8;                      /**< bit:   0..7  Color Space Conversion Matrix Coefficient C0 */
@@ -237,6 +248,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_Y2R_SET0_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_Y2R_SET0_OFFSET                 (0x10)                                        /**<  (ISI_Y2R_SET0) ISI Color Space Conversion YCrCb To RGB Set 0 Register  Offset */
@@ -259,6 +271,7 @@ typedef union {
 
 /* -------- ISI_Y2R_SET1 : (ISI Offset: 0x14) (R/W 32) ISI Color Space Conversion YCrCb To RGB Set 1 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t C4:9;                      /**< bit:   0..8  Color Space Conversion Matrix Coefficient C4 */
@@ -270,6 +283,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_Y2R_SET1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_Y2R_SET1_OFFSET                 (0x14)                                        /**<  (ISI_Y2R_SET1) ISI Color Space Conversion YCrCb To RGB Set 1 Register  Offset */
@@ -292,6 +306,7 @@ typedef union {
 
 /* -------- ISI_R2Y_SET0 : (ISI Offset: 0x18) (R/W 32) ISI Color Space Conversion RGB To YCrCb Set 0 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t C0:7;                      /**< bit:   0..6  Color Space Conversion Matrix Coefficient C0 */
@@ -305,6 +320,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_R2Y_SET0_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_R2Y_SET0_OFFSET                 (0x18)                                        /**<  (ISI_R2Y_SET0) ISI Color Space Conversion RGB To YCrCb Set 0 Register  Offset */
@@ -327,6 +343,7 @@ typedef union {
 
 /* -------- ISI_R2Y_SET1 : (ISI Offset: 0x1c) (R/W 32) ISI Color Space Conversion RGB To YCrCb Set 1 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t C3:7;                      /**< bit:   0..6  Color Space Conversion Matrix Coefficient C3 */
@@ -340,6 +357,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_R2Y_SET1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_R2Y_SET1_OFFSET                 (0x1C)                                        /**<  (ISI_R2Y_SET1) ISI Color Space Conversion RGB To YCrCb Set 1 Register  Offset */
@@ -362,6 +380,7 @@ typedef union {
 
 /* -------- ISI_R2Y_SET2 : (ISI Offset: 0x20) (R/W 32) ISI Color Space Conversion RGB To YCrCb Set 2 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t C6:7;                      /**< bit:   0..6  Color Space Conversion Matrix Coefficient C6 */
@@ -375,6 +394,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_R2Y_SET2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_R2Y_SET2_OFFSET                 (0x20)                                        /**<  (ISI_R2Y_SET2) ISI Color Space Conversion RGB To YCrCb Set 2 Register  Offset */
@@ -397,6 +417,7 @@ typedef union {
 
 /* -------- ISI_CR : (ISI Offset: 0x24) (/W 32) ISI Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ISI_EN:1;                  /**< bit:      0  ISI Module Enable Request                */
@@ -408,6 +429,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_CR_OFFSET                       (0x24)                                        /**<  (ISI_CR) ISI Control Register  Offset */
@@ -430,6 +452,7 @@ typedef union {
 
 /* -------- ISI_SR : (ISI Offset: 0x28) (R/ 32) ISI Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ENABLE:1;                  /**< bit:      0  Module Enable                            */
@@ -453,6 +476,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_SR_OFFSET                       (0x28)                                        /**<  (ISI_SR) ISI Status Register  Offset */
@@ -499,6 +523,7 @@ typedef union {
 
 /* -------- ISI_IER : (ISI Offset: 0x2c) (/W 32) ISI Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -518,6 +543,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_IER_OFFSET                      (0x2C)                                        /**<  (ISI_IER) ISI Interrupt Enable Register  Offset */
@@ -555,6 +581,7 @@ typedef union {
 
 /* -------- ISI_IDR : (ISI Offset: 0x30) (/W 32) ISI Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -574,6 +601,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_IDR_OFFSET                      (0x30)                                        /**<  (ISI_IDR) ISI Interrupt Disable Register  Offset */
@@ -611,6 +639,7 @@ typedef union {
 
 /* -------- ISI_IMR : (ISI Offset: 0x34) (R/ 32) ISI Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :1;                        /**< bit:      0  Reserved */
@@ -630,6 +659,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_IMR_OFFSET                      (0x34)                                        /**<  (ISI_IMR) ISI Interrupt Mask Register  Offset */
@@ -667,6 +697,7 @@ typedef union {
 
 /* -------- ISI_DMA_CHER : (ISI Offset: 0x38) (/W 32) DMA Channel Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P_CH_EN:1;                 /**< bit:      0  Preview Channel Enable                   */
@@ -675,6 +706,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_DMA_CHER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_DMA_CHER_OFFSET                 (0x38)                                        /**<  (ISI_DMA_CHER) DMA Channel Enable Register  Offset */
@@ -691,6 +723,7 @@ typedef union {
 
 /* -------- ISI_DMA_CHDR : (ISI Offset: 0x3c) (/W 32) DMA Channel Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P_CH_DIS:1;                /**< bit:      0  Preview Channel Disable Request          */
@@ -699,6 +732,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_DMA_CHDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_DMA_CHDR_OFFSET                 (0x3C)                                        /**<  (ISI_DMA_CHDR) DMA Channel Disable Register  Offset */
@@ -715,6 +749,7 @@ typedef union {
 
 /* -------- ISI_DMA_CHSR : (ISI Offset: 0x40) (R/ 32) DMA Channel Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P_CH_S:1;                  /**< bit:      0  Preview DMA Channel Status               */
@@ -723,6 +758,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_DMA_CHSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_DMA_CHSR_OFFSET                 (0x40)                                        /**<  (ISI_DMA_CHSR) DMA Channel Status Register  Offset */
@@ -739,6 +775,7 @@ typedef union {
 
 /* -------- ISI_DMA_P_ADDR : (ISI Offset: 0x44) (R/W 32) DMA Preview Base Address Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -746,6 +783,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_DMA_P_ADDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_DMA_P_ADDR_OFFSET               (0x44)                                        /**<  (ISI_DMA_P_ADDR) DMA Preview Base Address Register  Offset */
@@ -759,6 +797,7 @@ typedef union {
 
 /* -------- ISI_DMA_P_CTRL : (ISI Offset: 0x48) (R/W 32) DMA Preview Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t P_FETCH:1;                 /**< bit:      0  Descriptor Fetch Control Bit             */
@@ -769,6 +808,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_DMA_P_CTRL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_DMA_P_CTRL_OFFSET               (0x48)                                        /**<  (ISI_DMA_P_CTRL) DMA Preview Control Register  Offset */
@@ -791,6 +831,7 @@ typedef union {
 
 /* -------- ISI_DMA_P_DSCR : (ISI Offset: 0x4c) (R/W 32) DMA Preview Descriptor Address Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -798,6 +839,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_DMA_P_DSCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_DMA_P_DSCR_OFFSET               (0x4C)                                        /**<  (ISI_DMA_P_DSCR) DMA Preview Descriptor Address Register  Offset */
@@ -811,6 +853,7 @@ typedef union {
 
 /* -------- ISI_DMA_C_ADDR : (ISI Offset: 0x50) (R/W 32) DMA Codec Base Address Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -818,6 +861,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_DMA_C_ADDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_DMA_C_ADDR_OFFSET               (0x50)                                        /**<  (ISI_DMA_C_ADDR) DMA Codec Base Address Register  Offset */
@@ -831,6 +875,7 @@ typedef union {
 
 /* -------- ISI_DMA_C_CTRL : (ISI Offset: 0x54) (R/W 32) DMA Codec Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t C_FETCH:1;                 /**< bit:      0  Descriptor Fetch Control Bit             */
@@ -841,6 +886,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_DMA_C_CTRL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_DMA_C_CTRL_OFFSET               (0x54)                                        /**<  (ISI_DMA_C_CTRL) DMA Codec Control Register  Offset */
@@ -863,6 +909,7 @@ typedef union {
 
 /* -------- ISI_DMA_C_DSCR : (ISI Offset: 0x58) (R/W 32) DMA Codec Descriptor Address Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -870,6 +917,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_DMA_C_DSCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_DMA_C_DSCR_OFFSET               (0x58)                                        /**<  (ISI_DMA_C_DSCR) DMA Codec Descriptor Address Register  Offset */
@@ -883,6 +931,7 @@ typedef union {
 
 /* -------- ISI_WPMR : (ISI Offset: 0xe4) (R/W 32) Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
@@ -891,6 +940,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_WPMR_OFFSET                     (0xE4)                                        /**<  (ISI_WPMR) Write Protection Mode Register  Offset */
@@ -909,6 +959,7 @@ typedef union {
 
 /* -------- ISI_WPSR : (ISI Offset: 0xe8) (R/ 32) Write Protection Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPVS:1;                    /**< bit:      0  Write Protection Violation Status        */
@@ -918,6 +969,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ISI_WPSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ISI_WPSR_OFFSET                     (0xE8)                                        /**<  (ISI_WPSR) Write Protection Status Register  Offset */
@@ -959,7 +1011,7 @@ typedef struct {
   __IO uint32_t ISI_DMA_C_ADDR; /**< (ISI Offset: 0x50) DMA Codec Base Address Register */
   __IO uint32_t ISI_DMA_C_CTRL; /**< (ISI Offset: 0x54) DMA Codec Control Register */
   __IO uint32_t ISI_DMA_C_DSCR; /**< (ISI Offset: 0x58) DMA Codec Descriptor Address Register */
-  RoReg8  Reserved1[0x88];
+  __I  uint8_t                        Reserved1[136];
   __IO uint32_t ISI_WPMR;       /**< (ISI Offset: 0xE4) Write Protection Mode Register */
   __I  uint32_t ISI_WPSR;       /**< (ISI Offset: 0xE8) Write Protection Status Register */
 } Isi;
@@ -990,7 +1042,7 @@ typedef struct {
   __IO ISI_DMA_C_ADDR_Type            ISI_DMA_C_ADDR; /**< Offset: 0x50 (R/W  32) DMA Codec Base Address Register */
   __IO ISI_DMA_C_CTRL_Type            ISI_DMA_C_CTRL; /**< Offset: 0x54 (R/W  32) DMA Codec Control Register */
   __IO ISI_DMA_C_DSCR_Type            ISI_DMA_C_DSCR; /**< Offset: 0x58 (R/W  32) DMA Codec Descriptor Address Register */
-  __I  uint32_t                       Reserved1[34];
+  __I  uint8_t                        Reserved1[136];
   __IO ISI_WPMR_Type                  ISI_WPMR;       /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
   __I  ISI_WPSR_Type                  ISI_WPSR;       /**< Offset: 0xE8 (R/   32) Write Protection Status Register */
 } Isi;

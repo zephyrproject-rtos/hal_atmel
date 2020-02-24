@@ -3,11 +3,13 @@
  *
  * \brief Component description for PWM
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- PWM_CMR : (PWM Offset: 0x00) (R/W 32) PWM Channel Mode Register (ch_num = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CPRE:4;                    /**< bit:   0..3  Channel Pre-scaler                       */
@@ -64,6 +67,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_CMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_CMR_OFFSET                      (0x00)                                        /**<  (PWM_CMR) PWM Channel Mode Register (ch_num = 0)  Offset */
@@ -133,6 +137,7 @@ typedef union {
 
 /* -------- PWM_CDTY : (PWM Offset: 0x04) (R/W 32) PWM Channel Duty Cycle Register (ch_num = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CDTY:24;                   /**< bit:  0..23  Channel Duty-Cycle                       */
@@ -140,6 +145,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_CDTY_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_CDTY_OFFSET                     (0x04)                                        /**<  (PWM_CDTY) PWM Channel Duty Cycle Register (ch_num = 0)  Offset */
@@ -153,6 +159,7 @@ typedef union {
 
 /* -------- PWM_CDTYUPD : (PWM Offset: 0x08) (/W 32) PWM Channel Duty Cycle Update Register (ch_num = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CDTYUPD:24;                /**< bit:  0..23  Channel Duty-Cycle Update                */
@@ -160,6 +167,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_CDTYUPD_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_CDTYUPD_OFFSET                  (0x08)                                        /**<  (PWM_CDTYUPD) PWM Channel Duty Cycle Update Register (ch_num = 0)  Offset */
@@ -173,6 +181,7 @@ typedef union {
 
 /* -------- PWM_CPRD : (PWM Offset: 0x0c) (R/W 32) PWM Channel Period Register (ch_num = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CPRD:24;                   /**< bit:  0..23  Channel Period                           */
@@ -180,6 +189,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_CPRD_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_CPRD_OFFSET                     (0x0C)                                        /**<  (PWM_CPRD) PWM Channel Period Register (ch_num = 0)  Offset */
@@ -193,6 +203,7 @@ typedef union {
 
 /* -------- PWM_CPRDUPD : (PWM Offset: 0x10) (/W 32) PWM Channel Period Update Register (ch_num = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CPRDUPD:24;                /**< bit:  0..23  Channel Period Update                    */
@@ -200,6 +211,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_CPRDUPD_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_CPRDUPD_OFFSET                  (0x10)                                        /**<  (PWM_CPRDUPD) PWM Channel Period Update Register (ch_num = 0)  Offset */
@@ -213,6 +225,7 @@ typedef union {
 
 /* -------- PWM_CCNT : (PWM Offset: 0x14) (R/ 32) PWM Channel Counter Register (ch_num = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CNT:24;                    /**< bit:  0..23  Channel Counter Register                 */
@@ -220,6 +233,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_CCNT_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_CCNT_OFFSET                     (0x14)                                        /**<  (PWM_CCNT) PWM Channel Counter Register (ch_num = 0)  Offset */
@@ -233,6 +247,7 @@ typedef union {
 
 /* -------- PWM_DT : (PWM Offset: 0x18) (R/W 32) PWM Channel Dead Time Register (ch_num = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DTH:16;                    /**< bit:  0..15  Dead-Time Value for PWMHx Output         */
@@ -240,6 +255,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_DT_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_DT_OFFSET                       (0x18)                                        /**<  (PWM_DT) PWM Channel Dead Time Register (ch_num = 0)  Offset */
@@ -256,6 +272,7 @@ typedef union {
 
 /* -------- PWM_DTUPD : (PWM Offset: 0x1c) (/W 32) PWM Channel Dead Time Update Register (ch_num = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DTHUPD:16;                 /**< bit:  0..15  Dead-Time Value Update for PWMHx Output  */
@@ -263,6 +280,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_DTUPD_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_DTUPD_OFFSET                    (0x1C)                                        /**<  (PWM_DTUPD) PWM Channel Dead Time Update Register (ch_num = 0)  Offset */
@@ -279,6 +297,7 @@ typedef union {
 
 /* -------- PWM_CMPV : (PWM Offset: 0x00) (R/W 32) PWM Comparison 0 Value Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CV:24;                     /**< bit:  0..23  Comparison x Value                       */
@@ -287,6 +306,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_CMPV_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_CMPV_OFFSET                     (0x00)                                        /**<  (PWM_CMPV) PWM Comparison 0 Value Register  Offset */
@@ -303,6 +323,7 @@ typedef union {
 
 /* -------- PWM_CMPVUPD : (PWM Offset: 0x04) (/W 32) PWM Comparison 0 Value Update Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CVUPD:24;                  /**< bit:  0..23  Comparison x Value Update                */
@@ -311,6 +332,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_CMPVUPD_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_CMPVUPD_OFFSET                  (0x04)                                        /**<  (PWM_CMPVUPD) PWM Comparison 0 Value Update Register  Offset */
@@ -327,6 +349,7 @@ typedef union {
 
 /* -------- PWM_CMPM : (PWM Offset: 0x08) (R/W 32) PWM Comparison 0 Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CEN:1;                     /**< bit:      0  Comparison x Enable                      */
@@ -340,6 +363,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_CMPM_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_CMPM_OFFSET                     (0x08)                                        /**<  (PWM_CMPM) PWM Comparison 0 Mode Register  Offset */
@@ -368,6 +392,7 @@ typedef union {
 
 /* -------- PWM_CMPMUPD : (PWM Offset: 0x0c) (/W 32) PWM Comparison 0 Mode Update Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CENUPD:1;                  /**< bit:      0  Comparison x Enable Update               */
@@ -380,6 +405,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_CMPMUPD_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_CMPMUPD_OFFSET                  (0x0C)                                        /**<  (PWM_CMPMUPD) PWM Comparison 0 Mode Update Register  Offset */
@@ -402,6 +428,7 @@ typedef union {
 
 /* -------- PWM_CLK : (PWM Offset: 0x00) (R/W 32) PWM Clock Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DIVA:8;                    /**< bit:   0..7  CLKA Divide Factor                       */
@@ -413,6 +440,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_CLK_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_CLK_OFFSET                      (0x00)                                        /**<  (PWM_CLK) PWM Clock Register  Offset */
@@ -487,6 +515,7 @@ typedef union {
 
 /* -------- PWM_ENA : (PWM Offset: 0x04) (/W 32) PWM Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CHID0:1;                   /**< bit:      0  Channel ID                               */
@@ -501,6 +530,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_ENA_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_ENA_OFFSET                      (0x04)                                        /**<  (PWM_ENA) PWM Enable Register  Offset */
@@ -526,6 +556,7 @@ typedef union {
 
 /* -------- PWM_DIS : (PWM Offset: 0x08) (/W 32) PWM Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CHID0:1;                   /**< bit:      0  Channel ID                               */
@@ -540,6 +571,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_DIS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_DIS_OFFSET                      (0x08)                                        /**<  (PWM_DIS) PWM Disable Register  Offset */
@@ -565,6 +597,7 @@ typedef union {
 
 /* -------- PWM_SR : (PWM Offset: 0x0c) (R/ 32) PWM Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CHID0:1;                   /**< bit:      0  Channel ID                               */
@@ -579,6 +612,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_SR_OFFSET                       (0x0C)                                        /**<  (PWM_SR) PWM Status Register  Offset */
@@ -604,6 +638,7 @@ typedef union {
 
 /* -------- PWM_IER1 : (PWM Offset: 0x10) (/W 32) PWM Interrupt Enable Register 1 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CHID0:1;                   /**< bit:      0  Counter Event on Channel 0 Interrupt Enable */
@@ -625,6 +660,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_IER1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_IER1_OFFSET                     (0x10)                                        /**<  (PWM_IER1) PWM Interrupt Enable Register 1  Offset */
@@ -665,6 +701,7 @@ typedef union {
 
 /* -------- PWM_IDR1 : (PWM Offset: 0x14) (/W 32) PWM Interrupt Disable Register 1 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CHID0:1;                   /**< bit:      0  Counter Event on Channel 0 Interrupt Disable */
@@ -686,6 +723,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_IDR1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_IDR1_OFFSET                     (0x14)                                        /**<  (PWM_IDR1) PWM Interrupt Disable Register 1  Offset */
@@ -726,6 +764,7 @@ typedef union {
 
 /* -------- PWM_IMR1 : (PWM Offset: 0x18) (R/ 32) PWM Interrupt Mask Register 1 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CHID0:1;                   /**< bit:      0  Counter Event on Channel 0 Interrupt Mask */
@@ -747,6 +786,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_IMR1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_IMR1_OFFSET                     (0x18)                                        /**<  (PWM_IMR1) PWM Interrupt Mask Register 1  Offset */
@@ -787,6 +827,7 @@ typedef union {
 
 /* -------- PWM_ISR1 : (PWM Offset: 0x1c) (R/ 32) PWM Interrupt Status Register 1 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CHID0:1;                   /**< bit:      0  Counter Event on Channel 0               */
@@ -808,6 +849,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_ISR1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_ISR1_OFFSET                     (0x1C)                                        /**<  (PWM_ISR1) PWM Interrupt Status Register 1  Offset */
@@ -848,6 +890,7 @@ typedef union {
 
 /* -------- PWM_SCM : (PWM Offset: 0x20) (R/W 32) PWM Sync Channels Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SYNC0:1;                   /**< bit:      0  Synchronous Channel 0                    */
@@ -867,6 +910,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_SCM_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_SCM_OFFSET                      (0x20)                                        /**<  (PWM_SCM) PWM Sync Channels Mode Register  Offset */
@@ -907,6 +951,7 @@ typedef union {
 
 /* -------- PWM_DMAR : (PWM Offset: 0x24) (/W 32) PWM DMA Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DMADUTY:24;                /**< bit:  0..23  Duty-Cycle Holding Register for DMA Access */
@@ -914,6 +959,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_DMAR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_DMAR_OFFSET                     (0x24)                                        /**<  (PWM_DMAR) PWM DMA Register  Offset */
@@ -927,6 +973,7 @@ typedef union {
 
 /* -------- PWM_SCUC : (PWM Offset: 0x28) (R/W 32) PWM Sync Channels Update Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t UPDULOCK:1;                /**< bit:      0  Synchronous Channels Update Unlock       */
@@ -934,6 +981,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_SCUC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_SCUC_OFFSET                     (0x28)                                        /**<  (PWM_SCUC) PWM Sync Channels Update Control Register  Offset */
@@ -947,6 +995,7 @@ typedef union {
 
 /* -------- PWM_SCUP : (PWM Offset: 0x2c) (R/W 32) PWM Sync Channels Update Period Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t UPR:4;                     /**< bit:   0..3  Update Period                            */
@@ -955,6 +1004,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_SCUP_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_SCUP_OFFSET                     (0x2C)                                        /**<  (PWM_SCUP) PWM Sync Channels Update Period Register  Offset */
@@ -971,6 +1021,7 @@ typedef union {
 
 /* -------- PWM_SCUPUPD : (PWM Offset: 0x30) (/W 32) PWM Sync Channels Update Period Update Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t UPRUPD:4;                  /**< bit:   0..3  Update Period Update                     */
@@ -978,6 +1029,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_SCUPUPD_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_SCUPUPD_OFFSET                  (0x30)                                        /**<  (PWM_SCUPUPD) PWM Sync Channels Update Period Update Register  Offset */
@@ -991,6 +1043,7 @@ typedef union {
 
 /* -------- PWM_IER2 : (PWM Offset: 0x34) (/W 32) PWM Interrupt Enable Register 2 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WRDY:1;                    /**< bit:      0  Write Ready for Synchronous Channels Update Interrupt Enable */
@@ -1023,6 +1076,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_IER2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_IER2_OFFSET                     (0x34)                                        /**<  (PWM_IER2) PWM Interrupt Enable Register 2  Offset */
@@ -1093,6 +1147,7 @@ typedef union {
 
 /* -------- PWM_IDR2 : (PWM Offset: 0x38) (/W 32) PWM Interrupt Disable Register 2 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WRDY:1;                    /**< bit:      0  Write Ready for Synchronous Channels Update Interrupt Disable */
@@ -1125,6 +1180,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_IDR2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_IDR2_OFFSET                     (0x38)                                        /**<  (PWM_IDR2) PWM Interrupt Disable Register 2  Offset */
@@ -1195,6 +1251,7 @@ typedef union {
 
 /* -------- PWM_IMR2 : (PWM Offset: 0x3c) (R/ 32) PWM Interrupt Mask Register 2 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WRDY:1;                    /**< bit:      0  Write Ready for Synchronous Channels Update Interrupt Mask */
@@ -1227,6 +1284,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_IMR2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_IMR2_OFFSET                     (0x3C)                                        /**<  (PWM_IMR2) PWM Interrupt Mask Register 2  Offset */
@@ -1297,6 +1355,7 @@ typedef union {
 
 /* -------- PWM_ISR2 : (PWM Offset: 0x40) (R/ 32) PWM Interrupt Status Register 2 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WRDY:1;                    /**< bit:      0  Write Ready for Synchronous Channels Update */
@@ -1329,6 +1388,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_ISR2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_ISR2_OFFSET                     (0x40)                                        /**<  (PWM_ISR2) PWM Interrupt Status Register 2  Offset */
@@ -1399,6 +1459,7 @@ typedef union {
 
 /* -------- PWM_OOV : (PWM Offset: 0x44) (R/W 32) PWM Output Override Value Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OOVH0:1;                   /**< bit:      0  Output Override Value for PWMH output of the channel 0 */
@@ -1420,6 +1481,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_OOV_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_OOV_OFFSET                      (0x44)                                        /**<  (PWM_OOV) PWM Output Override Value Register  Offset */
@@ -1460,6 +1522,7 @@ typedef union {
 
 /* -------- PWM_OS : (PWM Offset: 0x48) (R/W 32) PWM Output Selection Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OSH0:1;                    /**< bit:      0  Output Selection for PWMH output of the channel 0 */
@@ -1481,6 +1544,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_OS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_OS_OFFSET                       (0x48)                                        /**<  (PWM_OS) PWM Output Selection Register  Offset */
@@ -1521,6 +1585,7 @@ typedef union {
 
 /* -------- PWM_OSS : (PWM Offset: 0x4c) (/W 32) PWM Output Selection Set Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OSSH0:1;                   /**< bit:      0  Output Selection Set for PWMH output of the channel 0 */
@@ -1542,6 +1607,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_OSS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_OSS_OFFSET                      (0x4C)                                        /**<  (PWM_OSS) PWM Output Selection Set Register  Offset */
@@ -1582,6 +1648,7 @@ typedef union {
 
 /* -------- PWM_OSC : (PWM Offset: 0x50) (/W 32) PWM Output Selection Clear Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OSCH0:1;                   /**< bit:      0  Output Selection Clear for PWMH output of the channel 0 */
@@ -1603,6 +1670,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_OSC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_OSC_OFFSET                      (0x50)                                        /**<  (PWM_OSC) PWM Output Selection Clear Register  Offset */
@@ -1643,6 +1711,7 @@ typedef union {
 
 /* -------- PWM_OSSUPD : (PWM Offset: 0x54) (/W 32) PWM Output Selection Set Update Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OSSUPH0:1;                 /**< bit:      0  Output Selection Set for PWMH output of the channel 0 */
@@ -1664,6 +1733,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_OSSUPD_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_OSSUPD_OFFSET                   (0x54)                                        /**<  (PWM_OSSUPD) PWM Output Selection Set Update Register  Offset */
@@ -1704,6 +1774,7 @@ typedef union {
 
 /* -------- PWM_OSCUPD : (PWM Offset: 0x58) (/W 32) PWM Output Selection Clear Update Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t OSCUPH0:1;                 /**< bit:      0  Output Selection Clear for PWMH output of the channel 0 */
@@ -1725,6 +1796,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_OSCUPD_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_OSCUPD_OFFSET                   (0x58)                                        /**<  (PWM_OSCUPD) PWM Output Selection Clear Update Register  Offset */
@@ -1765,6 +1837,7 @@ typedef union {
 
 /* -------- PWM_FMR : (PWM Offset: 0x5c) (R/W 32) PWM Fault Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FPOL:8;                    /**< bit:   0..7  Fault Polarity                           */
@@ -1774,6 +1847,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_FMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_FMR_OFFSET                      (0x5C)                                        /**<  (PWM_FMR) PWM Fault Mode Register  Offset */
@@ -1793,6 +1867,7 @@ typedef union {
 
 /* -------- PWM_FSR : (PWM Offset: 0x60) (R/ 32) PWM Fault Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FIV:8;                     /**< bit:   0..7  Fault Input Value                        */
@@ -1801,6 +1876,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_FSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_FSR_OFFSET                      (0x60)                                        /**<  (PWM_FSR) PWM Fault Status Register  Offset */
@@ -1817,6 +1893,7 @@ typedef union {
 
 /* -------- PWM_FCR : (PWM Offset: 0x64) (/W 32) PWM Fault Clear Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FCLR:8;                    /**< bit:   0..7  Fault Clear                              */
@@ -1824,6 +1901,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_FCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_FCR_OFFSET                      (0x64)                                        /**<  (PWM_FCR) PWM Fault Clear Register  Offset */
@@ -1837,6 +1915,7 @@ typedef union {
 
 /* -------- PWM_FPV1 : (PWM Offset: 0x68) (R/W 32) PWM Fault Protection Value Register 1 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FPVH0:1;                   /**< bit:      0  Fault Protection Value for PWMH output on channel 0 */
@@ -1858,6 +1937,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_FPV1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_FPV1_OFFSET                     (0x68)                                        /**<  (PWM_FPV1) PWM Fault Protection Value Register 1  Offset */
@@ -1898,6 +1978,7 @@ typedef union {
 
 /* -------- PWM_FPE : (PWM Offset: 0x6c) (R/W 32) PWM Fault Protection Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FPE0:8;                    /**< bit:   0..7  Fault Protection Enable for channel 0    */
@@ -1907,6 +1988,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_FPE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_FPE_OFFSET                      (0x6C)                                        /**<  (PWM_FPE) PWM Fault Protection Enable Register  Offset */
@@ -1929,6 +2011,7 @@ typedef union {
 
 /* -------- PWM_ELMR : (PWM Offset: 0x7c) (R/W 32) PWM Event Line 0 Mode Register 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CSEL0:1;                   /**< bit:      0  Comparison 0 Selection                   */
@@ -1947,6 +2030,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_ELMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_ELMR_OFFSET                     (0x7C)                                        /**<  (PWM_ELMR) PWM Event Line 0 Mode Register 0  Offset */
@@ -1984,6 +2068,7 @@ typedef union {
 
 /* -------- PWM_SSPR : (PWM Offset: 0xa0) (R/W 32) PWM Spread Spectrum Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SPRD:24;                   /**< bit:  0..23  Spread Spectrum Limit Value              */
@@ -1992,6 +2077,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_SSPR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_SSPR_OFFSET                     (0xA0)                                        /**<  (PWM_SSPR) PWM Spread Spectrum Register  Offset */
@@ -2008,6 +2094,7 @@ typedef union {
 
 /* -------- PWM_SSPUP : (PWM Offset: 0xa4) (/W 32) PWM Spread Spectrum Update Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SPRDUP:24;                 /**< bit:  0..23  Spread Spectrum Limit Value Update       */
@@ -2015,6 +2102,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_SSPUP_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_SSPUP_OFFSET                    (0xA4)                                        /**<  (PWM_SSPUP) PWM Spread Spectrum Update Register  Offset */
@@ -2028,6 +2116,7 @@ typedef union {
 
 /* -------- PWM_SMMR : (PWM Offset: 0xb0) (R/W 32) PWM Stepper Motor Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t GCEN0:1;                   /**< bit:      0  Gray Count ENable                        */
@@ -2045,6 +2134,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_SMMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_SMMR_OFFSET                     (0xB0)                                        /**<  (PWM_SMMR) PWM Stepper Motor Mode Register  Offset */
@@ -2073,6 +2163,7 @@ typedef union {
 
 /* -------- PWM_FPV2 : (PWM Offset: 0xc0) (R/W 32) PWM Fault Protection Value 2 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FPZH0:1;                   /**< bit:      0  Fault Protection to Hi-Z for PWMH output on channel 0 */
@@ -2094,6 +2185,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_FPV2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_FPV2_OFFSET                     (0xC0)                                        /**<  (PWM_FPV2) PWM Fault Protection Value 2 Register  Offset */
@@ -2134,6 +2226,7 @@ typedef union {
 
 /* -------- PWM_WPCR : (PWM Offset: 0xe4) (/W 32) PWM Write Protection Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPCMD:2;                   /**< bit:   0..1  Write Protection Command                 */
@@ -2152,6 +2245,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_WPCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_WPCR_OFFSET                     (0xE4)                                        /**<  (PWM_WPCR) PWM Write Protection Control Register  Offset */
@@ -2197,6 +2291,7 @@ typedef union {
 
 /* -------- PWM_WPSR : (PWM Offset: 0xe8) (R/ 32) PWM Write Protection Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPSWS0:1;                  /**< bit:      0  Write Protect SW Status                  */
@@ -2224,6 +2319,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_WPSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_WPSR_OFFSET                     (0xE8)                                        /**<  (PWM_WPSR) PWM Write Protection Status Register  Offset */
@@ -2282,6 +2378,7 @@ typedef union {
 
 /* -------- PWM_CMUPD0 : (PWM Offset: 0x400) (/W 32) PWM Channel Mode Update Register (ch_num = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :9;                        /**< bit:   0..8  Reserved */
@@ -2292,6 +2389,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_CMUPD0_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_CMUPD0_OFFSET                   (0x400)                                       /**<  (PWM_CMUPD0) PWM Channel Mode Update Register (ch_num = 0)  Offset */
@@ -2308,6 +2406,7 @@ typedef union {
 
 /* -------- PWM_CMUPD1 : (PWM Offset: 0x420) (/W 32) PWM Channel Mode Update Register (ch_num = 1) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :9;                        /**< bit:   0..8  Reserved */
@@ -2318,6 +2417,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_CMUPD1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_CMUPD1_OFFSET                   (0x420)                                       /**<  (PWM_CMUPD1) PWM Channel Mode Update Register (ch_num = 1)  Offset */
@@ -2334,6 +2434,7 @@ typedef union {
 
 /* -------- PWM_ETRG1 : (PWM Offset: 0x42c) (R/W 32) PWM External Trigger Register (trg_num = 1) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MAXCNT:24;                 /**< bit:  0..23  Maximum Counter value                    */
@@ -2346,6 +2447,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_ETRG1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_ETRG1_OFFSET                    (0x42C)                                       /**<  (PWM_ETRG1) PWM External Trigger Register (trg_num = 1)  Offset */
@@ -2386,6 +2488,7 @@ typedef union {
 
 /* -------- PWM_LEBR1 : (PWM Offset: 0x430) (R/W 32) PWM Leading-Edge Blanking Register (trg_num = 1) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t LEBDELAY:7;                /**< bit:   0..6  Leading-Edge Blanking Delay for TRGINx   */
@@ -2398,6 +2501,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_LEBR1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_LEBR1_OFFSET                    (0x430)                                       /**<  (PWM_LEBR1) PWM Leading-Edge Blanking Register (trg_num = 1)  Offset */
@@ -2423,6 +2527,7 @@ typedef union {
 
 /* -------- PWM_CMUPD2 : (PWM Offset: 0x440) (/W 32) PWM Channel Mode Update Register (ch_num = 2) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :9;                        /**< bit:   0..8  Reserved */
@@ -2433,6 +2538,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_CMUPD2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_CMUPD2_OFFSET                   (0x440)                                       /**<  (PWM_CMUPD2) PWM Channel Mode Update Register (ch_num = 2)  Offset */
@@ -2449,6 +2555,7 @@ typedef union {
 
 /* -------- PWM_ETRG2 : (PWM Offset: 0x44c) (R/W 32) PWM External Trigger Register (trg_num = 2) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MAXCNT:24;                 /**< bit:  0..23  Maximum Counter value                    */
@@ -2461,6 +2568,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_ETRG2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_ETRG2_OFFSET                    (0x44C)                                       /**<  (PWM_ETRG2) PWM External Trigger Register (trg_num = 2)  Offset */
@@ -2501,6 +2609,7 @@ typedef union {
 
 /* -------- PWM_LEBR2 : (PWM Offset: 0x450) (R/W 32) PWM Leading-Edge Blanking Register (trg_num = 2) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t LEBDELAY:7;                /**< bit:   0..6  Leading-Edge Blanking Delay for TRGINx   */
@@ -2513,6 +2622,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_LEBR2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_LEBR2_OFFSET                    (0x450)                                       /**<  (PWM_LEBR2) PWM Leading-Edge Blanking Register (trg_num = 2)  Offset */
@@ -2538,6 +2648,7 @@ typedef union {
 
 /* -------- PWM_CMUPD3 : (PWM Offset: 0x460) (/W 32) PWM Channel Mode Update Register (ch_num = 3) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :9;                        /**< bit:   0..8  Reserved */
@@ -2548,6 +2659,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } PWM_CMUPD3_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PWM_CMUPD3_OFFSET                   (0x460)                                       /**<  (PWM_CMUPD3) PWM Channel Mode Update Register (ch_num = 3)  Offset */
@@ -2616,35 +2728,35 @@ typedef struct {
   __O  uint32_t PWM_FCR;        /**< (PWM Offset: 0x64) PWM Fault Clear Register */
   __IO uint32_t PWM_FPV1;       /**< (PWM Offset: 0x68) PWM Fault Protection Value Register 1 */
   __IO uint32_t PWM_FPE;        /**< (PWM Offset: 0x6C) PWM Fault Protection Enable Register */
-  RoReg8  Reserved1[0xC];
+  __I  uint8_t                        Reserved1[12];
   __IO uint32_t PWM_ELMR[2];    /**< (PWM Offset: 0x7C) PWM Event Line 0 Mode Register 0 */
-  RoReg8  Reserved2[0x1C];
+  __I  uint8_t                        Reserved2[28];
   __IO uint32_t PWM_SSPR;       /**< (PWM Offset: 0xA0) PWM Spread Spectrum Register */
   __O  uint32_t PWM_SSPUP;      /**< (PWM Offset: 0xA4) PWM Spread Spectrum Update Register */
-  RoReg8  Reserved3[0x8];
+  __I  uint8_t                        Reserved3[8];
   __IO uint32_t PWM_SMMR;       /**< (PWM Offset: 0xB0) PWM Stepper Motor Mode Register */
-  RoReg8  Reserved4[0xC];
+  __I  uint8_t                        Reserved4[12];
   __IO uint32_t PWM_FPV2;       /**< (PWM Offset: 0xC0) PWM Fault Protection Value 2 Register */
-  RoReg8  Reserved5[0x20];
+  __I  uint8_t                        Reserved5[32];
   __O  uint32_t PWM_WPCR;       /**< (PWM Offset: 0xE4) PWM Write Protection Control Register */
   __I  uint32_t PWM_WPSR;       /**< (PWM Offset: 0xE8) PWM Write Protection Status Register */
-  RoReg8  Reserved6[0x44];
-       PwmCmp   PWM_CMP[PWMCMP_NUMBER]; /**< Offset: 0x130 PWM Comparison 0 Value Register */
-  RoReg8  Reserved7[0x50];
-       PwmChNum PWM_CH_NUM[PWMCHNUM_NUMBER]; /**< Offset: 0x200 PWM Channel Mode Register (ch_num = 0) */
-  RoReg8  Reserved8[0x180];
+  __I  uint8_t                        Reserved6[68];
+       PwmCmp   PwmCmp[PWMCMP_NUMBER]; /**< Offset: 0x130 PWM Comparison 0 Value Register */
+  __I  uint8_t                        Reserved7[80];
+       PwmChNum PwmChNum[PWMCHNUM_NUMBER]; /**< Offset: 0x200 PWM Channel Mode Register (ch_num = 0) */
+  __I  uint8_t                        Reserved8[384];
   __O  uint32_t PWM_CMUPD0;     /**< (PWM Offset: 0x400) PWM Channel Mode Update Register (ch_num = 0) */
-  RoReg8  Reserved9[0x1C];
+  __I  uint8_t                        Reserved9[28];
   __O  uint32_t PWM_CMUPD1;     /**< (PWM Offset: 0x420) PWM Channel Mode Update Register (ch_num = 1) */
-  RoReg8  Reserved10[0x8];
+  __I  uint8_t                        Reserved10[8];
   __IO uint32_t PWM_ETRG1;      /**< (PWM Offset: 0x42C) PWM External Trigger Register (trg_num = 1) */
   __IO uint32_t PWM_LEBR1;      /**< (PWM Offset: 0x430) PWM Leading-Edge Blanking Register (trg_num = 1) */
-  RoReg8  Reserved11[0xC];
+  __I  uint8_t                        Reserved11[12];
   __O  uint32_t PWM_CMUPD2;     /**< (PWM Offset: 0x440) PWM Channel Mode Update Register (ch_num = 2) */
-  RoReg8  Reserved12[0x8];
+  __I  uint8_t                        Reserved12[8];
   __IO uint32_t PWM_ETRG2;      /**< (PWM Offset: 0x44C) PWM External Trigger Register (trg_num = 2) */
   __IO uint32_t PWM_LEBR2;      /**< (PWM Offset: 0x450) PWM Leading-Edge Blanking Register (trg_num = 2) */
-  RoReg8  Reserved13[0xC];
+  __I  uint8_t                        Reserved13[12];
   __O  uint32_t PWM_CMUPD3;     /**< (PWM Offset: 0x460) PWM Channel Mode Update Register (ch_num = 3) */
 } Pwm;
 
@@ -2699,35 +2811,35 @@ typedef struct {
   __O  PWM_FCR_Type                   PWM_FCR;        /**< Offset: 0x64 ( /W  32) PWM Fault Clear Register */
   __IO PWM_FPV1_Type                  PWM_FPV1;       /**< Offset: 0x68 (R/W  32) PWM Fault Protection Value Register 1 */
   __IO PWM_FPE_Type                   PWM_FPE;        /**< Offset: 0x6C (R/W  32) PWM Fault Protection Enable Register */
-  __I  uint32_t                       Reserved1[3];
+  __I  uint8_t                        Reserved1[12];
   __IO PWM_ELMR_Type                  PWM_ELMR[2];    /**< Offset: 0x7C (R/W  32) PWM Event Line 0 Mode Register 0 */
-  __I  uint32_t                       Reserved2[7];
+  __I  uint8_t                        Reserved2[28];
   __IO PWM_SSPR_Type                  PWM_SSPR;       /**< Offset: 0xA0 (R/W  32) PWM Spread Spectrum Register */
   __O  PWM_SSPUP_Type                 PWM_SSPUP;      /**< Offset: 0xA4 ( /W  32) PWM Spread Spectrum Update Register */
-  __I  uint32_t                       Reserved3[2];
+  __I  uint8_t                        Reserved3[8];
   __IO PWM_SMMR_Type                  PWM_SMMR;       /**< Offset: 0xB0 (R/W  32) PWM Stepper Motor Mode Register */
-  __I  uint32_t                       Reserved4[3];
+  __I  uint8_t                        Reserved4[12];
   __IO PWM_FPV2_Type                  PWM_FPV2;       /**< Offset: 0xC0 (R/W  32) PWM Fault Protection Value 2 Register */
-  __I  uint32_t                       Reserved5[8];
+  __I  uint8_t                        Reserved5[32];
   __O  PWM_WPCR_Type                  PWM_WPCR;       /**< Offset: 0xE4 ( /W  32) PWM Write Protection Control Register */
   __I  PWM_WPSR_Type                  PWM_WPSR;       /**< Offset: 0xE8 (R/   32) PWM Write Protection Status Register */
-  __I  uint32_t                       Reserved6[17];
-       PwmCmp                         PWM_CMP[8];     /**< Offset: 0x130 PWM Comparison 0 Value Register */
-  __I  uint32_t                       Reserved7[20];
-       PwmChNum                       PWM_CH_NUM[4];  /**< Offset: 0x200 PWM Channel Mode Register (ch_num = 0) */
-  __I  uint32_t                       Reserved8[96];
+  __I  uint8_t                        Reserved6[68];
+       PwmCmp                         PwmCmp[8];      /**< Offset: 0x130 PWM Comparison 0 Value Register */
+  __I  uint8_t                        Reserved7[80];
+       PwmChNum                       PwmChNum[4];    /**< Offset: 0x200 PWM Channel Mode Register (ch_num = 0) */
+  __I  uint8_t                        Reserved8[384];
   __O  PWM_CMUPD0_Type                PWM_CMUPD0;     /**< Offset: 0x400 ( /W  32) PWM Channel Mode Update Register (ch_num = 0) */
-  __I  uint32_t                       Reserved9[7];
+  __I  uint8_t                        Reserved9[28];
   __O  PWM_CMUPD1_Type                PWM_CMUPD1;     /**< Offset: 0x420 ( /W  32) PWM Channel Mode Update Register (ch_num = 1) */
-  __I  uint32_t                       Reserved10[2];
+  __I  uint8_t                        Reserved10[8];
   __IO PWM_ETRG1_Type                 PWM_ETRG1;      /**< Offset: 0x42C (R/W  32) PWM External Trigger Register (trg_num = 1) */
   __IO PWM_LEBR1_Type                 PWM_LEBR1;      /**< Offset: 0x430 (R/W  32) PWM Leading-Edge Blanking Register (trg_num = 1) */
-  __I  uint32_t                       Reserved11[3];
+  __I  uint8_t                        Reserved11[12];
   __O  PWM_CMUPD2_Type                PWM_CMUPD2;     /**< Offset: 0x440 ( /W  32) PWM Channel Mode Update Register (ch_num = 2) */
-  __I  uint32_t                       Reserved12[2];
+  __I  uint8_t                        Reserved12[8];
   __IO PWM_ETRG2_Type                 PWM_ETRG2;      /**< Offset: 0x44C (R/W  32) PWM External Trigger Register (trg_num = 2) */
   __IO PWM_LEBR2_Type                 PWM_LEBR2;      /**< Offset: 0x450 (R/W  32) PWM Leading-Edge Blanking Register (trg_num = 2) */
-  __I  uint32_t                       Reserved13[3];
+  __I  uint8_t                        Reserved13[12];
   __O  PWM_CMUPD3_Type                PWM_CMUPD3;     /**< Offset: 0x460 ( /W  32) PWM Channel Mode Update Register (ch_num = 3) */
 } Pwm;
 

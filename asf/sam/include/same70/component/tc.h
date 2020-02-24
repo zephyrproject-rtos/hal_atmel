@@ -3,11 +3,13 @@
  *
  * \brief Component description for TC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- TC_CCR : (TC Offset: 0x00) (/W 32) Channel Control Register (channel = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CLKEN:1;                   /**< bit:      0  Counter Clock Enable Command             */
@@ -54,6 +57,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_CCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_CCR_OFFSET                       (0x00)                                        /**<  (TC_CCR) Channel Control Register (channel = 0)  Offset */
@@ -73,6 +77,7 @@ typedef union {
 
 /* -------- TC_CMR : (TC Offset: 0x04) (R/W 32) Channel Mode Register (channel = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TCCLKS:3;                  /**< bit:   0..2  Clock Selection                          */
@@ -92,6 +97,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_CMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_CMR_OFFSET                       (0x04)                                        /**<  (TC_CMR) Channel Mode Register (channel = 0)  Offset */
@@ -190,92 +196,13 @@ typedef union {
 #define TC_CMR_SBSMPLR_FOURTH               (TC_CMR_SBSMPLR_FOURTH_Val << TC_CMR_SBSMPLR_Pos)  /**< (TC_CMR) Load a Capture Register every 4 selected edges Position  */
 #define TC_CMR_SBSMPLR_EIGHTH               (TC_CMR_SBSMPLR_EIGHTH_Val << TC_CMR_SBSMPLR_Pos)  /**< (TC_CMR) Load a Capture Register every 8 selected edges Position  */
 #define TC_CMR_SBSMPLR_SIXTEENTH            (TC_CMR_SBSMPLR_SIXTEENTH_Val << TC_CMR_SBSMPLR_Pos)  /**< (TC_CMR) Load a Capture Register every 16 selected edges Position  */
-#define TC_CMR_CPCSTOP (0x1u << 6) /**< \brief (TC_CMR) Counter Clock Stopped with RC Compare */
-#define TC_CMR_CPCDIS (0x1u << 7) /**< \brief (TC_CMR) Counter Clock Disable with RC Compare */
-#define TC_CMR_EEVTEDG_Pos 8
-#define TC_CMR_EEVTEDG_Msk (0x3u << TC_CMR_EEVTEDG_Pos) /**< \brief (TC_CMR) External Event Edge Selection */
-#define TC_CMR_EEVTEDG(value) ((TC_CMR_EEVTEDG_Msk & ((value) << TC_CMR_EEVTEDG_Pos)))
-#define   TC_CMR_EEVTEDG_NONE (0x0u << 8) /**< \brief (TC_CMR) None */
-#define   TC_CMR_EEVTEDG_RISING (0x1u << 8) /**< \brief (TC_CMR) Rising edge */
-#define   TC_CMR_EEVTEDG_FALLING (0x2u << 8) /**< \brief (TC_CMR) Falling edge */
-#define   TC_CMR_EEVTEDG_EDGE (0x3u << 8) /**< \brief (TC_CMR) Each edge */
-#define TC_CMR_EEVT_Pos 10
-#define TC_CMR_EEVT_Msk (0x3u << TC_CMR_EEVT_Pos) /**< \brief (TC_CMR) External Event Selection */
-#define TC_CMR_EEVT(value) ((TC_CMR_EEVT_Msk & ((value) << TC_CMR_EEVT_Pos)))
-#define   TC_CMR_EEVT_TIOB (0x0u << 10) /**< \brief (TC_CMR) TIOB */
-#define   TC_CMR_EEVT_XC0 (0x1u << 10) /**< \brief (TC_CMR) XC0 */
-#define   TC_CMR_EEVT_XC1 (0x2u << 10) /**< \brief (TC_CMR) XC1 */
-#define   TC_CMR_EEVT_XC2 (0x3u << 10) /**< \brief (TC_CMR) XC2 */
-#define TC_CMR_ENETRG (0x1u << 12) /**< \brief (TC_CMR) External Event Trigger Enable */
-#define TC_CMR_WAVSEL_Pos 13
-#define TC_CMR_WAVSEL_Msk (0x3u << TC_CMR_WAVSEL_Pos) /**< \brief (TC_CMR) Waveform Selection */
-#define TC_CMR_WAVSEL(value) ((TC_CMR_WAVSEL_Msk & ((value) << TC_CMR_WAVSEL_Pos)))
-#define   TC_CMR_WAVSEL_UP (0x0u << 13) /**< \brief (TC_CMR) UP mode without automatic trigger on RC Compare */
-#define   TC_CMR_WAVSEL_UPDOWN (0x1u << 13) /**< \brief (TC_CMR) UPDOWN mode without automatic trigger on RC Compare */
-#define   TC_CMR_WAVSEL_UP_RC (0x2u << 13) /**< \brief (TC_CMR) UP mode with automatic trigger on RC Compare */
-#define   TC_CMR_WAVSEL_UPDOWN_RC (0x3u << 13) /**< \brief (TC_CMR) UPDOWN mode with automatic trigger on RC Compare */
-#define TC_CMR_ACPA_Pos 16
-#define TC_CMR_ACPA_Msk (0x3u << TC_CMR_ACPA_Pos) /**< \brief (TC_CMR) RA Compare Effect on TIOA */
-#define TC_CMR_ACPA(value) ((TC_CMR_ACPA_Msk & ((value) << TC_CMR_ACPA_Pos)))
-#define   TC_CMR_ACPA_NONE (0x0u << 16) /**< \brief (TC_CMR) None */
-#define   TC_CMR_ACPA_SET (0x1u << 16) /**< \brief (TC_CMR) Set */
-#define   TC_CMR_ACPA_CLEAR (0x2u << 16) /**< \brief (TC_CMR) Clear */
-#define   TC_CMR_ACPA_TOGGLE (0x3u << 16) /**< \brief (TC_CMR) Toggle */
-#define TC_CMR_ACPC_Pos 18
-#define TC_CMR_ACPC_Msk (0x3u << TC_CMR_ACPC_Pos) /**< \brief (TC_CMR) RC Compare Effect on TIOA */
-#define TC_CMR_ACPC(value) ((TC_CMR_ACPC_Msk & ((value) << TC_CMR_ACPC_Pos)))
-#define   TC_CMR_ACPC_NONE (0x0u << 18) /**< \brief (TC_CMR) None */
-#define   TC_CMR_ACPC_SET (0x1u << 18) /**< \brief (TC_CMR) Set */
-#define   TC_CMR_ACPC_CLEAR (0x2u << 18) /**< \brief (TC_CMR) Clear */
-#define   TC_CMR_ACPC_TOGGLE (0x3u << 18) /**< \brief (TC_CMR) Toggle */
-#define TC_CMR_AEEVT_Pos 20
-#define TC_CMR_AEEVT_Msk (0x3u << TC_CMR_AEEVT_Pos) /**< \brief (TC_CMR) External Event Effect on TIOA */
-#define TC_CMR_AEEVT(value) ((TC_CMR_AEEVT_Msk & ((value) << TC_CMR_AEEVT_Pos)))
-#define   TC_CMR_AEEVT_NONE (0x0u << 20) /**< \brief (TC_CMR) None */
-#define   TC_CMR_AEEVT_SET (0x1u << 20) /**< \brief (TC_CMR) Set */
-#define   TC_CMR_AEEVT_CLEAR (0x2u << 20) /**< \brief (TC_CMR) Clear */
-#define   TC_CMR_AEEVT_TOGGLE (0x3u << 20) /**< \brief (TC_CMR) Toggle */
-#define TC_CMR_ASWTRG_Pos 22
-#define TC_CMR_ASWTRG_Msk (0x3u << TC_CMR_ASWTRG_Pos) /**< \brief (TC_CMR) Software Trigger Effect on TIOA */
-#define TC_CMR_ASWTRG(value) ((TC_CMR_ASWTRG_Msk & ((value) << TC_CMR_ASWTRG_Pos)))
-#define   TC_CMR_ASWTRG_NONE (0x0u << 22) /**< \brief (TC_CMR) None */
-#define   TC_CMR_ASWTRG_SET (0x1u << 22) /**< \brief (TC_CMR) Set */
-#define   TC_CMR_ASWTRG_CLEAR (0x2u << 22) /**< \brief (TC_CMR) Clear */
-#define   TC_CMR_ASWTRG_TOGGLE (0x3u << 22) /**< \brief (TC_CMR) Toggle */
-#define TC_CMR_BCPB_Pos 24
-#define TC_CMR_BCPB_Msk (0x3u << TC_CMR_BCPB_Pos) /**< \brief (TC_CMR) RB Compare Effect on TIOB */
-#define TC_CMR_BCPB(value) ((TC_CMR_BCPB_Msk & ((value) << TC_CMR_BCPB_Pos)))
-#define   TC_CMR_BCPB_NONE (0x0u << 24) /**< \brief (TC_CMR) None */
-#define   TC_CMR_BCPB_SET (0x1u << 24) /**< \brief (TC_CMR) Set */
-#define   TC_CMR_BCPB_CLEAR (0x2u << 24) /**< \brief (TC_CMR) Clear */
-#define   TC_CMR_BCPB_TOGGLE (0x3u << 24) /**< \brief (TC_CMR) Toggle */
-#define TC_CMR_BCPC_Pos 26
-#define TC_CMR_BCPC_Msk (0x3u << TC_CMR_BCPC_Pos) /**< \brief (TC_CMR) RC Compare Effect on TIOB */
-#define TC_CMR_BCPC(value) ((TC_CMR_BCPC_Msk & ((value) << TC_CMR_BCPC_Pos)))
-#define   TC_CMR_BCPC_NONE (0x0u << 26) /**< \brief (TC_CMR) None */
-#define   TC_CMR_BCPC_SET (0x1u << 26) /**< \brief (TC_CMR) Set */
-#define   TC_CMR_BCPC_CLEAR (0x2u << 26) /**< \brief (TC_CMR) Clear */
-#define   TC_CMR_BCPC_TOGGLE (0x3u << 26) /**< \brief (TC_CMR) Toggle */
-#define TC_CMR_BEEVT_Pos 28
-#define TC_CMR_BEEVT_Msk (0x3u << TC_CMR_BEEVT_Pos) /**< \brief (TC_CMR) External Event Effect on TIOB */
-#define TC_CMR_BEEVT(value) ((TC_CMR_BEEVT_Msk & ((value) << TC_CMR_BEEVT_Pos)))
-#define   TC_CMR_BEEVT_NONE (0x0u << 28) /**< \brief (TC_CMR) None */
-#define   TC_CMR_BEEVT_SET (0x1u << 28) /**< \brief (TC_CMR) Set */
-#define   TC_CMR_BEEVT_CLEAR (0x2u << 28) /**< \brief (TC_CMR) Clear */
-#define   TC_CMR_BEEVT_TOGGLE (0x3u << 28) /**< \brief (TC_CMR) Toggle */
-#define TC_CMR_BSWTRG_Pos 30
-#define TC_CMR_BSWTRG_Msk (0x3u << TC_CMR_BSWTRG_Pos) /**< \brief (TC_CMR) Software Trigger Effect on TIOB */
-#define TC_CMR_BSWTRG(value) ((TC_CMR_BSWTRG_Msk & ((value) << TC_CMR_BSWTRG_Pos)))
-#define   TC_CMR_BSWTRG_NONE (0x0u << 30) /**< \brief (TC_CMR) None */
-#define   TC_CMR_BSWTRG_SET (0x1u << 30) /**< \brief (TC_CMR) Set */
-#define   TC_CMR_BSWTRG_CLEAR (0x2u << 30) /**< \brief (TC_CMR) Clear */
-#define   TC_CMR_BSWTRG_TOGGLE (0x3u << 30) /**< \brief (TC_CMR) Toggle */
 #define TC_CMR_MASK                         _U_(0x7FC7FF)                                  /**< \deprecated (TC_CMR) Register MASK  (Use TC_CMR_Msk instead)  */
 #define TC_CMR_Msk                          _U_(0x7FC7FF)                                  /**< (TC_CMR) Register Mask  */
 
 
 /* -------- TC_SMMR : (TC Offset: 0x08) (R/W 32) Stepper Motor Mode Register (channel = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t GCEN:1;                    /**< bit:      0  Gray Count Enable                        */
@@ -284,6 +211,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_SMMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_SMMR_OFFSET                      (0x08)                                        /**<  (TC_SMMR) Stepper Motor Mode Register (channel = 0)  Offset */
@@ -300,12 +228,14 @@ typedef union {
 
 /* -------- TC_RAB : (TC Offset: 0x0c) (R/ 32) Register AB (channel = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RAB:32;                    /**< bit:  0..31  Register A or Register B                 */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_RAB_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_RAB_OFFSET                       (0x0C)                                        /**<  (TC_RAB) Register AB (channel = 0)  Offset */
@@ -319,12 +249,14 @@ typedef union {
 
 /* -------- TC_CV : (TC Offset: 0x10) (R/ 32) Counter Value (channel = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CV:32;                     /**< bit:  0..31  Counter Value                            */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_CV_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_CV_OFFSET                        (0x10)                                        /**<  (TC_CV) Counter Value (channel = 0)  Offset */
@@ -338,12 +270,14 @@ typedef union {
 
 /* -------- TC_RA : (TC Offset: 0x14) (R/W 32) Register A (channel = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RA:32;                     /**< bit:  0..31  Register A                               */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_RA_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_RA_OFFSET                        (0x14)                                        /**<  (TC_RA) Register A (channel = 0)  Offset */
@@ -357,12 +291,14 @@ typedef union {
 
 /* -------- TC_RB : (TC Offset: 0x18) (R/W 32) Register B (channel = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RB:32;                     /**< bit:  0..31  Register B                               */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_RB_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_RB_OFFSET                        (0x18)                                        /**<  (TC_RB) Register B (channel = 0)  Offset */
@@ -376,12 +312,14 @@ typedef union {
 
 /* -------- TC_RC : (TC Offset: 0x1c) (R/W 32) Register C (channel = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RC:32;                     /**< bit:  0..31  Register C                               */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_RC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_RC_OFFSET                        (0x1C)                                        /**<  (TC_RC) Register C (channel = 0)  Offset */
@@ -395,6 +333,7 @@ typedef union {
 
 /* -------- TC_SR : (TC Offset: 0x20) (R/ 32) Status Register (channel = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t COVFS:1;                   /**< bit:      0  Counter Overflow Status (cleared on read) */
@@ -413,6 +352,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_SR_OFFSET                        (0x20)                                        /**<  (TC_SR) Status Register (channel = 0)  Offset */
@@ -456,6 +396,7 @@ typedef union {
 
 /* -------- TC_IER : (TC Offset: 0x24) (/W 32) Interrupt Enable Register (channel = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t COVFS:1;                   /**< bit:      0  Counter Overflow                         */
@@ -470,6 +411,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_IER_OFFSET                       (0x24)                                        /**<  (TC_IER) Interrupt Enable Register (channel = 0)  Offset */
@@ -504,6 +446,7 @@ typedef union {
 
 /* -------- TC_IDR : (TC Offset: 0x28) (/W 32) Interrupt Disable Register (channel = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t COVFS:1;                   /**< bit:      0  Counter Overflow                         */
@@ -518,6 +461,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_IDR_OFFSET                       (0x28)                                        /**<  (TC_IDR) Interrupt Disable Register (channel = 0)  Offset */
@@ -552,6 +496,7 @@ typedef union {
 
 /* -------- TC_IMR : (TC Offset: 0x2c) (R/ 32) Interrupt Mask Register (channel = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t COVFS:1;                   /**< bit:      0  Counter Overflow                         */
@@ -566,6 +511,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_IMR_OFFSET                       (0x2C)                                        /**<  (TC_IMR) Interrupt Mask Register (channel = 0)  Offset */
@@ -600,6 +546,7 @@ typedef union {
 
 /* -------- TC_EMR : (TC Offset: 0x30) (R/W 32) Extended Mode Register (channel = 0) -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TRIGSRCA:2;                /**< bit:   0..1  Trigger Source for Input A               */
@@ -611,6 +558,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_EMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_EMR_OFFSET                       (0x30)                                        /**<  (TC_EMR) Extended Mode Register (channel = 0)  Offset */
@@ -638,6 +586,7 @@ typedef union {
 
 /* -------- TC_BCR : (TC Offset: 0xc0) (/W 32) Block Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SYNC:1;                    /**< bit:      0  Synchro Command                          */
@@ -645,6 +594,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_BCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_BCR_OFFSET                       (0xC0)                                        /**<  (TC_BCR) Block Control Register  Offset */
@@ -658,6 +608,7 @@ typedef union {
 
 /* -------- TC_BMR : (TC Offset: 0xc4) (R/W 32) Block Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TC0XC0S:2;                 /**< bit:   0..1  External Clock Signal 0 Selection        */
@@ -680,6 +631,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_BMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_BMR_OFFSET                       (0xC4)                                        /**<  (TC_BMR) Block Mode Register  Offset */
@@ -750,6 +702,7 @@ typedef union {
 
 /* -------- TC_QIER : (TC Offset: 0xc8) (/W 32) QDEC Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IDX:1;                     /**< bit:      0  Index                                    */
@@ -759,6 +712,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_QIER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_QIER_OFFSET                      (0xC8)                                        /**<  (TC_QIER) QDEC Interrupt Enable Register  Offset */
@@ -778,6 +732,7 @@ typedef union {
 
 /* -------- TC_QIDR : (TC Offset: 0xcc) (/W 32) QDEC Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IDX:1;                     /**< bit:      0  Index                                    */
@@ -787,6 +742,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_QIDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_QIDR_OFFSET                      (0xCC)                                        /**<  (TC_QIDR) QDEC Interrupt Disable Register  Offset */
@@ -806,6 +762,7 @@ typedef union {
 
 /* -------- TC_QIMR : (TC Offset: 0xd0) (R/ 32) QDEC Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IDX:1;                     /**< bit:      0  Index                                    */
@@ -815,6 +772,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_QIMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_QIMR_OFFSET                      (0xD0)                                        /**<  (TC_QIMR) QDEC Interrupt Mask Register  Offset */
@@ -834,6 +792,7 @@ typedef union {
 
 /* -------- TC_QISR : (TC Offset: 0xd4) (R/ 32) QDEC Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IDX:1;                     /**< bit:      0  Index                                    */
@@ -845,6 +804,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_QISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_QISR_OFFSET                      (0xD4)                                        /**<  (TC_QISR) QDEC Interrupt Status Register  Offset */
@@ -867,6 +827,7 @@ typedef union {
 
 /* -------- TC_FMR : (TC Offset: 0xd8) (R/W 32) Fault Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ENCF0:1;                   /**< bit:      0  Enable Compare Fault Channel 0           */
@@ -879,6 +840,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } TC_FMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_FMR_OFFSET                       (0xD8)                                        /**<  (TC_FMR) Fault Mode Register  Offset */
@@ -898,6 +860,7 @@ typedef union {
 
 /* -------- TC_WPMR : (TC Offset: 0xe4) (R/W 32) Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
@@ -906,6 +869,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } TC_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define TC_WPMR_OFFSET                      (0xE4)                                        /**<  (TC_WPMR) Write Protection Mode Register  Offset */
@@ -939,13 +903,13 @@ typedef struct {
   __O  uint32_t TC_IDR;         /**< (TC_CHANNEL Offset: 0x28) Interrupt Disable Register (channel = 0) */
   __I  uint32_t TC_IMR;         /**< (TC_CHANNEL Offset: 0x2C) Interrupt Mask Register (channel = 0) */
   __IO uint32_t TC_EMR;         /**< (TC_CHANNEL Offset: 0x30) Extended Mode Register (channel = 0) */
-       RoReg8                         Reserved1[0x0C];
+  __I  uint8_t                        Reserved1[12];
 } TcChannel;
 
 #define TCCHANNEL_NUMBER 3
 /** \brief TC hardware registers */
 typedef struct {  
-       TcChannel TC_CHANNEL[TCCHANNEL_NUMBER]; /**< Offset: 0x00 Channel Control Register (channel = 0) */
+       TcChannel TcChannel[TCCHANNEL_NUMBER]; /**< Offset: 0x00 Channel Control Register (channel = 0) */
   __O  uint32_t TC_BCR;         /**< (TC Offset: 0xC0) Block Control Register */
   __IO uint32_t TC_BMR;         /**< (TC Offset: 0xC4) Block Mode Register */
   __O  uint32_t TC_QIER;        /**< (TC Offset: 0xC8) QDEC Interrupt Enable Register */
@@ -953,7 +917,7 @@ typedef struct {
   __I  uint32_t TC_QIMR;        /**< (TC Offset: 0xD0) QDEC Interrupt Mask Register */
   __I  uint32_t TC_QISR;        /**< (TC Offset: 0xD4) QDEC Interrupt Status Register */
   __IO uint32_t TC_FMR;         /**< (TC Offset: 0xD8) Fault Mode Register */
-  RoReg8  Reserved1[0x8];
+  __I  uint8_t                        Reserved1[8];
   __IO uint32_t TC_WPMR;        /**< (TC Offset: 0xE4) Write Protection Mode Register */
 } Tc;
 
@@ -973,12 +937,12 @@ typedef struct {
   __O  TC_IDR_Type                    TC_IDR;         /**< Offset: 0x28 ( /W  32) Interrupt Disable Register (channel = 0) */
   __I  TC_IMR_Type                    TC_IMR;         /**< Offset: 0x2C (R/   32) Interrupt Mask Register (channel = 0) */
   __IO TC_EMR_Type                    TC_EMR;         /**< Offset: 0x30 (R/W  32) Extended Mode Register (channel = 0) */
-       RoReg8                         Reserved1[0x0C];
+  __I  uint8_t                        Reserved1[12];
 } TcChannel;
 
 /** \brief TC hardware registers */
 typedef struct {  
-       TcChannel                      TC_CHANNEL[3];  /**< Offset: 0x00 Channel Control Register (channel = 0) */
+       TcChannel                      TcChannel[3];   /**< Offset: 0x00 Channel Control Register (channel = 0) */
   __O  TC_BCR_Type                    TC_BCR;         /**< Offset: 0xC0 ( /W  32) Block Control Register */
   __IO TC_BMR_Type                    TC_BMR;         /**< Offset: 0xC4 (R/W  32) Block Mode Register */
   __O  TC_QIER_Type                   TC_QIER;        /**< Offset: 0xC8 ( /W  32) QDEC Interrupt Enable Register */
@@ -986,7 +950,7 @@ typedef struct {
   __I  TC_QIMR_Type                   TC_QIMR;        /**< Offset: 0xD0 (R/   32) QDEC Interrupt Mask Register */
   __I  TC_QISR_Type                   TC_QISR;        /**< Offset: 0xD4 (R/   32) QDEC Interrupt Status Register */
   __IO TC_FMR_Type                    TC_FMR;         /**< Offset: 0xD8 (R/W  32) Fault Mode Register */
-  __I  uint32_t                       Reserved1[2];
+  __I  uint8_t                        Reserved1[8];
   __IO TC_WPMR_Type                   TC_WPMR;        /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
 } Tc;
 

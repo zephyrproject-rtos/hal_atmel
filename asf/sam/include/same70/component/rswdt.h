@@ -3,11 +3,13 @@
  *
  * \brief Component description for RSWDT
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,6 +47,7 @@
 
 /* -------- RSWDT_CR : (RSWDT Offset: 0x00) (/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WDRSTT:1;                  /**< bit:      0  Watchdog Restart                         */
@@ -53,6 +56,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RSWDT_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RSWDT_CR_OFFSET                     (0x00)                                        /**<  (RSWDT_CR) Control Register  Offset */
@@ -71,6 +75,7 @@ typedef union {
 
 /* -------- RSWDT_MR : (RSWDT Offset: 0x04) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WDV:12;                    /**< bit:  0..11  Watchdog Counter Value                   */
@@ -85,6 +90,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RSWDT_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RSWDT_MR_OFFSET                     (0x04)                                        /**<  (RSWDT_MR) Mode Register  Offset */
@@ -116,6 +122,7 @@ typedef union {
 
 /* -------- RSWDT_SR : (RSWDT Offset: 0x08) (R/ 32) Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WDUNF:1;                   /**< bit:      0  Watchdog Underflow                       */
@@ -123,6 +130,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RSWDT_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RSWDT_SR_OFFSET                     (0x08)                                        /**<  (RSWDT_SR) Status Register  Offset */

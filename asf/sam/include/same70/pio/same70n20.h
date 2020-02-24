@@ -3,11 +3,13 @@
  *
  * \brief Peripheral I/O description for SAME70N20
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -905,10 +907,6 @@
 #define PIN_PA28B_TC0_TCLK1                        _L_(28)      /**< TC0 signal: TCLK1 on PA28 mux B*/
 #define MUX_PA28B_TC0_TCLK1                        _L_(1)       /**< TC0 signal line function value: TCLK1 */
 #define PIO_PA28B_TC0_TCLK1                        (_UL_(1) << 28)
-
-#define PIN_PA29B_TC0_TCLK2                        _L_(29)      /**< TC0 signal: TCLK2 on PA29 mux B*/
-#define MUX_PA29B_TC0_TCLK2                        _L_(1)       /**< TC0 signal line function value: TCLK2 */
-#define PIO_PA29B_TC0_TCLK2                        (_UL_(1) << 29)
 
 #define PIN_PA0B_TC0_TIOA0                         _L_(0)       /**< TC0 signal: TIOA0 on PA0 mux B*/
 #define MUX_PA0B_TC0_TIOA0                         _L_(1)       /**< TC0 signal line function value: TIOA0 */

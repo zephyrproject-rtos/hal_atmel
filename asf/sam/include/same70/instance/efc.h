@@ -3,11 +3,13 @@
  *
  * \brief Instance description for EFC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,9 +51,9 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for EFC peripheral ========== */
-#define EFC_FLASH_SIZE                           2097152   
-#define EFC_INSTANCE_ID                          6         
-#define EFC_PAGES_PR_REGION                      32        
-#define EFC_PAGE_SIZE                            512       
+#define EFC_FLASH_SIZE                           2097152    
+#define EFC_PAGE_SIZE                            512        
+#define EFC_INSTANCE_ID                          6          
+#define EFC_PAGES_PR_REGION                      32         
 
 #endif /* _SAME70_EFC_INSTANCE_ */
