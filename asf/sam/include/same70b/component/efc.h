@@ -3,11 +3,13 @@
  *
  * \brief Component description for EFC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_EFC_COMPONENT_H_
 #define _SAME70_EFC_COMPONENT_H_
 #define _SAME70_EFC_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -41,10 +43,11 @@
 #endif
 
 #define EFC_6450                       /**< (EFC) Module ID */
-#define REV_EFC X                      /**< (EFC) Module revision */
+#define REV_EFC Y                      /**< (EFC) Module revision */
 
 /* -------- EEFC_FMR : (EFC Offset: 0x00) (R/W 32) EEFC Flash Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FRDY:1;                    /**< bit:      0  Flash Ready Interrupt Enable             */
@@ -58,6 +61,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } EEFC_FMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define EEFC_FMR_OFFSET                     (0x00)                                        /**<  (EEFC_FMR) EEFC Flash Mode Register  Offset */
@@ -80,6 +84,7 @@ typedef union {
 
 /* -------- EEFC_FCR : (EFC Offset: 0x04) (/W 32) EEFC Flash Command Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FCMD:8;                    /**< bit:   0..7  Flash Command                            */
@@ -88,6 +93,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } EEFC_FCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define EEFC_FCR_OFFSET                     (0x04)                                        /**<  (EEFC_FCR) EEFC Flash Command Register  Offset */
@@ -151,6 +157,7 @@ typedef union {
 
 /* -------- EEFC_FSR : (EFC Offset: 0x08) (R/ 32) EEFC Flash Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FRDY:1;                    /**< bit:      0  Flash Ready Status (cleared when Flash is busy) */
@@ -166,6 +173,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } EEFC_FSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define EEFC_FSR_OFFSET                     (0x08)                                        /**<  (EEFC_FSR) EEFC Flash Status Register  Offset */
@@ -200,12 +208,14 @@ typedef union {
 
 /* -------- EEFC_FRR : (EFC Offset: 0x0c) (R/ 32) EEFC Flash Result Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FVALUE:32;                 /**< bit:  0..31  Flash Result Value                       */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } EEFC_FRR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define EEFC_FRR_OFFSET                     (0x0C)                                        /**<  (EEFC_FRR) EEFC Flash Result Register  Offset */
@@ -219,6 +229,7 @@ typedef union {
 
 /* -------- EEFC_WPMR : (EFC Offset: 0xe4) (R/W 32) Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
@@ -227,6 +238,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } EEFC_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define EEFC_WPMR_OFFSET                    (0xE4)                                        /**<  (EEFC_WPMR) Write Protection Mode Register  Offset */
@@ -251,7 +263,7 @@ typedef struct {
   __O  uint32_t EEFC_FCR;       /**< (EFC Offset: 0x04) EEFC Flash Command Register */
   __I  uint32_t EEFC_FSR;       /**< (EFC Offset: 0x08) EEFC Flash Status Register */
   __I  uint32_t EEFC_FRR;       /**< (EFC Offset: 0x0C) EEFC Flash Result Register */
-  RoReg8  Reserved1[0xD4];
+  __I  uint8_t                        Reserved1[212];
   __IO uint32_t EEFC_WPMR;      /**< (EFC Offset: 0xE4) Write Protection Mode Register */
 } Efc;
 
@@ -262,7 +274,7 @@ typedef struct {
   __O  EEFC_FCR_Type                  EEFC_FCR;       /**< Offset: 0x04 ( /W  32) EEFC Flash Command Register */
   __I  EEFC_FSR_Type                  EEFC_FSR;       /**< Offset: 0x08 (R/   32) EEFC Flash Status Register */
   __I  EEFC_FRR_Type                  EEFC_FRR;       /**< Offset: 0x0C (R/   32) EEFC Flash Result Register */
-  __I  uint32_t                       Reserved1[53];
+  __I  uint8_t                        Reserved1[212];
   __IO EEFC_WPMR_Type                 EEFC_WPMR;      /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
 } Efc;
 

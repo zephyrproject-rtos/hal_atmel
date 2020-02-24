@@ -3,11 +3,13 @@
  *
  * \brief Instance description for ACC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_ACC_INSTANCE_H_
 #define _SAME70_ACC_INSTANCE_H_
 
@@ -57,7 +59,15 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for ACC peripheral ========== */
-#define ACC_INSTANCE_ID                          33        
-#define ACC_CLOCK_ID                             33        
+#define ACC_INSTANCE_ID                          33         
+#define ACC_CLOCK_ID                             33         
+#define ACC_HAS_PLUS_COMPARATOR_SELECTION        1          
+#define ACC_HAS_MINUS_COMPARATOR_SELECTION       1          
+#define ACC_HAS_INVERTED_COMPARATOR              1          
+#define ACC_HAS_EDGETYPE_SELECTION               1          
+#define ACC_HAS_INTERRUPTS                       1          
+#define ACC_HAS_CURRENT_SELECTION                1          
+#define ACC_HAS_HYSTERESIS                       1          
+#define ACC_HAS_FAULT_ENABLE                     1          
 
 #endif /* _SAME70_ACC_INSTANCE_ */

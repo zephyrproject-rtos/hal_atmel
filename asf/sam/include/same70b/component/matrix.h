@@ -3,11 +3,13 @@
  *
  * \brief Component description for MATRIX
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_MATRIX_COMPONENT_H_
 #define _SAME70_MATRIX_COMPONENT_H_
 #define _SAME70_MATRIX_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -45,6 +47,7 @@
 
 /* -------- MATRIX_PRAS : (MATRIX Offset: 0x00) (R/W 32) Priority Register A for Slave 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t M0PR:2;                    /**< bit:   0..1  Master 0 Priority                        */
@@ -64,6 +67,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MATRIX_PRAS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MATRIX_PRAS_OFFSET                  (0x00)                                        /**<  (MATRIX_PRAS) Priority Register A for Slave 0  Offset */
@@ -95,6 +99,7 @@ typedef union {
 
 /* -------- MATRIX_PRBS : (MATRIX Offset: 0x04) (R/W 32) Priority Register B for Slave 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t M8PR:2;                    /**< bit:   0..1  Master 8 Priority                        */
@@ -110,6 +115,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MATRIX_PRBS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MATRIX_PRBS_OFFSET                  (0x04)                                        /**<  (MATRIX_PRBS) Priority Register B for Slave 0  Offset */
@@ -135,6 +141,7 @@ typedef union {
 
 /* -------- MATRIX_MCFG : (MATRIX Offset: 0x00) (R/W 32) Master Configuration Register 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ULBT:3;                    /**< bit:   0..2  Undefined Length Burst Type              */
@@ -142,6 +149,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MATRIX_MCFG_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MATRIX_MCFG_OFFSET                  (0x00)                                        /**<  (MATRIX_MCFG) Master Configuration Register 0  Offset */
@@ -171,6 +179,7 @@ typedef union {
 
 /* -------- MATRIX_SCFG : (MATRIX Offset: 0x40) (R/W 32) Slave Configuration Register 0 -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SLOT_CYCLE:9;              /**< bit:   0..8  Maximum Bus Grant Duration for Masters   */
@@ -181,6 +190,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MATRIX_SCFG_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MATRIX_SCFG_OFFSET                  (0x40)                                        /**<  (MATRIX_SCFG) Slave Configuration Register 0  Offset */
@@ -206,6 +216,7 @@ typedef union {
 
 /* -------- MATRIX_MRCR : (MATRIX Offset: 0x100) (R/W 32) Master Remap Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RCB0:1;                    /**< bit:      0  Remap Command Bit for Master 0           */
@@ -229,6 +240,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } MATRIX_MRCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MATRIX_MRCR_OFFSET                  (0x100)                                       /**<  (MATRIX_MRCR) Master Remap Control Register  Offset */
@@ -278,6 +290,7 @@ typedef union {
 
 /* -------- CCFG_CAN0 : (MATRIX Offset: 0x110) (R/W 32) CAN0 Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :16;                       /**< bit:  0..15  Reserved */
@@ -285,6 +298,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } CCFG_CAN0_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CCFG_CAN0_OFFSET                    (0x110)                                       /**<  (CCFG_CAN0) CAN0 Configuration Register  Offset */
@@ -298,6 +312,7 @@ typedef union {
 
 /* -------- CCFG_SYSIO : (MATRIX Offset: 0x114) (R/W 32) System I/O and CAN1 Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :4;                        /**< bit:   0..3  Reserved */
@@ -317,6 +332,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } CCFG_SYSIO_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CCFG_SYSIO_OFFSET                   (0x114)                                       /**<  (CCFG_SYSIO) System I/O and CAN1 Configuration Register  Offset */
@@ -348,6 +364,7 @@ typedef union {
 
 /* -------- CCFG_PCCR : (MATRIX Offset: 0x118) (R/W 32) Peripheral Clock Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :20;                       /**< bit:  0..19  Reserved */
@@ -358,6 +375,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } CCFG_PCCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CCFG_PCCR_OFFSET                    (0x118)                                       /**<  (CCFG_PCCR) Peripheral Clock Configuration Register  Offset */
@@ -377,6 +395,7 @@ typedef union {
 
 /* -------- CCFG_DYNCKG : (MATRIX Offset: 0x11c) (R/W 32) Dynamic Clock Gating Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t MATCKG:1;                  /**< bit:      0  MATRIX Dynamic Clock Gating              */
@@ -386,6 +405,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } CCFG_DYNCKG_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CCFG_DYNCKG_OFFSET                  (0x11C)                                       /**<  (CCFG_DYNCKG) Dynamic Clock Gating Register  Offset */
@@ -405,6 +425,7 @@ typedef union {
 
 /* -------- CCFG_SMCNFCS : (MATRIX Offset: 0x124) (R/W 32) SMC NAND Flash Chip Select Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SMC_NFCS0:1;               /**< bit:      0  SMC NAND Flash Chip Select 0 Assignment  */
@@ -420,6 +441,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } CCFG_SMCNFCS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CCFG_SMCNFCS_OFFSET                 (0x124)                                       /**<  (CCFG_SMCNFCS) SMC NAND Flash Chip Select Configuration Register  Offset */
@@ -448,6 +470,7 @@ typedef union {
 
 /* -------- MATRIX_WPMR : (MATRIX Offset: 0x1e4) (R/W 32) Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
@@ -456,6 +479,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MATRIX_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MATRIX_WPMR_OFFSET                  (0x1E4)                                       /**<  (MATRIX_WPMR) Write Protection Mode Register  Offset */
@@ -474,6 +498,7 @@ typedef union {
 
 /* -------- MATRIX_WPSR : (MATRIX Offset: 0x1e8) (R/ 32) Write Protection Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPVS:1;                    /**< bit:      0  Write Protection Violation Status        */
@@ -483,6 +508,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MATRIX_WPSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MATRIX_WPSR_OFFSET                  (0x1E8)                                       /**<  (MATRIX_WPSR) Write Protection Status Register  Offset */
@@ -509,20 +535,20 @@ typedef struct {
 /** \brief MATRIX hardware registers */
 typedef struct {  
   __IO uint32_t MATRIX_MCFG[13]; /**< (MATRIX Offset: 0x00) Master Configuration Register 0 */
-  RoReg8  Reserved1[0xC];
+  __I  uint8_t                        Reserved1[12];
   __IO uint32_t MATRIX_SCFG[9]; /**< (MATRIX Offset: 0x40) Slave Configuration Register 0 */
-  RoReg8  Reserved2[0x1C];
-       MatrixPr MATRIX_PR[MATRIXPR_NUMBER]; /**< Offset: 0x80 Priority Register A for Slave 0 */
-  RoReg8  Reserved3[0x38];
+  __I  uint8_t                        Reserved2[28];
+       MatrixPr MatrixPr[MATRIXPR_NUMBER]; /**< Offset: 0x80 Priority Register A for Slave 0 */
+  __I  uint8_t                        Reserved3[56];
   __IO uint32_t MATRIX_MRCR;    /**< (MATRIX Offset: 0x100) Master Remap Control Register */
-  RoReg8  Reserved4[0xC];
+  __I  uint8_t                        Reserved4[12];
   __IO uint32_t CCFG_CAN0;      /**< (MATRIX Offset: 0x110) CAN0 Configuration Register */
   __IO uint32_t CCFG_SYSIO;     /**< (MATRIX Offset: 0x114) System I/O and CAN1 Configuration Register */
   __IO uint32_t CCFG_PCCR;      /**< (MATRIX Offset: 0x118) Peripheral Clock Configuration Register */
   __IO uint32_t CCFG_DYNCKG;    /**< (MATRIX Offset: 0x11C) Dynamic Clock Gating Register */
-  RoReg8  Reserved5[0x4];
+  __I  uint8_t                        Reserved5[4];
   __IO uint32_t CCFG_SMCNFCS;   /**< (MATRIX Offset: 0x124) SMC NAND Flash Chip Select Configuration Register */
-  RoReg8  Reserved6[0xBC];
+  __I  uint8_t                        Reserved6[188];
   __IO uint32_t MATRIX_WPMR;    /**< (MATRIX Offset: 0x1E4) Write Protection Mode Register */
   __I  uint32_t MATRIX_WPSR;    /**< (MATRIX Offset: 0x1E8) Write Protection Status Register */
 } Matrix;
@@ -537,20 +563,20 @@ typedef struct {
 /** \brief MATRIX hardware registers */
 typedef struct {  
   __IO MATRIX_MCFG_Type               MATRIX_MCFG[13]; /**< Offset: 0x00 (R/W  32) Master Configuration Register 0 */
-  __I  uint32_t                       Reserved1[3];
+  __I  uint8_t                        Reserved1[12];
   __IO MATRIX_SCFG_Type               MATRIX_SCFG[9]; /**< Offset: 0x40 (R/W  32) Slave Configuration Register 0 */
-  __I  uint32_t                       Reserved2[7];
-       MatrixPr                       MATRIX_PR[9];   /**< Offset: 0x80 Priority Register A for Slave 0 */
-  __I  uint32_t                       Reserved3[14];
+  __I  uint8_t                        Reserved2[28];
+       MatrixPr                       MatrixPr[9];    /**< Offset: 0x80 Priority Register A for Slave 0 */
+  __I  uint8_t                        Reserved3[56];
   __IO MATRIX_MRCR_Type               MATRIX_MRCR;    /**< Offset: 0x100 (R/W  32) Master Remap Control Register */
-  __I  uint32_t                       Reserved4[3];
+  __I  uint8_t                        Reserved4[12];
   __IO CCFG_CAN0_Type                 CCFG_CAN0;      /**< Offset: 0x110 (R/W  32) CAN0 Configuration Register */
   __IO CCFG_SYSIO_Type                CCFG_SYSIO;     /**< Offset: 0x114 (R/W  32) System I/O and CAN1 Configuration Register */
   __IO CCFG_PCCR_Type                 CCFG_PCCR;      /**< Offset: 0x118 (R/W  32) Peripheral Clock Configuration Register */
   __IO CCFG_DYNCKG_Type               CCFG_DYNCKG;    /**< Offset: 0x11C (R/W  32) Dynamic Clock Gating Register */
-  __I  uint32_t                       Reserved5[1];
+  __I  uint8_t                        Reserved5[4];
   __IO CCFG_SMCNFCS_Type              CCFG_SMCNFCS;   /**< Offset: 0x124 (R/W  32) SMC NAND Flash Chip Select Configuration Register */
-  __I  uint32_t                       Reserved6[47];
+  __I  uint8_t                        Reserved6[188];
   __IO MATRIX_WPMR_Type               MATRIX_WPMR;    /**< Offset: 0x1E4 (R/W  32) Write Protection Mode Register */
   __I  MATRIX_WPSR_Type               MATRIX_WPSR;    /**< Offset: 0x1E8 (R/   32) Write Protection Status Register */
 } Matrix;

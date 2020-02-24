@@ -3,11 +3,13 @@
  *
  * \brief Component description for ACC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_ACC_COMPONENT_H_
 #define _SAME70_ACC_COMPONENT_H_
 #define _SAME70_ACC_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -41,10 +43,11 @@
 #endif
 
 #define ACC_6490                       /**< (ACC) Module ID */
-#define REV_ACC H                      /**< (ACC) Module revision */
+#define REV_ACC J                      /**< (ACC) Module revision */
 
 /* -------- ACC_CR : (ACC Offset: 0x00) (/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SWRST:1;                   /**< bit:      0  Software Reset                           */
@@ -52,6 +55,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ACC_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ACC_CR_OFFSET                       (0x00)                                        /**<  (ACC_CR) Control Register  Offset */
@@ -65,6 +69,7 @@ typedef union {
 
 /* -------- ACC_MR : (ACC Offset: 0x04) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SELMINUS:3;                /**< bit:   0..2  Selection for Minus Comparator Input     */
@@ -81,6 +86,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ACC_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ACC_MR_OFFSET                       (0x04)                                        /**<  (ACC_MR) Mode Register  Offset */
@@ -166,6 +172,7 @@ typedef union {
 
 /* -------- ACC_IER : (ACC Offset: 0x24) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CE:1;                      /**< bit:      0  Comparison Edge                          */
@@ -173,6 +180,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ACC_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ACC_IER_OFFSET                      (0x24)                                        /**<  (ACC_IER) Interrupt Enable Register  Offset */
@@ -186,6 +194,7 @@ typedef union {
 
 /* -------- ACC_IDR : (ACC Offset: 0x28) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CE:1;                      /**< bit:      0  Comparison Edge                          */
@@ -193,6 +202,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ACC_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ACC_IDR_OFFSET                      (0x28)                                        /**<  (ACC_IDR) Interrupt Disable Register  Offset */
@@ -206,6 +216,7 @@ typedef union {
 
 /* -------- ACC_IMR : (ACC Offset: 0x2c) (R/ 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CE:1;                      /**< bit:      0  Comparison Edge                          */
@@ -213,6 +224,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ACC_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ACC_IMR_OFFSET                      (0x2C)                                        /**<  (ACC_IMR) Interrupt Mask Register  Offset */
@@ -226,6 +238,7 @@ typedef union {
 
 /* -------- ACC_ISR : (ACC Offset: 0x30) (R/ 32) Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CE:1;                      /**< bit:      0  Comparison Edge (cleared on read)        */
@@ -235,6 +248,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ACC_ISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ACC_ISR_OFFSET                      (0x30)                                        /**<  (ACC_ISR) Interrupt Status Register  Offset */
@@ -253,6 +267,7 @@ typedef union {
 
 /* -------- ACC_ACR : (ACC Offset: 0x94) (R/W 32) Analog Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ISEL:1;                    /**< bit:      0  Current Selection                        */
@@ -261,6 +276,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ACC_ACR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ACC_ACR_OFFSET                      (0x94)                                        /**<  (ACC_ACR) Analog Control Register  Offset */
@@ -281,6 +297,7 @@ typedef union {
 
 /* -------- ACC_WPMR : (ACC Offset: 0xe4) (R/W 32) Write Protection Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
@@ -289,6 +306,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ACC_WPMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ACC_WPMR_OFFSET                     (0xE4)                                        /**<  (ACC_WPMR) Write Protection Mode Register  Offset */
@@ -307,6 +325,7 @@ typedef union {
 
 /* -------- ACC_WPSR : (ACC Offset: 0xe8) (R/ 32) Write Protection Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WPVS:1;                    /**< bit:      0  Write Protection Violation Status        */
@@ -314,6 +333,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } ACC_WPSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define ACC_WPSR_OFFSET                     (0xE8)                                        /**<  (ACC_WPSR) Write Protection Status Register  Offset */
@@ -331,14 +351,14 @@ typedef union {
 typedef struct {  
   __O  uint32_t ACC_CR;         /**< (ACC Offset: 0x00) Control Register */
   __IO uint32_t ACC_MR;         /**< (ACC Offset: 0x04) Mode Register */
-  RoReg8  Reserved1[0x1C];
+  __I  uint8_t                        Reserved1[28];
   __O  uint32_t ACC_IER;        /**< (ACC Offset: 0x24) Interrupt Enable Register */
   __O  uint32_t ACC_IDR;        /**< (ACC Offset: 0x28) Interrupt Disable Register */
   __I  uint32_t ACC_IMR;        /**< (ACC Offset: 0x2C) Interrupt Mask Register */
   __I  uint32_t ACC_ISR;        /**< (ACC Offset: 0x30) Interrupt Status Register */
-  RoReg8  Reserved2[0x60];
+  __I  uint8_t                        Reserved2[96];
   __IO uint32_t ACC_ACR;        /**< (ACC Offset: 0x94) Analog Control Register */
-  RoReg8  Reserved3[0x4C];
+  __I  uint8_t                        Reserved3[76];
   __IO uint32_t ACC_WPMR;       /**< (ACC Offset: 0xE4) Write Protection Mode Register */
   __I  uint32_t ACC_WPSR;       /**< (ACC Offset: 0xE8) Write Protection Status Register */
 } Acc;
@@ -348,14 +368,14 @@ typedef struct {
 typedef struct {  
   __O  ACC_CR_Type                    ACC_CR;         /**< Offset: 0x00 ( /W  32) Control Register */
   __IO ACC_MR_Type                    ACC_MR;         /**< Offset: 0x04 (R/W  32) Mode Register */
-  __I  uint32_t                       Reserved1[7];
+  __I  uint8_t                        Reserved1[28];
   __O  ACC_IER_Type                   ACC_IER;        /**< Offset: 0x24 ( /W  32) Interrupt Enable Register */
   __O  ACC_IDR_Type                   ACC_IDR;        /**< Offset: 0x28 ( /W  32) Interrupt Disable Register */
   __I  ACC_IMR_Type                   ACC_IMR;        /**< Offset: 0x2C (R/   32) Interrupt Mask Register */
   __I  ACC_ISR_Type                   ACC_ISR;        /**< Offset: 0x30 (R/   32) Interrupt Status Register */
-  __I  uint32_t                       Reserved2[24];
+  __I  uint8_t                        Reserved2[96];
   __IO ACC_ACR_Type                   ACC_ACR;        /**< Offset: 0x94 (R/W  32) Analog Control Register */
-  __I  uint32_t                       Reserved3[19];
+  __I  uint8_t                        Reserved3[76];
   __IO ACC_WPMR_Type                  ACC_WPMR;       /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
   __I  ACC_WPSR_Type                  ACC_WPSR;       /**< Offset: 0xE8 (R/   32) Write Protection Status Register */
 } Acc;

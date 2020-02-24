@@ -3,11 +3,13 @@
  *
  * \brief Instance description for PWM1
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_PWM1_INSTANCE_H_
 #define _SAME70_PWM1_INSTANCE_H_
 
@@ -64,38 +66,38 @@
 #define REG_PWM1_CMPVUPD7       (0x4005C1A4) /**< (PWM1) PWM Comparison 0 Value Update Register 7 */
 #define REG_PWM1_CMPM7          (0x4005C1A8) /**< (PWM1) PWM Comparison 0 Mode Register 7 */
 #define REG_PWM1_CMPMUPD7       (0x4005C1AC) /**< (PWM1) PWM Comparison 0 Mode Update Register 7 */
-#define REG_PWM1_CMR0           (0x4005C200) /**< (PWM1) PWM Channel Mode Register (ch_num = 0) 0 */
-#define REG_PWM1_CDTY0          (0x4005C204) /**< (PWM1) PWM Channel Duty Cycle Register (ch_num = 0) 0 */
-#define REG_PWM1_CDTYUPD0       (0x4005C208) /**< (PWM1) PWM Channel Duty Cycle Update Register (ch_num = 0) 0 */
-#define REG_PWM1_CPRD0          (0x4005C20C) /**< (PWM1) PWM Channel Period Register (ch_num = 0) 0 */
-#define REG_PWM1_CPRDUPD0       (0x4005C210) /**< (PWM1) PWM Channel Period Update Register (ch_num = 0) 0 */
-#define REG_PWM1_CCNT0          (0x4005C214) /**< (PWM1) PWM Channel Counter Register (ch_num = 0) 0 */
-#define REG_PWM1_DT0            (0x4005C218) /**< (PWM1) PWM Channel Dead Time Register (ch_num = 0) 0 */
-#define REG_PWM1_DTUPD0         (0x4005C21C) /**< (PWM1) PWM Channel Dead Time Update Register (ch_num = 0) 0 */
-#define REG_PWM1_CMR1           (0x4005C220) /**< (PWM1) PWM Channel Mode Register (ch_num = 0) 1 */
-#define REG_PWM1_CDTY1          (0x4005C224) /**< (PWM1) PWM Channel Duty Cycle Register (ch_num = 0) 1 */
-#define REG_PWM1_CDTYUPD1       (0x4005C228) /**< (PWM1) PWM Channel Duty Cycle Update Register (ch_num = 0) 1 */
-#define REG_PWM1_CPRD1          (0x4005C22C) /**< (PWM1) PWM Channel Period Register (ch_num = 0) 1 */
-#define REG_PWM1_CPRDUPD1       (0x4005C230) /**< (PWM1) PWM Channel Period Update Register (ch_num = 0) 1 */
-#define REG_PWM1_CCNT1          (0x4005C234) /**< (PWM1) PWM Channel Counter Register (ch_num = 0) 1 */
-#define REG_PWM1_DT1            (0x4005C238) /**< (PWM1) PWM Channel Dead Time Register (ch_num = 0) 1 */
-#define REG_PWM1_DTUPD1         (0x4005C23C) /**< (PWM1) PWM Channel Dead Time Update Register (ch_num = 0) 1 */
-#define REG_PWM1_CMR2           (0x4005C240) /**< (PWM1) PWM Channel Mode Register (ch_num = 0) 2 */
-#define REG_PWM1_CDTY2          (0x4005C244) /**< (PWM1) PWM Channel Duty Cycle Register (ch_num = 0) 2 */
-#define REG_PWM1_CDTYUPD2       (0x4005C248) /**< (PWM1) PWM Channel Duty Cycle Update Register (ch_num = 0) 2 */
-#define REG_PWM1_CPRD2          (0x4005C24C) /**< (PWM1) PWM Channel Period Register (ch_num = 0) 2 */
-#define REG_PWM1_CPRDUPD2       (0x4005C250) /**< (PWM1) PWM Channel Period Update Register (ch_num = 0) 2 */
-#define REG_PWM1_CCNT2          (0x4005C254) /**< (PWM1) PWM Channel Counter Register (ch_num = 0) 2 */
-#define REG_PWM1_DT2            (0x4005C258) /**< (PWM1) PWM Channel Dead Time Register (ch_num = 0) 2 */
-#define REG_PWM1_DTUPD2         (0x4005C25C) /**< (PWM1) PWM Channel Dead Time Update Register (ch_num = 0) 2 */
-#define REG_PWM1_CMR3           (0x4005C260) /**< (PWM1) PWM Channel Mode Register (ch_num = 0) 3 */
-#define REG_PWM1_CDTY3          (0x4005C264) /**< (PWM1) PWM Channel Duty Cycle Register (ch_num = 0) 3 */
-#define REG_PWM1_CDTYUPD3       (0x4005C268) /**< (PWM1) PWM Channel Duty Cycle Update Register (ch_num = 0) 3 */
-#define REG_PWM1_CPRD3          (0x4005C26C) /**< (PWM1) PWM Channel Period Register (ch_num = 0) 3 */
-#define REG_PWM1_CPRDUPD3       (0x4005C270) /**< (PWM1) PWM Channel Period Update Register (ch_num = 0) 3 */
-#define REG_PWM1_CCNT3          (0x4005C274) /**< (PWM1) PWM Channel Counter Register (ch_num = 0) 3 */
-#define REG_PWM1_DT3            (0x4005C278) /**< (PWM1) PWM Channel Dead Time Register (ch_num = 0) 3 */
-#define REG_PWM1_DTUPD3         (0x4005C27C) /**< (PWM1) PWM Channel Dead Time Update Register (ch_num = 0) 3 */
+#define REG_PWM1_CMR0           (0x4005C200) /**< (PWM1) PWM Channel Mode Register 0 */
+#define REG_PWM1_CDTY0          (0x4005C204) /**< (PWM1) PWM Channel Duty Cycle Register 0 */
+#define REG_PWM1_CDTYUPD0       (0x4005C208) /**< (PWM1) PWM Channel Duty Cycle Update Register 0 */
+#define REG_PWM1_CPRD0          (0x4005C20C) /**< (PWM1) PWM Channel Period Register 0 */
+#define REG_PWM1_CPRDUPD0       (0x4005C210) /**< (PWM1) PWM Channel Period Update Register 0 */
+#define REG_PWM1_CCNT0          (0x4005C214) /**< (PWM1) PWM Channel Counter Register 0 */
+#define REG_PWM1_DT0            (0x4005C218) /**< (PWM1) PWM Channel Dead Time Register 0 */
+#define REG_PWM1_DTUPD0         (0x4005C21C) /**< (PWM1) PWM Channel Dead Time Update Register 0 */
+#define REG_PWM1_CMR1           (0x4005C220) /**< (PWM1) PWM Channel Mode Register 1 */
+#define REG_PWM1_CDTY1          (0x4005C224) /**< (PWM1) PWM Channel Duty Cycle Register 1 */
+#define REG_PWM1_CDTYUPD1       (0x4005C228) /**< (PWM1) PWM Channel Duty Cycle Update Register 1 */
+#define REG_PWM1_CPRD1          (0x4005C22C) /**< (PWM1) PWM Channel Period Register 1 */
+#define REG_PWM1_CPRDUPD1       (0x4005C230) /**< (PWM1) PWM Channel Period Update Register 1 */
+#define REG_PWM1_CCNT1          (0x4005C234) /**< (PWM1) PWM Channel Counter Register 1 */
+#define REG_PWM1_DT1            (0x4005C238) /**< (PWM1) PWM Channel Dead Time Register 1 */
+#define REG_PWM1_DTUPD1         (0x4005C23C) /**< (PWM1) PWM Channel Dead Time Update Register 1 */
+#define REG_PWM1_CMR2           (0x4005C240) /**< (PWM1) PWM Channel Mode Register 2 */
+#define REG_PWM1_CDTY2          (0x4005C244) /**< (PWM1) PWM Channel Duty Cycle Register 2 */
+#define REG_PWM1_CDTYUPD2       (0x4005C248) /**< (PWM1) PWM Channel Duty Cycle Update Register 2 */
+#define REG_PWM1_CPRD2          (0x4005C24C) /**< (PWM1) PWM Channel Period Register 2 */
+#define REG_PWM1_CPRDUPD2       (0x4005C250) /**< (PWM1) PWM Channel Period Update Register 2 */
+#define REG_PWM1_CCNT2          (0x4005C254) /**< (PWM1) PWM Channel Counter Register 2 */
+#define REG_PWM1_DT2            (0x4005C258) /**< (PWM1) PWM Channel Dead Time Register 2 */
+#define REG_PWM1_DTUPD2         (0x4005C25C) /**< (PWM1) PWM Channel Dead Time Update Register 2 */
+#define REG_PWM1_CMR3           (0x4005C260) /**< (PWM1) PWM Channel Mode Register 3 */
+#define REG_PWM1_CDTY3          (0x4005C264) /**< (PWM1) PWM Channel Duty Cycle Register 3 */
+#define REG_PWM1_CDTYUPD3       (0x4005C268) /**< (PWM1) PWM Channel Duty Cycle Update Register 3 */
+#define REG_PWM1_CPRD3          (0x4005C26C) /**< (PWM1) PWM Channel Period Register 3 */
+#define REG_PWM1_CPRDUPD3       (0x4005C270) /**< (PWM1) PWM Channel Period Update Register 3 */
+#define REG_PWM1_CCNT3          (0x4005C274) /**< (PWM1) PWM Channel Counter Register 3 */
+#define REG_PWM1_DT3            (0x4005C278) /**< (PWM1) PWM Channel Dead Time Register 3 */
+#define REG_PWM1_DTUPD3         (0x4005C27C) /**< (PWM1) PWM Channel Dead Time Update Register 3 */
 #define REG_PWM1_CLK            (0x4005C000) /**< (PWM1) PWM Clock Register */
 #define REG_PWM1_ENA            (0x4005C004) /**< (PWM1) PWM Enable Register */
 #define REG_PWM1_DIS            (0x4005C008) /**< (PWM1) PWM Disable Register */
@@ -176,38 +178,38 @@
 #define REG_PWM1_CMPVUPD7       (*(__O  uint32_t*)0x4005C1A4U) /**< (PWM1) PWM Comparison 0 Value Update Register 7 */
 #define REG_PWM1_CMPM7          (*(__IO uint32_t*)0x4005C1A8U) /**< (PWM1) PWM Comparison 0 Mode Register 7 */
 #define REG_PWM1_CMPMUPD7       (*(__O  uint32_t*)0x4005C1ACU) /**< (PWM1) PWM Comparison 0 Mode Update Register 7 */
-#define REG_PWM1_CMR0           (*(__IO uint32_t*)0x4005C200U) /**< (PWM1) PWM Channel Mode Register (ch_num = 0) 0 */
-#define REG_PWM1_CDTY0          (*(__IO uint32_t*)0x4005C204U) /**< (PWM1) PWM Channel Duty Cycle Register (ch_num = 0) 0 */
-#define REG_PWM1_CDTYUPD0       (*(__O  uint32_t*)0x4005C208U) /**< (PWM1) PWM Channel Duty Cycle Update Register (ch_num = 0) 0 */
-#define REG_PWM1_CPRD0          (*(__IO uint32_t*)0x4005C20CU) /**< (PWM1) PWM Channel Period Register (ch_num = 0) 0 */
-#define REG_PWM1_CPRDUPD0       (*(__O  uint32_t*)0x4005C210U) /**< (PWM1) PWM Channel Period Update Register (ch_num = 0) 0 */
-#define REG_PWM1_CCNT0          (*(__I  uint32_t*)0x4005C214U) /**< (PWM1) PWM Channel Counter Register (ch_num = 0) 0 */
-#define REG_PWM1_DT0            (*(__IO uint32_t*)0x4005C218U) /**< (PWM1) PWM Channel Dead Time Register (ch_num = 0) 0 */
-#define REG_PWM1_DTUPD0         (*(__O  uint32_t*)0x4005C21CU) /**< (PWM1) PWM Channel Dead Time Update Register (ch_num = 0) 0 */
-#define REG_PWM1_CMR1           (*(__IO uint32_t*)0x4005C220U) /**< (PWM1) PWM Channel Mode Register (ch_num = 0) 1 */
-#define REG_PWM1_CDTY1          (*(__IO uint32_t*)0x4005C224U) /**< (PWM1) PWM Channel Duty Cycle Register (ch_num = 0) 1 */
-#define REG_PWM1_CDTYUPD1       (*(__O  uint32_t*)0x4005C228U) /**< (PWM1) PWM Channel Duty Cycle Update Register (ch_num = 0) 1 */
-#define REG_PWM1_CPRD1          (*(__IO uint32_t*)0x4005C22CU) /**< (PWM1) PWM Channel Period Register (ch_num = 0) 1 */
-#define REG_PWM1_CPRDUPD1       (*(__O  uint32_t*)0x4005C230U) /**< (PWM1) PWM Channel Period Update Register (ch_num = 0) 1 */
-#define REG_PWM1_CCNT1          (*(__I  uint32_t*)0x4005C234U) /**< (PWM1) PWM Channel Counter Register (ch_num = 0) 1 */
-#define REG_PWM1_DT1            (*(__IO uint32_t*)0x4005C238U) /**< (PWM1) PWM Channel Dead Time Register (ch_num = 0) 1 */
-#define REG_PWM1_DTUPD1         (*(__O  uint32_t*)0x4005C23CU) /**< (PWM1) PWM Channel Dead Time Update Register (ch_num = 0) 1 */
-#define REG_PWM1_CMR2           (*(__IO uint32_t*)0x4005C240U) /**< (PWM1) PWM Channel Mode Register (ch_num = 0) 2 */
-#define REG_PWM1_CDTY2          (*(__IO uint32_t*)0x4005C244U) /**< (PWM1) PWM Channel Duty Cycle Register (ch_num = 0) 2 */
-#define REG_PWM1_CDTYUPD2       (*(__O  uint32_t*)0x4005C248U) /**< (PWM1) PWM Channel Duty Cycle Update Register (ch_num = 0) 2 */
-#define REG_PWM1_CPRD2          (*(__IO uint32_t*)0x4005C24CU) /**< (PWM1) PWM Channel Period Register (ch_num = 0) 2 */
-#define REG_PWM1_CPRDUPD2       (*(__O  uint32_t*)0x4005C250U) /**< (PWM1) PWM Channel Period Update Register (ch_num = 0) 2 */
-#define REG_PWM1_CCNT2          (*(__I  uint32_t*)0x4005C254U) /**< (PWM1) PWM Channel Counter Register (ch_num = 0) 2 */
-#define REG_PWM1_DT2            (*(__IO uint32_t*)0x4005C258U) /**< (PWM1) PWM Channel Dead Time Register (ch_num = 0) 2 */
-#define REG_PWM1_DTUPD2         (*(__O  uint32_t*)0x4005C25CU) /**< (PWM1) PWM Channel Dead Time Update Register (ch_num = 0) 2 */
-#define REG_PWM1_CMR3           (*(__IO uint32_t*)0x4005C260U) /**< (PWM1) PWM Channel Mode Register (ch_num = 0) 3 */
-#define REG_PWM1_CDTY3          (*(__IO uint32_t*)0x4005C264U) /**< (PWM1) PWM Channel Duty Cycle Register (ch_num = 0) 3 */
-#define REG_PWM1_CDTYUPD3       (*(__O  uint32_t*)0x4005C268U) /**< (PWM1) PWM Channel Duty Cycle Update Register (ch_num = 0) 3 */
-#define REG_PWM1_CPRD3          (*(__IO uint32_t*)0x4005C26CU) /**< (PWM1) PWM Channel Period Register (ch_num = 0) 3 */
-#define REG_PWM1_CPRDUPD3       (*(__O  uint32_t*)0x4005C270U) /**< (PWM1) PWM Channel Period Update Register (ch_num = 0) 3 */
-#define REG_PWM1_CCNT3          (*(__I  uint32_t*)0x4005C274U) /**< (PWM1) PWM Channel Counter Register (ch_num = 0) 3 */
-#define REG_PWM1_DT3            (*(__IO uint32_t*)0x4005C278U) /**< (PWM1) PWM Channel Dead Time Register (ch_num = 0) 3 */
-#define REG_PWM1_DTUPD3         (*(__O  uint32_t*)0x4005C27CU) /**< (PWM1) PWM Channel Dead Time Update Register (ch_num = 0) 3 */
+#define REG_PWM1_CMR0           (*(__IO uint32_t*)0x4005C200U) /**< (PWM1) PWM Channel Mode Register 0 */
+#define REG_PWM1_CDTY0          (*(__IO uint32_t*)0x4005C204U) /**< (PWM1) PWM Channel Duty Cycle Register 0 */
+#define REG_PWM1_CDTYUPD0       (*(__O  uint32_t*)0x4005C208U) /**< (PWM1) PWM Channel Duty Cycle Update Register 0 */
+#define REG_PWM1_CPRD0          (*(__IO uint32_t*)0x4005C20CU) /**< (PWM1) PWM Channel Period Register 0 */
+#define REG_PWM1_CPRDUPD0       (*(__O  uint32_t*)0x4005C210U) /**< (PWM1) PWM Channel Period Update Register 0 */
+#define REG_PWM1_CCNT0          (*(__I  uint32_t*)0x4005C214U) /**< (PWM1) PWM Channel Counter Register 0 */
+#define REG_PWM1_DT0            (*(__IO uint32_t*)0x4005C218U) /**< (PWM1) PWM Channel Dead Time Register 0 */
+#define REG_PWM1_DTUPD0         (*(__O  uint32_t*)0x4005C21CU) /**< (PWM1) PWM Channel Dead Time Update Register 0 */
+#define REG_PWM1_CMR1           (*(__IO uint32_t*)0x4005C220U) /**< (PWM1) PWM Channel Mode Register 1 */
+#define REG_PWM1_CDTY1          (*(__IO uint32_t*)0x4005C224U) /**< (PWM1) PWM Channel Duty Cycle Register 1 */
+#define REG_PWM1_CDTYUPD1       (*(__O  uint32_t*)0x4005C228U) /**< (PWM1) PWM Channel Duty Cycle Update Register 1 */
+#define REG_PWM1_CPRD1          (*(__IO uint32_t*)0x4005C22CU) /**< (PWM1) PWM Channel Period Register 1 */
+#define REG_PWM1_CPRDUPD1       (*(__O  uint32_t*)0x4005C230U) /**< (PWM1) PWM Channel Period Update Register 1 */
+#define REG_PWM1_CCNT1          (*(__I  uint32_t*)0x4005C234U) /**< (PWM1) PWM Channel Counter Register 1 */
+#define REG_PWM1_DT1            (*(__IO uint32_t*)0x4005C238U) /**< (PWM1) PWM Channel Dead Time Register 1 */
+#define REG_PWM1_DTUPD1         (*(__O  uint32_t*)0x4005C23CU) /**< (PWM1) PWM Channel Dead Time Update Register 1 */
+#define REG_PWM1_CMR2           (*(__IO uint32_t*)0x4005C240U) /**< (PWM1) PWM Channel Mode Register 2 */
+#define REG_PWM1_CDTY2          (*(__IO uint32_t*)0x4005C244U) /**< (PWM1) PWM Channel Duty Cycle Register 2 */
+#define REG_PWM1_CDTYUPD2       (*(__O  uint32_t*)0x4005C248U) /**< (PWM1) PWM Channel Duty Cycle Update Register 2 */
+#define REG_PWM1_CPRD2          (*(__IO uint32_t*)0x4005C24CU) /**< (PWM1) PWM Channel Period Register 2 */
+#define REG_PWM1_CPRDUPD2       (*(__O  uint32_t*)0x4005C250U) /**< (PWM1) PWM Channel Period Update Register 2 */
+#define REG_PWM1_CCNT2          (*(__I  uint32_t*)0x4005C254U) /**< (PWM1) PWM Channel Counter Register 2 */
+#define REG_PWM1_DT2            (*(__IO uint32_t*)0x4005C258U) /**< (PWM1) PWM Channel Dead Time Register 2 */
+#define REG_PWM1_DTUPD2         (*(__O  uint32_t*)0x4005C25CU) /**< (PWM1) PWM Channel Dead Time Update Register 2 */
+#define REG_PWM1_CMR3           (*(__IO uint32_t*)0x4005C260U) /**< (PWM1) PWM Channel Mode Register 3 */
+#define REG_PWM1_CDTY3          (*(__IO uint32_t*)0x4005C264U) /**< (PWM1) PWM Channel Duty Cycle Register 3 */
+#define REG_PWM1_CDTYUPD3       (*(__O  uint32_t*)0x4005C268U) /**< (PWM1) PWM Channel Duty Cycle Update Register 3 */
+#define REG_PWM1_CPRD3          (*(__IO uint32_t*)0x4005C26CU) /**< (PWM1) PWM Channel Period Register 3 */
+#define REG_PWM1_CPRDUPD3       (*(__O  uint32_t*)0x4005C270U) /**< (PWM1) PWM Channel Period Update Register 3 */
+#define REG_PWM1_CCNT3          (*(__I  uint32_t*)0x4005C274U) /**< (PWM1) PWM Channel Counter Register 3 */
+#define REG_PWM1_DT3            (*(__IO uint32_t*)0x4005C278U) /**< (PWM1) PWM Channel Dead Time Register 3 */
+#define REG_PWM1_DTUPD3         (*(__O  uint32_t*)0x4005C27CU) /**< (PWM1) PWM Channel Dead Time Update Register 3 */
 #define REG_PWM1_CLK            (*(__IO uint32_t*)0x4005C000U) /**< (PWM1) PWM Clock Register */
 #define REG_PWM1_ENA            (*(__O  uint32_t*)0x4005C004U) /**< (PWM1) PWM Enable Register */
 #define REG_PWM1_DIS            (*(__O  uint32_t*)0x4005C008U) /**< (PWM1) PWM Disable Register */
@@ -257,8 +259,16 @@
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for PWM1 peripheral ========== */
-#define PWM1_INSTANCE_ID                         60        
-#define PWM1_CLOCK_ID                            60        
-#define PWM1_DMAC_ID_TX                          39        
+#define PWM1_DMAC_ID_TX                          39         
+#define PWM1_INSTANCE_ID                         60         
+#define PWM1_CLOCK_ID                            60         
+#define PWM1_FAULT_PWM_ID0                       0x0        /* Fault 0 - PWM0_PWMFI0 Input pin */
+#define PWM1_FAULT_PWM_ID1                       0x1        /* Fault 1 - PWM0_PWMFI1 Input pin */
+#define PWM1_FAULT_PWM_ID2                       0x2        /* Fault 2 - PWM0_PWMFI2 Input pin */
+#define PWM1_FAULT_PWM_ID3                       0x3        /* Fault 3 - MAIN_OSC_PMC */
+#define PWM1_FAULT_PWM_ID4                       0x4        /* Fault 4 - AFEC0 */
+#define PWM1_FAULT_PWM_ID5                       0x5        /* Fault 5 - AFEC1 */
+#define PWM1_FAULT_PWM_ID6                       0x6        /* Fault 6 - ACC */
+#define PWM1_FAULT_PWM_ID7                       0x7        /* Fault 7 - TC1 */
 
 #endif /* _SAME70_PWM1_INSTANCE_ */

@@ -3,11 +3,13 @@
  *
  * \brief Component description for MCAN
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_MCAN_COMPONENT_H_
 #define _SAME70_MCAN_COMPONENT_H_
 #define _SAME70_MCAN_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -43,8 +45,647 @@
 #define MCAN_11273                      /**< (MCAN) Module ID */
 #define REV_MCAN N                      /**< (MCAN) Module revision */
 
+/* -------- MCAN_RXBE_0 : (MCAN Offset: 0x00) (R/W 32) Rx Buffer Element 0 -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t ID:29;                     /**< bit:  0..28  Identifier                               */
+    uint32_t RTR:1;                     /**< bit:     29  Remote Transmission Request              */
+    uint32_t XTD:1;                     /**< bit:     30  Extended Identifier                      */
+    uint32_t ESI:1;                     /**< bit:     31  Error State Indicator                    */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_RXBE_0_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_RXBE_0_OFFSET                  (0x00)                                        /**<  (MCAN_RXBE_0) Rx Buffer Element 0  Offset */
+
+#define MCAN_RXBE_0_ID_Pos                  0                                              /**< (MCAN_RXBE_0) Identifier Position */
+#define MCAN_RXBE_0_ID_Msk                  (_U_(0x1FFFFFFF) << MCAN_RXBE_0_ID_Pos)        /**< (MCAN_RXBE_0) Identifier Mask */
+#define MCAN_RXBE_0_ID(value)               (MCAN_RXBE_0_ID_Msk & ((value) << MCAN_RXBE_0_ID_Pos))
+#define MCAN_RXBE_0_RTR_Pos                 29                                             /**< (MCAN_RXBE_0) Remote Transmission Request Position */
+#define MCAN_RXBE_0_RTR_Msk                 (_U_(0x1) << MCAN_RXBE_0_RTR_Pos)              /**< (MCAN_RXBE_0) Remote Transmission Request Mask */
+#define MCAN_RXBE_0_RTR                     MCAN_RXBE_0_RTR_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXBE_0_RTR_Msk instead */
+#define MCAN_RXBE_0_XTD_Pos                 30                                             /**< (MCAN_RXBE_0) Extended Identifier Position */
+#define MCAN_RXBE_0_XTD_Msk                 (_U_(0x1) << MCAN_RXBE_0_XTD_Pos)              /**< (MCAN_RXBE_0) Extended Identifier Mask */
+#define MCAN_RXBE_0_XTD                     MCAN_RXBE_0_XTD_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXBE_0_XTD_Msk instead */
+#define MCAN_RXBE_0_ESI_Pos                 31                                             /**< (MCAN_RXBE_0) Error State Indicator Position */
+#define MCAN_RXBE_0_ESI_Msk                 (_U_(0x1) << MCAN_RXBE_0_ESI_Pos)              /**< (MCAN_RXBE_0) Error State Indicator Mask */
+#define MCAN_RXBE_0_ESI                     MCAN_RXBE_0_ESI_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXBE_0_ESI_Msk instead */
+#define MCAN_RXBE_0_MASK                    _U_(0xFFFFFFFF)                                /**< \deprecated (MCAN_RXBE_0) Register MASK  (Use MCAN_RXBE_0_Msk instead)  */
+#define MCAN_RXBE_0_Msk                     _U_(0xFFFFFFFF)                                /**< (MCAN_RXBE_0) Register Mask  */
+
+
+/* -------- MCAN_RXBE_1 : (MCAN Offset: 0x04) (R/W 32) Rx Buffer Element 1 -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t RXTS:16;                   /**< bit:  0..15  Rx Timestamp                             */
+    uint32_t DLC:4;                     /**< bit: 16..19  Data Length Code                         */
+    uint32_t BRS:1;                     /**< bit:     20  Bit Rate Switch                          */
+    uint32_t FDF:1;                     /**< bit:     21  FD Format                                */
+    uint32_t :2;                        /**< bit: 22..23  Reserved */
+    uint32_t FIDX:7;                    /**< bit: 24..30  Filter Index                             */
+    uint32_t ANMF:1;                    /**< bit:     31  Accepted Non-matching Frame              */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_RXBE_1_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_RXBE_1_OFFSET                  (0x04)                                        /**<  (MCAN_RXBE_1) Rx Buffer Element 1  Offset */
+
+#define MCAN_RXBE_1_RXTS_Pos                0                                              /**< (MCAN_RXBE_1) Rx Timestamp Position */
+#define MCAN_RXBE_1_RXTS_Msk                (_U_(0xFFFF) << MCAN_RXBE_1_RXTS_Pos)          /**< (MCAN_RXBE_1) Rx Timestamp Mask */
+#define MCAN_RXBE_1_RXTS(value)             (MCAN_RXBE_1_RXTS_Msk & ((value) << MCAN_RXBE_1_RXTS_Pos))
+#define MCAN_RXBE_1_DLC_Pos                 16                                             /**< (MCAN_RXBE_1) Data Length Code Position */
+#define MCAN_RXBE_1_DLC_Msk                 (_U_(0xF) << MCAN_RXBE_1_DLC_Pos)              /**< (MCAN_RXBE_1) Data Length Code Mask */
+#define MCAN_RXBE_1_DLC(value)              (MCAN_RXBE_1_DLC_Msk & ((value) << MCAN_RXBE_1_DLC_Pos))
+#define MCAN_RXBE_1_BRS_Pos                 20                                             /**< (MCAN_RXBE_1) Bit Rate Switch Position */
+#define MCAN_RXBE_1_BRS_Msk                 (_U_(0x1) << MCAN_RXBE_1_BRS_Pos)              /**< (MCAN_RXBE_1) Bit Rate Switch Mask */
+#define MCAN_RXBE_1_BRS                     MCAN_RXBE_1_BRS_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXBE_1_BRS_Msk instead */
+#define MCAN_RXBE_1_FDF_Pos                 21                                             /**< (MCAN_RXBE_1) FD Format Position */
+#define MCAN_RXBE_1_FDF_Msk                 (_U_(0x1) << MCAN_RXBE_1_FDF_Pos)              /**< (MCAN_RXBE_1) FD Format Mask */
+#define MCAN_RXBE_1_FDF                     MCAN_RXBE_1_FDF_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXBE_1_FDF_Msk instead */
+#define MCAN_RXBE_1_FIDX_Pos                24                                             /**< (MCAN_RXBE_1) Filter Index Position */
+#define MCAN_RXBE_1_FIDX_Msk                (_U_(0x7F) << MCAN_RXBE_1_FIDX_Pos)            /**< (MCAN_RXBE_1) Filter Index Mask */
+#define MCAN_RXBE_1_FIDX(value)             (MCAN_RXBE_1_FIDX_Msk & ((value) << MCAN_RXBE_1_FIDX_Pos))
+#define MCAN_RXBE_1_ANMF_Pos                31                                             /**< (MCAN_RXBE_1) Accepted Non-matching Frame Position */
+#define MCAN_RXBE_1_ANMF_Msk                (_U_(0x1) << MCAN_RXBE_1_ANMF_Pos)             /**< (MCAN_RXBE_1) Accepted Non-matching Frame Mask */
+#define MCAN_RXBE_1_ANMF                    MCAN_RXBE_1_ANMF_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXBE_1_ANMF_Msk instead */
+#define MCAN_RXBE_1_MASK                    _U_(0xFF3FFFFF)                                /**< \deprecated (MCAN_RXBE_1) Register MASK  (Use MCAN_RXBE_1_Msk instead)  */
+#define MCAN_RXBE_1_Msk                     _U_(0xFF3FFFFF)                                /**< (MCAN_RXBE_1) Register Mask  */
+
+
+/* -------- MCAN_RXBE_DATA : (MCAN Offset: 0x08) (R/W 32) Rx Buffer Element Data -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t DB0:8;                     /**< bit:   0..7  Data Byte 0                              */
+    uint32_t DB1:8;                     /**< bit:  8..15  Data Byte 1                              */
+    uint32_t DB2:8;                     /**< bit: 16..23  Data Byte 2                              */
+    uint32_t DB3:8;                     /**< bit: 24..31  Data Byte 3                              */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_RXBE_DATA_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_RXBE_DATA_OFFSET               (0x08)                                        /**<  (MCAN_RXBE_DATA) Rx Buffer Element Data  Offset */
+
+#define MCAN_RXBE_DATA_DB0_Pos              0                                              /**< (MCAN_RXBE_DATA) Data Byte 0 Position */
+#define MCAN_RXBE_DATA_DB0_Msk              (_U_(0xFF) << MCAN_RXBE_DATA_DB0_Pos)          /**< (MCAN_RXBE_DATA) Data Byte 0 Mask */
+#define MCAN_RXBE_DATA_DB0(value)           (MCAN_RXBE_DATA_DB0_Msk & ((value) << MCAN_RXBE_DATA_DB0_Pos))
+#define MCAN_RXBE_DATA_DB1_Pos              8                                              /**< (MCAN_RXBE_DATA) Data Byte 1 Position */
+#define MCAN_RXBE_DATA_DB1_Msk              (_U_(0xFF) << MCAN_RXBE_DATA_DB1_Pos)          /**< (MCAN_RXBE_DATA) Data Byte 1 Mask */
+#define MCAN_RXBE_DATA_DB1(value)           (MCAN_RXBE_DATA_DB1_Msk & ((value) << MCAN_RXBE_DATA_DB1_Pos))
+#define MCAN_RXBE_DATA_DB2_Pos              16                                             /**< (MCAN_RXBE_DATA) Data Byte 2 Position */
+#define MCAN_RXBE_DATA_DB2_Msk              (_U_(0xFF) << MCAN_RXBE_DATA_DB2_Pos)          /**< (MCAN_RXBE_DATA) Data Byte 2 Mask */
+#define MCAN_RXBE_DATA_DB2(value)           (MCAN_RXBE_DATA_DB2_Msk & ((value) << MCAN_RXBE_DATA_DB2_Pos))
+#define MCAN_RXBE_DATA_DB3_Pos              24                                             /**< (MCAN_RXBE_DATA) Data Byte 3 Position */
+#define MCAN_RXBE_DATA_DB3_Msk              (_U_(0xFF) << MCAN_RXBE_DATA_DB3_Pos)          /**< (MCAN_RXBE_DATA) Data Byte 3 Mask */
+#define MCAN_RXBE_DATA_DB3(value)           (MCAN_RXBE_DATA_DB3_Msk & ((value) << MCAN_RXBE_DATA_DB3_Pos))
+#define MCAN_RXBE_DATA_MASK                 _U_(0xFFFFFFFF)                                /**< \deprecated (MCAN_RXBE_DATA) Register MASK  (Use MCAN_RXBE_DATA_Msk instead)  */
+#define MCAN_RXBE_DATA_Msk                  _U_(0xFFFFFFFF)                                /**< (MCAN_RXBE_DATA) Register Mask  */
+
+
+/* -------- MCAN_RXF0E_0 : (MCAN Offset: 0x00) (R/W 32) Rx FIFO 0 Element 0 -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t ID:29;                     /**< bit:  0..28  Identifier                               */
+    uint32_t RTR:1;                     /**< bit:     29  Remote Transmission Request              */
+    uint32_t XTD:1;                     /**< bit:     30  Extended Identifier                      */
+    uint32_t ESI:1;                     /**< bit:     31  Error State Indicator                    */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_RXF0E_0_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_RXF0E_0_OFFSET                 (0x00)                                        /**<  (MCAN_RXF0E_0) Rx FIFO 0 Element 0  Offset */
+
+#define MCAN_RXF0E_0_ID_Pos                 0                                              /**< (MCAN_RXF0E_0) Identifier Position */
+#define MCAN_RXF0E_0_ID_Msk                 (_U_(0x1FFFFFFF) << MCAN_RXF0E_0_ID_Pos)       /**< (MCAN_RXF0E_0) Identifier Mask */
+#define MCAN_RXF0E_0_ID(value)              (MCAN_RXF0E_0_ID_Msk & ((value) << MCAN_RXF0E_0_ID_Pos))
+#define MCAN_RXF0E_0_RTR_Pos                29                                             /**< (MCAN_RXF0E_0) Remote Transmission Request Position */
+#define MCAN_RXF0E_0_RTR_Msk                (_U_(0x1) << MCAN_RXF0E_0_RTR_Pos)             /**< (MCAN_RXF0E_0) Remote Transmission Request Mask */
+#define MCAN_RXF0E_0_RTR                    MCAN_RXF0E_0_RTR_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXF0E_0_RTR_Msk instead */
+#define MCAN_RXF0E_0_XTD_Pos                30                                             /**< (MCAN_RXF0E_0) Extended Identifier Position */
+#define MCAN_RXF0E_0_XTD_Msk                (_U_(0x1) << MCAN_RXF0E_0_XTD_Pos)             /**< (MCAN_RXF0E_0) Extended Identifier Mask */
+#define MCAN_RXF0E_0_XTD                    MCAN_RXF0E_0_XTD_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXF0E_0_XTD_Msk instead */
+#define MCAN_RXF0E_0_ESI_Pos                31                                             /**< (MCAN_RXF0E_0) Error State Indicator Position */
+#define MCAN_RXF0E_0_ESI_Msk                (_U_(0x1) << MCAN_RXF0E_0_ESI_Pos)             /**< (MCAN_RXF0E_0) Error State Indicator Mask */
+#define MCAN_RXF0E_0_ESI                    MCAN_RXF0E_0_ESI_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXF0E_0_ESI_Msk instead */
+#define MCAN_RXF0E_0_MASK                   _U_(0xFFFFFFFF)                                /**< \deprecated (MCAN_RXF0E_0) Register MASK  (Use MCAN_RXF0E_0_Msk instead)  */
+#define MCAN_RXF0E_0_Msk                    _U_(0xFFFFFFFF)                                /**< (MCAN_RXF0E_0) Register Mask  */
+
+
+/* -------- MCAN_RXF0E_1 : (MCAN Offset: 0x04) (R/W 32) Rx FIFO 0 Element 1 -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t RXTS:16;                   /**< bit:  0..15  Rx Timestamp                             */
+    uint32_t DLC:4;                     /**< bit: 16..19  Data Length Code                         */
+    uint32_t BRS:1;                     /**< bit:     20  Bit Rate Switch                          */
+    uint32_t FDF:1;                     /**< bit:     21  FD Format                                */
+    uint32_t :2;                        /**< bit: 22..23  Reserved */
+    uint32_t FIDX:7;                    /**< bit: 24..30  Filter Index                             */
+    uint32_t ANMF:1;                    /**< bit:     31  Accepted Non-matching Frame              */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_RXF0E_1_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_RXF0E_1_OFFSET                 (0x04)                                        /**<  (MCAN_RXF0E_1) Rx FIFO 0 Element 1  Offset */
+
+#define MCAN_RXF0E_1_RXTS_Pos               0                                              /**< (MCAN_RXF0E_1) Rx Timestamp Position */
+#define MCAN_RXF0E_1_RXTS_Msk               (_U_(0xFFFF) << MCAN_RXF0E_1_RXTS_Pos)         /**< (MCAN_RXF0E_1) Rx Timestamp Mask */
+#define MCAN_RXF0E_1_RXTS(value)            (MCAN_RXF0E_1_RXTS_Msk & ((value) << MCAN_RXF0E_1_RXTS_Pos))
+#define MCAN_RXF0E_1_DLC_Pos                16                                             /**< (MCAN_RXF0E_1) Data Length Code Position */
+#define MCAN_RXF0E_1_DLC_Msk                (_U_(0xF) << MCAN_RXF0E_1_DLC_Pos)             /**< (MCAN_RXF0E_1) Data Length Code Mask */
+#define MCAN_RXF0E_1_DLC(value)             (MCAN_RXF0E_1_DLC_Msk & ((value) << MCAN_RXF0E_1_DLC_Pos))
+#define MCAN_RXF0E_1_BRS_Pos                20                                             /**< (MCAN_RXF0E_1) Bit Rate Switch Position */
+#define MCAN_RXF0E_1_BRS_Msk                (_U_(0x1) << MCAN_RXF0E_1_BRS_Pos)             /**< (MCAN_RXF0E_1) Bit Rate Switch Mask */
+#define MCAN_RXF0E_1_BRS                    MCAN_RXF0E_1_BRS_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXF0E_1_BRS_Msk instead */
+#define MCAN_RXF0E_1_FDF_Pos                21                                             /**< (MCAN_RXF0E_1) FD Format Position */
+#define MCAN_RXF0E_1_FDF_Msk                (_U_(0x1) << MCAN_RXF0E_1_FDF_Pos)             /**< (MCAN_RXF0E_1) FD Format Mask */
+#define MCAN_RXF0E_1_FDF                    MCAN_RXF0E_1_FDF_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXF0E_1_FDF_Msk instead */
+#define MCAN_RXF0E_1_FIDX_Pos               24                                             /**< (MCAN_RXF0E_1) Filter Index Position */
+#define MCAN_RXF0E_1_FIDX_Msk               (_U_(0x7F) << MCAN_RXF0E_1_FIDX_Pos)           /**< (MCAN_RXF0E_1) Filter Index Mask */
+#define MCAN_RXF0E_1_FIDX(value)            (MCAN_RXF0E_1_FIDX_Msk & ((value) << MCAN_RXF0E_1_FIDX_Pos))
+#define MCAN_RXF0E_1_ANMF_Pos               31                                             /**< (MCAN_RXF0E_1) Accepted Non-matching Frame Position */
+#define MCAN_RXF0E_1_ANMF_Msk               (_U_(0x1) << MCAN_RXF0E_1_ANMF_Pos)            /**< (MCAN_RXF0E_1) Accepted Non-matching Frame Mask */
+#define MCAN_RXF0E_1_ANMF                   MCAN_RXF0E_1_ANMF_Msk                          /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXF0E_1_ANMF_Msk instead */
+#define MCAN_RXF0E_1_MASK                   _U_(0xFF3FFFFF)                                /**< \deprecated (MCAN_RXF0E_1) Register MASK  (Use MCAN_RXF0E_1_Msk instead)  */
+#define MCAN_RXF0E_1_Msk                    _U_(0xFF3FFFFF)                                /**< (MCAN_RXF0E_1) Register Mask  */
+
+
+/* -------- MCAN_RXF0E_DATA : (MCAN Offset: 0x08) (R/W 32) Rx FIFO 0 Element Data -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t DB0:8;                     /**< bit:   0..7  Data Byte 0                              */
+    uint32_t DB1:8;                     /**< bit:  8..15  Data Byte 1                              */
+    uint32_t DB2:8;                     /**< bit: 16..23  Data Byte 2                              */
+    uint32_t DB3:8;                     /**< bit: 24..31  Data Byte 3                              */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_RXF0E_DATA_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_RXF0E_DATA_OFFSET              (0x08)                                        /**<  (MCAN_RXF0E_DATA) Rx FIFO 0 Element Data  Offset */
+
+#define MCAN_RXF0E_DATA_DB0_Pos             0                                              /**< (MCAN_RXF0E_DATA) Data Byte 0 Position */
+#define MCAN_RXF0E_DATA_DB0_Msk             (_U_(0xFF) << MCAN_RXF0E_DATA_DB0_Pos)         /**< (MCAN_RXF0E_DATA) Data Byte 0 Mask */
+#define MCAN_RXF0E_DATA_DB0(value)          (MCAN_RXF0E_DATA_DB0_Msk & ((value) << MCAN_RXF0E_DATA_DB0_Pos))
+#define MCAN_RXF0E_DATA_DB1_Pos             8                                              /**< (MCAN_RXF0E_DATA) Data Byte 1 Position */
+#define MCAN_RXF0E_DATA_DB1_Msk             (_U_(0xFF) << MCAN_RXF0E_DATA_DB1_Pos)         /**< (MCAN_RXF0E_DATA) Data Byte 1 Mask */
+#define MCAN_RXF0E_DATA_DB1(value)          (MCAN_RXF0E_DATA_DB1_Msk & ((value) << MCAN_RXF0E_DATA_DB1_Pos))
+#define MCAN_RXF0E_DATA_DB2_Pos             16                                             /**< (MCAN_RXF0E_DATA) Data Byte 2 Position */
+#define MCAN_RXF0E_DATA_DB2_Msk             (_U_(0xFF) << MCAN_RXF0E_DATA_DB2_Pos)         /**< (MCAN_RXF0E_DATA) Data Byte 2 Mask */
+#define MCAN_RXF0E_DATA_DB2(value)          (MCAN_RXF0E_DATA_DB2_Msk & ((value) << MCAN_RXF0E_DATA_DB2_Pos))
+#define MCAN_RXF0E_DATA_DB3_Pos             24                                             /**< (MCAN_RXF0E_DATA) Data Byte 3 Position */
+#define MCAN_RXF0E_DATA_DB3_Msk             (_U_(0xFF) << MCAN_RXF0E_DATA_DB3_Pos)         /**< (MCAN_RXF0E_DATA) Data Byte 3 Mask */
+#define MCAN_RXF0E_DATA_DB3(value)          (MCAN_RXF0E_DATA_DB3_Msk & ((value) << MCAN_RXF0E_DATA_DB3_Pos))
+#define MCAN_RXF0E_DATA_MASK                _U_(0xFFFFFFFF)                                /**< \deprecated (MCAN_RXF0E_DATA) Register MASK  (Use MCAN_RXF0E_DATA_Msk instead)  */
+#define MCAN_RXF0E_DATA_Msk                 _U_(0xFFFFFFFF)                                /**< (MCAN_RXF0E_DATA) Register Mask  */
+
+
+/* -------- MCAN_RXF1E_0 : (MCAN Offset: 0x00) (R/W 32) Rx FIFO 1 Element 0 -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t ID:29;                     /**< bit:  0..28  Identifier                               */
+    uint32_t RTR:1;                     /**< bit:     29  Remote Transmission Request              */
+    uint32_t XTD:1;                     /**< bit:     30  Extended Identifier                      */
+    uint32_t ESI:1;                     /**< bit:     31  Error State Indicator                    */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_RXF1E_0_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_RXF1E_0_OFFSET                 (0x00)                                        /**<  (MCAN_RXF1E_0) Rx FIFO 1 Element 0  Offset */
+
+#define MCAN_RXF1E_0_ID_Pos                 0                                              /**< (MCAN_RXF1E_0) Identifier Position */
+#define MCAN_RXF1E_0_ID_Msk                 (_U_(0x1FFFFFFF) << MCAN_RXF1E_0_ID_Pos)       /**< (MCAN_RXF1E_0) Identifier Mask */
+#define MCAN_RXF1E_0_ID(value)              (MCAN_RXF1E_0_ID_Msk & ((value) << MCAN_RXF1E_0_ID_Pos))
+#define MCAN_RXF1E_0_RTR_Pos                29                                             /**< (MCAN_RXF1E_0) Remote Transmission Request Position */
+#define MCAN_RXF1E_0_RTR_Msk                (_U_(0x1) << MCAN_RXF1E_0_RTR_Pos)             /**< (MCAN_RXF1E_0) Remote Transmission Request Mask */
+#define MCAN_RXF1E_0_RTR                    MCAN_RXF1E_0_RTR_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXF1E_0_RTR_Msk instead */
+#define MCAN_RXF1E_0_XTD_Pos                30                                             /**< (MCAN_RXF1E_0) Extended Identifier Position */
+#define MCAN_RXF1E_0_XTD_Msk                (_U_(0x1) << MCAN_RXF1E_0_XTD_Pos)             /**< (MCAN_RXF1E_0) Extended Identifier Mask */
+#define MCAN_RXF1E_0_XTD                    MCAN_RXF1E_0_XTD_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXF1E_0_XTD_Msk instead */
+#define MCAN_RXF1E_0_ESI_Pos                31                                             /**< (MCAN_RXF1E_0) Error State Indicator Position */
+#define MCAN_RXF1E_0_ESI_Msk                (_U_(0x1) << MCAN_RXF1E_0_ESI_Pos)             /**< (MCAN_RXF1E_0) Error State Indicator Mask */
+#define MCAN_RXF1E_0_ESI                    MCAN_RXF1E_0_ESI_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXF1E_0_ESI_Msk instead */
+#define MCAN_RXF1E_0_MASK                   _U_(0xFFFFFFFF)                                /**< \deprecated (MCAN_RXF1E_0) Register MASK  (Use MCAN_RXF1E_0_Msk instead)  */
+#define MCAN_RXF1E_0_Msk                    _U_(0xFFFFFFFF)                                /**< (MCAN_RXF1E_0) Register Mask  */
+
+
+/* -------- MCAN_RXF1E_1 : (MCAN Offset: 0x04) (R/W 32) Rx FIFO 1 Element 1 -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t RXTS:16;                   /**< bit:  0..15  Rx Timestamp                             */
+    uint32_t DLC:4;                     /**< bit: 16..19  Data Length Code                         */
+    uint32_t BRS:1;                     /**< bit:     20  Bit Rate Switch                          */
+    uint32_t FDF:1;                     /**< bit:     21  FD Format                                */
+    uint32_t :2;                        /**< bit: 22..23  Reserved */
+    uint32_t FIDX:7;                    /**< bit: 24..30  Filter Index                             */
+    uint32_t ANMF:1;                    /**< bit:     31  Accepted Non-matching Frame              */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_RXF1E_1_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_RXF1E_1_OFFSET                 (0x04)                                        /**<  (MCAN_RXF1E_1) Rx FIFO 1 Element 1  Offset */
+
+#define MCAN_RXF1E_1_RXTS_Pos               0                                              /**< (MCAN_RXF1E_1) Rx Timestamp Position */
+#define MCAN_RXF1E_1_RXTS_Msk               (_U_(0xFFFF) << MCAN_RXF1E_1_RXTS_Pos)         /**< (MCAN_RXF1E_1) Rx Timestamp Mask */
+#define MCAN_RXF1E_1_RXTS(value)            (MCAN_RXF1E_1_RXTS_Msk & ((value) << MCAN_RXF1E_1_RXTS_Pos))
+#define MCAN_RXF1E_1_DLC_Pos                16                                             /**< (MCAN_RXF1E_1) Data Length Code Position */
+#define MCAN_RXF1E_1_DLC_Msk                (_U_(0xF) << MCAN_RXF1E_1_DLC_Pos)             /**< (MCAN_RXF1E_1) Data Length Code Mask */
+#define MCAN_RXF1E_1_DLC(value)             (MCAN_RXF1E_1_DLC_Msk & ((value) << MCAN_RXF1E_1_DLC_Pos))
+#define MCAN_RXF1E_1_BRS_Pos                20                                             /**< (MCAN_RXF1E_1) Bit Rate Switch Position */
+#define MCAN_RXF1E_1_BRS_Msk                (_U_(0x1) << MCAN_RXF1E_1_BRS_Pos)             /**< (MCAN_RXF1E_1) Bit Rate Switch Mask */
+#define MCAN_RXF1E_1_BRS                    MCAN_RXF1E_1_BRS_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXF1E_1_BRS_Msk instead */
+#define MCAN_RXF1E_1_FDF_Pos                21                                             /**< (MCAN_RXF1E_1) FD Format Position */
+#define MCAN_RXF1E_1_FDF_Msk                (_U_(0x1) << MCAN_RXF1E_1_FDF_Pos)             /**< (MCAN_RXF1E_1) FD Format Mask */
+#define MCAN_RXF1E_1_FDF                    MCAN_RXF1E_1_FDF_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXF1E_1_FDF_Msk instead */
+#define MCAN_RXF1E_1_FIDX_Pos               24                                             /**< (MCAN_RXF1E_1) Filter Index Position */
+#define MCAN_RXF1E_1_FIDX_Msk               (_U_(0x7F) << MCAN_RXF1E_1_FIDX_Pos)           /**< (MCAN_RXF1E_1) Filter Index Mask */
+#define MCAN_RXF1E_1_FIDX(value)            (MCAN_RXF1E_1_FIDX_Msk & ((value) << MCAN_RXF1E_1_FIDX_Pos))
+#define MCAN_RXF1E_1_ANMF_Pos               31                                             /**< (MCAN_RXF1E_1) Accepted Non-matching Frame Position */
+#define MCAN_RXF1E_1_ANMF_Msk               (_U_(0x1) << MCAN_RXF1E_1_ANMF_Pos)            /**< (MCAN_RXF1E_1) Accepted Non-matching Frame Mask */
+#define MCAN_RXF1E_1_ANMF                   MCAN_RXF1E_1_ANMF_Msk                          /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_RXF1E_1_ANMF_Msk instead */
+#define MCAN_RXF1E_1_MASK                   _U_(0xFF3FFFFF)                                /**< \deprecated (MCAN_RXF1E_1) Register MASK  (Use MCAN_RXF1E_1_Msk instead)  */
+#define MCAN_RXF1E_1_Msk                    _U_(0xFF3FFFFF)                                /**< (MCAN_RXF1E_1) Register Mask  */
+
+
+/* -------- MCAN_RXF1E_DATA : (MCAN Offset: 0x08) (R/W 32) Rx FIFO 1 Element Data -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t DB0:8;                     /**< bit:   0..7  Data Byte 0                              */
+    uint32_t DB1:8;                     /**< bit:  8..15  Data Byte 1                              */
+    uint32_t DB2:8;                     /**< bit: 16..23  Data Byte 2                              */
+    uint32_t DB3:8;                     /**< bit: 24..31  Data Byte 3                              */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_RXF1E_DATA_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_RXF1E_DATA_OFFSET              (0x08)                                        /**<  (MCAN_RXF1E_DATA) Rx FIFO 1 Element Data  Offset */
+
+#define MCAN_RXF1E_DATA_DB0_Pos             0                                              /**< (MCAN_RXF1E_DATA) Data Byte 0 Position */
+#define MCAN_RXF1E_DATA_DB0_Msk             (_U_(0xFF) << MCAN_RXF1E_DATA_DB0_Pos)         /**< (MCAN_RXF1E_DATA) Data Byte 0 Mask */
+#define MCAN_RXF1E_DATA_DB0(value)          (MCAN_RXF1E_DATA_DB0_Msk & ((value) << MCAN_RXF1E_DATA_DB0_Pos))
+#define MCAN_RXF1E_DATA_DB1_Pos             8                                              /**< (MCAN_RXF1E_DATA) Data Byte 1 Position */
+#define MCAN_RXF1E_DATA_DB1_Msk             (_U_(0xFF) << MCAN_RXF1E_DATA_DB1_Pos)         /**< (MCAN_RXF1E_DATA) Data Byte 1 Mask */
+#define MCAN_RXF1E_DATA_DB1(value)          (MCAN_RXF1E_DATA_DB1_Msk & ((value) << MCAN_RXF1E_DATA_DB1_Pos))
+#define MCAN_RXF1E_DATA_DB2_Pos             16                                             /**< (MCAN_RXF1E_DATA) Data Byte 2 Position */
+#define MCAN_RXF1E_DATA_DB2_Msk             (_U_(0xFF) << MCAN_RXF1E_DATA_DB2_Pos)         /**< (MCAN_RXF1E_DATA) Data Byte 2 Mask */
+#define MCAN_RXF1E_DATA_DB2(value)          (MCAN_RXF1E_DATA_DB2_Msk & ((value) << MCAN_RXF1E_DATA_DB2_Pos))
+#define MCAN_RXF1E_DATA_DB3_Pos             24                                             /**< (MCAN_RXF1E_DATA) Data Byte 3 Position */
+#define MCAN_RXF1E_DATA_DB3_Msk             (_U_(0xFF) << MCAN_RXF1E_DATA_DB3_Pos)         /**< (MCAN_RXF1E_DATA) Data Byte 3 Mask */
+#define MCAN_RXF1E_DATA_DB3(value)          (MCAN_RXF1E_DATA_DB3_Msk & ((value) << MCAN_RXF1E_DATA_DB3_Pos))
+#define MCAN_RXF1E_DATA_MASK                _U_(0xFFFFFFFF)                                /**< \deprecated (MCAN_RXF1E_DATA) Register MASK  (Use MCAN_RXF1E_DATA_Msk instead)  */
+#define MCAN_RXF1E_DATA_Msk                 _U_(0xFFFFFFFF)                                /**< (MCAN_RXF1E_DATA) Register Mask  */
+
+
+/* -------- MCAN_TXBE_0 : (MCAN Offset: 0x00) (R/W 32) Tx Buffer Element 0 -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t ID:29;                     /**< bit:  0..28  Identifier                               */
+    uint32_t RTR:1;                     /**< bit:     29  Remote Transmission Request              */
+    uint32_t XTD:1;                     /**< bit:     30  Extended Identifier                      */
+    uint32_t ESI:1;                     /**< bit:     31  Error State Indicator                    */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_TXBE_0_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_TXBE_0_OFFSET                  (0x00)                                        /**<  (MCAN_TXBE_0) Tx Buffer Element 0  Offset */
+
+#define MCAN_TXBE_0_ID_Pos                  0                                              /**< (MCAN_TXBE_0) Identifier Position */
+#define MCAN_TXBE_0_ID_Msk                  (_U_(0x1FFFFFFF) << MCAN_TXBE_0_ID_Pos)        /**< (MCAN_TXBE_0) Identifier Mask */
+#define MCAN_TXBE_0_ID(value)               (MCAN_TXBE_0_ID_Msk & ((value) << MCAN_TXBE_0_ID_Pos))
+#define MCAN_TXBE_0_RTR_Pos                 29                                             /**< (MCAN_TXBE_0) Remote Transmission Request Position */
+#define MCAN_TXBE_0_RTR_Msk                 (_U_(0x1) << MCAN_TXBE_0_RTR_Pos)              /**< (MCAN_TXBE_0) Remote Transmission Request Mask */
+#define MCAN_TXBE_0_RTR                     MCAN_TXBE_0_RTR_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_TXBE_0_RTR_Msk instead */
+#define MCAN_TXBE_0_XTD_Pos                 30                                             /**< (MCAN_TXBE_0) Extended Identifier Position */
+#define MCAN_TXBE_0_XTD_Msk                 (_U_(0x1) << MCAN_TXBE_0_XTD_Pos)              /**< (MCAN_TXBE_0) Extended Identifier Mask */
+#define MCAN_TXBE_0_XTD                     MCAN_TXBE_0_XTD_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_TXBE_0_XTD_Msk instead */
+#define MCAN_TXBE_0_ESI_Pos                 31                                             /**< (MCAN_TXBE_0) Error State Indicator Position */
+#define MCAN_TXBE_0_ESI_Msk                 (_U_(0x1) << MCAN_TXBE_0_ESI_Pos)              /**< (MCAN_TXBE_0) Error State Indicator Mask */
+#define MCAN_TXBE_0_ESI                     MCAN_TXBE_0_ESI_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_TXBE_0_ESI_Msk instead */
+#define MCAN_TXBE_0_MASK                    _U_(0xFFFFFFFF)                                /**< \deprecated (MCAN_TXBE_0) Register MASK  (Use MCAN_TXBE_0_Msk instead)  */
+#define MCAN_TXBE_0_Msk                     _U_(0xFFFFFFFF)                                /**< (MCAN_TXBE_0) Register Mask  */
+
+
+/* -------- MCAN_TXBE_1 : (MCAN Offset: 0x04) (R/W 32) Tx Buffer Element 1 -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t :16;                       /**< bit:  0..15  Reserved */
+    uint32_t DLC:4;                     /**< bit: 16..19  Data Length Code                         */
+    uint32_t BRS:1;                     /**< bit:     20  Bit Rate Switch                          */
+    uint32_t FDF:1;                     /**< bit:     21  FD Format                                */
+    uint32_t :1;                        /**< bit:     22  Reserved */
+    uint32_t EFC:1;                     /**< bit:     23  Event FIFO Control                       */
+    uint32_t MM:8;                      /**< bit: 24..31  Message Marker                           */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_TXBE_1_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_TXBE_1_OFFSET                  (0x04)                                        /**<  (MCAN_TXBE_1) Tx Buffer Element 1  Offset */
+
+#define MCAN_TXBE_1_DLC_Pos                 16                                             /**< (MCAN_TXBE_1) Data Length Code Position */
+#define MCAN_TXBE_1_DLC_Msk                 (_U_(0xF) << MCAN_TXBE_1_DLC_Pos)              /**< (MCAN_TXBE_1) Data Length Code Mask */
+#define MCAN_TXBE_1_DLC(value)              (MCAN_TXBE_1_DLC_Msk & ((value) << MCAN_TXBE_1_DLC_Pos))
+#define MCAN_TXBE_1_BRS_Pos                 20                                             /**< (MCAN_TXBE_1) Bit Rate Switch Position */
+#define MCAN_TXBE_1_BRS_Msk                 (_U_(0x1) << MCAN_TXBE_1_BRS_Pos)              /**< (MCAN_TXBE_1) Bit Rate Switch Mask */
+#define MCAN_TXBE_1_BRS                     MCAN_TXBE_1_BRS_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_TXBE_1_BRS_Msk instead */
+#define MCAN_TXBE_1_FDF_Pos                 21                                             /**< (MCAN_TXBE_1) FD Format Position */
+#define MCAN_TXBE_1_FDF_Msk                 (_U_(0x1) << MCAN_TXBE_1_FDF_Pos)              /**< (MCAN_TXBE_1) FD Format Mask */
+#define MCAN_TXBE_1_FDF                     MCAN_TXBE_1_FDF_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_TXBE_1_FDF_Msk instead */
+#define MCAN_TXBE_1_EFC_Pos                 23                                             /**< (MCAN_TXBE_1) Event FIFO Control Position */
+#define MCAN_TXBE_1_EFC_Msk                 (_U_(0x1) << MCAN_TXBE_1_EFC_Pos)              /**< (MCAN_TXBE_1) Event FIFO Control Mask */
+#define MCAN_TXBE_1_EFC                     MCAN_TXBE_1_EFC_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_TXBE_1_EFC_Msk instead */
+#define MCAN_TXBE_1_MM_Pos                  24                                             /**< (MCAN_TXBE_1) Message Marker Position */
+#define MCAN_TXBE_1_MM_Msk                  (_U_(0xFF) << MCAN_TXBE_1_MM_Pos)              /**< (MCAN_TXBE_1) Message Marker Mask */
+#define MCAN_TXBE_1_MM(value)               (MCAN_TXBE_1_MM_Msk & ((value) << MCAN_TXBE_1_MM_Pos))
+#define MCAN_TXBE_1_MASK                    _U_(0xFFBF0000)                                /**< \deprecated (MCAN_TXBE_1) Register MASK  (Use MCAN_TXBE_1_Msk instead)  */
+#define MCAN_TXBE_1_Msk                     _U_(0xFFBF0000)                                /**< (MCAN_TXBE_1) Register Mask  */
+
+
+/* -------- MCAN_TXBE_DATA : (MCAN Offset: 0x08) (R/W 32) Tx Buffer Element Data -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t DB0:8;                     /**< bit:   0..7  Data Byte 0                              */
+    uint32_t DB1:8;                     /**< bit:  8..15  Data Byte 1                              */
+    uint32_t DB2:8;                     /**< bit: 16..23  Data Byte 2                              */
+    uint32_t DB3:8;                     /**< bit: 24..31  Data Byte 3                              */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_TXBE_DATA_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_TXBE_DATA_OFFSET               (0x08)                                        /**<  (MCAN_TXBE_DATA) Tx Buffer Element Data  Offset */
+
+#define MCAN_TXBE_DATA_DB0_Pos              0                                              /**< (MCAN_TXBE_DATA) Data Byte 0 Position */
+#define MCAN_TXBE_DATA_DB0_Msk              (_U_(0xFF) << MCAN_TXBE_DATA_DB0_Pos)          /**< (MCAN_TXBE_DATA) Data Byte 0 Mask */
+#define MCAN_TXBE_DATA_DB0(value)           (MCAN_TXBE_DATA_DB0_Msk & ((value) << MCAN_TXBE_DATA_DB0_Pos))
+#define MCAN_TXBE_DATA_DB1_Pos              8                                              /**< (MCAN_TXBE_DATA) Data Byte 1 Position */
+#define MCAN_TXBE_DATA_DB1_Msk              (_U_(0xFF) << MCAN_TXBE_DATA_DB1_Pos)          /**< (MCAN_TXBE_DATA) Data Byte 1 Mask */
+#define MCAN_TXBE_DATA_DB1(value)           (MCAN_TXBE_DATA_DB1_Msk & ((value) << MCAN_TXBE_DATA_DB1_Pos))
+#define MCAN_TXBE_DATA_DB2_Pos              16                                             /**< (MCAN_TXBE_DATA) Data Byte 2 Position */
+#define MCAN_TXBE_DATA_DB2_Msk              (_U_(0xFF) << MCAN_TXBE_DATA_DB2_Pos)          /**< (MCAN_TXBE_DATA) Data Byte 2 Mask */
+#define MCAN_TXBE_DATA_DB2(value)           (MCAN_TXBE_DATA_DB2_Msk & ((value) << MCAN_TXBE_DATA_DB2_Pos))
+#define MCAN_TXBE_DATA_DB3_Pos              24                                             /**< (MCAN_TXBE_DATA) Data Byte 3 Position */
+#define MCAN_TXBE_DATA_DB3_Msk              (_U_(0xFF) << MCAN_TXBE_DATA_DB3_Pos)          /**< (MCAN_TXBE_DATA) Data Byte 3 Mask */
+#define MCAN_TXBE_DATA_DB3(value)           (MCAN_TXBE_DATA_DB3_Msk & ((value) << MCAN_TXBE_DATA_DB3_Pos))
+#define MCAN_TXBE_DATA_MASK                 _U_(0xFFFFFFFF)                                /**< \deprecated (MCAN_TXBE_DATA) Register MASK  (Use MCAN_TXBE_DATA_Msk instead)  */
+#define MCAN_TXBE_DATA_Msk                  _U_(0xFFFFFFFF)                                /**< (MCAN_TXBE_DATA) Register Mask  */
+
+
+/* -------- MCAN_TXEFE_0 : (MCAN Offset: 0x00) (R/W 32) Tx Event FIFO Element 0 -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t ID:29;                     /**< bit:  0..28  Identifier                               */
+    uint32_t RTR:1;                     /**< bit:     29  Remote Transmission Request              */
+    uint32_t XTD:1;                     /**< bit:     30  Extended Identifier                      */
+    uint32_t ESI:1;                     /**< bit:     31  Error State Indicator                    */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_TXEFE_0_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_TXEFE_0_OFFSET                 (0x00)                                        /**<  (MCAN_TXEFE_0) Tx Event FIFO Element 0  Offset */
+
+#define MCAN_TXEFE_0_ID_Pos                 0                                              /**< (MCAN_TXEFE_0) Identifier Position */
+#define MCAN_TXEFE_0_ID_Msk                 (_U_(0x1FFFFFFF) << MCAN_TXEFE_0_ID_Pos)       /**< (MCAN_TXEFE_0) Identifier Mask */
+#define MCAN_TXEFE_0_ID(value)              (MCAN_TXEFE_0_ID_Msk & ((value) << MCAN_TXEFE_0_ID_Pos))
+#define MCAN_TXEFE_0_RTR_Pos                29                                             /**< (MCAN_TXEFE_0) Remote Transmission Request Position */
+#define MCAN_TXEFE_0_RTR_Msk                (_U_(0x1) << MCAN_TXEFE_0_RTR_Pos)             /**< (MCAN_TXEFE_0) Remote Transmission Request Mask */
+#define MCAN_TXEFE_0_RTR                    MCAN_TXEFE_0_RTR_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_TXEFE_0_RTR_Msk instead */
+#define MCAN_TXEFE_0_XTD_Pos                30                                             /**< (MCAN_TXEFE_0) Extended Identifier Position */
+#define MCAN_TXEFE_0_XTD_Msk                (_U_(0x1) << MCAN_TXEFE_0_XTD_Pos)             /**< (MCAN_TXEFE_0) Extended Identifier Mask */
+#define MCAN_TXEFE_0_XTD                    MCAN_TXEFE_0_XTD_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_TXEFE_0_XTD_Msk instead */
+#define MCAN_TXEFE_0_ESI_Pos                31                                             /**< (MCAN_TXEFE_0) Error State Indicator Position */
+#define MCAN_TXEFE_0_ESI_Msk                (_U_(0x1) << MCAN_TXEFE_0_ESI_Pos)             /**< (MCAN_TXEFE_0) Error State Indicator Mask */
+#define MCAN_TXEFE_0_ESI                    MCAN_TXEFE_0_ESI_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_TXEFE_0_ESI_Msk instead */
+#define MCAN_TXEFE_0_MASK                   _U_(0xFFFFFFFF)                                /**< \deprecated (MCAN_TXEFE_0) Register MASK  (Use MCAN_TXEFE_0_Msk instead)  */
+#define MCAN_TXEFE_0_Msk                    _U_(0xFFFFFFFF)                                /**< (MCAN_TXEFE_0) Register Mask  */
+
+
+/* -------- MCAN_TXEFE_1 : (MCAN Offset: 0x04) (R/W 32) Tx Event FIFO Element 1 -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t TXTS:16;                   /**< bit:  0..15  Tx Timestamp                             */
+    uint32_t DLC:4;                     /**< bit: 16..19  Data Length Code                         */
+    uint32_t BRS:1;                     /**< bit:     20  Bit Rate Switch                          */
+    uint32_t FDF:1;                     /**< bit:     21  FD Format                                */
+    uint32_t ET:2;                      /**< bit: 22..23  Event Type                               */
+    uint32_t MM:8;                      /**< bit: 24..31  Message Marker                           */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_TXEFE_1_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_TXEFE_1_OFFSET                 (0x04)                                        /**<  (MCAN_TXEFE_1) Tx Event FIFO Element 1  Offset */
+
+#define MCAN_TXEFE_1_TXTS_Pos               0                                              /**< (MCAN_TXEFE_1) Tx Timestamp Position */
+#define MCAN_TXEFE_1_TXTS_Msk               (_U_(0xFFFF) << MCAN_TXEFE_1_TXTS_Pos)         /**< (MCAN_TXEFE_1) Tx Timestamp Mask */
+#define MCAN_TXEFE_1_TXTS(value)            (MCAN_TXEFE_1_TXTS_Msk & ((value) << MCAN_TXEFE_1_TXTS_Pos))
+#define MCAN_TXEFE_1_DLC_Pos                16                                             /**< (MCAN_TXEFE_1) Data Length Code Position */
+#define MCAN_TXEFE_1_DLC_Msk                (_U_(0xF) << MCAN_TXEFE_1_DLC_Pos)             /**< (MCAN_TXEFE_1) Data Length Code Mask */
+#define MCAN_TXEFE_1_DLC(value)             (MCAN_TXEFE_1_DLC_Msk & ((value) << MCAN_TXEFE_1_DLC_Pos))
+#define MCAN_TXEFE_1_BRS_Pos                20                                             /**< (MCAN_TXEFE_1) Bit Rate Switch Position */
+#define MCAN_TXEFE_1_BRS_Msk                (_U_(0x1) << MCAN_TXEFE_1_BRS_Pos)             /**< (MCAN_TXEFE_1) Bit Rate Switch Mask */
+#define MCAN_TXEFE_1_BRS                    MCAN_TXEFE_1_BRS_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_TXEFE_1_BRS_Msk instead */
+#define MCAN_TXEFE_1_FDF_Pos                21                                             /**< (MCAN_TXEFE_1) FD Format Position */
+#define MCAN_TXEFE_1_FDF_Msk                (_U_(0x1) << MCAN_TXEFE_1_FDF_Pos)             /**< (MCAN_TXEFE_1) FD Format Mask */
+#define MCAN_TXEFE_1_FDF                    MCAN_TXEFE_1_FDF_Msk                           /**< \deprecated Old style mask definition for 1 bit bitfield. Use MCAN_TXEFE_1_FDF_Msk instead */
+#define MCAN_TXEFE_1_ET_Pos                 22                                             /**< (MCAN_TXEFE_1) Event Type Position */
+#define MCAN_TXEFE_1_ET_Msk                 (_U_(0x3) << MCAN_TXEFE_1_ET_Pos)              /**< (MCAN_TXEFE_1) Event Type Mask */
+#define MCAN_TXEFE_1_ET(value)              (MCAN_TXEFE_1_ET_Msk & ((value) << MCAN_TXEFE_1_ET_Pos))
+#define   MCAN_TXEFE_1_ET_TXE_Val           _U_(0x1)                                       /**< (MCAN_TXEFE_1) Tx event  */
+#define   MCAN_TXEFE_1_ET_TXC_Val           _U_(0x2)                                       /**< (MCAN_TXEFE_1) Transmission in spite of cancellation  */
+#define MCAN_TXEFE_1_ET_TXE                 (MCAN_TXEFE_1_ET_TXE_Val << MCAN_TXEFE_1_ET_Pos)  /**< (MCAN_TXEFE_1) Tx event Position  */
+#define MCAN_TXEFE_1_ET_TXC                 (MCAN_TXEFE_1_ET_TXC_Val << MCAN_TXEFE_1_ET_Pos)  /**< (MCAN_TXEFE_1) Transmission in spite of cancellation Position  */
+#define MCAN_TXEFE_1_MM_Pos                 24                                             /**< (MCAN_TXEFE_1) Message Marker Position */
+#define MCAN_TXEFE_1_MM_Msk                 (_U_(0xFF) << MCAN_TXEFE_1_MM_Pos)             /**< (MCAN_TXEFE_1) Message Marker Mask */
+#define MCAN_TXEFE_1_MM(value)              (MCAN_TXEFE_1_MM_Msk & ((value) << MCAN_TXEFE_1_MM_Pos))
+#define MCAN_TXEFE_1_MASK                   _U_(0xFFFFFFFF)                                /**< \deprecated (MCAN_TXEFE_1) Register MASK  (Use MCAN_TXEFE_1_Msk instead)  */
+#define MCAN_TXEFE_1_Msk                    _U_(0xFFFFFFFF)                                /**< (MCAN_TXEFE_1) Register Mask  */
+
+
+/* -------- MCAN_SIDFE_0 : (MCAN Offset: 0x00) (R/W 32) Standard Message ID Filter Element 0 -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t SFID2:11;                  /**< bit:  0..10  Standard Filter ID 2                     */
+    uint32_t :5;                        /**< bit: 11..15  Reserved */
+    uint32_t SFID1:11;                  /**< bit: 16..26  Standard Filter ID 1                     */
+    uint32_t SFEC:3;                    /**< bit: 27..29  Standard Filter Element Configuration    */
+    uint32_t SFT:2;                     /**< bit: 30..31  Standard Filter Type                     */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_SIDFE_0_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_SIDFE_0_OFFSET                 (0x00)                                        /**<  (MCAN_SIDFE_0) Standard Message ID Filter Element 0  Offset */
+
+#define MCAN_SIDFE_0_SFID2_Pos              0                                              /**< (MCAN_SIDFE_0) Standard Filter ID 2 Position */
+#define MCAN_SIDFE_0_SFID2_Msk              (_U_(0x7FF) << MCAN_SIDFE_0_SFID2_Pos)         /**< (MCAN_SIDFE_0) Standard Filter ID 2 Mask */
+#define MCAN_SIDFE_0_SFID2(value)           (MCAN_SIDFE_0_SFID2_Msk & ((value) << MCAN_SIDFE_0_SFID2_Pos))
+#define MCAN_SIDFE_0_SFID1_Pos              16                                             /**< (MCAN_SIDFE_0) Standard Filter ID 1 Position */
+#define MCAN_SIDFE_0_SFID1_Msk              (_U_(0x7FF) << MCAN_SIDFE_0_SFID1_Pos)         /**< (MCAN_SIDFE_0) Standard Filter ID 1 Mask */
+#define MCAN_SIDFE_0_SFID1(value)           (MCAN_SIDFE_0_SFID1_Msk & ((value) << MCAN_SIDFE_0_SFID1_Pos))
+#define MCAN_SIDFE_0_SFEC_Pos               27                                             /**< (MCAN_SIDFE_0) Standard Filter Element Configuration Position */
+#define MCAN_SIDFE_0_SFEC_Msk               (_U_(0x7) << MCAN_SIDFE_0_SFEC_Pos)            /**< (MCAN_SIDFE_0) Standard Filter Element Configuration Mask */
+#define MCAN_SIDFE_0_SFEC(value)            (MCAN_SIDFE_0_SFEC_Msk & ((value) << MCAN_SIDFE_0_SFEC_Pos))
+#define   MCAN_SIDFE_0_SFEC_DISABLE_Val     _U_(0x0)                                       /**< (MCAN_SIDFE_0) Disable filter element  */
+#define   MCAN_SIDFE_0_SFEC_STF0M_Val       _U_(0x1)                                       /**< (MCAN_SIDFE_0) Store in Rx FIFO 0 if filter matches  */
+#define   MCAN_SIDFE_0_SFEC_STF1M_Val       _U_(0x2)                                       /**< (MCAN_SIDFE_0) Store in Rx FIFO 1 if filter matches  */
+#define   MCAN_SIDFE_0_SFEC_REJECT_Val      _U_(0x3)                                       /**< (MCAN_SIDFE_0) Reject ID if filter matches  */
+#define   MCAN_SIDFE_0_SFEC_PRIORITY_Val    _U_(0x4)                                       /**< (MCAN_SIDFE_0) Set priority if filter matches  */
+#define   MCAN_SIDFE_0_SFEC_PRIF0M_Val      _U_(0x5)                                       /**< (MCAN_SIDFE_0) Set priority and store in FIFO 0 if filter matches  */
+#define   MCAN_SIDFE_0_SFEC_PRIF1M_Val      _U_(0x6)                                       /**< (MCAN_SIDFE_0) Set priority and store in FIFO 1 if filter matches  */
+#define   MCAN_SIDFE_0_SFEC_STRXBUF_Val     _U_(0x7)                                       /**< (MCAN_SIDFE_0) Store into Rx Buffer  */
+#define MCAN_SIDFE_0_SFEC_DISABLE           (MCAN_SIDFE_0_SFEC_DISABLE_Val << MCAN_SIDFE_0_SFEC_Pos)  /**< (MCAN_SIDFE_0) Disable filter element Position  */
+#define MCAN_SIDFE_0_SFEC_STF0M             (MCAN_SIDFE_0_SFEC_STF0M_Val << MCAN_SIDFE_0_SFEC_Pos)  /**< (MCAN_SIDFE_0) Store in Rx FIFO 0 if filter matches Position  */
+#define MCAN_SIDFE_0_SFEC_STF1M             (MCAN_SIDFE_0_SFEC_STF1M_Val << MCAN_SIDFE_0_SFEC_Pos)  /**< (MCAN_SIDFE_0) Store in Rx FIFO 1 if filter matches Position  */
+#define MCAN_SIDFE_0_SFEC_REJECT            (MCAN_SIDFE_0_SFEC_REJECT_Val << MCAN_SIDFE_0_SFEC_Pos)  /**< (MCAN_SIDFE_0) Reject ID if filter matches Position  */
+#define MCAN_SIDFE_0_SFEC_PRIORITY          (MCAN_SIDFE_0_SFEC_PRIORITY_Val << MCAN_SIDFE_0_SFEC_Pos)  /**< (MCAN_SIDFE_0) Set priority if filter matches Position  */
+#define MCAN_SIDFE_0_SFEC_PRIF0M            (MCAN_SIDFE_0_SFEC_PRIF0M_Val << MCAN_SIDFE_0_SFEC_Pos)  /**< (MCAN_SIDFE_0) Set priority and store in FIFO 0 if filter matches Position  */
+#define MCAN_SIDFE_0_SFEC_PRIF1M            (MCAN_SIDFE_0_SFEC_PRIF1M_Val << MCAN_SIDFE_0_SFEC_Pos)  /**< (MCAN_SIDFE_0) Set priority and store in FIFO 1 if filter matches Position  */
+#define MCAN_SIDFE_0_SFEC_STRXBUF           (MCAN_SIDFE_0_SFEC_STRXBUF_Val << MCAN_SIDFE_0_SFEC_Pos)  /**< (MCAN_SIDFE_0) Store into Rx Buffer Position  */
+#define MCAN_SIDFE_0_SFT_Pos                30                                             /**< (MCAN_SIDFE_0) Standard Filter Type Position */
+#define MCAN_SIDFE_0_SFT_Msk                (_U_(0x3) << MCAN_SIDFE_0_SFT_Pos)             /**< (MCAN_SIDFE_0) Standard Filter Type Mask */
+#define MCAN_SIDFE_0_SFT(value)             (MCAN_SIDFE_0_SFT_Msk & ((value) << MCAN_SIDFE_0_SFT_Pos))
+#define   MCAN_SIDFE_0_SFT_RANGE_Val        _U_(0x0)                                       /**< (MCAN_SIDFE_0) Range filter from SFID1 to SFID2  */
+#define   MCAN_SIDFE_0_SFT_DUAL_Val         _U_(0x1)                                       /**< (MCAN_SIDFE_0) Dual ID filter for SF1ID or SF2ID  */
+#define   MCAN_SIDFE_0_SFT_CLASSIC_Val      _U_(0x2)                                       /**< (MCAN_SIDFE_0) Classic filter  */
+#define MCAN_SIDFE_0_SFT_RANGE              (MCAN_SIDFE_0_SFT_RANGE_Val << MCAN_SIDFE_0_SFT_Pos)  /**< (MCAN_SIDFE_0) Range filter from SFID1 to SFID2 Position  */
+#define MCAN_SIDFE_0_SFT_DUAL               (MCAN_SIDFE_0_SFT_DUAL_Val << MCAN_SIDFE_0_SFT_Pos)  /**< (MCAN_SIDFE_0) Dual ID filter for SF1ID or SF2ID Position  */
+#define MCAN_SIDFE_0_SFT_CLASSIC            (MCAN_SIDFE_0_SFT_CLASSIC_Val << MCAN_SIDFE_0_SFT_Pos)  /**< (MCAN_SIDFE_0) Classic filter Position  */
+#define MCAN_SIDFE_0_MASK                   _U_(0xFFFF07FF)                                /**< \deprecated (MCAN_SIDFE_0) Register MASK  (Use MCAN_SIDFE_0_Msk instead)  */
+#define MCAN_SIDFE_0_Msk                    _U_(0xFFFF07FF)                                /**< (MCAN_SIDFE_0) Register Mask  */
+
+
+/* -------- MCAN_XIDFE_0 : (MCAN Offset: 0x00) (R/W 32) Extended Message ID Filter Element 0 -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t EFID1:29;                  /**< bit:  0..28  Extended Filter ID 1                     */
+    uint32_t EFEC:3;                    /**< bit: 29..31  Extended Filter Element Configuration    */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_XIDFE_0_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_XIDFE_0_OFFSET                 (0x00)                                        /**<  (MCAN_XIDFE_0) Extended Message ID Filter Element 0  Offset */
+
+#define MCAN_XIDFE_0_EFID1_Pos              0                                              /**< (MCAN_XIDFE_0) Extended Filter ID 1 Position */
+#define MCAN_XIDFE_0_EFID1_Msk              (_U_(0x1FFFFFFF) << MCAN_XIDFE_0_EFID1_Pos)    /**< (MCAN_XIDFE_0) Extended Filter ID 1 Mask */
+#define MCAN_XIDFE_0_EFID1(value)           (MCAN_XIDFE_0_EFID1_Msk & ((value) << MCAN_XIDFE_0_EFID1_Pos))
+#define MCAN_XIDFE_0_EFEC_Pos               29                                             /**< (MCAN_XIDFE_0) Extended Filter Element Configuration Position */
+#define MCAN_XIDFE_0_EFEC_Msk               (_U_(0x7) << MCAN_XIDFE_0_EFEC_Pos)            /**< (MCAN_XIDFE_0) Extended Filter Element Configuration Mask */
+#define MCAN_XIDFE_0_EFEC(value)            (MCAN_XIDFE_0_EFEC_Msk & ((value) << MCAN_XIDFE_0_EFEC_Pos))
+#define   MCAN_XIDFE_0_EFEC_DISABLE_Val     _U_(0x0)                                       /**< (MCAN_XIDFE_0) Disable filter element  */
+#define   MCAN_XIDFE_0_EFEC_STF0M_Val       _U_(0x1)                                       /**< (MCAN_XIDFE_0) Store in Rx FIFO 0 if filter matches  */
+#define   MCAN_XIDFE_0_EFEC_STF1M_Val       _U_(0x2)                                       /**< (MCAN_XIDFE_0) Store in Rx FIFO 1 if filter matches  */
+#define   MCAN_XIDFE_0_EFEC_REJECT_Val      _U_(0x3)                                       /**< (MCAN_XIDFE_0) Reject ID if filter matches  */
+#define   MCAN_XIDFE_0_EFEC_PRIORITY_Val    _U_(0x4)                                       /**< (MCAN_XIDFE_0) Set priority if filter matches  */
+#define   MCAN_XIDFE_0_EFEC_PRIF0M_Val      _U_(0x5)                                       /**< (MCAN_XIDFE_0) Set priority and store in FIFO 0 if filter matches  */
+#define   MCAN_XIDFE_0_EFEC_PRIF1M_Val      _U_(0x6)                                       /**< (MCAN_XIDFE_0) Set priority and store in FIFO 1 if filter matches  */
+#define   MCAN_XIDFE_0_EFEC_STRXBUF_Val     _U_(0x7)                                       /**< (MCAN_XIDFE_0) Store into Rx Buffer  */
+#define MCAN_XIDFE_0_EFEC_DISABLE           (MCAN_XIDFE_0_EFEC_DISABLE_Val << MCAN_XIDFE_0_EFEC_Pos)  /**< (MCAN_XIDFE_0) Disable filter element Position  */
+#define MCAN_XIDFE_0_EFEC_STF0M             (MCAN_XIDFE_0_EFEC_STF0M_Val << MCAN_XIDFE_0_EFEC_Pos)  /**< (MCAN_XIDFE_0) Store in Rx FIFO 0 if filter matches Position  */
+#define MCAN_XIDFE_0_EFEC_STF1M             (MCAN_XIDFE_0_EFEC_STF1M_Val << MCAN_XIDFE_0_EFEC_Pos)  /**< (MCAN_XIDFE_0) Store in Rx FIFO 1 if filter matches Position  */
+#define MCAN_XIDFE_0_EFEC_REJECT            (MCAN_XIDFE_0_EFEC_REJECT_Val << MCAN_XIDFE_0_EFEC_Pos)  /**< (MCAN_XIDFE_0) Reject ID if filter matches Position  */
+#define MCAN_XIDFE_0_EFEC_PRIORITY          (MCAN_XIDFE_0_EFEC_PRIORITY_Val << MCAN_XIDFE_0_EFEC_Pos)  /**< (MCAN_XIDFE_0) Set priority if filter matches Position  */
+#define MCAN_XIDFE_0_EFEC_PRIF0M            (MCAN_XIDFE_0_EFEC_PRIF0M_Val << MCAN_XIDFE_0_EFEC_Pos)  /**< (MCAN_XIDFE_0) Set priority and store in FIFO 0 if filter matches Position  */
+#define MCAN_XIDFE_0_EFEC_PRIF1M            (MCAN_XIDFE_0_EFEC_PRIF1M_Val << MCAN_XIDFE_0_EFEC_Pos)  /**< (MCAN_XIDFE_0) Set priority and store in FIFO 1 if filter matches Position  */
+#define MCAN_XIDFE_0_EFEC_STRXBUF           (MCAN_XIDFE_0_EFEC_STRXBUF_Val << MCAN_XIDFE_0_EFEC_Pos)  /**< (MCAN_XIDFE_0) Store into Rx Buffer Position  */
+#define MCAN_XIDFE_0_MASK                   _U_(0xFFFFFFFF)                                /**< \deprecated (MCAN_XIDFE_0) Register MASK  (Use MCAN_XIDFE_0_Msk instead)  */
+#define MCAN_XIDFE_0_Msk                    _U_(0xFFFFFFFF)                                /**< (MCAN_XIDFE_0) Register Mask  */
+
+
+/* -------- MCAN_XIDFE_1 : (MCAN Offset: 0x04) (R/W 32) Extended Message ID Filter Element 1 -------- */
+#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
+typedef union { 
+  struct {
+    uint32_t EFID2:29;                  /**< bit:  0..28  Extended Filter ID 2                     */
+    uint32_t :1;                        /**< bit:     29  Reserved */
+    uint32_t EFT:2;                     /**< bit: 30..31  Extended Filter Type                     */
+  } bit;                                /**< Structure used for bit  access */
+  uint32_t reg;                         /**< Type used for register access */
+} MCAN_XIDFE_1_Type;
+#endif
+#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define MCAN_XIDFE_1_OFFSET                 (0x04)                                        /**<  (MCAN_XIDFE_1) Extended Message ID Filter Element 1  Offset */
+
+#define MCAN_XIDFE_1_EFID2_Pos              0                                              /**< (MCAN_XIDFE_1) Extended Filter ID 2 Position */
+#define MCAN_XIDFE_1_EFID2_Msk              (_U_(0x1FFFFFFF) << MCAN_XIDFE_1_EFID2_Pos)    /**< (MCAN_XIDFE_1) Extended Filter ID 2 Mask */
+#define MCAN_XIDFE_1_EFID2(value)           (MCAN_XIDFE_1_EFID2_Msk & ((value) << MCAN_XIDFE_1_EFID2_Pos))
+#define MCAN_XIDFE_1_EFT_Pos                30                                             /**< (MCAN_XIDFE_1) Extended Filter Type Position */
+#define MCAN_XIDFE_1_EFT_Msk                (_U_(0x3) << MCAN_XIDFE_1_EFT_Pos)             /**< (MCAN_XIDFE_1) Extended Filter Type Mask */
+#define MCAN_XIDFE_1_EFT(value)             (MCAN_XIDFE_1_EFT_Msk & ((value) << MCAN_XIDFE_1_EFT_Pos))
+#define   MCAN_XIDFE_1_EFT_RANGE_Val        _U_(0x0)                                       /**< (MCAN_XIDFE_1) Range filter from EFID1 to EFID2  */
+#define   MCAN_XIDFE_1_EFT_DUAL_Val         _U_(0x1)                                       /**< (MCAN_XIDFE_1) Dual ID filter for EFID1 or EFID2  */
+#define   MCAN_XIDFE_1_EFT_CLASSIC_Val      _U_(0x2)                                       /**< (MCAN_XIDFE_1) Classic filter  */
+#define   MCAN_XIDFE_1_EFT_RANGE_NO_XIDAM_Val _U_(0x3)                                       /**< (MCAN_XIDFE_1) Range filter from EFID1 to EFID2 with no XIDAM mask  */
+#define MCAN_XIDFE_1_EFT_RANGE              (MCAN_XIDFE_1_EFT_RANGE_Val << MCAN_XIDFE_1_EFT_Pos)  /**< (MCAN_XIDFE_1) Range filter from EFID1 to EFID2 Position  */
+#define MCAN_XIDFE_1_EFT_DUAL               (MCAN_XIDFE_1_EFT_DUAL_Val << MCAN_XIDFE_1_EFT_Pos)  /**< (MCAN_XIDFE_1) Dual ID filter for EFID1 or EFID2 Position  */
+#define MCAN_XIDFE_1_EFT_CLASSIC            (MCAN_XIDFE_1_EFT_CLASSIC_Val << MCAN_XIDFE_1_EFT_Pos)  /**< (MCAN_XIDFE_1) Classic filter Position  */
+#define MCAN_XIDFE_1_EFT_RANGE_NO_XIDAM     (MCAN_XIDFE_1_EFT_RANGE_NO_XIDAM_Val << MCAN_XIDFE_1_EFT_Pos)  /**< (MCAN_XIDFE_1) Range filter from EFID1 to EFID2 with no XIDAM mask Position  */
+#define MCAN_XIDFE_1_MASK                   _U_(0xDFFFFFFF)                                /**< \deprecated (MCAN_XIDFE_1) Register MASK  (Use MCAN_XIDFE_1_Msk instead)  */
+#define MCAN_XIDFE_1_Msk                    _U_(0xDFFFFFFF)                                /**< (MCAN_XIDFE_1) Register Mask  */
+
+
 /* -------- MCAN_CREL : (MCAN Offset: 0x00) (R/ 32) Core Release Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DAY:8;                     /**< bit:   0..7  Timestamp Day                            */
@@ -56,6 +697,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_CREL_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_CREL_OFFSET                    (0x00)                                        /**<  (MCAN_CREL) Core Release Register  Offset */
@@ -84,12 +726,14 @@ typedef union {
 
 /* -------- MCAN_ENDN : (MCAN Offset: 0x04) (R/ 32) Endian Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ETV:32;                    /**< bit:  0..31  Endianness Test Value                    */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_ENDN_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_ENDN_OFFSET                    (0x04)                                        /**<  (MCAN_ENDN) Endian Register  Offset */
@@ -103,12 +747,14 @@ typedef union {
 
 /* -------- MCAN_CUST : (MCAN Offset: 0x08) (R/W 32) Customer Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CSV:32;                    /**< bit:  0..31  Customer-specific Value                  */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_CUST_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_CUST_OFFSET                    (0x08)                                        /**<  (MCAN_CUST) Customer Register  Offset */
@@ -122,6 +768,7 @@ typedef union {
 
 /* -------- MCAN_DBTP : (MCAN Offset: 0x0c) (R/W 32) Data Bit Timing and Prescaler Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DSJW:3;                    /**< bit:   0..2  Data (Re) Synchronization Jump Width     */
@@ -136,6 +783,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_DBTP_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_DBTP_OFFSET                    (0x0C)                                        /**<  (MCAN_DBTP) Data Bit Timing and Prescaler Register  Offset */
@@ -165,6 +813,7 @@ typedef union {
 
 /* -------- MCAN_TEST : (MCAN Offset: 0x10) (R/W 32) Test Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :4;                        /**< bit:   0..3  Reserved */
@@ -175,6 +824,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TEST_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TEST_OFFSET                    (0x10)                                        /**<  (MCAN_TEST) Test Register  Offset */
@@ -206,6 +856,7 @@ typedef union {
 
 /* -------- MCAN_RWD : (MCAN Offset: 0x14) (R/W 32) RAM Watchdog Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WDC:8;                     /**< bit:   0..7  Watchdog Configuration (read/write)      */
@@ -214,6 +865,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_RWD_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_RWD_OFFSET                     (0x14)                                        /**<  (MCAN_RWD) RAM Watchdog Register  Offset */
@@ -230,6 +882,7 @@ typedef union {
 
 /* -------- MCAN_CCCR : (MCAN Offset: 0x18) (R/W 32) CC Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t INIT:1;                    /**< bit:      0  Initialization (read/write)              */
@@ -251,6 +904,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_CCCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_CCCR_OFFSET                    (0x18)                                        /**<  (MCAN_CCCR) CC Control Register  Offset */
@@ -339,6 +993,7 @@ typedef union {
 
 /* -------- MCAN_NBTP : (MCAN Offset: 0x1c) (R/W 32) Nominal Bit Timing and Prescaler Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NTSEG2:7;                  /**< bit:   0..6  Nominal Time Segment After Sample Point  */
@@ -349,6 +1004,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_NBTP_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_NBTP_OFFSET                    (0x1C)                                        /**<  (MCAN_NBTP) Nominal Bit Timing and Prescaler Register  Offset */
@@ -371,6 +1027,7 @@ typedef union {
 
 /* -------- MCAN_TSCC : (MCAN Offset: 0x20) (R/W 32) Timestamp Counter Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TSS:2;                     /**< bit:   0..1  Timestamp Select                         */
@@ -380,6 +1037,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TSCC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TSCC_OFFSET                    (0x20)                                        /**<  (MCAN_TSCC) Timestamp Counter Configuration Register  Offset */
@@ -402,6 +1060,7 @@ typedef union {
 
 /* -------- MCAN_TSCV : (MCAN Offset: 0x24) (R/W 32) Timestamp Counter Value Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TSC:16;                    /**< bit:  0..15  Timestamp Counter (cleared on write)     */
@@ -409,6 +1068,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TSCV_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TSCV_OFFSET                    (0x24)                                        /**<  (MCAN_TSCV) Timestamp Counter Value Register  Offset */
@@ -422,6 +1082,7 @@ typedef union {
 
 /* -------- MCAN_TOCC : (MCAN Offset: 0x28) (R/W 32) Timeout Counter Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ETOC:1;                    /**< bit:      0  Enable Timeout Counter                   */
@@ -431,6 +1092,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TOCC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TOCC_OFFSET                    (0x28)                                        /**<  (MCAN_TOCC) Timeout Counter Configuration Register  Offset */
@@ -462,6 +1124,7 @@ typedef union {
 
 /* -------- MCAN_TOCV : (MCAN Offset: 0x2c) (R/W 32) Timeout Counter Value Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TOC:16;                    /**< bit:  0..15  Timeout Counter (cleared on write)       */
@@ -469,6 +1132,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TOCV_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TOCV_OFFSET                    (0x2C)                                        /**<  (MCAN_TOCV) Timeout Counter Value Register  Offset */
@@ -482,6 +1146,7 @@ typedef union {
 
 /* -------- MCAN_ECR : (MCAN Offset: 0x40) (R/ 32) Error Counter Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TEC:8;                     /**< bit:   0..7  Transmit Error Counter                   */
@@ -492,6 +1157,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_ECR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_ECR_OFFSET                     (0x40)                                        /**<  (MCAN_ECR) Error Counter Register  Offset */
@@ -514,6 +1180,7 @@ typedef union {
 
 /* -------- MCAN_PSR : (MCAN Offset: 0x44) (R/ 32) Protocol Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t LEC:3;                     /**< bit:   0..2  Last Error Code (set to 111 on read)     */
@@ -532,6 +1199,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_PSR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_PSR_OFFSET                     (0x44)                                        /**<  (MCAN_PSR) Protocol Status Register  Offset */
@@ -599,6 +1267,7 @@ typedef union {
 
 /* -------- MCAN_TDCR : (MCAN Offset: 0x48) (R/W 32) Transmit Delay Compensation Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TDCF:7;                    /**< bit:   0..6  Transmitter Delay Compensation Filter    */
@@ -608,6 +1277,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TDCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TDCR_OFFSET                    (0x48)                                        /**<  (MCAN_TDCR) Transmit Delay Compensation Register  Offset */
@@ -624,6 +1294,7 @@ typedef union {
 
 /* -------- MCAN_IR : (MCAN Offset: 0x50) (R/W 32) Interrupt Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RF0N:1;                    /**< bit:      0  Receive FIFO 0 New Message               */
@@ -659,6 +1330,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_IR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_IR_OFFSET                      (0x50)                                        /**<  (MCAN_IR) Interrupt Register  Offset */
@@ -753,6 +1425,7 @@ typedef union {
 
 /* -------- MCAN_IE : (MCAN Offset: 0x54) (R/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RF0NE:1;                   /**< bit:      0  Receive FIFO 0 New Message Interrupt Enable */
@@ -788,6 +1461,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_IE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_IE_OFFSET                      (0x54)                                        /**<  (MCAN_IE) Interrupt Enable Register  Offset */
@@ -882,6 +1556,7 @@ typedef union {
 
 /* -------- MCAN_ILS : (MCAN Offset: 0x58) (R/W 32) Interrupt Line Select Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RF0NL:1;                   /**< bit:      0  Receive FIFO 0 New Message Interrupt Line */
@@ -917,6 +1592,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_ILS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_ILS_OFFSET                     (0x58)                                        /**<  (MCAN_ILS) Interrupt Line Select Register  Offset */
@@ -1011,6 +1687,7 @@ typedef union {
 
 /* -------- MCAN_ILE : (MCAN Offset: 0x5c) (R/W 32) Interrupt Line Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t EINT0:1;                   /**< bit:      0  Enable Interrupt Line 0                  */
@@ -1023,6 +1700,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_ILE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_ILE_OFFSET                     (0x5C)                                        /**<  (MCAN_ILE) Interrupt Line Enable Register  Offset */
@@ -1042,6 +1720,7 @@ typedef union {
 
 /* -------- MCAN_GFC : (MCAN Offset: 0x80) (R/W 32) Global Filter Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RRFE:1;                    /**< bit:      0  Reject Remote Frames Extended            */
@@ -1052,6 +1731,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_GFC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_GFC_OFFSET                     (0x80)                                        /**<  (MCAN_GFC) Global Filter Configuration Register  Offset */
@@ -1090,6 +1770,7 @@ typedef union {
 
 /* -------- MCAN_SIDFC : (MCAN Offset: 0x84) (R/W 32) Standard ID Filter Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -1099,6 +1780,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_SIDFC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_SIDFC_OFFSET                   (0x84)                                        /**<  (MCAN_SIDFC) Standard ID Filter Configuration Register  Offset */
@@ -1115,6 +1797,7 @@ typedef union {
 
 /* -------- MCAN_XIDFC : (MCAN Offset: 0x88) (R/W 32) Extended ID Filter Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -1124,6 +1807,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_XIDFC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_XIDFC_OFFSET                   (0x88)                                        /**<  (MCAN_XIDFC) Extended ID Filter Configuration Register  Offset */
@@ -1140,6 +1824,7 @@ typedef union {
 
 /* -------- MCAN_XIDAM : (MCAN Offset: 0x90) (R/W 32) Extended ID AND Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t EIDM:29;                   /**< bit:  0..28  Extended ID Mask                         */
@@ -1147,6 +1832,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_XIDAM_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_XIDAM_OFFSET                   (0x90)                                        /**<  (MCAN_XIDAM) Extended ID AND Mask Register  Offset */
@@ -1160,6 +1846,7 @@ typedef union {
 
 /* -------- MCAN_HPMS : (MCAN Offset: 0x94) (R/ 32) High Priority Message Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t BIDX:6;                    /**< bit:   0..5  Buffer Index                             */
@@ -1170,6 +1857,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_HPMS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_HPMS_OFFSET                    (0x94)                                        /**<  (MCAN_HPMS) High Priority Message Status Register  Offset */
@@ -1200,6 +1888,7 @@ typedef union {
 
 /* -------- MCAN_NDAT1 : (MCAN Offset: 0x98) (R/W 32) New Data 1 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ND0:1;                     /**< bit:      0  New Data                                 */
@@ -1240,6 +1929,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_NDAT1_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_NDAT1_OFFSET                   (0x98)                                        /**<  (MCAN_NDAT1) New Data 1 Register  Offset */
@@ -1349,6 +2039,7 @@ typedef union {
 
 /* -------- MCAN_NDAT2 : (MCAN Offset: 0x9c) (R/W 32) New Data 2 Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ND32:1;                    /**< bit:      0  New Data                                 */
@@ -1389,6 +2080,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_NDAT2_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_NDAT2_OFFSET                   (0x9C)                                        /**<  (MCAN_NDAT2) New Data 2 Register  Offset */
@@ -1498,6 +2190,7 @@ typedef union {
 
 /* -------- MCAN_RXF0C : (MCAN Offset: 0xa0) (R/W 32) Receive FIFO 0 Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -1509,6 +2202,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_RXF0C_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_RXF0C_OFFSET                   (0xA0)                                        /**<  (MCAN_RXF0C) Receive FIFO 0 Configuration Register  Offset */
@@ -1531,6 +2225,7 @@ typedef union {
 
 /* -------- MCAN_RXF0S : (MCAN Offset: 0xa4) (R/ 32) Receive FIFO 0 Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t F0FL:7;                    /**< bit:   0..6  Receive FIFO 0 Fill Level                */
@@ -1545,6 +2240,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_RXF0S_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_RXF0S_OFFSET                   (0xA4)                                        /**<  (MCAN_RXF0S) Receive FIFO 0 Status Register  Offset */
@@ -1570,6 +2266,7 @@ typedef union {
 
 /* -------- MCAN_RXF0A : (MCAN Offset: 0xa8) (R/W 32) Receive FIFO 0 Acknowledge Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t F0AI:6;                    /**< bit:   0..5  Receive FIFO 0 Acknowledge Index         */
@@ -1577,6 +2274,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_RXF0A_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_RXF0A_OFFSET                   (0xA8)                                        /**<  (MCAN_RXF0A) Receive FIFO 0 Acknowledge Register  Offset */
@@ -1590,6 +2288,7 @@ typedef union {
 
 /* -------- MCAN_RXBC : (MCAN Offset: 0xac) (R/W 32) Receive Rx Buffer Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -1598,6 +2297,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_RXBC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_RXBC_OFFSET                    (0xAC)                                        /**<  (MCAN_RXBC) Receive Rx Buffer Configuration Register  Offset */
@@ -1611,6 +2311,7 @@ typedef union {
 
 /* -------- MCAN_RXF1C : (MCAN Offset: 0xb0) (R/W 32) Receive FIFO 1 Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -1622,6 +2323,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_RXF1C_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_RXF1C_OFFSET                   (0xB0)                                        /**<  (MCAN_RXF1C) Receive FIFO 1 Configuration Register  Offset */
@@ -1644,6 +2346,7 @@ typedef union {
 
 /* -------- MCAN_RXF1S : (MCAN Offset: 0xb4) (R/ 32) Receive FIFO 1 Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t F1FL:7;                    /**< bit:   0..6  Receive FIFO 1 Fill Level                */
@@ -1659,6 +2362,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_RXF1S_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_RXF1S_OFFSET                   (0xB4)                                        /**<  (MCAN_RXF1S) Receive FIFO 1 Status Register  Offset */
@@ -1695,6 +2399,7 @@ typedef union {
 
 /* -------- MCAN_RXF1A : (MCAN Offset: 0xb8) (R/W 32) Receive FIFO 1 Acknowledge Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t F1AI:6;                    /**< bit:   0..5  Receive FIFO 1 Acknowledge Index         */
@@ -1702,6 +2407,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_RXF1A_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_RXF1A_OFFSET                   (0xB8)                                        /**<  (MCAN_RXF1A) Receive FIFO 1 Acknowledge Register  Offset */
@@ -1715,6 +2421,7 @@ typedef union {
 
 /* -------- MCAN_RXESC : (MCAN Offset: 0xbc) (R/W 32) Receive Buffer / FIFO Element Size Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t F0DS:3;                    /**< bit:   0..2  Receive FIFO 0 Data Field Size           */
@@ -1726,6 +2433,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_RXESC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_RXESC_OFFSET                   (0xBC)                                        /**<  (MCAN_RXESC) Receive Buffer / FIFO Element Size Configuration Register  Offset */
@@ -1793,6 +2501,7 @@ typedef union {
 
 /* -------- MCAN_TXBC : (MCAN Offset: 0xc0) (R/W 32) Transmit Buffer Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -1805,6 +2514,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TXBC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TXBC_OFFSET                    (0xC0)                                        /**<  (MCAN_TXBC) Transmit Buffer Configuration Register  Offset */
@@ -1827,6 +2537,7 @@ typedef union {
 
 /* -------- MCAN_TXFQS : (MCAN Offset: 0xc4) (R/ 32) Transmit FIFO/Queue Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TFFL:6;                    /**< bit:   0..5  Tx FIFO Free Level                       */
@@ -1839,6 +2550,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TXFQS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TXFQS_OFFSET                   (0xC4)                                        /**<  (MCAN_TXFQS) Transmit FIFO/Queue Status Register  Offset */
@@ -1861,6 +2573,7 @@ typedef union {
 
 /* -------- MCAN_TXESC : (MCAN Offset: 0xc8) (R/W 32) Transmit Buffer Element Size Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TBDS:3;                    /**< bit:   0..2  Tx Buffer Data Field Size                */
@@ -1868,6 +2581,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TXESC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TXESC_OFFSET                   (0xC8)                                        /**<  (MCAN_TXESC) Transmit Buffer Element Size Configuration Register  Offset */
@@ -1881,7 +2595,7 @@ typedef union {
 #define   MCAN_TXESC_TBDS_20_BYTE_Val       _U_(0x3)                                       /**< (MCAN_TXESC) 20-byte data field  */
 #define   MCAN_TXESC_TBDS_24_BYTE_Val       _U_(0x4)                                       /**< (MCAN_TXESC) 24-byte data field  */
 #define   MCAN_TXESC_TBDS_32_BYTE_Val       _U_(0x5)                                       /**< (MCAN_TXESC) 32-byte data field  */
-#define   MCAN_TXESC_TBDS_48_BYTE_Val       _U_(0x6)                                       /**< (MCAN_TXESC) 48- byte data field  */
+#define   MCAN_TXESC_TBDS_48_BYTE_Val       _U_(0x6)                                       /**< (MCAN_TXESC) 48-byte data field  */
 #define   MCAN_TXESC_TBDS_64_BYTE_Val       _U_(0x7)                                       /**< (MCAN_TXESC) 64-byte data field  */
 #define MCAN_TXESC_TBDS_8_BYTE              (MCAN_TXESC_TBDS_8_BYTE_Val << MCAN_TXESC_TBDS_Pos)  /**< (MCAN_TXESC) 8-byte data field Position  */
 #define MCAN_TXESC_TBDS_12_BYTE             (MCAN_TXESC_TBDS_12_BYTE_Val << MCAN_TXESC_TBDS_Pos)  /**< (MCAN_TXESC) 12-byte data field Position  */
@@ -1889,7 +2603,7 @@ typedef union {
 #define MCAN_TXESC_TBDS_20_BYTE             (MCAN_TXESC_TBDS_20_BYTE_Val << MCAN_TXESC_TBDS_Pos)  /**< (MCAN_TXESC) 20-byte data field Position  */
 #define MCAN_TXESC_TBDS_24_BYTE             (MCAN_TXESC_TBDS_24_BYTE_Val << MCAN_TXESC_TBDS_Pos)  /**< (MCAN_TXESC) 24-byte data field Position  */
 #define MCAN_TXESC_TBDS_32_BYTE             (MCAN_TXESC_TBDS_32_BYTE_Val << MCAN_TXESC_TBDS_Pos)  /**< (MCAN_TXESC) 32-byte data field Position  */
-#define MCAN_TXESC_TBDS_48_BYTE             (MCAN_TXESC_TBDS_48_BYTE_Val << MCAN_TXESC_TBDS_Pos)  /**< (MCAN_TXESC) 48- byte data field Position  */
+#define MCAN_TXESC_TBDS_48_BYTE             (MCAN_TXESC_TBDS_48_BYTE_Val << MCAN_TXESC_TBDS_Pos)  /**< (MCAN_TXESC) 48-byte data field Position  */
 #define MCAN_TXESC_TBDS_64_BYTE             (MCAN_TXESC_TBDS_64_BYTE_Val << MCAN_TXESC_TBDS_Pos)  /**< (MCAN_TXESC) 64-byte data field Position  */
 #define MCAN_TXESC_MASK                     _U_(0x07)                                      /**< \deprecated (MCAN_TXESC) Register MASK  (Use MCAN_TXESC_Msk instead)  */
 #define MCAN_TXESC_Msk                      _U_(0x07)                                      /**< (MCAN_TXESC) Register Mask  */
@@ -1897,6 +2611,7 @@ typedef union {
 
 /* -------- MCAN_TXBRP : (MCAN Offset: 0xcc) (R/ 32) Transmit Buffer Request Pending Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TRP0:1;                    /**< bit:      0  Transmission Request Pending for Buffer 0 */
@@ -1937,6 +2652,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TXBRP_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TXBRP_OFFSET                   (0xCC)                                        /**<  (MCAN_TXBRP) Transmit Buffer Request Pending Register  Offset */
@@ -2046,6 +2762,7 @@ typedef union {
 
 /* -------- MCAN_TXBAR : (MCAN Offset: 0xd0) (R/W 32) Transmit Buffer Add Request Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t AR0:1;                     /**< bit:      0  Add Request for Transmit Buffer 0        */
@@ -2086,6 +2803,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TXBAR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TXBAR_OFFSET                   (0xD0)                                        /**<  (MCAN_TXBAR) Transmit Buffer Add Request Register  Offset */
@@ -2195,6 +2913,7 @@ typedef union {
 
 /* -------- MCAN_TXBCR : (MCAN Offset: 0xd4) (R/W 32) Transmit Buffer Cancellation Request Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CR0:1;                     /**< bit:      0  Cancellation Request for Transmit Buffer 0 */
@@ -2235,6 +2954,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TXBCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TXBCR_OFFSET                   (0xD4)                                        /**<  (MCAN_TXBCR) Transmit Buffer Cancellation Request Register  Offset */
@@ -2344,6 +3064,7 @@ typedef union {
 
 /* -------- MCAN_TXBTO : (MCAN Offset: 0xd8) (R/ 32) Transmit Buffer Transmission Occurred Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TO0:1;                     /**< bit:      0  Transmission Occurred for Buffer 0       */
@@ -2384,6 +3105,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TXBTO_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TXBTO_OFFSET                   (0xD8)                                        /**<  (MCAN_TXBTO) Transmit Buffer Transmission Occurred Register  Offset */
@@ -2493,6 +3215,7 @@ typedef union {
 
 /* -------- MCAN_TXBCF : (MCAN Offset: 0xdc) (R/ 32) Transmit Buffer Cancellation Finished Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CF0:1;                     /**< bit:      0  Cancellation Finished for Transmit Buffer 0 */
@@ -2533,6 +3256,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TXBCF_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TXBCF_OFFSET                   (0xDC)                                        /**<  (MCAN_TXBCF) Transmit Buffer Cancellation Finished Register  Offset */
@@ -2642,6 +3366,7 @@ typedef union {
 
 /* -------- MCAN_TXBTIE : (MCAN Offset: 0xe0) (R/W 32) Transmit Buffer Transmission Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TIE0:1;                    /**< bit:      0  Transmission Interrupt Enable for Buffer 0 */
@@ -2682,6 +3407,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TXBTIE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TXBTIE_OFFSET                  (0xE0)                                        /**<  (MCAN_TXBTIE) Transmit Buffer Transmission Interrupt Enable Register  Offset */
@@ -2791,6 +3517,7 @@ typedef union {
 
 /* -------- MCAN_TXBCIE : (MCAN Offset: 0xe4) (R/W 32) Transmit Buffer Cancellation Finished Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CFIE0:1;                   /**< bit:      0  Cancellation Finished Interrupt Enable for Transmit Buffer 0 */
@@ -2831,6 +3558,7 @@ typedef union {
   } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TXBCIE_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TXBCIE_OFFSET                  (0xE4)                                        /**<  (MCAN_TXBCIE) Transmit Buffer Cancellation Finished Interrupt Enable Register  Offset */
@@ -2940,6 +3668,7 @@ typedef union {
 
 /* -------- MCAN_TXEFC : (MCAN Offset: 0xf0) (R/W 32) Transmit Event FIFO Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :2;                        /**< bit:   0..1  Reserved */
@@ -2951,6 +3680,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TXEFC_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TXEFC_OFFSET                   (0xF0)                                        /**<  (MCAN_TXEFC) Transmit Event FIFO Configuration Register  Offset */
@@ -2970,6 +3700,7 @@ typedef union {
 
 /* -------- MCAN_TXEFS : (MCAN Offset: 0xf4) (R/ 32) Transmit Event FIFO Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t EFFL:6;                    /**< bit:   0..5  Event FIFO Fill Level                    */
@@ -2984,6 +3715,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TXEFS_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TXEFS_OFFSET                   (0xF4)                                        /**<  (MCAN_TXEFS) Transmit Event FIFO Status Register  Offset */
@@ -3009,6 +3741,7 @@ typedef union {
 
 /* -------- MCAN_TXEFA : (MCAN Offset: 0xf8) (R/W 32) Transmit Event FIFO Acknowledge Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t EFAI:5;                    /**< bit:   0..4  Event FIFO Acknowledge Index             */
@@ -3016,6 +3749,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } MCAN_TXEFA_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define MCAN_TXEFA_OFFSET                   (0xF8)                                        /**<  (MCAN_TXEFA) Transmit Event FIFO Acknowledge Register  Offset */
@@ -3029,6 +3763,79 @@ typedef union {
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 #if COMPONENT_TYPEDEF_STYLE == 'R'
+/** \brief MCAN_RXBE hardware registers */
+typedef struct {  /* Rx Buffer Element */
+  __IO uint32_t MCAN_RXBE_0;    /**< (MCAN_RXBE Offset: 0x00) Rx Buffer Element 0 */
+  __IO uint32_t MCAN_RXBE_1;    /**< (MCAN_RXBE Offset: 0x04) Rx Buffer Element 1 */
+  __IO uint32_t MCAN_RXBE_DATA; /**< (MCAN_RXBE Offset: 0x08) Rx Buffer Element Data */
+} McanRxbe
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
+/** \brief MCAN_RXF0E hardware registers */
+typedef struct {  /* Rx FIFO 0 Element */
+  __IO uint32_t MCAN_RXF0E_0;   /**< (MCAN_RXF0E Offset: 0x00) Rx FIFO 0 Element 0 */
+  __IO uint32_t MCAN_RXF0E_1;   /**< (MCAN_RXF0E Offset: 0x04) Rx FIFO 0 Element 1 */
+  __IO uint32_t MCAN_RXF0E_DATA; /**< (MCAN_RXF0E Offset: 0x08) Rx FIFO 0 Element Data */
+} McanRxf0e
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
+/** \brief MCAN_RXF1E hardware registers */
+typedef struct {  /* Rx FIFO 1 Element */
+  __IO uint32_t MCAN_RXF1E_0;   /**< (MCAN_RXF1E Offset: 0x00) Rx FIFO 1 Element 0 */
+  __IO uint32_t MCAN_RXF1E_1;   /**< (MCAN_RXF1E Offset: 0x04) Rx FIFO 1 Element 1 */
+  __IO uint32_t MCAN_RXF1E_DATA; /**< (MCAN_RXF1E Offset: 0x08) Rx FIFO 1 Element Data */
+} McanRxf1e
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
+/** \brief MCAN_TXBE hardware registers */
+typedef struct {  /* Tx Buffer Element */
+  __IO uint32_t MCAN_TXBE_0;    /**< (MCAN_TXBE Offset: 0x00) Tx Buffer Element 0 */
+  __IO uint32_t MCAN_TXBE_1;    /**< (MCAN_TXBE Offset: 0x04) Tx Buffer Element 1 */
+  __IO uint32_t MCAN_TXBE_DATA; /**< (MCAN_TXBE Offset: 0x08) Tx Buffer Element Data */
+} McanTxbe
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
+/** \brief MCAN_TXEFE hardware registers */
+typedef struct {  /* Tx Event FIFO Element */
+  __IO uint32_t MCAN_TXEFE_0;   /**< (MCAN_TXEFE Offset: 0x00) Tx Event FIFO Element 0 */
+  __IO uint32_t MCAN_TXEFE_1;   /**< (MCAN_TXEFE Offset: 0x04) Tx Event FIFO Element 1 */
+} McanTxefe
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
+/** \brief MCAN_SIDFE hardware registers */
+typedef struct {  /* Standard Message ID Filter Element */
+  __IO uint32_t MCAN_SIDFE_0;   /**< (MCAN_SIDFE Offset: 0x00) Standard Message ID Filter Element 0 */
+} McanSidfe
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
+/** \brief MCAN_XIDFE hardware registers */
+typedef struct {  /* Extended Message ID Filter Element */
+  __IO uint32_t MCAN_XIDFE_0;   /**< (MCAN_XIDFE Offset: 0x00) Extended Message ID Filter Element 0 */
+  __IO uint32_t MCAN_XIDFE_1;   /**< (MCAN_XIDFE Offset: 0x04) Extended Message ID Filter Element 1 */
+} McanXidfe
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
 /** \brief MCAN hardware registers */
 typedef struct {  
   __I  uint32_t MCAN_CREL;      /**< (MCAN Offset: 0x00) Core Release Register */
@@ -3043,20 +3850,20 @@ typedef struct {
   __IO uint32_t MCAN_TSCV;      /**< (MCAN Offset: 0x24) Timestamp Counter Value Register */
   __IO uint32_t MCAN_TOCC;      /**< (MCAN Offset: 0x28) Timeout Counter Configuration Register */
   __IO uint32_t MCAN_TOCV;      /**< (MCAN Offset: 0x2C) Timeout Counter Value Register */
-  RoReg8  Reserved1[0x10];
+  __I  uint8_t                        Reserved1[16];
   __I  uint32_t MCAN_ECR;       /**< (MCAN Offset: 0x40) Error Counter Register */
   __I  uint32_t MCAN_PSR;       /**< (MCAN Offset: 0x44) Protocol Status Register */
   __IO uint32_t MCAN_TDCR;      /**< (MCAN Offset: 0x48) Transmit Delay Compensation Register */
-  RoReg8  Reserved2[0x4];
+  __I  uint8_t                        Reserved2[4];
   __IO uint32_t MCAN_IR;        /**< (MCAN Offset: 0x50) Interrupt Register */
   __IO uint32_t MCAN_IE;        /**< (MCAN Offset: 0x54) Interrupt Enable Register */
   __IO uint32_t MCAN_ILS;       /**< (MCAN Offset: 0x58) Interrupt Line Select Register */
   __IO uint32_t MCAN_ILE;       /**< (MCAN Offset: 0x5C) Interrupt Line Enable Register */
-  RoReg8  Reserved3[0x20];
+  __I  uint8_t                        Reserved3[32];
   __IO uint32_t MCAN_GFC;       /**< (MCAN Offset: 0x80) Global Filter Configuration Register */
   __IO uint32_t MCAN_SIDFC;     /**< (MCAN Offset: 0x84) Standard ID Filter Configuration Register */
   __IO uint32_t MCAN_XIDFC;     /**< (MCAN Offset: 0x88) Extended ID Filter Configuration Register */
-  RoReg8  Reserved4[0x4];
+  __I  uint8_t                        Reserved4[4];
   __IO uint32_t MCAN_XIDAM;     /**< (MCAN Offset: 0x90) Extended ID AND Mask Register */
   __I  uint32_t MCAN_HPMS;      /**< (MCAN Offset: 0x94) High Priority Message Status Register */
   __IO uint32_t MCAN_NDAT1;     /**< (MCAN Offset: 0x98) New Data 1 Register */
@@ -3079,13 +3886,86 @@ typedef struct {
   __I  uint32_t MCAN_TXBCF;     /**< (MCAN Offset: 0xDC) Transmit Buffer Cancellation Finished Register */
   __IO uint32_t MCAN_TXBTIE;    /**< (MCAN Offset: 0xE0) Transmit Buffer Transmission Interrupt Enable Register */
   __IO uint32_t MCAN_TXBCIE;    /**< (MCAN Offset: 0xE4) Transmit Buffer Cancellation Finished Interrupt Enable Register */
-  RoReg8  Reserved5[0x8];
+  __I  uint8_t                        Reserved5[8];
   __IO uint32_t MCAN_TXEFC;     /**< (MCAN Offset: 0xF0) Transmit Event FIFO Configuration Register */
   __I  uint32_t MCAN_TXEFS;     /**< (MCAN Offset: 0xF4) Transmit Event FIFO Status Register */
   __IO uint32_t MCAN_TXEFA;     /**< (MCAN Offset: 0xF8) Transmit Event FIFO Acknowledge Register */
 } Mcan;
 
 #elif COMPONENT_TYPEDEF_STYLE == 'N'
+/** \brief MCAN_RXBE hardware registers */
+typedef struct {  /* Rx Buffer Element */
+  __IO MCAN_RXBE_0_Type               MCAN_RXBE_0;    /**< Offset: 0x00 (R/W  32) Rx Buffer Element 0 */
+  __IO MCAN_RXBE_1_Type               MCAN_RXBE_1;    /**< Offset: 0x04 (R/W  32) Rx Buffer Element 1 */
+  __IO MCAN_RXBE_DATA_Type            MCAN_RXBE_DATA; /**< Offset: 0x08 (R/W  32) Rx Buffer Element Data */
+} McanRxbe
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
+/** \brief MCAN_RXF0E hardware registers */
+typedef struct {  /* Rx FIFO 0 Element */
+  __IO MCAN_RXF0E_0_Type              MCAN_RXF0E_0;   /**< Offset: 0x00 (R/W  32) Rx FIFO 0 Element 0 */
+  __IO MCAN_RXF0E_1_Type              MCAN_RXF0E_1;   /**< Offset: 0x04 (R/W  32) Rx FIFO 0 Element 1 */
+  __IO MCAN_RXF0E_DATA_Type           MCAN_RXF0E_DATA; /**< Offset: 0x08 (R/W  32) Rx FIFO 0 Element Data */
+} McanRxf0e
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
+/** \brief MCAN_RXF1E hardware registers */
+typedef struct {  /* Rx FIFO 1 Element */
+  __IO MCAN_RXF1E_0_Type              MCAN_RXF1E_0;   /**< Offset: 0x00 (R/W  32) Rx FIFO 1 Element 0 */
+  __IO MCAN_RXF1E_1_Type              MCAN_RXF1E_1;   /**< Offset: 0x04 (R/W  32) Rx FIFO 1 Element 1 */
+  __IO MCAN_RXF1E_DATA_Type           MCAN_RXF1E_DATA; /**< Offset: 0x08 (R/W  32) Rx FIFO 1 Element Data */
+} McanRxf1e
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
+/** \brief MCAN_TXBE hardware registers */
+typedef struct {  /* Tx Buffer Element */
+  __IO MCAN_TXBE_0_Type               MCAN_TXBE_0;    /**< Offset: 0x00 (R/W  32) Tx Buffer Element 0 */
+  __IO MCAN_TXBE_1_Type               MCAN_TXBE_1;    /**< Offset: 0x04 (R/W  32) Tx Buffer Element 1 */
+  __IO MCAN_TXBE_DATA_Type            MCAN_TXBE_DATA; /**< Offset: 0x08 (R/W  32) Tx Buffer Element Data */
+} McanTxbe
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
+/** \brief MCAN_TXEFE hardware registers */
+typedef struct {  /* Tx Event FIFO Element */
+  __IO MCAN_TXEFE_0_Type              MCAN_TXEFE_0;   /**< Offset: 0x00 (R/W  32) Tx Event FIFO Element 0 */
+  __IO MCAN_TXEFE_1_Type              MCAN_TXEFE_1;   /**< Offset: 0x04 (R/W  32) Tx Event FIFO Element 1 */
+} McanTxefe
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
+/** \brief MCAN_SIDFE hardware registers */
+typedef struct {  /* Standard Message ID Filter Element */
+  __IO MCAN_SIDFE_0_Type              MCAN_SIDFE_0;   /**< Offset: 0x00 (R/W  32) Standard Message ID Filter Element 0 */
+} McanSidfe
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
+/** \brief MCAN_XIDFE hardware registers */
+typedef struct {  /* Extended Message ID Filter Element */
+  __IO MCAN_XIDFE_0_Type              MCAN_XIDFE_0;   /**< Offset: 0x00 (R/W  32) Extended Message ID Filter Element 0 */
+  __IO MCAN_XIDFE_1_Type              MCAN_XIDFE_1;   /**< Offset: 0x04 (R/W  32) Extended Message ID Filter Element 1 */
+} McanXidfe
+#ifdef __GNUC__
+  __attribute__ ((aligned (4)))
+#endif
+;
+
 /** \brief MCAN hardware registers */
 typedef struct {  
   __I  MCAN_CREL_Type                 MCAN_CREL;      /**< Offset: 0x00 (R/   32) Core Release Register */
@@ -3100,20 +3980,20 @@ typedef struct {
   __IO MCAN_TSCV_Type                 MCAN_TSCV;      /**< Offset: 0x24 (R/W  32) Timestamp Counter Value Register */
   __IO MCAN_TOCC_Type                 MCAN_TOCC;      /**< Offset: 0x28 (R/W  32) Timeout Counter Configuration Register */
   __IO MCAN_TOCV_Type                 MCAN_TOCV;      /**< Offset: 0x2C (R/W  32) Timeout Counter Value Register */
-  __I  uint32_t                       Reserved1[4];
+  __I  uint8_t                        Reserved1[16];
   __I  MCAN_ECR_Type                  MCAN_ECR;       /**< Offset: 0x40 (R/   32) Error Counter Register */
   __I  MCAN_PSR_Type                  MCAN_PSR;       /**< Offset: 0x44 (R/   32) Protocol Status Register */
   __IO MCAN_TDCR_Type                 MCAN_TDCR;      /**< Offset: 0x48 (R/W  32) Transmit Delay Compensation Register */
-  __I  uint32_t                       Reserved2[1];
+  __I  uint8_t                        Reserved2[4];
   __IO MCAN_IR_Type                   MCAN_IR;        /**< Offset: 0x50 (R/W  32) Interrupt Register */
   __IO MCAN_IE_Type                   MCAN_IE;        /**< Offset: 0x54 (R/W  32) Interrupt Enable Register */
   __IO MCAN_ILS_Type                  MCAN_ILS;       /**< Offset: 0x58 (R/W  32) Interrupt Line Select Register */
   __IO MCAN_ILE_Type                  MCAN_ILE;       /**< Offset: 0x5C (R/W  32) Interrupt Line Enable Register */
-  __I  uint32_t                       Reserved3[8];
+  __I  uint8_t                        Reserved3[32];
   __IO MCAN_GFC_Type                  MCAN_GFC;       /**< Offset: 0x80 (R/W  32) Global Filter Configuration Register */
   __IO MCAN_SIDFC_Type                MCAN_SIDFC;     /**< Offset: 0x84 (R/W  32) Standard ID Filter Configuration Register */
   __IO MCAN_XIDFC_Type                MCAN_XIDFC;     /**< Offset: 0x88 (R/W  32) Extended ID Filter Configuration Register */
-  __I  uint32_t                       Reserved4[1];
+  __I  uint8_t                        Reserved4[4];
   __IO MCAN_XIDAM_Type                MCAN_XIDAM;     /**< Offset: 0x90 (R/W  32) Extended ID AND Mask Register */
   __I  MCAN_HPMS_Type                 MCAN_HPMS;      /**< Offset: 0x94 (R/   32) High Priority Message Status Register */
   __IO MCAN_NDAT1_Type                MCAN_NDAT1;     /**< Offset: 0x98 (R/W  32) New Data 1 Register */
@@ -3136,7 +4016,7 @@ typedef struct {
   __I  MCAN_TXBCF_Type                MCAN_TXBCF;     /**< Offset: 0xDC (R/   32) Transmit Buffer Cancellation Finished Register */
   __IO MCAN_TXBTIE_Type               MCAN_TXBTIE;    /**< Offset: 0xE0 (R/W  32) Transmit Buffer Transmission Interrupt Enable Register */
   __IO MCAN_TXBCIE_Type               MCAN_TXBCIE;    /**< Offset: 0xE4 (R/W  32) Transmit Buffer Cancellation Finished Interrupt Enable Register */
-  __I  uint32_t                       Reserved5[2];
+  __I  uint8_t                        Reserved5[8];
   __IO MCAN_TXEFC_Type                MCAN_TXEFC;     /**< Offset: 0xF0 (R/W  32) Transmit Event FIFO Configuration Register */
   __I  MCAN_TXEFS_Type                MCAN_TXEFS;     /**< Offset: 0xF4 (R/   32) Transmit Event FIFO Status Register */
   __IO MCAN_TXEFA_Type                MCAN_TXEFA;     /**< Offset: 0xF8 (R/W  32) Transmit Event FIFO Acknowledge Register */

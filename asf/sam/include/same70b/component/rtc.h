@@ -3,11 +3,13 @@
  *
  * \brief Component description for RTC
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_RTC_COMPONENT_H_
 #define _SAME70_RTC_COMPONENT_H_
 #define _SAME70_RTC_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -45,6 +47,7 @@
 
 /* -------- RTC_CR : (RTC Offset: 0x00) (R/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t UPDTIM:1;                  /**< bit:      0  Update Request Time Register             */
@@ -57,6 +60,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTC_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTC_CR_OFFSET                       (0x00)                                        /**<  (RTC_CR) Control Register  Offset */
@@ -93,6 +97,7 @@ typedef union {
 
 /* -------- RTC_MR : (RTC Offset: 0x04) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t HRMOD:1;                   /**< bit:      0  12-/24-hour Mode                         */
@@ -113,6 +118,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTC_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTC_MR_OFFSET                       (0x04)                                        /**<  (RTC_MR) Mode Register  Offset */
@@ -206,6 +212,7 @@ typedef union {
 
 /* -------- RTC_TIMR : (RTC Offset: 0x08) (R/W 32) Time Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SEC:7;                     /**< bit:   0..6  Current Second                           */
@@ -218,6 +225,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTC_TIMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTC_TIMR_OFFSET                     (0x08)                                        /**<  (RTC_TIMR) Time Register  Offset */
@@ -240,6 +248,7 @@ typedef union {
 
 /* -------- RTC_CALR : (RTC Offset: 0x0c) (R/W 32) Calendar Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CENT:7;                    /**< bit:   0..6  Current Century                          */
@@ -252,6 +261,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTC_CALR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTC_CALR_OFFSET                     (0x0C)                                        /**<  (RTC_CALR) Calendar Register  Offset */
@@ -277,6 +287,7 @@ typedef union {
 
 /* -------- RTC_TIMALR : (RTC Offset: 0x10) (R/W 32) Time Alarm Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t SEC:7;                     /**< bit:   0..6  Second Alarm                             */
@@ -290,6 +301,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTC_TIMALR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTC_TIMALR_OFFSET                   (0x10)                                        /**<  (RTC_TIMALR) Time Alarm Register  Offset */
@@ -321,6 +333,7 @@ typedef union {
 
 /* -------- RTC_CALALR : (RTC Offset: 0x14) (R/W 32) Calendar Alarm Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t :16;                       /**< bit:  0..15  Reserved */
@@ -333,6 +346,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTC_CALALR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTC_CALALR_OFFSET                   (0x14)                                        /**<  (RTC_CALALR) Calendar Alarm Register  Offset */
@@ -355,6 +369,7 @@ typedef union {
 
 /* -------- RTC_SR : (RTC Offset: 0x18) (R/ 32) Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ACKUPD:1;                  /**< bit:      0  Acknowledge for Update                   */
@@ -367,6 +382,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTC_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTC_SR_OFFSET                       (0x18)                                        /**<  (RTC_SR) Status Register  Offset */
@@ -419,6 +435,7 @@ typedef union {
 
 /* -------- RTC_SCCR : (RTC Offset: 0x1c) (/W 32) Status Clear Command Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ACKCLR:1;                  /**< bit:      0  Acknowledge Clear                        */
@@ -431,6 +448,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTC_SCCR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTC_SCCR_OFFSET                     (0x1C)                                        /**<  (RTC_SCCR) Status Clear Command Register  Offset */
@@ -459,6 +477,7 @@ typedef union {
 
 /* -------- RTC_IER : (RTC Offset: 0x20) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ACKEN:1;                   /**< bit:      0  Acknowledge Update Interrupt Enable      */
@@ -471,6 +490,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTC_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTC_IER_OFFSET                      (0x20)                                        /**<  (RTC_IER) Interrupt Enable Register  Offset */
@@ -499,6 +519,7 @@ typedef union {
 
 /* -------- RTC_IDR : (RTC Offset: 0x24) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ACKDIS:1;                  /**< bit:      0  Acknowledge Update Interrupt Disable     */
@@ -511,6 +532,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTC_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTC_IDR_OFFSET                      (0x24)                                        /**<  (RTC_IDR) Interrupt Disable Register  Offset */
@@ -539,6 +561,7 @@ typedef union {
 
 /* -------- RTC_IMR : (RTC Offset: 0x28) (R/ 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ACK:1;                     /**< bit:      0  Acknowledge Update Interrupt Mask        */
@@ -551,6 +574,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTC_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTC_IMR_OFFSET                      (0x28)                                        /**<  (RTC_IMR) Interrupt Mask Register  Offset */
@@ -579,6 +603,7 @@ typedef union {
 
 /* -------- RTC_VER : (RTC Offset: 0x2c) (R/ 32) Valid Entry Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t NVTIM:1;                   /**< bit:      0  Non-valid Time                           */
@@ -589,6 +614,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } RTC_VER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define RTC_VER_OFFSET                      (0x2C)                                        /**<  (RTC_VER) Valid Entry Register  Offset */
@@ -609,32 +635,6 @@ typedef union {
 #define RTC_VER_Msk                         _U_(0x0F)                                      /**< (RTC_VER) Register Mask  */
 
 
-/* -------- RTC_WPMR : (RTC Offset: 0xe4) (R/W 32) Write Protection Mode Register -------- */
-#if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union { 
-  struct {
-    uint32_t WPEN:1;                    /**< bit:      0  Write Protection Enable                  */
-    uint32_t :7;                        /**< bit:   1..7  Reserved */
-    uint32_t WPKEY:24;                  /**< bit:  8..31  Write Protection Key                     */
-  } bit;                                /**< Structure used for bit  access */
-  uint32_t reg;                         /**< Type used for register access */
-} RTC_WPMR_Type;
-#endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
-
-#define RTC_WPMR_OFFSET                     (0xE4)                                        /**<  (RTC_WPMR) Write Protection Mode Register  Offset */
-
-#define RTC_WPMR_WPEN_Pos                   0                                              /**< (RTC_WPMR) Write Protection Enable Position */
-#define RTC_WPMR_WPEN_Msk                   (_U_(0x1) << RTC_WPMR_WPEN_Pos)                /**< (RTC_WPMR) Write Protection Enable Mask */
-#define RTC_WPMR_WPEN                       RTC_WPMR_WPEN_Msk                              /**< \deprecated Old style mask definition for 1 bit bitfield. Use RTC_WPMR_WPEN_Msk instead */
-#define RTC_WPMR_WPKEY_Pos                  8                                              /**< (RTC_WPMR) Write Protection Key Position */
-#define RTC_WPMR_WPKEY_Msk                  (_U_(0xFFFFFF) << RTC_WPMR_WPKEY_Pos)          /**< (RTC_WPMR) Write Protection Key Mask */
-#define RTC_WPMR_WPKEY(value)               (RTC_WPMR_WPKEY_Msk & ((value) << RTC_WPMR_WPKEY_Pos))
-#define   RTC_WPMR_WPKEY_PASSWD_Val         _U_(0x525443)                                  /**< (RTC_WPMR) Writing any other value in this field aborts the write operation of the WPEN bit.Always reads as 0.  */
-#define RTC_WPMR_WPKEY_PASSWD               (RTC_WPMR_WPKEY_PASSWD_Val << RTC_WPMR_WPKEY_Pos)  /**< (RTC_WPMR) Writing any other value in this field aborts the write operation of the WPEN bit.Always reads as 0. Position  */
-#define RTC_WPMR_MASK                       _U_(0xFFFFFF01)                                /**< \deprecated (RTC_WPMR) Register MASK  (Use RTC_WPMR_Msk instead)  */
-#define RTC_WPMR_Msk                        _U_(0xFFFFFF01)                                /**< (RTC_WPMR) Register Mask  */
-
-
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 #if COMPONENT_TYPEDEF_STYLE == 'R'
 /** \brief RTC hardware registers */
@@ -651,8 +651,6 @@ typedef struct {
   __O  uint32_t RTC_IDR;        /**< (RTC Offset: 0x24) Interrupt Disable Register */
   __I  uint32_t RTC_IMR;        /**< (RTC Offset: 0x28) Interrupt Mask Register */
   __I  uint32_t RTC_VER;        /**< (RTC Offset: 0x2C) Valid Entry Register */
-  RoReg8  Reserved1[0xB4];
-  __IO uint32_t RTC_WPMR;       /**< (RTC Offset: 0xE4) Write Protection Mode Register */
 } Rtc;
 
 #elif COMPONENT_TYPEDEF_STYLE == 'N'
@@ -670,8 +668,6 @@ typedef struct {
   __O  RTC_IDR_Type                   RTC_IDR;        /**< Offset: 0x24 ( /W  32) Interrupt Disable Register */
   __I  RTC_IMR_Type                   RTC_IMR;        /**< Offset: 0x28 (R/   32) Interrupt Mask Register */
   __I  RTC_VER_Type                   RTC_VER;        /**< Offset: 0x2C (R/   32) Valid Entry Register */
-  __I  uint32_t                       Reserved1[45];
-  __IO RTC_WPMR_Type                  RTC_WPMR;       /**< Offset: 0xE4 (R/W  32) Write Protection Mode Register */
 } Rtc;
 
 #else /* COMPONENT_TYPEDEF_STYLE */

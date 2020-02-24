@@ -3,11 +3,13 @@
  *
  * \brief Component description for WDT
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_WDT_COMPONENT_H_
 #define _SAME70_WDT_COMPONENT_H_
 #define _SAME70_WDT_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -45,6 +47,7 @@
 
 /* -------- WDT_CR : (WDT Offset: 0x00) (/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WDRSTT:1;                  /**< bit:      0  Watchdog Restart                         */
@@ -53,6 +56,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } WDT_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define WDT_CR_OFFSET                       (0x00)                                        /**<  (WDT_CR) Control Register  Offset */
@@ -71,6 +75,7 @@ typedef union {
 
 /* -------- WDT_MR : (WDT Offset: 0x04) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WDV:12;                    /**< bit:  0..11  Watchdog Counter Value                   */
@@ -85,6 +90,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } WDT_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define WDT_MR_OFFSET                       (0x04)                                        /**<  (WDT_MR) Mode Register  Offset */
@@ -116,6 +122,7 @@ typedef union {
 
 /* -------- WDT_SR : (WDT Offset: 0x08) (R/ 32) Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t WDUNF:1;                   /**< bit:      0  Watchdog Underflow (cleared on read)     */
@@ -124,6 +131,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } WDT_SR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define WDT_SR_OFFSET                       (0x08)                                        /**<  (WDT_SR) Status Register  Offset */

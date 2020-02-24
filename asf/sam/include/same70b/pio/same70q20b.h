@@ -3,11 +3,13 @@
  *
  * \brief Peripheral I/O description for SAME70Q20B
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:57Z */
 #ifndef _SAME70Q20B_PIO_H_
 #define _SAME70Q20B_PIO_H_
 
@@ -390,14 +392,8 @@
 #define PIN_PA21X1_AFEC0_AD1                       _L_(21)      /**< AFEC0 signal: AD1 on PA21 mux X1*/
 #define PIO_PA21X1_AFEC0_AD1                       (_UL_(1) << 21)
 
-#define PIN_PA21X1_AFEC0_PIODCEN2                  _L_(21)      /**< AFEC0 signal: PIODCEN2 on PA21 mux X1*/
-#define PIO_PA21X1_AFEC0_PIODCEN2                  (_UL_(1) << 21)
-
 #define PIN_PB3X1_AFEC0_AD2                        _L_(35)      /**< AFEC0 signal: AD2 on PB3 mux X1*/
 #define PIO_PB3X1_AFEC0_AD2                        (_UL_(1) << 3)
-
-#define PIN_PB3X1_AFEC0_WKUP12                     _L_(35)      /**< AFEC0 signal: WKUP12 on PB3 mux X1*/
-#define PIO_PB3X1_AFEC0_WKUP12                     (_UL_(1) << 3)
 
 #define PIN_PE5X1_AFEC0_AD3                        _L_(133)     /**< AFEC0 signal: AD3 on PE5 mux X1*/
 #define PIO_PE5X1_AFEC0_AD3                        (_UL_(1) << 5)
@@ -417,20 +413,11 @@
 #define PIN_PA19X1_AFEC0_AD8                       _L_(19)      /**< AFEC0 signal: AD8 on PA19 mux X1*/
 #define PIO_PA19X1_AFEC0_AD8                       (_UL_(1) << 19)
 
-#define PIN_PA19X1_AFEC0_WKUP9                     _L_(19)      /**< AFEC0 signal: WKUP9 on PA19 mux X1*/
-#define PIO_PA19X1_AFEC0_WKUP9                     (_UL_(1) << 19)
-
 #define PIN_PA20X1_AFEC0_AD9                       _L_(20)      /**< AFEC0 signal: AD9 on PA20 mux X1*/
 #define PIO_PA20X1_AFEC0_AD9                       (_UL_(1) << 20)
 
-#define PIN_PA20X1_AFEC0_WKUP10                    _L_(20)      /**< AFEC0 signal: WKUP10 on PA20 mux X1*/
-#define PIO_PA20X1_AFEC0_WKUP10                    (_UL_(1) << 20)
-
 #define PIN_PB0X1_AFEC0_AD10                       _L_(32)      /**< AFEC0 signal: AD10 on PB0 mux X1*/
 #define PIO_PB0X1_AFEC0_AD10                       (_UL_(1) << 0)
-
-#define PIN_PB0X1_AFEC0_RTCOUT0                    _L_(32)      /**< AFEC0 signal: RTCOUT0 on PB0 mux X1*/
-#define PIO_PB0X1_AFEC0_RTCOUT0                    (_UL_(1) << 0)
 
 /* ========== PIO definition for AFEC1 peripheral ========== */
 #define PIN_PD9C_AFEC1_ADTRG                       _L_(105)     /**< AFEC1 signal: ADTRG on PD9 mux C*/
@@ -439,9 +426,6 @@
 
 #define PIN_PB1X1_AFEC1_AD0                        _L_(33)      /**< AFEC1 signal: AD0 on PB1 mux X1*/
 #define PIO_PB1X1_AFEC1_AD0                        (_UL_(1) << 1)
-
-#define PIN_PB1X1_AFEC1_RTCOUT1                    _L_(33)      /**< AFEC1 signal: RTCOUT1 on PB1 mux X1*/
-#define PIO_PB1X1_AFEC1_RTCOUT1                    (_UL_(1) << 1)
 
 #define PIN_PC13X1_AFEC1_AD1                       _L_(77)      /**< AFEC1 signal: AD1 on PC13 mux X1*/
 #define PIO_PC13X1_AFEC1_AD1                       (_UL_(1) << 13)
@@ -486,6 +470,343 @@
 #define PIN_PA2C_DACC_DATRG                        _L_(2)       /**< DACC signal: DATRG on PA2 mux C*/
 #define MUX_PA2C_DACC_DATRG                        _L_(2)       /**< DACC signal line function value: DATRG */
 #define PIO_PA2C_DACC_DATRG                        (_UL_(1) << 2)
+
+/* ========== PIO definition for EBI peripheral ========== */
+#define PIN_PC18A_EBI_A0                           _L_(82)      /**< EBI signal: A0 on PC18 mux A*/
+#define MUX_PC18A_EBI_A0                           _L_(0)       /**< EBI signal line function value: A0 */
+#define PIO_PC18A_EBI_A0                           (_UL_(1) << 18)
+
+#define PIN_PC19A_EBI_A1                           _L_(83)      /**< EBI signal: A1 on PC19 mux A*/
+#define MUX_PC19A_EBI_A1                           _L_(0)       /**< EBI signal line function value: A1 */
+#define PIO_PC19A_EBI_A1                           (_UL_(1) << 19)
+
+#define PIN_PC20A_EBI_A2                           _L_(84)      /**< EBI signal: A2 on PC20 mux A*/
+#define MUX_PC20A_EBI_A2                           _L_(0)       /**< EBI signal line function value: A2 */
+#define PIO_PC20A_EBI_A2                           (_UL_(1) << 20)
+
+#define PIN_PC21A_EBI_A3                           _L_(85)      /**< EBI signal: A3 on PC21 mux A*/
+#define MUX_PC21A_EBI_A3                           _L_(0)       /**< EBI signal line function value: A3 */
+#define PIO_PC21A_EBI_A3                           (_UL_(1) << 21)
+
+#define PIN_PC22A_EBI_A4                           _L_(86)      /**< EBI signal: A4 on PC22 mux A*/
+#define MUX_PC22A_EBI_A4                           _L_(0)       /**< EBI signal line function value: A4 */
+#define PIO_PC22A_EBI_A4                           (_UL_(1) << 22)
+
+#define PIN_PC23A_EBI_A5                           _L_(87)      /**< EBI signal: A5 on PC23 mux A*/
+#define MUX_PC23A_EBI_A5                           _L_(0)       /**< EBI signal line function value: A5 */
+#define PIO_PC23A_EBI_A5                           (_UL_(1) << 23)
+
+#define PIN_PC24A_EBI_A6                           _L_(88)      /**< EBI signal: A6 on PC24 mux A*/
+#define MUX_PC24A_EBI_A6                           _L_(0)       /**< EBI signal line function value: A6 */
+#define PIO_PC24A_EBI_A6                           (_UL_(1) << 24)
+
+#define PIN_PC25A_EBI_A7                           _L_(89)      /**< EBI signal: A7 on PC25 mux A*/
+#define MUX_PC25A_EBI_A7                           _L_(0)       /**< EBI signal line function value: A7 */
+#define PIO_PC25A_EBI_A7                           (_UL_(1) << 25)
+
+#define PIN_PC26A_EBI_A8                           _L_(90)      /**< EBI signal: A8 on PC26 mux A*/
+#define MUX_PC26A_EBI_A8                           _L_(0)       /**< EBI signal line function value: A8 */
+#define PIO_PC26A_EBI_A8                           (_UL_(1) << 26)
+
+#define PIN_PC27A_EBI_A9                           _L_(91)      /**< EBI signal: A9 on PC27 mux A*/
+#define MUX_PC27A_EBI_A9                           _L_(0)       /**< EBI signal line function value: A9 */
+#define PIO_PC27A_EBI_A9                           (_UL_(1) << 27)
+
+#define PIN_PC28A_EBI_A10                          _L_(92)      /**< EBI signal: A10 on PC28 mux A*/
+#define MUX_PC28A_EBI_A10                          _L_(0)       /**< EBI signal line function value: A10 */
+#define PIO_PC28A_EBI_A10                          (_UL_(1) << 28)
+
+#define PIN_PC29A_EBI_A11                          _L_(93)      /**< EBI signal: A11 on PC29 mux A*/
+#define MUX_PC29A_EBI_A11                          _L_(0)       /**< EBI signal line function value: A11 */
+#define PIO_PC29A_EBI_A11                          (_UL_(1) << 29)
+
+#define PIN_PC30A_EBI_A12                          _L_(94)      /**< EBI signal: A12 on PC30 mux A*/
+#define MUX_PC30A_EBI_A12                          _L_(0)       /**< EBI signal line function value: A12 */
+#define PIO_PC30A_EBI_A12                          (_UL_(1) << 30)
+
+#define PIN_PC31A_EBI_A13                          _L_(95)      /**< EBI signal: A13 on PC31 mux A*/
+#define MUX_PC31A_EBI_A13                          _L_(0)       /**< EBI signal line function value: A13 */
+#define PIO_PC31A_EBI_A13                          (_UL_(1) << 31)
+
+#define PIN_PA18C_EBI_A14                          _L_(18)      /**< EBI signal: A14 on PA18 mux C*/
+#define MUX_PA18C_EBI_A14                          _L_(2)       /**< EBI signal line function value: A14 */
+#define PIO_PA18C_EBI_A14                          (_UL_(1) << 18)
+
+#define PIN_PA19C_EBI_A15                          _L_(19)      /**< EBI signal: A15 on PA19 mux C*/
+#define MUX_PA19C_EBI_A15                          _L_(2)       /**< EBI signal line function value: A15 */
+#define PIO_PA19C_EBI_A15                          (_UL_(1) << 19)
+
+#define PIN_PA20C_EBI_A16                          _L_(20)      /**< EBI signal: A16 on PA20 mux C*/
+#define MUX_PA20C_EBI_A16                          _L_(2)       /**< EBI signal line function value: A16 */
+#define PIO_PA20C_EBI_A16                          (_UL_(1) << 20)
+
+#define PIN_PA0C_EBI_A17                           _L_(0)       /**< EBI signal: A17 on PA0 mux C*/
+#define MUX_PA0C_EBI_A17                           _L_(2)       /**< EBI signal line function value: A17 */
+#define PIO_PA0C_EBI_A17                           (_UL_(1) << 0)
+
+#define PIN_PA1C_EBI_A18                           _L_(1)       /**< EBI signal: A18 on PA1 mux C*/
+#define MUX_PA1C_EBI_A18                           _L_(2)       /**< EBI signal line function value: A18 */
+#define PIO_PA1C_EBI_A18                           (_UL_(1) << 1)
+
+#define PIN_PA23C_EBI_A19                          _L_(23)      /**< EBI signal: A19 on PA23 mux C*/
+#define MUX_PA23C_EBI_A19                          _L_(2)       /**< EBI signal line function value: A19 */
+#define PIO_PA23C_EBI_A19                          (_UL_(1) << 23)
+
+#define PIN_PA24C_EBI_A20                          _L_(24)      /**< EBI signal: A20 on PA24 mux C*/
+#define MUX_PA24C_EBI_A20                          _L_(2)       /**< EBI signal line function value: A20 */
+#define PIO_PA24C_EBI_A20                          (_UL_(1) << 24)
+
+#define PIN_PC16A_EBI_A21                          _L_(80)      /**< EBI signal: A21 on PC16 mux A*/
+#define MUX_PC16A_EBI_A21                          _L_(0)       /**< EBI signal line function value: A21 */
+#define PIO_PC16A_EBI_A21                          (_UL_(1) << 16)
+
+#define PIN_PC17A_EBI_A22                          _L_(81)      /**< EBI signal: A22 on PC17 mux A*/
+#define MUX_PC17A_EBI_A22                          _L_(0)       /**< EBI signal line function value: A22 */
+#define PIO_PC17A_EBI_A22                          (_UL_(1) << 17)
+
+#define PIN_PA25C_EBI_A23                          _L_(25)      /**< EBI signal: A23 on PA25 mux C*/
+#define MUX_PA25C_EBI_A23                          _L_(2)       /**< EBI signal line function value: A23 */
+#define PIO_PA25C_EBI_A23                          (_UL_(1) << 25)
+
+#define PIN_PC0A_EBI_D0                            _L_(64)      /**< EBI signal: D0 on PC0 mux A*/
+#define MUX_PC0A_EBI_D0                            _L_(0)       /**< EBI signal line function value: D0 */
+#define PIO_PC0A_EBI_D0                            (_UL_(1) << 0)
+
+#define PIN_PC1A_EBI_D1                            _L_(65)      /**< EBI signal: D1 on PC1 mux A*/
+#define MUX_PC1A_EBI_D1                            _L_(0)       /**< EBI signal line function value: D1 */
+#define PIO_PC1A_EBI_D1                            (_UL_(1) << 1)
+
+#define PIN_PC2A_EBI_D2                            _L_(66)      /**< EBI signal: D2 on PC2 mux A*/
+#define MUX_PC2A_EBI_D2                            _L_(0)       /**< EBI signal line function value: D2 */
+#define PIO_PC2A_EBI_D2                            (_UL_(1) << 2)
+
+#define PIN_PC3A_EBI_D3                            _L_(67)      /**< EBI signal: D3 on PC3 mux A*/
+#define MUX_PC3A_EBI_D3                            _L_(0)       /**< EBI signal line function value: D3 */
+#define PIO_PC3A_EBI_D3                            (_UL_(1) << 3)
+
+#define PIN_PC4A_EBI_D4                            _L_(68)      /**< EBI signal: D4 on PC4 mux A*/
+#define MUX_PC4A_EBI_D4                            _L_(0)       /**< EBI signal line function value: D4 */
+#define PIO_PC4A_EBI_D4                            (_UL_(1) << 4)
+
+#define PIN_PC5A_EBI_D5                            _L_(69)      /**< EBI signal: D5 on PC5 mux A*/
+#define MUX_PC5A_EBI_D5                            _L_(0)       /**< EBI signal line function value: D5 */
+#define PIO_PC5A_EBI_D5                            (_UL_(1) << 5)
+
+#define PIN_PC6A_EBI_D6                            _L_(70)      /**< EBI signal: D6 on PC6 mux A*/
+#define MUX_PC6A_EBI_D6                            _L_(0)       /**< EBI signal line function value: D6 */
+#define PIO_PC6A_EBI_D6                            (_UL_(1) << 6)
+
+#define PIN_PC7A_EBI_D7                            _L_(71)      /**< EBI signal: D7 on PC7 mux A*/
+#define MUX_PC7A_EBI_D7                            _L_(0)       /**< EBI signal line function value: D7 */
+#define PIO_PC7A_EBI_D7                            (_UL_(1) << 7)
+
+#define PIN_PE0A_EBI_D8                            _L_(128)     /**< EBI signal: D8 on PE0 mux A*/
+#define MUX_PE0A_EBI_D8                            _L_(0)       /**< EBI signal line function value: D8 */
+#define PIO_PE0A_EBI_D8                            (_UL_(1) << 0)
+
+#define PIN_PE1A_EBI_D9                            _L_(129)     /**< EBI signal: D9 on PE1 mux A*/
+#define MUX_PE1A_EBI_D9                            _L_(0)       /**< EBI signal line function value: D9 */
+#define PIO_PE1A_EBI_D9                            (_UL_(1) << 1)
+
+#define PIN_PE2A_EBI_D10                           _L_(130)     /**< EBI signal: D10 on PE2 mux A*/
+#define MUX_PE2A_EBI_D10                           _L_(0)       /**< EBI signal line function value: D10 */
+#define PIO_PE2A_EBI_D10                           (_UL_(1) << 2)
+
+#define PIN_PE3A_EBI_D11                           _L_(131)     /**< EBI signal: D11 on PE3 mux A*/
+#define MUX_PE3A_EBI_D11                           _L_(0)       /**< EBI signal line function value: D11 */
+#define PIO_PE3A_EBI_D11                           (_UL_(1) << 3)
+
+#define PIN_PE4A_EBI_D12                           _L_(132)     /**< EBI signal: D12 on PE4 mux A*/
+#define MUX_PE4A_EBI_D12                           _L_(0)       /**< EBI signal line function value: D12 */
+#define PIO_PE4A_EBI_D12                           (_UL_(1) << 4)
+
+#define PIN_PE5A_EBI_D13                           _L_(133)     /**< EBI signal: D13 on PE5 mux A*/
+#define MUX_PE5A_EBI_D13                           _L_(0)       /**< EBI signal line function value: D13 */
+#define PIO_PE5A_EBI_D13                           (_UL_(1) << 5)
+
+#define PIN_PA15A_EBI_D14                          _L_(15)      /**< EBI signal: D14 on PA15 mux A*/
+#define MUX_PA15A_EBI_D14                          _L_(0)       /**< EBI signal line function value: D14 */
+#define PIO_PA15A_EBI_D14                          (_UL_(1) << 15)
+
+#define PIN_PA16A_EBI_D15                          _L_(16)      /**< EBI signal: D15 on PA16 mux A*/
+#define MUX_PA16A_EBI_D15                          _L_(0)       /**< EBI signal line function value: D15 */
+#define PIO_PA16A_EBI_D15                          (_UL_(1) << 16)
+
+#define PIN_PC13A_EBI_NWAIT                        _L_(77)      /**< EBI signal: NWAIT on PC13 mux A*/
+#define MUX_PC13A_EBI_NWAIT                        _L_(0)       /**< EBI signal line function value: NWAIT */
+#define PIO_PC13A_EBI_NWAIT                        (_UL_(1) << 13)
+
+#define PIN_PC14A_EBI_NCS0                         _L_(78)      /**< EBI signal: NCS0 on PC14 mux A*/
+#define MUX_PC14A_EBI_NCS0                         _L_(0)       /**< EBI signal line function value: NCS0 */
+#define PIO_PC14A_EBI_NCS0                         (_UL_(1) << 14)
+
+#define PIN_PC15A_EBI_NCS1                         _L_(79)      /**< EBI signal: NCS1 on PC15 mux A*/
+#define MUX_PC15A_EBI_NCS1                         _L_(0)       /**< EBI signal line function value: NCS1 */
+#define PIO_PC15A_EBI_NCS1                         (_UL_(1) << 15)
+
+#define PIN_PD18A_EBI_NCS1                         _L_(114)     /**< EBI signal: NCS1 on PD18 mux A*/
+#define MUX_PD18A_EBI_NCS1                         _L_(0)       /**< EBI signal line function value: NCS1 */
+#define PIO_PD18A_EBI_NCS1                         (_UL_(1) << 18)
+
+#define PIN_PA22C_EBI_NCS2                         _L_(22)      /**< EBI signal: NCS2 on PA22 mux C*/
+#define MUX_PA22C_EBI_NCS2                         _L_(2)       /**< EBI signal line function value: NCS2 */
+#define PIO_PA22C_EBI_NCS2                         (_UL_(1) << 22)
+
+#define PIN_PC12A_EBI_NCS3                         _L_(76)      /**< EBI signal: NCS3 on PC12 mux A*/
+#define MUX_PC12A_EBI_NCS3                         _L_(0)       /**< EBI signal line function value: NCS3 */
+#define PIO_PC12A_EBI_NCS3                         (_UL_(1) << 12)
+
+#define PIN_PD19A_EBI_NCS3                         _L_(115)     /**< EBI signal: NCS3 on PD19 mux A*/
+#define MUX_PD19A_EBI_NCS3                         _L_(0)       /**< EBI signal line function value: NCS3 */
+#define PIO_PD19A_EBI_NCS3                         (_UL_(1) << 19)
+
+#define PIN_PC8A_EBI_NWR0                          _L_(72)      /**< EBI signal: NWR0 on PC8 mux A*/
+#define MUX_PC8A_EBI_NWR0                          _L_(0)       /**< EBI signal line function value: NWR0 */
+#define PIO_PC8A_EBI_NWR0                          (_UL_(1) << 8)
+
+#define PIN_PD15C_EBI_NWR1                         _L_(111)     /**< EBI signal: NWR1 on PD15 mux C*/
+#define MUX_PD15C_EBI_NWR1                         _L_(2)       /**< EBI signal line function value: NWR1 */
+#define PIO_PD15C_EBI_NWR1                         (_UL_(1) << 15)
+
+#define PIN_PC11A_EBI_NRD                          _L_(75)      /**< EBI signal: NRD on PC11 mux A*/
+#define MUX_PC11A_EBI_NRD                          _L_(0)       /**< EBI signal line function value: NRD */
+#define PIO_PC11A_EBI_NRD                          (_UL_(1) << 11)
+
+#define PIN_PC8A_EBI_NWE                           _L_(72)      /**< EBI signal: NWE on PC8 mux A*/
+#define MUX_PC8A_EBI_NWE                           _L_(0)       /**< EBI signal line function value: NWE */
+#define PIO_PC8A_EBI_NWE                           (_UL_(1) << 8)
+
+#define PIN_PC18A_EBI_NBS0                         _L_(82)      /**< EBI signal: NBS0 on PC18 mux A*/
+#define MUX_PC18A_EBI_NBS0                         _L_(0)       /**< EBI signal line function value: NBS0 */
+#define PIO_PC18A_EBI_NBS0                         (_UL_(1) << 18)
+
+#define PIN_PD15C_EBI_NBS1                         _L_(111)     /**< EBI signal: NBS1 on PD15 mux C*/
+#define MUX_PD15C_EBI_NBS1                         _L_(2)       /**< EBI signal line function value: NBS1 */
+#define PIO_PD15C_EBI_NBS1                         (_UL_(1) << 15)
+
+#define PIN_PC16A_EBI_NANDALE                      _L_(80)      /**< EBI signal: NANDALE on PC16 mux A*/
+#define MUX_PC16A_EBI_NANDALE                      _L_(0)       /**< EBI signal line function value: NANDALE */
+#define PIO_PC16A_EBI_NANDALE                      (_UL_(1) << 16)
+
+#define PIN_PC17A_EBI_NANDCLE                      _L_(81)      /**< EBI signal: NANDCLE on PC17 mux A*/
+#define MUX_PC17A_EBI_NANDCLE                      _L_(0)       /**< EBI signal line function value: NANDCLE */
+#define PIO_PC17A_EBI_NANDCLE                      (_UL_(1) << 17)
+
+#define PIN_PC9A_EBI_NANDOE                        _L_(73)      /**< EBI signal: NANDOE on PC9 mux A*/
+#define MUX_PC9A_EBI_NANDOE                        _L_(0)       /**< EBI signal line function value: NANDOE */
+#define PIO_PC9A_EBI_NANDOE                        (_UL_(1) << 9)
+
+#define PIN_PC10A_EBI_NANDWE                       _L_(74)      /**< EBI signal: NANDWE on PC10 mux A*/
+#define MUX_PC10A_EBI_NANDWE                       _L_(0)       /**< EBI signal line function value: NANDWE */
+#define PIO_PC10A_EBI_NANDWE                       (_UL_(1) << 10)
+
+#define PIN_PD23C_EBI_SDCK                         _L_(119)     /**< EBI signal: SDCK on PD23 mux C*/
+#define MUX_PD23C_EBI_SDCK                         _L_(2)       /**< EBI signal line function value: SDCK */
+#define PIO_PD23C_EBI_SDCK                         (_UL_(1) << 23)
+
+#define PIN_PD14C_EBI_SDCKE                        _L_(110)     /**< EBI signal: SDCKE on PD14 mux C*/
+#define MUX_PD14C_EBI_SDCKE                        _L_(2)       /**< EBI signal line function value: SDCKE */
+#define PIO_PD14C_EBI_SDCKE                        (_UL_(1) << 14)
+
+#define PIN_PC15A_EBI_SDCS                         _L_(79)      /**< EBI signal: SDCS on PC15 mux A*/
+#define MUX_PC15A_EBI_SDCS                         _L_(0)       /**< EBI signal line function value: SDCS */
+#define PIO_PC15A_EBI_SDCS                         (_UL_(1) << 15)
+
+#define PIN_PD18A_EBI_SDCS                         _L_(114)     /**< EBI signal: SDCS on PD18 mux A*/
+#define MUX_PD18A_EBI_SDCS                         _L_(0)       /**< EBI signal line function value: SDCS */
+#define PIO_PD18A_EBI_SDCS                         (_UL_(1) << 18)
+
+#define PIN_PA20C_EBI_BA0                          _L_(20)      /**< EBI signal: BA0 on PA20 mux C*/
+#define MUX_PA20C_EBI_BA0                          _L_(2)       /**< EBI signal line function value: BA0 */
+#define PIO_PA20C_EBI_BA0                          (_UL_(1) << 20)
+
+#define PIN_PA0C_EBI_BA1                           _L_(0)       /**< EBI signal: BA1 on PA0 mux C*/
+#define MUX_PA0C_EBI_BA1                           _L_(2)       /**< EBI signal line function value: BA1 */
+#define PIO_PA0C_EBI_BA1                           (_UL_(1) << 0)
+
+#define PIN_PD29C_EBI_SDWE                         _L_(125)     /**< EBI signal: SDWE on PD29 mux C*/
+#define MUX_PD29C_EBI_SDWE                         _L_(2)       /**< EBI signal line function value: SDWE */
+#define PIO_PD29C_EBI_SDWE                         (_UL_(1) << 29)
+
+#define PIN_PD16C_EBI_RAS                          _L_(112)     /**< EBI signal: RAS on PD16 mux C*/
+#define MUX_PD16C_EBI_RAS                          _L_(2)       /**< EBI signal line function value: RAS */
+#define PIO_PD16C_EBI_RAS                          (_UL_(1) << 16)
+
+#define PIN_PD17C_EBI_CAS                          _L_(113)     /**< EBI signal: CAS on PD17 mux C*/
+#define MUX_PD17C_EBI_CAS                          _L_(2)       /**< EBI signal line function value: CAS */
+#define PIO_PD17C_EBI_CAS                          (_UL_(1) << 17)
+
+#define PIN_PC13C_EBI_SDA10                        _L_(77)      /**< EBI signal: SDA10 on PC13 mux C*/
+#define MUX_PC13C_EBI_SDA10                        _L_(2)       /**< EBI signal line function value: SDA10 */
+#define PIO_PC13C_EBI_SDA10                        (_UL_(1) << 13)
+
+#define PIN_PD13C_EBI_SDA10                        _L_(109)     /**< EBI signal: SDA10 on PD13 mux C*/
+#define MUX_PD13C_EBI_SDA10                        _L_(2)       /**< EBI signal line function value: SDA10 */
+#define PIO_PD13C_EBI_SDA10                        (_UL_(1) << 13)
+
+#define PIN_PC20A_EBI_SDA0                         _L_(84)      /**< EBI signal: SDA0 on PC20 mux A*/
+#define MUX_PC20A_EBI_SDA0                         _L_(0)       /**< EBI signal line function value: SDA0 */
+#define PIO_PC20A_EBI_SDA0                         (_UL_(1) << 20)
+
+#define PIN_PC21A_EBI_SDA1                         _L_(85)      /**< EBI signal: SDA1 on PC21 mux A*/
+#define MUX_PC21A_EBI_SDA1                         _L_(0)       /**< EBI signal line function value: SDA1 */
+#define PIO_PC21A_EBI_SDA1                         (_UL_(1) << 21)
+
+#define PIN_PC22A_EBI_SDA2                         _L_(86)      /**< EBI signal: SDA2 on PC22 mux A*/
+#define MUX_PC22A_EBI_SDA2                         _L_(0)       /**< EBI signal line function value: SDA2 */
+#define PIO_PC22A_EBI_SDA2                         (_UL_(1) << 22)
+
+#define PIN_PC23A_EBI_SDA3                         _L_(87)      /**< EBI signal: SDA3 on PC23 mux A*/
+#define MUX_PC23A_EBI_SDA3                         _L_(0)       /**< EBI signal line function value: SDA3 */
+#define PIO_PC23A_EBI_SDA3                         (_UL_(1) << 23)
+
+#define PIN_PC24A_EBI_SDA4                         _L_(88)      /**< EBI signal: SDA4 on PC24 mux A*/
+#define MUX_PC24A_EBI_SDA4                         _L_(0)       /**< EBI signal line function value: SDA4 */
+#define PIO_PC24A_EBI_SDA4                         (_UL_(1) << 24)
+
+#define PIN_PC25A_EBI_SDA5                         _L_(89)      /**< EBI signal: SDA5 on PC25 mux A*/
+#define MUX_PC25A_EBI_SDA5                         _L_(0)       /**< EBI signal line function value: SDA5 */
+#define PIO_PC25A_EBI_SDA5                         (_UL_(1) << 25)
+
+#define PIN_PC26A_EBI_SDA6                         _L_(90)      /**< EBI signal: SDA6 on PC26 mux A*/
+#define MUX_PC26A_EBI_SDA6                         _L_(0)       /**< EBI signal line function value: SDA6 */
+#define PIO_PC26A_EBI_SDA6                         (_UL_(1) << 26)
+
+#define PIN_PC27A_EBI_SDA7                         _L_(91)      /**< EBI signal: SDA7 on PC27 mux A*/
+#define MUX_PC27A_EBI_SDA7                         _L_(0)       /**< EBI signal line function value: SDA7 */
+#define PIO_PC27A_EBI_SDA7                         (_UL_(1) << 27)
+
+#define PIN_PC28A_EBI_SDA8                         _L_(92)      /**< EBI signal: SDA8 on PC28 mux A*/
+#define MUX_PC28A_EBI_SDA8                         _L_(0)       /**< EBI signal line function value: SDA8 */
+#define PIO_PC28A_EBI_SDA8                         (_UL_(1) << 28)
+
+#define PIN_PC29A_EBI_SDA9                         _L_(93)      /**< EBI signal: SDA9 on PC29 mux A*/
+#define MUX_PC29A_EBI_SDA9                         _L_(0)       /**< EBI signal line function value: SDA9 */
+#define PIO_PC29A_EBI_SDA9                         (_UL_(1) << 29)
+
+#define PIN_PC31A_EBI_SDA11                        _L_(95)      /**< EBI signal: SDA11 on PC31 mux A*/
+#define MUX_PC31A_EBI_SDA11                        _L_(0)       /**< EBI signal line function value: SDA11 */
+#define PIO_PC31A_EBI_SDA11                        (_UL_(1) << 31)
+
+#define PIN_PA18C_EBI_SDA12                        _L_(18)      /**< EBI signal: SDA12 on PA18 mux C*/
+#define MUX_PA18C_EBI_SDA12                        _L_(2)       /**< EBI signal line function value: SDA12 */
+#define PIO_PA18C_EBI_SDA12                        (_UL_(1) << 18)
+
+#define PIN_PA19C_EBI_SDA13                        _L_(19)      /**< EBI signal: SDA13 on PA19 mux C*/
+#define MUX_PA19C_EBI_SDA13                        _L_(2)       /**< EBI signal line function value: SDA13 */
+#define PIO_PA19C_EBI_SDA13                        (_UL_(1) << 19)
+
+#define PIN_PC18A_EBI_DQM0                         _L_(82)      /**< EBI signal: DQM0 on PC18 mux A*/
+#define MUX_PC18A_EBI_DQM0                         _L_(0)       /**< EBI signal line function value: DQM0 */
+#define PIO_PC18A_EBI_DQM0                         (_UL_(1) << 18)
+
+#define PIN_PD15C_EBI_DQM1                         _L_(111)     /**< EBI signal: DQM1 on PD15 mux C*/
+#define MUX_PD15C_EBI_DQM1                         _L_(2)       /**< EBI signal line function value: DQM1 */
+#define PIO_PD15C_EBI_DQM1                         (_UL_(1) << 15)
+
+/* ========== PIO definition for EFC peripheral ========== */
+#define PIN_PB12X1_EFC_ERASE                       _L_(44)      /**< EFC signal: ERASE on PB12 mux X1*/
+#define PIO_PB12X1_EFC_ERASE                       (_UL_(1) << 12)
 
 /* ========== PIO definition for GMAC peripheral ========== */
 #define PIN_PD13A_GMAC_GCOL                        _L_(109)     /**< GMAC signal: GCOL on PD13 mux A*/
@@ -718,10 +1039,6 @@
 #define MUX_PC12C_MCAN1_CANRX1                     _L_(2)       /**< MCAN1 signal line function value: CANRX1 */
 #define PIO_PC12C_MCAN1_CANRX1                     (_UL_(1) << 12)
 
-#define PIN_PD28B_MCAN1_CANRX1                     _L_(124)     /**< MCAN1 signal: CANRX1 on PD28 mux B*/
-#define MUX_PD28B_MCAN1_CANRX1                     _L_(1)       /**< MCAN1 signal line function value: CANRX1 */
-#define PIO_PD28B_MCAN1_CANRX1                     (_UL_(1) << 28)
-
 #define PIN_PC14C_MCAN1_CANTX1                     _L_(78)      /**< MCAN1 signal: CANTX1 on PC14 mux C*/
 #define MUX_PC14C_MCAN1_CANTX1                     _L_(2)       /**< MCAN1 signal line function value: CANTX1 */
 #define PIO_PC14C_MCAN1_CANTX1                     (_UL_(1) << 14)
@@ -770,6 +1087,18 @@
 #define PIN_PD31C_PMC_PCK2                         _L_(127)     /**< PMC signal: PCK2 on PD31 mux C*/
 #define MUX_PD31C_PMC_PCK2                         _L_(2)       /**< PMC signal line function value: PCK2 */
 #define PIO_PD31C_PMC_PCK2                         (_UL_(1) << 31)
+
+#define PIN_PB9X1_PMC_XIN                          _L_(41)      /**< PMC signal: XIN on PB9 mux X1*/
+#define PIO_PB9X1_PMC_XIN                          (_UL_(1) << 9)
+
+#define PIN_PB8X1_PMC_XOUT                         _L_(40)      /**< PMC signal: XOUT on PB8 mux X1*/
+#define PIO_PB8X1_PMC_XOUT                         (_UL_(1) << 8)
+
+#define PIN_PA7X1_PMC_XIN32                        _L_(7)       /**< PMC signal: XIN32 on PA7 mux X1*/
+#define PIO_PA7X1_PMC_XIN32                        (_UL_(1) << 7)
+
+#define PIN_PA8X1_PMC_XOUT32                       _L_(8)       /**< PMC signal: XOUT32 on PA8 mux X1*/
+#define PIO_PA8X1_PMC_XOUT32                       (_UL_(1) << 8)
 
 /* ========== PIO definition for PWM0 peripheral ========== */
 #define PIN_PA10B_PWM0_PWMEXTRG0                   _L_(10)      /**< PWM0 signal: PWMEXTRG0 on PA10 mux B*/
@@ -1078,551 +1407,12 @@
 #define MUX_PA14A_QSPI_QSCK                        _L_(0)       /**< QSPI signal line function value: QSCK */
 #define PIO_PA14A_QSPI_QSCK                        (_UL_(1) << 14)
 
-/* ========== PIO definition for SDRAMC peripheral ========== */
-#define PIN_PC18A_SDRAMC_A0                        _L_(82)      /**< SDRAMC signal: A0 on PC18 mux A*/
-#define MUX_PC18A_SDRAMC_A0                        _L_(0)       /**< SDRAMC signal line function value: A0 */
-#define PIO_PC18A_SDRAMC_A0                        (_UL_(1) << 18)
-
-#define PIN_PC18A_SDRAMC_NBS0                      _L_(82)      /**< SDRAMC signal: NBS0 on PC18 mux A*/
-#define MUX_PC18A_SDRAMC_NBS0                      _L_(0)       /**< SDRAMC signal line function value: NBS0 */
-#define PIO_PC18A_SDRAMC_NBS0                      (_UL_(1) << 18)
-
-#define PIN_PC19A_SDRAMC_A1                        _L_(83)      /**< SDRAMC signal: A1 on PC19 mux A*/
-#define MUX_PC19A_SDRAMC_A1                        _L_(0)       /**< SDRAMC signal line function value: A1 */
-#define PIO_PC19A_SDRAMC_A1                        (_UL_(1) << 19)
-
-#define PIN_PC20A_SDRAMC_A2                        _L_(84)      /**< SDRAMC signal: A2 on PC20 mux A*/
-#define MUX_PC20A_SDRAMC_A2                        _L_(0)       /**< SDRAMC signal line function value: A2 */
-#define PIO_PC20A_SDRAMC_A2                        (_UL_(1) << 20)
-
-#define PIN_PC21A_SDRAMC_A3                        _L_(85)      /**< SDRAMC signal: A3 on PC21 mux A*/
-#define MUX_PC21A_SDRAMC_A3                        _L_(0)       /**< SDRAMC signal line function value: A3 */
-#define PIO_PC21A_SDRAMC_A3                        (_UL_(1) << 21)
-
-#define PIN_PC22A_SDRAMC_A4                        _L_(86)      /**< SDRAMC signal: A4 on PC22 mux A*/
-#define MUX_PC22A_SDRAMC_A4                        _L_(0)       /**< SDRAMC signal line function value: A4 */
-#define PIO_PC22A_SDRAMC_A4                        (_UL_(1) << 22)
-
-#define PIN_PC23A_SDRAMC_A5                        _L_(87)      /**< SDRAMC signal: A5 on PC23 mux A*/
-#define MUX_PC23A_SDRAMC_A5                        _L_(0)       /**< SDRAMC signal line function value: A5 */
-#define PIO_PC23A_SDRAMC_A5                        (_UL_(1) << 23)
-
-#define PIN_PC24A_SDRAMC_A6                        _L_(88)      /**< SDRAMC signal: A6 on PC24 mux A*/
-#define MUX_PC24A_SDRAMC_A6                        _L_(0)       /**< SDRAMC signal line function value: A6 */
-#define PIO_PC24A_SDRAMC_A6                        (_UL_(1) << 24)
-
-#define PIN_PC25A_SDRAMC_A7                        _L_(89)      /**< SDRAMC signal: A7 on PC25 mux A*/
-#define MUX_PC25A_SDRAMC_A7                        _L_(0)       /**< SDRAMC signal line function value: A7 */
-#define PIO_PC25A_SDRAMC_A7                        (_UL_(1) << 25)
-
-#define PIN_PC26A_SDRAMC_A8                        _L_(90)      /**< SDRAMC signal: A8 on PC26 mux A*/
-#define MUX_PC26A_SDRAMC_A8                        _L_(0)       /**< SDRAMC signal line function value: A8 */
-#define PIO_PC26A_SDRAMC_A8                        (_UL_(1) << 26)
-
-#define PIN_PC27A_SDRAMC_A9                        _L_(91)      /**< SDRAMC signal: A9 on PC27 mux A*/
-#define MUX_PC27A_SDRAMC_A9                        _L_(0)       /**< SDRAMC signal line function value: A9 */
-#define PIO_PC27A_SDRAMC_A9                        (_UL_(1) << 27)
-
-#define PIN_PC28A_SDRAMC_A10                       _L_(92)      /**< SDRAMC signal: A10 on PC28 mux A*/
-#define MUX_PC28A_SDRAMC_A10                       _L_(0)       /**< SDRAMC signal line function value: A10 */
-#define PIO_PC28A_SDRAMC_A10                       (_UL_(1) << 28)
-
-#define PIN_PC29A_SDRAMC_A11                       _L_(93)      /**< SDRAMC signal: A11 on PC29 mux A*/
-#define MUX_PC29A_SDRAMC_A11                       _L_(0)       /**< SDRAMC signal line function value: A11 */
-#define PIO_PC29A_SDRAMC_A11                       (_UL_(1) << 29)
-
-#define PIN_PC30A_SDRAMC_A12                       _L_(94)      /**< SDRAMC signal: A12 on PC30 mux A*/
-#define MUX_PC30A_SDRAMC_A12                       _L_(0)       /**< SDRAMC signal line function value: A12 */
-#define PIO_PC30A_SDRAMC_A12                       (_UL_(1) << 30)
-
-#define PIN_PC31A_SDRAMC_A13                       _L_(95)      /**< SDRAMC signal: A13 on PC31 mux A*/
-#define MUX_PC31A_SDRAMC_A13                       _L_(0)       /**< SDRAMC signal line function value: A13 */
-#define PIO_PC31A_SDRAMC_A13                       (_UL_(1) << 31)
-
-#define PIN_PA18C_SDRAMC_A14                       _L_(18)      /**< SDRAMC signal: A14 on PA18 mux C*/
-#define MUX_PA18C_SDRAMC_A14                       _L_(2)       /**< SDRAMC signal line function value: A14 */
-#define PIO_PA18C_SDRAMC_A14                       (_UL_(1) << 18)
-
-#define PIN_PA19C_SDRAMC_A15                       _L_(19)      /**< SDRAMC signal: A15 on PA19 mux C*/
-#define MUX_PA19C_SDRAMC_A15                       _L_(2)       /**< SDRAMC signal line function value: A15 */
-#define PIO_PA19C_SDRAMC_A15                       (_UL_(1) << 19)
-
-#define PIN_PA20C_SDRAMC_A16                       _L_(20)      /**< SDRAMC signal: A16 on PA20 mux C*/
-#define MUX_PA20C_SDRAMC_A16                       _L_(2)       /**< SDRAMC signal line function value: A16 */
-#define PIO_PA20C_SDRAMC_A16                       (_UL_(1) << 20)
-
-#define PIN_PA20C_SDRAMC_BA0                       _L_(20)      /**< SDRAMC signal: BA0 on PA20 mux C*/
-#define MUX_PA20C_SDRAMC_BA0                       _L_(2)       /**< SDRAMC signal line function value: BA0 */
-#define PIO_PA20C_SDRAMC_BA0                       (_UL_(1) << 20)
-
-#define PIN_PA0C_SDRAMC_A17                        _L_(0)       /**< SDRAMC signal: A17 on PA0 mux C*/
-#define MUX_PA0C_SDRAMC_A17                        _L_(2)       /**< SDRAMC signal line function value: A17 */
-#define PIO_PA0C_SDRAMC_A17                        (_UL_(1) << 0)
-
-#define PIN_PA0C_SDRAMC_BA1                        _L_(0)       /**< SDRAMC signal: BA1 on PA0 mux C*/
-#define MUX_PA0C_SDRAMC_BA1                        _L_(2)       /**< SDRAMC signal line function value: BA1 */
-#define PIO_PA0C_SDRAMC_BA1                        (_UL_(1) << 0)
-
-#define PIN_PA1C_SDRAMC_A18                        _L_(1)       /**< SDRAMC signal: A18 on PA1 mux C*/
-#define MUX_PA1C_SDRAMC_A18                        _L_(2)       /**< SDRAMC signal line function value: A18 */
-#define PIO_PA1C_SDRAMC_A18                        (_UL_(1) << 1)
-
-#define PIN_PA23C_SDRAMC_A19                       _L_(23)      /**< SDRAMC signal: A19 on PA23 mux C*/
-#define MUX_PA23C_SDRAMC_A19                       _L_(2)       /**< SDRAMC signal line function value: A19 */
-#define PIO_PA23C_SDRAMC_A19                       (_UL_(1) << 23)
-
-#define PIN_PA24C_SDRAMC_A20                       _L_(24)      /**< SDRAMC signal: A20 on PA24 mux C*/
-#define MUX_PA24C_SDRAMC_A20                       _L_(2)       /**< SDRAMC signal line function value: A20 */
-#define PIO_PA24C_SDRAMC_A20                       (_UL_(1) << 24)
-
-#define PIN_PC16A_SDRAMC_A21                       _L_(80)      /**< SDRAMC signal: A21 on PC16 mux A*/
-#define MUX_PC16A_SDRAMC_A21                       _L_(0)       /**< SDRAMC signal line function value: A21 */
-#define PIO_PC16A_SDRAMC_A21                       (_UL_(1) << 16)
-
-#define PIN_PC16A_SDRAMC_NANDALE                   _L_(80)      /**< SDRAMC signal: NANDALE on PC16 mux A*/
-#define MUX_PC16A_SDRAMC_NANDALE                   _L_(0)       /**< SDRAMC signal line function value: NANDALE */
-#define PIO_PC16A_SDRAMC_NANDALE                   (_UL_(1) << 16)
-
-#define PIN_PC17A_SDRAMC_A22                       _L_(81)      /**< SDRAMC signal: A22 on PC17 mux A*/
-#define MUX_PC17A_SDRAMC_A22                       _L_(0)       /**< SDRAMC signal line function value: A22 */
-#define PIO_PC17A_SDRAMC_A22                       (_UL_(1) << 17)
-
-#define PIN_PC17A_SDRAMC_NANDCLE                   _L_(81)      /**< SDRAMC signal: NANDCLE on PC17 mux A*/
-#define MUX_PC17A_SDRAMC_NANDCLE                   _L_(0)       /**< SDRAMC signal line function value: NANDCLE */
-#define PIO_PC17A_SDRAMC_NANDCLE                   (_UL_(1) << 17)
-
-#define PIN_PA25C_SDRAMC_A23                       _L_(25)      /**< SDRAMC signal: A23 on PA25 mux C*/
-#define MUX_PA25C_SDRAMC_A23                       _L_(2)       /**< SDRAMC signal line function value: A23 */
-#define PIO_PA25C_SDRAMC_A23                       (_UL_(1) << 25)
-
-#define PIN_PD17C_SDRAMC_CAS                       _L_(113)     /**< SDRAMC signal: CAS on PD17 mux C*/
-#define MUX_PD17C_SDRAMC_CAS                       _L_(2)       /**< SDRAMC signal line function value: CAS */
-#define PIO_PD17C_SDRAMC_CAS                       (_UL_(1) << 17)
-
-#define PIN_PC0A_SDRAMC_D0                         _L_(64)      /**< SDRAMC signal: D0 on PC0 mux A*/
-#define MUX_PC0A_SDRAMC_D0                         _L_(0)       /**< SDRAMC signal line function value: D0 */
-#define PIO_PC0A_SDRAMC_D0                         (_UL_(1) << 0)
-
-#define PIN_PC1A_SDRAMC_D1                         _L_(65)      /**< SDRAMC signal: D1 on PC1 mux A*/
-#define MUX_PC1A_SDRAMC_D1                         _L_(0)       /**< SDRAMC signal line function value: D1 */
-#define PIO_PC1A_SDRAMC_D1                         (_UL_(1) << 1)
-
-#define PIN_PC2A_SDRAMC_D2                         _L_(66)      /**< SDRAMC signal: D2 on PC2 mux A*/
-#define MUX_PC2A_SDRAMC_D2                         _L_(0)       /**< SDRAMC signal line function value: D2 */
-#define PIO_PC2A_SDRAMC_D2                         (_UL_(1) << 2)
-
-#define PIN_PC3A_SDRAMC_D3                         _L_(67)      /**< SDRAMC signal: D3 on PC3 mux A*/
-#define MUX_PC3A_SDRAMC_D3                         _L_(0)       /**< SDRAMC signal line function value: D3 */
-#define PIO_PC3A_SDRAMC_D3                         (_UL_(1) << 3)
-
-#define PIN_PC4A_SDRAMC_D4                         _L_(68)      /**< SDRAMC signal: D4 on PC4 mux A*/
-#define MUX_PC4A_SDRAMC_D4                         _L_(0)       /**< SDRAMC signal line function value: D4 */
-#define PIO_PC4A_SDRAMC_D4                         (_UL_(1) << 4)
-
-#define PIN_PC5A_SDRAMC_D5                         _L_(69)      /**< SDRAMC signal: D5 on PC5 mux A*/
-#define MUX_PC5A_SDRAMC_D5                         _L_(0)       /**< SDRAMC signal line function value: D5 */
-#define PIO_PC5A_SDRAMC_D5                         (_UL_(1) << 5)
-
-#define PIN_PC6A_SDRAMC_D6                         _L_(70)      /**< SDRAMC signal: D6 on PC6 mux A*/
-#define MUX_PC6A_SDRAMC_D6                         _L_(0)       /**< SDRAMC signal line function value: D6 */
-#define PIO_PC6A_SDRAMC_D6                         (_UL_(1) << 6)
-
-#define PIN_PC7A_SDRAMC_D7                         _L_(71)      /**< SDRAMC signal: D7 on PC7 mux A*/
-#define MUX_PC7A_SDRAMC_D7                         _L_(0)       /**< SDRAMC signal line function value: D7 */
-#define PIO_PC7A_SDRAMC_D7                         (_UL_(1) << 7)
-
-#define PIN_PE0A_SDRAMC_D8                         _L_(128)     /**< SDRAMC signal: D8 on PE0 mux A*/
-#define MUX_PE0A_SDRAMC_D8                         _L_(0)       /**< SDRAMC signal line function value: D8 */
-#define PIO_PE0A_SDRAMC_D8                         (_UL_(1) << 0)
-
-#define PIN_PE1A_SDRAMC_D9                         _L_(129)     /**< SDRAMC signal: D9 on PE1 mux A*/
-#define MUX_PE1A_SDRAMC_D9                         _L_(0)       /**< SDRAMC signal line function value: D9 */
-#define PIO_PE1A_SDRAMC_D9                         (_UL_(1) << 1)
-
-#define PIN_PE2A_SDRAMC_D10                        _L_(130)     /**< SDRAMC signal: D10 on PE2 mux A*/
-#define MUX_PE2A_SDRAMC_D10                        _L_(0)       /**< SDRAMC signal line function value: D10 */
-#define PIO_PE2A_SDRAMC_D10                        (_UL_(1) << 2)
-
-#define PIN_PE3A_SDRAMC_D11                        _L_(131)     /**< SDRAMC signal: D11 on PE3 mux A*/
-#define MUX_PE3A_SDRAMC_D11                        _L_(0)       /**< SDRAMC signal line function value: D11 */
-#define PIO_PE3A_SDRAMC_D11                        (_UL_(1) << 3)
-
-#define PIN_PE4A_SDRAMC_D12                        _L_(132)     /**< SDRAMC signal: D12 on PE4 mux A*/
-#define MUX_PE4A_SDRAMC_D12                        _L_(0)       /**< SDRAMC signal line function value: D12 */
-#define PIO_PE4A_SDRAMC_D12                        (_UL_(1) << 4)
-
-#define PIN_PE5A_SDRAMC_D13                        _L_(133)     /**< SDRAMC signal: D13 on PE5 mux A*/
-#define MUX_PE5A_SDRAMC_D13                        _L_(0)       /**< SDRAMC signal line function value: D13 */
-#define PIO_PE5A_SDRAMC_D13                        (_UL_(1) << 5)
-
-#define PIN_PA15A_SDRAMC_D14                       _L_(15)      /**< SDRAMC signal: D14 on PA15 mux A*/
-#define MUX_PA15A_SDRAMC_D14                       _L_(0)       /**< SDRAMC signal line function value: D14 */
-#define PIO_PA15A_SDRAMC_D14                       (_UL_(1) << 15)
-
-#define PIN_PA16A_SDRAMC_D15                       _L_(16)      /**< SDRAMC signal: D15 on PA16 mux A*/
-#define MUX_PA16A_SDRAMC_D15                       _L_(0)       /**< SDRAMC signal line function value: D15 */
-#define PIO_PA16A_SDRAMC_D15                       (_UL_(1) << 16)
-
-#define PIN_PC9A_SDRAMC_NANDOE                     _L_(73)      /**< SDRAMC signal: NANDOE on PC9 mux A*/
-#define MUX_PC9A_SDRAMC_NANDOE                     _L_(0)       /**< SDRAMC signal line function value: NANDOE */
-#define PIO_PC9A_SDRAMC_NANDOE                     (_UL_(1) << 9)
-
-#define PIN_PC10A_SDRAMC_NANDWE                    _L_(74)      /**< SDRAMC signal: NANDWE on PC10 mux A*/
-#define MUX_PC10A_SDRAMC_NANDWE                    _L_(0)       /**< SDRAMC signal line function value: NANDWE */
-#define PIO_PC10A_SDRAMC_NANDWE                    (_UL_(1) << 10)
-
-#define PIN_PC14A_SDRAMC_NCS0                      _L_(78)      /**< SDRAMC signal: NCS0 on PC14 mux A*/
-#define MUX_PC14A_SDRAMC_NCS0                      _L_(0)       /**< SDRAMC signal line function value: NCS0 */
-#define PIO_PC14A_SDRAMC_NCS0                      (_UL_(1) << 14)
-
-#define PIN_PC15A_SDRAMC_NCS1                      _L_(79)      /**< SDRAMC signal: NCS1 on PC15 mux A*/
-#define MUX_PC15A_SDRAMC_NCS1                      _L_(0)       /**< SDRAMC signal line function value: NCS1 */
-#define PIO_PC15A_SDRAMC_NCS1                      (_UL_(1) << 15)
-
-#define PIN_PC15A_SDRAMC_SDCS                      _L_(79)      /**< SDRAMC signal: SDCS on PC15 mux A*/
-#define MUX_PC15A_SDRAMC_SDCS                      _L_(0)       /**< SDRAMC signal line function value: SDCS */
-#define PIO_PC15A_SDRAMC_SDCS                      (_UL_(1) << 15)
-
-#define PIN_PD18A_SDRAMC_NCS1                      _L_(114)     /**< SDRAMC signal: NCS1 on PD18 mux A*/
-#define MUX_PD18A_SDRAMC_NCS1                      _L_(0)       /**< SDRAMC signal line function value: NCS1 */
-#define PIO_PD18A_SDRAMC_NCS1                      (_UL_(1) << 18)
-
-#define PIN_PD18A_SDRAMC_SDCS                      _L_(114)     /**< SDRAMC signal: SDCS on PD18 mux A*/
-#define MUX_PD18A_SDRAMC_SDCS                      _L_(0)       /**< SDRAMC signal line function value: SDCS */
-#define PIO_PD18A_SDRAMC_SDCS                      (_UL_(1) << 18)
-
-#define PIN_PA22C_SDRAMC_NCS2                      _L_(22)      /**< SDRAMC signal: NCS2 on PA22 mux C*/
-#define MUX_PA22C_SDRAMC_NCS2                      _L_(2)       /**< SDRAMC signal line function value: NCS2 */
-#define PIO_PA22C_SDRAMC_NCS2                      (_UL_(1) << 22)
-
-#define PIN_PC12A_SDRAMC_NCS3                      _L_(76)      /**< SDRAMC signal: NCS3 on PC12 mux A*/
-#define MUX_PC12A_SDRAMC_NCS3                      _L_(0)       /**< SDRAMC signal line function value: NCS3 */
-#define PIO_PC12A_SDRAMC_NCS3                      (_UL_(1) << 12)
-
-#define PIN_PD19A_SDRAMC_NCS3                      _L_(115)     /**< SDRAMC signal: NCS3 on PD19 mux A*/
-#define MUX_PD19A_SDRAMC_NCS3                      _L_(0)       /**< SDRAMC signal line function value: NCS3 */
-#define PIO_PD19A_SDRAMC_NCS3                      (_UL_(1) << 19)
-
-#define PIN_PC11A_SDRAMC_NRD                       _L_(75)      /**< SDRAMC signal: NRD on PC11 mux A*/
-#define MUX_PC11A_SDRAMC_NRD                       _L_(0)       /**< SDRAMC signal line function value: NRD */
-#define PIO_PC11A_SDRAMC_NRD                       (_UL_(1) << 11)
-
-#define PIN_PC13A_SDRAMC_NWAIT                     _L_(77)      /**< SDRAMC signal: NWAIT on PC13 mux A*/
-#define MUX_PC13A_SDRAMC_NWAIT                     _L_(0)       /**< SDRAMC signal line function value: NWAIT */
-#define PIO_PC13A_SDRAMC_NWAIT                     (_UL_(1) << 13)
-
-#define PIN_PC8A_SDRAMC_NWR0                       _L_(72)      /**< SDRAMC signal: NWR0 on PC8 mux A*/
-#define MUX_PC8A_SDRAMC_NWR0                       _L_(0)       /**< SDRAMC signal line function value: NWR0 */
-#define PIO_PC8A_SDRAMC_NWR0                       (_UL_(1) << 8)
-
-#define PIN_PC8A_SDRAMC_NWE                        _L_(72)      /**< SDRAMC signal: NWE on PC8 mux A*/
-#define MUX_PC8A_SDRAMC_NWE                        _L_(0)       /**< SDRAMC signal line function value: NWE */
-#define PIO_PC8A_SDRAMC_NWE                        (_UL_(1) << 8)
-
-#define PIN_PD15C_SDRAMC_NWR1                      _L_(111)     /**< SDRAMC signal: NWR1 on PD15 mux C*/
-#define MUX_PD15C_SDRAMC_NWR1                      _L_(2)       /**< SDRAMC signal line function value: NWR1 */
-#define PIO_PD15C_SDRAMC_NWR1                      (_UL_(1) << 15)
-
-#define PIN_PD15C_SDRAMC_NBS1                      _L_(111)     /**< SDRAMC signal: NBS1 on PD15 mux C*/
-#define MUX_PD15C_SDRAMC_NBS1                      _L_(2)       /**< SDRAMC signal line function value: NBS1 */
-#define PIO_PD15C_SDRAMC_NBS1                      (_UL_(1) << 15)
-
-#define PIN_PD16C_SDRAMC_RAS                       _L_(112)     /**< SDRAMC signal: RAS on PD16 mux C*/
-#define MUX_PD16C_SDRAMC_RAS                       _L_(2)       /**< SDRAMC signal line function value: RAS */
-#define PIO_PD16C_SDRAMC_RAS                       (_UL_(1) << 16)
-
-#define PIN_PC13C_SDRAMC_SDA10                     _L_(77)      /**< SDRAMC signal: SDA10 on PC13 mux C*/
-#define MUX_PC13C_SDRAMC_SDA10                     _L_(2)       /**< SDRAMC signal line function value: SDA10 */
-#define PIO_PC13C_SDRAMC_SDA10                     (_UL_(1) << 13)
-
-#define PIN_PD13C_SDRAMC_SDA10                     _L_(109)     /**< SDRAMC signal: SDA10 on PD13 mux C*/
-#define MUX_PD13C_SDRAMC_SDA10                     _L_(2)       /**< SDRAMC signal line function value: SDA10 */
-#define PIO_PD13C_SDRAMC_SDA10                     (_UL_(1) << 13)
-
-#define PIN_PD23C_SDRAMC_SDCK                      _L_(119)     /**< SDRAMC signal: SDCK on PD23 mux C*/
-#define MUX_PD23C_SDRAMC_SDCK                      _L_(2)       /**< SDRAMC signal line function value: SDCK */
-#define PIO_PD23C_SDRAMC_SDCK                      (_UL_(1) << 23)
-
-#define PIN_PD14C_SDRAMC_SDCKE                     _L_(110)     /**< SDRAMC signal: SDCKE on PD14 mux C*/
-#define MUX_PD14C_SDRAMC_SDCKE                     _L_(2)       /**< SDRAMC signal line function value: SDCKE */
-#define PIO_PD14C_SDRAMC_SDCKE                     (_UL_(1) << 14)
-
-#define PIN_PD29C_SDRAMC_SDWE                      _L_(125)     /**< SDRAMC signal: SDWE on PD29 mux C*/
-#define MUX_PD29C_SDRAMC_SDWE                      _L_(2)       /**< SDRAMC signal line function value: SDWE */
-#define PIO_PD29C_SDRAMC_SDWE                      (_UL_(1) << 29)
-
-/* ========== PIO definition for SMC peripheral ========== */
-#define PIN_PC18A_SMC_A0                           _L_(82)      /**< SMC signal: A0 on PC18 mux A*/
-#define MUX_PC18A_SMC_A0                           _L_(0)       /**< SMC signal line function value: A0 */
-#define PIO_PC18A_SMC_A0                           (_UL_(1) << 18)
-
-#define PIN_PC18A_SMC_NBS0                         _L_(82)      /**< SMC signal: NBS0 on PC18 mux A*/
-#define MUX_PC18A_SMC_NBS0                         _L_(0)       /**< SMC signal line function value: NBS0 */
-#define PIO_PC18A_SMC_NBS0                         (_UL_(1) << 18)
-
-#define PIN_PC19A_SMC_A1                           _L_(83)      /**< SMC signal: A1 on PC19 mux A*/
-#define MUX_PC19A_SMC_A1                           _L_(0)       /**< SMC signal line function value: A1 */
-#define PIO_PC19A_SMC_A1                           (_UL_(1) << 19)
-
-#define PIN_PC20A_SMC_A2                           _L_(84)      /**< SMC signal: A2 on PC20 mux A*/
-#define MUX_PC20A_SMC_A2                           _L_(0)       /**< SMC signal line function value: A2 */
-#define PIO_PC20A_SMC_A2                           (_UL_(1) << 20)
-
-#define PIN_PC21A_SMC_A3                           _L_(85)      /**< SMC signal: A3 on PC21 mux A*/
-#define MUX_PC21A_SMC_A3                           _L_(0)       /**< SMC signal line function value: A3 */
-#define PIO_PC21A_SMC_A3                           (_UL_(1) << 21)
-
-#define PIN_PC22A_SMC_A4                           _L_(86)      /**< SMC signal: A4 on PC22 mux A*/
-#define MUX_PC22A_SMC_A4                           _L_(0)       /**< SMC signal line function value: A4 */
-#define PIO_PC22A_SMC_A4                           (_UL_(1) << 22)
-
-#define PIN_PC23A_SMC_A5                           _L_(87)      /**< SMC signal: A5 on PC23 mux A*/
-#define MUX_PC23A_SMC_A5                           _L_(0)       /**< SMC signal line function value: A5 */
-#define PIO_PC23A_SMC_A5                           (_UL_(1) << 23)
-
-#define PIN_PC24A_SMC_A6                           _L_(88)      /**< SMC signal: A6 on PC24 mux A*/
-#define MUX_PC24A_SMC_A6                           _L_(0)       /**< SMC signal line function value: A6 */
-#define PIO_PC24A_SMC_A6                           (_UL_(1) << 24)
-
-#define PIN_PC25A_SMC_A7                           _L_(89)      /**< SMC signal: A7 on PC25 mux A*/
-#define MUX_PC25A_SMC_A7                           _L_(0)       /**< SMC signal line function value: A7 */
-#define PIO_PC25A_SMC_A7                           (_UL_(1) << 25)
-
-#define PIN_PC26A_SMC_A8                           _L_(90)      /**< SMC signal: A8 on PC26 mux A*/
-#define MUX_PC26A_SMC_A8                           _L_(0)       /**< SMC signal line function value: A8 */
-#define PIO_PC26A_SMC_A8                           (_UL_(1) << 26)
-
-#define PIN_PC27A_SMC_A9                           _L_(91)      /**< SMC signal: A9 on PC27 mux A*/
-#define MUX_PC27A_SMC_A9                           _L_(0)       /**< SMC signal line function value: A9 */
-#define PIO_PC27A_SMC_A9                           (_UL_(1) << 27)
-
-#define PIN_PC28A_SMC_A10                          _L_(92)      /**< SMC signal: A10 on PC28 mux A*/
-#define MUX_PC28A_SMC_A10                          _L_(0)       /**< SMC signal line function value: A10 */
-#define PIO_PC28A_SMC_A10                          (_UL_(1) << 28)
-
-#define PIN_PC29A_SMC_A11                          _L_(93)      /**< SMC signal: A11 on PC29 mux A*/
-#define MUX_PC29A_SMC_A11                          _L_(0)       /**< SMC signal line function value: A11 */
-#define PIO_PC29A_SMC_A11                          (_UL_(1) << 29)
-
-#define PIN_PC30A_SMC_A12                          _L_(94)      /**< SMC signal: A12 on PC30 mux A*/
-#define MUX_PC30A_SMC_A12                          _L_(0)       /**< SMC signal line function value: A12 */
-#define PIO_PC30A_SMC_A12                          (_UL_(1) << 30)
-
-#define PIN_PC31A_SMC_A13                          _L_(95)      /**< SMC signal: A13 on PC31 mux A*/
-#define MUX_PC31A_SMC_A13                          _L_(0)       /**< SMC signal line function value: A13 */
-#define PIO_PC31A_SMC_A13                          (_UL_(1) << 31)
-
-#define PIN_PA18C_SMC_A14                          _L_(18)      /**< SMC signal: A14 on PA18 mux C*/
-#define MUX_PA18C_SMC_A14                          _L_(2)       /**< SMC signal line function value: A14 */
-#define PIO_PA18C_SMC_A14                          (_UL_(1) << 18)
-
-#define PIN_PA19C_SMC_A15                          _L_(19)      /**< SMC signal: A15 on PA19 mux C*/
-#define MUX_PA19C_SMC_A15                          _L_(2)       /**< SMC signal line function value: A15 */
-#define PIO_PA19C_SMC_A15                          (_UL_(1) << 19)
-
-#define PIN_PA20C_SMC_A16                          _L_(20)      /**< SMC signal: A16 on PA20 mux C*/
-#define MUX_PA20C_SMC_A16                          _L_(2)       /**< SMC signal line function value: A16 */
-#define PIO_PA20C_SMC_A16                          (_UL_(1) << 20)
-
-#define PIN_PA20C_SMC_BA0                          _L_(20)      /**< SMC signal: BA0 on PA20 mux C*/
-#define MUX_PA20C_SMC_BA0                          _L_(2)       /**< SMC signal line function value: BA0 */
-#define PIO_PA20C_SMC_BA0                          (_UL_(1) << 20)
-
-#define PIN_PA0C_SMC_A17                           _L_(0)       /**< SMC signal: A17 on PA0 mux C*/
-#define MUX_PA0C_SMC_A17                           _L_(2)       /**< SMC signal line function value: A17 */
-#define PIO_PA0C_SMC_A17                           (_UL_(1) << 0)
-
-#define PIN_PA0C_SMC_BA1                           _L_(0)       /**< SMC signal: BA1 on PA0 mux C*/
-#define MUX_PA0C_SMC_BA1                           _L_(2)       /**< SMC signal line function value: BA1 */
-#define PIO_PA0C_SMC_BA1                           (_UL_(1) << 0)
-
-#define PIN_PA1C_SMC_A18                           _L_(1)       /**< SMC signal: A18 on PA1 mux C*/
-#define MUX_PA1C_SMC_A18                           _L_(2)       /**< SMC signal line function value: A18 */
-#define PIO_PA1C_SMC_A18                           (_UL_(1) << 1)
-
-#define PIN_PA23C_SMC_A19                          _L_(23)      /**< SMC signal: A19 on PA23 mux C*/
-#define MUX_PA23C_SMC_A19                          _L_(2)       /**< SMC signal line function value: A19 */
-#define PIO_PA23C_SMC_A19                          (_UL_(1) << 23)
-
-#define PIN_PA24C_SMC_A20                          _L_(24)      /**< SMC signal: A20 on PA24 mux C*/
-#define MUX_PA24C_SMC_A20                          _L_(2)       /**< SMC signal line function value: A20 */
-#define PIO_PA24C_SMC_A20                          (_UL_(1) << 24)
-
-#define PIN_PC16A_SMC_A21                          _L_(80)      /**< SMC signal: A21 on PC16 mux A*/
-#define MUX_PC16A_SMC_A21                          _L_(0)       /**< SMC signal line function value: A21 */
-#define PIO_PC16A_SMC_A21                          (_UL_(1) << 16)
-
-#define PIN_PC16A_SMC_NANDALE                      _L_(80)      /**< SMC signal: NANDALE on PC16 mux A*/
-#define MUX_PC16A_SMC_NANDALE                      _L_(0)       /**< SMC signal line function value: NANDALE */
-#define PIO_PC16A_SMC_NANDALE                      (_UL_(1) << 16)
-
-#define PIN_PC17A_SMC_A22                          _L_(81)      /**< SMC signal: A22 on PC17 mux A*/
-#define MUX_PC17A_SMC_A22                          _L_(0)       /**< SMC signal line function value: A22 */
-#define PIO_PC17A_SMC_A22                          (_UL_(1) << 17)
-
-#define PIN_PC17A_SMC_NANDCLE                      _L_(81)      /**< SMC signal: NANDCLE on PC17 mux A*/
-#define MUX_PC17A_SMC_NANDCLE                      _L_(0)       /**< SMC signal line function value: NANDCLE */
-#define PIO_PC17A_SMC_NANDCLE                      (_UL_(1) << 17)
-
-#define PIN_PA25C_SMC_A23                          _L_(25)      /**< SMC signal: A23 on PA25 mux C*/
-#define MUX_PA25C_SMC_A23                          _L_(2)       /**< SMC signal line function value: A23 */
-#define PIO_PA25C_SMC_A23                          (_UL_(1) << 25)
-
-#define PIN_PD17C_SMC_CAS                          _L_(113)     /**< SMC signal: CAS on PD17 mux C*/
-#define MUX_PD17C_SMC_CAS                          _L_(2)       /**< SMC signal line function value: CAS */
-#define PIO_PD17C_SMC_CAS                          (_UL_(1) << 17)
-
-#define PIN_PC0A_SMC_D0                            _L_(64)      /**< SMC signal: D0 on PC0 mux A*/
-#define MUX_PC0A_SMC_D0                            _L_(0)       /**< SMC signal line function value: D0 */
-#define PIO_PC0A_SMC_D0                            (_UL_(1) << 0)
-
-#define PIN_PC1A_SMC_D1                            _L_(65)      /**< SMC signal: D1 on PC1 mux A*/
-#define MUX_PC1A_SMC_D1                            _L_(0)       /**< SMC signal line function value: D1 */
-#define PIO_PC1A_SMC_D1                            (_UL_(1) << 1)
-
-#define PIN_PC2A_SMC_D2                            _L_(66)      /**< SMC signal: D2 on PC2 mux A*/
-#define MUX_PC2A_SMC_D2                            _L_(0)       /**< SMC signal line function value: D2 */
-#define PIO_PC2A_SMC_D2                            (_UL_(1) << 2)
-
-#define PIN_PC3A_SMC_D3                            _L_(67)      /**< SMC signal: D3 on PC3 mux A*/
-#define MUX_PC3A_SMC_D3                            _L_(0)       /**< SMC signal line function value: D3 */
-#define PIO_PC3A_SMC_D3                            (_UL_(1) << 3)
-
-#define PIN_PC4A_SMC_D4                            _L_(68)      /**< SMC signal: D4 on PC4 mux A*/
-#define MUX_PC4A_SMC_D4                            _L_(0)       /**< SMC signal line function value: D4 */
-#define PIO_PC4A_SMC_D4                            (_UL_(1) << 4)
-
-#define PIN_PC5A_SMC_D5                            _L_(69)      /**< SMC signal: D5 on PC5 mux A*/
-#define MUX_PC5A_SMC_D5                            _L_(0)       /**< SMC signal line function value: D5 */
-#define PIO_PC5A_SMC_D5                            (_UL_(1) << 5)
-
-#define PIN_PC6A_SMC_D6                            _L_(70)      /**< SMC signal: D6 on PC6 mux A*/
-#define MUX_PC6A_SMC_D6                            _L_(0)       /**< SMC signal line function value: D6 */
-#define PIO_PC6A_SMC_D6                            (_UL_(1) << 6)
-
-#define PIN_PC7A_SMC_D7                            _L_(71)      /**< SMC signal: D7 on PC7 mux A*/
-#define MUX_PC7A_SMC_D7                            _L_(0)       /**< SMC signal line function value: D7 */
-#define PIO_PC7A_SMC_D7                            (_UL_(1) << 7)
-
-#define PIN_PE0A_SMC_D8                            _L_(128)     /**< SMC signal: D8 on PE0 mux A*/
-#define MUX_PE0A_SMC_D8                            _L_(0)       /**< SMC signal line function value: D8 */
-#define PIO_PE0A_SMC_D8                            (_UL_(1) << 0)
-
-#define PIN_PE1A_SMC_D9                            _L_(129)     /**< SMC signal: D9 on PE1 mux A*/
-#define MUX_PE1A_SMC_D9                            _L_(0)       /**< SMC signal line function value: D9 */
-#define PIO_PE1A_SMC_D9                            (_UL_(1) << 1)
-
-#define PIN_PE2A_SMC_D10                           _L_(130)     /**< SMC signal: D10 on PE2 mux A*/
-#define MUX_PE2A_SMC_D10                           _L_(0)       /**< SMC signal line function value: D10 */
-#define PIO_PE2A_SMC_D10                           (_UL_(1) << 2)
-
-#define PIN_PE3A_SMC_D11                           _L_(131)     /**< SMC signal: D11 on PE3 mux A*/
-#define MUX_PE3A_SMC_D11                           _L_(0)       /**< SMC signal line function value: D11 */
-#define PIO_PE3A_SMC_D11                           (_UL_(1) << 3)
-
-#define PIN_PE4A_SMC_D12                           _L_(132)     /**< SMC signal: D12 on PE4 mux A*/
-#define MUX_PE4A_SMC_D12                           _L_(0)       /**< SMC signal line function value: D12 */
-#define PIO_PE4A_SMC_D12                           (_UL_(1) << 4)
-
-#define PIN_PE5A_SMC_D13                           _L_(133)     /**< SMC signal: D13 on PE5 mux A*/
-#define MUX_PE5A_SMC_D13                           _L_(0)       /**< SMC signal line function value: D13 */
-#define PIO_PE5A_SMC_D13                           (_UL_(1) << 5)
-
-#define PIN_PA15A_SMC_D14                          _L_(15)      /**< SMC signal: D14 on PA15 mux A*/
-#define MUX_PA15A_SMC_D14                          _L_(0)       /**< SMC signal line function value: D14 */
-#define PIO_PA15A_SMC_D14                          (_UL_(1) << 15)
-
-#define PIN_PA16A_SMC_D15                          _L_(16)      /**< SMC signal: D15 on PA16 mux A*/
-#define MUX_PA16A_SMC_D15                          _L_(0)       /**< SMC signal line function value: D15 */
-#define PIO_PA16A_SMC_D15                          (_UL_(1) << 16)
-
-#define PIN_PC9A_SMC_NANDOE                        _L_(73)      /**< SMC signal: NANDOE on PC9 mux A*/
-#define MUX_PC9A_SMC_NANDOE                        _L_(0)       /**< SMC signal line function value: NANDOE */
-#define PIO_PC9A_SMC_NANDOE                        (_UL_(1) << 9)
-
-#define PIN_PC10A_SMC_NANDWE                       _L_(74)      /**< SMC signal: NANDWE on PC10 mux A*/
-#define MUX_PC10A_SMC_NANDWE                       _L_(0)       /**< SMC signal line function value: NANDWE */
-#define PIO_PC10A_SMC_NANDWE                       (_UL_(1) << 10)
-
-#define PIN_PC14A_SMC_NCS0                         _L_(78)      /**< SMC signal: NCS0 on PC14 mux A*/
-#define MUX_PC14A_SMC_NCS0                         _L_(0)       /**< SMC signal line function value: NCS0 */
-#define PIO_PC14A_SMC_NCS0                         (_UL_(1) << 14)
-
-#define PIN_PC15A_SMC_NCS1                         _L_(79)      /**< SMC signal: NCS1 on PC15 mux A*/
-#define MUX_PC15A_SMC_NCS1                         _L_(0)       /**< SMC signal line function value: NCS1 */
-#define PIO_PC15A_SMC_NCS1                         (_UL_(1) << 15)
-
-#define PIN_PC15A_SMC_SDCS                         _L_(79)      /**< SMC signal: SDCS on PC15 mux A*/
-#define MUX_PC15A_SMC_SDCS                         _L_(0)       /**< SMC signal line function value: SDCS */
-#define PIO_PC15A_SMC_SDCS                         (_UL_(1) << 15)
-
-#define PIN_PD18A_SMC_NCS1                         _L_(114)     /**< SMC signal: NCS1 on PD18 mux A*/
-#define MUX_PD18A_SMC_NCS1                         _L_(0)       /**< SMC signal line function value: NCS1 */
-#define PIO_PD18A_SMC_NCS1                         (_UL_(1) << 18)
-
-#define PIN_PD18A_SMC_SDCS                         _L_(114)     /**< SMC signal: SDCS on PD18 mux A*/
-#define MUX_PD18A_SMC_SDCS                         _L_(0)       /**< SMC signal line function value: SDCS */
-#define PIO_PD18A_SMC_SDCS                         (_UL_(1) << 18)
-
-#define PIN_PA22C_SMC_NCS2                         _L_(22)      /**< SMC signal: NCS2 on PA22 mux C*/
-#define MUX_PA22C_SMC_NCS2                         _L_(2)       /**< SMC signal line function value: NCS2 */
-#define PIO_PA22C_SMC_NCS2                         (_UL_(1) << 22)
-
-#define PIN_PC12A_SMC_NCS3                         _L_(76)      /**< SMC signal: NCS3 on PC12 mux A*/
-#define MUX_PC12A_SMC_NCS3                         _L_(0)       /**< SMC signal line function value: NCS3 */
-#define PIO_PC12A_SMC_NCS3                         (_UL_(1) << 12)
-
-#define PIN_PD19A_SMC_NCS3                         _L_(115)     /**< SMC signal: NCS3 on PD19 mux A*/
-#define MUX_PD19A_SMC_NCS3                         _L_(0)       /**< SMC signal line function value: NCS3 */
-#define PIO_PD19A_SMC_NCS3                         (_UL_(1) << 19)
-
-#define PIN_PC11A_SMC_NRD                          _L_(75)      /**< SMC signal: NRD on PC11 mux A*/
-#define MUX_PC11A_SMC_NRD                          _L_(0)       /**< SMC signal line function value: NRD */
-#define PIO_PC11A_SMC_NRD                          (_UL_(1) << 11)
-
-#define PIN_PC13A_SMC_NWAIT                        _L_(77)      /**< SMC signal: NWAIT on PC13 mux A*/
-#define MUX_PC13A_SMC_NWAIT                        _L_(0)       /**< SMC signal line function value: NWAIT */
-#define PIO_PC13A_SMC_NWAIT                        (_UL_(1) << 13)
-
-#define PIN_PC8A_SMC_NWR0                          _L_(72)      /**< SMC signal: NWR0 on PC8 mux A*/
-#define MUX_PC8A_SMC_NWR0                          _L_(0)       /**< SMC signal line function value: NWR0 */
-#define PIO_PC8A_SMC_NWR0                          (_UL_(1) << 8)
-
-#define PIN_PC8A_SMC_NWE                           _L_(72)      /**< SMC signal: NWE on PC8 mux A*/
-#define MUX_PC8A_SMC_NWE                           _L_(0)       /**< SMC signal line function value: NWE */
-#define PIO_PC8A_SMC_NWE                           (_UL_(1) << 8)
-
-#define PIN_PD15C_SMC_NWR1                         _L_(111)     /**< SMC signal: NWR1 on PD15 mux C*/
-#define MUX_PD15C_SMC_NWR1                         _L_(2)       /**< SMC signal line function value: NWR1 */
-#define PIO_PD15C_SMC_NWR1                         (_UL_(1) << 15)
-
-#define PIN_PD15C_SMC_NBS1                         _L_(111)     /**< SMC signal: NBS1 on PD15 mux C*/
-#define MUX_PD15C_SMC_NBS1                         _L_(2)       /**< SMC signal line function value: NBS1 */
-#define PIO_PD15C_SMC_NBS1                         (_UL_(1) << 15)
-
-#define PIN_PD16C_SMC_RAS                          _L_(112)     /**< SMC signal: RAS on PD16 mux C*/
-#define MUX_PD16C_SMC_RAS                          _L_(2)       /**< SMC signal line function value: RAS */
-#define PIO_PD16C_SMC_RAS                          (_UL_(1) << 16)
-
-#define PIN_PC13C_SMC_SDA10                        _L_(77)      /**< SMC signal: SDA10 on PC13 mux C*/
-#define MUX_PC13C_SMC_SDA10                        _L_(2)       /**< SMC signal line function value: SDA10 */
-#define PIO_PC13C_SMC_SDA10                        (_UL_(1) << 13)
-
-#define PIN_PD13C_SMC_SDA10                        _L_(109)     /**< SMC signal: SDA10 on PD13 mux C*/
-#define MUX_PD13C_SMC_SDA10                        _L_(2)       /**< SMC signal line function value: SDA10 */
-#define PIO_PD13C_SMC_SDA10                        (_UL_(1) << 13)
-
-#define PIN_PD23C_SMC_SDCK                         _L_(119)     /**< SMC signal: SDCK on PD23 mux C*/
-#define MUX_PD23C_SMC_SDCK                         _L_(2)       /**< SMC signal line function value: SDCK */
-#define PIO_PD23C_SMC_SDCK                         (_UL_(1) << 23)
-
-#define PIN_PD14C_SMC_SDCKE                        _L_(110)     /**< SMC signal: SDCKE on PD14 mux C*/
-#define MUX_PD14C_SMC_SDCKE                        _L_(2)       /**< SMC signal line function value: SDCKE */
-#define PIO_PD14C_SMC_SDCKE                        (_UL_(1) << 14)
-
-#define PIN_PD29C_SMC_SDWE                         _L_(125)     /**< SMC signal: SDWE on PD29 mux C*/
-#define MUX_PD29C_SMC_SDWE                         _L_(2)       /**< SMC signal line function value: SDWE */
-#define PIO_PD29C_SMC_SDWE                         (_UL_(1) << 29)
+/* ========== PIO definition for RTC peripheral ========== */
+#define PIN_PB0X1_RTC_RTCOUT0                      _L_(32)      /**< RTC signal: RTCOUT0 on PB0 mux X1*/
+#define PIO_PB0X1_RTC_RTCOUT0                      (_UL_(1) << 0)
+
+#define PIN_PB1X1_RTC_RTCOUT1                      _L_(33)      /**< RTC signal: RTCOUT1 on PB1 mux X1*/
+#define PIO_PB1X1_RTC_RTCOUT1                      (_UL_(1) << 1)
 
 /* ========== PIO definition for SPI0 peripheral ========== */
 #define PIN_PD20B_SPI0_MISO                        _L_(116)     /**< SPI0 signal: MISO on PD20 mux B*/
@@ -1730,6 +1520,49 @@
 #define PIN_PB1D_SSC_TK                            _L_(33)      /**< SSC signal: TK on PB1 mux D*/
 #define MUX_PB1D_SSC_TK                            _L_(3)       /**< SSC signal line function value: TK */
 #define PIO_PB1D_SSC_TK                            (_UL_(1) << 1)
+
+/* ========== PIO definition for SUPC peripheral ========== */
+#define PIN_PA0X1_SUPC_WKUP0                       _L_(0)       /**< SUPC signal: WKUP0 on PA0 mux X1*/
+#define PIO_PA0X1_SUPC_WKUP0                       (_UL_(1) << 0)
+
+#define PIN_PA1X1_SUPC_WKUP1                       _L_(1)       /**< SUPC signal: WKUP1 on PA1 mux X1*/
+#define PIO_PA1X1_SUPC_WKUP1                       (_UL_(1) << 1)
+
+#define PIN_PA2X1_SUPC_WKUP2                       _L_(2)       /**< SUPC signal: WKUP2 on PA2 mux X1*/
+#define PIO_PA2X1_SUPC_WKUP2                       (_UL_(1) << 2)
+
+#define PIN_PA4X1_SUPC_WKUP3                       _L_(4)       /**< SUPC signal: WKUP3 on PA4 mux X1*/
+#define PIO_PA4X1_SUPC_WKUP3                       (_UL_(1) << 4)
+
+#define PIN_PA5X1_SUPC_WKUP4                       _L_(5)       /**< SUPC signal: WKUP4 on PA5 mux X1*/
+#define PIO_PA5X1_SUPC_WKUP4                       (_UL_(1) << 5)
+
+#define PIN_PA9X1_SUPC_WKUP6                       _L_(9)       /**< SUPC signal: WKUP6 on PA9 mux X1*/
+#define PIO_PA9X1_SUPC_WKUP6                       (_UL_(1) << 9)
+
+#define PIN_PA11X1_SUPC_WKUP7                      _L_(11)      /**< SUPC signal: WKUP7 on PA11 mux X1*/
+#define PIO_PA11X1_SUPC_WKUP7                      (_UL_(1) << 11)
+
+#define PIN_PA14X1_SUPC_WKUP8                      _L_(14)      /**< SUPC signal: WKUP8 on PA14 mux X1*/
+#define PIO_PA14X1_SUPC_WKUP8                      (_UL_(1) << 14)
+
+#define PIN_PA19X1_SUPC_WKUP9                      _L_(19)      /**< SUPC signal: WKUP9 on PA19 mux X1*/
+#define PIO_PA19X1_SUPC_WKUP9                      (_UL_(1) << 19)
+
+#define PIN_PA20X1_SUPC_WKUP10                     _L_(20)      /**< SUPC signal: WKUP10 on PA20 mux X1*/
+#define PIO_PA20X1_SUPC_WKUP10                     (_UL_(1) << 20)
+
+#define PIN_PA30X1_SUPC_WKUP11                     _L_(30)      /**< SUPC signal: WKUP11 on PA30 mux X1*/
+#define PIO_PA30X1_SUPC_WKUP11                     (_UL_(1) << 30)
+
+#define PIN_PB3X1_SUPC_WKUP12                      _L_(35)      /**< SUPC signal: WKUP12 on PB3 mux X1*/
+#define PIO_PB3X1_SUPC_WKUP12                      (_UL_(1) << 3)
+
+#define PIN_PB5X1_SUPC_WKUP13                      _L_(37)      /**< SUPC signal: WKUP13 on PB5 mux X1*/
+#define PIO_PB5X1_SUPC_WKUP13                      (_UL_(1) << 5)
+
+#define PIN_PD28X1_SUPC_WKUP5                      _L_(124)     /**< SUPC signal: WKUP5 on PD28 mux X1*/
+#define PIO_PD28X1_SUPC_WKUP5                      (_UL_(1) << 28)
 
 /* ========== PIO definition for TC0 peripheral ========== */
 #define PIN_PA4B_TC0_TCLK0                         _L_(4)       /**< TC0 signal: TCLK0 on PA4 mux B*/
@@ -2082,278 +1915,48 @@
 #define MUX_PD16B_USART2_TXD2                      _L_(1)       /**< USART2 signal line function value: TXD2 */
 #define PIO_PD16B_USART2_TXD2                      (_UL_(1) << 16)
 
-/* ========== PIO definition for EBI peripheral ========== */
-#define PIN_PC18A_EBI_A0                           _L_(82)      /**< EBI signal: A0 on PC18 mux A*/
-#define MUX_PC18A_EBI_A0                           _L_(0)       /**< EBI signal line function value: A0 */
-#define PIO_PC18A_EBI_A0                           (_UL_(1) << 18)
+/* ========== PIO definition for ICE peripheral ========== */
+#define PIN_PB4X1_ICE_TDI                          _L_(36)      /**< ICE signal: TDI on PB4 mux X1*/
+#define PIO_PB4X1_ICE_TDI                          (_UL_(1) << 4)
 
-#define PIN_PC18A_EBI_NBS0                         _L_(82)      /**< EBI signal: NBS0 on PC18 mux A*/
-#define MUX_PC18A_EBI_NBS0                         _L_(0)       /**< EBI signal line function value: NBS0 */
-#define PIO_PC18A_EBI_NBS0                         (_UL_(1) << 18)
+#define PIN_PB5X1_ICE_TDO                          _L_(37)      /**< ICE signal: TDO on PB5 mux X1*/
+#define PIO_PB5X1_ICE_TDO                          (_UL_(1) << 5)
 
-#define PIN_PC19A_EBI_A1                           _L_(83)      /**< EBI signal: A1 on PC19 mux A*/
-#define MUX_PC19A_EBI_A1                           _L_(0)       /**< EBI signal line function value: A1 */
-#define PIO_PC19A_EBI_A1                           (_UL_(1) << 19)
+#define PIN_PB5X1_ICE_TRACESWO                     _L_(37)      /**< ICE signal: TRACESWO on PB5 mux X1*/
+#define PIO_PB5X1_ICE_TRACESWO                     (_UL_(1) << 5)
 
-#define PIN_PC20A_EBI_A2                           _L_(84)      /**< EBI signal: A2 on PC20 mux A*/
-#define MUX_PC20A_EBI_A2                           _L_(0)       /**< EBI signal line function value: A2 */
-#define PIO_PC20A_EBI_A2                           (_UL_(1) << 20)
+#define PIN_PB6X1_ICE_TMS                          _L_(38)      /**< ICE signal: TMS on PB6 mux X1*/
+#define PIO_PB6X1_ICE_TMS                          (_UL_(1) << 6)
 
-#define PIN_PC21A_EBI_A3                           _L_(85)      /**< EBI signal: A3 on PC21 mux A*/
-#define MUX_PC21A_EBI_A3                           _L_(0)       /**< EBI signal line function value: A3 */
-#define PIO_PC21A_EBI_A3                           (_UL_(1) << 21)
+#define PIN_PB6X1_ICE_SWDIO                        _L_(38)      /**< ICE signal: SWDIO on PB6 mux X1*/
+#define PIO_PB6X1_ICE_SWDIO                        (_UL_(1) << 6)
 
-#define PIN_PC22A_EBI_A4                           _L_(86)      /**< EBI signal: A4 on PC22 mux A*/
-#define MUX_PC22A_EBI_A4                           _L_(0)       /**< EBI signal line function value: A4 */
-#define PIO_PC22A_EBI_A4                           (_UL_(1) << 22)
+#define PIN_PB7X1_ICE_TCK                          _L_(39)      /**< ICE signal: TCK on PB7 mux X1*/
+#define PIO_PB7X1_ICE_TCK                          (_UL_(1) << 7)
 
-#define PIN_PC23A_EBI_A5                           _L_(87)      /**< EBI signal: A5 on PC23 mux A*/
-#define MUX_PC23A_EBI_A5                           _L_(0)       /**< EBI signal line function value: A5 */
-#define PIO_PC23A_EBI_A5                           (_UL_(1) << 23)
+#define PIN_PB7X1_ICE_SWDCLK                       _L_(39)      /**< ICE signal: SWDCLK on PB7 mux X1*/
+#define PIO_PB7X1_ICE_SWDCLK                       (_UL_(1) << 7)
 
-#define PIN_PC24A_EBI_A6                           _L_(88)      /**< EBI signal: A6 on PC24 mux A*/
-#define MUX_PC24A_EBI_A6                           _L_(0)       /**< EBI signal line function value: A6 */
-#define PIO_PC24A_EBI_A6                           (_UL_(1) << 24)
+/* ========== PIO definition for TPIU peripheral ========== */
+#define PIN_PD8D_TPIU_TRACECLK                     _L_(104)     /**< TPIU signal: TRACECLK on PD8 mux D*/
+#define MUX_PD8D_TPIU_TRACECLK                     _L_(3)       /**< TPIU signal line function value: TRACECLK */
+#define PIO_PD8D_TPIU_TRACECLK                     (_UL_(1) << 8)
 
-#define PIN_PC25A_EBI_A7                           _L_(89)      /**< EBI signal: A7 on PC25 mux A*/
-#define MUX_PC25A_EBI_A7                           _L_(0)       /**< EBI signal line function value: A7 */
-#define PIO_PC25A_EBI_A7                           (_UL_(1) << 25)
+#define PIN_PD4C_TPIU_TRACED0                      _L_(100)     /**< TPIU signal: TRACED0 on PD4 mux C*/
+#define MUX_PD4C_TPIU_TRACED0                      _L_(2)       /**< TPIU signal line function value: TRACED0 */
+#define PIO_PD4C_TPIU_TRACED0                      (_UL_(1) << 4)
 
-#define PIN_PC26A_EBI_A8                           _L_(90)      /**< EBI signal: A8 on PC26 mux A*/
-#define MUX_PC26A_EBI_A8                           _L_(0)       /**< EBI signal line function value: A8 */
-#define PIO_PC26A_EBI_A8                           (_UL_(1) << 26)
+#define PIN_PD5C_TPIU_TRACED1                      _L_(101)     /**< TPIU signal: TRACED1 on PD5 mux C*/
+#define MUX_PD5C_TPIU_TRACED1                      _L_(2)       /**< TPIU signal line function value: TRACED1 */
+#define PIO_PD5C_TPIU_TRACED1                      (_UL_(1) << 5)
 
-#define PIN_PC27A_EBI_A9                           _L_(91)      /**< EBI signal: A9 on PC27 mux A*/
-#define MUX_PC27A_EBI_A9                           _L_(0)       /**< EBI signal line function value: A9 */
-#define PIO_PC27A_EBI_A9                           (_UL_(1) << 27)
+#define PIN_PD6C_TPIU_TRACED2                      _L_(102)     /**< TPIU signal: TRACED2 on PD6 mux C*/
+#define MUX_PD6C_TPIU_TRACED2                      _L_(2)       /**< TPIU signal line function value: TRACED2 */
+#define PIO_PD6C_TPIU_TRACED2                      (_UL_(1) << 6)
 
-#define PIN_PC28A_EBI_A10                          _L_(92)      /**< EBI signal: A10 on PC28 mux A*/
-#define MUX_PC28A_EBI_A10                          _L_(0)       /**< EBI signal line function value: A10 */
-#define PIO_PC28A_EBI_A10                          (_UL_(1) << 28)
-
-#define PIN_PC29A_EBI_A11                          _L_(93)      /**< EBI signal: A11 on PC29 mux A*/
-#define MUX_PC29A_EBI_A11                          _L_(0)       /**< EBI signal line function value: A11 */
-#define PIO_PC29A_EBI_A11                          (_UL_(1) << 29)
-
-#define PIN_PC30A_EBI_A12                          _L_(94)      /**< EBI signal: A12 on PC30 mux A*/
-#define MUX_PC30A_EBI_A12                          _L_(0)       /**< EBI signal line function value: A12 */
-#define PIO_PC30A_EBI_A12                          (_UL_(1) << 30)
-
-#define PIN_PC31A_EBI_A13                          _L_(95)      /**< EBI signal: A13 on PC31 mux A*/
-#define MUX_PC31A_EBI_A13                          _L_(0)       /**< EBI signal line function value: A13 */
-#define PIO_PC31A_EBI_A13                          (_UL_(1) << 31)
-
-#define PIN_PA18C_EBI_A14                          _L_(18)      /**< EBI signal: A14 on PA18 mux C*/
-#define MUX_PA18C_EBI_A14                          _L_(2)       /**< EBI signal line function value: A14 */
-#define PIO_PA18C_EBI_A14                          (_UL_(1) << 18)
-
-#define PIN_PA19C_EBI_A15                          _L_(19)      /**< EBI signal: A15 on PA19 mux C*/
-#define MUX_PA19C_EBI_A15                          _L_(2)       /**< EBI signal line function value: A15 */
-#define PIO_PA19C_EBI_A15                          (_UL_(1) << 19)
-
-#define PIN_PA20C_EBI_A16                          _L_(20)      /**< EBI signal: A16 on PA20 mux C*/
-#define MUX_PA20C_EBI_A16                          _L_(2)       /**< EBI signal line function value: A16 */
-#define PIO_PA20C_EBI_A16                          (_UL_(1) << 20)
-
-#define PIN_PA20C_EBI_BA0                          _L_(20)      /**< EBI signal: BA0 on PA20 mux C*/
-#define MUX_PA20C_EBI_BA0                          _L_(2)       /**< EBI signal line function value: BA0 */
-#define PIO_PA20C_EBI_BA0                          (_UL_(1) << 20)
-
-#define PIN_PA0C_EBI_A17                           _L_(0)       /**< EBI signal: A17 on PA0 mux C*/
-#define MUX_PA0C_EBI_A17                           _L_(2)       /**< EBI signal line function value: A17 */
-#define PIO_PA0C_EBI_A17                           (_UL_(1) << 0)
-
-#define PIN_PA0C_EBI_BA1                           _L_(0)       /**< EBI signal: BA1 on PA0 mux C*/
-#define MUX_PA0C_EBI_BA1                           _L_(2)       /**< EBI signal line function value: BA1 */
-#define PIO_PA0C_EBI_BA1                           (_UL_(1) << 0)
-
-#define PIN_PA1C_EBI_A18                           _L_(1)       /**< EBI signal: A18 on PA1 mux C*/
-#define MUX_PA1C_EBI_A18                           _L_(2)       /**< EBI signal line function value: A18 */
-#define PIO_PA1C_EBI_A18                           (_UL_(1) << 1)
-
-#define PIN_PA23C_EBI_A19                          _L_(23)      /**< EBI signal: A19 on PA23 mux C*/
-#define MUX_PA23C_EBI_A19                          _L_(2)       /**< EBI signal line function value: A19 */
-#define PIO_PA23C_EBI_A19                          (_UL_(1) << 23)
-
-#define PIN_PA24C_EBI_A20                          _L_(24)      /**< EBI signal: A20 on PA24 mux C*/
-#define MUX_PA24C_EBI_A20                          _L_(2)       /**< EBI signal line function value: A20 */
-#define PIO_PA24C_EBI_A20                          (_UL_(1) << 24)
-
-#define PIN_PC16A_EBI_A21                          _L_(80)      /**< EBI signal: A21 on PC16 mux A*/
-#define MUX_PC16A_EBI_A21                          _L_(0)       /**< EBI signal line function value: A21 */
-#define PIO_PC16A_EBI_A21                          (_UL_(1) << 16)
-
-#define PIN_PC16A_EBI_NANDALE                      _L_(80)      /**< EBI signal: NANDALE on PC16 mux A*/
-#define MUX_PC16A_EBI_NANDALE                      _L_(0)       /**< EBI signal line function value: NANDALE */
-#define PIO_PC16A_EBI_NANDALE                      (_UL_(1) << 16)
-
-#define PIN_PC17A_EBI_A22                          _L_(81)      /**< EBI signal: A22 on PC17 mux A*/
-#define MUX_PC17A_EBI_A22                          _L_(0)       /**< EBI signal line function value: A22 */
-#define PIO_PC17A_EBI_A22                          (_UL_(1) << 17)
-
-#define PIN_PC17A_EBI_NANDCLE                      _L_(81)      /**< EBI signal: NANDCLE on PC17 mux A*/
-#define MUX_PC17A_EBI_NANDCLE                      _L_(0)       /**< EBI signal line function value: NANDCLE */
-#define PIO_PC17A_EBI_NANDCLE                      (_UL_(1) << 17)
-
-#define PIN_PA25C_EBI_A23                          _L_(25)      /**< EBI signal: A23 on PA25 mux C*/
-#define MUX_PA25C_EBI_A23                          _L_(2)       /**< EBI signal line function value: A23 */
-#define PIO_PA25C_EBI_A23                          (_UL_(1) << 25)
-
-#define PIN_PD17C_EBI_CAS                          _L_(113)     /**< EBI signal: CAS on PD17 mux C*/
-#define MUX_PD17C_EBI_CAS                          _L_(2)       /**< EBI signal line function value: CAS */
-#define PIO_PD17C_EBI_CAS                          (_UL_(1) << 17)
-
-#define PIN_PC0A_EBI_D0                            _L_(64)      /**< EBI signal: D0 on PC0 mux A*/
-#define MUX_PC0A_EBI_D0                            _L_(0)       /**< EBI signal line function value: D0 */
-#define PIO_PC0A_EBI_D0                            (_UL_(1) << 0)
-
-#define PIN_PC1A_EBI_D1                            _L_(65)      /**< EBI signal: D1 on PC1 mux A*/
-#define MUX_PC1A_EBI_D1                            _L_(0)       /**< EBI signal line function value: D1 */
-#define PIO_PC1A_EBI_D1                            (_UL_(1) << 1)
-
-#define PIN_PC2A_EBI_D2                            _L_(66)      /**< EBI signal: D2 on PC2 mux A*/
-#define MUX_PC2A_EBI_D2                            _L_(0)       /**< EBI signal line function value: D2 */
-#define PIO_PC2A_EBI_D2                            (_UL_(1) << 2)
-
-#define PIN_PC3A_EBI_D3                            _L_(67)      /**< EBI signal: D3 on PC3 mux A*/
-#define MUX_PC3A_EBI_D3                            _L_(0)       /**< EBI signal line function value: D3 */
-#define PIO_PC3A_EBI_D3                            (_UL_(1) << 3)
-
-#define PIN_PC4A_EBI_D4                            _L_(68)      /**< EBI signal: D4 on PC4 mux A*/
-#define MUX_PC4A_EBI_D4                            _L_(0)       /**< EBI signal line function value: D4 */
-#define PIO_PC4A_EBI_D4                            (_UL_(1) << 4)
-
-#define PIN_PC5A_EBI_D5                            _L_(69)      /**< EBI signal: D5 on PC5 mux A*/
-#define MUX_PC5A_EBI_D5                            _L_(0)       /**< EBI signal line function value: D5 */
-#define PIO_PC5A_EBI_D5                            (_UL_(1) << 5)
-
-#define PIN_PC6A_EBI_D6                            _L_(70)      /**< EBI signal: D6 on PC6 mux A*/
-#define MUX_PC6A_EBI_D6                            _L_(0)       /**< EBI signal line function value: D6 */
-#define PIO_PC6A_EBI_D6                            (_UL_(1) << 6)
-
-#define PIN_PC7A_EBI_D7                            _L_(71)      /**< EBI signal: D7 on PC7 mux A*/
-#define MUX_PC7A_EBI_D7                            _L_(0)       /**< EBI signal line function value: D7 */
-#define PIO_PC7A_EBI_D7                            (_UL_(1) << 7)
-
-#define PIN_PE0A_EBI_D8                            _L_(128)     /**< EBI signal: D8 on PE0 mux A*/
-#define MUX_PE0A_EBI_D8                            _L_(0)       /**< EBI signal line function value: D8 */
-#define PIO_PE0A_EBI_D8                            (_UL_(1) << 0)
-
-#define PIN_PE1A_EBI_D9                            _L_(129)     /**< EBI signal: D9 on PE1 mux A*/
-#define MUX_PE1A_EBI_D9                            _L_(0)       /**< EBI signal line function value: D9 */
-#define PIO_PE1A_EBI_D9                            (_UL_(1) << 1)
-
-#define PIN_PE2A_EBI_D10                           _L_(130)     /**< EBI signal: D10 on PE2 mux A*/
-#define MUX_PE2A_EBI_D10                           _L_(0)       /**< EBI signal line function value: D10 */
-#define PIO_PE2A_EBI_D10                           (_UL_(1) << 2)
-
-#define PIN_PE3A_EBI_D11                           _L_(131)     /**< EBI signal: D11 on PE3 mux A*/
-#define MUX_PE3A_EBI_D11                           _L_(0)       /**< EBI signal line function value: D11 */
-#define PIO_PE3A_EBI_D11                           (_UL_(1) << 3)
-
-#define PIN_PE4A_EBI_D12                           _L_(132)     /**< EBI signal: D12 on PE4 mux A*/
-#define MUX_PE4A_EBI_D12                           _L_(0)       /**< EBI signal line function value: D12 */
-#define PIO_PE4A_EBI_D12                           (_UL_(1) << 4)
-
-#define PIN_PE5A_EBI_D13                           _L_(133)     /**< EBI signal: D13 on PE5 mux A*/
-#define MUX_PE5A_EBI_D13                           _L_(0)       /**< EBI signal line function value: D13 */
-#define PIO_PE5A_EBI_D13                           (_UL_(1) << 5)
-
-#define PIN_PA15A_EBI_D14                          _L_(15)      /**< EBI signal: D14 on PA15 mux A*/
-#define MUX_PA15A_EBI_D14                          _L_(0)       /**< EBI signal line function value: D14 */
-#define PIO_PA15A_EBI_D14                          (_UL_(1) << 15)
-
-#define PIN_PA16A_EBI_D15                          _L_(16)      /**< EBI signal: D15 on PA16 mux A*/
-#define MUX_PA16A_EBI_D15                          _L_(0)       /**< EBI signal line function value: D15 */
-#define PIO_PA16A_EBI_D15                          (_UL_(1) << 16)
-
-#define PIN_PC9A_EBI_NANDOE                        _L_(73)      /**< EBI signal: NANDOE on PC9 mux A*/
-#define MUX_PC9A_EBI_NANDOE                        _L_(0)       /**< EBI signal line function value: NANDOE */
-#define PIO_PC9A_EBI_NANDOE                        (_UL_(1) << 9)
-
-#define PIN_PC10A_EBI_NANDWE                       _L_(74)      /**< EBI signal: NANDWE on PC10 mux A*/
-#define MUX_PC10A_EBI_NANDWE                       _L_(0)       /**< EBI signal line function value: NANDWE */
-#define PIO_PC10A_EBI_NANDWE                       (_UL_(1) << 10)
-
-#define PIN_PC14A_EBI_NCS0                         _L_(78)      /**< EBI signal: NCS0 on PC14 mux A*/
-#define MUX_PC14A_EBI_NCS0                         _L_(0)       /**< EBI signal line function value: NCS0 */
-#define PIO_PC14A_EBI_NCS0                         (_UL_(1) << 14)
-
-#define PIN_PC15A_EBI_NCS1                         _L_(79)      /**< EBI signal: NCS1 on PC15 mux A*/
-#define MUX_PC15A_EBI_NCS1                         _L_(0)       /**< EBI signal line function value: NCS1 */
-#define PIO_PC15A_EBI_NCS1                         (_UL_(1) << 15)
-
-#define PIN_PC15A_EBI_SDCS                         _L_(79)      /**< EBI signal: SDCS on PC15 mux A*/
-#define MUX_PC15A_EBI_SDCS                         _L_(0)       /**< EBI signal line function value: SDCS */
-#define PIO_PC15A_EBI_SDCS                         (_UL_(1) << 15)
-
-#define PIN_PD18A_EBI_NCS1                         _L_(114)     /**< EBI signal: NCS1 on PD18 mux A*/
-#define MUX_PD18A_EBI_NCS1                         _L_(0)       /**< EBI signal line function value: NCS1 */
-#define PIO_PD18A_EBI_NCS1                         (_UL_(1) << 18)
-
-#define PIN_PD18A_EBI_SDCS                         _L_(114)     /**< EBI signal: SDCS on PD18 mux A*/
-#define MUX_PD18A_EBI_SDCS                         _L_(0)       /**< EBI signal line function value: SDCS */
-#define PIO_PD18A_EBI_SDCS                         (_UL_(1) << 18)
-
-#define PIN_PA22C_EBI_NCS2                         _L_(22)      /**< EBI signal: NCS2 on PA22 mux C*/
-#define MUX_PA22C_EBI_NCS2                         _L_(2)       /**< EBI signal line function value: NCS2 */
-#define PIO_PA22C_EBI_NCS2                         (_UL_(1) << 22)
-
-#define PIN_PC12A_EBI_NCS3                         _L_(76)      /**< EBI signal: NCS3 on PC12 mux A*/
-#define MUX_PC12A_EBI_NCS3                         _L_(0)       /**< EBI signal line function value: NCS3 */
-#define PIO_PC12A_EBI_NCS3                         (_UL_(1) << 12)
-
-#define PIN_PD19A_EBI_NCS3                         _L_(115)     /**< EBI signal: NCS3 on PD19 mux A*/
-#define MUX_PD19A_EBI_NCS3                         _L_(0)       /**< EBI signal line function value: NCS3 */
-#define PIO_PD19A_EBI_NCS3                         (_UL_(1) << 19)
-
-#define PIN_PC11A_EBI_NRD                          _L_(75)      /**< EBI signal: NRD on PC11 mux A*/
-#define MUX_PC11A_EBI_NRD                          _L_(0)       /**< EBI signal line function value: NRD */
-#define PIO_PC11A_EBI_NRD                          (_UL_(1) << 11)
-
-#define PIN_PC13A_EBI_NWAIT                        _L_(77)      /**< EBI signal: NWAIT on PC13 mux A*/
-#define MUX_PC13A_EBI_NWAIT                        _L_(0)       /**< EBI signal line function value: NWAIT */
-#define PIO_PC13A_EBI_NWAIT                        (_UL_(1) << 13)
-
-#define PIN_PC8A_EBI_NWR0                          _L_(72)      /**< EBI signal: NWR0 on PC8 mux A*/
-#define MUX_PC8A_EBI_NWR0                          _L_(0)       /**< EBI signal line function value: NWR0 */
-#define PIO_PC8A_EBI_NWR0                          (_UL_(1) << 8)
-
-#define PIN_PC8A_EBI_NWE                           _L_(72)      /**< EBI signal: NWE on PC8 mux A*/
-#define MUX_PC8A_EBI_NWE                           _L_(0)       /**< EBI signal line function value: NWE */
-#define PIO_PC8A_EBI_NWE                           (_UL_(1) << 8)
-
-#define PIN_PD15C_EBI_NWR1                         _L_(111)     /**< EBI signal: NWR1 on PD15 mux C*/
-#define MUX_PD15C_EBI_NWR1                         _L_(2)       /**< EBI signal line function value: NWR1 */
-#define PIO_PD15C_EBI_NWR1                         (_UL_(1) << 15)
-
-#define PIN_PD15C_EBI_NBS1                         _L_(111)     /**< EBI signal: NBS1 on PD15 mux C*/
-#define MUX_PD15C_EBI_NBS1                         _L_(2)       /**< EBI signal line function value: NBS1 */
-#define PIO_PD15C_EBI_NBS1                         (_UL_(1) << 15)
-
-#define PIN_PD16C_EBI_RAS                          _L_(112)     /**< EBI signal: RAS on PD16 mux C*/
-#define MUX_PD16C_EBI_RAS                          _L_(2)       /**< EBI signal line function value: RAS */
-#define PIO_PD16C_EBI_RAS                          (_UL_(1) << 16)
-
-#define PIN_PC13C_EBI_SDA10                        _L_(77)      /**< EBI signal: SDA10 on PC13 mux C*/
-#define MUX_PC13C_EBI_SDA10                        _L_(2)       /**< EBI signal line function value: SDA10 */
-#define PIO_PC13C_EBI_SDA10                        (_UL_(1) << 13)
-
-#define PIN_PD13C_EBI_SDA10                        _L_(109)     /**< EBI signal: SDA10 on PD13 mux C*/
-#define MUX_PD13C_EBI_SDA10                        _L_(2)       /**< EBI signal line function value: SDA10 */
-#define PIO_PD13C_EBI_SDA10                        (_UL_(1) << 13)
-
-#define PIN_PD23C_EBI_SDCK                         _L_(119)     /**< EBI signal: SDCK on PD23 mux C*/
-#define MUX_PD23C_EBI_SDCK                         _L_(2)       /**< EBI signal line function value: SDCK */
-#define PIO_PD23C_EBI_SDCK                         (_UL_(1) << 23)
-
-#define PIN_PD14C_EBI_SDCKE                        _L_(110)     /**< EBI signal: SDCKE on PD14 mux C*/
-#define MUX_PD14C_EBI_SDCKE                        _L_(2)       /**< EBI signal line function value: SDCKE */
-#define PIO_PD14C_EBI_SDCKE                        (_UL_(1) << 14)
-
-#define PIN_PD29C_EBI_SDWE                         _L_(125)     /**< EBI signal: SDWE on PD29 mux C*/
-#define MUX_PD29C_EBI_SDWE                         _L_(2)       /**< EBI signal line function value: SDWE */
-#define PIO_PD29C_EBI_SDWE                         (_UL_(1) << 29)
+#define PIN_PD7C_TPIU_TRACED3                      _L_(103)     /**< TPIU signal: TRACED3 on PD7 mux C*/
+#define MUX_PD7C_TPIU_TRACED3                      _L_(2)       /**< TPIU signal line function value: TRACED3 */
+#define PIO_PD7C_TPIU_TRACED3                      (_UL_(1) << 7)
 
 
 #endif /* _SAME70Q20B_PIO_H_ */

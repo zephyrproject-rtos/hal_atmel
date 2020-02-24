@@ -3,11 +3,13 @@
  *
  * \brief Peripheral I/O description for SAME70J21B
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2018-01-24T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:46Z */
 #ifndef _SAME70J21B_PIO_H_
 #define _SAME70J21B_PIO_H_
 
@@ -276,14 +278,8 @@
 #define PIN_PA21X1_AFEC0_AD1                       _L_(21)      /**< AFEC0 signal: AD1 on PA21 mux X1*/
 #define PIO_PA21X1_AFEC0_AD1                       (_UL_(1) << 21)
 
-#define PIN_PA21X1_AFEC0_PIODCEN2                  _L_(21)      /**< AFEC0 signal: PIODCEN2 on PA21 mux X1*/
-#define PIO_PA21X1_AFEC0_PIODCEN2                  (_UL_(1) << 21)
-
 #define PIN_PB3X1_AFEC0_AD2                        _L_(35)      /**< AFEC0 signal: AD2 on PB3 mux X1*/
 #define PIO_PB3X1_AFEC0_AD2                        (_UL_(1) << 3)
-
-#define PIN_PB3X1_AFEC0_WKUP12                     _L_(35)      /**< AFEC0 signal: WKUP12 on PB3 mux X1*/
-#define PIO_PB3X1_AFEC0_WKUP12                     (_UL_(1) << 3)
 
 #define PIN_PB2X1_AFEC0_AD5                        _L_(34)      /**< AFEC0 signal: AD5 on PB2 mux X1*/
 #define PIO_PB2X1_AFEC0_AD5                        (_UL_(1) << 2)
@@ -297,20 +293,11 @@
 #define PIN_PA19X1_AFEC0_AD8                       _L_(19)      /**< AFEC0 signal: AD8 on PA19 mux X1*/
 #define PIO_PA19X1_AFEC0_AD8                       (_UL_(1) << 19)
 
-#define PIN_PA19X1_AFEC0_WKUP9                     _L_(19)      /**< AFEC0 signal: WKUP9 on PA19 mux X1*/
-#define PIO_PA19X1_AFEC0_WKUP9                     (_UL_(1) << 19)
-
 #define PIN_PA20X1_AFEC0_AD9                       _L_(20)      /**< AFEC0 signal: AD9 on PA20 mux X1*/
 #define PIO_PA20X1_AFEC0_AD9                       (_UL_(1) << 20)
 
-#define PIN_PA20X1_AFEC0_WKUP10                    _L_(20)      /**< AFEC0 signal: WKUP10 on PA20 mux X1*/
-#define PIO_PA20X1_AFEC0_WKUP10                    (_UL_(1) << 20)
-
 #define PIN_PB0X1_AFEC0_AD10                       _L_(32)      /**< AFEC0 signal: AD10 on PB0 mux X1*/
 #define PIO_PB0X1_AFEC0_AD10                       (_UL_(1) << 0)
-
-#define PIN_PB0X1_AFEC0_RTCOUT0                    _L_(32)      /**< AFEC0 signal: RTCOUT0 on PB0 mux X1*/
-#define PIO_PB0X1_AFEC0_RTCOUT0                    (_UL_(1) << 0)
 
 /* ========== PIO definition for AFEC1 peripheral ========== */
 #define PIN_PD9C_AFEC1_ADTRG                       _L_(105)     /**< AFEC1 signal: ADTRG on PD9 mux C*/
@@ -319,9 +306,6 @@
 
 #define PIN_PB1X1_AFEC1_AD0                        _L_(33)      /**< AFEC1 signal: AD0 on PB1 mux X1*/
 #define PIO_PB1X1_AFEC1_AD0                        (_UL_(1) << 1)
-
-#define PIN_PB1X1_AFEC1_RTCOUT1                    _L_(33)      /**< AFEC1 signal: RTCOUT1 on PB1 mux X1*/
-#define PIO_PB1X1_AFEC1_RTCOUT1                    (_UL_(1) << 1)
 
 /* ========== PIO definition for DACC peripheral ========== */
 #define PIN_PB13X1_DACC_DAC0                       _L_(45)      /**< DACC signal: DAC0 on PB13 mux X1*/
@@ -333,6 +317,10 @@
 #define PIN_PA2C_DACC_DATRG                        _L_(2)       /**< DACC signal: DATRG on PA2 mux C*/
 #define MUX_PA2C_DACC_DATRG                        _L_(2)       /**< DACC signal line function value: DATRG */
 #define PIO_PA2C_DACC_DATRG                        (_UL_(1) << 2)
+
+/* ========== PIO definition for EFC peripheral ========== */
+#define PIN_PB12X1_EFC_ERASE                       _L_(44)      /**< EFC signal: ERASE on PB12 mux X1*/
+#define PIO_PB12X1_EFC_ERASE                       (_UL_(1) << 12)
 
 /* ========== PIO definition for GMAC peripheral ========== */
 #define PIN_PD13A_GMAC_GCOL                        _L_(109)     /**< GMAC signal: GCOL on PD13 mux A*/
@@ -533,6 +521,18 @@
 #define PIN_PD31C_PMC_PCK2                         _L_(127)     /**< PMC signal: PCK2 on PD31 mux C*/
 #define MUX_PD31C_PMC_PCK2                         _L_(2)       /**< PMC signal line function value: PCK2 */
 #define PIO_PD31C_PMC_PCK2                         (_UL_(1) << 31)
+
+#define PIN_PB9X1_PMC_XIN                          _L_(41)      /**< PMC signal: XIN on PB9 mux X1*/
+#define PIO_PB9X1_PMC_XIN                          (_UL_(1) << 9)
+
+#define PIN_PB8X1_PMC_XOUT                         _L_(40)      /**< PMC signal: XOUT on PB8 mux X1*/
+#define PIO_PB8X1_PMC_XOUT                         (_UL_(1) << 8)
+
+#define PIN_PA7X1_PMC_XIN32                        _L_(7)       /**< PMC signal: XIN32 on PA7 mux X1*/
+#define PIO_PA7X1_PMC_XIN32                        (_UL_(1) << 7)
+
+#define PIN_PA8X1_PMC_XOUT32                       _L_(8)       /**< PMC signal: XOUT32 on PA8 mux X1*/
+#define PIO_PA8X1_PMC_XOUT32                       (_UL_(1) << 8)
 
 /* ========== PIO definition for PWM0 peripheral ========== */
 #define PIN_PA10B_PWM0_PWMEXTRG0                   _L_(10)      /**< PWM0 signal: PWMEXTRG0 on PA10 mux B*/
@@ -797,6 +797,13 @@
 #define MUX_PA14A_QSPI_QSCK                        _L_(0)       /**< QSPI signal line function value: QSCK */
 #define PIO_PA14A_QSPI_QSCK                        (_UL_(1) << 14)
 
+/* ========== PIO definition for RTC peripheral ========== */
+#define PIN_PB0X1_RTC_RTCOUT0                      _L_(32)      /**< RTC signal: RTCOUT0 on PB0 mux X1*/
+#define PIO_PB0X1_RTC_RTCOUT0                      (_UL_(1) << 0)
+
+#define PIN_PB1X1_RTC_RTCOUT1                      _L_(33)      /**< RTC signal: RTCOUT1 on PB1 mux X1*/
+#define PIO_PB1X1_RTC_RTCOUT1                      (_UL_(1) << 1)
+
 /* ========== PIO definition for SSC peripheral ========== */
 #define PIN_PA10C_SSC_RD                           _L_(10)      /**< SSC signal: RD on PA10 mux C*/
 #define MUX_PA10C_SSC_RD                           _L_(2)       /**< SSC signal line function value: RD */
@@ -829,6 +836,49 @@
 #define PIN_PB1D_SSC_TK                            _L_(33)      /**< SSC signal: TK on PB1 mux D*/
 #define MUX_PB1D_SSC_TK                            _L_(3)       /**< SSC signal line function value: TK */
 #define PIO_PB1D_SSC_TK                            (_UL_(1) << 1)
+
+/* ========== PIO definition for SUPC peripheral ========== */
+#define PIN_PA0X1_SUPC_WKUP0                       _L_(0)       /**< SUPC signal: WKUP0 on PA0 mux X1*/
+#define PIO_PA0X1_SUPC_WKUP0                       (_UL_(1) << 0)
+
+#define PIN_PA1X1_SUPC_WKUP1                       _L_(1)       /**< SUPC signal: WKUP1 on PA1 mux X1*/
+#define PIO_PA1X1_SUPC_WKUP1                       (_UL_(1) << 1)
+
+#define PIN_PA2X1_SUPC_WKUP2                       _L_(2)       /**< SUPC signal: WKUP2 on PA2 mux X1*/
+#define PIO_PA2X1_SUPC_WKUP2                       (_UL_(1) << 2)
+
+#define PIN_PA4X1_SUPC_WKUP3                       _L_(4)       /**< SUPC signal: WKUP3 on PA4 mux X1*/
+#define PIO_PA4X1_SUPC_WKUP3                       (_UL_(1) << 4)
+
+#define PIN_PA5X1_SUPC_WKUP4                       _L_(5)       /**< SUPC signal: WKUP4 on PA5 mux X1*/
+#define PIO_PA5X1_SUPC_WKUP4                       (_UL_(1) << 5)
+
+#define PIN_PA9X1_SUPC_WKUP6                       _L_(9)       /**< SUPC signal: WKUP6 on PA9 mux X1*/
+#define PIO_PA9X1_SUPC_WKUP6                       (_UL_(1) << 9)
+
+#define PIN_PA11X1_SUPC_WKUP7                      _L_(11)      /**< SUPC signal: WKUP7 on PA11 mux X1*/
+#define PIO_PA11X1_SUPC_WKUP7                      (_UL_(1) << 11)
+
+#define PIN_PA14X1_SUPC_WKUP8                      _L_(14)      /**< SUPC signal: WKUP8 on PA14 mux X1*/
+#define PIO_PA14X1_SUPC_WKUP8                      (_UL_(1) << 14)
+
+#define PIN_PA19X1_SUPC_WKUP9                      _L_(19)      /**< SUPC signal: WKUP9 on PA19 mux X1*/
+#define PIO_PA19X1_SUPC_WKUP9                      (_UL_(1) << 19)
+
+#define PIN_PA20X1_SUPC_WKUP10                     _L_(20)      /**< SUPC signal: WKUP10 on PA20 mux X1*/
+#define PIO_PA20X1_SUPC_WKUP10                     (_UL_(1) << 20)
+
+#define PIN_PA30X1_SUPC_WKUP11                     _L_(30)      /**< SUPC signal: WKUP11 on PA30 mux X1*/
+#define PIO_PA30X1_SUPC_WKUP11                     (_UL_(1) << 30)
+
+#define PIN_PB3X1_SUPC_WKUP12                      _L_(35)      /**< SUPC signal: WKUP12 on PB3 mux X1*/
+#define PIO_PB3X1_SUPC_WKUP12                      (_UL_(1) << 3)
+
+#define PIN_PB5X1_SUPC_WKUP13                      _L_(37)      /**< SUPC signal: WKUP13 on PB5 mux X1*/
+#define PIO_PB5X1_SUPC_WKUP13                      (_UL_(1) << 5)
+
+#define PIN_PD28X1_SUPC_WKUP5                      _L_(124)     /**< SUPC signal: WKUP5 on PD28 mux X1*/
+#define PIO_PD28X1_SUPC_WKUP5                      (_UL_(1) << 28)
 
 /* ========== PIO definition for TC0 peripheral ========== */
 #define PIN_PA4B_TC0_TCLK0                         _L_(4)       /**< TC0 signal: TCLK0 on PA4 mux B*/
@@ -1010,6 +1060,49 @@
 #define PIN_PB4D_USART1_TXD1                       _L_(36)      /**< USART1 signal: TXD1 on PB4 mux D*/
 #define MUX_PB4D_USART1_TXD1                       _L_(3)       /**< USART1 signal line function value: TXD1 */
 #define PIO_PB4D_USART1_TXD1                       (_UL_(1) << 4)
+
+/* ========== PIO definition for ICE peripheral ========== */
+#define PIN_PB4X1_ICE_TDI                          _L_(36)      /**< ICE signal: TDI on PB4 mux X1*/
+#define PIO_PB4X1_ICE_TDI                          (_UL_(1) << 4)
+
+#define PIN_PB5X1_ICE_TDO                          _L_(37)      /**< ICE signal: TDO on PB5 mux X1*/
+#define PIO_PB5X1_ICE_TDO                          (_UL_(1) << 5)
+
+#define PIN_PB5X1_ICE_TRACESWO                     _L_(37)      /**< ICE signal: TRACESWO on PB5 mux X1*/
+#define PIO_PB5X1_ICE_TRACESWO                     (_UL_(1) << 5)
+
+#define PIN_PB6X1_ICE_TMS                          _L_(38)      /**< ICE signal: TMS on PB6 mux X1*/
+#define PIO_PB6X1_ICE_TMS                          (_UL_(1) << 6)
+
+#define PIN_PB6X1_ICE_SWDIO                        _L_(38)      /**< ICE signal: SWDIO on PB6 mux X1*/
+#define PIO_PB6X1_ICE_SWDIO                        (_UL_(1) << 6)
+
+#define PIN_PB7X1_ICE_TCK                          _L_(39)      /**< ICE signal: TCK on PB7 mux X1*/
+#define PIO_PB7X1_ICE_TCK                          (_UL_(1) << 7)
+
+#define PIN_PB7X1_ICE_SWDCLK                       _L_(39)      /**< ICE signal: SWDCLK on PB7 mux X1*/
+#define PIO_PB7X1_ICE_SWDCLK                       (_UL_(1) << 7)
+
+/* ========== PIO definition for TPIU peripheral ========== */
+#define PIN_PD8D_TPIU_TRACECLK                     _L_(104)     /**< TPIU signal: TRACECLK on PD8 mux D*/
+#define MUX_PD8D_TPIU_TRACECLK                     _L_(3)       /**< TPIU signal line function value: TRACECLK */
+#define PIO_PD8D_TPIU_TRACECLK                     (_UL_(1) << 8)
+
+#define PIN_PD4C_TPIU_TRACED0                      _L_(100)     /**< TPIU signal: TRACED0 on PD4 mux C*/
+#define MUX_PD4C_TPIU_TRACED0                      _L_(2)       /**< TPIU signal line function value: TRACED0 */
+#define PIO_PD4C_TPIU_TRACED0                      (_UL_(1) << 4)
+
+#define PIN_PD5C_TPIU_TRACED1                      _L_(101)     /**< TPIU signal: TRACED1 on PD5 mux C*/
+#define MUX_PD5C_TPIU_TRACED1                      _L_(2)       /**< TPIU signal line function value: TRACED1 */
+#define PIO_PD5C_TPIU_TRACED1                      (_UL_(1) << 5)
+
+#define PIN_PD6C_TPIU_TRACED2                      _L_(102)     /**< TPIU signal: TRACED2 on PD6 mux C*/
+#define MUX_PD6C_TPIU_TRACED2                      _L_(2)       /**< TPIU signal line function value: TRACED2 */
+#define PIO_PD6C_TPIU_TRACED2                      (_UL_(1) << 6)
+
+#define PIN_PD7C_TPIU_TRACED3                      _L_(103)     /**< TPIU signal: TRACED3 on PD7 mux C*/
+#define MUX_PD7C_TPIU_TRACED3                      _L_(2)       /**< TPIU signal line function value: TRACED3 */
+#define PIO_PD7C_TPIU_TRACED3                      (_UL_(1) << 7)
 
 
 #endif /* _SAME70J21B_PIO_H_ */

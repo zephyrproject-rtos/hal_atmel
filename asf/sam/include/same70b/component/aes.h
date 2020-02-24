@@ -3,11 +3,13 @@
  *
  * \brief Component description for AES
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_AES_COMPONENT_H_
 #define _SAME70_AES_COMPONENT_H_
 #define _SAME70_AES_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -45,15 +47,19 @@
 
 /* -------- AES_CR : (AES Offset: 0x00) (/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t START:1;                   /**< bit:      0  Start Processing                         */
     uint32_t :7;                        /**< bit:   1..7  Reserved */
     uint32_t SWRST:1;                   /**< bit:      8  Software Reset                           */
-    uint32_t :23;                       /**< bit:  9..31  Reserved */
+    uint32_t :7;                        /**< bit:  9..15  Reserved */
+    uint32_t LOADSEED:1;                /**< bit:     16  Random Number Generator Seed Loading     */
+    uint32_t :15;                       /**< bit: 17..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_CR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AES_CR_OFFSET                       (0x00)                                        /**<  (AES_CR) Control Register  Offset */
@@ -64,12 +70,16 @@ typedef union {
 #define AES_CR_SWRST_Pos                    8                                              /**< (AES_CR) Software Reset Position */
 #define AES_CR_SWRST_Msk                    (_U_(0x1) << AES_CR_SWRST_Pos)                 /**< (AES_CR) Software Reset Mask */
 #define AES_CR_SWRST                        AES_CR_SWRST_Msk                               /**< \deprecated Old style mask definition for 1 bit bitfield. Use AES_CR_SWRST_Msk instead */
-#define AES_CR_MASK                         _U_(0x101)                                     /**< \deprecated (AES_CR) Register MASK  (Use AES_CR_Msk instead)  */
-#define AES_CR_Msk                          _U_(0x101)                                     /**< (AES_CR) Register Mask  */
+#define AES_CR_LOADSEED_Pos                 16                                             /**< (AES_CR) Random Number Generator Seed Loading Position */
+#define AES_CR_LOADSEED_Msk                 (_U_(0x1) << AES_CR_LOADSEED_Pos)              /**< (AES_CR) Random Number Generator Seed Loading Mask */
+#define AES_CR_LOADSEED                     AES_CR_LOADSEED_Msk                            /**< \deprecated Old style mask definition for 1 bit bitfield. Use AES_CR_LOADSEED_Msk instead */
+#define AES_CR_MASK                         _U_(0x10101)                                   /**< \deprecated (AES_CR) Register MASK  (Use AES_CR_Msk instead)  */
+#define AES_CR_Msk                          _U_(0x10101)                                   /**< (AES_CR) Register Mask  */
 
 
 /* -------- AES_MR : (AES Offset: 0x04) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CIPHER:1;                  /**< bit:      0  Processing Mode                          */
@@ -88,6 +98,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_MR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AES_MR_OFFSET                       (0x04)                                        /**<  (AES_MR) Mode Register  Offset */
@@ -168,6 +179,7 @@ typedef union {
 
 /* -------- AES_IER : (AES Offset: 0x10) (/W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DATRDY:1;                  /**< bit:      0  Data Ready Interrupt Enable              */
@@ -179,6 +191,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_IER_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AES_IER_OFFSET                      (0x10)                                        /**<  (AES_IER) Interrupt Enable Register  Offset */
@@ -198,6 +211,7 @@ typedef union {
 
 /* -------- AES_IDR : (AES Offset: 0x14) (/W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DATRDY:1;                  /**< bit:      0  Data Ready Interrupt Disable             */
@@ -209,6 +223,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_IDR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AES_IDR_OFFSET                      (0x14)                                        /**<  (AES_IDR) Interrupt Disable Register  Offset */
@@ -228,6 +243,7 @@ typedef union {
 
 /* -------- AES_IMR : (AES Offset: 0x18) (R/ 32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DATRDY:1;                  /**< bit:      0  Data Ready Interrupt Mask                */
@@ -239,6 +255,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_IMR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AES_IMR_OFFSET                      (0x18)                                        /**<  (AES_IMR) Interrupt Mask Register  Offset */
@@ -258,6 +275,7 @@ typedef union {
 
 /* -------- AES_ISR : (AES Offset: 0x1c) (R/ 32) Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t DATRDY:1;                  /**< bit:      0  Data Ready (cleared by setting bit START or bit SWRST in AES_CR or by reading AES_ODATARx) */
@@ -270,6 +288,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_ISR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AES_ISR_OFFSET                      (0x1C)                                        /**<  (AES_ISR) Interrupt Status Register  Offset */
@@ -302,17 +321,19 @@ typedef union {
 #define AES_ISR_Msk                         _U_(0x1F101)                                   /**< (AES_ISR) Register Mask  */
 
 
-/* -------- AES_KEYWR : (AES Offset: 0x20) (/W 32) Key Word Register 0 -------- */
+/* -------- AES_KEYWR : (AES Offset: 0x20) (/W 32) Key Word Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t KEYW:32;                   /**< bit:  0..31  Key Word                                 */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_KEYWR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define AES_KEYWR_OFFSET                    (0x20)                                        /**<  (AES_KEYWR) Key Word Register 0  Offset */
+#define AES_KEYWR_OFFSET                    (0x20)                                        /**<  (AES_KEYWR) Key Word Register  Offset */
 
 #define AES_KEYWR_KEYW_Pos                  0                                              /**< (AES_KEYWR) Key Word Position */
 #define AES_KEYWR_KEYW_Msk                  (_U_(0xFFFFFFFF) << AES_KEYWR_KEYW_Pos)        /**< (AES_KEYWR) Key Word Mask */
@@ -321,17 +342,19 @@ typedef union {
 #define AES_KEYWR_Msk                       _U_(0xFFFFFFFF)                                /**< (AES_KEYWR) Register Mask  */
 
 
-/* -------- AES_IDATAR : (AES Offset: 0x40) (/W 32) Input Data Register 0 -------- */
+/* -------- AES_IDATAR : (AES Offset: 0x40) (/W 32) Input Data Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IDATA:32;                  /**< bit:  0..31  Input Data Word                          */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_IDATAR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define AES_IDATAR_OFFSET                   (0x40)                                        /**<  (AES_IDATAR) Input Data Register 0  Offset */
+#define AES_IDATAR_OFFSET                   (0x40)                                        /**<  (AES_IDATAR) Input Data Register  Offset */
 
 #define AES_IDATAR_IDATA_Pos                0                                              /**< (AES_IDATAR) Input Data Word Position */
 #define AES_IDATAR_IDATA_Msk                (_U_(0xFFFFFFFF) << AES_IDATAR_IDATA_Pos)      /**< (AES_IDATAR) Input Data Word Mask */
@@ -340,17 +363,19 @@ typedef union {
 #define AES_IDATAR_Msk                      _U_(0xFFFFFFFF)                                /**< (AES_IDATAR) Register Mask  */
 
 
-/* -------- AES_ODATAR : (AES Offset: 0x50) (R/ 32) Output Data Register 0 -------- */
+/* -------- AES_ODATAR : (AES Offset: 0x50) (R/ 32) Output Data Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t ODATA:32;                  /**< bit:  0..31  Output Data                              */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_ODATAR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define AES_ODATAR_OFFSET                   (0x50)                                        /**<  (AES_ODATAR) Output Data Register 0  Offset */
+#define AES_ODATAR_OFFSET                   (0x50)                                        /**<  (AES_ODATAR) Output Data Register  Offset */
 
 #define AES_ODATAR_ODATA_Pos                0                                              /**< (AES_ODATAR) Output Data Position */
 #define AES_ODATAR_ODATA_Msk                (_U_(0xFFFFFFFF) << AES_ODATAR_ODATA_Pos)      /**< (AES_ODATAR) Output Data Mask */
@@ -359,17 +384,19 @@ typedef union {
 #define AES_ODATAR_Msk                      _U_(0xFFFFFFFF)                                /**< (AES_ODATAR) Register Mask  */
 
 
-/* -------- AES_IVR : (AES Offset: 0x60) (/W 32) Initialization Vector Register 0 -------- */
+/* -------- AES_IVR : (AES Offset: 0x60) (/W 32) Initialization Vector Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t IV:32;                     /**< bit:  0..31  Initialization Vector                    */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_IVR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define AES_IVR_OFFSET                      (0x60)                                        /**<  (AES_IVR) Initialization Vector Register 0  Offset */
+#define AES_IVR_OFFSET                      (0x60)                                        /**<  (AES_IVR) Initialization Vector Register  Offset */
 
 #define AES_IVR_IV_Pos                      0                                              /**< (AES_IVR) Initialization Vector Position */
 #define AES_IVR_IV_Msk                      (_U_(0xFFFFFFFF) << AES_IVR_IV_Pos)            /**< (AES_IVR) Initialization Vector Mask */
@@ -380,12 +407,14 @@ typedef union {
 
 /* -------- AES_AADLENR : (AES Offset: 0x70) (R/W 32) Additional Authenticated Data Length Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t AADLEN:32;                 /**< bit:  0..31  Additional Authenticated Data Length     */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_AADLENR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AES_AADLENR_OFFSET                  (0x70)                                        /**<  (AES_AADLENR) Additional Authenticated Data Length Register  Offset */
@@ -399,12 +428,14 @@ typedef union {
 
 /* -------- AES_CLENR : (AES Offset: 0x74) (R/W 32) Plaintext/Ciphertext Length Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CLEN:32;                   /**< bit:  0..31  Plaintext/Ciphertext Length              */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_CLENR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AES_CLENR_OFFSET                    (0x74)                                        /**<  (AES_CLENR) Plaintext/Ciphertext Length Register  Offset */
@@ -416,17 +447,19 @@ typedef union {
 #define AES_CLENR_Msk                       _U_(0xFFFFFFFF)                                /**< (AES_CLENR) Register Mask  */
 
 
-/* -------- AES_GHASHR : (AES Offset: 0x78) (R/W 32) GCM Intermediate Hash Word Register 0 -------- */
+/* -------- AES_GHASHR : (AES Offset: 0x78) (R/W 32) GCM Intermediate Hash Word Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t GHASH:32;                  /**< bit:  0..31  Intermediate GCM Hash Word x             */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_GHASHR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define AES_GHASHR_OFFSET                   (0x78)                                        /**<  (AES_GHASHR) GCM Intermediate Hash Word Register 0  Offset */
+#define AES_GHASHR_OFFSET                   (0x78)                                        /**<  (AES_GHASHR) GCM Intermediate Hash Word Register  Offset */
 
 #define AES_GHASHR_GHASH_Pos                0                                              /**< (AES_GHASHR) Intermediate GCM Hash Word x Position */
 #define AES_GHASHR_GHASH_Msk                (_U_(0xFFFFFFFF) << AES_GHASHR_GHASH_Pos)      /**< (AES_GHASHR) Intermediate GCM Hash Word x Mask */
@@ -435,17 +468,19 @@ typedef union {
 #define AES_GHASHR_Msk                      _U_(0xFFFFFFFF)                                /**< (AES_GHASHR) Register Mask  */
 
 
-/* -------- AES_TAGR : (AES Offset: 0x88) (R/ 32) GCM Authentication Tag Word Register 0 -------- */
+/* -------- AES_TAGR : (AES Offset: 0x88) (R/ 32) GCM Authentication Tag Word Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t TAG:32;                    /**< bit:  0..31  GCM Authentication Tag x                 */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_TAGR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define AES_TAGR_OFFSET                     (0x88)                                        /**<  (AES_TAGR) GCM Authentication Tag Word Register 0  Offset */
+#define AES_TAGR_OFFSET                     (0x88)                                        /**<  (AES_TAGR) GCM Authentication Tag Word Register  Offset */
 
 #define AES_TAGR_TAG_Pos                    0                                              /**< (AES_TAGR) GCM Authentication Tag x Position */
 #define AES_TAGR_TAG_Msk                    (_U_(0xFFFFFFFF) << AES_TAGR_TAG_Pos)          /**< (AES_TAGR) GCM Authentication Tag x Mask */
@@ -456,12 +491,14 @@ typedef union {
 
 /* -------- AES_CTRR : (AES Offset: 0x98) (R/ 32) GCM Encryption Counter Value Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t CTR:32;                    /**< bit:  0..31  GCM Encryption Counter                   */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_CTRR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AES_CTRR_OFFSET                     (0x98)                                        /**<  (AES_CTRR) GCM Encryption Counter Value Register  Offset */
@@ -473,17 +510,19 @@ typedef union {
 #define AES_CTRR_Msk                        _U_(0xFFFFFFFF)                                /**< (AES_CTRR) Register Mask  */
 
 
-/* -------- AES_GCMHR : (AES Offset: 0x9c) (R/W 32) GCM H Word Register 0 -------- */
+/* -------- AES_GCMHR : (AES Offset: 0x9c) (R/W 32) GCM H Word Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t H:32;                      /**< bit:  0..31  GCM H Word x                             */
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } AES_GCMHR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
-#define AES_GCMHR_OFFSET                    (0x9C)                                        /**<  (AES_GCMHR) GCM H Word Register 0  Offset */
+#define AES_GCMHR_OFFSET                    (0x9C)                                        /**<  (AES_GCMHR) GCM H Word Register  Offset */
 
 #define AES_GCMHR_H_Pos                     0                                              /**< (AES_GCMHR) GCM H Word x Position */
 #define AES_GCMHR_H_Msk                     (_U_(0xFFFFFFFF) << AES_GCMHR_H_Pos)           /**< (AES_GCMHR) GCM H Word x Mask */
@@ -498,21 +537,21 @@ typedef union {
 typedef struct {  
   __O  uint32_t AES_CR;         /**< (AES Offset: 0x00) Control Register */
   __IO uint32_t AES_MR;         /**< (AES Offset: 0x04) Mode Register */
-  RoReg8  Reserved1[0x8];
+  __I  uint8_t                        Reserved1[8];
   __O  uint32_t AES_IER;        /**< (AES Offset: 0x10) Interrupt Enable Register */
   __O  uint32_t AES_IDR;        /**< (AES Offset: 0x14) Interrupt Disable Register */
   __I  uint32_t AES_IMR;        /**< (AES Offset: 0x18) Interrupt Mask Register */
   __I  uint32_t AES_ISR;        /**< (AES Offset: 0x1C) Interrupt Status Register */
-  __O  uint32_t AES_KEYWR[8];   /**< (AES Offset: 0x20) Key Word Register 0 */
-  __O  uint32_t AES_IDATAR[4];  /**< (AES Offset: 0x40) Input Data Register 0 */
-  __I  uint32_t AES_ODATAR[4];  /**< (AES Offset: 0x50) Output Data Register 0 */
-  __O  uint32_t AES_IVR[4];     /**< (AES Offset: 0x60) Initialization Vector Register 0 */
+  __O  uint32_t AES_KEYWR[8];   /**< (AES Offset: 0x20) Key Word Register */
+  __O  uint32_t AES_IDATAR[4];  /**< (AES Offset: 0x40) Input Data Register */
+  __I  uint32_t AES_ODATAR[4];  /**< (AES Offset: 0x50) Output Data Register */
+  __O  uint32_t AES_IVR[4];     /**< (AES Offset: 0x60) Initialization Vector Register */
   __IO uint32_t AES_AADLENR;    /**< (AES Offset: 0x70) Additional Authenticated Data Length Register */
   __IO uint32_t AES_CLENR;      /**< (AES Offset: 0x74) Plaintext/Ciphertext Length Register */
-  __IO uint32_t AES_GHASHR[4];  /**< (AES Offset: 0x78) GCM Intermediate Hash Word Register 0 */
-  __I  uint32_t AES_TAGR[4];    /**< (AES Offset: 0x88) GCM Authentication Tag Word Register 0 */
+  __IO uint32_t AES_GHASHR[4];  /**< (AES Offset: 0x78) GCM Intermediate Hash Word Register */
+  __I  uint32_t AES_TAGR[4];    /**< (AES Offset: 0x88) GCM Authentication Tag Word Register */
   __I  uint32_t AES_CTRR;       /**< (AES Offset: 0x98) GCM Encryption Counter Value Register */
-  __IO uint32_t AES_GCMHR[4];   /**< (AES Offset: 0x9C) GCM H Word Register 0 */
+  __IO uint32_t AES_GCMHR[4];   /**< (AES Offset: 0x9C) GCM H Word Register */
 } Aes;
 
 #elif COMPONENT_TYPEDEF_STYLE == 'N'
@@ -520,21 +559,21 @@ typedef struct {
 typedef struct {  
   __O  AES_CR_Type                    AES_CR;         /**< Offset: 0x00 ( /W  32) Control Register */
   __IO AES_MR_Type                    AES_MR;         /**< Offset: 0x04 (R/W  32) Mode Register */
-  __I  uint32_t                       Reserved1[2];
+  __I  uint8_t                        Reserved1[8];
   __O  AES_IER_Type                   AES_IER;        /**< Offset: 0x10 ( /W  32) Interrupt Enable Register */
   __O  AES_IDR_Type                   AES_IDR;        /**< Offset: 0x14 ( /W  32) Interrupt Disable Register */
   __I  AES_IMR_Type                   AES_IMR;        /**< Offset: 0x18 (R/   32) Interrupt Mask Register */
   __I  AES_ISR_Type                   AES_ISR;        /**< Offset: 0x1C (R/   32) Interrupt Status Register */
-  __O  AES_KEYWR_Type                 AES_KEYWR[8];   /**< Offset: 0x20 ( /W  32) Key Word Register 0 */
-  __O  AES_IDATAR_Type                AES_IDATAR[4];  /**< Offset: 0x40 ( /W  32) Input Data Register 0 */
-  __I  AES_ODATAR_Type                AES_ODATAR[4];  /**< Offset: 0x50 (R/   32) Output Data Register 0 */
-  __O  AES_IVR_Type                   AES_IVR[4];     /**< Offset: 0x60 ( /W  32) Initialization Vector Register 0 */
+  __O  AES_KEYWR_Type                 AES_KEYWR[8];   /**< Offset: 0x20 ( /W  32) Key Word Register */
+  __O  AES_IDATAR_Type                AES_IDATAR[4];  /**< Offset: 0x40 ( /W  32) Input Data Register */
+  __I  AES_ODATAR_Type                AES_ODATAR[4];  /**< Offset: 0x50 (R/   32) Output Data Register */
+  __O  AES_IVR_Type                   AES_IVR[4];     /**< Offset: 0x60 ( /W  32) Initialization Vector Register */
   __IO AES_AADLENR_Type               AES_AADLENR;    /**< Offset: 0x70 (R/W  32) Additional Authenticated Data Length Register */
   __IO AES_CLENR_Type                 AES_CLENR;      /**< Offset: 0x74 (R/W  32) Plaintext/Ciphertext Length Register */
-  __IO AES_GHASHR_Type                AES_GHASHR[4];  /**< Offset: 0x78 (R/W  32) GCM Intermediate Hash Word Register 0 */
-  __I  AES_TAGR_Type                  AES_TAGR[4];    /**< Offset: 0x88 (R/   32) GCM Authentication Tag Word Register 0 */
+  __IO AES_GHASHR_Type                AES_GHASHR[4];  /**< Offset: 0x78 (R/W  32) GCM Intermediate Hash Word Register */
+  __I  AES_TAGR_Type                  AES_TAGR[4];    /**< Offset: 0x88 (R/   32) GCM Authentication Tag Word Register */
   __I  AES_CTRR_Type                  AES_CTRR;       /**< Offset: 0x98 (R/   32) GCM Encryption Counter Value Register */
-  __IO AES_GCMHR_Type                 AES_GCMHR[4];   /**< Offset: 0x9C (R/W  32) GCM H Word Register 0 */
+  __IO AES_GCMHR_Type                 AES_GCMHR[4];   /**< Offset: 0x9C (R/W  32) GCM H Word Register */
 } Aes;
 
 #else /* COMPONENT_TYPEDEF_STYLE */

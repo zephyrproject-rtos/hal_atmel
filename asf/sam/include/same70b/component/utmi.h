@@ -3,11 +3,13 @@
  *
  * \brief Component description for UTMI
  *
- * Copyright (c) 2018 Atmel Corporation, a wholly owned subsidiary of Microchip Technology Inc.
+ * Copyright (c) 2019 Microchip Technology Inc.
  *
  * \license_start
  *
  * \page License
+ *
+ * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +27,7 @@
  *
  */
 
-/* file generated from device description version 2017-09-13T14:00:00Z */
+/* file generated from device description version 2019-01-18T21:19:59Z */
 #ifndef _SAME70_UTMI_COMPONENT_H_
 #define _SAME70_UTMI_COMPONENT_H_
 #define _SAME70_UTMI_COMPONENT_         /**< \deprecated  Backward compatibility for ASF */
@@ -45,6 +47,7 @@
 
 /* -------- UTMI_OHCIICR : (UTMI Offset: 0x10) (R/W 32) OHCI Interrupt Configuration Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t RES0:1;                    /**< bit:      0  USB PORTx Reset                          */
@@ -55,8 +58,13 @@ typedef union {
     uint32_t UDPPUDIS:1;                /**< bit:     23  USB Device Pull-up Disable               */
     uint32_t :8;                        /**< bit: 24..31  Reserved */
   } bit;                                /**< Structure used for bit  access */
+  struct {
+    uint32_t RES:1;                     /**< bit:      0  USB PORTx Reset                          */
+    uint32_t :31;                       /**< bit:  1..31 Reserved */
+  } vec;                                /**< Structure used for vec  access  */
   uint32_t reg;                         /**< Type used for register access */
 } UTMI_OHCIICR_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define UTMI_OHCIICR_OFFSET                 (0x10)                                        /**<  (UTMI_OHCIICR) OHCI Interrupt Configuration Register  Offset */
@@ -76,9 +84,13 @@ typedef union {
 #define UTMI_OHCIICR_MASK                   _U_(0x800031)                                  /**< \deprecated (UTMI_OHCIICR) Register MASK  (Use UTMI_OHCIICR_Msk instead)  */
 #define UTMI_OHCIICR_Msk                    _U_(0x800031)                                  /**< (UTMI_OHCIICR) Register Mask  */
 
+#define UTMI_OHCIICR_RES_Pos                0                                              /**< (UTMI_OHCIICR Position) USB PORTx Reset */
+#define UTMI_OHCIICR_RES_Msk                (_U_(0x1) << UTMI_OHCIICR_RES_Pos)             /**< (UTMI_OHCIICR Mask) RES */
+#define UTMI_OHCIICR_RES(value)             (UTMI_OHCIICR_RES_Msk & ((value) << UTMI_OHCIICR_RES_Pos))  
 
 /* -------- UTMI_CKTRIM : (UTMI Offset: 0x30) (R/W 32) UTMI Clock Trimming Register -------- */
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
+#if COMPONENT_TYPEDEF_STYLE == 'N'
 typedef union { 
   struct {
     uint32_t FREQ:2;                    /**< bit:   0..1  UTMI Reference Clock Frequency           */
@@ -86,6 +98,7 @@ typedef union {
   } bit;                                /**< Structure used for bit  access */
   uint32_t reg;                         /**< Type used for register access */
 } UTMI_CKTRIM_Type;
+#endif
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define UTMI_CKTRIM_OFFSET                  (0x30)                                        /**<  (UTMI_CKTRIM) UTMI Clock Trimming Register  Offset */
@@ -105,18 +118,18 @@ typedef union {
 #if COMPONENT_TYPEDEF_STYLE == 'R'
 /** \brief UTMI hardware registers */
 typedef struct {  
-  RoReg8  Reserved1[0x10];
+  __I  uint8_t                        Reserved1[16];
   __IO uint32_t UTMI_OHCIICR;   /**< (UTMI Offset: 0x10) OHCI Interrupt Configuration Register */
-  RoReg8  Reserved2[0x1C];
+  __I  uint8_t                        Reserved2[28];
   __IO uint32_t UTMI_CKTRIM;    /**< (UTMI Offset: 0x30) UTMI Clock Trimming Register */
 } Utmi;
 
 #elif COMPONENT_TYPEDEF_STYLE == 'N'
 /** \brief UTMI hardware registers */
 typedef struct {  
-  __I  uint32_t                       Reserved1[4];
+  __I  uint8_t                        Reserved1[16];
   __IO UTMI_OHCIICR_Type              UTMI_OHCIICR;   /**< Offset: 0x10 (R/W  32) OHCI Interrupt Configuration Register */
-  __I  uint32_t                       Reserved2[7];
+  __I  uint8_t                        Reserved2[28];
   __IO UTMI_CKTRIM_Type               UTMI_CKTRIM;    /**< Offset: 0x30 (R/W  32) UTMI Clock Trimming Register */
 } Utmi;
 
