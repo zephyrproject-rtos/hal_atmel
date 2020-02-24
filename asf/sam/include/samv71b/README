@@ -34,16 +34,3 @@ License:
 
 License Link:
    https://www.apache.org/licenses/LICENSE-2.0
-
-Patch Lst:
-   * Core IRQ and interrupt handler names changed to alligne with CMSIS names.
-     Old names mapped as aliases to new names. Several errors in SVD files
-     corrected. Missing TC1 and TC2 to instance definitions added to header
-     files. TC, USART and USBHS module changed (for revB devices) to reflect
-     the modes according to the datasheet.
-   * Updated device XML for rev. B devices. Updated/added SVD files.
-   * Renamed some Cortex-M interrupt handlers. Added TCM configuration fuses.
-   * Corrected number of TC channels.
-   * Fixed ECF parameters.
-   * Added rev B devices. Added core peripherals. Updated headers, startup
-     code and linker scripts.
