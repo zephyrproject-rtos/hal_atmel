@@ -37,3 +37,4 @@ License Link:
 
 Patch List:
    * Fix GMAC_SA register name.
+   * Add old USART definitions for compatibility.
