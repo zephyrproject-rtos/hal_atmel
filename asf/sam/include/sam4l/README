@@ -1,0 +1,40 @@
+Atmel SAM4L
+###########
+
+Origin:
+   Microchip Packs Repository
+   http://packs.download.atmel.com/
+
+   Atmel SAM4L Series Device Support (1.1.61)
+   http://packs.download.atmel.com/Atmel.SAM4L_DFP.1.1.61.atpack
+
+Status:
+   version 1.1.61
+
+Purpose:
+   Official package for SAM4L.
+
+Description:
+   Atmel Software Framework (ASF) provides a set of low-level
+   header files that give access to different hardware
+   peripherals of Atmel's ICs.
+
+URL:
+   http://packs.download.atmel.com/
+   http://packs.download.atmel.com/Atmel.SAM4L_DFP.1.1.61.atpack
+
+commit:
+  n/a
+
+Maintained-by:
+   External
+
+License:
+   Apache-2.0
+
+License Link:
+   https://www.apache.org/licenses/LICENSE-2.0
+
+Patch Lst:
+   * Add MPU peripheral in device file. Updated header files.
+   * Updated documentation links.
