@@ -744,43 +744,23 @@ typedef union {
 
 /** \brief ACIFC hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO ACIFC_CTRL_Type           CTRL;        /**< \brief Offset: 0x00 (R/W 32) Control Register */
-  __I  ACIFC_SR_Type             SR;          /**< \brief Offset: 0x04 (R/  32) Status Register */
-       RoReg8                    Reserved1[0x8];
-  __O  ACIFC_IER_Type            IER;         /**< \brief Offset: 0x10 ( /W 32) Interrupt Enable Register */
-  __O  ACIFC_IDR_Type            IDR;         /**< \brief Offset: 0x14 ( /W 32) Interrupt Disable Register */
-  __I  ACIFC_IMR_Type            IMR;         /**< \brief Offset: 0x18 (R/  32) Interrupt Mask Register */
-  __I  ACIFC_ISR_Type            ISR;         /**< \brief Offset: 0x1C (R/  32) Interrupt Status Register */
-  __O  ACIFC_ICR_Type            ICR;         /**< \brief Offset: 0x20 ( /W 32) Interrupt Status Clear Register */
-  __IO ACIFC_TR_Type             TR;          /**< \brief Offset: 0x24 (R/W 32) Test Register */
-       RoReg8                    Reserved2[0x8];
-  __I  ACIFC_PARAMETER_Type      PARAMETER;   /**< \brief Offset: 0x30 (R/  32) Parameter Register */
-  __I  ACIFC_VERSION_Type        VERSION;     /**< \brief Offset: 0x34 (R/  32) Version Register */
-       RoReg8                    Reserved3[0x48];
-       AcifcConfw                Confw[4];    /**< \brief Offset: 0x80 AcifcConfw groups */
-       RoReg8                    Reserved4[0x40];
-       AcifcConf                 Conf[8];     /**< \brief Offset: 0xD0 AcifcConf groups */
- } bf;
- struct {
-  RwReg   ACIFC_CTRL;         /**< \brief (ACIFC Offset: 0x00) Control Register */
-  RoReg   ACIFC_SR;           /**< \brief (ACIFC Offset: 0x04) Status Register */
-  RoReg8  Reserved5[0x8];
-  WoReg   ACIFC_IER;          /**< \brief (ACIFC Offset: 0x10) Interrupt Enable Register */
-  WoReg   ACIFC_IDR;          /**< \brief (ACIFC Offset: 0x14) Interrupt Disable Register */
-  RoReg   ACIFC_IMR;          /**< \brief (ACIFC Offset: 0x18) Interrupt Mask Register */
-  RoReg   ACIFC_ISR;          /**< \brief (ACIFC Offset: 0x1C) Interrupt Status Register */
-  WoReg   ACIFC_ICR;          /**< \brief (ACIFC Offset: 0x20) Interrupt Status Clear Register */
-  RwReg   ACIFC_TR;           /**< \brief (ACIFC Offset: 0x24) Test Register */
-  RoReg8  Reserved6[0x8];
-  RoReg   ACIFC_PARAMETER;    /**< \brief (ACIFC Offset: 0x30) Parameter Register */
-  RoReg   ACIFC_VERSION;      /**< \brief (ACIFC Offset: 0x34) Version Register */
-  RoReg8  Reserved7[0x48];
-  AcifcConfw ACIFC_CONFW[4];     /**< \brief (ACIFC Offset: 0x80) AcifcConfw groups */
-  RoReg8  Reserved8[0x40];
-  AcifcConf ACIFC_CONF[8];      /**< \brief (ACIFC Offset: 0xD0) AcifcConf groups */
- } reg;
+typedef struct {
+  __IO uint32_t CTRL;        /**< \brief Offset: 0x00 (R/W 32) Control Register */
+  __I  uint32_t SR;          /**< \brief Offset: 0x04 (R/  32) Status Register */
+       RoReg8   Reserved1[0x8];
+  __O  uint32_t IER;         /**< \brief Offset: 0x10 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x14 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x18 (R/  32) Interrupt Mask Register */
+  __I  uint32_t ISR;         /**< \brief Offset: 0x1C (R/  32) Interrupt Status Register */
+  __O  uint32_t ICR;         /**< \brief Offset: 0x20 ( /W 32) Interrupt Status Clear Register */
+  __IO uint32_t TR;          /**< \brief Offset: 0x24 (R/W 32) Test Register */
+       RoReg8   Reserved2[0x8];
+  __I  uint32_t PARAMETER;   /**< \brief Offset: 0x30 (R/  32) Parameter Register */
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x34 (R/  32) Version Register */
+       RoReg8   Reserved3[0x48];
+  __IO uint32_t Confw[4];    /**< \brief Offset: 0x80 AcifcConfw groups */
+       RoReg8   Reserved4[0x40];
+  __IO uint32_t Conf[8];     /**< \brief Offset: 0xD0 AcifcConf groups */
 } Acifc;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

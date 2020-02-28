@@ -673,47 +673,25 @@ typedef union {
 
 /** \brief ADCIFE hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  ADCIFE_CR_Type            CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
-  __IO ADCIFE_CFG_Type           CFG;         /**< \brief Offset: 0x04 (R/W 32) Configuration Register */
-  __I  ADCIFE_SR_Type            SR;          /**< \brief Offset: 0x08 (R/  32) Status Register */
-  __O  ADCIFE_SCR_Type           SCR;         /**< \brief Offset: 0x0C ( /W 32) Status Clear Register */
-  __IO ADCIFE_RTS_Type           RTS;         /**< \brief Offset: 0x10 (R/W 32) Resistive Touch Screen Register */
-  __IO ADCIFE_SEQCFG_Type        SEQCFG;      /**< \brief Offset: 0x14 (R/W 32) Sequencer Configuration Register */
-  __O  ADCIFE_CDMA_Type          CDMA;        /**< \brief Offset: 0x18 ( /W 32) Configuration Direct Memory Access Register */
-  __IO ADCIFE_TIM_Type           TIM;         /**< \brief Offset: 0x1C (R/W 32) Timing Configuration Register */
-  __IO ADCIFE_ITIMER_Type        ITIMER;      /**< \brief Offset: 0x20 (R/W 32) Internal Timer Register */
-  __IO ADCIFE_WCFG_Type          WCFG;        /**< \brief Offset: 0x24 (R/W 32) Window Monitor Configuration Register */
-  __IO ADCIFE_WTH_Type           WTH;         /**< \brief Offset: 0x28 (R/W 32) Window Monitor Threshold Configuration Register */
-  __I  ADCIFE_LCV_Type           LCV;         /**< \brief Offset: 0x2C (R/  32) Sequencer Last Converted Value Register */
-  __O  ADCIFE_IER_Type           IER;         /**< \brief Offset: 0x30 ( /W 32) Interrupt Enable Register */
-  __O  ADCIFE_IDR_Type           IDR;         /**< \brief Offset: 0x34 ( /W 32) Interrupt Disable Register */
-  __I  ADCIFE_IMR_Type           IMR;         /**< \brief Offset: 0x38 (R/  32) Interrupt Mask Register */
-  __IO ADCIFE_CALIB_Type         CALIB;       /**< \brief Offset: 0x3C (R/W 32) Calibration Register */
-  __I  ADCIFE_VERSION_Type       VERSION;     /**< \brief Offset: 0x40 (R/  32) Version Register */
-  __I  ADCIFE_PARAMETER_Type     PARAMETER;   /**< \brief Offset: 0x44 (R/  32) Parameter Register */
- } bf;
- struct {
-  WoReg   ADCIFE_CR;          /**< \brief (ADCIFE Offset: 0x00) Control Register */
-  RwReg   ADCIFE_CFG;         /**< \brief (ADCIFE Offset: 0x04) Configuration Register */
-  RoReg   ADCIFE_SR;          /**< \brief (ADCIFE Offset: 0x08) Status Register */
-  WoReg   ADCIFE_SCR;         /**< \brief (ADCIFE Offset: 0x0C) Status Clear Register */
-  RwReg   ADCIFE_RTS;         /**< \brief (ADCIFE Offset: 0x10) Resistive Touch Screen Register */
-  RwReg   ADCIFE_SEQCFG;      /**< \brief (ADCIFE Offset: 0x14) Sequencer Configuration Register */
-  WoReg   ADCIFE_CDMA;        /**< \brief (ADCIFE Offset: 0x18) Configuration Direct Memory Access Register */
-  RwReg   ADCIFE_TIM;         /**< \brief (ADCIFE Offset: 0x1C) Timing Configuration Register */
-  RwReg   ADCIFE_ITIMER;      /**< \brief (ADCIFE Offset: 0x20) Internal Timer Register */
-  RwReg   ADCIFE_WCFG;        /**< \brief (ADCIFE Offset: 0x24) Window Monitor Configuration Register */
-  RwReg   ADCIFE_WTH;         /**< \brief (ADCIFE Offset: 0x28) Window Monitor Threshold Configuration Register */
-  RoReg   ADCIFE_LCV;         /**< \brief (ADCIFE Offset: 0x2C) Sequencer Last Converted Value Register */
-  WoReg   ADCIFE_IER;         /**< \brief (ADCIFE Offset: 0x30) Interrupt Enable Register */
-  WoReg   ADCIFE_IDR;         /**< \brief (ADCIFE Offset: 0x34) Interrupt Disable Register */
-  RoReg   ADCIFE_IMR;         /**< \brief (ADCIFE Offset: 0x38) Interrupt Mask Register */
-  RwReg   ADCIFE_CALIB;       /**< \brief (ADCIFE Offset: 0x3C) Calibration Register */
-  RoReg   ADCIFE_VERSION;     /**< \brief (ADCIFE Offset: 0x40) Version Register */
-  RoReg   ADCIFE_PARAMETER;   /**< \brief (ADCIFE Offset: 0x44) Parameter Register */
- } reg;
+typedef struct {
+  __O  uint32_t CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
+  __IO uint32_t CFG;         /**< \brief Offset: 0x04 (R/W 32) Configuration Register */
+  __I  uint32_t SR;          /**< \brief Offset: 0x08 (R/  32) Status Register */
+  __O  uint32_t SCR;         /**< \brief Offset: 0x0C ( /W 32) Status Clear Register */
+  __IO uint32_t RTS;         /**< \brief Offset: 0x10 (R/W 32) Resistive Touch Screen Register */
+  __IO uint32_t SEQCFG;      /**< \brief Offset: 0x14 (R/W 32) Sequencer Configuration Register */
+  __O  uint32_t CDMA;        /**< \brief Offset: 0x18 ( /W 32) Configuration Direct Memory Access Register */
+  __IO uint32_t TIM;         /**< \brief Offset: 0x1C (R/W 32) Timing Configuration Register */
+  __IO uint32_t ITIMER;      /**< \brief Offset: 0x20 (R/W 32) Internal Timer Register */
+  __IO uint32_t WCFG;        /**< \brief Offset: 0x24 (R/W 32) Window Monitor Configuration Register */
+  __IO uint32_t WTH;         /**< \brief Offset: 0x28 (R/W 32) Window Monitor Threshold Configuration Register */
+  __I  uint32_t LCV;         /**< \brief Offset: 0x2C (R/  32) Sequencer Last Converted Value Register */
+  __O  uint32_t IER;         /**< \brief Offset: 0x30 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x34 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x38 (R/  32) Interrupt Mask Register */
+  __IO uint32_t CALIB;       /**< \brief Offset: 0x3C (R/W 32) Calibration Register */
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x40 (R/  32) Version Register */
+  __I  uint32_t PARAMETER;   /**< \brief Offset: 0x44 (R/  32) Parameter Register */
 } Adcife;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

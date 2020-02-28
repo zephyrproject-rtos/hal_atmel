@@ -819,59 +819,31 @@ typedef union {
 
 /** \brief AST hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO AST_CR_Type               CR;          /**< \brief Offset: 0x00 (R/W 32) Control Register */
-  __IO AST_CV_Type               CV;          /**< \brief Offset: 0x04 (R/W 32) Counter Value */
-  __I  AST_SR_Type               SR;          /**< \brief Offset: 0x08 (R/  32) Status Register */
-  __O  AST_SCR_Type              SCR;         /**< \brief Offset: 0x0C ( /W 32) Status Clear Register */
-  __O  AST_IER_Type              IER;         /**< \brief Offset: 0x10 ( /W 32) Interrupt Enable Register */
-  __O  AST_IDR_Type              IDR;         /**< \brief Offset: 0x14 ( /W 32) Interrupt Disable Register */
-  __I  AST_IMR_Type              IMR;         /**< \brief Offset: 0x18 (R/  32) Interrupt Mask Register */
-  __IO AST_WER_Type              WER;         /**< \brief Offset: 0x1C (R/W 32) Wake Enable Register */
-  __IO AST_AR0_Type              AR0;         /**< \brief Offset: 0x20 (R/W 32) Alarm Register 0 */
-  __IO AST_AR1_Type              AR1;         /**< \brief Offset: 0x24 (R/W 32) Alarm Register 1 */
-       RoReg8                    Reserved1[0x8];
-  __IO AST_PIR0_Type             PIR0;        /**< \brief Offset: 0x30 (R/W 32) Periodic Interval Register 0 */
-  __IO AST_PIR1_Type             PIR1;        /**< \brief Offset: 0x34 (R/W 32) Periodic Interval Register 1 */
-       RoReg8                    Reserved2[0x8];
-  __IO AST_CLOCK_Type            CLOCK;       /**< \brief Offset: 0x40 (R/W 32) Clock Control Register */
-  __IO AST_DTR_Type              DTR;         /**< \brief Offset: 0x44 (R/W 32) Digital Tuner Register */
-  __O  AST_EVE_Type              EVE;         /**< \brief Offset: 0x48 ( /W 32) Event Enable Register */
-  __O  AST_EVD_Type              EVD;         /**< \brief Offset: 0x4C ( /W 32) Event Disable Register */
-  __I  AST_EVM_Type              EVM;         /**< \brief Offset: 0x50 (R/  32) Event Mask Register */
-  __IO AST_CALV_Type             CALV;        /**< \brief Offset: 0x54 (R/W 32) Calendar Value */
-       RoReg8                    Reserved3[0x98];
-  __I  AST_PARAMETER_Type        PARAMETER;   /**< \brief Offset: 0xF0 (R/  32) Parameter Register */
-       RoReg8                    Reserved4[0x8];
-  __I  AST_VERSION_Type          VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
- } bf;
- struct {
-  RwReg   AST_CR;             /**< \brief (AST Offset: 0x00) Control Register */
-  RwReg   AST_CV;             /**< \brief (AST Offset: 0x04) Counter Value */
-  RoReg   AST_SR;             /**< \brief (AST Offset: 0x08) Status Register */
-  WoReg   AST_SCR;            /**< \brief (AST Offset: 0x0C) Status Clear Register */
-  WoReg   AST_IER;            /**< \brief (AST Offset: 0x10) Interrupt Enable Register */
-  WoReg   AST_IDR;            /**< \brief (AST Offset: 0x14) Interrupt Disable Register */
-  RoReg   AST_IMR;            /**< \brief (AST Offset: 0x18) Interrupt Mask Register */
-  RwReg   AST_WER;            /**< \brief (AST Offset: 0x1C) Wake Enable Register */
-  RwReg   AST_AR0;            /**< \brief (AST Offset: 0x20) Alarm Register 0 */
-  RwReg   AST_AR1;            /**< \brief (AST Offset: 0x24) Alarm Register 1 */
-  RoReg8  Reserved5[0x8];
-  RwReg   AST_PIR0;           /**< \brief (AST Offset: 0x30) Periodic Interval Register 0 */
-  RwReg   AST_PIR1;           /**< \brief (AST Offset: 0x34) Periodic Interval Register 1 */
-  RoReg8  Reserved6[0x8];
-  RwReg   AST_CLOCK;          /**< \brief (AST Offset: 0x40) Clock Control Register */
-  RwReg   AST_DTR;            /**< \brief (AST Offset: 0x44) Digital Tuner Register */
-  WoReg   AST_EVE;            /**< \brief (AST Offset: 0x48) Event Enable Register */
-  WoReg   AST_EVD;            /**< \brief (AST Offset: 0x4C) Event Disable Register */
-  RoReg   AST_EVM;            /**< \brief (AST Offset: 0x50) Event Mask Register */
-  RwReg   AST_CALV;           /**< \brief (AST Offset: 0x54) Calendar Value */
-  RoReg8  Reserved7[0x98];
-  RoReg   AST_PARAMETER;      /**< \brief (AST Offset: 0xF0) Parameter Register */
-  RoReg8  Reserved8[0x8];
-  RoReg   AST_VERSION;        /**< \brief (AST Offset: 0xFC) Version Register */
- } reg;
+typedef struct {
+  __IO uint32_t CR;          /**< \brief Offset: 0x00 (R/W 32) Control Register */
+  __IO uint32_t CV;          /**< \brief Offset: 0x04 (R/W 32) Counter Value */
+  __I  uint32_t SR;          /**< \brief Offset: 0x08 (R/  32) Status Register */
+  __O  uint32_t SCR;         /**< \brief Offset: 0x0C ( /W 32) Status Clear Register */
+  __O  uint32_t IER;         /**< \brief Offset: 0x10 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x14 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x18 (R/  32) Interrupt Mask Register */
+  __IO uint32_t WER;         /**< \brief Offset: 0x1C (R/W 32) Wake Enable Register */
+  __IO uint32_t AR0;         /**< \brief Offset: 0x20 (R/W 32) Alarm Register 0 */
+  __IO uint32_t AR1;         /**< \brief Offset: 0x24 (R/W 32) Alarm Register 1 */
+       RoReg8   Reserved1[0x8];
+  __IO uint32_t PIR0;        /**< \brief Offset: 0x30 (R/W 32) Periodic Interval Register 0 */
+  __IO uint32_t PIR1;        /**< \brief Offset: 0x34 (R/W 32) Periodic Interval Register 1 */
+       RoReg8   Reserved2[0x8];
+  __IO uint32_t CLOCK;       /**< \brief Offset: 0x40 (R/W 32) Clock Control Register */
+  __IO uint32_t DTR;         /**< \brief Offset: 0x44 (R/W 32) Digital Tuner Register */
+  __O  uint32_t EVE;         /**< \brief Offset: 0x48 ( /W 32) Event Enable Register */
+  __O  uint32_t EVD;         /**< \brief Offset: 0x4C ( /W 32) Event Disable Register */
+  __I  uint32_t EVM;         /**< \brief Offset: 0x50 (R/  32) Event Mask Register */
+  __IO uint32_t CALV;        /**< \brief Offset: 0x54 (R/W 32) Calendar Value */
+       RoReg8   Reserved3[0x98];
+  __I  uint32_t PARAMETER;   /**< \brief Offset: 0xF0 (R/  32) Parameter Register */
+       RoReg8   Reserved4[0x8];
+  __I  uint32_t VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
 } Ast;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

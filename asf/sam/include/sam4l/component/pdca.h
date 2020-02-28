@@ -627,43 +627,23 @@ typedef union {
 
 /** \brief PDCA hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-       PdcaChannel               Channel[16]; /**< \brief Offset: 0x000 PdcaChannel groups [CHANNEL_LENGTH] */
-       RoReg8                    Reserved1[0x400];
-  __IO PDCA_PCONTROL_Type        PCONTROL;    /**< \brief Offset: 0x800 (R/W 32) Performance Control Register */
-  __I  PDCA_PRDATA0_Type         PRDATA0;     /**< \brief Offset: 0x804 (R/  32) Channel 0 Read Data Cycles */
-  __I  PDCA_PRSTALL0_Type        PRSTALL0;    /**< \brief Offset: 0x808 (R/  32) Channel 0 Read Stall Cycles */
-  __I  PDCA_PRLAT0_Type          PRLAT0;      /**< \brief Offset: 0x80C (R/  32) Channel 0 Read Max Latency */
-  __I  PDCA_PWDATA0_Type         PWDATA0;     /**< \brief Offset: 0x810 (R/  32) Channel 0 Write Data Cycles */
-  __I  PDCA_PWSTALL0_Type        PWSTALL0;    /**< \brief Offset: 0x814 (R/  32) Channel 0 Write Stall Cycles */
-  __I  PDCA_PWLAT0_Type          PWLAT0;      /**< \brief Offset: 0x818 (R/  32) Channel0 Write Max Latency */
-  __I  PDCA_PRDATA1_Type         PRDATA1;     /**< \brief Offset: 0x81C (R/  32) Channel 1 Read Data Cycles */
-  __I  PDCA_PRSTALL1_Type        PRSTALL1;    /**< \brief Offset: 0x820 (R/  32) Channel Read Stall Cycles */
-  __I  PDCA_PRLAT1_Type          PRLAT1;      /**< \brief Offset: 0x824 (R/  32) Channel 1 Read Max Latency */
-  __I  PDCA_PWDATA1_Type         PWDATA1;     /**< \brief Offset: 0x828 (R/  32) Channel 1 Write Data Cycles */
-  __I  PDCA_PWSTALL1_Type        PWSTALL1;    /**< \brief Offset: 0x82C (R/  32) Channel 1 Write stall Cycles */
-  __I  PDCA_PWLAT1_Type          PWLAT1;      /**< \brief Offset: 0x830 (R/  32) Channel 1 Read Max Latency */
-  __I  PDCA_VERSION_Type         VERSION;     /**< \brief Offset: 0x834 (R/  32) Version Register */
- } bf;
- struct {
-  PdcaChannel PDCA_CHANNEL[16];   /**< \brief (PDCA Offset: 0x000) PdcaChannel groups [CHANNEL_LENGTH] */
-  RoReg8  Reserved2[0x400];
-  RwReg   PDCA_PCONTROL;      /**< \brief (PDCA Offset: 0x800) Performance Control Register */
-  RoReg   PDCA_PRDATA0;       /**< \brief (PDCA Offset: 0x804) Channel 0 Read Data Cycles */
-  RoReg   PDCA_PRSTALL0;      /**< \brief (PDCA Offset: 0x808) Channel 0 Read Stall Cycles */
-  RoReg   PDCA_PRLAT0;        /**< \brief (PDCA Offset: 0x80C) Channel 0 Read Max Latency */
-  RoReg   PDCA_PWDATA0;       /**< \brief (PDCA Offset: 0x810) Channel 0 Write Data Cycles */
-  RoReg   PDCA_PWSTALL0;      /**< \brief (PDCA Offset: 0x814) Channel 0 Write Stall Cycles */
-  RoReg   PDCA_PWLAT0;        /**< \brief (PDCA Offset: 0x818) Channel0 Write Max Latency */
-  RoReg   PDCA_PRDATA1;       /**< \brief (PDCA Offset: 0x81C) Channel 1 Read Data Cycles */
-  RoReg   PDCA_PRSTALL1;      /**< \brief (PDCA Offset: 0x820) Channel Read Stall Cycles */
-  RoReg   PDCA_PRLAT1;        /**< \brief (PDCA Offset: 0x824) Channel 1 Read Max Latency */
-  RoReg   PDCA_PWDATA1;       /**< \brief (PDCA Offset: 0x828) Channel 1 Write Data Cycles */
-  RoReg   PDCA_PWSTALL1;      /**< \brief (PDCA Offset: 0x82C) Channel 1 Write stall Cycles */
-  RoReg   PDCA_PWLAT1;        /**< \brief (PDCA Offset: 0x830) Channel 1 Read Max Latency */
-  RoReg   PDCA_VERSION;       /**< \brief (PDCA Offset: 0x834) Version Register */
- } reg;
+typedef struct {
+  __IO uint32_t Channel[16]; /**< \brief Offset: 0x000 PdcaChannel groups [CHANNEL_LENGTH] */
+       RoReg8   Reserved1[0x400];
+  __IO uint32_t PCONTROL;    /**< \brief Offset: 0x800 (R/W 32) Performance Control Register */
+  __I  uint32_t PRDATA0;     /**< \brief Offset: 0x804 (R/  32) Channel 0 Read Data Cycles */
+  __I  uint32_t PRSTALL0;    /**< \brief Offset: 0x808 (R/  32) Channel 0 Read Stall Cycles */
+  __I  uint32_t PRLAT0;      /**< \brief Offset: 0x80C (R/  32) Channel 0 Read Max Latency */
+  __I  uint32_t PWDATA0;     /**< \brief Offset: 0x810 (R/  32) Channel 0 Write Data Cycles */
+  __I  uint32_t PWSTALL0;    /**< \brief Offset: 0x814 (R/  32) Channel 0 Write Stall Cycles */
+  __I  uint32_t PWLAT0;      /**< \brief Offset: 0x818 (R/  32) Channel0 Write Max Latency */
+  __I  uint32_t PRDATA1;     /**< \brief Offset: 0x81C (R/  32) Channel 1 Read Data Cycles */
+  __I  uint32_t PRSTALL1;    /**< \brief Offset: 0x820 (R/  32) Channel Read Stall Cycles */
+  __I  uint32_t PRLAT1;      /**< \brief Offset: 0x824 (R/  32) Channel 1 Read Max Latency */
+  __I  uint32_t PWDATA1;     /**< \brief Offset: 0x828 (R/  32) Channel 1 Write Data Cycles */
+  __I  uint32_t PWSTALL1;    /**< \brief Offset: 0x82C (R/  32) Channel 1 Write stall Cycles */
+  __I  uint32_t PWLAT1;      /**< \brief Offset: 0x830 (R/  32) Channel 1 Read Max Latency */
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x834 (R/  32) Version Register */
 } Pdca;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

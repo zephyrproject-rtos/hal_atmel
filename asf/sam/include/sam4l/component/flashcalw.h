@@ -511,25 +511,14 @@ typedef union {
 
 /** \brief FLASHCALW APB hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO FLASHCALW_FCR_Type        FCR;         /**< \brief Offset: 0x00 (R/W 32) Flash Controller Control Register */
-  __IO FLASHCALW_FCMD_Type       FCMD;        /**< \brief Offset: 0x04 (R/W 32) Flash Controller Command Register */
-  __IO FLASHCALW_FSR_Type        FSR;         /**< \brief Offset: 0x08 (R/W 32) Flash Controller Status Register */
-  __I  FLASHCALW_FPR_Type        FPR;         /**< \brief Offset: 0x0C (R/  32) Flash Controller Parameter Register */
-  __I  FLASHCALW_VERSION_Type    VERSION;     /**< \brief Offset: 0x10 (R/  32) Flash Controller Version Register */
-  __IO FLASHCALW_FGPFRHI_Type    FGPFRHI;     /**< \brief Offset: 0x14 (R/W 32) Flash Controller General Purpose Fuse Register High */
-  __IO FLASHCALW_FGPFRLO_Type    FGPFRLO;     /**< \brief Offset: 0x18 (R/W 32) Flash Controller General Purpose Fuse Register Low */
- } bf;
- struct {
-  RwReg   FLASHCALW_FCR;      /**< \brief (FLASHCALW Offset: 0x00) Flash Controller Control Register */
-  RwReg   FLASHCALW_FCMD;     /**< \brief (FLASHCALW Offset: 0x04) Flash Controller Command Register */
-  RwReg   FLASHCALW_FSR;      /**< \brief (FLASHCALW Offset: 0x08) Flash Controller Status Register */
-  RoReg   FLASHCALW_FPR;      /**< \brief (FLASHCALW Offset: 0x0C) Flash Controller Parameter Register */
-  RoReg   FLASHCALW_VERSION;  /**< \brief (FLASHCALW Offset: 0x10) Flash Controller Version Register */
-  RwReg   FLASHCALW_FGPFRHI;  /**< \brief (FLASHCALW Offset: 0x14) Flash Controller General Purpose Fuse Register High */
-  RwReg   FLASHCALW_FGPFRLO;  /**< \brief (FLASHCALW Offset: 0x18) Flash Controller General Purpose Fuse Register Low */
- } reg;
+typedef struct {
+  __IO uint32_t FCR;         /**< \brief Offset: 0x00 (R/W 32) Flash Controller Control Register */
+  __IO uint32_t FCMD;        /**< \brief Offset: 0x04 (R/W 32) Flash Controller Command Register */
+  __IO uint32_t FSR;         /**< \brief Offset: 0x08 (R/W 32) Flash Controller Status Register */
+  __I  uint32_t FPR;         /**< \brief Offset: 0x0C (R/  32) Flash Controller Parameter Register */
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x10 (R/  32) Flash Controller Version Register */
+  __IO uint32_t FGPFRHI;     /**< \brief Offset: 0x14 (R/W 32) Flash Controller General Purpose Fuse Register High */
+  __IO uint32_t FGPFRLO;     /**< \brief Offset: 0x18 (R/W 32) Flash Controller General Purpose Fuse Register Low */
 } Flashcalw;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

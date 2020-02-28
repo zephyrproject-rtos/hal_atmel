@@ -569,61 +569,32 @@ typedef union {
 
 /** \brief CATB hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO CATB_CR_Type              CR;          /**< \brief Offset: 0x00 (R/W 32) Control Register */
-  __IO CATB_CNTCR_Type           CNTCR;       /**< \brief Offset: 0x04 (R/W 32) Counter Control Register */
-  __IO CATB_IDLE_Type            IDLE;        /**< \brief Offset: 0x08 (R/W 32) Sensor Idle Level */
-  __I  CATB_LEVEL_Type           LEVEL;       /**< \brief Offset: 0x0C (R/  32) Sensor Relative Level */
-  __I  CATB_RAW_Type             RAW;         /**< \brief Offset: 0x10 (R/  32) Sensor Raw Value */
-  __IO CATB_TIMING_Type          TIMING;      /**< \brief Offset: 0x14 (R/W 32) Filter Timing Register */
-  __IO CATB_THRESH_Type          THRESH;      /**< \brief Offset: 0x18 (R/W 32) Threshold Register */
-  __IO CATB_PINSEL_Type          PINSEL;      /**< \brief Offset: 0x1C (R/W 32) Pin Selection Register */
-  __IO CATB_DMA_Type             DMA;         /**< \brief Offset: 0x20 (R/W 32) Direct Memory Access Register */
-  __I  CATB_ISR_Type             ISR;         /**< \brief Offset: 0x24 (R/  32) Interrupt Status Register */
-  __O  CATB_IER_Type             IER;         /**< \brief Offset: 0x28 ( /W 32) Interrupt Enable Register */
-  __O  CATB_IDR_Type             IDR;         /**< \brief Offset: 0x2C ( /W 32) Interrupt Disable Register */
-  __I  CATB_IMR_Type             IMR;         /**< \brief Offset: 0x30 (R/  32) Interrupt Mask Register */
-  __O  CATB_SCR_Type             SCR;         /**< \brief Offset: 0x34 ( /W 32) Status Clear Register */
-       RoReg8                    Reserved1[0x8];
-       CatbIntch                 Intch[1];    /**< \brief Offset: 0x40 CatbIntch groups [STATUS_REG_NUMBER] */
-       RoReg8                    Reserved2[0xC];
-       CatbIntchclr              Intchclr[1]; /**< \brief Offset: 0x50 CatbIntchclr groups [STATUS_REG_NUMBER] */
-       RoReg8                    Reserved3[0xC];
-       CatbOuttch                Outtch[1];   /**< \brief Offset: 0x60 CatbOuttch groups [STATUS_REG_NUMBER] */
-       RoReg8                    Reserved4[0xC];
-       CatbOuttchclr             Outtchclr[1]; /**< \brief Offset: 0x70 CatbOuttchclr groups [STATUS_REG_NUMBER] */
-       RoReg8                    Reserved5[0x84];
-  __I  CATB_PARAMETER_Type       PARAMETER;   /**< \brief Offset: 0xF8 (R/  32) Parameter Register */
-  __I  CATB_VERSION_Type         VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
- } bf;
- struct {
-  RwReg   CATB_CR;            /**< \brief (CATB Offset: 0x00) Control Register */
-  RwReg   CATB_CNTCR;         /**< \brief (CATB Offset: 0x04) Counter Control Register */
-  RwReg   CATB_IDLE;          /**< \brief (CATB Offset: 0x08) Sensor Idle Level */
-  RoReg   CATB_LEVEL;         /**< \brief (CATB Offset: 0x0C) Sensor Relative Level */
-  RoReg   CATB_RAW;           /**< \brief (CATB Offset: 0x10) Sensor Raw Value */
-  RwReg   CATB_TIMING;        /**< \brief (CATB Offset: 0x14) Filter Timing Register */
-  RwReg   CATB_THRESH;        /**< \brief (CATB Offset: 0x18) Threshold Register */
-  RwReg   CATB_PINSEL;        /**< \brief (CATB Offset: 0x1C) Pin Selection Register */
-  RwReg   CATB_DMA;           /**< \brief (CATB Offset: 0x20) Direct Memory Access Register */
-  RoReg   CATB_ISR;           /**< \brief (CATB Offset: 0x24) Interrupt Status Register */
-  WoReg   CATB_IER;           /**< \brief (CATB Offset: 0x28) Interrupt Enable Register */
-  WoReg   CATB_IDR;           /**< \brief (CATB Offset: 0x2C) Interrupt Disable Register */
-  RoReg   CATB_IMR;           /**< \brief (CATB Offset: 0x30) Interrupt Mask Register */
-  WoReg   CATB_SCR;           /**< \brief (CATB Offset: 0x34) Status Clear Register */
-  RoReg8  Reserved6[0x8];
-  CatbIntch CATB_INTCH[1];      /**< \brief (CATB Offset: 0x40) CatbIntch groups [STATUS_REG_NUMBER] */
-  RoReg8  Reserved7[0xC];
-  CatbIntchclr CATB_INTCHCLR[1];   /**< \brief (CATB Offset: 0x50) CatbIntchclr groups [STATUS_REG_NUMBER] */
-  RoReg8  Reserved8[0xC];
-  CatbOuttch CATB_OUTTCH[1];     /**< \brief (CATB Offset: 0x60) CatbOuttch groups [STATUS_REG_NUMBER] */
-  RoReg8  Reserved9[0xC];
-  CatbOuttchclr CATB_OUTTCHCLR[1];  /**< \brief (CATB Offset: 0x70) CatbOuttchclr groups [STATUS_REG_NUMBER] */
-  RoReg8  Reserved10[0x84];
-  RoReg   CATB_PARAMETER;     /**< \brief (CATB Offset: 0xF8) Parameter Register */
-  RoReg   CATB_VERSION;       /**< \brief (CATB Offset: 0xFC) Version Register */
- } reg;
+typedef struct {
+  __IO uint32_t CR;          /**< \brief Offset: 0x00 (R/W 32) Control Register */
+  __IO uint32_t CNTCR;       /**< \brief Offset: 0x04 (R/W 32) Counter Control Register */
+  __IO uint32_t IDLE;        /**< \brief Offset: 0x08 (R/W 32) Sensor Idle Level */
+  __I  uint32_t LEVEL;       /**< \brief Offset: 0x0C (R/  32) Sensor Relative Level */
+  __I  uint32_t RAW;         /**< \brief Offset: 0x10 (R/  32) Sensor Raw Value */
+  __IO uint32_t TIMING;      /**< \brief Offset: 0x14 (R/W 32) Filter Timing Register */
+  __IO uint32_t THRESH;      /**< \brief Offset: 0x18 (R/W 32) Threshold Register */
+  __IO uint32_t PINSEL;      /**< \brief Offset: 0x1C (R/W 32) Pin Selection Register */
+  __IO uint32_t DMA;         /**< \brief Offset: 0x20 (R/W 32) Direct Memory Access Register */
+  __I  uint32_t ISR;         /**< \brief Offset: 0x24 (R/  32) Interrupt Status Register */
+  __O  uint32_t IER;         /**< \brief Offset: 0x28 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x2C ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x30 (R/  32) Interrupt Mask Register */
+  __O  uint32_t SCR;         /**< \brief Offset: 0x34 ( /W 32) Status Clear Register */
+       RoReg8   Reserved1[0x8];
+  __I  uint32_t Intch[1];    /**< \brief Offset: 0x40 CatbIntch groups [STATUS_REG_NUMBER] */
+       RoReg8   Reserved2[0xC];
+  __O  uint32_t Intchclr[1]; /**< \brief Offset: 0x50 CatbIntchclr groups [STATUS_REG_NUMBER] */
+       RoReg8   Reserved3[0xC];
+  __I  uint32_t Outtch[1];   /**< \brief Offset: 0x60 CatbOuttch groups [STATUS_REG_NUMBER] */
+       RoReg8   Reserved4[0xC];
+  __O  uint32_t Outtchclr[1]; /**< \brief Offset: 0x70 CatbOuttchclr groups [STATUS_REG_NUMBER] */
+       RoReg8   Reserved5[0x84];
+  __I  uint32_t PARAMETER;   /**< \brief Offset: 0xF8 (R/  32) Parameter Register */
+  __I  uint32_t VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
 } Catb;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

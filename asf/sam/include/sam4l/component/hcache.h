@@ -229,35 +229,19 @@ typedef union {
 
 /** \brief HCACHE hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-       RoReg8                    Reserved1[0x8];
-  __O  HCACHE_CTRL_Type          CTRL;        /**< \brief Offset: 0x08 ( /W 32) Control Register */
-  __IO HCACHE_SR_Type            SR;          /**< \brief Offset: 0x0C (R/W 32) Status Register */
-       RoReg8                    Reserved2[0x10];
-  __O  HCACHE_MAINT0_Type        MAINT0;      /**< \brief Offset: 0x20 ( /W 32) Maintenance Register 0 */
-  __O  HCACHE_MAINT1_Type        MAINT1;      /**< \brief Offset: 0x24 ( /W 32) Maintenance Register 1 */
-  __IO HCACHE_MCFG_Type          MCFG;        /**< \brief Offset: 0x28 (R/W 32) Monitor Configuration Register */
-  __IO HCACHE_MEN_Type           MEN;         /**< \brief Offset: 0x2C (R/W 32) Monitor Enable Register */
-  __O  HCACHE_MCTRL_Type         MCTRL;       /**< \brief Offset: 0x30 ( /W 32) Monitor Control Register */
-  __I  HCACHE_MSR_Type           MSR;         /**< \brief Offset: 0x34 (R/  32) Monitor Status Register */
-       RoReg8                    Reserved3[0xC4];
-  __I  HCACHE_VERSION_Type       VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
- } bf;
- struct {
-  RoReg8  Reserved4[0x8];
-  WoReg   HCACHE_CTRL;        /**< \brief (HCACHE Offset: 0x08) Control Register */
-  RwReg   HCACHE_SR;          /**< \brief (HCACHE Offset: 0x0C) Status Register */
-  RoReg8  Reserved5[0x10];
-  WoReg   HCACHE_MAINT0;      /**< \brief (HCACHE Offset: 0x20) Maintenance Register 0 */
-  WoReg   HCACHE_MAINT1;      /**< \brief (HCACHE Offset: 0x24) Maintenance Register 1 */
-  RwReg   HCACHE_MCFG;        /**< \brief (HCACHE Offset: 0x28) Monitor Configuration Register */
-  RwReg   HCACHE_MEN;         /**< \brief (HCACHE Offset: 0x2C) Monitor Enable Register */
-  WoReg   HCACHE_MCTRL;       /**< \brief (HCACHE Offset: 0x30) Monitor Control Register */
-  RoReg   HCACHE_MSR;         /**< \brief (HCACHE Offset: 0x34) Monitor Status Register */
-  RoReg8  Reserved6[0xC4];
-  RoReg   HCACHE_VERSION;     /**< \brief (HCACHE Offset: 0xFC) Version Register */
- } reg;
+typedef struct {
+       RoReg8   Reserved1[0x8];
+  __O  uint32_t CTRL;        /**< \brief Offset: 0x08 ( /W 32) Control Register */
+  __IO uint32_t SR;          /**< \brief Offset: 0x0C (R/W 32) Status Register */
+       RoReg8   Reserved2[0x10];
+  __O  uint32_t MAINT0;      /**< \brief Offset: 0x20 ( /W 32) Maintenance Register 0 */
+  __O  uint32_t MAINT1;      /**< \brief Offset: 0x24 ( /W 32) Maintenance Register 1 */
+  __IO uint32_t MCFG;        /**< \brief Offset: 0x28 (R/W 32) Monitor Configuration Register */
+  __IO uint32_t MEN;         /**< \brief Offset: 0x2C (R/W 32) Monitor Enable Register */
+  __O  uint32_t MCTRL;       /**< \brief Offset: 0x30 ( /W 32) Monitor Control Register */
+  __I  uint32_t MSR;         /**< \brief Offset: 0x34 (R/  32) Monitor Status Register */
+       RoReg8   Reserved3[0xC4];
+  __I  uint32_t VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
 } Hcache;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

@@ -7669,347 +7669,175 @@ typedef union {
 
 /** \brief USBC hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO USBC_UDCON_Type           UDCON;       /**< \brief Offset: 0x000 (R/W 32) Device General Control Register */
-  __I  USBC_UDINT_Type           UDINT;       /**< \brief Offset: 0x004 (R/  32) Device Global Interupt Register */
-  __O  USBC_UDINTCLR_Type        UDINTCLR;    /**< \brief Offset: 0x008 ( /W 32) Device Global Interrupt Clear Register */
-  __O  USBC_UDINTSET_Type        UDINTSET;    /**< \brief Offset: 0x00C ( /W 32) Device Global Interrupt Set Regsiter */
-  __I  USBC_UDINTE_Type          UDINTE;      /**< \brief Offset: 0x010 (R/  32) Device Global Interrupt Enable Register */
-  __O  USBC_UDINTECLR_Type       UDINTECLR;   /**< \brief Offset: 0x014 ( /W 32) Device Global Interrupt Enable Clear Register */
-  __O  USBC_UDINTESET_Type       UDINTESET;   /**< \brief Offset: 0x018 ( /W 32) Device Global Interrupt Enable Set Register */
-  __IO USBC_UERST_Type           UERST;       /**< \brief Offset: 0x01C (R/W 32) Endpoint Enable/Reset Register */
-  __I  USBC_UDFNUM_Type          UDFNUM;      /**< \brief Offset: 0x020 (R/  32) Device Frame Number Register */
-       RoReg8                    Reserved1[0xDC];
-  __IO USBC_UECFG0_Type          UECFG0;      /**< \brief Offset: 0x100 (R/W 32) Endpoint Configuration Register */
-  __IO USBC_UECFG1_Type          UECFG1;      /**< \brief Offset: 0x104 (R/W 32) Endpoint Configuration Register */
-  __IO USBC_UECFG2_Type          UECFG2;      /**< \brief Offset: 0x108 (R/W 32) Endpoint Configuration Register */
-  __IO USBC_UECFG3_Type          UECFG3;      /**< \brief Offset: 0x10C (R/W 32) Endpoint Configuration Register */
-  __IO USBC_UECFG4_Type          UECFG4;      /**< \brief Offset: 0x110 (R/W 32) Endpoint Configuration Register */
-  __IO USBC_UECFG5_Type          UECFG5;      /**< \brief Offset: 0x114 (R/W 32) Endpoint Configuration Register */
-  __IO USBC_UECFG6_Type          UECFG6;      /**< \brief Offset: 0x118 (R/W 32) Endpoint Configuration Register */
-  __IO USBC_UECFG7_Type          UECFG7;      /**< \brief Offset: 0x11C (R/W 32) Endpoint Configuration Register */
-       RoReg8                    Reserved2[0x10];
-  __I  USBC_UESTA0_Type          UESTA0;      /**< \brief Offset: 0x130 (R/  32) Endpoint Status Register */
-  __I  USBC_UESTA1_Type          UESTA1;      /**< \brief Offset: 0x134 (R/  32) Endpoint Status Register */
-  __I  USBC_UESTA2_Type          UESTA2;      /**< \brief Offset: 0x138 (R/  32) Endpoint Status Register */
-  __I  USBC_UESTA3_Type          UESTA3;      /**< \brief Offset: 0x13C (R/  32) Endpoint Status Register */
-  __I  USBC_UESTA4_Type          UESTA4;      /**< \brief Offset: 0x140 (R/  32) Endpoint Status Register */
-  __I  USBC_UESTA5_Type          UESTA5;      /**< \brief Offset: 0x144 (R/  32) Endpoint Status Register */
-  __I  USBC_UESTA6_Type          UESTA6;      /**< \brief Offset: 0x148 (R/  32) Endpoint Status Register */
-  __I  USBC_UESTA7_Type          UESTA7;      /**< \brief Offset: 0x14C (R/  32) Endpoint Status Register */
-       RoReg8                    Reserved3[0x10];
-  __O  USBC_UESTA0CLR_Type       UESTA0CLR;   /**< \brief Offset: 0x160 ( /W 32) Endpoint Status Clear Register */
-  __O  USBC_UESTA1CLR_Type       UESTA1CLR;   /**< \brief Offset: 0x164 ( /W 32) Endpoint Status Clear Register */
-  __O  USBC_UESTA2CLR_Type       UESTA2CLR;   /**< \brief Offset: 0x168 ( /W 32) Endpoint Status Clear Register */
-  __O  USBC_UESTA3CLR_Type       UESTA3CLR;   /**< \brief Offset: 0x16C ( /W 32) Endpoint Status Clear Register */
-  __O  USBC_UESTA4CLR_Type       UESTA4CLR;   /**< \brief Offset: 0x170 ( /W 32) Endpoint Status Clear Register */
-  __O  USBC_UESTA5CLR_Type       UESTA5CLR;   /**< \brief Offset: 0x174 ( /W 32) Endpoint Status Clear Register */
-  __O  USBC_UESTA6CLR_Type       UESTA6CLR;   /**< \brief Offset: 0x178 ( /W 32) Endpoint Status Clear Register */
-  __O  USBC_UESTA7CLR_Type       UESTA7CLR;   /**< \brief Offset: 0x17C ( /W 32) Endpoint Status Clear Register */
-       RoReg8                    Reserved4[0x10];
-  __O  USBC_UESTA0SET_Type       UESTA0SET;   /**< \brief Offset: 0x190 ( /W 32) Endpoint Status Set Register */
-  __O  USBC_UESTA1SET_Type       UESTA1SET;   /**< \brief Offset: 0x194 ( /W 32) Endpoint Status Set Register */
-  __O  USBC_UESTA2SET_Type       UESTA2SET;   /**< \brief Offset: 0x198 ( /W 32) Endpoint Status Set Register */
-  __O  USBC_UESTA3SET_Type       UESTA3SET;   /**< \brief Offset: 0x19C ( /W 32) Endpoint Status Set Register */
-  __O  USBC_UESTA4SET_Type       UESTA4SET;   /**< \brief Offset: 0x1A0 ( /W 32) Endpoint Status Set Register */
-  __O  USBC_UESTA5SET_Type       UESTA5SET;   /**< \brief Offset: 0x1A4 ( /W 32) Endpoint Status Set Register */
-  __O  USBC_UESTA6SET_Type       UESTA6SET;   /**< \brief Offset: 0x1A8 ( /W 32) Endpoint Status Set Register */
-  __O  USBC_UESTA7SET_Type       UESTA7SET;   /**< \brief Offset: 0x1AC ( /W 32) Endpoint Status Set Register */
-       RoReg8                    Reserved5[0x10];
-  __I  USBC_UECON0_Type          UECON0;      /**< \brief Offset: 0x1C0 (R/  32) Endpoint Control Register */
-  __I  USBC_UECON1_Type          UECON1;      /**< \brief Offset: 0x1C4 (R/  32) Endpoint Control Register */
-  __I  USBC_UECON2_Type          UECON2;      /**< \brief Offset: 0x1C8 (R/  32) Endpoint Control Register */
-  __I  USBC_UECON3_Type          UECON3;      /**< \brief Offset: 0x1CC (R/  32) Endpoint Control Register */
-  __I  USBC_UECON4_Type          UECON4;      /**< \brief Offset: 0x1D0 (R/  32) Endpoint Control Register */
-  __I  USBC_UECON5_Type          UECON5;      /**< \brief Offset: 0x1D4 (R/  32) Endpoint Control Register */
-  __I  USBC_UECON6_Type          UECON6;      /**< \brief Offset: 0x1D8 (R/  32) Endpoint Control Register */
-  __I  USBC_UECON7_Type          UECON7;      /**< \brief Offset: 0x1DC (R/  32) Endpoint Control Register */
-       RoReg8                    Reserved6[0x10];
-  __O  USBC_UECON0SET_Type       UECON0SET;   /**< \brief Offset: 0x1F0 ( /W 32) Endpoint Control Set Register */
-  __O  USBC_UECON1SET_Type       UECON1SET;   /**< \brief Offset: 0x1F4 ( /W 32) Endpoint Control Set Register */
-  __O  USBC_UECON2SET_Type       UECON2SET;   /**< \brief Offset: 0x1F8 ( /W 32) Endpoint Control Set Register */
-  __O  USBC_UECON3SET_Type       UECON3SET;   /**< \brief Offset: 0x1FC ( /W 32) Endpoint Control Set Register */
-  __O  USBC_UECON4SET_Type       UECON4SET;   /**< \brief Offset: 0x200 ( /W 32) Endpoint Control Set Register */
-  __O  USBC_UECON5SET_Type       UECON5SET;   /**< \brief Offset: 0x204 ( /W 32) Endpoint Control Set Register */
-  __O  USBC_UECON6SET_Type       UECON6SET;   /**< \brief Offset: 0x208 ( /W 32) Endpoint Control Set Register */
-  __O  USBC_UECON7SET_Type       UECON7SET;   /**< \brief Offset: 0x20C ( /W 32) Endpoint Control Set Register */
-       RoReg8                    Reserved7[0x10];
-  __O  USBC_UECON0CLR_Type       UECON0CLR;   /**< \brief Offset: 0x220 ( /W 32) Endpoint Control Clear Register */
-  __O  USBC_UECON1CLR_Type       UECON1CLR;   /**< \brief Offset: 0x224 ( /W 32) TXINE Clear */
-  __O  USBC_UECON2CLR_Type       UECON2CLR;   /**< \brief Offset: 0x228 ( /W 32) TXINE Clear */
-  __O  USBC_UECON3CLR_Type       UECON3CLR;   /**< \brief Offset: 0x22C ( /W 32) TXINE Clear */
-  __O  USBC_UECON4CLR_Type       UECON4CLR;   /**< \brief Offset: 0x230 ( /W 32) TXINE Clear */
-  __O  USBC_UECON5CLR_Type       UECON5CLR;   /**< \brief Offset: 0x234 ( /W 32) TXINE Clear */
-  __O  USBC_UECON6CLR_Type       UECON6CLR;   /**< \brief Offset: 0x238 ( /W 32) TXINE Clear */
-  __O  USBC_UECON7CLR_Type       UECON7CLR;   /**< \brief Offset: 0x23C ( /W 32) TXINE Clear */
-       RoReg8                    Reserved8[0x1C0];
-  __IO USBC_UHCON_Type           UHCON;       /**< \brief Offset: 0x400 (R/W 32) Host General Control Register */
-  __I  USBC_UHINT_Type           UHINT;       /**< \brief Offset: 0x404 (R/  32) Host Global Interrupt Register */
-  __O  USBC_UHINTCLR_Type        UHINTCLR;    /**< \brief Offset: 0x408 ( /W 32) Host Global Interrrupt Clear Register */
-  __O  USBC_UHINTSET_Type        UHINTSET;    /**< \brief Offset: 0x40C ( /W 32) Host Global Interrupt Set Register */
-  __I  USBC_UHINTE_Type          UHINTE;      /**< \brief Offset: 0x410 (R/  32) Host Global Interrupt Enable Register */
-  __O  USBC_UHINTECLR_Type       UHINTECLR;   /**< \brief Offset: 0x414 ( /W 32) Host Global Interrupt Enable Clear Register */
-  __O  USBC_UHINTESET_Type       UHINTESET;   /**< \brief Offset: 0x418 ( /W 32) Host Global Interrupt Enable Set Register */
-  __IO USBC_UPRST_Type           UPRST;       /**< \brief Offset: 0x41C (R/W 32) Pipe Reset Register */
-  __IO USBC_UHFNUM_Type          UHFNUM;      /**< \brief Offset: 0x420 (R/W 32) Host Frame Number Register */
-  __IO USBC_UHSOFC_Type          UHSOFC;      /**< \brief Offset: 0x424 (R/W 32) Host Start of Frame Control Register */
-       RoReg8                    Reserved9[0xD8];
-  __IO USBC_UPCFG0_Type          UPCFG0;      /**< \brief Offset: 0x500 (R/W 32) Pipe Configuration Register */
-  __IO USBC_UPCFG1_Type          UPCFG1;      /**< \brief Offset: 0x504 (R/W 32) Pipe Configuration Register */
-  __IO USBC_UPCFG2_Type          UPCFG2;      /**< \brief Offset: 0x508 (R/W 32) Pipe Configuration Register */
-  __IO USBC_UPCFG3_Type          UPCFG3;      /**< \brief Offset: 0x50C (R/W 32) Pipe Configuration Register */
-  __IO USBC_UPCFG4_Type          UPCFG4;      /**< \brief Offset: 0x510 (R/W 32) Pipe Configuration Register */
-  __IO USBC_UPCFG5_Type          UPCFG5;      /**< \brief Offset: 0x514 (R/W 32) Pipe Configuration Register */
-  __IO USBC_UPCFG6_Type          UPCFG6;      /**< \brief Offset: 0x518 (R/W 32) Pipe Configuration Register */
-  __IO USBC_UPCFG7_Type          UPCFG7;      /**< \brief Offset: 0x51C (R/W 32) Pipe Configuration Register */
-       RoReg8                    Reserved10[0x10];
-  __I  USBC_UPSTA0_Type          UPSTA0;      /**< \brief Offset: 0x530 (R/  32) Pipe Status Register */
-  __I  USBC_UPSTA1_Type          UPSTA1;      /**< \brief Offset: 0x534 (R/  32) Pipe Status Register */
-  __I  USBC_UPSTA2_Type          UPSTA2;      /**< \brief Offset: 0x538 (R/  32) Pipe Status Register */
-  __I  USBC_UPSTA3_Type          UPSTA3;      /**< \brief Offset: 0x53C (R/  32) Pipe Status Register */
-  __I  USBC_UPSTA4_Type          UPSTA4;      /**< \brief Offset: 0x540 (R/  32) Pipe Status Register */
-  __I  USBC_UPSTA5_Type          UPSTA5;      /**< \brief Offset: 0x544 (R/  32) Pipe Status Register */
-  __I  USBC_UPSTA6_Type          UPSTA6;      /**< \brief Offset: 0x548 (R/  32) Pipe Status Register */
-  __I  USBC_UPSTA7_Type          UPSTA7;      /**< \brief Offset: 0x54C (R/  32) Pipe Status Register */
-       RoReg8                    Reserved11[0x10];
-  __O  USBC_UPSTA0CLR_Type       UPSTA0CLR;   /**< \brief Offset: 0x560 ( /W 32) Pipe Status Clear Register */
-  __O  USBC_UPSTA1CLR_Type       UPSTA1CLR;   /**< \brief Offset: 0x564 ( /W 32) Pipe Status Clear Register */
-  __O  USBC_UPSTA2CLR_Type       UPSTA2CLR;   /**< \brief Offset: 0x568 ( /W 32) Pipe Status Clear Register */
-  __O  USBC_UPSTA3CLR_Type       UPSTA3CLR;   /**< \brief Offset: 0x56C ( /W 32) Pipe Status Clear Register */
-  __O  USBC_UPSTA4CLR_Type       UPSTA4CLR;   /**< \brief Offset: 0x570 ( /W 32) Pipe Status Clear Register */
-  __O  USBC_UPSTA5CLR_Type       UPSTA5CLR;   /**< \brief Offset: 0x574 ( /W 32) Pipe Status Clear Register */
-  __O  USBC_UPSTA6CLR_Type       UPSTA6CLR;   /**< \brief Offset: 0x578 ( /W 32) Pipe Status Clear Register */
-  __O  USBC_UPSTA7CLR_Type       UPSTA7CLR;   /**< \brief Offset: 0x57C ( /W 32) Pipe Status Clear Register */
-       RoReg8                    Reserved12[0x10];
-  __O  USBC_UPSTA0SET_Type       UPSTA0SET;   /**< \brief Offset: 0x590 ( /W 32) Pipe Status Set Register */
-  __O  USBC_UPSTA1SET_Type       UPSTA1SET;   /**< \brief Offset: 0x594 ( /W 32) Pipe Status Set Register */
-  __O  USBC_UPSTA2SET_Type       UPSTA2SET;   /**< \brief Offset: 0x598 ( /W 32) Pipe Status Set Register */
-  __O  USBC_UPSTA3SET_Type       UPSTA3SET;   /**< \brief Offset: 0x59C ( /W 32) Pipe Status Set Register */
-  __O  USBC_UPSTA4SET_Type       UPSTA4SET;   /**< \brief Offset: 0x5A0 ( /W 32) Pipe Status Set Register */
-  __O  USBC_UPSTA5SET_Type       UPSTA5SET;   /**< \brief Offset: 0x5A4 ( /W 32) Pipe Status Set Register */
-  __O  USBC_UPSTA6SET_Type       UPSTA6SET;   /**< \brief Offset: 0x5A8 ( /W 32) Pipe Status Set Register */
-  __O  USBC_UPSTA7SET_Type       UPSTA7SET;   /**< \brief Offset: 0x5AC ( /W 32) Pipe Status Set Register */
-       RoReg8                    Reserved13[0x10];
-  __I  USBC_UPCON0_Type          UPCON0;      /**< \brief Offset: 0x5C0 (R/  32) Pipe Control Register */
-  __I  USBC_UPCON1_Type          UPCON1;      /**< \brief Offset: 0x5C4 (R/  32) Pipe Control Register */
-  __I  USBC_UPCON2_Type          UPCON2;      /**< \brief Offset: 0x5C8 (R/  32) Pipe Control Register */
-  __I  USBC_UPCON3_Type          UPCON3;      /**< \brief Offset: 0x5CC (R/  32) Pipe Control Register */
-  __I  USBC_UPCON4_Type          UPCON4;      /**< \brief Offset: 0x5D0 (R/  32) Pipe Control Register */
-  __I  USBC_UPCON5_Type          UPCON5;      /**< \brief Offset: 0x5D4 (R/  32) Pipe Control Register */
-  __I  USBC_UPCON6_Type          UPCON6;      /**< \brief Offset: 0x5D8 (R/  32) Pipe Control Register */
-  __I  USBC_UPCON7_Type          UPCON7;      /**< \brief Offset: 0x5DC (R/  32) Pipe Control Register */
-       RoReg8                    Reserved14[0x10];
-  __O  USBC_UPCON0SET_Type       UPCON0SET;   /**< \brief Offset: 0x5F0 ( /W 32) Pipe Control Set Register */
-  __O  USBC_UPCON1SET_Type       UPCON1SET;   /**< \brief Offset: 0x5F4 ( /W 32) Pipe Control Set Register */
-  __O  USBC_UPCON2SET_Type       UPCON2SET;   /**< \brief Offset: 0x5F8 ( /W 32) Pipe Control Set Register */
-  __O  USBC_UPCON3SET_Type       UPCON3SET;   /**< \brief Offset: 0x5FC ( /W 32) Pipe Control Set Register */
-  __O  USBC_UPCON4SET_Type       UPCON4SET;   /**< \brief Offset: 0x600 ( /W 32) Pipe Control Set Register */
-  __O  USBC_UPCON5SET_Type       UPCON5SET;   /**< \brief Offset: 0x604 ( /W 32) Pipe Control Set Register */
-  __O  USBC_UPCON6SET_Type       UPCON6SET;   /**< \brief Offset: 0x608 ( /W 32) Pipe Control Set Register */
-  __O  USBC_UPCON7SET_Type       UPCON7SET;   /**< \brief Offset: 0x60C ( /W 32) Pipe Control Set Register */
-       RoReg8                    Reserved15[0x10];
-  __O  USBC_UPCON0CLR_Type       UPCON0CLR;   /**< \brief Offset: 0x620 ( /W 32) Pipe Control Clear Register */
-  __O  USBC_UPCON1CLR_Type       UPCON1CLR;   /**< \brief Offset: 0x624 ( /W 32) Pipe Control Clear Register */
-  __O  USBC_UPCON2CLR_Type       UPCON2CLR;   /**< \brief Offset: 0x628 ( /W 32) Pipe Control Clear Register */
-  __O  USBC_UPCON3CLR_Type       UPCON3CLR;   /**< \brief Offset: 0x62C ( /W 32) Pipe Control Clear Register */
-  __O  USBC_UPCON4CLR_Type       UPCON4CLR;   /**< \brief Offset: 0x630 ( /W 32) Pipe Control Clear Register */
-  __O  USBC_UPCON5CLR_Type       UPCON5CLR;   /**< \brief Offset: 0x634 ( /W 32) Pipe Control Clear Register */
-  __O  USBC_UPCON6CLR_Type       UPCON6CLR;   /**< \brief Offset: 0x638 ( /W 32) Pipe Control Clear Register */
-  __O  USBC_UPCON7CLR_Type       UPCON7CLR;   /**< \brief Offset: 0x63C ( /W 32) Pipe Control Clear Register */
-       RoReg8                    Reserved16[0x10];
-  __IO USBC_UPINRQ0_Type         UPINRQ0;     /**< \brief Offset: 0x650 (R/W 32) Pipe In Request */
-  __IO USBC_UPINRQ1_Type         UPINRQ1;     /**< \brief Offset: 0x654 (R/W 32) Pipe In Request */
-  __IO USBC_UPINRQ2_Type         UPINRQ2;     /**< \brief Offset: 0x658 (R/W 32) Pipe In Request */
-  __IO USBC_UPINRQ3_Type         UPINRQ3;     /**< \brief Offset: 0x65C (R/W 32) Pipe In Request */
-  __IO USBC_UPINRQ4_Type         UPINRQ4;     /**< \brief Offset: 0x660 (R/W 32) Pipe In Request */
-  __IO USBC_UPINRQ5_Type         UPINRQ5;     /**< \brief Offset: 0x664 (R/W 32) Pipe In Request */
-  __IO USBC_UPINRQ6_Type         UPINRQ6;     /**< \brief Offset: 0x668 (R/W 32) Pipe In Request */
-  __IO USBC_UPINRQ7_Type         UPINRQ7;     /**< \brief Offset: 0x66C (R/W 32) Pipe In Request */
-       RoReg8                    Reserved17[0x190];
-  __IO USBC_USBCON_Type          USBCON;      /**< \brief Offset: 0x800 (R/W 32) General Control Register */
-  __I  USBC_USBSTA_Type          USBSTA;      /**< \brief Offset: 0x804 (R/  32) General Status Register */
-  __O  USBC_USBSTACLR_Type       USBSTACLR;   /**< \brief Offset: 0x808 ( /W 32) General Status Clear Register */
-  __O  USBC_USBSTASET_Type       USBSTASET;   /**< \brief Offset: 0x80C ( /W 32) General Status Set Register */
-       RoReg8                    Reserved18[0x8];
-  __I  USBC_UVERS_Type           UVERS;       /**< \brief Offset: 0x818 (R/  32) IP Version Register */
-  __I  USBC_UFEATURES_Type       UFEATURES;   /**< \brief Offset: 0x81C (R/  32) IP Features Register */
-  __I  USBC_UADDRSIZE_Type       UADDRSIZE;   /**< \brief Offset: 0x820 (R/  32) IP PB address size Register */
-  __I  USBC_UNAME1_Type          UNAME1;      /**< \brief Offset: 0x824 (R/  32) IP Name Part One: HUSB */
-  __I  USBC_UNAME2_Type          UNAME2;      /**< \brief Offset: 0x828 (R/  32) IP Name Part Two: HOST */
-  __I  USBC_USBFSM_Type          USBFSM;      /**< \brief Offset: 0x82C (R/  32) USB internal finite state machine */
-  __IO USBC_UDESC_Type           UDESC;       /**< \brief Offset: 0x830 (R/W 32) Endpoint descriptor table */
- } bf;
- struct {
-  RwReg   USBC_UDCON;         /**< \brief (USBC Offset: 0x000) Device General Control Register */
-  RoReg   USBC_UDINT;         /**< \brief (USBC Offset: 0x004) Device Global Interupt Register */
-  WoReg   USBC_UDINTCLR;      /**< \brief (USBC Offset: 0x008) Device Global Interrupt Clear Register */
-  WoReg   USBC_UDINTSET;      /**< \brief (USBC Offset: 0x00C) Device Global Interrupt Set Regsiter */
-  RoReg   USBC_UDINTE;        /**< \brief (USBC Offset: 0x010) Device Global Interrupt Enable Register */
-  WoReg   USBC_UDINTECLR;     /**< \brief (USBC Offset: 0x014) Device Global Interrupt Enable Clear Register */
-  WoReg   USBC_UDINTESET;     /**< \brief (USBC Offset: 0x018) Device Global Interrupt Enable Set Register */
-  RwReg   USBC_UERST;         /**< \brief (USBC Offset: 0x01C) Endpoint Enable/Reset Register */
-  RoReg   USBC_UDFNUM;        /**< \brief (USBC Offset: 0x020) Device Frame Number Register */
-  RoReg8  Reserved19[0xDC];
-  RwReg   USBC_UECFG0;        /**< \brief (USBC Offset: 0x100) Endpoint Configuration Register */
-  RwReg   USBC_UECFG1;        /**< \brief (USBC Offset: 0x104) Endpoint Configuration Register */
-  RwReg   USBC_UECFG2;        /**< \brief (USBC Offset: 0x108) Endpoint Configuration Register */
-  RwReg   USBC_UECFG3;        /**< \brief (USBC Offset: 0x10C) Endpoint Configuration Register */
-  RwReg   USBC_UECFG4;        /**< \brief (USBC Offset: 0x110) Endpoint Configuration Register */
-  RwReg   USBC_UECFG5;        /**< \brief (USBC Offset: 0x114) Endpoint Configuration Register */
-  RwReg   USBC_UECFG6;        /**< \brief (USBC Offset: 0x118) Endpoint Configuration Register */
-  RwReg   USBC_UECFG7;        /**< \brief (USBC Offset: 0x11C) Endpoint Configuration Register */
-  RoReg8  Reserved20[0x10];
-  RoReg   USBC_UESTA0;        /**< \brief (USBC Offset: 0x130) Endpoint Status Register */
-  RoReg   USBC_UESTA1;        /**< \brief (USBC Offset: 0x134) Endpoint Status Register */
-  RoReg   USBC_UESTA2;        /**< \brief (USBC Offset: 0x138) Endpoint Status Register */
-  RoReg   USBC_UESTA3;        /**< \brief (USBC Offset: 0x13C) Endpoint Status Register */
-  RoReg   USBC_UESTA4;        /**< \brief (USBC Offset: 0x140) Endpoint Status Register */
-  RoReg   USBC_UESTA5;        /**< \brief (USBC Offset: 0x144) Endpoint Status Register */
-  RoReg   USBC_UESTA6;        /**< \brief (USBC Offset: 0x148) Endpoint Status Register */
-  RoReg   USBC_UESTA7;        /**< \brief (USBC Offset: 0x14C) Endpoint Status Register */
-  RoReg8  Reserved21[0x10];
-  WoReg   USBC_UESTA0CLR;     /**< \brief (USBC Offset: 0x160) Endpoint Status Clear Register */
-  WoReg   USBC_UESTA1CLR;     /**< \brief (USBC Offset: 0x164) Endpoint Status Clear Register */
-  WoReg   USBC_UESTA2CLR;     /**< \brief (USBC Offset: 0x168) Endpoint Status Clear Register */
-  WoReg   USBC_UESTA3CLR;     /**< \brief (USBC Offset: 0x16C) Endpoint Status Clear Register */
-  WoReg   USBC_UESTA4CLR;     /**< \brief (USBC Offset: 0x170) Endpoint Status Clear Register */
-  WoReg   USBC_UESTA5CLR;     /**< \brief (USBC Offset: 0x174) Endpoint Status Clear Register */
-  WoReg   USBC_UESTA6CLR;     /**< \brief (USBC Offset: 0x178) Endpoint Status Clear Register */
-  WoReg   USBC_UESTA7CLR;     /**< \brief (USBC Offset: 0x17C) Endpoint Status Clear Register */
-  RoReg8  Reserved22[0x10];
-  WoReg   USBC_UESTA0SET;     /**< \brief (USBC Offset: 0x190) Endpoint Status Set Register */
-  WoReg   USBC_UESTA1SET;     /**< \brief (USBC Offset: 0x194) Endpoint Status Set Register */
-  WoReg   USBC_UESTA2SET;     /**< \brief (USBC Offset: 0x198) Endpoint Status Set Register */
-  WoReg   USBC_UESTA3SET;     /**< \brief (USBC Offset: 0x19C) Endpoint Status Set Register */
-  WoReg   USBC_UESTA4SET;     /**< \brief (USBC Offset: 0x1A0) Endpoint Status Set Register */
-  WoReg   USBC_UESTA5SET;     /**< \brief (USBC Offset: 0x1A4) Endpoint Status Set Register */
-  WoReg   USBC_UESTA6SET;     /**< \brief (USBC Offset: 0x1A8) Endpoint Status Set Register */
-  WoReg   USBC_UESTA7SET;     /**< \brief (USBC Offset: 0x1AC) Endpoint Status Set Register */
-  RoReg8  Reserved23[0x10];
-  RoReg   USBC_UECON0;        /**< \brief (USBC Offset: 0x1C0) Endpoint Control Register */
-  RoReg   USBC_UECON1;        /**< \brief (USBC Offset: 0x1C4) Endpoint Control Register */
-  RoReg   USBC_UECON2;        /**< \brief (USBC Offset: 0x1C8) Endpoint Control Register */
-  RoReg   USBC_UECON3;        /**< \brief (USBC Offset: 0x1CC) Endpoint Control Register */
-  RoReg   USBC_UECON4;        /**< \brief (USBC Offset: 0x1D0) Endpoint Control Register */
-  RoReg   USBC_UECON5;        /**< \brief (USBC Offset: 0x1D4) Endpoint Control Register */
-  RoReg   USBC_UECON6;        /**< \brief (USBC Offset: 0x1D8) Endpoint Control Register */
-  RoReg   USBC_UECON7;        /**< \brief (USBC Offset: 0x1DC) Endpoint Control Register */
-  RoReg8  Reserved24[0x10];
-  WoReg   USBC_UECON0SET;     /**< \brief (USBC Offset: 0x1F0) Endpoint Control Set Register */
-  WoReg   USBC_UECON1SET;     /**< \brief (USBC Offset: 0x1F4) Endpoint Control Set Register */
-  WoReg   USBC_UECON2SET;     /**< \brief (USBC Offset: 0x1F8) Endpoint Control Set Register */
-  WoReg   USBC_UECON3SET;     /**< \brief (USBC Offset: 0x1FC) Endpoint Control Set Register */
-  WoReg   USBC_UECON4SET;     /**< \brief (USBC Offset: 0x200) Endpoint Control Set Register */
-  WoReg   USBC_UECON5SET;     /**< \brief (USBC Offset: 0x204) Endpoint Control Set Register */
-  WoReg   USBC_UECON6SET;     /**< \brief (USBC Offset: 0x208) Endpoint Control Set Register */
-  WoReg   USBC_UECON7SET;     /**< \brief (USBC Offset: 0x20C) Endpoint Control Set Register */
-  RoReg8  Reserved25[0x10];
-  WoReg   USBC_UECON0CLR;     /**< \brief (USBC Offset: 0x220) Endpoint Control Clear Register */
-  WoReg   USBC_UECON1CLR;     /**< \brief (USBC Offset: 0x224) TXINE Clear */
-  WoReg   USBC_UECON2CLR;     /**< \brief (USBC Offset: 0x228) TXINE Clear */
-  WoReg   USBC_UECON3CLR;     /**< \brief (USBC Offset: 0x22C) TXINE Clear */
-  WoReg   USBC_UECON4CLR;     /**< \brief (USBC Offset: 0x230) TXINE Clear */
-  WoReg   USBC_UECON5CLR;     /**< \brief (USBC Offset: 0x234) TXINE Clear */
-  WoReg   USBC_UECON6CLR;     /**< \brief (USBC Offset: 0x238) TXINE Clear */
-  WoReg   USBC_UECON7CLR;     /**< \brief (USBC Offset: 0x23C) TXINE Clear */
-  RoReg8  Reserved26[0x1C0];
-  RwReg   USBC_UHCON;         /**< \brief (USBC Offset: 0x400) Host General Control Register */
-  RoReg   USBC_UHINT;         /**< \brief (USBC Offset: 0x404) Host Global Interrupt Register */
-  WoReg   USBC_UHINTCLR;      /**< \brief (USBC Offset: 0x408) Host Global Interrrupt Clear Register */
-  WoReg   USBC_UHINTSET;      /**< \brief (USBC Offset: 0x40C) Host Global Interrupt Set Register */
-  RoReg   USBC_UHINTE;        /**< \brief (USBC Offset: 0x410) Host Global Interrupt Enable Register */
-  WoReg   USBC_UHINTECLR;     /**< \brief (USBC Offset: 0x414) Host Global Interrupt Enable Clear Register */
-  WoReg   USBC_UHINTESET;     /**< \brief (USBC Offset: 0x418) Host Global Interrupt Enable Set Register */
-  RwReg   USBC_UPRST;         /**< \brief (USBC Offset: 0x41C) Pipe Reset Register */
-  RwReg   USBC_UHFNUM;        /**< \brief (USBC Offset: 0x420) Host Frame Number Register */
-  RwReg   USBC_UHSOFC;        /**< \brief (USBC Offset: 0x424) Host Start of Frame Control Register */
-  RoReg8  Reserved27[0xD8];
-  RwReg   USBC_UPCFG0;        /**< \brief (USBC Offset: 0x500) Pipe Configuration Register */
-  RwReg   USBC_UPCFG1;        /**< \brief (USBC Offset: 0x504) Pipe Configuration Register */
-  RwReg   USBC_UPCFG2;        /**< \brief (USBC Offset: 0x508) Pipe Configuration Register */
-  RwReg   USBC_UPCFG3;        /**< \brief (USBC Offset: 0x50C) Pipe Configuration Register */
-  RwReg   USBC_UPCFG4;        /**< \brief (USBC Offset: 0x510) Pipe Configuration Register */
-  RwReg   USBC_UPCFG5;        /**< \brief (USBC Offset: 0x514) Pipe Configuration Register */
-  RwReg   USBC_UPCFG6;        /**< \brief (USBC Offset: 0x518) Pipe Configuration Register */
-  RwReg   USBC_UPCFG7;        /**< \brief (USBC Offset: 0x51C) Pipe Configuration Register */
-  RoReg8  Reserved28[0x10];
-  RoReg   USBC_UPSTA0;        /**< \brief (USBC Offset: 0x530) Pipe Status Register */
-  RoReg   USBC_UPSTA1;        /**< \brief (USBC Offset: 0x534) Pipe Status Register */
-  RoReg   USBC_UPSTA2;        /**< \brief (USBC Offset: 0x538) Pipe Status Register */
-  RoReg   USBC_UPSTA3;        /**< \brief (USBC Offset: 0x53C) Pipe Status Register */
-  RoReg   USBC_UPSTA4;        /**< \brief (USBC Offset: 0x540) Pipe Status Register */
-  RoReg   USBC_UPSTA5;        /**< \brief (USBC Offset: 0x544) Pipe Status Register */
-  RoReg   USBC_UPSTA6;        /**< \brief (USBC Offset: 0x548) Pipe Status Register */
-  RoReg   USBC_UPSTA7;        /**< \brief (USBC Offset: 0x54C) Pipe Status Register */
-  RoReg8  Reserved29[0x10];
-  WoReg   USBC_UPSTA0CLR;     /**< \brief (USBC Offset: 0x560) Pipe Status Clear Register */
-  WoReg   USBC_UPSTA1CLR;     /**< \brief (USBC Offset: 0x564) Pipe Status Clear Register */
-  WoReg   USBC_UPSTA2CLR;     /**< \brief (USBC Offset: 0x568) Pipe Status Clear Register */
-  WoReg   USBC_UPSTA3CLR;     /**< \brief (USBC Offset: 0x56C) Pipe Status Clear Register */
-  WoReg   USBC_UPSTA4CLR;     /**< \brief (USBC Offset: 0x570) Pipe Status Clear Register */
-  WoReg   USBC_UPSTA5CLR;     /**< \brief (USBC Offset: 0x574) Pipe Status Clear Register */
-  WoReg   USBC_UPSTA6CLR;     /**< \brief (USBC Offset: 0x578) Pipe Status Clear Register */
-  WoReg   USBC_UPSTA7CLR;     /**< \brief (USBC Offset: 0x57C) Pipe Status Clear Register */
-  RoReg8  Reserved30[0x10];
-  WoReg   USBC_UPSTA0SET;     /**< \brief (USBC Offset: 0x590) Pipe Status Set Register */
-  WoReg   USBC_UPSTA1SET;     /**< \brief (USBC Offset: 0x594) Pipe Status Set Register */
-  WoReg   USBC_UPSTA2SET;     /**< \brief (USBC Offset: 0x598) Pipe Status Set Register */
-  WoReg   USBC_UPSTA3SET;     /**< \brief (USBC Offset: 0x59C) Pipe Status Set Register */
-  WoReg   USBC_UPSTA4SET;     /**< \brief (USBC Offset: 0x5A0) Pipe Status Set Register */
-  WoReg   USBC_UPSTA5SET;     /**< \brief (USBC Offset: 0x5A4) Pipe Status Set Register */
-  WoReg   USBC_UPSTA6SET;     /**< \brief (USBC Offset: 0x5A8) Pipe Status Set Register */
-  WoReg   USBC_UPSTA7SET;     /**< \brief (USBC Offset: 0x5AC) Pipe Status Set Register */
-  RoReg8  Reserved31[0x10];
-  RoReg   USBC_UPCON0;        /**< \brief (USBC Offset: 0x5C0) Pipe Control Register */
-  RoReg   USBC_UPCON1;        /**< \brief (USBC Offset: 0x5C4) Pipe Control Register */
-  RoReg   USBC_UPCON2;        /**< \brief (USBC Offset: 0x5C8) Pipe Control Register */
-  RoReg   USBC_UPCON3;        /**< \brief (USBC Offset: 0x5CC) Pipe Control Register */
-  RoReg   USBC_UPCON4;        /**< \brief (USBC Offset: 0x5D0) Pipe Control Register */
-  RoReg   USBC_UPCON5;        /**< \brief (USBC Offset: 0x5D4) Pipe Control Register */
-  RoReg   USBC_UPCON6;        /**< \brief (USBC Offset: 0x5D8) Pipe Control Register */
-  RoReg   USBC_UPCON7;        /**< \brief (USBC Offset: 0x5DC) Pipe Control Register */
-  RoReg8  Reserved32[0x10];
-  WoReg   USBC_UPCON0SET;     /**< \brief (USBC Offset: 0x5F0) Pipe Control Set Register */
-  WoReg   USBC_UPCON1SET;     /**< \brief (USBC Offset: 0x5F4) Pipe Control Set Register */
-  WoReg   USBC_UPCON2SET;     /**< \brief (USBC Offset: 0x5F8) Pipe Control Set Register */
-  WoReg   USBC_UPCON3SET;     /**< \brief (USBC Offset: 0x5FC) Pipe Control Set Register */
-  WoReg   USBC_UPCON4SET;     /**< \brief (USBC Offset: 0x600) Pipe Control Set Register */
-  WoReg   USBC_UPCON5SET;     /**< \brief (USBC Offset: 0x604) Pipe Control Set Register */
-  WoReg   USBC_UPCON6SET;     /**< \brief (USBC Offset: 0x608) Pipe Control Set Register */
-  WoReg   USBC_UPCON7SET;     /**< \brief (USBC Offset: 0x60C) Pipe Control Set Register */
-  RoReg8  Reserved33[0x10];
-  WoReg   USBC_UPCON0CLR;     /**< \brief (USBC Offset: 0x620) Pipe Control Clear Register */
-  WoReg   USBC_UPCON1CLR;     /**< \brief (USBC Offset: 0x624) Pipe Control Clear Register */
-  WoReg   USBC_UPCON2CLR;     /**< \brief (USBC Offset: 0x628) Pipe Control Clear Register */
-  WoReg   USBC_UPCON3CLR;     /**< \brief (USBC Offset: 0x62C) Pipe Control Clear Register */
-  WoReg   USBC_UPCON4CLR;     /**< \brief (USBC Offset: 0x630) Pipe Control Clear Register */
-  WoReg   USBC_UPCON5CLR;     /**< \brief (USBC Offset: 0x634) Pipe Control Clear Register */
-  WoReg   USBC_UPCON6CLR;     /**< \brief (USBC Offset: 0x638) Pipe Control Clear Register */
-  WoReg   USBC_UPCON7CLR;     /**< \brief (USBC Offset: 0x63C) Pipe Control Clear Register */
-  RoReg8  Reserved34[0x10];
-  RwReg   USBC_UPINRQ0;       /**< \brief (USBC Offset: 0x650) Pipe In Request */
-  RwReg   USBC_UPINRQ1;       /**< \brief (USBC Offset: 0x654) Pipe In Request */
-  RwReg   USBC_UPINRQ2;       /**< \brief (USBC Offset: 0x658) Pipe In Request */
-  RwReg   USBC_UPINRQ3;       /**< \brief (USBC Offset: 0x65C) Pipe In Request */
-  RwReg   USBC_UPINRQ4;       /**< \brief (USBC Offset: 0x660) Pipe In Request */
-  RwReg   USBC_UPINRQ5;       /**< \brief (USBC Offset: 0x664) Pipe In Request */
-  RwReg   USBC_UPINRQ6;       /**< \brief (USBC Offset: 0x668) Pipe In Request */
-  RwReg   USBC_UPINRQ7;       /**< \brief (USBC Offset: 0x66C) Pipe In Request */
-  RoReg8  Reserved35[0x190];
-  RwReg   USBC_USBCON;        /**< \brief (USBC Offset: 0x800) General Control Register */
-  RoReg   USBC_USBSTA;        /**< \brief (USBC Offset: 0x804) General Status Register */
-  WoReg   USBC_USBSTACLR;     /**< \brief (USBC Offset: 0x808) General Status Clear Register */
-  WoReg   USBC_USBSTASET;     /**< \brief (USBC Offset: 0x80C) General Status Set Register */
-  RoReg8  Reserved36[0x8];
-  RoReg   USBC_UVERS;         /**< \brief (USBC Offset: 0x818) IP Version Register */
-  RoReg   USBC_UFEATURES;     /**< \brief (USBC Offset: 0x81C) IP Features Register */
-  RoReg   USBC_UADDRSIZE;     /**< \brief (USBC Offset: 0x820) IP PB address size Register */
-  RoReg   USBC_UNAME1;        /**< \brief (USBC Offset: 0x824) IP Name Part One: HUSB */
-  RoReg   USBC_UNAME2;        /**< \brief (USBC Offset: 0x828) IP Name Part Two: HOST */
-  RoReg   USBC_USBFSM;        /**< \brief (USBC Offset: 0x82C) USB internal finite state machine */
-  RwReg   USBC_UDESC;         /**< \brief (USBC Offset: 0x830) Endpoint descriptor table */
- } reg;
+typedef struct {
+  __IO uint32_t UDCON;       /**< \brief Offset: 0x000 (R/W 32) Device General Control Register */
+  __I  uint32_t UDINT;       /**< \brief Offset: 0x004 (R/  32) Device Global Interupt Register */
+  __O  uint32_t UDINTCLR;    /**< \brief Offset: 0x008 ( /W 32) Device Global Interrupt Clear Register */
+  __O  uint32_t UDINTSET;    /**< \brief Offset: 0x00C ( /W 32) Device Global Interrupt Set Regsiter */
+  __I  uint32_t UDINTE;      /**< \brief Offset: 0x010 (R/  32) Device Global Interrupt Enable Register */
+  __O  uint32_t UDINTECLR;   /**< \brief Offset: 0x014 ( /W 32) Device Global Interrupt Enable Clear Register */
+  __O  uint32_t UDINTESET;   /**< \brief Offset: 0x018 ( /W 32) Device Global Interrupt Enable Set Register */
+  __IO uint32_t UERST;       /**< \brief Offset: 0x01C (R/W 32) Endpoint Enable/Reset Register */
+  __I  uint32_t UDFNUM;      /**< \brief Offset: 0x020 (R/  32) Device Frame Number Register */
+       RoReg8   Reserved1[0xDC];
+  __IO uint32_t UECFG0;      /**< \brief Offset: 0x100 (R/W 32) Endpoint Configuration Register */
+  __IO uint32_t UECFG1;      /**< \brief Offset: 0x104 (R/W 32) Endpoint Configuration Register */
+  __IO uint32_t UECFG2;      /**< \brief Offset: 0x108 (R/W 32) Endpoint Configuration Register */
+  __IO uint32_t UECFG3;      /**< \brief Offset: 0x10C (R/W 32) Endpoint Configuration Register */
+  __IO uint32_t UECFG4;      /**< \brief Offset: 0x110 (R/W 32) Endpoint Configuration Register */
+  __IO uint32_t UECFG5;      /**< \brief Offset: 0x114 (R/W 32) Endpoint Configuration Register */
+  __IO uint32_t UECFG6;      /**< \brief Offset: 0x118 (R/W 32) Endpoint Configuration Register */
+  __IO uint32_t UECFG7;      /**< \brief Offset: 0x11C (R/W 32) Endpoint Configuration Register */
+       RoReg8   Reserved2[0x10];
+  __I  uint32_t UESTA0;      /**< \brief Offset: 0x130 (R/  32) Endpoint Status Register */
+  __I  uint32_t UESTA1;      /**< \brief Offset: 0x134 (R/  32) Endpoint Status Register */
+  __I  uint32_t UESTA2;      /**< \brief Offset: 0x138 (R/  32) Endpoint Status Register */
+  __I  uint32_t UESTA3;      /**< \brief Offset: 0x13C (R/  32) Endpoint Status Register */
+  __I  uint32_t UESTA4;      /**< \brief Offset: 0x140 (R/  32) Endpoint Status Register */
+  __I  uint32_t UESTA5;      /**< \brief Offset: 0x144 (R/  32) Endpoint Status Register */
+  __I  uint32_t UESTA6;      /**< \brief Offset: 0x148 (R/  32) Endpoint Status Register */
+  __I  uint32_t UESTA7;      /**< \brief Offset: 0x14C (R/  32) Endpoint Status Register */
+       RoReg8   Reserved3[0x10];
+  __O  uint32_t UESTA0CLR;   /**< \brief Offset: 0x160 ( /W 32) Endpoint Status Clear Register */
+  __O  uint32_t UESTA1CLR;   /**< \brief Offset: 0x164 ( /W 32) Endpoint Status Clear Register */
+  __O  uint32_t UESTA2CLR;   /**< \brief Offset: 0x168 ( /W 32) Endpoint Status Clear Register */
+  __O  uint32_t UESTA3CLR;   /**< \brief Offset: 0x16C ( /W 32) Endpoint Status Clear Register */
+  __O  uint32_t UESTA4CLR;   /**< \brief Offset: 0x170 ( /W 32) Endpoint Status Clear Register */
+  __O  uint32_t UESTA5CLR;   /**< \brief Offset: 0x174 ( /W 32) Endpoint Status Clear Register */
+  __O  uint32_t UESTA6CLR;   /**< \brief Offset: 0x178 ( /W 32) Endpoint Status Clear Register */
+  __O  uint32_t UESTA7CLR;   /**< \brief Offset: 0x17C ( /W 32) Endpoint Status Clear Register */
+       RoReg8   Reserved4[0x10];
+  __O  uint32_t UESTA0SET;   /**< \brief Offset: 0x190 ( /W 32) Endpoint Status Set Register */
+  __O  uint32_t UESTA1SET;   /**< \brief Offset: 0x194 ( /W 32) Endpoint Status Set Register */
+  __O  uint32_t UESTA2SET;   /**< \brief Offset: 0x198 ( /W 32) Endpoint Status Set Register */
+  __O  uint32_t UESTA3SET;   /**< \brief Offset: 0x19C ( /W 32) Endpoint Status Set Register */
+  __O  uint32_t UESTA4SET;   /**< \brief Offset: 0x1A0 ( /W 32) Endpoint Status Set Register */
+  __O  uint32_t UESTA5SET;   /**< \brief Offset: 0x1A4 ( /W 32) Endpoint Status Set Register */
+  __O  uint32_t UESTA6SET;   /**< \brief Offset: 0x1A8 ( /W 32) Endpoint Status Set Register */
+  __O  uint32_t UESTA7SET;   /**< \brief Offset: 0x1AC ( /W 32) Endpoint Status Set Register */
+       RoReg8   Reserved5[0x10];
+  __I  uint32_t UECON0;      /**< \brief Offset: 0x1C0 (R/  32) Endpoint Control Register */
+  __I  uint32_t UECON1;      /**< \brief Offset: 0x1C4 (R/  32) Endpoint Control Register */
+  __I  uint32_t UECON2;      /**< \brief Offset: 0x1C8 (R/  32) Endpoint Control Register */
+  __I  uint32_t UECON3;      /**< \brief Offset: 0x1CC (R/  32) Endpoint Control Register */
+  __I  uint32_t UECON4;      /**< \brief Offset: 0x1D0 (R/  32) Endpoint Control Register */
+  __I  uint32_t UECON5;      /**< \brief Offset: 0x1D4 (R/  32) Endpoint Control Register */
+  __I  uint32_t UECON6;      /**< \brief Offset: 0x1D8 (R/  32) Endpoint Control Register */
+  __I  uint32_t UECON7;      /**< \brief Offset: 0x1DC (R/  32) Endpoint Control Register */
+       RoReg8   Reserved6[0x10];
+  __O  uint32_t UECON0SET;   /**< \brief Offset: 0x1F0 ( /W 32) Endpoint Control Set Register */
+  __O  uint32_t UECON1SET;   /**< \brief Offset: 0x1F4 ( /W 32) Endpoint Control Set Register */
+  __O  uint32_t UECON2SET;   /**< \brief Offset: 0x1F8 ( /W 32) Endpoint Control Set Register */
+  __O  uint32_t UECON3SET;   /**< \brief Offset: 0x1FC ( /W 32) Endpoint Control Set Register */
+  __O  uint32_t UECON4SET;   /**< \brief Offset: 0x200 ( /W 32) Endpoint Control Set Register */
+  __O  uint32_t UECON5SET;   /**< \brief Offset: 0x204 ( /W 32) Endpoint Control Set Register */
+  __O  uint32_t UECON6SET;   /**< \brief Offset: 0x208 ( /W 32) Endpoint Control Set Register */
+  __O  uint32_t UECON7SET;   /**< \brief Offset: 0x20C ( /W 32) Endpoint Control Set Register */
+       RoReg8   Reserved7[0x10];
+  __O  uint32_t UECON0CLR;   /**< \brief Offset: 0x220 ( /W 32) Endpoint Control Clear Register */
+  __O  uint32_t UECON1CLR;   /**< \brief Offset: 0x224 ( /W 32) TXINE Clear */
+  __O  uint32_t UECON2CLR;   /**< \brief Offset: 0x228 ( /W 32) TXINE Clear */
+  __O  uint32_t UECON3CLR;   /**< \brief Offset: 0x22C ( /W 32) TXINE Clear */
+  __O  uint32_t UECON4CLR;   /**< \brief Offset: 0x230 ( /W 32) TXINE Clear */
+  __O  uint32_t UECON5CLR;   /**< \brief Offset: 0x234 ( /W 32) TXINE Clear */
+  __O  uint32_t UECON6CLR;   /**< \brief Offset: 0x238 ( /W 32) TXINE Clear */
+  __O  uint32_t UECON7CLR;   /**< \brief Offset: 0x23C ( /W 32) TXINE Clear */
+       RoReg8   Reserved8[0x1C0];
+  __IO uint32_t UHCON;       /**< \brief Offset: 0x400 (R/W 32) Host General Control Register */
+  __I  uint32_t UHINT;       /**< \brief Offset: 0x404 (R/  32) Host Global Interrupt Register */
+  __O  uint32_t UHINTCLR;    /**< \brief Offset: 0x408 ( /W 32) Host Global Interrrupt Clear Register */
+  __O  uint32_t UHINTSET;    /**< \brief Offset: 0x40C ( /W 32) Host Global Interrupt Set Register */
+  __I  uint32_t UHINTE;      /**< \brief Offset: 0x410 (R/  32) Host Global Interrupt Enable Register */
+  __O  uint32_t UHINTECLR;   /**< \brief Offset: 0x414 ( /W 32) Host Global Interrupt Enable Clear Register */
+  __O  uint32_t UHINTESET;   /**< \brief Offset: 0x418 ( /W 32) Host Global Interrupt Enable Set Register */
+  __IO uint32_t UPRST;       /**< \brief Offset: 0x41C (R/W 32) Pipe Reset Register */
+  __IO uint32_t UHFNUM;      /**< \brief Offset: 0x420 (R/W 32) Host Frame Number Register */
+  __IO uint32_t UHSOFC;      /**< \brief Offset: 0x424 (R/W 32) Host Start of Frame Control Register */
+       RoReg8   Reserved9[0xD8];
+  __IO uint32_t UPCFG0;      /**< \brief Offset: 0x500 (R/W 32) Pipe Configuration Register */
+  __IO uint32_t UPCFG1;      /**< \brief Offset: 0x504 (R/W 32) Pipe Configuration Register */
+  __IO uint32_t UPCFG2;      /**< \brief Offset: 0x508 (R/W 32) Pipe Configuration Register */
+  __IO uint32_t UPCFG3;      /**< \brief Offset: 0x50C (R/W 32) Pipe Configuration Register */
+  __IO uint32_t UPCFG4;      /**< \brief Offset: 0x510 (R/W 32) Pipe Configuration Register */
+  __IO uint32_t UPCFG5;      /**< \brief Offset: 0x514 (R/W 32) Pipe Configuration Register */
+  __IO uint32_t UPCFG6;      /**< \brief Offset: 0x518 (R/W 32) Pipe Configuration Register */
+  __IO uint32_t UPCFG7;      /**< \brief Offset: 0x51C (R/W 32) Pipe Configuration Register */
+       RoReg8   Reserved10[0x10];
+  __I  uint32_t UPSTA0;      /**< \brief Offset: 0x530 (R/  32) Pipe Status Register */
+  __I  uint32_t UPSTA1;      /**< \brief Offset: 0x534 (R/  32) Pipe Status Register */
+  __I  uint32_t UPSTA2;      /**< \brief Offset: 0x538 (R/  32) Pipe Status Register */
+  __I  uint32_t UPSTA3;      /**< \brief Offset: 0x53C (R/  32) Pipe Status Register */
+  __I  uint32_t UPSTA4;      /**< \brief Offset: 0x540 (R/  32) Pipe Status Register */
+  __I  uint32_t UPSTA5;      /**< \brief Offset: 0x544 (R/  32) Pipe Status Register */
+  __I  uint32_t UPSTA6;      /**< \brief Offset: 0x548 (R/  32) Pipe Status Register */
+  __I  uint32_t UPSTA7;      /**< \brief Offset: 0x54C (R/  32) Pipe Status Register */
+       RoReg8   Reserved11[0x10];
+  __O  uint32_t UPSTA0CLR;   /**< \brief Offset: 0x560 ( /W 32) Pipe Status Clear Register */
+  __O  uint32_t UPSTA1CLR;   /**< \brief Offset: 0x564 ( /W 32) Pipe Status Clear Register */
+  __O  uint32_t UPSTA2CLR;   /**< \brief Offset: 0x568 ( /W 32) Pipe Status Clear Register */
+  __O  uint32_t UPSTA3CLR;   /**< \brief Offset: 0x56C ( /W 32) Pipe Status Clear Register */
+  __O  uint32_t UPSTA4CLR;   /**< \brief Offset: 0x570 ( /W 32) Pipe Status Clear Register */
+  __O  uint32_t UPSTA5CLR;   /**< \brief Offset: 0x574 ( /W 32) Pipe Status Clear Register */
+  __O  uint32_t UPSTA6CLR;   /**< \brief Offset: 0x578 ( /W 32) Pipe Status Clear Register */
+  __O  uint32_t UPSTA7CLR;   /**< \brief Offset: 0x57C ( /W 32) Pipe Status Clear Register */
+       RoReg8   Reserved12[0x10];
+  __O  uint32_t UPSTA0SET;   /**< \brief Offset: 0x590 ( /W 32) Pipe Status Set Register */
+  __O  uint32_t UPSTA1SET;   /**< \brief Offset: 0x594 ( /W 32) Pipe Status Set Register */
+  __O  uint32_t UPSTA2SET;   /**< \brief Offset: 0x598 ( /W 32) Pipe Status Set Register */
+  __O  uint32_t UPSTA3SET;   /**< \brief Offset: 0x59C ( /W 32) Pipe Status Set Register */
+  __O  uint32_t UPSTA4SET;   /**< \brief Offset: 0x5A0 ( /W 32) Pipe Status Set Register */
+  __O  uint32_t UPSTA5SET;   /**< \brief Offset: 0x5A4 ( /W 32) Pipe Status Set Register */
+  __O  uint32_t UPSTA6SET;   /**< \brief Offset: 0x5A8 ( /W 32) Pipe Status Set Register */
+  __O  uint32_t UPSTA7SET;   /**< \brief Offset: 0x5AC ( /W 32) Pipe Status Set Register */
+       RoReg8   Reserved13[0x10];
+  __I  uint32_t UPCON0;      /**< \brief Offset: 0x5C0 (R/  32) Pipe Control Register */
+  __I  uint32_t UPCON1;      /**< \brief Offset: 0x5C4 (R/  32) Pipe Control Register */
+  __I  uint32_t UPCON2;      /**< \brief Offset: 0x5C8 (R/  32) Pipe Control Register */
+  __I  uint32_t UPCON3;      /**< \brief Offset: 0x5CC (R/  32) Pipe Control Register */
+  __I  uint32_t UPCON4;      /**< \brief Offset: 0x5D0 (R/  32) Pipe Control Register */
+  __I  uint32_t UPCON5;      /**< \brief Offset: 0x5D4 (R/  32) Pipe Control Register */
+  __I  uint32_t UPCON6;      /**< \brief Offset: 0x5D8 (R/  32) Pipe Control Register */
+  __I  uint32_t UPCON7;      /**< \brief Offset: 0x5DC (R/  32) Pipe Control Register */
+       RoReg8   Reserved14[0x10];
+  __O  uint32_t UPCON0SET;   /**< \brief Offset: 0x5F0 ( /W 32) Pipe Control Set Register */
+  __O  uint32_t UPCON1SET;   /**< \brief Offset: 0x5F4 ( /W 32) Pipe Control Set Register */
+  __O  uint32_t UPCON2SET;   /**< \brief Offset: 0x5F8 ( /W 32) Pipe Control Set Register */
+  __O  uint32_t UPCON3SET;   /**< \brief Offset: 0x5FC ( /W 32) Pipe Control Set Register */
+  __O  uint32_t UPCON4SET;   /**< \brief Offset: 0x600 ( /W 32) Pipe Control Set Register */
+  __O  uint32_t UPCON5SET;   /**< \brief Offset: 0x604 ( /W 32) Pipe Control Set Register */
+  __O  uint32_t UPCON6SET;   /**< \brief Offset: 0x608 ( /W 32) Pipe Control Set Register */
+  __O  uint32_t UPCON7SET;   /**< \brief Offset: 0x60C ( /W 32) Pipe Control Set Register */
+       RoReg8   Reserved15[0x10];
+  __O  uint32_t UPCON0CLR;   /**< \brief Offset: 0x620 ( /W 32) Pipe Control Clear Register */
+  __O  uint32_t UPCON1CLR;   /**< \brief Offset: 0x624 ( /W 32) Pipe Control Clear Register */
+  __O  uint32_t UPCON2CLR;   /**< \brief Offset: 0x628 ( /W 32) Pipe Control Clear Register */
+  __O  uint32_t UPCON3CLR;   /**< \brief Offset: 0x62C ( /W 32) Pipe Control Clear Register */
+  __O  uint32_t UPCON4CLR;   /**< \brief Offset: 0x630 ( /W 32) Pipe Control Clear Register */
+  __O  uint32_t UPCON5CLR;   /**< \brief Offset: 0x634 ( /W 32) Pipe Control Clear Register */
+  __O  uint32_t UPCON6CLR;   /**< \brief Offset: 0x638 ( /W 32) Pipe Control Clear Register */
+  __O  uint32_t UPCON7CLR;   /**< \brief Offset: 0x63C ( /W 32) Pipe Control Clear Register */
+       RoReg8   Reserved16[0x10];
+  __IO uint32_t UPINRQ0;     /**< \brief Offset: 0x650 (R/W 32) Pipe In Request */
+  __IO uint32_t UPINRQ1;     /**< \brief Offset: 0x654 (R/W 32) Pipe In Request */
+  __IO uint32_t UPINRQ2;     /**< \brief Offset: 0x658 (R/W 32) Pipe In Request */
+  __IO uint32_t UPINRQ3;     /**< \brief Offset: 0x65C (R/W 32) Pipe In Request */
+  __IO uint32_t UPINRQ4;     /**< \brief Offset: 0x660 (R/W 32) Pipe In Request */
+  __IO uint32_t UPINRQ5;     /**< \brief Offset: 0x664 (R/W 32) Pipe In Request */
+  __IO uint32_t UPINRQ6;     /**< \brief Offset: 0x668 (R/W 32) Pipe In Request */
+  __IO uint32_t UPINRQ7;     /**< \brief Offset: 0x66C (R/W 32) Pipe In Request */
+       RoReg8   Reserved17[0x190];
+  __IO uint32_t USBCON;      /**< \brief Offset: 0x800 (R/W 32) General Control Register */
+  __I  uint32_t USBSTA;      /**< \brief Offset: 0x804 (R/  32) General Status Register */
+  __O  uint32_t USBSTACLR;   /**< \brief Offset: 0x808 ( /W 32) General Status Clear Register */
+  __O  uint32_t USBSTASET;   /**< \brief Offset: 0x80C ( /W 32) General Status Set Register */
+       RoReg8   Reserved18[0x8];
+  __I  uint32_t UVERS;       /**< \brief Offset: 0x818 (R/  32) IP Version Register */
+  __I  uint32_t UFEATURES;   /**< \brief Offset: 0x81C (R/  32) IP Features Register */
+  __I  uint32_t UADDRSIZE;   /**< \brief Offset: 0x820 (R/  32) IP PB address size Register */
+  __I  uint32_t UNAME1;      /**< \brief Offset: 0x824 (R/  32) IP Name Part One: HUSB */
+  __I  uint32_t UNAME2;      /**< \brief Offset: 0x828 (R/  32) IP Name Part Two: HOST */
+  __I  uint32_t USBFSM;      /**< \brief Offset: 0x82C (R/  32) USB internal finite state machine */
+  __IO uint32_t UDESC;       /**< \brief Offset: 0x830 (R/W 32) Endpoint descriptor table */
 } Usbc;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

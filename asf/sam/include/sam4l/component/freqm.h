@@ -258,33 +258,18 @@ typedef union {
 
 /** \brief FREQM hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  FREQM_CTRL_Type           CTRL;        /**< \brief Offset: 0x000 ( /W 32) Control register */
-  __IO FREQM_MODE_Type           MODE;        /**< \brief Offset: 0x004 (R/W 32) Mode  register */
-  __I  FREQM_STATUS_Type         STATUS;      /**< \brief Offset: 0x008 (R/  32) Status  register */
-  __I  FREQM_VALUE_Type          VALUE;       /**< \brief Offset: 0x00C (R/  32) Value register */
-  __O  FREQM_IER_Type            IER;         /**< \brief Offset: 0x010 ( /W 32) Interrupt Enable Register */
-  __O  FREQM_IDR_Type            IDR;         /**< \brief Offset: 0x014 ( /W 32) Interrupt Diable Register */
-  __I  FREQM_IMR_Type            IMR;         /**< \brief Offset: 0x018 (R/  32) Interrupt Mask Register */
-  __I  FREQM_ISR_Type            ISR;         /**< \brief Offset: 0x01C (R/  32) Interrupt Status Register */
-  __O  FREQM_ICR_Type            ICR;         /**< \brief Offset: 0x020 ( /W 32) Interrupt Clear Register */
-       RoReg8                    Reserved1[0x3D8];
-  __I  FREQM_VERSION_Type        VERSION;     /**< \brief Offset: 0x3FC (R/  32) Version Register */
- } bf;
- struct {
-  WoReg   FREQM_CTRL;         /**< \brief (FREQM Offset: 0x000) Control register */
-  RwReg   FREQM_MODE;         /**< \brief (FREQM Offset: 0x004) Mode  register */
-  RoReg   FREQM_STATUS;       /**< \brief (FREQM Offset: 0x008) Status  register */
-  RoReg   FREQM_VALUE;        /**< \brief (FREQM Offset: 0x00C) Value register */
-  WoReg   FREQM_IER;          /**< \brief (FREQM Offset: 0x010) Interrupt Enable Register */
-  WoReg   FREQM_IDR;          /**< \brief (FREQM Offset: 0x014) Interrupt Diable Register */
-  RoReg   FREQM_IMR;          /**< \brief (FREQM Offset: 0x018) Interrupt Mask Register */
-  RoReg   FREQM_ISR;          /**< \brief (FREQM Offset: 0x01C) Interrupt Status Register */
-  WoReg   FREQM_ICR;          /**< \brief (FREQM Offset: 0x020) Interrupt Clear Register */
-  RoReg8  Reserved2[0x3D8];
-  RoReg   FREQM_VERSION;      /**< \brief (FREQM Offset: 0x3FC) Version Register */
- } reg;
+typedef struct {
+  __O  uint32_t CTRL;        /**< \brief Offset: 0x000 ( /W 32) Control register */
+  __IO uint32_t MODE;        /**< \brief Offset: 0x004 (R/W 32) Mode  register */
+  __I  uint32_t STATUS;      /**< \brief Offset: 0x008 (R/  32) Status  register */
+  __I  uint32_t VALUE;       /**< \brief Offset: 0x00C (R/  32) Value register */
+  __O  uint32_t IER;         /**< \brief Offset: 0x010 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x014 ( /W 32) Interrupt Diable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x018 (R/  32) Interrupt Mask Register */
+  __I  uint32_t ISR;         /**< \brief Offset: 0x01C (R/  32) Interrupt Status Register */
+  __O  uint32_t ICR;         /**< \brief Offset: 0x020 ( /W 32) Interrupt Clear Register */
+       RoReg8   Reserved1[0x3D8];
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x3FC (R/  32) Version Register */
 } Freqm;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

@@ -722,63 +722,33 @@ typedef union {
 
 /** \brief LCDCA hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  LCDCA_CR_Type             CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
-  __IO LCDCA_CFG_Type            CFG;         /**< \brief Offset: 0x04 (R/W 32) Configuration Register */
-  __IO LCDCA_TIM_Type            TIM;         /**< \brief Offset: 0x08 (R/W 32) Timing Register */
-  __I  LCDCA_SR_Type             SR;          /**< \brief Offset: 0x0C (R/  32) Status Register */
-  __O  LCDCA_SCR_Type            SCR;         /**< \brief Offset: 0x10 ( /W 32) Status Clear Register */
-  __IO LCDCA_DRL0_Type           DRL0;        /**< \brief Offset: 0x14 (R/W 32) Data Register Low 0 */
-  __IO LCDCA_DRH0_Type           DRH0;        /**< \brief Offset: 0x18 (R/W 32) Data Register High 0 */
-  __IO LCDCA_DRL1_Type           DRL1;        /**< \brief Offset: 0x1C (R/W 32) Data Register Low 1 */
-  __IO LCDCA_DRH1_Type           DRH1;        /**< \brief Offset: 0x20 (R/W 32) Data Register High 1 */
-  __IO LCDCA_DRL2_Type           DRL2;        /**< \brief Offset: 0x24 (R/W 32) Data Register Low 2 */
-  __IO LCDCA_DRH2_Type           DRH2;        /**< \brief Offset: 0x28 (R/W 32) Data Register High 2 */
-  __IO LCDCA_DRL3_Type           DRL3;        /**< \brief Offset: 0x2C (R/W 32) Data Register Low 3 */
-  __IO LCDCA_DRH3_Type           DRH3;        /**< \brief Offset: 0x30 (R/W 32) Data Register High 3 */
-  __O  LCDCA_IADR_Type           IADR;        /**< \brief Offset: 0x34 ( /W 32) Indirect Access Data Register */
-  __IO LCDCA_BCFG_Type           BCFG;        /**< \brief Offset: 0x38 (R/W 32) Blink Configuration Register */
-  __IO LCDCA_CSRCFG_Type         CSRCFG;      /**< \brief Offset: 0x3C (R/W 32) Circular Shift Register Configuration */
-  __IO LCDCA_CMCFG_Type          CMCFG;       /**< \brief Offset: 0x40 (R/W 32) Character Mapping Configuration Register */
-  __O  LCDCA_CMDR_Type           CMDR;        /**< \brief Offset: 0x44 ( /W 32) Character Mapping Data Register */
-  __IO LCDCA_ACMCFG_Type         ACMCFG;      /**< \brief Offset: 0x48 (R/W 32) Automated Character Mapping Configuration Register */
-  __O  LCDCA_ACMDR_Type          ACMDR;       /**< \brief Offset: 0x4C ( /W 32) Automated Character Mapping Data Register */
-  __IO LCDCA_ABMCFG_Type         ABMCFG;      /**< \brief Offset: 0x50 (R/W 32) Automated Bit Mapping Configuration Register */
-  __O  LCDCA_ABMDR_Type          ABMDR;       /**< \brief Offset: 0x54 ( /W 32) Automated Bit Mapping Data Register */
-  __O  LCDCA_IER_Type            IER;         /**< \brief Offset: 0x58 ( /W 32) Interrupt Enable Register */
-  __O  LCDCA_IDR_Type            IDR;         /**< \brief Offset: 0x5C ( /W 32) Interrupt Disable Register */
-  __I  LCDCA_IMR_Type            IMR;         /**< \brief Offset: 0x60 (R/  32) Interrupt Mask Register */
-  __I  LCDCA_VERSION_Type        VERSION;     /**< \brief Offset: 0x64 (R/  32) Version Register */
- } bf;
- struct {
-  WoReg   LCDCA_CR;           /**< \brief (LCDCA Offset: 0x00) Control Register */
-  RwReg   LCDCA_CFG;          /**< \brief (LCDCA Offset: 0x04) Configuration Register */
-  RwReg   LCDCA_TIM;          /**< \brief (LCDCA Offset: 0x08) Timing Register */
-  RoReg   LCDCA_SR;           /**< \brief (LCDCA Offset: 0x0C) Status Register */
-  WoReg   LCDCA_SCR;          /**< \brief (LCDCA Offset: 0x10) Status Clear Register */
-  RwReg   LCDCA_DRL0;         /**< \brief (LCDCA Offset: 0x14) Data Register Low 0 */
-  RwReg   LCDCA_DRH0;         /**< \brief (LCDCA Offset: 0x18) Data Register High 0 */
-  RwReg   LCDCA_DRL1;         /**< \brief (LCDCA Offset: 0x1C) Data Register Low 1 */
-  RwReg   LCDCA_DRH1;         /**< \brief (LCDCA Offset: 0x20) Data Register High 1 */
-  RwReg   LCDCA_DRL2;         /**< \brief (LCDCA Offset: 0x24) Data Register Low 2 */
-  RwReg   LCDCA_DRH2;         /**< \brief (LCDCA Offset: 0x28) Data Register High 2 */
-  RwReg   LCDCA_DRL3;         /**< \brief (LCDCA Offset: 0x2C) Data Register Low 3 */
-  RwReg   LCDCA_DRH3;         /**< \brief (LCDCA Offset: 0x30) Data Register High 3 */
-  WoReg   LCDCA_IADR;         /**< \brief (LCDCA Offset: 0x34) Indirect Access Data Register */
-  RwReg   LCDCA_BCFG;         /**< \brief (LCDCA Offset: 0x38) Blink Configuration Register */
-  RwReg   LCDCA_CSRCFG;       /**< \brief (LCDCA Offset: 0x3C) Circular Shift Register Configuration */
-  RwReg   LCDCA_CMCFG;        /**< \brief (LCDCA Offset: 0x40) Character Mapping Configuration Register */
-  WoReg   LCDCA_CMDR;         /**< \brief (LCDCA Offset: 0x44) Character Mapping Data Register */
-  RwReg   LCDCA_ACMCFG;       /**< \brief (LCDCA Offset: 0x48) Automated Character Mapping Configuration Register */
-  WoReg   LCDCA_ACMDR;        /**< \brief (LCDCA Offset: 0x4C) Automated Character Mapping Data Register */
-  RwReg   LCDCA_ABMCFG;       /**< \brief (LCDCA Offset: 0x50) Automated Bit Mapping Configuration Register */
-  WoReg   LCDCA_ABMDR;        /**< \brief (LCDCA Offset: 0x54) Automated Bit Mapping Data Register */
-  WoReg   LCDCA_IER;          /**< \brief (LCDCA Offset: 0x58) Interrupt Enable Register */
-  WoReg   LCDCA_IDR;          /**< \brief (LCDCA Offset: 0x5C) Interrupt Disable Register */
-  RoReg   LCDCA_IMR;          /**< \brief (LCDCA Offset: 0x60) Interrupt Mask Register */
-  RoReg   LCDCA_VERSION;      /**< \brief (LCDCA Offset: 0x64) Version Register */
- } reg;
+typedef struct {
+  __O  uint32_t CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
+  __IO uint32_t CFG;         /**< \brief Offset: 0x04 (R/W 32) Configuration Register */
+  __IO uint32_t TIM;         /**< \brief Offset: 0x08 (R/W 32) Timing Register */
+  __I  uint32_t SR;          /**< \brief Offset: 0x0C (R/  32) Status Register */
+  __O  uint32_t SCR;         /**< \brief Offset: 0x10 ( /W 32) Status Clear Register */
+  __IO uint32_t DRL0;        /**< \brief Offset: 0x14 (R/W 32) Data Register Low 0 */
+  __IO uint32_t DRH0;        /**< \brief Offset: 0x18 (R/W 32) Data Register High 0 */
+  __IO uint32_t DRL1;        /**< \brief Offset: 0x1C (R/W 32) Data Register Low 1 */
+  __IO uint32_t DRH1;        /**< \brief Offset: 0x20 (R/W 32) Data Register High 1 */
+  __IO uint32_t DRL2;        /**< \brief Offset: 0x24 (R/W 32) Data Register Low 2 */
+  __IO uint32_t DRH2;        /**< \brief Offset: 0x28 (R/W 32) Data Register High 2 */
+  __IO uint32_t DRL3;        /**< \brief Offset: 0x2C (R/W 32) Data Register Low 3 */
+  __IO uint32_t DRH3;        /**< \brief Offset: 0x30 (R/W 32) Data Register High 3 */
+  __O  uint32_t IADR;        /**< \brief Offset: 0x34 ( /W 32) Indirect Access Data Register */
+  __IO uint32_t BCFG;        /**< \brief Offset: 0x38 (R/W 32) Blink Configuration Register */
+  __IO uint32_t CSRCFG;      /**< \brief Offset: 0x3C (R/W 32) Circular Shift Register Configuration */
+  __IO uint32_t CMCFG;       /**< \brief Offset: 0x40 (R/W 32) Character Mapping Configuration Register */
+  __O  uint32_t CMDR;        /**< \brief Offset: 0x44 ( /W 32) Character Mapping Data Register */
+  __IO uint32_t ACMCFG;      /**< \brief Offset: 0x48 (R/W 32) Automated Character Mapping Configuration Register */
+  __O  uint32_t ACMDR;       /**< \brief Offset: 0x4C ( /W 32) Automated Character Mapping Data Register */
+  __IO uint32_t ABMCFG;      /**< \brief Offset: 0x50 (R/W 32) Automated Bit Mapping Configuration Register */
+  __O  uint32_t ABMDR;       /**< \brief Offset: 0x54 ( /W 32) Automated Bit Mapping Data Register */
+  __O  uint32_t IER;         /**< \brief Offset: 0x58 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x5C ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x60 (R/  32) Interrupt Mask Register */
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x64 (R/  32) Version Register */
 } Lcdca;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

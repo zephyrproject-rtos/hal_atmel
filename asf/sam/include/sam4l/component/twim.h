@@ -733,45 +733,24 @@ typedef union {
 
 /** \brief TWIM hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  TWIM_CR_Type              CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
-  __IO TWIM_CWGR_Type            CWGR;        /**< \brief Offset: 0x04 (R/W 32) Clock Waveform Generator Register */
-  __IO TWIM_SMBTR_Type           SMBTR;       /**< \brief Offset: 0x08 (R/W 32) SMBus Timing Register */
-  __IO TWIM_CMDR_Type            CMDR;        /**< \brief Offset: 0x0C (R/W 32) Command Register */
-  __IO TWIM_NCMDR_Type           NCMDR;       /**< \brief Offset: 0x10 (R/W 32) Next Command Register */
-  __I  TWIM_RHR_Type             RHR;         /**< \brief Offset: 0x14 (R/  32) Receive Holding Register */
-  __O  TWIM_THR_Type             THR;         /**< \brief Offset: 0x18 ( /W 32) Transmit Holding Register */
-  __I  TWIM_SR_Type              SR;          /**< \brief Offset: 0x1C (R/  32) Status Register */
-  __O  TWIM_IER_Type             IER;         /**< \brief Offset: 0x20 ( /W 32) Interrupt Enable Register */
-  __O  TWIM_IDR_Type             IDR;         /**< \brief Offset: 0x24 ( /W 32) Interrupt Disable Register */
-  __I  TWIM_IMR_Type             IMR;         /**< \brief Offset: 0x28 (R/  32) Interrupt Mask Register */
-  __O  TWIM_SCR_Type             SCR;         /**< \brief Offset: 0x2C ( /W 32) Status Clear Register */
-  __I  TWIM_PR_Type              PR;          /**< \brief Offset: 0x30 (R/  32) Parameter Register */
-  __I  TWIM_VR_Type              VR;          /**< \brief Offset: 0x34 (R/  32) Version Register */
-  __IO TWIM_HSCWGR_Type          HSCWGR;      /**< \brief Offset: 0x38 (R/W 32) HS-mode Clock Waveform Generator */
-  __IO TWIM_SRR_Type             SRR;         /**< \brief Offset: 0x3C (R/W 32) Slew Rate Register */
-  __IO TWIM_HSSRR_Type           HSSRR;       /**< \brief Offset: 0x40 (R/W 32) HS-mode Slew Rate Register */
- } bf;
- struct {
-  WoReg   TWIM_CR;            /**< \brief (TWIM Offset: 0x00) Control Register */
-  RwReg   TWIM_CWGR;          /**< \brief (TWIM Offset: 0x04) Clock Waveform Generator Register */
-  RwReg   TWIM_SMBTR;         /**< \brief (TWIM Offset: 0x08) SMBus Timing Register */
-  RwReg   TWIM_CMDR;          /**< \brief (TWIM Offset: 0x0C) Command Register */
-  RwReg   TWIM_NCMDR;         /**< \brief (TWIM Offset: 0x10) Next Command Register */
-  RoReg   TWIM_RHR;           /**< \brief (TWIM Offset: 0x14) Receive Holding Register */
-  WoReg   TWIM_THR;           /**< \brief (TWIM Offset: 0x18) Transmit Holding Register */
-  RoReg   TWIM_SR;            /**< \brief (TWIM Offset: 0x1C) Status Register */
-  WoReg   TWIM_IER;           /**< \brief (TWIM Offset: 0x20) Interrupt Enable Register */
-  WoReg   TWIM_IDR;           /**< \brief (TWIM Offset: 0x24) Interrupt Disable Register */
-  RoReg   TWIM_IMR;           /**< \brief (TWIM Offset: 0x28) Interrupt Mask Register */
-  WoReg   TWIM_SCR;           /**< \brief (TWIM Offset: 0x2C) Status Clear Register */
-  RoReg   TWIM_PR;            /**< \brief (TWIM Offset: 0x30) Parameter Register */
-  RoReg   TWIM_VR;            /**< \brief (TWIM Offset: 0x34) Version Register */
-  RwReg   TWIM_HSCWGR;        /**< \brief (TWIM Offset: 0x38) HS-mode Clock Waveform Generator */
-  RwReg   TWIM_SRR;           /**< \brief (TWIM Offset: 0x3C) Slew Rate Register */
-  RwReg   TWIM_HSSRR;         /**< \brief (TWIM Offset: 0x40) HS-mode Slew Rate Register */
- } reg;
+typedef struct {
+  __O  uint32_t CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
+  __IO uint32_t CWGR;        /**< \brief Offset: 0x04 (R/W 32) Clock Waveform Generator Register */
+  __IO uint32_t SMBTR;       /**< \brief Offset: 0x08 (R/W 32) SMBus Timing Register */
+  __IO uint32_t CMDR;        /**< \brief Offset: 0x0C (R/W 32) Command Register */
+  __IO uint32_t NCMDR;       /**< \brief Offset: 0x10 (R/W 32) Next Command Register */
+  __I  uint32_t RHR;         /**< \brief Offset: 0x14 (R/  32) Receive Holding Register */
+  __O  uint32_t THR;         /**< \brief Offset: 0x18 ( /W 32) Transmit Holding Register */
+  __I  uint32_t SR;          /**< \brief Offset: 0x1C (R/  32) Status Register */
+  __O  uint32_t IER;         /**< \brief Offset: 0x20 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x24 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x28 (R/  32) Interrupt Mask Register */
+  __O  uint32_t SCR;         /**< \brief Offset: 0x2C ( /W 32) Status Clear Register */
+  __I  uint32_t PR;          /**< \brief Offset: 0x30 (R/  32) Parameter Register */
+  __I  uint32_t VR;          /**< \brief Offset: 0x34 (R/  32) Version Register */
+  __IO uint32_t HSCWGR;      /**< \brief Offset: 0x38 (R/W 32) HS-mode Clock Waveform Generator */
+  __IO uint32_t SRR;         /**< \brief Offset: 0x3C (R/W 32) Slew Rate Register */
+  __IO uint32_t HSSRR;       /**< \brief Offset: 0x40 (R/W 32) HS-mode Slew Rate Register */
 } Twim;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

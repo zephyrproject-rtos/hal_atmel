@@ -8731,209 +8731,100 @@ typedef union {
 
 /** \brief GpioPort hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO GPIO_GPER_Type            GPER;        /**< \brief Offset: 0x000 (R/W 32) GPIO Enable Register */
-  __O  GPIO_GPERS_Type           GPERS;       /**< \brief Offset: 0x004 ( /W 32) GPIO Enable Register - Set */
-  __O  GPIO_GPERC_Type           GPERC;       /**< \brief Offset: 0x008 ( /W 32) GPIO Enable Register - Clear */
-  __O  GPIO_GPERT_Type           GPERT;       /**< \brief Offset: 0x00C ( /W 32) GPIO Enable Register - Toggle */
-  __IO GPIO_PMR0_Type            PMR0;        /**< \brief Offset: 0x010 (R/W 32) Peripheral Mux Register 0 */
-  __O  GPIO_PMR0S_Type           PMR0S;       /**< \brief Offset: 0x014 ( /W 32) Peripheral Mux Register 0 - Set */
-  __O  GPIO_PMR0C_Type           PMR0C;       /**< \brief Offset: 0x018 ( /W 32) Peripheral Mux Register 0 - Clear */
-  __O  GPIO_PMR0T_Type           PMR0T;       /**< \brief Offset: 0x01C ( /W 32) Peripheral Mux Register 0 - Toggle */
-  __IO GPIO_PMR1_Type            PMR1;        /**< \brief Offset: 0x020 (R/W 32) Peripheral Mux Register 1 */
-  __O  GPIO_PMR1S_Type           PMR1S;       /**< \brief Offset: 0x024 ( /W 32) Peripheral Mux Register 1 - Set */
-  __O  GPIO_PMR1C_Type           PMR1C;       /**< \brief Offset: 0x028 ( /W 32) Peripheral Mux Register 1 - Clear */
-  __O  GPIO_PMR1T_Type           PMR1T;       /**< \brief Offset: 0x02C ( /W 32) Peripheral Mux Register 1 - Toggle */
-  __IO GPIO_PMR2_Type            PMR2;        /**< \brief Offset: 0x030 (R/W 32) Peripheral Mux Register 2 */
-  __O  GPIO_PMR2S_Type           PMR2S;       /**< \brief Offset: 0x034 ( /W 32) Peripheral Mux Register 2 - Set */
-  __O  GPIO_PMR2C_Type           PMR2C;       /**< \brief Offset: 0x038 ( /W 32) Peripheral Mux Register 2 - Clear */
-  __O  GPIO_PMR2T_Type           PMR2T;       /**< \brief Offset: 0x03C ( /W 32) Peripheral Mux Register 2 - Toggle */
-  __IO GPIO_ODER_Type            ODER;        /**< \brief Offset: 0x040 (R/W 32) Output Driver Enable Register */
-  __O  GPIO_ODERS_Type           ODERS;       /**< \brief Offset: 0x044 ( /W 32) Output Driver Enable Register - Set */
-  __O  GPIO_ODERC_Type           ODERC;       /**< \brief Offset: 0x048 ( /W 32) Output Driver Enable Register - Clear */
-  __O  GPIO_ODERT_Type           ODERT;       /**< \brief Offset: 0x04C ( /W 32) Output Driver Enable Register - Toggle */
-  __IO GPIO_OVR_Type             OVR;         /**< \brief Offset: 0x050 (R/W 32) Output Value Register */
-  __O  GPIO_OVRS_Type            OVRS;        /**< \brief Offset: 0x054 ( /W 32) Output Value Register - Set */
-  __O  GPIO_OVRC_Type            OVRC;        /**< \brief Offset: 0x058 ( /W 32) Output Value Register - Clear */
-  __O  GPIO_OVRT_Type            OVRT;        /**< \brief Offset: 0x05C ( /W 32) Output Value Register - Toggle */
-  __I  GPIO_PVR_Type             PVR;         /**< \brief Offset: 0x060 (R/  32) Pin Value Register */
-       RoReg8                    Reserved1[0xC];
-  __IO GPIO_PUER_Type            PUER;        /**< \brief Offset: 0x070 (R/W 32) Pull-up Enable Register */
-  __O  GPIO_PUERS_Type           PUERS;       /**< \brief Offset: 0x074 ( /W 32) Pull-up Enable Register - Set */
-  __O  GPIO_PUERC_Type           PUERC;       /**< \brief Offset: 0x078 ( /W 32) Pull-up Enable Register - Clear */
-  __O  GPIO_PUERT_Type           PUERT;       /**< \brief Offset: 0x07C ( /W 32) Pull-up Enable Register - Toggle */
-  __IO GPIO_PDER_Type            PDER;        /**< \brief Offset: 0x080 (R/W 32) Pull-down Enable Register */
-  __O  GPIO_PDERS_Type           PDERS;       /**< \brief Offset: 0x084 ( /W 32) Pull-down Enable Register - Set */
-  __O  GPIO_PDERC_Type           PDERC;       /**< \brief Offset: 0x088 ( /W 32) Pull-down Enable Register - Clear */
-  __O  GPIO_PDERT_Type           PDERT;       /**< \brief Offset: 0x08C ( /W 32) Pull-down Enable Register - Toggle */
-  __IO GPIO_IER_Type             IER;         /**< \brief Offset: 0x090 (R/W 32) Interrupt Enable Register */
-  __O  GPIO_IERS_Type            IERS;        /**< \brief Offset: 0x094 ( /W 32) Interrupt Enable Register - Set */
-  __O  GPIO_IERC_Type            IERC;        /**< \brief Offset: 0x098 ( /W 32) Interrupt Enable Register - Clear */
-  __O  GPIO_IERT_Type            IERT;        /**< \brief Offset: 0x09C ( /W 32) Interrupt Enable Register - Toggle */
-  __IO GPIO_IMR0_Type            IMR0;        /**< \brief Offset: 0x0A0 (R/W 32) Interrupt Mode Register 0 */
-  __O  GPIO_IMR0S_Type           IMR0S;       /**< \brief Offset: 0x0A4 ( /W 32) Interrupt Mode Register 0 - Set */
-  __O  GPIO_IMR0C_Type           IMR0C;       /**< \brief Offset: 0x0A8 ( /W 32) Interrupt Mode Register 0 - Clear */
-  __O  GPIO_IMR0T_Type           IMR0T;       /**< \brief Offset: 0x0AC ( /W 32) Interrupt Mode Register 0 - Toggle */
-  __IO GPIO_IMR1_Type            IMR1;        /**< \brief Offset: 0x0B0 (R/W 32) Interrupt Mode Register 1 */
-  __O  GPIO_IMR1S_Type           IMR1S;       /**< \brief Offset: 0x0B4 ( /W 32) Interrupt Mode Register 1 - Set */
-  __O  GPIO_IMR1C_Type           IMR1C;       /**< \brief Offset: 0x0B8 ( /W 32) Interrupt Mode Register 1 - Clear */
-  __O  GPIO_IMR1T_Type           IMR1T;       /**< \brief Offset: 0x0BC ( /W 32) Interrupt Mode Register 1 - Toggle */
-  __IO GPIO_GFER_Type            GFER;        /**< \brief Offset: 0x0C0 (R/W 32) Glitch Filter Enable Register */
-  __O  GPIO_GFERS_Type           GFERS;       /**< \brief Offset: 0x0C4 ( /W 32) Glitch Filter Enable Register - Set */
-  __O  GPIO_GFERC_Type           GFERC;       /**< \brief Offset: 0x0C8 ( /W 32) Glitch Filter Enable Register - Clear */
-  __O  GPIO_GFERT_Type           GFERT;       /**< \brief Offset: 0x0CC ( /W 32) Glitch Filter Enable Register - Toggle */
-  __I  GPIO_IFR_Type             IFR;         /**< \brief Offset: 0x0D0 (R/  32) Interrupt Flag Register */
-       RoReg8                    Reserved2[0x4];
-  __O  GPIO_IFRC_Type            IFRC;        /**< \brief Offset: 0x0D8 ( /W 32) Interrupt Flag Register - Clear */
-       RoReg8                    Reserved3[0x4];
-  __IO GPIO_ODMER_Type           ODMER;       /**< \brief Offset: 0x0E0 (R/W 32) Open Drain Mode Register */
-  __O  GPIO_ODMERS_Type          ODMERS;      /**< \brief Offset: 0x0E4 ( /W 32) Open Drain Mode Register - Set */
-  __O  GPIO_ODMERC_Type          ODMERC;      /**< \brief Offset: 0x0E8 ( /W 32) Open Drain Mode Register - Clear */
-  __O  GPIO_ODMERT_Type          ODMERT;      /**< \brief Offset: 0x0EC ( /W 32) Open Drain Mode Register - Toggle */
-       RoReg8                    Reserved4[0x10];
-  __IO GPIO_ODCR0_Type           ODCR0;       /**< \brief Offset: 0x100 (R/W 32) Output Driving Capability Register 0 */
-  __IO GPIO_ODCR0S_Type          ODCR0S;      /**< \brief Offset: 0x104 (R/W 32) Output Driving Capability Register 0 - Set */
-  __IO GPIO_ODCR0C_Type          ODCR0C;      /**< \brief Offset: 0x108 (R/W 32) Output Driving Capability Register 0 - Clear */
-  __IO GPIO_ODCR0T_Type          ODCR0T;      /**< \brief Offset: 0x10C (R/W 32) Output Driving Capability Register 0 - Toggle */
-  __IO GPIO_ODCR1_Type           ODCR1;       /**< \brief Offset: 0x110 (R/W 32) Output Driving Capability Register 1 */
-  __IO GPIO_ODCR1S_Type          ODCR1S;      /**< \brief Offset: 0x114 (R/W 32) Output Driving Capability Register 1 - Set */
-  __IO GPIO_ODCR1C_Type          ODCR1C;      /**< \brief Offset: 0x118 (R/W 32) Output Driving Capability Register 1 - Clear */
-  __IO GPIO_ODCR1T_Type          ODCR1T;      /**< \brief Offset: 0x11C (R/W 32) Output Driving Capability Register 1 - Toggle */
-       RoReg8                    Reserved5[0x10];
-  __IO GPIO_OSRR0_Type           OSRR0;       /**< \brief Offset: 0x130 (R/W 32) Output Slew Rate Register 0 */
-  __IO GPIO_OSRR0S_Type          OSRR0S;      /**< \brief Offset: 0x134 (R/W 32) Output Slew Rate Register 0 - Set */
-  __IO GPIO_OSRR0C_Type          OSRR0C;      /**< \brief Offset: 0x138 (R/W 32) Output Slew Rate Register 0 - Clear */
-  __IO GPIO_OSRR0T_Type          OSRR0T;      /**< \brief Offset: 0x13C (R/W 32) Output Slew Rate Register 0 - Toggle */
-       RoReg8                    Reserved6[0x20];
-  __IO GPIO_STER_Type            STER;        /**< \brief Offset: 0x160 (R/W 32) Schmitt Trigger Enable Register */
-  __IO GPIO_STERS_Type           STERS;       /**< \brief Offset: 0x164 (R/W 32) Schmitt Trigger Enable Register - Set */
-  __IO GPIO_STERC_Type           STERC;       /**< \brief Offset: 0x168 (R/W 32) Schmitt Trigger Enable Register - Clear */
-  __IO GPIO_STERT_Type           STERT;       /**< \brief Offset: 0x16C (R/W 32) Schmitt Trigger Enable Register - Toggle */
-       RoReg8                    Reserved7[0x10];
-  __IO GPIO_EVER_Type            EVER;        /**< \brief Offset: 0x180 (R/W 32) Event Enable Register */
-  __O  GPIO_EVERS_Type           EVERS;       /**< \brief Offset: 0x184 ( /W 32) Event Enable Register - Set */
-  __O  GPIO_EVERC_Type           EVERC;       /**< \brief Offset: 0x188 ( /W 32) Event Enable Register - Clear */
-  __O  GPIO_EVERT_Type           EVERT;       /**< \brief Offset: 0x18C ( /W 32) Event Enable Register - Toggle */
-       RoReg8                    Reserved8[0x10];
-  __IO GPIO_LOCK_Type            LOCK;        /**< \brief Offset: 0x1A0 (R/W 32) Lock Register */
-  __O  GPIO_LOCKS_Type           LOCKS;       /**< \brief Offset: 0x1A4 ( /W 32) Lock Register - Set */
-  __O  GPIO_LOCKC_Type           LOCKC;       /**< \brief Offset: 0x1A8 ( /W 32) Lock Register - Clear */
-  __O  GPIO_LOCKT_Type           LOCKT;       /**< \brief Offset: 0x1AC ( /W 32) Lock Register - Toggle */
-       RoReg8                    Reserved9[0x30];
-  __O  GPIO_UNLOCK_Type          UNLOCK;      /**< \brief Offset: 0x1E0 ( /W 32) Unlock Register */
-  __IO GPIO_ASR_Type             ASR;         /**< \brief Offset: 0x1E4 (R/W 32) Access Status Register */
-       RoReg8                    Reserved10[0x10];
-  __I  GPIO_PARAMETER_Type       PARAMETER;   /**< \brief Offset: 0x1F8 (R/  32) Parameter Register */
-  __I  GPIO_VERSION_Type         VERSION;     /**< \brief Offset: 0x1FC (R/  32) Version Register */
- } bf;
- struct {
-  RwReg   GPIO_GPER;          /**< \brief (GPIO Offset: 0x000) GPIO Enable Register */
-  WoReg   GPIO_GPERS;         /**< \brief (GPIO Offset: 0x004) GPIO Enable Register - Set */
-  WoReg   GPIO_GPERC;         /**< \brief (GPIO Offset: 0x008) GPIO Enable Register - Clear */
-  WoReg   GPIO_GPERT;         /**< \brief (GPIO Offset: 0x00C) GPIO Enable Register - Toggle */
-  RwReg   GPIO_PMR0;          /**< \brief (GPIO Offset: 0x010) Peripheral Mux Register 0 */
-  WoReg   GPIO_PMR0S;         /**< \brief (GPIO Offset: 0x014) Peripheral Mux Register 0 - Set */
-  WoReg   GPIO_PMR0C;         /**< \brief (GPIO Offset: 0x018) Peripheral Mux Register 0 - Clear */
-  WoReg   GPIO_PMR0T;         /**< \brief (GPIO Offset: 0x01C) Peripheral Mux Register 0 - Toggle */
-  RwReg   GPIO_PMR1;          /**< \brief (GPIO Offset: 0x020) Peripheral Mux Register 1 */
-  WoReg   GPIO_PMR1S;         /**< \brief (GPIO Offset: 0x024) Peripheral Mux Register 1 - Set */
-  WoReg   GPIO_PMR1C;         /**< \brief (GPIO Offset: 0x028) Peripheral Mux Register 1 - Clear */
-  WoReg   GPIO_PMR1T;         /**< \brief (GPIO Offset: 0x02C) Peripheral Mux Register 1 - Toggle */
-  RwReg   GPIO_PMR2;          /**< \brief (GPIO Offset: 0x030) Peripheral Mux Register 2 */
-  WoReg   GPIO_PMR2S;         /**< \brief (GPIO Offset: 0x034) Peripheral Mux Register 2 - Set */
-  WoReg   GPIO_PMR2C;         /**< \brief (GPIO Offset: 0x038) Peripheral Mux Register 2 - Clear */
-  WoReg   GPIO_PMR2T;         /**< \brief (GPIO Offset: 0x03C) Peripheral Mux Register 2 - Toggle */
-  RwReg   GPIO_ODER;          /**< \brief (GPIO Offset: 0x040) Output Driver Enable Register */
-  WoReg   GPIO_ODERS;         /**< \brief (GPIO Offset: 0x044) Output Driver Enable Register - Set */
-  WoReg   GPIO_ODERC;         /**< \brief (GPIO Offset: 0x048) Output Driver Enable Register - Clear */
-  WoReg   GPIO_ODERT;         /**< \brief (GPIO Offset: 0x04C) Output Driver Enable Register - Toggle */
-  RwReg   GPIO_OVR;           /**< \brief (GPIO Offset: 0x050) Output Value Register */
-  WoReg   GPIO_OVRS;          /**< \brief (GPIO Offset: 0x054) Output Value Register - Set */
-  WoReg   GPIO_OVRC;          /**< \brief (GPIO Offset: 0x058) Output Value Register - Clear */
-  WoReg   GPIO_OVRT;          /**< \brief (GPIO Offset: 0x05C) Output Value Register - Toggle */
-  RoReg   GPIO_PVR;           /**< \brief (GPIO Offset: 0x060) Pin Value Register */
-  RoReg8  Reserved11[0xC];
-  RwReg   GPIO_PUER;          /**< \brief (GPIO Offset: 0x070) Pull-up Enable Register */
-  WoReg   GPIO_PUERS;         /**< \brief (GPIO Offset: 0x074) Pull-up Enable Register - Set */
-  WoReg   GPIO_PUERC;         /**< \brief (GPIO Offset: 0x078) Pull-up Enable Register - Clear */
-  WoReg   GPIO_PUERT;         /**< \brief (GPIO Offset: 0x07C) Pull-up Enable Register - Toggle */
-  RwReg   GPIO_PDER;          /**< \brief (GPIO Offset: 0x080) Pull-down Enable Register */
-  WoReg   GPIO_PDERS;         /**< \brief (GPIO Offset: 0x084) Pull-down Enable Register - Set */
-  WoReg   GPIO_PDERC;         /**< \brief (GPIO Offset: 0x088) Pull-down Enable Register - Clear */
-  WoReg   GPIO_PDERT;         /**< \brief (GPIO Offset: 0x08C) Pull-down Enable Register - Toggle */
-  RwReg   GPIO_IER;           /**< \brief (GPIO Offset: 0x090) Interrupt Enable Register */
-  WoReg   GPIO_IERS;          /**< \brief (GPIO Offset: 0x094) Interrupt Enable Register - Set */
-  WoReg   GPIO_IERC;          /**< \brief (GPIO Offset: 0x098) Interrupt Enable Register - Clear */
-  WoReg   GPIO_IERT;          /**< \brief (GPIO Offset: 0x09C) Interrupt Enable Register - Toggle */
-  RwReg   GPIO_IMR0;          /**< \brief (GPIO Offset: 0x0A0) Interrupt Mode Register 0 */
-  WoReg   GPIO_IMR0S;         /**< \brief (GPIO Offset: 0x0A4) Interrupt Mode Register 0 - Set */
-  WoReg   GPIO_IMR0C;         /**< \brief (GPIO Offset: 0x0A8) Interrupt Mode Register 0 - Clear */
-  WoReg   GPIO_IMR0T;         /**< \brief (GPIO Offset: 0x0AC) Interrupt Mode Register 0 - Toggle */
-  RwReg   GPIO_IMR1;          /**< \brief (GPIO Offset: 0x0B0) Interrupt Mode Register 1 */
-  WoReg   GPIO_IMR1S;         /**< \brief (GPIO Offset: 0x0B4) Interrupt Mode Register 1 - Set */
-  WoReg   GPIO_IMR1C;         /**< \brief (GPIO Offset: 0x0B8) Interrupt Mode Register 1 - Clear */
-  WoReg   GPIO_IMR1T;         /**< \brief (GPIO Offset: 0x0BC) Interrupt Mode Register 1 - Toggle */
-  RwReg   GPIO_GFER;          /**< \brief (GPIO Offset: 0x0C0) Glitch Filter Enable Register */
-  WoReg   GPIO_GFERS;         /**< \brief (GPIO Offset: 0x0C4) Glitch Filter Enable Register - Set */
-  WoReg   GPIO_GFERC;         /**< \brief (GPIO Offset: 0x0C8) Glitch Filter Enable Register - Clear */
-  WoReg   GPIO_GFERT;         /**< \brief (GPIO Offset: 0x0CC) Glitch Filter Enable Register - Toggle */
-  RoReg   GPIO_IFR;           /**< \brief (GPIO Offset: 0x0D0) Interrupt Flag Register */
-  RoReg8  Reserved12[0x4];
-  WoReg   GPIO_IFRC;          /**< \brief (GPIO Offset: 0x0D8) Interrupt Flag Register - Clear */
-  RoReg8  Reserved13[0x4];
-  RwReg   GPIO_ODMER;         /**< \brief (GPIO Offset: 0x0E0) Open Drain Mode Register */
-  WoReg   GPIO_ODMERS;        /**< \brief (GPIO Offset: 0x0E4) Open Drain Mode Register - Set */
-  WoReg   GPIO_ODMERC;        /**< \brief (GPIO Offset: 0x0E8) Open Drain Mode Register - Clear */
-  WoReg   GPIO_ODMERT;        /**< \brief (GPIO Offset: 0x0EC) Open Drain Mode Register - Toggle */
-  RoReg8  Reserved14[0x10];
-  RwReg   GPIO_ODCR0;         /**< \brief (GPIO Offset: 0x100) Output Driving Capability Register 0 */
-  RwReg   GPIO_ODCR0S;        /**< \brief (GPIO Offset: 0x104) Output Driving Capability Register 0 - Set */
-  RwReg   GPIO_ODCR0C;        /**< \brief (GPIO Offset: 0x108) Output Driving Capability Register 0 - Clear */
-  RwReg   GPIO_ODCR0T;        /**< \brief (GPIO Offset: 0x10C) Output Driving Capability Register 0 - Toggle */
-  RwReg   GPIO_ODCR1;         /**< \brief (GPIO Offset: 0x110) Output Driving Capability Register 1 */
-  RwReg   GPIO_ODCR1S;        /**< \brief (GPIO Offset: 0x114) Output Driving Capability Register 1 - Set */
-  RwReg   GPIO_ODCR1C;        /**< \brief (GPIO Offset: 0x118) Output Driving Capability Register 1 - Clear */
-  RwReg   GPIO_ODCR1T;        /**< \brief (GPIO Offset: 0x11C) Output Driving Capability Register 1 - Toggle */
-  RoReg8  Reserved15[0x10];
-  RwReg   GPIO_OSRR0;         /**< \brief (GPIO Offset: 0x130) Output Slew Rate Register 0 */
-  RwReg   GPIO_OSRR0S;        /**< \brief (GPIO Offset: 0x134) Output Slew Rate Register 0 - Set */
-  RwReg   GPIO_OSRR0C;        /**< \brief (GPIO Offset: 0x138) Output Slew Rate Register 0 - Clear */
-  RwReg   GPIO_OSRR0T;        /**< \brief (GPIO Offset: 0x13C) Output Slew Rate Register 0 - Toggle */
-  RoReg8  Reserved16[0x20];
-  RwReg   GPIO_STER;          /**< \brief (GPIO Offset: 0x160) Schmitt Trigger Enable Register */
-  RwReg   GPIO_STERS;         /**< \brief (GPIO Offset: 0x164) Schmitt Trigger Enable Register - Set */
-  RwReg   GPIO_STERC;         /**< \brief (GPIO Offset: 0x168) Schmitt Trigger Enable Register - Clear */
-  RwReg   GPIO_STERT;         /**< \brief (GPIO Offset: 0x16C) Schmitt Trigger Enable Register - Toggle */
-  RoReg8  Reserved17[0x10];
-  RwReg   GPIO_EVER;          /**< \brief (GPIO Offset: 0x180) Event Enable Register */
-  WoReg   GPIO_EVERS;         /**< \brief (GPIO Offset: 0x184) Event Enable Register - Set */
-  WoReg   GPIO_EVERC;         /**< \brief (GPIO Offset: 0x188) Event Enable Register - Clear */
-  WoReg   GPIO_EVERT;         /**< \brief (GPIO Offset: 0x18C) Event Enable Register - Toggle */
-  RoReg8  Reserved18[0x10];
-  RwReg   GPIO_LOCK;          /**< \brief (GPIO Offset: 0x1A0) Lock Register */
-  WoReg   GPIO_LOCKS;         /**< \brief (GPIO Offset: 0x1A4) Lock Register - Set */
-  WoReg   GPIO_LOCKC;         /**< \brief (GPIO Offset: 0x1A8) Lock Register - Clear */
-  WoReg   GPIO_LOCKT;         /**< \brief (GPIO Offset: 0x1AC) Lock Register - Toggle */
-  RoReg8  Reserved19[0x30];
-  WoReg   GPIO_UNLOCK;        /**< \brief (GPIO Offset: 0x1E0) Unlock Register */
-  RwReg   GPIO_ASR;           /**< \brief (GPIO Offset: 0x1E4) Access Status Register */
-  RoReg8  Reserved20[0x10];
-  RoReg   GPIO_PARAMETER;     /**< \brief (GPIO Offset: 0x1F8) Parameter Register */
-  RoReg   GPIO_VERSION;       /**< \brief (GPIO Offset: 0x1FC) Version Register */
- } reg;
-} GpioPort;
-#endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
-
-/** \brief GPIO hardware registers */
-#if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-       GpioPort                  Port[3];     /**< \brief Offset: 0x000 GpioPort groups [PORT_LENGTH] */
- } bf;
- struct {
-  GpioPort GPIO_PORT[3];       /**< \brief (GPIO Offset: 0x000) GpioPort groups [PORT_LENGTH] */
- } reg;
+typedef struct {
+  __IO uint32_t GPER;        /**< \brief Offset: 0x000 (R/W 32) GPIO Enable Register */
+  __O  uint32_t GPERS;       /**< \brief Offset: 0x004 ( /W 32) GPIO Enable Register - Set */
+  __O  uint32_t GPERC;       /**< \brief Offset: 0x008 ( /W 32) GPIO Enable Register - Clear */
+  __O  uint32_t GPERT;       /**< \brief Offset: 0x00C ( /W 32) GPIO Enable Register - Toggle */
+  __IO uint32_t PMR0;        /**< \brief Offset: 0x010 (R/W 32) Peripheral Mux Register 0 */
+  __O  uint32_t PMR0S;       /**< \brief Offset: 0x014 ( /W 32) Peripheral Mux Register 0 - Set */
+  __O  uint32_t PMR0C;       /**< \brief Offset: 0x018 ( /W 32) Peripheral Mux Register 0 - Clear */
+  __O  uint32_t PMR0T;       /**< \brief Offset: 0x01C ( /W 32) Peripheral Mux Register 0 - Toggle */
+  __IO uint32_t PMR1;        /**< \brief Offset: 0x020 (R/W 32) Peripheral Mux Register 1 */
+  __O  uint32_t PMR1S;       /**< \brief Offset: 0x024 ( /W 32) Peripheral Mux Register 1 - Set */
+  __O  uint32_t PMR1C;       /**< \brief Offset: 0x028 ( /W 32) Peripheral Mux Register 1 - Clear */
+  __O  uint32_t PMR1T;       /**< \brief Offset: 0x02C ( /W 32) Peripheral Mux Register 1 - Toggle */
+  __IO uint32_t PMR2;        /**< \brief Offset: 0x030 (R/W 32) Peripheral Mux Register 2 */
+  __O  uint32_t PMR2S;       /**< \brief Offset: 0x034 ( /W 32) Peripheral Mux Register 2 - Set */
+  __O  uint32_t PMR2C;       /**< \brief Offset: 0x038 ( /W 32) Peripheral Mux Register 2 - Clear */
+  __O  uint32_t PMR2T;       /**< \brief Offset: 0x03C ( /W 32) Peripheral Mux Register 2 - Toggle */
+  __IO uint32_t ODER;        /**< \brief Offset: 0x040 (R/W 32) Output Driver Enable Register */
+  __O  uint32_t ODERS;       /**< \brief Offset: 0x044 ( /W 32) Output Driver Enable Register - Set */
+  __O  uint32_t ODERC;       /**< \brief Offset: 0x048 ( /W 32) Output Driver Enable Register - Clear */
+  __O  uint32_t ODERT;       /**< \brief Offset: 0x04C ( /W 32) Output Driver Enable Register - Toggle */
+  __IO uint32_t OVR;         /**< \brief Offset: 0x050 (R/W 32) Output Value Register */
+  __O  uint32_t OVRS;        /**< \brief Offset: 0x054 ( /W 32) Output Value Register - Set */
+  __O  uint32_t OVRC;        /**< \brief Offset: 0x058 ( /W 32) Output Value Register - Clear */
+  __O  uint32_t OVRT;        /**< \brief Offset: 0x05C ( /W 32) Output Value Register - Toggle */
+  __I  uint32_t PVR;         /**< \brief Offset: 0x060 (R/  32) Pin Value Register */
+       RoReg8   Reserved1[0xC];
+  __IO uint32_t PUER;        /**< \brief Offset: 0x070 (R/W 32) Pull-up Enable Register */
+  __O  uint32_t PUERS;       /**< \brief Offset: 0x074 ( /W 32) Pull-up Enable Register - Set */
+  __O  uint32_t PUERC;       /**< \brief Offset: 0x078 ( /W 32) Pull-up Enable Register - Clear */
+  __O  uint32_t PUERT;       /**< \brief Offset: 0x07C ( /W 32) Pull-up Enable Register - Toggle */
+  __IO uint32_t PDER;        /**< \brief Offset: 0x080 (R/W 32) Pull-down Enable Register */
+  __O  uint32_t PDERS;       /**< \brief Offset: 0x084 ( /W 32) Pull-down Enable Register - Set */
+  __O  uint32_t PDERC;       /**< \brief Offset: 0x088 ( /W 32) Pull-down Enable Register - Clear */
+  __O  uint32_t PDERT;       /**< \brief Offset: 0x08C ( /W 32) Pull-down Enable Register - Toggle */
+  __IO uint32_t IER;         /**< \brief Offset: 0x090 (R/W 32) Interrupt Enable Register */
+  __O  uint32_t IERS;        /**< \brief Offset: 0x094 ( /W 32) Interrupt Enable Register - Set */
+  __O  uint32_t IERC;        /**< \brief Offset: 0x098 ( /W 32) Interrupt Enable Register - Clear */
+  __O  uint32_t IERT;        /**< \brief Offset: 0x09C ( /W 32) Interrupt Enable Register - Toggle */
+  __IO uint32_t IMR0;        /**< \brief Offset: 0x0A0 (R/W 32) Interrupt Mode Register 0 */
+  __O  uint32_t IMR0S;       /**< \brief Offset: 0x0A4 ( /W 32) Interrupt Mode Register 0 - Set */
+  __O  uint32_t IMR0C;       /**< \brief Offset: 0x0A8 ( /W 32) Interrupt Mode Register 0 - Clear */
+  __O  uint32_t IMR0T;       /**< \brief Offset: 0x0AC ( /W 32) Interrupt Mode Register 0 - Toggle */
+  __IO uint32_t IMR1;        /**< \brief Offset: 0x0B0 (R/W 32) Interrupt Mode Register 1 */
+  __O  uint32_t IMR1S;       /**< \brief Offset: 0x0B4 ( /W 32) Interrupt Mode Register 1 - Set */
+  __O  uint32_t IMR1C;       /**< \brief Offset: 0x0B8 ( /W 32) Interrupt Mode Register 1 - Clear */
+  __O  uint32_t IMR1T;       /**< \brief Offset: 0x0BC ( /W 32) Interrupt Mode Register 1 - Toggle */
+  __IO uint32_t GFER;        /**< \brief Offset: 0x0C0 (R/W 32) Glitch Filter Enable Register */
+  __O  uint32_t GFERS;       /**< \brief Offset: 0x0C4 ( /W 32) Glitch Filter Enable Register - Set */
+  __O  uint32_t GFERC;       /**< \brief Offset: 0x0C8 ( /W 32) Glitch Filter Enable Register - Clear */
+  __O  uint32_t GFERT;       /**< \brief Offset: 0x0CC ( /W 32) Glitch Filter Enable Register - Toggle */
+  __I  uint32_t IFR;         /**< \brief Offset: 0x0D0 (R/  32) Interrupt Flag Register */
+       RoReg8   Reserved2[0x4];
+  __O  uint32_t IFRC;        /**< \brief Offset: 0x0D8 ( /W 32) Interrupt Flag Register - Clear */
+       RoReg8   Reserved3[0x4];
+  __IO uint32_t ODMER;       /**< \brief Offset: 0x0E0 (R/W 32) Open Drain Mode Register */
+  __O  uint32_t ODMERS;      /**< \brief Offset: 0x0E4 ( /W 32) Open Drain Mode Register - Set */
+  __O  uint32_t ODMERC;      /**< \brief Offset: 0x0E8 ( /W 32) Open Drain Mode Register - Clear */
+  __O  uint32_t ODMERT;      /**< \brief Offset: 0x0EC ( /W 32) Open Drain Mode Register - Toggle */
+       RoReg8   Reserved4[0x10];
+  __IO uint32_t ODCR0;       /**< \brief Offset: 0x100 (R/W 32) Output Driving Capability Register 0 */
+  __IO uint32_t ODCR0S;      /**< \brief Offset: 0x104 (R/W 32) Output Driving Capability Register 0 - Set */
+  __IO uint32_t ODCR0C;      /**< \brief Offset: 0x108 (R/W 32) Output Driving Capability Register 0 - Clear */
+  __IO uint32_t ODCR0T;      /**< \brief Offset: 0x10C (R/W 32) Output Driving Capability Register 0 - Toggle */
+  __IO uint32_t ODCR1;       /**< \brief Offset: 0x110 (R/W 32) Output Driving Capability Register 1 */
+  __IO uint32_t ODCR1S;      /**< \brief Offset: 0x114 (R/W 32) Output Driving Capability Register 1 - Set */
+  __IO uint32_t ODCR1C;      /**< \brief Offset: 0x118 (R/W 32) Output Driving Capability Register 1 - Clear */
+  __IO uint32_t ODCR1T;      /**< \brief Offset: 0x11C (R/W 32) Output Driving Capability Register 1 - Toggle */
+       RoReg8   Reserved5[0x10];
+  __IO uint32_t OSRR0;       /**< \brief Offset: 0x130 (R/W 32) Output Slew Rate Register 0 */
+  __IO uint32_t OSRR0S;      /**< \brief Offset: 0x134 (R/W 32) Output Slew Rate Register 0 - Set */
+  __IO uint32_t OSRR0C;      /**< \brief Offset: 0x138 (R/W 32) Output Slew Rate Register 0 - Clear */
+  __IO uint32_t OSRR0T;      /**< \brief Offset: 0x13C (R/W 32) Output Slew Rate Register 0 - Toggle */
+       RoReg8   Reserved6[0x20];
+  __IO uint32_t STER;        /**< \brief Offset: 0x160 (R/W 32) Schmitt Trigger Enable Register */
+  __IO uint32_t STERS;       /**< \brief Offset: 0x164 (R/W 32) Schmitt Trigger Enable Register - Set */
+  __IO uint32_t STERC;       /**< \brief Offset: 0x168 (R/W 32) Schmitt Trigger Enable Register - Clear */
+  __IO uint32_t STERT;       /**< \brief Offset: 0x16C (R/W 32) Schmitt Trigger Enable Register - Toggle */
+       RoReg8   Reserved7[0x10];
+  __IO uint32_t EVER;        /**< \brief Offset: 0x180 (R/W 32) Event Enable Register */
+  __O  uint32_t EVERS;       /**< \brief Offset: 0x184 ( /W 32) Event Enable Register - Set */
+  __O  uint32_t EVERC;       /**< \brief Offset: 0x188 ( /W 32) Event Enable Register - Clear */
+  __O  uint32_t EVERT;       /**< \brief Offset: 0x18C ( /W 32) Event Enable Register - Toggle */
+       RoReg8   Reserved8[0x10];
+  __IO uint32_t LOCK;        /**< \brief Offset: 0x1A0 (R/W 32) Lock Register */
+  __O  uint32_t LOCKS;       /**< \brief Offset: 0x1A4 ( /W 32) Lock Register - Set */
+  __O  uint32_t LOCKC;       /**< \brief Offset: 0x1A8 ( /W 32) Lock Register - Clear */
+  __O  uint32_t LOCKT;       /**< \brief Offset: 0x1AC ( /W 32) Lock Register - Toggle */
+       RoReg8   Reserved9[0x30];
+  __O  uint32_t UNLOCK;      /**< \brief Offset: 0x1E0 ( /W 32) Unlock Register */
+  __IO uint32_t ASR;         /**< \brief Offset: 0x1E4 (R/W 32) Access Status Register */
+       RoReg8   Reserved10[0x10];
+  __I  uint32_t PARAMETER;   /**< \brief Offset: 0x1F8 (R/  32) Parameter Register */
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x1FC (R/  32) Version Register */
 } Gpio;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

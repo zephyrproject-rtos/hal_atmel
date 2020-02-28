@@ -601,35 +601,19 @@ typedef union {
 
 /** \brief IISC hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  IISC_CR_Type              CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
-  __IO IISC_MR_Type              MR;          /**< \brief Offset: 0x04 (R/W 32) Mode Register */
-  __I  IISC_SR_Type              SR;          /**< \brief Offset: 0x08 (R/  32) Status Register */
-  __O  IISC_SCR_Type             SCR;         /**< \brief Offset: 0x0C ( /W 32) Status Clear Register */
-  __O  IISC_SSR_Type             SSR;         /**< \brief Offset: 0x10 ( /W 32) Status Set Register */
-  __O  IISC_IER_Type             IER;         /**< \brief Offset: 0x14 ( /W 32) Interrupt Enable Register */
-  __O  IISC_IDR_Type             IDR;         /**< \brief Offset: 0x18 ( /W 32) Interrupt Disable Register */
-  __I  IISC_IMR_Type             IMR;         /**< \brief Offset: 0x1C (R/  32) Interrupt Mask Register */
-  __I  IISC_RHR_Type             RHR;         /**< \brief Offset: 0x20 (R/  32) Receive Holding Register */
-  __O  IISC_THR_Type             THR;         /**< \brief Offset: 0x24 ( /W 32) Transmit Holding Register */
-  __I  IISC_VERSION_Type         VERSION;     /**< \brief Offset: 0x28 (R/  32) Version Register */
-  __I  IISC_PARAMETER_Type       PARAMETER;   /**< \brief Offset: 0x2C (R/  32) Parameter Register */
- } bf;
- struct {
-  WoReg   IISC_CR;            /**< \brief (IISC Offset: 0x00) Control Register */
-  RwReg   IISC_MR;            /**< \brief (IISC Offset: 0x04) Mode Register */
-  RoReg   IISC_SR;            /**< \brief (IISC Offset: 0x08) Status Register */
-  WoReg   IISC_SCR;           /**< \brief (IISC Offset: 0x0C) Status Clear Register */
-  WoReg   IISC_SSR;           /**< \brief (IISC Offset: 0x10) Status Set Register */
-  WoReg   IISC_IER;           /**< \brief (IISC Offset: 0x14) Interrupt Enable Register */
-  WoReg   IISC_IDR;           /**< \brief (IISC Offset: 0x18) Interrupt Disable Register */
-  RoReg   IISC_IMR;           /**< \brief (IISC Offset: 0x1C) Interrupt Mask Register */
-  RoReg   IISC_RHR;           /**< \brief (IISC Offset: 0x20) Receive Holding Register */
-  WoReg   IISC_THR;           /**< \brief (IISC Offset: 0x24) Transmit Holding Register */
-  RoReg   IISC_VERSION;       /**< \brief (IISC Offset: 0x28) Version Register */
-  RoReg   IISC_PARAMETER;     /**< \brief (IISC Offset: 0x2C) Parameter Register */
- } reg;
+typedef struct {
+  __O  uint32_t CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
+  __IO uint32_t MR;          /**< \brief Offset: 0x04 (R/W 32) Mode Register */
+  __I  uint32_t SR;          /**< \brief Offset: 0x08 (R/  32) Status Register */
+  __O  uint32_t SCR;         /**< \brief Offset: 0x0C ( /W 32) Status Clear Register */
+  __O  uint32_t SSR;         /**< \brief Offset: 0x10 ( /W 32) Status Set Register */
+  __O  uint32_t IER;         /**< \brief Offset: 0x14 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x18 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x1C (R/  32) Interrupt Mask Register */
+  __I  uint32_t RHR;         /**< \brief Offset: 0x20 (R/  32) Receive Holding Register */
+  __O  uint32_t THR;         /**< \brief Offset: 0x24 ( /W 32) Transmit Holding Register */
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x28 (R/  32) Version Register */
+  __I  uint32_t PARAMETER;   /**< \brief Offset: 0x2C (R/  32) Parameter Register */
 } Iisc;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

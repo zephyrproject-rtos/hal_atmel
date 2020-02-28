@@ -179,31 +179,17 @@ typedef union {
 
 /** \brief TRNG hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  TRNG_CR_Type              CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
-       RoReg8                    Reserved1[0xC];
-  __O  TRNG_IER_Type             IER;         /**< \brief Offset: 0x10 ( /W 32) Interrupt Enable Register */
-  __O  TRNG_IDR_Type             IDR;         /**< \brief Offset: 0x14 ( /W 32) Interrupt Disable Register */
-  __I  TRNG_IMR_Type             IMR;         /**< \brief Offset: 0x18 (R/  32) Interrupt Mask Register */
-  __I  TRNG_ISR_Type             ISR;         /**< \brief Offset: 0x1C (R/  32) Interrupt Status Register */
-       RoReg8                    Reserved2[0x30];
-  __I  TRNG_ODATA_Type           ODATA;       /**< \brief Offset: 0x50 (R/  32) Output Data Register */
-       RoReg8                    Reserved3[0xA8];
-  __I  TRNG_VERSION_Type         VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
- } bf;
- struct {
-  WoReg   TRNG_CR;            /**< \brief (TRNG Offset: 0x00) Control Register */
-  RoReg8  Reserved4[0xC];
-  WoReg   TRNG_IER;           /**< \brief (TRNG Offset: 0x10) Interrupt Enable Register */
-  WoReg   TRNG_IDR;           /**< \brief (TRNG Offset: 0x14) Interrupt Disable Register */
-  RoReg   TRNG_IMR;           /**< \brief (TRNG Offset: 0x18) Interrupt Mask Register */
-  RoReg   TRNG_ISR;           /**< \brief (TRNG Offset: 0x1C) Interrupt Status Register */
-  RoReg8  Reserved5[0x30];
-  RoReg   TRNG_ODATA;         /**< \brief (TRNG Offset: 0x50) Output Data Register */
-  RoReg8  Reserved6[0xA8];
-  RoReg   TRNG_VERSION;       /**< \brief (TRNG Offset: 0xFC) Version Register */
- } reg;
+typedef struct {
+  __O  uint32_t CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
+       RoReg8   Reserved1[0xC];
+  __O  uint32_t IER;         /**< \brief Offset: 0x10 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x14 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x18 (R/  32) Interrupt Mask Register */
+  __I  uint32_t ISR;         /**< \brief Offset: 0x1C (R/  32) Interrupt Status Register */
+       RoReg8   Reserved2[0x30];
+  __I  uint32_t ODATA;       /**< \brief Offset: 0x50 (R/  32) Output Data Register */
+       RoReg8   Reserved3[0xA8];
+  __I  uint32_t VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
 } Trng;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

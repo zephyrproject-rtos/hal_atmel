@@ -352,49 +352,26 @@ typedef union {
 
 /** \brief CRCCU hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO CRCCU_DSCR_Type           DSCR;        /**< \brief Offset: 0x00 (R/W 32) Descriptor Base Register */
-       RoReg8                    Reserved1[0x4];
-  __O  CRCCU_DMAEN_Type          DMAEN;       /**< \brief Offset: 0x08 ( /W 32) DMA Enable Register */
-  __O  CRCCU_DMADIS_Type         DMADIS;      /**< \brief Offset: 0x0C ( /W 32) DMA Disable Register */
-  __I  CRCCU_DMASR_Type          DMASR;       /**< \brief Offset: 0x10 (R/  32) DMA Status Register */
-  __O  CRCCU_DMAIER_Type         DMAIER;      /**< \brief Offset: 0x14 ( /W 32) DMA Interrupt Enable Register */
-  __O  CRCCU_DMAIDR_Type         DMAIDR;      /**< \brief Offset: 0x18 ( /W 32) DMA Interrupt Disable Register */
-  __I  CRCCU_DMAIMR_Type         DMAIMR;      /**< \brief Offset: 0x1C (R/  32) DMA Interrupt Mask Register */
-  __I  CRCCU_DMAISR_Type         DMAISR;      /**< \brief Offset: 0x20 (R/  32) DMA Interrupt Status Register */
-       RoReg8                    Reserved2[0x10];
-  __O  CRCCU_CR_Type             CR;          /**< \brief Offset: 0x34 ( /W 32) Control Register */
-  __IO CRCCU_MR_Type             MR;          /**< \brief Offset: 0x38 (R/W 32) Mode Register */
-  __I  CRCCU_SR_Type             SR;          /**< \brief Offset: 0x3C (R/  32) Status Register */
-  __O  CRCCU_IER_Type            IER;         /**< \brief Offset: 0x40 ( /W 32) Interrupt Enable Register */
-  __O  CRCCU_IDR_Type            IDR;         /**< \brief Offset: 0x44 ( /W 32) Interrupt Disable Register */
-  __I  CRCCU_IMR_Type            IMR;         /**< \brief Offset: 0x48 (R/  32) Interrupt Mask Register */
-  __I  CRCCU_ISR_Type            ISR;         /**< \brief Offset: 0x4C (R/  32) Interrupt Status Register */
-       RoReg8                    Reserved3[0xAC];
-  __I  CRCCU_VERSION_Type        VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
- } bf;
- struct {
-  RwReg   CRCCU_DSCR;         /**< \brief (CRCCU Offset: 0x00) Descriptor Base Register */
-  RoReg8  Reserved4[0x4];
-  WoReg   CRCCU_DMAEN;        /**< \brief (CRCCU Offset: 0x08) DMA Enable Register */
-  WoReg   CRCCU_DMADIS;       /**< \brief (CRCCU Offset: 0x0C) DMA Disable Register */
-  RoReg   CRCCU_DMASR;        /**< \brief (CRCCU Offset: 0x10) DMA Status Register */
-  WoReg   CRCCU_DMAIER;       /**< \brief (CRCCU Offset: 0x14) DMA Interrupt Enable Register */
-  WoReg   CRCCU_DMAIDR;       /**< \brief (CRCCU Offset: 0x18) DMA Interrupt Disable Register */
-  RoReg   CRCCU_DMAIMR;       /**< \brief (CRCCU Offset: 0x1C) DMA Interrupt Mask Register */
-  RoReg   CRCCU_DMAISR;       /**< \brief (CRCCU Offset: 0x20) DMA Interrupt Status Register */
-  RoReg8  Reserved5[0x10];
-  WoReg   CRCCU_CR;           /**< \brief (CRCCU Offset: 0x34) Control Register */
-  RwReg   CRCCU_MR;           /**< \brief (CRCCU Offset: 0x38) Mode Register */
-  RoReg   CRCCU_SR;           /**< \brief (CRCCU Offset: 0x3C) Status Register */
-  WoReg   CRCCU_IER;          /**< \brief (CRCCU Offset: 0x40) Interrupt Enable Register */
-  WoReg   CRCCU_IDR;          /**< \brief (CRCCU Offset: 0x44) Interrupt Disable Register */
-  RoReg   CRCCU_IMR;          /**< \brief (CRCCU Offset: 0x48) Interrupt Mask Register */
-  RoReg   CRCCU_ISR;          /**< \brief (CRCCU Offset: 0x4C) Interrupt Status Register */
-  RoReg8  Reserved6[0xAC];
-  RoReg   CRCCU_VERSION;      /**< \brief (CRCCU Offset: 0xFC) Version Register */
- } reg;
+typedef struct {
+  __IO uint32_t DSCR;        /**< \brief Offset: 0x00 (R/W 32) Descriptor Base Register */
+       RoReg8   Reserved1[0x4];
+  __O  uint32_t DMAEN;       /**< \brief Offset: 0x08 ( /W 32) DMA Enable Register */
+  __O  uint32_t DMADIS;      /**< \brief Offset: 0x0C ( /W 32) DMA Disable Register */
+  __I  uint32_t DMASR;       /**< \brief Offset: 0x10 (R/  32) DMA Status Register */
+  __O  uint32_t DMAIER;      /**< \brief Offset: 0x14 ( /W 32) DMA Interrupt Enable Register */
+  __O  uint32_t DMAIDR;      /**< \brief Offset: 0x18 ( /W 32) DMA Interrupt Disable Register */
+  __I  uint32_t DMAIMR;      /**< \brief Offset: 0x1C (R/  32) DMA Interrupt Mask Register */
+  __I  uint32_t DMAISR;      /**< \brief Offset: 0x20 (R/  32) DMA Interrupt Status Register */
+       RoReg8   Reserved2[0x10];
+  __O  uint32_t CR;          /**< \brief Offset: 0x34 ( /W 32) Control Register */
+  __IO uint32_t MR;          /**< \brief Offset: 0x38 (R/W 32) Mode Register */
+  __I  uint32_t SR;          /**< \brief Offset: 0x3C (R/  32) Status Register */
+  __O  uint32_t IER;         /**< \brief Offset: 0x40 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x44 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x48 (R/  32) Interrupt Mask Register */
+  __I  uint32_t ISR;         /**< \brief Offset: 0x4C (R/  32) Interrupt Status Register */
+       RoReg8   Reserved3[0xAC];
+  __I  uint32_t VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
 } Crccu;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

@@ -360,35 +360,19 @@ typedef union {
 
 /** \brief ABDACB hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO ABDACB_CR_Type            CR;          /**< \brief Offset: 0x00 (R/W 32) Control Register */
-  __IO ABDACB_SDR0_Type          SDR0;        /**< \brief Offset: 0x04 (R/W 32) Sample Data Register 0 */
-  __IO ABDACB_SDR1_Type          SDR1;        /**< \brief Offset: 0x08 (R/W 32) Sample Data Register 1 */
-  __IO ABDACB_VCR0_Type          VCR0;        /**< \brief Offset: 0x0C (R/W 32) Volume Control Register 0 */
-  __IO ABDACB_VCR1_Type          VCR1;        /**< \brief Offset: 0x10 (R/W 32) Volume Control Register 1 */
-  __O  ABDACB_IER_Type           IER;         /**< \brief Offset: 0x14 ( /W 32) Interrupt Enable Register */
-  __O  ABDACB_IDR_Type           IDR;         /**< \brief Offset: 0x18 ( /W 32) Interupt Disable Register */
-  __I  ABDACB_IMR_Type           IMR;         /**< \brief Offset: 0x1C (R/  32) Interrupt Mask Register */
-  __I  ABDACB_SR_Type            SR;          /**< \brief Offset: 0x20 (R/  32) Status Register */
-  __O  ABDACB_SCR_Type           SCR;         /**< \brief Offset: 0x24 ( /W 32) Status Clear Register */
-  __I  ABDACB_PARAMETER_Type     PARAMETER;   /**< \brief Offset: 0x28 (R/  32) Parameter Register */
-  __I  ABDACB_VERSION_Type       VERSION;     /**< \brief Offset: 0x2C (R/  32) Version Register */
- } bf;
- struct {
-  RwReg   ABDACB_CR;          /**< \brief (ABDACB Offset: 0x00) Control Register */
-  RwReg   ABDACB_SDR0;        /**< \brief (ABDACB Offset: 0x04) Sample Data Register 0 */
-  RwReg   ABDACB_SDR1;        /**< \brief (ABDACB Offset: 0x08) Sample Data Register 1 */
-  RwReg   ABDACB_VCR0;        /**< \brief (ABDACB Offset: 0x0C) Volume Control Register 0 */
-  RwReg   ABDACB_VCR1;        /**< \brief (ABDACB Offset: 0x10) Volume Control Register 1 */
-  WoReg   ABDACB_IER;         /**< \brief (ABDACB Offset: 0x14) Interrupt Enable Register */
-  WoReg   ABDACB_IDR;         /**< \brief (ABDACB Offset: 0x18) Interupt Disable Register */
-  RoReg   ABDACB_IMR;         /**< \brief (ABDACB Offset: 0x1C) Interrupt Mask Register */
-  RoReg   ABDACB_SR;          /**< \brief (ABDACB Offset: 0x20) Status Register */
-  WoReg   ABDACB_SCR;         /**< \brief (ABDACB Offset: 0x24) Status Clear Register */
-  RoReg   ABDACB_PARAMETER;   /**< \brief (ABDACB Offset: 0x28) Parameter Register */
-  RoReg   ABDACB_VERSION;     /**< \brief (ABDACB Offset: 0x2C) Version Register */
- } reg;
+typedef struct {
+  __IO uint32_t CR;          /**< \brief Offset: 0x00 (R/W 32) Control Register */
+  __IO uint32_t SDR0;        /**< \brief Offset: 0x04 (R/W 32) Sample Data Register 0 */
+  __IO uint32_t SDR1;        /**< \brief Offset: 0x08 (R/W 32) Sample Data Register 1 */
+  __IO uint32_t VCR0;        /**< \brief Offset: 0x0C (R/W 32) Volume Control Register 0 */
+  __IO uint32_t VCR1;        /**< \brief Offset: 0x10 (R/W 32) Volume Control Register 1 */
+  __O  uint32_t IER;         /**< \brief Offset: 0x14 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x18 ( /W 32) Interupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x1C (R/  32) Interrupt Mask Register */
+  __I  uint32_t SR;          /**< \brief Offset: 0x20 (R/  32) Status Register */
+  __O  uint32_t SCR;         /**< \brief Offset: 0x24 ( /W 32) Status Clear Register */
+  __I  uint32_t PARAMETER;   /**< \brief Offset: 0x28 (R/  32) Parameter Register */
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x2C (R/  32) Version Register */
 } Abdacb;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

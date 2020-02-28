@@ -151,23 +151,13 @@ typedef union {
 
 /** \brief PICOUART hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  PICOUART_CR_Type          CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
-  __IO PICOUART_CFG_Type         CFG;         /**< \brief Offset: 0x04 (R/W 32) Configuration Register */
-  __I  PICOUART_SR_Type          SR;          /**< \brief Offset: 0x08 (R/  32) Status Register */
-  __I  PICOUART_RHR_Type         RHR;         /**< \brief Offset: 0x0C (R/  32) Receive Holding Register */
-       RoReg8                    Reserved1[0x10];
-  __I  PICOUART_VERSION_Type     VERSION;     /**< \brief Offset: 0x20 (R/  32) Version Register */
- } bf;
- struct {
-  WoReg   PICOUART_CR;        /**< \brief (PICOUART Offset: 0x00) Control Register */
-  RwReg   PICOUART_CFG;       /**< \brief (PICOUART Offset: 0x04) Configuration Register */
-  RoReg   PICOUART_SR;        /**< \brief (PICOUART Offset: 0x08) Status Register */
-  RoReg   PICOUART_RHR;       /**< \brief (PICOUART Offset: 0x0C) Receive Holding Register */
-  RoReg8  Reserved2[0x10];
-  RoReg   PICOUART_VERSION;   /**< \brief (PICOUART Offset: 0x20) Version Register */
- } reg;
+typedef struct {
+  __O  uint32_t CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
+  __IO uint32_t CFG;         /**< \brief Offset: 0x04 (R/W 32) Configuration Register */
+  __I  uint32_t SR;          /**< \brief Offset: 0x08 (R/  32) Status Register */
+  __I  uint32_t RHR;         /**< \brief Offset: 0x0C (R/  32) Receive Holding Register */
+       RoReg8   Reserved1[0x10];
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x20 (R/  32) Version Register */
 } Picouart;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

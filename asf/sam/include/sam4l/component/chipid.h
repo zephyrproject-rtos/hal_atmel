@@ -62,17 +62,10 @@ typedef union {
 
 /** \brief CHIPID hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-       RoReg8                    Reserved1[0x340];
-  __I  CHIPID_CIDR_Type          CIDR;        /**< \brief Offset: 0x340 (R/  32) Chip ID Register */
-  __I  CHIPID_EXID_Type          EXID;        /**< \brief Offset: 0x344 (R/  32) Chip ID Extension Register */
- } bf;
- struct {
-  RoReg8  Reserved2[0x340];
-  RoReg   CHIPID_CIDR;        /**< \brief (CHIPID Offset: 0x340) Chip ID Register */
-  RoReg   CHIPID_EXID;        /**< \brief (CHIPID Offset: 0x344) Chip ID Extension Register */
- } reg;
+typedef struct {
+       RoReg8   Reserved1[0x340];
+  __I  uint32_t CIDR;        /**< \brief Offset: 0x340 (R/  32) Chip ID Register */
+  __I  uint32_t EXID;        /**< \brief Offset: 0x344 (R/  32) Chip ID Extension Register */
 } Chipid;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

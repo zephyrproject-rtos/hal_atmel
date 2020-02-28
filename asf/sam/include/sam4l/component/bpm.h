@@ -476,49 +476,26 @@ typedef union {
 
 /** \brief BPM hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  BPM_IER_Type              IER;         /**< \brief Offset: 0x00 ( /W 32) Interrupt Enable Register */
-  __O  BPM_IDR_Type              IDR;         /**< \brief Offset: 0x04 ( /W 32) Interrupt Disable Register */
-  __I  BPM_IMR_Type              IMR;         /**< \brief Offset: 0x08 (R/  32) Interrupt Mask Register */
-  __I  BPM_ISR_Type              ISR;         /**< \brief Offset: 0x0C (R/  32) Interrupt Status Register */
-  __O  BPM_ICR_Type              ICR;         /**< \brief Offset: 0x10 ( /W 32) Interrupt Clear Register */
-  __I  BPM_SR_Type               SR;          /**< \brief Offset: 0x14 (R/  32) Status Register */
-  __O  BPM_UNLOCK_Type           UNLOCK;      /**< \brief Offset: 0x18 ( /W 32) Unlock Register */
-  __IO BPM_PMCON_Type            PMCON;       /**< \brief Offset: 0x1C (R/W 32) Power Mode Control Register */
-       RoReg8                    Reserved1[0x8];
-  __I  BPM_BKUPWCAUSE_Type       BKUPWCAUSE;  /**< \brief Offset: 0x28 (R/  32) Backup Wake up Cause Register */
-  __IO BPM_BKUPWEN_Type          BKUPWEN;     /**< \brief Offset: 0x2C (R/W 32) Backup Wake up Enable Register */
-  __IO BPM_BKUPPMUX_Type         BKUPPMUX;    /**< \brief Offset: 0x30 (R/W 32) Backup Pin Muxing Register */
-  __IO BPM_IORET_Type            IORET;       /**< \brief Offset: 0x34 (R/W 32) Input Output Retention Register */
-       RoReg8                    Reserved2[0x8];
-  __IO BPM_BPR_Type              BPR;         /**< \brief Offset: 0x40 (R/W 32) Bypass Register */
-  __I  BPM_FWRUNPS_Type          FWRUNPS;     /**< \brief Offset: 0x44 (R/  32) Factory Word Run PS Register */
-  __I  BPM_FWPSAVEPS_Type        FWPSAVEPS;   /**< \brief Offset: 0x48 (R/  32) Factory Word Power Save PS Register */
-       RoReg8                    Reserved3[0xB0];
-  __I  BPM_VERSION_Type          VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
- } bf;
- struct {
-  WoReg   BPM_IER;            /**< \brief (BPM Offset: 0x00) Interrupt Enable Register */
-  WoReg   BPM_IDR;            /**< \brief (BPM Offset: 0x04) Interrupt Disable Register */
-  RoReg   BPM_IMR;            /**< \brief (BPM Offset: 0x08) Interrupt Mask Register */
-  RoReg   BPM_ISR;            /**< \brief (BPM Offset: 0x0C) Interrupt Status Register */
-  WoReg   BPM_ICR;            /**< \brief (BPM Offset: 0x10) Interrupt Clear Register */
-  RoReg   BPM_SR;             /**< \brief (BPM Offset: 0x14) Status Register */
-  WoReg   BPM_UNLOCK;         /**< \brief (BPM Offset: 0x18) Unlock Register */
-  RwReg   BPM_PMCON;          /**< \brief (BPM Offset: 0x1C) Power Mode Control Register */
-  RoReg8  Reserved4[0x8];
-  RoReg   BPM_BKUPWCAUSE;     /**< \brief (BPM Offset: 0x28) Backup Wake up Cause Register */
-  RwReg   BPM_BKUPWEN;        /**< \brief (BPM Offset: 0x2C) Backup Wake up Enable Register */
-  RwReg   BPM_BKUPPMUX;       /**< \brief (BPM Offset: 0x30) Backup Pin Muxing Register */
-  RwReg   BPM_IORET;          /**< \brief (BPM Offset: 0x34) Input Output Retention Register */
-  RoReg8  Reserved5[0x8];
-  RwReg   BPM_BPR;            /**< \brief (BPM Offset: 0x40) Bypass Register */
-  RoReg   BPM_FWRUNPS;        /**< \brief (BPM Offset: 0x44) Factory Word Run PS Register */
-  RoReg   BPM_FWPSAVEPS;      /**< \brief (BPM Offset: 0x48) Factory Word Power Save PS Register */
-  RoReg8  Reserved6[0xB0];
-  RoReg   BPM_VERSION;        /**< \brief (BPM Offset: 0xFC) Version Register */
- } reg;
+typedef struct {
+  __O  uint32_t IER;         /**< \brief Offset: 0x00 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x04 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x08 (R/  32) Interrupt Mask Register */
+  __I  uint32_t ISR;         /**< \brief Offset: 0x0C (R/  32) Interrupt Status Register */
+  __O  uint32_t ICR;         /**< \brief Offset: 0x10 ( /W 32) Interrupt Clear Register */
+  __I  uint32_t SR;          /**< \brief Offset: 0x14 (R/  32) Status Register */
+  __O  uint32_t UNLOCK;      /**< \brief Offset: 0x18 ( /W 32) Unlock Register */
+  __IO uint32_t PMCON;       /**< \brief Offset: 0x1C (R/W 32) Power Mode Control Register */
+       RoReg8   Reserved1[0x8];
+  __I  uint32_t BKUPWCAUSE;  /**< \brief Offset: 0x28 (R/  32) Backup Wake up Cause Register */
+  __IO uint32_t BKUPWEN;     /**< \brief Offset: 0x2C (R/W 32) Backup Wake up Enable Register */
+  __IO uint32_t BKUPPMUX;    /**< \brief Offset: 0x30 (R/W 32) Backup Pin Muxing Register */
+  __IO uint32_t IORET;       /**< \brief Offset: 0x34 (R/W 32) Input Output Retention Register */
+       RoReg8   Reserved2[0x8];
+  __IO uint32_t BPR;         /**< \brief Offset: 0x40 (R/W 32) Bypass Register */
+  __I  uint32_t FWRUNPS;     /**< \brief Offset: 0x44 (R/  32) Factory Word Run PS Register */
+  __I  uint32_t FWPSAVEPS;   /**< \brief Offset: 0x48 (R/  32) Factory Word Power Save PS Register */
+       RoReg8   Reserved3[0xB0];
+  __I  uint32_t VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
 } Bpm;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
