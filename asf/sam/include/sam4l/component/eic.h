@@ -990,45 +990,24 @@ typedef union {
 
 /** \brief EIC hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  EIC_IER_Type              IER;         /**< \brief Offset: 0x000 ( /W 32) Interrupt Enable Register */
-  __O  EIC_IDR_Type              IDR;         /**< \brief Offset: 0x004 ( /W 32) Interrupt Disable Register */
-  __I  EIC_IMR_Type              IMR;         /**< \brief Offset: 0x008 (R/  32) Interrupt Mask Register */
-  __I  EIC_ISR_Type              ISR;         /**< \brief Offset: 0x00C (R/  32) Interrupt Status Register */
-  __O  EIC_ICR_Type              ICR;         /**< \brief Offset: 0x010 ( /W 32) Interrupt Clear Register */
-  __IO EIC_MODE_Type             MODE;        /**< \brief Offset: 0x014 (R/W 32) Mode Register */
-  __IO EIC_EDGE_Type             EDGE;        /**< \brief Offset: 0x018 (R/W 32) Edge Register */
-  __IO EIC_LEVEL_Type            LEVEL;       /**< \brief Offset: 0x01C (R/W 32) Level Register */
-  __IO EIC_FILTER_Type           FILTER;      /**< \brief Offset: 0x020 (R/W 32) Filter Register */
-       RoReg8                    Reserved1[0x4];
-  __IO EIC_ASYNC_Type            ASYNC;       /**< \brief Offset: 0x028 (R/W 32) Asynchronous Register */
-       RoReg8                    Reserved2[0x4];
-  __O  EIC_EN_Type               EN;          /**< \brief Offset: 0x030 ( /W 32) Enable Register */
-  __O  EIC_DIS_Type              DIS;         /**< \brief Offset: 0x034 ( /W 32) Disable Register */
-  __I  EIC_CTRL_Type             CTRL;        /**< \brief Offset: 0x038 (R/  32) Control Register */
-       RoReg8                    Reserved3[0x3C0];
-  __I  EIC_VERSION_Type          VERSION;     /**< \brief Offset: 0x3FC (R/  32) Version Register */
- } bf;
- struct {
-  WoReg   EIC_IER;            /**< \brief (EIC Offset: 0x000) Interrupt Enable Register */
-  WoReg   EIC_IDR;            /**< \brief (EIC Offset: 0x004) Interrupt Disable Register */
-  RoReg   EIC_IMR;            /**< \brief (EIC Offset: 0x008) Interrupt Mask Register */
-  RoReg   EIC_ISR;            /**< \brief (EIC Offset: 0x00C) Interrupt Status Register */
-  WoReg   EIC_ICR;            /**< \brief (EIC Offset: 0x010) Interrupt Clear Register */
-  RwReg   EIC_MODE;           /**< \brief (EIC Offset: 0x014) Mode Register */
-  RwReg   EIC_EDGE;           /**< \brief (EIC Offset: 0x018) Edge Register */
-  RwReg   EIC_LEVEL;          /**< \brief (EIC Offset: 0x01C) Level Register */
-  RwReg   EIC_FILTER;         /**< \brief (EIC Offset: 0x020) Filter Register */
-  RoReg8  Reserved4[0x4];
-  RwReg   EIC_ASYNC;          /**< \brief (EIC Offset: 0x028) Asynchronous Register */
-  RoReg8  Reserved5[0x4];
-  WoReg   EIC_EN;             /**< \brief (EIC Offset: 0x030) Enable Register */
-  WoReg   EIC_DIS;            /**< \brief (EIC Offset: 0x034) Disable Register */
-  RoReg   EIC_CTRL;           /**< \brief (EIC Offset: 0x038) Control Register */
-  RoReg8  Reserved6[0x3C0];
-  RoReg   EIC_VERSION;        /**< \brief (EIC Offset: 0x3FC) Version Register */
- } reg;
+typedef struct {
+  __O  uint32_t IER;         /**< \brief Offset: 0x000 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x004 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x008 (R/  32) Interrupt Mask Register */
+  __I  uint32_t ISR;         /**< \brief Offset: 0x00C (R/  32) Interrupt Status Register */
+  __O  uint32_t ICR;         /**< \brief Offset: 0x010 ( /W 32) Interrupt Clear Register */
+  __IO uint32_t MODE;        /**< \brief Offset: 0x014 (R/W 32) Mode Register */
+  __IO uint32_t EDGE;        /**< \brief Offset: 0x018 (R/W 32) Edge Register */
+  __IO uint32_t LEVEL;       /**< \brief Offset: 0x01C (R/W 32) Level Register */
+  __IO uint32_t FILTER;      /**< \brief Offset: 0x020 (R/W 32) Filter Register */
+       RoReg8   Reserved1[0x4];
+  __IO uint32_t ASYNC;       /**< \brief Offset: 0x028 (R/W 32) Asynchronous Register */
+       RoReg8   Reserved2[0x4];
+  __O  uint32_t EN;          /**< \brief Offset: 0x030 ( /W 32) Enable Register */
+  __O  uint32_t DIS;         /**< \brief Offset: 0x034 ( /W 32) Disable Register */
+  __I  uint32_t CTRL;        /**< \brief Offset: 0x038 (R/  32) Control Register */
+       RoReg8   Reserved3[0x3C0];
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x3FC (R/  32) Version Register */
 } Eic;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

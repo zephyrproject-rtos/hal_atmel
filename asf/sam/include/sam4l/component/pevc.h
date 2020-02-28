@@ -538,69 +538,36 @@ typedef union {
 
 /** \brief PEVC hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __I  PEVC_CHSR_Type            CHSR;        /**< \brief Offset: 0x000 (R/  32) Channel Status Register */
-  __O  PEVC_CHER_Type            CHER;        /**< \brief Offset: 0x004 ( /W 32) Channel Enable Register */
-  __O  PEVC_CHDR_Type            CHDR;        /**< \brief Offset: 0x008 ( /W 32) Channel Disable Register */
-       RoReg8                    Reserved1[0x4];
-  __O  PEVC_SEV_Type             SEV;         /**< \brief Offset: 0x010 ( /W 32) Software Event */
-  __I  PEVC_BUSY_Type            BUSY;        /**< \brief Offset: 0x014 (R/  32) Channel / User Busy */
-       RoReg8                    Reserved2[0x8];
-  __O  PEVC_TRIER_Type           TRIER;       /**< \brief Offset: 0x020 ( /W 32) Trigger Interrupt Mask Enable Register */
-  __O  PEVC_TRIDR_Type           TRIDR;       /**< \brief Offset: 0x024 ( /W 32) Trigger Interrupt Mask Disable Register */
-  __I  PEVC_TRIMR_Type           TRIMR;       /**< \brief Offset: 0x028 (R/  32) Trigger Interrupt Mask Register */
-       RoReg8                    Reserved3[0x4];
-  __I  PEVC_TRSR_Type            TRSR;        /**< \brief Offset: 0x030 (R/  32) Trigger Status Register */
-  __O  PEVC_TRSCR_Type           TRSCR;       /**< \brief Offset: 0x034 ( /W 32) Trigger Status Clear Register */
-       RoReg8                    Reserved4[0x8];
-  __O  PEVC_OVIER_Type           OVIER;       /**< \brief Offset: 0x040 ( /W 32) Overrun Interrupt Mask Enable Register */
-  __O  PEVC_OVIDR_Type           OVIDR;       /**< \brief Offset: 0x044 ( /W 32) Overrun Interrupt Mask Disable Register */
-  __I  PEVC_OVIMR_Type           OVIMR;       /**< \brief Offset: 0x048 (R/  32) Overrun Interrupt Mask Register */
-       RoReg8                    Reserved5[0x4];
-  __I  PEVC_OVSR_Type            OVSR;        /**< \brief Offset: 0x050 (R/  32) Overrun Status Register */
-  __O  PEVC_OVSCR_Type           OVSCR;       /**< \brief Offset: 0x054 ( /W 32) Overrun Status Clear Register */
-       RoReg8                    Reserved6[0xA8];
-       PevcChmx                  Chmx[19];    /**< \brief Offset: 0x100 PevcChmx groups [TRIGOUT_BITS] */
-       RoReg8                    Reserved7[0xB4];
-       PevcEvs                   Evs[31];     /**< \brief Offset: 0x200 PevcEvs groups [EVIN_BITS] */
-       RoReg8                    Reserved8[0x84];
-  __IO PEVC_IGFDR_Type           IGFDR;       /**< \brief Offset: 0x300 (R/W 32) Input Glitch Filter Divider Register */
-       RoReg8                    Reserved9[0xF4];
-  __I  PEVC_PARAMETER_Type       PARAMETER;   /**< \brief Offset: 0x3F8 (R/  32) Parameter */
-  __I  PEVC_VERSION_Type         VERSION;     /**< \brief Offset: 0x3FC (R/  32) Version */
- } bf;
- struct {
-  RoReg   PEVC_CHSR;          /**< \brief (PEVC Offset: 0x000) Channel Status Register */
-  WoReg   PEVC_CHER;          /**< \brief (PEVC Offset: 0x004) Channel Enable Register */
-  WoReg   PEVC_CHDR;          /**< \brief (PEVC Offset: 0x008) Channel Disable Register */
-  RoReg8  Reserved10[0x4];
-  WoReg   PEVC_SEV;           /**< \brief (PEVC Offset: 0x010) Software Event */
-  RoReg   PEVC_BUSY;          /**< \brief (PEVC Offset: 0x014) Channel / User Busy */
-  RoReg8  Reserved11[0x8];
-  WoReg   PEVC_TRIER;         /**< \brief (PEVC Offset: 0x020) Trigger Interrupt Mask Enable Register */
-  WoReg   PEVC_TRIDR;         /**< \brief (PEVC Offset: 0x024) Trigger Interrupt Mask Disable Register */
-  RoReg   PEVC_TRIMR;         /**< \brief (PEVC Offset: 0x028) Trigger Interrupt Mask Register */
-  RoReg8  Reserved12[0x4];
-  RoReg   PEVC_TRSR;          /**< \brief (PEVC Offset: 0x030) Trigger Status Register */
-  WoReg   PEVC_TRSCR;         /**< \brief (PEVC Offset: 0x034) Trigger Status Clear Register */
-  RoReg8  Reserved13[0x8];
-  WoReg   PEVC_OVIER;         /**< \brief (PEVC Offset: 0x040) Overrun Interrupt Mask Enable Register */
-  WoReg   PEVC_OVIDR;         /**< \brief (PEVC Offset: 0x044) Overrun Interrupt Mask Disable Register */
-  RoReg   PEVC_OVIMR;         /**< \brief (PEVC Offset: 0x048) Overrun Interrupt Mask Register */
-  RoReg8  Reserved14[0x4];
-  RoReg   PEVC_OVSR;          /**< \brief (PEVC Offset: 0x050) Overrun Status Register */
-  WoReg   PEVC_OVSCR;         /**< \brief (PEVC Offset: 0x054) Overrun Status Clear Register */
-  RoReg8  Reserved15[0xA8];
-  PevcChmx PEVC_CHMX[19];      /**< \brief (PEVC Offset: 0x100) PevcChmx groups [TRIGOUT_BITS] */
-  RoReg8  Reserved16[0xB4];
-  PevcEvs PEVC_EVS[31];       /**< \brief (PEVC Offset: 0x200) PevcEvs groups [EVIN_BITS] */
-  RoReg8  Reserved17[0x84];
-  RwReg   PEVC_IGFDR;         /**< \brief (PEVC Offset: 0x300) Input Glitch Filter Divider Register */
-  RoReg8  Reserved18[0xF4];
-  RoReg   PEVC_PARAMETER;     /**< \brief (PEVC Offset: 0x3F8) Parameter */
-  RoReg   PEVC_VERSION;       /**< \brief (PEVC Offset: 0x3FC) Version */
- } reg;
+typedef struct {
+  __I  uint32_t CHSR;        /**< \brief Offset: 0x000 (R/  32) Channel Status Register */
+  __O  uint32_t CHER;        /**< \brief Offset: 0x004 ( /W 32) Channel Enable Register */
+  __O  uint32_t CHDR;        /**< \brief Offset: 0x008 ( /W 32) Channel Disable Register */
+       RoReg8   Reserved1[0x4];
+  __O  uint32_t SEV;         /**< \brief Offset: 0x010 ( /W 32) Software Event */
+  __I  uint32_t BUSY;        /**< \brief Offset: 0x014 (R/  32) Channel / User Busy */
+       RoReg8   Reserved2[0x8];
+  __O  uint32_t TRIER;       /**< \brief Offset: 0x020 ( /W 32) Trigger Interrupt Mask Enable Register */
+  __O  uint32_t TRIDR;       /**< \brief Offset: 0x024 ( /W 32) Trigger Interrupt Mask Disable Register */
+  __I  uint32_t TRIMR;       /**< \brief Offset: 0x028 (R/  32) Trigger Interrupt Mask Register */
+       RoReg8   Reserved3[0x4];
+  __I  uint32_t TRSR;        /**< \brief Offset: 0x030 (R/  32) Trigger Status Register */
+  __O  uint32_t TRSCR;       /**< \brief Offset: 0x034 ( /W 32) Trigger Status Clear Register */
+       RoReg8   Reserved4[0x8];
+  __O  uint32_t OVIER;       /**< \brief Offset: 0x040 ( /W 32) Overrun Interrupt Mask Enable Register */
+  __O  uint32_t OVIDR;       /**< \brief Offset: 0x044 ( /W 32) Overrun Interrupt Mask Disable Register */
+  __I  uint32_t OVIMR;       /**< \brief Offset: 0x048 (R/  32) Overrun Interrupt Mask Register */
+       RoReg8   Reserved5[0x4];
+  __I  uint32_t OVSR;        /**< \brief Offset: 0x050 (R/  32) Overrun Status Register */
+  __O  uint32_t OVSCR;       /**< \brief Offset: 0x054 ( /W 32) Overrun Status Clear Register */
+       RoReg8   Reserved6[0xA8];
+  __IO uint32_t Chmx[19];    /**< \brief Offset: 0x100 PevcChmx groups [TRIGOUT_BITS] */
+       RoReg8   Reserved7[0xB4];
+  __IO uint32_t Evs[31];     /**< \brief Offset: 0x200 PevcEvs groups [EVIN_BITS] */
+       RoReg8   Reserved8[0x84];
+  __IO uint32_t IGFDR;       /**< \brief Offset: 0x300 (R/W 32) Input Glitch Filter Divider Register */
+       RoReg8   Reserved9[0xF4];
+  __I  uint32_t PARAMETER;   /**< \brief Offset: 0x3F8 (R/  32) Parameter */
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x3FC (R/  32) Version */
 } Pevc;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

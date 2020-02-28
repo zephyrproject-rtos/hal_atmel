@@ -930,87 +930,45 @@ typedef union {
 
 /** \brief PM hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO PM_MCCTRL_Type            MCCTRL;      /**< \brief Offset: 0x000 (R/W 32) Main Clock Control */
-  __IO PM_CPUSEL_Type            CPUSEL;      /**< \brief Offset: 0x004 (R/W 32) CPU Clock Select */
-       RoReg8                    Reserved1[0x4];
-  __IO PM_PBASEL_Type            PBASEL;      /**< \brief Offset: 0x00C (R/W 32) PBA Clock Select */
-  __IO PM_PBBSEL_Type            PBBSEL;      /**< \brief Offset: 0x010 (R/W 32) PBB Clock Select */
-  __IO PM_PBCSEL_Type            PBCSEL;      /**< \brief Offset: 0x014 (R/W 32) PBC Clock Select */
-  __IO PM_PBDSEL_Type            PBDSEL;      /**< \brief Offset: 0x018 (R/W 32) PBD Clock Select */
-       RoReg8                    Reserved2[0x4];
-  __IO PM_CPUMASK_Type           CPUMASK;     /**< \brief Offset: 0x020 (R/W 32) CPU Mask */
-  __IO PM_HSBMASK_Type           HSBMASK;     /**< \brief Offset: 0x024 (R/W 32) HSB Mask */
-  __IO PM_PBAMASK_Type           PBAMASK;     /**< \brief Offset: 0x028 (R/W 32) PBA Mask */
-  __IO PM_PBBMASK_Type           PBBMASK;     /**< \brief Offset: 0x02C (R/W 32) PBB Mask */
-  __IO PM_PBCMASK_Type           PBCMASK;     /**< \brief Offset: 0x030 (R/W 32) PBC Mask */
-  __IO PM_PBDMASK_Type           PBDMASK;     /**< \brief Offset: 0x034 (R/W 32) PBD Mask */
-       RoReg8                    Reserved3[0x8];
-  __IO PM_PBADIVMASK_Type        PBADIVMASK;  /**< \brief Offset: 0x040 (R/W 32) PBA Divided Clock Mask */
-       RoReg8                    Reserved4[0x10];
-  __IO PM_CFDCTRL_Type           CFDCTRL;     /**< \brief Offset: 0x054 (R/W 32) Clock Failure Detector Control */
-  __O  PM_UNLOCK_Type            UNLOCK;      /**< \brief Offset: 0x058 ( /W 32) Unlock Register */
-       RoReg8                    Reserved5[0x64];
-  __O  PM_IER_Type               IER;         /**< \brief Offset: 0x0C0 ( /W 32) Interrupt Enable Register */
-  __O  PM_IDR_Type               IDR;         /**< \brief Offset: 0x0C4 ( /W 32) Interrupt Disable Register */
-  __I  PM_IMR_Type               IMR;         /**< \brief Offset: 0x0C8 (R/  32) Interrupt Mask Register */
-  __I  PM_ISR_Type               ISR;         /**< \brief Offset: 0x0CC (R/  32) Interrupt Status Register */
-  __O  PM_ICR_Type               ICR;         /**< \brief Offset: 0x0D0 ( /W 32) Interrupt Clear Register */
-  __I  PM_SR_Type                SR;          /**< \brief Offset: 0x0D4 (R/  32) Status Register */
-       RoReg8                    Reserved6[0x88];
-  __IO PM_PPCR_Type              PPCR;        /**< \brief Offset: 0x160 (R/W 32) Peripheral Power Control Register */
-       RoReg8                    Reserved7[0x1C];
-  __I  PM_RCAUSE_Type            RCAUSE;      /**< \brief Offset: 0x180 (R/  32) Reset Cause Register */
-  __I  PM_WCAUSE_Type            WCAUSE;      /**< \brief Offset: 0x184 (R/  32) Wake Cause Register */
-  __IO PM_AWEN_Type              AWEN;        /**< \brief Offset: 0x188 (R/W 32) Asynchronous Wake Enable */
-       RoReg8                    Reserved8[0x4];
-  __IO PM_OBS_Type               OBS;         /**< \brief Offset: 0x190 (R/W 32) Obsvervability */
-  __IO PM_FASTSLEEP_Type         FASTSLEEP;   /**< \brief Offset: 0x194 (R/W 32) Fast Sleep Register */
-       RoReg8                    Reserved9[0x260];
-  __I  PM_CONFIG_Type            CONFIG;      /**< \brief Offset: 0x3F8 (R/  32) Configuration Register */
-  __I  PM_VERSION_Type           VERSION;     /**< \brief Offset: 0x3FC (R/  32) Version Register */
- } bf;
- struct {
-  RwReg   PM_MCCTRL;          /**< \brief (PM Offset: 0x000) Main Clock Control */
-  RwReg   PM_CPUSEL;          /**< \brief (PM Offset: 0x004) CPU Clock Select */
-  RoReg8  Reserved10[0x4];
-  RwReg   PM_PBASEL;          /**< \brief (PM Offset: 0x00C) PBA Clock Select */
-  RwReg   PM_PBBSEL;          /**< \brief (PM Offset: 0x010) PBB Clock Select */
-  RwReg   PM_PBCSEL;          /**< \brief (PM Offset: 0x014) PBC Clock Select */
-  RwReg   PM_PBDSEL;          /**< \brief (PM Offset: 0x018) PBD Clock Select */
-  RoReg8  Reserved11[0x4];
-  RwReg   PM_CPUMASK;         /**< \brief (PM Offset: 0x020) CPU Mask */
-  RwReg   PM_HSBMASK;         /**< \brief (PM Offset: 0x024) HSB Mask */
-  RwReg   PM_PBAMASK;         /**< \brief (PM Offset: 0x028) PBA Mask */
-  RwReg   PM_PBBMASK;         /**< \brief (PM Offset: 0x02C) PBB Mask */
-  RwReg   PM_PBCMASK;         /**< \brief (PM Offset: 0x030) PBC Mask */
-  RwReg   PM_PBDMASK;         /**< \brief (PM Offset: 0x034) PBD Mask */
-  RoReg8  Reserved12[0x8];
-  RwReg   PM_PBADIVMASK;      /**< \brief (PM Offset: 0x040) PBA Divided Clock Mask */
-  RoReg8  Reserved13[0x10];
-  RwReg   PM_CFDCTRL;         /**< \brief (PM Offset: 0x054) Clock Failure Detector Control */
-  WoReg   PM_UNLOCK;          /**< \brief (PM Offset: 0x058) Unlock Register */
-  RoReg8  Reserved14[0x64];
-  WoReg   PM_IER;             /**< \brief (PM Offset: 0x0C0) Interrupt Enable Register */
-  WoReg   PM_IDR;             /**< \brief (PM Offset: 0x0C4) Interrupt Disable Register */
-  RoReg   PM_IMR;             /**< \brief (PM Offset: 0x0C8) Interrupt Mask Register */
-  RoReg   PM_ISR;             /**< \brief (PM Offset: 0x0CC) Interrupt Status Register */
-  WoReg   PM_ICR;             /**< \brief (PM Offset: 0x0D0) Interrupt Clear Register */
-  RoReg   PM_SR;              /**< \brief (PM Offset: 0x0D4) Status Register */
-  RoReg8  Reserved15[0x88];
-  RwReg   PM_PPCR;            /**< \brief (PM Offset: 0x160) Peripheral Power Control Register */
-  RoReg8  Reserved16[0x1C];
-  RoReg   PM_RCAUSE;          /**< \brief (PM Offset: 0x180) Reset Cause Register */
-  RoReg   PM_WCAUSE;          /**< \brief (PM Offset: 0x184) Wake Cause Register */
-  RwReg   PM_AWEN;            /**< \brief (PM Offset: 0x188) Asynchronous Wake Enable */
-  RoReg8  Reserved17[0x4];
-  RwReg   PM_OBS;             /**< \brief (PM Offset: 0x190) Obsvervability */
-  RwReg   PM_FASTSLEEP;       /**< \brief (PM Offset: 0x194) Fast Sleep Register */
-  RoReg8  Reserved18[0x260];
-  RoReg   PM_CONFIG;          /**< \brief (PM Offset: 0x3F8) Configuration Register */
-  RoReg   PM_VERSION;         /**< \brief (PM Offset: 0x3FC) Version Register */
- } reg;
+typedef struct {
+  __IO uint32_t MCCTRL;      /**< \brief Offset: 0x000 (R/W 32) Main Clock Control */
+  __IO uint32_t CPUSEL;      /**< \brief Offset: 0x004 (R/W 32) CPU Clock Select */
+       RoReg8   Reserved1[0x4];
+  __IO uint32_t PBASEL;      /**< \brief Offset: 0x00C (R/W 32) PBA Clock Select */
+  __IO uint32_t PBBSEL;      /**< \brief Offset: 0x010 (R/W 32) PBB Clock Select */
+  __IO uint32_t PBCSEL;      /**< \brief Offset: 0x014 (R/W 32) PBC Clock Select */
+  __IO uint32_t PBDSEL;      /**< \brief Offset: 0x018 (R/W 32) PBD Clock Select */
+       RoReg8   Reserved2[0x4];
+  __IO uint32_t CPUMASK;     /**< \brief Offset: 0x020 (R/W 32) CPU Mask */
+  __IO uint32_t HSBMASK;     /**< \brief Offset: 0x024 (R/W 32) HSB Mask */
+  __IO uint32_t PBAMASK;     /**< \brief Offset: 0x028 (R/W 32) PBA Mask */
+  __IO uint32_t PBBMASK;     /**< \brief Offset: 0x02C (R/W 32) PBB Mask */
+  __IO uint32_t PBCMASK;     /**< \brief Offset: 0x030 (R/W 32) PBC Mask */
+  __IO uint32_t PBDMASK;     /**< \brief Offset: 0x034 (R/W 32) PBD Mask */
+       RoReg8   Reserved3[0x8];
+  __IO uint32_t PBADIVMASK;  /**< \brief Offset: 0x040 (R/W 32) PBA Divided Clock Mask */
+       RoReg8   Reserved4[0x10];
+  __IO uint32_t CFDCTRL;     /**< \brief Offset: 0x054 (R/W 32) Clock Failure Detector Control */
+  __O  uint32_t UNLOCK;      /**< \brief Offset: 0x058 ( /W 32) Unlock Register */
+       RoReg8   Reserved5[0x64];
+  __O  uint32_t IER;         /**< \brief Offset: 0x0C0 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x0C4 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x0C8 (R/  32) Interrupt Mask Register */
+  __I  uint32_t ISR;         /**< \brief Offset: 0x0CC (R/  32) Interrupt Status Register */
+  __O  uint32_t ICR;         /**< \brief Offset: 0x0D0 ( /W 32) Interrupt Clear Register */
+  __I  uint32_t SR;          /**< \brief Offset: 0x0D4 (R/  32) Status Register */
+       RoReg8   Reserved6[0x88];
+  __IO uint32_t PPCR;        /**< \brief Offset: 0x160 (R/W 32) Peripheral Power Control Register */
+       RoReg8   Reserved7[0x1C];
+  __I  uint32_t RCAUSE;      /**< \brief Offset: 0x180 (R/  32) Reset Cause Register */
+  __I  uint32_t WCAUSE;      /**< \brief Offset: 0x184 (R/  32) Wake Cause Register */
+  __IO uint32_t AWEN;        /**< \brief Offset: 0x188 (R/W 32) Asynchronous Wake Enable */
+       RoReg8   Reserved8[0x4];
+  __IO uint32_t OBS;         /**< \brief Offset: 0x190 (R/W 32) Obsvervability */
+  __IO uint32_t FASTSLEEP;   /**< \brief Offset: 0x194 (R/W 32) Fast Sleep Register */
+       RoReg8   Reserved9[0x260];
+  __I  uint32_t CONFIG;      /**< \brief Offset: 0x3F8 (R/  32) Configuration Register */
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x3FC (R/  32) Version Register */
 } Pm;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

@@ -3923,61 +3923,32 @@ typedef union {
 
 /** \brief USART hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  US_CR_Type                CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
-  __IO US_MR_Type                MR;          /**< \brief Offset: 0x04 (R/W 32) Mode Register */
-  __O  US_IER_Type               IER;         /**< \brief Offset: 0x08 ( /W 32) Interrupt Enable Register */
-  __O  US_IDR_Type               IDR;         /**< \brief Offset: 0x0C ( /W 32) Interrupt Disable Register */
-  __I  US_IMR_Type               IMR;         /**< \brief Offset: 0x10 (R/  32) Interrupt Mask Register */
-  __I  US_CSR_Type               CSR;         /**< \brief Offset: 0x14 (R/  32) Channel Status Register */
-  __I  US_RHR_Type               RHR;         /**< \brief Offset: 0x18 (R/  32) Receiver Holding Register */
-  __O  US_THR_Type               THR;         /**< \brief Offset: 0x1C ( /W 32) Transmitter Holding Register */
-  __IO US_BRGR_Type              BRGR;        /**< \brief Offset: 0x20 (R/W 32) Baud Rate Generator Register */
-  __IO US_RTOR_Type              RTOR;        /**< \brief Offset: 0x24 (R/W 32) Receiver Time-out Register */
-  __IO US_TTGR_Type              TTGR;        /**< \brief Offset: 0x28 (R/W 32) Transmitter Timeguard Register */
-       RoReg8                    Reserved1[0x14];
-  __IO US_FIDI_Type              FIDI;        /**< \brief Offset: 0x40 (R/W 32) FI DI Ratio Register */
-  __I  US_NER_Type               NER;         /**< \brief Offset: 0x44 (R/  32) Number of Errors Register */
-       RoReg8                    Reserved2[0x4];
-  __IO US_IFR_Type               IFR;         /**< \brief Offset: 0x4C (R/W 32) IrDA Filter Register */
-  __IO US_MAN_Type               MAN;         /**< \brief Offset: 0x50 (R/W 32) Manchester Configuration Register */
-  __IO US_LINMR_Type             LINMR;       /**< \brief Offset: 0x54 (R/W 32) LIN Mode Register */
-  __IO US_LINIR_Type             LINIR;       /**< \brief Offset: 0x58 (R/W 32) LIN Identifier Register */
-  __I  US_LINBRR_Type            LINBRR;      /**< \brief Offset: 0x5C (R/  32) LIN Baud Rate Register */
-       RoReg8                    Reserved3[0x84];
-  __IO US_WPMR_Type              WPMR;        /**< \brief Offset: 0xE4 (R/W 32) Write Protect Mode Register */
-  __I  US_WPSR_Type              WPSR;        /**< \brief Offset: 0xE8 (R/  32) Write Protect Status Register */
-       RoReg8                    Reserved4[0x10];
-  __I  US_VERSION_Type           VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
- } bf;
- struct {
-  WoReg   US_CR;              /**< \brief (USART Offset: 0x00) Control Register */
-  RwReg   US_MR;              /**< \brief (USART Offset: 0x04) Mode Register */
-  WoReg   US_IER;             /**< \brief (USART Offset: 0x08) Interrupt Enable Register */
-  WoReg   US_IDR;             /**< \brief (USART Offset: 0x0C) Interrupt Disable Register */
-  RoReg   US_IMR;             /**< \brief (USART Offset: 0x10) Interrupt Mask Register */
-  RoReg   US_CSR;             /**< \brief (USART Offset: 0x14) Channel Status Register */
-  RoReg   US_RHR;             /**< \brief (USART Offset: 0x18) Receiver Holding Register */
-  WoReg   US_THR;             /**< \brief (USART Offset: 0x1C) Transmitter Holding Register */
-  RwReg   US_BRGR;            /**< \brief (USART Offset: 0x20) Baud Rate Generator Register */
-  RwReg   US_RTOR;            /**< \brief (USART Offset: 0x24) Receiver Time-out Register */
-  RwReg   US_TTGR;            /**< \brief (USART Offset: 0x28) Transmitter Timeguard Register */
-  RoReg8  Reserved5[0x14];
-  RwReg   US_FIDI;            /**< \brief (USART Offset: 0x40) FI DI Ratio Register */
-  RoReg   US_NER;             /**< \brief (USART Offset: 0x44) Number of Errors Register */
-  RoReg8  Reserved6[0x4];
-  RwReg   US_IFR;             /**< \brief (USART Offset: 0x4C) IrDA Filter Register */
-  RwReg   US_MAN;             /**< \brief (USART Offset: 0x50) Manchester Configuration Register */
-  RwReg   US_LINMR;           /**< \brief (USART Offset: 0x54) LIN Mode Register */
-  RwReg   US_LINIR;           /**< \brief (USART Offset: 0x58) LIN Identifier Register */
-  RoReg   US_LINBRR;          /**< \brief (USART Offset: 0x5C) LIN Baud Rate Register */
-  RoReg8  Reserved7[0x84];
-  RwReg   US_WPMR;            /**< \brief (USART Offset: 0xE4) Write Protect Mode Register */
-  RoReg   US_WPSR;            /**< \brief (USART Offset: 0xE8) Write Protect Status Register */
-  RoReg8  Reserved8[0x10];
-  RoReg   US_VERSION;         /**< \brief (USART Offset: 0xFC) Version Register */
- } reg;
+typedef struct {
+  __O  uint32_t US_CR;          /**< (USART Offset: 0x00) Control Register */
+  __IO uint32_t US_MR;          /**< (USART Offset: 0x04) Mode Register */
+  __O  uint32_t US_IER;         /**< (USART Offset: 0x08) Interrupt Enable Register */
+  __O  uint32_t US_IDR;         /**< (USART Offset: 0x0C) Interrupt Disable Register */
+  __I  uint32_t US_IMR;         /**< (USART Offset: 0x10) Interrupt Mask Register */
+  __I  uint32_t US_CSR;         /**< (USART Offset: 0x14) Channel Status Register */
+  __I  uint32_t US_RHR;         /**< (USART Offset: 0x18) Receive Holding Register */
+  __O  uint32_t US_THR;         /**< (USART Offset: 0x1C) Transmit Holding Register */
+  __IO uint32_t US_BRGR;        /**< (USART Offset: 0x20) Baud Rate Generator Register */
+  __IO uint32_t US_RTOR;        /**< (USART Offset: 0x24) Receiver Timeout Register */
+  __IO uint32_t US_TTGR;        /**< (USART Offset: 0x28) Transmitter Timeguard Register */
+  __I  uint8_t  Reserved1[20];
+  __IO uint32_t US_FIDI;        /**< (USART Offset: 0x40) FI DI Ratio Register */
+  __I  uint32_t US_NER;         /**< (USART Offset: 0x44) Number of Errors Register */
+  __I  uint8_t  Reserved2[4];
+  __IO uint32_t US_IF;          /**< (USART Offset: 0x4C) IrDA Filter Register */
+  __IO uint32_t US_MAN;         /**< (USART Offset: 0x50) Manchester Configuration Register */
+  __IO uint32_t US_LINMR;       /**< (USART Offset: 0x54) LIN Mode Register */
+  __IO uint32_t US_LINIR;       /**< (USART Offset: 0x58) LIN Identifier Register */
+  __I  uint32_t US_LINBRR;      /**< (USART Offset: 0x5C) LIN Baud Rate Register */
+  __I  uint8_t  Reserved3[132];
+  __IO uint32_t US_WPMR;        /**< (USART Offset: 0xE4) Write Protection Mode Register */
+  __I  uint32_t US_WPSR;        /**< (USART Offset: 0xE8) Write Protection Status Register */
+  __I  uint8_t  Reserved4[16];
+  __I  uint32_t US_VERSION;     /**< (USART Offset: 0xFC) Version Register */
 } Usart;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

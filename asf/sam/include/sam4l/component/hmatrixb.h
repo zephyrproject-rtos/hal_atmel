@@ -398,23 +398,13 @@ typedef union {
 
 /** \brief HMATRIXB hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-       HmatrixbMcfg              Mcfg[16];    /**< \brief Offset: 0x000 HmatrixbMcfg groups */
-       HmatrixbScfg              Scfg[16];    /**< \brief Offset: 0x040 HmatrixbScfg groups */
-       HmatrixbPrs               Prs[16];     /**< \brief Offset: 0x080 HmatrixbPrs groups */
-  __IO HMATRIXB_MRCR_Type        MRCR;        /**< \brief Offset: 0x100 (R/W 32) Master Remap Control Register */
-       RoReg8                    Reserved1[0xC];
-       HmatrixbSfr               Sfr[16];     /**< \brief Offset: 0x110 HmatrixbSfr groups */
- } bf;
- struct {
-  HmatrixbMcfg HMATRIXB_MCFG[16];  /**< \brief (HMATRIXB Offset: 0x000) HmatrixbMcfg groups */
-  HmatrixbScfg HMATRIXB_SCFG[16];  /**< \brief (HMATRIXB Offset: 0x040) HmatrixbScfg groups */
-  HmatrixbPrs HMATRIXB_PRS[16];   /**< \brief (HMATRIXB Offset: 0x080) HmatrixbPrs groups */
-  RwReg   HMATRIXB_MRCR;      /**< \brief (HMATRIXB Offset: 0x100) Master Remap Control Register */
-  RoReg8  Reserved2[0xC];
-  HmatrixbSfr HMATRIXB_SFR[16];   /**< \brief (HMATRIXB Offset: 0x110) HmatrixbSfr groups */
- } reg;
+typedef struct {
+  __IO uint32_t Mcfg[16];    /**< \brief Offset: 0x000 HmatrixbMcfg groups */
+  __IO uint32_t Scfg[16];    /**< \brief Offset: 0x040 HmatrixbScfg groups */
+  __IO uint32_t Prs[16];     /**< \brief Offset: 0x080 HmatrixbPrs groups */
+  __IO uint32_t MRCR;        /**< \brief Offset: 0x100 (R/W 32) Master Remap Control Register */
+       RoReg8   Reserved1[0xC];
+  __IO uint32_t Sfr[16];     /**< \brief Offset: 0x110 HmatrixbSfr groups */
 } Hmatrixb;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

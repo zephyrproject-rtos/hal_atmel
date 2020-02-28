@@ -770,43 +770,23 @@ typedef union {
 
 /** \brief SPI hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  SPI_CR_Type               CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
-  __IO SPI_MR_Type               MR;          /**< \brief Offset: 0x04 (R/W 32) Mode Register */
-  __I  SPI_RDR_Type              RDR;         /**< \brief Offset: 0x08 (R/  32) Receive Data Register */
-  __O  SPI_TDR_Type              TDR;         /**< \brief Offset: 0x0C ( /W 32) Transmit Data Register */
-  __I  SPI_SR_Type               SR;          /**< \brief Offset: 0x10 (R/  32) Status Register */
-  __O  SPI_IER_Type              IER;         /**< \brief Offset: 0x14 ( /W 32) Interrupt Enable Register */
-  __O  SPI_IDR_Type              IDR;         /**< \brief Offset: 0x18 ( /W 32) Interrupt Disable Register */
-  __I  SPI_IMR_Type              IMR;         /**< \brief Offset: 0x1C (R/  32) Interrupt Mask Register */
-       RoReg8                    Reserved1[0x10];
-  __IO SPI_CSR_Type              CSR[4];      /**< \brief Offset: 0x30 (R/W 32) Chip Select Register */
-       RoReg8                    Reserved2[0xA4];
-  __IO SPI_WPCR_Type             WPCR;        /**< \brief Offset: 0xE4 (R/W 32) Write Protection control Register */
-  __I  SPI_WPSR_Type             WPSR;        /**< \brief Offset: 0xE8 (R/  32) Write Protection status Register */
-       RoReg8                    Reserved3[0xC];
-  __I  SPI_FEATURES_Type         FEATURES;    /**< \brief Offset: 0xF8 (R/  32) Features Register */
-  __I  SPI_VERSION_Type          VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
- } bf;
- struct {
-  WoReg   SPI_CR;             /**< \brief (SPI Offset: 0x00) Control Register */
-  RwReg   SPI_MR;             /**< \brief (SPI Offset: 0x04) Mode Register */
-  RoReg   SPI_RDR;            /**< \brief (SPI Offset: 0x08) Receive Data Register */
-  WoReg   SPI_TDR;            /**< \brief (SPI Offset: 0x0C) Transmit Data Register */
-  RoReg   SPI_SR;             /**< \brief (SPI Offset: 0x10) Status Register */
-  WoReg   SPI_IER;            /**< \brief (SPI Offset: 0x14) Interrupt Enable Register */
-  WoReg   SPI_IDR;            /**< \brief (SPI Offset: 0x18) Interrupt Disable Register */
-  RoReg   SPI_IMR;            /**< \brief (SPI Offset: 0x1C) Interrupt Mask Register */
-  RoReg8  Reserved4[0x10];
-  RwReg   SPI_CSR[4];         /**< \brief (SPI Offset: 0x30) Chip Select Register */
-  RoReg8  Reserved5[0xA4];
-  RwReg   SPI_WPCR;           /**< \brief (SPI Offset: 0xE4) Write Protection control Register */
-  RoReg   SPI_WPSR;           /**< \brief (SPI Offset: 0xE8) Write Protection status Register */
-  RoReg8  Reserved6[0xC];
-  RoReg   SPI_FEATURES;       /**< \brief (SPI Offset: 0xF8) Features Register */
-  RoReg   SPI_VERSION;        /**< \brief (SPI Offset: 0xFC) Version Register */
- } reg;
+typedef struct {
+  __O  uint32_t           SPI_CR;	/**< \brief Offset: 0x00 ( /W 32) Control Register */
+  __IO uint32_t           SPI_MR;	/**< \brief Offset: 0x04 (R/W 32) Mode Register */
+  __I  uint32_t          SPI_RDR;	/**< \brief Offset: 0x08 (R/  32) Receive Data Register */
+  __O  uint32_t          SPI_TDR;	/**< \brief Offset: 0x0C ( /W 32) Transmit Data Register */
+  __I  uint32_t           SPI_SR;	/**< \brief Offset: 0x10 (R/  32) Status Register */
+  __O  uint32_t          SPI_IER;	/**< \brief Offset: 0x14 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t          SPI_IDR;	/**< \brief Offset: 0x18 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t          SPI_IMR;	/**< \brief Offset: 0x1C (R/  32) Interrupt Mask Register */
+  __I  uint8_t   Reserved1[0x10];
+  __IO uint32_t       SPI_CSR[4];	/**< \brief Offset: 0x30 (R/W 32) Chip Select Register */
+  __I  uint8_t   Reserved2[0xA4];
+  __IO uint32_t         SPI_WPCR;	/**< \brief Offset: 0xE4 (R/W 32) Write Protection control Register */
+  __I  uint32_t         SPI_WPSR;	/**< \brief Offset: 0xE8 (R/  32) Write Protection status Register */
+  __I  uint8_t    Reserved3[0xC];
+  __I  uint32_t     SPI_FEATURES;	/**< \brief Offset: 0xF8 (R/  32) Features Register */
+  __I  uint32_t      SPI_VERSION;	/**< \brief Offset: 0xFC (R/  32) Version Register */
 } Spi;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

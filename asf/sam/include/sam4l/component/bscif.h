@@ -989,95 +989,50 @@ typedef union {
 
 /** \brief BscifBr hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO BSCIF_BR_Type             BR;          /**< \brief Offset: 0x000 (R/W 32) Backup Register */
- } bf;
- struct {
-  RwReg   BSCIF_BR;           /**< \brief (BSCIF Offset: 0x000) Backup Register */
- } reg;
+typedef struct {
+  __IO uint32_t BR;          /**< \brief Offset: 0x000 (R/W 32) Backup Register */
 } BscifBr;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /** \brief BSCIF hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  BSCIF_IER_Type            IER;         /**< \brief Offset: 0x000 ( /W 32) Interrupt Enable Register */
-  __O  BSCIF_IDR_Type            IDR;         /**< \brief Offset: 0x004 ( /W 32) Interrupt Disable Register */
-  __I  BSCIF_IMR_Type            IMR;         /**< \brief Offset: 0x008 (R/  32) Interrupt Mask Register */
-  __I  BSCIF_ISR_Type            ISR;         /**< \brief Offset: 0x00C (R/  32) Interrupt Status Register */
-  __O  BSCIF_ICR_Type            ICR;         /**< \brief Offset: 0x010 ( /W 32) Interrupt Clear Register */
-  __I  BSCIF_PCLKSR_Type         PCLKSR;      /**< \brief Offset: 0x014 (R/  32) Power and Clocks Status Register */
-  __O  BSCIF_UNLOCK_Type         UNLOCK;      /**< \brief Offset: 0x018 ( /W 32) Unlock Register */
-  __IO BSCIF_CSCR_Type           CSCR;        /**< \brief Offset: 0x01C (R/W 32) Chip Specific Configuration Register */
-  __IO BSCIF_OSCCTRL32_Type      OSCCTRL32;   /**< \brief Offset: 0x020 (R/W 32) Oscillator 32 Control Register */
-  __IO BSCIF_RC32KCR_Type        RC32KCR;     /**< \brief Offset: 0x024 (R/W 32) 32 kHz RC Oscillator Control Register */
-  __IO BSCIF_RC32KTUNE_Type      RC32KTUNE;   /**< \brief Offset: 0x028 (R/W 32) 32kHz RC Oscillator Tuning Register */
-  __IO BSCIF_BOD33CTRL_Type      BOD33CTRL;   /**< \brief Offset: 0x02C (R/W 32) BOD33 Control Register */
-  __IO BSCIF_BOD33LEVEL_Type     BOD33LEVEL;  /**< \brief Offset: 0x030 (R/W 32) BOD33 Level Register */
-  __IO BSCIF_BOD33SAMPLING_Type  BOD33SAMPLING; /**< \brief Offset: 0x034 (R/W 32) BOD33 Sampling Control Register */
-  __IO BSCIF_BOD18CTRL_Type      BOD18CTRL;   /**< \brief Offset: 0x038 (R/W 32) BOD18 Control Register */
-  __IO BSCIF_BOD18LEVEL_Type     BOD18LEVEL;  /**< \brief Offset: 0x03C (R/W 32) BOD18 Level Register */
-       RoReg8                    Reserved1[0x4];
-  __IO BSCIF_VREGCR_Type         VREGCR;      /**< \brief Offset: 0x044 (R/W 32) Voltage Regulator Configuration Register */
-       RoReg8                    Reserved2[0x4];
-  __IO BSCIF_VREGNCSR_Type       VREGNCSR;    /**< \brief Offset: 0x04C (R/W 32) Normal Mode Control and Status Register */
-  __IO BSCIF_VREGLPCSR_Type      VREGLPCSR;   /**< \brief Offset: 0x050 (R/W 32) LP Mode Control and Status Register */
-       RoReg8                    Reserved3[0x4];
-  __IO BSCIF_RC1MCR_Type         RC1MCR;      /**< \brief Offset: 0x058 (R/W 32) 1MHz RC Clock Configuration Register */
-  __IO BSCIF_BGCR_Type           BGCR;        /**< \brief Offset: 0x05C (R/W 32) Bandgap Calibration Register */
-  __IO BSCIF_BGCTRL_Type         BGCTRL;      /**< \brief Offset: 0x060 (R/W 32) Bandgap Control Register */
-  __I  BSCIF_BGSR_Type           BGSR;        /**< \brief Offset: 0x064 (R/  32) Bandgap Status Register */
-       RoReg8                    Reserved4[0x10];
-       BscifBr                   Br[4];       /**< \brief Offset: 0x078 BscifBr groups */
-       RoReg8                    Reserved5[0x35C];
-  __I  BSCIF_BRIFBVERSION_Type   BRIFBVERSION; /**< \brief Offset: 0x3E4 (R/  32) Backup Register Interface Version Register */
-  __I  BSCIF_BGREFIFBVERSION_Type BGREFIFBVERSION; /**< \brief Offset: 0x3E8 (R/  32) BGREFIFB Version Register */
-  __I  BSCIF_VREGIFGVERSION_Type VREGIFGVERSION; /**< \brief Offset: 0x3EC (R/  32) VREGIFA Version Register */
-  __I  BSCIF_BODIFCVERSION_Type  BODIFCVERSION; /**< \brief Offset: 0x3F0 (R/  32) BODIFC Version Register */
-  __I  BSCIF_RC32KIFBVERSION_Type RC32KIFBVERSION; /**< \brief Offset: 0x3F4 (R/  32) 32 kHz RC Oscillator Version Register */
-  __I  BSCIF_OSC32IFAVERSION_Type OSC32IFAVERSION; /**< \brief Offset: 0x3F8 (R/  32) 32 KHz Oscillator Version Register */
-  __I  BSCIF_VERSION_Type        VERSION;     /**< \brief Offset: 0x3FC (R/  32) BSCIF Version Register */
- } bf;
- struct {
-  WoReg   BSCIF_IER;          /**< \brief (BSCIF Offset: 0x000) Interrupt Enable Register */
-  WoReg   BSCIF_IDR;          /**< \brief (BSCIF Offset: 0x004) Interrupt Disable Register */
-  RoReg   BSCIF_IMR;          /**< \brief (BSCIF Offset: 0x008) Interrupt Mask Register */
-  RoReg   BSCIF_ISR;          /**< \brief (BSCIF Offset: 0x00C) Interrupt Status Register */
-  WoReg   BSCIF_ICR;          /**< \brief (BSCIF Offset: 0x010) Interrupt Clear Register */
-  RoReg   BSCIF_PCLKSR;       /**< \brief (BSCIF Offset: 0x014) Power and Clocks Status Register */
-  WoReg   BSCIF_UNLOCK;       /**< \brief (BSCIF Offset: 0x018) Unlock Register */
-  RwReg   BSCIF_CSCR;         /**< \brief (BSCIF Offset: 0x01C) Chip Specific Configuration Register */
-  RwReg   BSCIF_OSCCTRL32;    /**< \brief (BSCIF Offset: 0x020) Oscillator 32 Control Register */
-  RwReg   BSCIF_RC32KCR;      /**< \brief (BSCIF Offset: 0x024) 32 kHz RC Oscillator Control Register */
-  RwReg   BSCIF_RC32KTUNE;    /**< \brief (BSCIF Offset: 0x028) 32kHz RC Oscillator Tuning Register */
-  RwReg   BSCIF_BOD33CTRL;    /**< \brief (BSCIF Offset: 0x02C) BOD33 Control Register */
-  RwReg   BSCIF_BOD33LEVEL;   /**< \brief (BSCIF Offset: 0x030) BOD33 Level Register */
-  RwReg   BSCIF_BOD33SAMPLING; /**< \brief (BSCIF Offset: 0x034) BOD33 Sampling Control Register */
-  RwReg   BSCIF_BOD18CTRL;    /**< \brief (BSCIF Offset: 0x038) BOD18 Control Register */
-  RwReg   BSCIF_BOD18LEVEL;   /**< \brief (BSCIF Offset: 0x03C) BOD18 Level Register */
-  RoReg8  Reserved6[0x4];
-  RwReg   BSCIF_VREGCR;       /**< \brief (BSCIF Offset: 0x044) Voltage Regulator Configuration Register */
-  RoReg8  Reserved7[0x4];
-  RwReg   BSCIF_VREGNCSR;     /**< \brief (BSCIF Offset: 0x04C) Normal Mode Control and Status Register */
-  RwReg   BSCIF_VREGLPCSR;    /**< \brief (BSCIF Offset: 0x050) LP Mode Control and Status Register */
-  RoReg8  Reserved8[0x4];
-  RwReg   BSCIF_RC1MCR;       /**< \brief (BSCIF Offset: 0x058) 1MHz RC Clock Configuration Register */
-  RwReg   BSCIF_BGCR;         /**< \brief (BSCIF Offset: 0x05C) Bandgap Calibration Register */
-  RwReg   BSCIF_BGCTRL;       /**< \brief (BSCIF Offset: 0x060) Bandgap Control Register */
-  RoReg   BSCIF_BGSR;         /**< \brief (BSCIF Offset: 0x064) Bandgap Status Register */
-  RoReg8  Reserved9[0x10];
-  BscifBr BSCIF_BR[4];        /**< \brief (BSCIF Offset: 0x078) BscifBr groups */
-  RoReg8  Reserved10[0x35C];
-  RoReg   BSCIF_BRIFBVERSION; /**< \brief (BSCIF Offset: 0x3E4) Backup Register Interface Version Register */
-  RoReg   BSCIF_BGREFIFBVERSION; /**< \brief (BSCIF Offset: 0x3E8) BGREFIFB Version Register */
-  RoReg   BSCIF_VREGIFGVERSION; /**< \brief (BSCIF Offset: 0x3EC) VREGIFA Version Register */
-  RoReg   BSCIF_BODIFCVERSION; /**< \brief (BSCIF Offset: 0x3F0) BODIFC Version Register */
-  RoReg   BSCIF_RC32KIFBVERSION; /**< \brief (BSCIF Offset: 0x3F4) 32 kHz RC Oscillator Version Register */
-  RoReg   BSCIF_OSC32IFAVERSION; /**< \brief (BSCIF Offset: 0x3F8) 32 KHz Oscillator Version Register */
-  RoReg   BSCIF_VERSION;      /**< \brief (BSCIF Offset: 0x3FC) BSCIF Version Register */
- } reg;
+typedef struct {
+  __O  uint32_t IER;             /**< \brief Offset: 0x000 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;             /**< \brief Offset: 0x004 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;             /**< \brief Offset: 0x008 (R/  32) Interrupt Mask Register */
+  __I  uint32_t ISR;             /**< \brief Offset: 0x00C (R/  32) Interrupt Status Register */
+  __O  uint32_t ICR;             /**< \brief Offset: 0x010 ( /W 32) Interrupt Clear Register */
+  __I  uint32_t PCLKSR;          /**< \brief Offset: 0x014 (R/  32) Power and Clocks Status Register */
+  __O  uint32_t UNLOCK;          /**< \brief Offset: 0x018 ( /W 32) Unlock Register */
+  __IO uint32_t CSCR;            /**< \brief Offset: 0x01C (R/W 32) Chip Specific Configuration Register */
+  __IO uint32_t OSCCTRL32;       /**< \brief Offset: 0x020 (R/W 32) Oscillator 32 Control Register */
+  __IO uint32_t RC32KCR;         /**< \brief Offset: 0x024 (R/W 32) 32 kHz RC Oscillator Control Register */
+  __IO uint32_t RC32KTUNE;       /**< \brief Offset: 0x028 (R/W 32) 32kHz RC Oscillator Tuning Register */
+  __IO uint32_t BOD33CTRL;       /**< \brief Offset: 0x02C (R/W 32) BOD33 Control Register */
+  __IO uint32_t BOD33LEVEL;      /**< \brief Offset: 0x030 (R/W 32) BOD33 Level Register */
+  __IO uint32_t BOD33SAMPLING;   /**< \brief Offset: 0x034 (R/W 32) BOD33 Sampling Control Register */
+  __IO uint32_t BOD18CTRL;       /**< \brief Offset: 0x038 (R/W 32) BOD18 Control Register */
+  __IO uint32_t BOD18LEVEL;      /**< \brief Offset: 0x03C (R/W 32) BOD18 Level Register */
+       RoReg8   Reserved1[0x4];
+  __IO uint32_t VREGCR;          /**< \brief Offset: 0x044 (R/W 32) Voltage Regulator Configuration Register */
+       RoReg8   Reserved2[0x4];
+  __IO uint32_t VREGNCSR;        /**< \brief Offset: 0x04C (R/W 32) Normal Mode Control and Status Register */
+  __IO uint32_t VREGLPCSR;       /**< \brief Offset: 0x050 (R/W 32) LP Mode Control and Status Register */
+       RoReg8   Reserved3[0x4];
+  __IO uint32_t RC1MCR;          /**< \brief Offset: 0x058 (R/W 32) 1MHz RC Clock Configuration Register */
+  __IO uint32_t BGCR;            /**< \brief Offset: 0x05C (R/W 32) Bandgap Calibration Register */
+  __IO uint32_t BGCTRL;          /**< \brief Offset: 0x060 (R/W 32) Bandgap Control Register */
+  __I  uint32_t BGSR;            /**< \brief Offset: 0x064 (R/  32) Bandgap Status Register */
+       RoReg8   Reserved4[0x10];
+       uint32_t BR[4];           /**< \brief Offset: 0x078 BscifBr groups */
+       RoReg8   Reserved5[0x35C];
+  __I  uint32_t BRIFBVERSION;    /**< \brief Offset: 0x3E4 (R/  32) Backup Register Interface Version Register */
+  __I  uint32_t BGREFIFBVERSION; /**< \brief Offset: 0x3E8 (R/  32) BGREFIFB Version Register */
+  __I  uint32_t VREGIFGVERSION;  /**< \brief Offset: 0x3EC (R/  32) VREGIFA Version Register */
+  __I  uint32_t BODIFCVERSION;   /**< \brief Offset: 0x3F0 (R/  32) BODIFC Version Register */
+  __I  uint32_t RC32KIFBVERSION; /**< \brief Offset: 0x3F4 (R/  32) 32 kHz RC Oscillator Version Register */
+  __I  uint32_t OSC32IFAVERSION; /**< \brief Offset: 0x3F8 (R/  32) 32 KHz Oscillator Version Register */
+  __I  uint32_t VERSION;         /**< \brief Offset: 0x3FC (R/  32) BSCIF Version Register */
 } Bscif;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

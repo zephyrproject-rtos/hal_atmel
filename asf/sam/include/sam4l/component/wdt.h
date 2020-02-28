@@ -263,31 +263,17 @@ typedef union {
 
 /** \brief WDT hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO WDT_CTRL_Type             CTRL;        /**< \brief Offset: 0x000 (R/W 32) Control Register */
-  __O  WDT_CLR_Type              CLR;         /**< \brief Offset: 0x004 ( /W 32) Clear Register */
-  __I  WDT_SR_Type               SR;          /**< \brief Offset: 0x008 (R/  32) Status Register */
-  __O  WDT_IER_Type              IER;         /**< \brief Offset: 0x00C ( /W 32) Interrupt Enable Register */
-  __O  WDT_IDR_Type              IDR;         /**< \brief Offset: 0x010 ( /W 32) Interrupt Disable Register */
-  __I  WDT_IMR_Type              IMR;         /**< \brief Offset: 0x014 (R/  32) Interrupt Mask Register */
-  __I  WDT_ISR_Type              ISR;         /**< \brief Offset: 0x018 (R/  32) Interrupt Status Register */
-  __O  WDT_ICR_Type              ICR;         /**< \brief Offset: 0x01C ( /W 32) Interrupt Clear Register */
-       RoReg8                    Reserved1[0x3DC];
-  __I  WDT_VERSION_Type          VERSION;     /**< \brief Offset: 0x3FC (R/  32) Version Register */
- } bf;
- struct {
-  RwReg   WDT_CTRL;           /**< \brief (WDT Offset: 0x000) Control Register */
-  WoReg   WDT_CLR;            /**< \brief (WDT Offset: 0x004) Clear Register */
-  RoReg   WDT_SR;             /**< \brief (WDT Offset: 0x008) Status Register */
-  WoReg   WDT_IER;            /**< \brief (WDT Offset: 0x00C) Interrupt Enable Register */
-  WoReg   WDT_IDR;            /**< \brief (WDT Offset: 0x010) Interrupt Disable Register */
-  RoReg   WDT_IMR;            /**< \brief (WDT Offset: 0x014) Interrupt Mask Register */
-  RoReg   WDT_ISR;            /**< \brief (WDT Offset: 0x018) Interrupt Status Register */
-  WoReg   WDT_ICR;            /**< \brief (WDT Offset: 0x01C) Interrupt Clear Register */
-  RoReg8  Reserved2[0x3DC];
-  RoReg   WDT_VERSION;        /**< \brief (WDT Offset: 0x3FC) Version Register */
- } reg;
+typedef struct {
+  __IO uint32_t CTRL;        /**< \brief Offset: 0x000 (R/W 32) Control Register */
+  __O  uint32_t CLR;         /**< \brief Offset: 0x004 ( /W 32) Clear Register */
+  __I  uint32_t SR;          /**< \brief Offset: 0x008 (R/  32) Status Register */
+  __O  uint32_t IER;         /**< \brief Offset: 0x00C ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x010 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x014 (R/  32) Interrupt Mask Register */
+  __I  uint32_t ISR;         /**< \brief Offset: 0x018 (R/  32) Interrupt Status Register */
+  __O  uint32_t ICR;         /**< \brief Offset: 0x01C ( /W 32) Interrupt Clear Register */
+       RoReg8   Reserved1[0x3DC];
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x3FC (R/  32) Version Register */
 } Wdt;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

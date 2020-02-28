@@ -324,37 +324,20 @@ typedef union {
 
 /** \brief SMAP hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  SMAP_CR_Type              CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
-  __I  SMAP_SR_Type              SR;          /**< \brief Offset: 0x04 (R/  32) Status Register */
-  __O  SMAP_SCR_Type             SCR;         /**< \brief Offset: 0x08 ( /W 32) Status Clear Register */
-  __IO SMAP_ADDR_Type            ADDR;        /**< \brief Offset: 0x0C (R/W 32) Address Register */
-  __IO SMAP_LENGTH_Type          LENGTH;      /**< \brief Offset: 0x10 (R/W 32) Length Register */
-  __IO SMAP_DATA_Type            DATA;        /**< \brief Offset: 0x14 (R/W 32) Data Register */
-       RoReg8                    Reserved1[0x10];
-  __I  SMAP_VERSION_Type         VERSION;     /**< \brief Offset: 0x28 (R/  32) VERSION register */
-       RoReg8                    Reserved2[0xC4];
-  __I  SMAP_CIDR_Type            CIDR;        /**< \brief Offset: 0xF0 (R/  32) Chip ID Register */
-  __I  SMAP_EXID_Type            EXID;        /**< \brief Offset: 0xF4 (R/  32) Chip ID Extension Register */
-       RoReg8                    Reserved3[0x4];
-  __I  SMAP_IDR_Type             IDR;         /**< \brief Offset: 0xFC (R/  32) AP Identification register */
- } bf;
- struct {
-  WoReg   SMAP_CR;            /**< \brief (SMAP Offset: 0x00) Control Register */
-  RoReg   SMAP_SR;            /**< \brief (SMAP Offset: 0x04) Status Register */
-  WoReg   SMAP_SCR;           /**< \brief (SMAP Offset: 0x08) Status Clear Register */
-  RwReg   SMAP_ADDR;          /**< \brief (SMAP Offset: 0x0C) Address Register */
-  RwReg   SMAP_LENGTH;        /**< \brief (SMAP Offset: 0x10) Length Register */
-  RwReg   SMAP_DATA;          /**< \brief (SMAP Offset: 0x14) Data Register */
-  RoReg8  Reserved4[0x10];
-  RoReg   SMAP_VERSION;       /**< \brief (SMAP Offset: 0x28) VERSION register */
-  RoReg8  Reserved5[0xC4];
-  RoReg   SMAP_CIDR;          /**< \brief (SMAP Offset: 0xF0) Chip ID Register */
-  RoReg   SMAP_EXID;          /**< \brief (SMAP Offset: 0xF4) Chip ID Extension Register */
-  RoReg8  Reserved6[0x4];
-  RoReg   SMAP_IDR;           /**< \brief (SMAP Offset: 0xFC) AP Identification register */
- } reg;
+typedef struct {
+  __O  uint32_t CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
+  __I  uint32_t SR;          /**< \brief Offset: 0x04 (R/  32) Status Register */
+  __O  uint32_t SCR;         /**< \brief Offset: 0x08 ( /W 32) Status Clear Register */
+  __IO uint32_t ADDR;        /**< \brief Offset: 0x0C (R/W 32) Address Register */
+  __IO uint32_t LENGTH;      /**< \brief Offset: 0x10 (R/W 32) Length Register */
+  __IO uint32_t DATA;        /**< \brief Offset: 0x14 (R/W 32) Data Register */
+       RoReg8   Reserved1[0x10];
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x28 (R/  32) VERSION register */
+       RoReg8   Reserved2[0xC4];
+  __I  uint32_t CIDR;        /**< \brief Offset: 0xF0 (R/  32) Chip ID Register */
+  __I  uint32_t EXID;        /**< \brief Offset: 0xF4 (R/  32) Chip ID Extension Register */
+       RoReg8   Reserved3[0x4];
+  __I  uint32_t IDR;         /**< \brief Offset: 0xFC (R/  32) AP Identification register */
 } Smap;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

@@ -259,29 +259,16 @@ typedef union {
 
 /** \brief PARC hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO PARC_CFG_Type             CFG;         /**< \brief Offset: 0x00 (R/W 32) Configuration Register */
-  __IO PARC_CR_Type              CR;          /**< \brief Offset: 0x04 (R/W 32) Control Register */
-  __O  PARC_IER_Type             IER;         /**< \brief Offset: 0x08 ( /W 32) Interrupt Enable Register */
-  __O  PARC_IDR_Type             IDR;         /**< \brief Offset: 0x0C ( /W 32) Interrupt Disable Register */
-  __I  PARC_IMR_Type             IMR;         /**< \brief Offset: 0x10 (R/  32) Interrupt Mask Register */
-  __I  PARC_SR_Type              SR;          /**< \brief Offset: 0x14 (R/  32) Status Register */
-  __O  PARC_ICR_Type             ICR;         /**< \brief Offset: 0x18 ( /W 32) Interrupt Status Clear Register */
-  __I  PARC_RHR_Type             RHR;         /**< \brief Offset: 0x1C (R/  32) Receive Holding Register */
-  __I  PARC_VERSION_Type         VERSION;     /**< \brief Offset: 0x20 (R/  32) Version Register */
- } bf;
- struct {
-  RwReg   PARC_CFG;           /**< \brief (PARC Offset: 0x00) Configuration Register */
-  RwReg   PARC_CR;            /**< \brief (PARC Offset: 0x04) Control Register */
-  WoReg   PARC_IER;           /**< \brief (PARC Offset: 0x08) Interrupt Enable Register */
-  WoReg   PARC_IDR;           /**< \brief (PARC Offset: 0x0C) Interrupt Disable Register */
-  RoReg   PARC_IMR;           /**< \brief (PARC Offset: 0x10) Interrupt Mask Register */
-  RoReg   PARC_SR;            /**< \brief (PARC Offset: 0x14) Status Register */
-  WoReg   PARC_ICR;           /**< \brief (PARC Offset: 0x18) Interrupt Status Clear Register */
-  RoReg   PARC_RHR;           /**< \brief (PARC Offset: 0x1C) Receive Holding Register */
-  RoReg   PARC_VERSION;       /**< \brief (PARC Offset: 0x20) Version Register */
- } reg;
+typedef struct {
+  __IO uint32_t CFG;         /**< \brief Offset: 0x00 (R/W 32) Configuration Register */
+  __IO uint32_t CR;          /**< \brief Offset: 0x04 (R/W 32) Control Register */
+  __O  uint32_t IER;         /**< \brief Offset: 0x08 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x0C ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x10 (R/  32) Interrupt Mask Register */
+  __I  uint32_t SR;          /**< \brief Offset: 0x14 (R/  32) Status Register */
+  __O  uint32_t ICR;         /**< \brief Offset: 0x18 ( /W 32) Interrupt Status Clear Register */
+  __I  uint32_t RHR;         /**< \brief Offset: 0x1C (R/  32) Receive Holding Register */
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x20 (R/  32) Version Register */
 } Parc;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

@@ -137,19 +137,11 @@ typedef union {
 
 /** \brief GLOC hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-       GlocLut                   Lut[2];      /**< \brief Offset: 0x00 GlocLut groups [LUTS] */
-       RoReg8                    Reserved1[0x28];
-  __I  GLOC_PARAMETER_Type       PARAMETER;   /**< \brief Offset: 0x38 (R/  32) Parameter Register */
-  __I  GLOC_VERSION_Type         VERSION;     /**< \brief Offset: 0x3C (R/  32) Version Register */
- } bf;
- struct {
-  GlocLut GLOC_LUT[2];        /**< \brief (GLOC Offset: 0x00) GlocLut groups [LUTS] */
-  RoReg8  Reserved2[0x28];
-  RoReg   GLOC_PARAMETER;     /**< \brief (GLOC Offset: 0x38) Parameter Register */
-  RoReg   GLOC_VERSION;       /**< \brief (GLOC Offset: 0x3C) Version Register */
- } reg;
+typedef struct {
+  __IO uint32_t Lut[2];      /**< \brief Offset: 0x00 GlocLut groups [LUTS] */
+       RoReg8   Reserved1[0x28];
+  __I  uint32_t PARAMETER;   /**< \brief Offset: 0x38 (R/  32) Parameter Register */
+  __I  uint32_t VERSION;     /**< \brief Offset: 0x3C (R/  32) Version Register */
 } Gloc;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

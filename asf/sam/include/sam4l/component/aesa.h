@@ -384,47 +384,25 @@ typedef union {
 
 /** \brief AESA hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO AESA_CTRL_Type            CTRL;        /**< \brief Offset: 0x00 (R/W 32) Control Register */
-  __IO AESA_MODE_Type            MODE;        /**< \brief Offset: 0x04 (R/W 32) Mode Register */
-  __IO AESA_DATABUFPTR_Type      DATABUFPTR;  /**< \brief Offset: 0x08 (R/W 32) Data Buffer Pointer Register */
-  __I  AESA_SR_Type              SR;          /**< \brief Offset: 0x0C (R/  32) Status Register */
-  __O  AESA_IER_Type             IER;         /**< \brief Offset: 0x10 ( /W 32) Interrupt Enable Register */
-  __O  AESA_IDR_Type             IDR;         /**< \brief Offset: 0x14 ( /W 32) Interrupt Disable Register */
-  __I  AESA_IMR_Type             IMR;         /**< \brief Offset: 0x18 (R/  32) Interrupt Mask Register */
-       RoReg8                    Reserved1[0x4];
-       AesaKey                   Key[8];      /**< \brief Offset: 0x20 AesaKey groups */
-       AesaInitvect              Initvect[4]; /**< \brief Offset: 0x40 AesaInitvect groups */
-  __O  AESA_IDATA_Type           IDATA;       /**< \brief Offset: 0x50 ( /W 32) Input Data Register */
-       RoReg8                    Reserved2[0xC];
-  __I  AESA_ODATA_Type           ODATA;       /**< \brief Offset: 0x60 (R/  32) Output Data Register */
-       RoReg8                    Reserved3[0xC];
-  __O  AESA_DRNGSEED_Type        DRNGSEED;    /**< \brief Offset: 0x70 ( /W 32) DRNG Seed Register */
-       RoReg8                    Reserved4[0x84];
-  __I  AESA_PARAMETER_Type       PARAMETER;   /**< \brief Offset: 0xF8 (R/  32) Parameter Register */
-  __I  AESA_VERSION_Type         VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
- } bf;
- struct {
-  RwReg   AESA_CTRL;          /**< \brief (AESA Offset: 0x00) Control Register */
-  RwReg   AESA_MODE;          /**< \brief (AESA Offset: 0x04) Mode Register */
-  RwReg   AESA_DATABUFPTR;    /**< \brief (AESA Offset: 0x08) Data Buffer Pointer Register */
-  RoReg   AESA_SR;            /**< \brief (AESA Offset: 0x0C) Status Register */
-  WoReg   AESA_IER;           /**< \brief (AESA Offset: 0x10) Interrupt Enable Register */
-  WoReg   AESA_IDR;           /**< \brief (AESA Offset: 0x14) Interrupt Disable Register */
-  RoReg   AESA_IMR;           /**< \brief (AESA Offset: 0x18) Interrupt Mask Register */
-  RoReg8  Reserved5[0x4];
-  AesaKey AESA_KEY[8];        /**< \brief (AESA Offset: 0x20) AesaKey groups */
-  AesaInitvect AESA_INITVECT[4];   /**< \brief (AESA Offset: 0x40) AesaInitvect groups */
-  WoReg   AESA_IDATA;         /**< \brief (AESA Offset: 0x50) Input Data Register */
-  RoReg8  Reserved6[0xC];
-  RoReg   AESA_ODATA;         /**< \brief (AESA Offset: 0x60) Output Data Register */
-  RoReg8  Reserved7[0xC];
-  WoReg   AESA_DRNGSEED;      /**< \brief (AESA Offset: 0x70) DRNG Seed Register */
-  RoReg8  Reserved8[0x84];
-  RoReg   AESA_PARAMETER;     /**< \brief (AESA Offset: 0xF8) Parameter Register */
-  RoReg   AESA_VERSION;       /**< \brief (AESA Offset: 0xFC) Version Register */
- } reg;
+typedef struct {
+  __IO uint32_t CTRL;        /**< \brief Offset: 0x00 (R/W 32) Control Register */
+  __IO uint32_t MODE;        /**< \brief Offset: 0x04 (R/W 32) Mode Register */
+  __IO uint32_t DATABUFPTR;  /**< \brief Offset: 0x08 (R/W 32) Data Buffer Pointer Register */
+  __I  uint32_t SR;          /**< \brief Offset: 0x0C (R/  32) Status Register */
+  __O  uint32_t IER;         /**< \brief Offset: 0x10 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x14 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x18 (R/  32) Interrupt Mask Register */
+       RoReg8   Reserved1[0x4];
+  __O  uint32_t Key[8];      /**< \brief Offset: 0x20 AesaKey groups */
+  __O  uint32_t Initvect[4]; /**< \brief Offset: 0x40 AesaInitvect groups */
+  __O  uint32_t IDATA;       /**< \brief Offset: 0x50 ( /W 32) Input Data Register */
+       RoReg8   Reserved2[0xC];
+  __I  uint32_t ODATA;       /**< \brief Offset: 0x60 (R/  32) Output Data Register */
+       RoReg8   Reserved3[0xC];
+  __O  uint32_t DRNGSEED;    /**< \brief Offset: 0x70 ( /W 32) DRNG Seed Register */
+       RoReg8   Reserved4[0x84];
+  __I  uint32_t PARAMETER;   /**< \brief Offset: 0xF8 (R/  32) Parameter Register */
+  __I  uint32_t VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
 } Aesa;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

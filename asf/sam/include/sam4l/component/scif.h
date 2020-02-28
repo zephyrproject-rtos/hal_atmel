@@ -1096,111 +1096,59 @@ typedef union {
 
 /** \brief ScifGcctrl hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO SCIF_GCCTRL_Type          GCCTRL;      /**< \brief Offset: 0x000 (R/W 32) Generic Clock Control */
- } bf;
- struct {
-  RwReg   SCIF_GCCTRL;        /**< \brief (SCIF Offset: 0x000) Generic Clock Control */
- } reg;
+typedef struct {
+  __IO uint32_t   GCCTRL;      /**< \brief Offset: 0x000 (R/W 32) Generic Clock Control */
 } ScifGcctrl;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /** \brief ScifPll hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO SCIF_PLL_Type             PLL;         /**< \brief Offset: 0x000 (R/W 32) PLL0 Control Register */
- } bf;
- struct {
-  RwReg   SCIF_PLL;           /**< \brief (SCIF Offset: 0x000) PLL0 Control Register */
- } reg;
+typedef struct {
+  __IO uint32_t   PLL;         /**< \brief Offset: 0x000 (R/W 32) PLL0 Control Register */
 } ScifPll;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /** \brief SCIF hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  SCIF_IER_Type             IER;         /**< \brief Offset: 0x000 ( /W 32) Interrupt Enable Register */
-  __O  SCIF_IDR_Type             IDR;         /**< \brief Offset: 0x004 ( /W 32) Interrupt Disable Register */
-  __I  SCIF_IMR_Type             IMR;         /**< \brief Offset: 0x008 (R/  32) Interrupt Mask Register */
-  __I  SCIF_ISR_Type             ISR;         /**< \brief Offset: 0x00C (R/  32) Interrupt Status Register */
-  __O  SCIF_ICR_Type             ICR;         /**< \brief Offset: 0x010 ( /W 32) Interrupt Clear Register */
-  __I  SCIF_PCLKSR_Type          PCLKSR;      /**< \brief Offset: 0x014 (R/  32) Power and Clocks Status Register */
-  __O  SCIF_UNLOCK_Type          UNLOCK;      /**< \brief Offset: 0x018 ( /W 32) Unlock Register */
-  __IO SCIF_CSCR_Type            CSCR;        /**< \brief Offset: 0x01C (R/W 32) Chip Specific Configuration Register */
-  __IO SCIF_OSCCTRL0_Type        OSCCTRL0;    /**< \brief Offset: 0x020 (R/W 32) Oscillator Control Register */
-       ScifPll                   Pll[1];      /**< \brief Offset: 0x024 ScifPll groups */
-  __IO SCIF_DFLL0CONF_Type       DFLL0CONF;   /**< \brief Offset: 0x028 (R/W 32) DFLL0 Config Register */
-  __IO SCIF_DFLL0VAL_Type        DFLL0VAL;    /**< \brief Offset: 0x02C (R/W 32) DFLL Value Register */
-  __IO SCIF_DFLL0MUL_Type        DFLL0MUL;    /**< \brief Offset: 0x030 (R/W 32) DFLL0 Multiplier Register */
-  __IO SCIF_DFLL0STEP_Type       DFLL0STEP;   /**< \brief Offset: 0x034 (R/W 32) DFLL0 Step Register */
-  __IO SCIF_DFLL0SSG_Type        DFLL0SSG;    /**< \brief Offset: 0x038 (R/W 32) DFLL0 Spread Spectrum Generator Control Register */
-  __I  SCIF_DFLL0RATIO_Type      DFLL0RATIO;  /**< \brief Offset: 0x03C (R/  32) DFLL0 Ratio Registe */
-  __O  SCIF_DFLL0SYNC_Type       DFLL0SYNC;   /**< \brief Offset: 0x040 ( /W 32) DFLL0 Synchronization Register */
-  __IO SCIF_RCCR_Type            RCCR;        /**< \brief Offset: 0x044 (R/W 32) System RC Oscillator Calibration Register */
-  __IO SCIF_RCFASTCFG_Type       RCFASTCFG;   /**< \brief Offset: 0x048 (R/W 32) 4/8/12 MHz RC Oscillator Configuration Register */
-  __IO SCIF_RCFASTSR_Type        RCFASTSR;    /**< \brief Offset: 0x04C (R/W 32) 4/8/12 MHz RC Oscillator Status Register */
-  __IO SCIF_RC80MCR_Type         RC80MCR;     /**< \brief Offset: 0x050 (R/W 32) 80 MHz RC Oscillator Register */
-       RoReg8                    Reserved1[0x10];
-  __IO SCIF_HRPCR_Type           HRPCR;       /**< \brief Offset: 0x064 (R/W 32) High Resolution Prescaler Control Register */
-  __IO SCIF_FPCR_Type            FPCR;        /**< \brief Offset: 0x068 (R/W 32) Fractional Prescaler Control Register */
-  __IO SCIF_FPMUL_Type           FPMUL;       /**< \brief Offset: 0x06C (R/W 32) Fractional Prescaler Multiplier Register */
-  __IO SCIF_FPDIV_Type           FPDIV;       /**< \brief Offset: 0x070 (R/W 32) Fractional Prescaler DIVIDER Register */
-       ScifGcctrl                Gcctrl[12];  /**< \brief Offset: 0x074 ScifGcctrl groups */
-       RoReg8                    Reserved2[0x334];
-  __I  SCIF_RCFASTVERSION_Type   RCFASTVERSION; /**< \brief Offset: 0x3D8 (R/  32) 4/8/12 MHz RC Oscillator Version Register */
-  __I  SCIF_GCLKPRESCVERSION_Type GCLKPRESCVERSION; /**< \brief Offset: 0x3DC (R/  32) Generic Clock Prescaler Version Register */
-  __I  SCIF_PLLIFAVERSION_Type   PLLIFAVERSION; /**< \brief Offset: 0x3E0 (R/  32) PLL Version Register */
-  __I  SCIF_OSCIFAVERSION_Type   OSCIFAVERSION; /**< \brief Offset: 0x3E4 (R/  32) Oscillator 0 Version Register */
-  __I  SCIF_DFLLIFBVERSION_Type  DFLLIFBVERSION; /**< \brief Offset: 0x3E8 (R/  32) DFLL Version Register */
-  __I  SCIF_RCOSCIFAVERSION_Type RCOSCIFAVERSION; /**< \brief Offset: 0x3EC (R/  32) System RC Oscillator Version Register */
-  __I  SCIF_FLOVERSION_Type      FLOVERSION;  /**< \brief Offset: 0x3F0 (R/  32) Frequency Locked Oscillator Version Register */
-  __I  SCIF_RC80MVERSION_Type    RC80MVERSION; /**< \brief Offset: 0x3F4 (R/  32) 80MHz RC Oscillator Version Register */
-  __I  SCIF_GCLKIFVERSION_Type   GCLKIFVERSION; /**< \brief Offset: 0x3F8 (R/  32) Generic Clock Version Register */
-  __I  SCIF_VERSION_Type         VERSION;     /**< \brief Offset: 0x3FC (R/  32) SCIF Version Register */
- } bf;
- struct {
-  WoReg   SCIF_IER;           /**< \brief (SCIF Offset: 0x000) Interrupt Enable Register */
-  WoReg   SCIF_IDR;           /**< \brief (SCIF Offset: 0x004) Interrupt Disable Register */
-  RoReg   SCIF_IMR;           /**< \brief (SCIF Offset: 0x008) Interrupt Mask Register */
-  RoReg   SCIF_ISR;           /**< \brief (SCIF Offset: 0x00C) Interrupt Status Register */
-  WoReg   SCIF_ICR;           /**< \brief (SCIF Offset: 0x010) Interrupt Clear Register */
-  RoReg   SCIF_PCLKSR;        /**< \brief (SCIF Offset: 0x014) Power and Clocks Status Register */
-  WoReg   SCIF_UNLOCK;        /**< \brief (SCIF Offset: 0x018) Unlock Register */
-  RwReg   SCIF_CSCR;          /**< \brief (SCIF Offset: 0x01C) Chip Specific Configuration Register */
-  RwReg   SCIF_OSCCTRL0;      /**< \brief (SCIF Offset: 0x020) Oscillator Control Register */
-  ScifPll SCIF_PLL[1];        /**< \brief (SCIF Offset: 0x024) ScifPll groups */
-  RwReg   SCIF_DFLL0CONF;     /**< \brief (SCIF Offset: 0x028) DFLL0 Config Register */
-  RwReg   SCIF_DFLL0VAL;      /**< \brief (SCIF Offset: 0x02C) DFLL Value Register */
-  RwReg   SCIF_DFLL0MUL;      /**< \brief (SCIF Offset: 0x030) DFLL0 Multiplier Register */
-  RwReg   SCIF_DFLL0STEP;     /**< \brief (SCIF Offset: 0x034) DFLL0 Step Register */
-  RwReg   SCIF_DFLL0SSG;      /**< \brief (SCIF Offset: 0x038) DFLL0 Spread Spectrum Generator Control Register */
-  RoReg   SCIF_DFLL0RATIO;    /**< \brief (SCIF Offset: 0x03C) DFLL0 Ratio Registe */
-  WoReg   SCIF_DFLL0SYNC;     /**< \brief (SCIF Offset: 0x040) DFLL0 Synchronization Register */
-  RwReg   SCIF_RCCR;          /**< \brief (SCIF Offset: 0x044) System RC Oscillator Calibration Register */
-  RwReg   SCIF_RCFASTCFG;     /**< \brief (SCIF Offset: 0x048) 4/8/12 MHz RC Oscillator Configuration Register */
-  RwReg   SCIF_RCFASTSR;      /**< \brief (SCIF Offset: 0x04C) 4/8/12 MHz RC Oscillator Status Register */
-  RwReg   SCIF_RC80MCR;       /**< \brief (SCIF Offset: 0x050) 80 MHz RC Oscillator Register */
-  RoReg8  Reserved3[0x10];
-  RwReg   SCIF_HRPCR;         /**< \brief (SCIF Offset: 0x064) High Resolution Prescaler Control Register */
-  RwReg   SCIF_FPCR;          /**< \brief (SCIF Offset: 0x068) Fractional Prescaler Control Register */
-  RwReg   SCIF_FPMUL;         /**< \brief (SCIF Offset: 0x06C) Fractional Prescaler Multiplier Register */
-  RwReg   SCIF_FPDIV;         /**< \brief (SCIF Offset: 0x070) Fractional Prescaler DIVIDER Register */
-  ScifGcctrl SCIF_GCCTRL[12];    /**< \brief (SCIF Offset: 0x074) ScifGcctrl groups */
-  RoReg8  Reserved4[0x334];
-  RoReg   SCIF_RCFASTVERSION; /**< \brief (SCIF Offset: 0x3D8) 4/8/12 MHz RC Oscillator Version Register */
-  RoReg   SCIF_GCLKPRESCVERSION; /**< \brief (SCIF Offset: 0x3DC) Generic Clock Prescaler Version Register */
-  RoReg   SCIF_PLLIFAVERSION; /**< \brief (SCIF Offset: 0x3E0) PLL Version Register */
-  RoReg   SCIF_OSCIFAVERSION; /**< \brief (SCIF Offset: 0x3E4) Oscillator 0 Version Register */
-  RoReg   SCIF_DFLLIFBVERSION; /**< \brief (SCIF Offset: 0x3E8) DFLL Version Register */
-  RoReg   SCIF_RCOSCIFAVERSION; /**< \brief (SCIF Offset: 0x3EC) System RC Oscillator Version Register */
-  RoReg   SCIF_FLOVERSION;    /**< \brief (SCIF Offset: 0x3F0) Frequency Locked Oscillator Version Register */
-  RoReg   SCIF_RC80MVERSION;  /**< \brief (SCIF Offset: 0x3F4) 80MHz RC Oscillator Version Register */
-  RoReg   SCIF_GCLKIFVERSION; /**< \brief (SCIF Offset: 0x3F8) Generic Clock Version Register */
-  RoReg   SCIF_VERSION;       /**< \brief (SCIF Offset: 0x3FC) SCIF Version Register */
- } reg;
+typedef struct {
+  __O  uint32_t IER;              /**< \brief Offset: 0x000 ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;              /**< \brief Offset: 0x004 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;              /**< \brief Offset: 0x008 (R/  32) Interrupt Mask Register */
+  __I  uint32_t ISR;              /**< \brief Offset: 0x00C (R/  32) Interrupt Status Register */
+  __O  uint32_t ICR;              /**< \brief Offset: 0x010 ( /W 32) Interrupt Clear Register */
+  __I  uint32_t PCLKSR;           /**< \brief Offset: 0x014 (R/  32) Power and Clocks Status Register */
+  __O  uint32_t UNLOCK;           /**< \brief Offset: 0x018 ( /W 32) Unlock Register */
+  __IO uint32_t CSCR;             /**< \brief Offset: 0x01C (R/W 32) Chip Specific Configuration Register */
+  __IO uint32_t OSCCTRL0;         /**< \brief Offset: 0x020 (R/W 32) Oscillator Control Register */
+       uint32_t PLL[1];           /**< \brief Offset: 0x024 ScifPll groups */
+  __IO uint32_t DFLL0CONF;        /**< \brief Offset: 0x028 (R/W 32) DFLL0 Config Register */
+  __IO uint32_t DFLL0VAL;         /**< \brief Offset: 0x02C (R/W 32) DFLL Value Register */
+  __IO uint32_t DFLL0MUL;         /**< \brief Offset: 0x030 (R/W 32) DFLL0 Multiplier Register */
+  __IO uint32_t DFLL0STEP;        /**< \brief Offset: 0x034 (R/W 32) DFLL0 Step Register */
+  __IO uint32_t DFLL0SSG;         /**< \brief Offset: 0x038 (R/W 32) DFLL0 Spread Spectrum Generator Control Register */
+  __I  uint32_t DFLL0RATIO;       /**< \brief Offset: 0x03C (R/  32) DFLL0 Ratio Registe */
+  __O  uint32_t DFLL0SYNC;        /**< \brief Offset: 0x040 ( /W 32) DFLL0 Synchronization Register */
+  __IO uint32_t RCCR;             /**< \brief Offset: 0x044 (R/W 32) System RC Oscillator Calibration Register */
+  __IO uint32_t RCFASTCFG;        /**< \brief Offset: 0x048 (R/W 32) 4/8/12 MHz RC Oscillator Configuration Register */
+  __IO uint32_t RCFASTSR;         /**< \brief Offset: 0x04C (R/W 32) 4/8/12 MHz RC Oscillator Status Register */
+  __IO uint32_t RC80MCR;          /**< \brief Offset: 0x050 (R/W 32) 80 MHz RC Oscillator Register */
+       RoReg8   Reserved1[0x10];
+  __IO uint32_t HRPCR;            /**< \brief Offset: 0x064 (R/W 32) High Resolution Prescaler Control Register */
+  __IO uint32_t FPCR;             /**< \brief Offset: 0x068 (R/W 32) Fractional Prescaler Control Register */
+  __IO uint32_t FPMUL;            /**< \brief Offset: 0x06C (R/W 32) Fractional Prescaler Multiplier Register */
+  __IO uint32_t FPDIV;            /**< \brief Offset: 0x070 (R/W 32) Fractional Prescaler DIVIDER Register */
+       uint32_t GCCTRL[12];       /**< \brief Offset: 0x074 Generic Clock Control */
+       RoReg8   Reserved2[0x334];
+  __I  uint32_t RCFASTVERSION;    /**< \brief Offset: 0x3D8 (R/  32) 4/8/12 MHz RC Oscillator Version Register */
+  __I  uint32_t GCLKPRESCVERSION; /**< \brief Offset: 0x3DC (R/  32) Generic Clock Prescaler Version Register */
+  __I  uint32_t PLLIFAVERSION;    /**< \brief Offset: 0x3E0 (R/  32) PLL Version Register */
+  __I  uint32_t OSCIFAVERSION;    /**< \brief Offset: 0x3E4 (R/  32) Oscillator 0 Version Register */
+  __I  uint32_t DFLLIFBVERSION;   /**< \brief Offset: 0x3E8 (R/  32) DFLL Version Register */
+  __I  uint32_t RCOSCIFAVERSION;  /**< \brief Offset: 0x3EC (R/  32) System RC Oscillator Version Register */
+  __I  uint32_t FLOVERSION;       /**< \brief Offset: 0x3F0 (R/  32) Frequency Locked Oscillator Version Register */
+  __I  uint32_t RC80MVERSION;     /**< \brief Offset: 0x3F4 (R/  32) 80MHz RC Oscillator Version Register */
+  __I  uint32_t GCLKIFVERSION;    /**< \brief Offset: 0x3F8 (R/  32) Generic Clock Version Register */
+  __I  uint32_t VERSION;          /**< \brief Offset: 0x3FC (R/  32) SCIF Version Register */
 } Scif;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

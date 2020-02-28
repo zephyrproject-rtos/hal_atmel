@@ -1230,27 +1230,15 @@ typedef union {
 
 /** \brief TC hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-       TcChannel                 Channel[3];  /**< \brief Offset: 0x00 TcChannel groups */
-  __O  TC_BCR_Type               BCR;         /**< \brief Offset: 0xC0 ( /W 32) TC Block Control Register */
-  __IO TC_BMR_Type               BMR;         /**< \brief Offset: 0xC4 (R/W 32) TC Block Mode Register */
-       RoReg8                    Reserved1[0x1C];
-  __IO TC_WPMR_Type              WPMR;        /**< \brief Offset: 0xE4 (R/W 32) Write Protect Mode Register */
-       RoReg8                    Reserved2[0x10];
-  __I  TC_FEATURES_Type          FEATURES;    /**< \brief Offset: 0xF8 (R/  32) Features Register */
-  __I  TC_VERSION_Type           VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
- } bf;
- struct {
-  TcChannel TC_CHANNEL[3];      /**< \brief (TC Offset: 0x00) TcChannel groups */
-  WoReg   TC_BCR;             /**< \brief (TC Offset: 0xC0) TC Block Control Register */
-  RwReg   TC_BMR;             /**< \brief (TC Offset: 0xC4) TC Block Mode Register */
-  RoReg8  Reserved3[0x1C];
-  RwReg   TC_WPMR;            /**< \brief (TC Offset: 0xE4) Write Protect Mode Register */
-  RoReg8  Reserved4[0x10];
-  RoReg   TC_FEATURES;        /**< \brief (TC Offset: 0xF8) Features Register */
-  RoReg   TC_VERSION;         /**< \brief (TC Offset: 0xFC) Version Register */
- } reg;
+typedef struct {
+  __IO uint32_t Channel[3];  /**< \brief Offset: 0x00 TcChannel groups */
+  __O  uint32_t BCR;         /**< \brief Offset: 0xC0 ( /W 32) TC Block Control Register */
+  __IO uint32_t BMR;         /**< \brief Offset: 0xC4 (R/W 32) TC Block Mode Register */
+       RoReg8   Reserved1[0x1C];
+  __IO uint32_t WPMR;        /**< \brief Offset: 0xE4 (R/W 32) Write Protect Mode Register */
+       RoReg8   Reserved2[0x10];
+  __I  uint32_t FEATURES;    /**< \brief Offset: 0xF8 (R/  32) Features Register */
+  __I  uint32_t VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
 } Tc;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

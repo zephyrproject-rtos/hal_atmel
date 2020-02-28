@@ -684,43 +684,23 @@ typedef union {
 
 /** \brief TWIS hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __IO TWIS_CR_Type              CR;          /**< \brief Offset: 0x00 (R/W 32) Control Register */
-  __IO TWIS_NBYTES_Type          NBYTES;      /**< \brief Offset: 0x04 (R/W 32) NBYTES Register */
-  __IO TWIS_TR_Type              TR;          /**< \brief Offset: 0x08 (R/W 32) Timing Register */
-  __I  TWIS_RHR_Type             RHR;         /**< \brief Offset: 0x0C (R/  32) Receive Holding Register */
-  __O  TWIS_THR_Type             THR;         /**< \brief Offset: 0x10 ( /W 32) Transmit Holding Register */
-  __I  TWIS_PECR_Type            PECR;        /**< \brief Offset: 0x14 (R/  32) Packet Error Check Register */
-  __I  TWIS_SR_Type              SR;          /**< \brief Offset: 0x18 (R/  32) Status Register */
-  __O  TWIS_IER_Type             IER;         /**< \brief Offset: 0x1C ( /W 32) Interrupt Enable Register */
-  __O  TWIS_IDR_Type             IDR;         /**< \brief Offset: 0x20 ( /W 32) Interrupt Disable Register */
-  __I  TWIS_IMR_Type             IMR;         /**< \brief Offset: 0x24 (R/  32) Interrupt Mask Register */
-  __O  TWIS_SCR_Type             SCR;         /**< \brief Offset: 0x28 ( /W 32) Status Clear Register */
-  __I  TWIS_PR_Type              PR;          /**< \brief Offset: 0x2C (R/  32) Parameter Register */
-  __I  TWIS_VR_Type              VR;          /**< \brief Offset: 0x30 (R/  32) Version Register */
-  __IO TWIS_HSTR_Type            HSTR;        /**< \brief Offset: 0x34 (R/W 32) HS-mode Timing Register */
-  __IO TWIS_SRR_Type             SRR;         /**< \brief Offset: 0x38 (R/W 32) Slew Rate Register */
-  __IO TWIS_HSSRR_Type           HSSRR;       /**< \brief Offset: 0x3C (R/W 32) HS-mode Slew Rate Register */
- } bf;
- struct {
-  RwReg   TWIS_CR;            /**< \brief (TWIS Offset: 0x00) Control Register */
-  RwReg   TWIS_NBYTES;        /**< \brief (TWIS Offset: 0x04) NBYTES Register */
-  RwReg   TWIS_TR;            /**< \brief (TWIS Offset: 0x08) Timing Register */
-  RoReg   TWIS_RHR;           /**< \brief (TWIS Offset: 0x0C) Receive Holding Register */
-  WoReg   TWIS_THR;           /**< \brief (TWIS Offset: 0x10) Transmit Holding Register */
-  RoReg   TWIS_PECR;          /**< \brief (TWIS Offset: 0x14) Packet Error Check Register */
-  RoReg   TWIS_SR;            /**< \brief (TWIS Offset: 0x18) Status Register */
-  WoReg   TWIS_IER;           /**< \brief (TWIS Offset: 0x1C) Interrupt Enable Register */
-  WoReg   TWIS_IDR;           /**< \brief (TWIS Offset: 0x20) Interrupt Disable Register */
-  RoReg   TWIS_IMR;           /**< \brief (TWIS Offset: 0x24) Interrupt Mask Register */
-  WoReg   TWIS_SCR;           /**< \brief (TWIS Offset: 0x28) Status Clear Register */
-  RoReg   TWIS_PR;            /**< \brief (TWIS Offset: 0x2C) Parameter Register */
-  RoReg   TWIS_VR;            /**< \brief (TWIS Offset: 0x30) Version Register */
-  RwReg   TWIS_HSTR;          /**< \brief (TWIS Offset: 0x34) HS-mode Timing Register */
-  RwReg   TWIS_SRR;           /**< \brief (TWIS Offset: 0x38) Slew Rate Register */
-  RwReg   TWIS_HSSRR;         /**< \brief (TWIS Offset: 0x3C) HS-mode Slew Rate Register */
- } reg;
+typedef struct {
+  __IO uint32_t CR;          /**< \brief Offset: 0x00 (R/W 32) Control Register */
+  __IO uint32_t NBYTES;      /**< \brief Offset: 0x04 (R/W 32) NBYTES Register */
+  __IO uint32_t TR;          /**< \brief Offset: 0x08 (R/W 32) Timing Register */
+  __I  uint32_t RHR;         /**< \brief Offset: 0x0C (R/  32) Receive Holding Register */
+  __O  uint32_t THR;         /**< \brief Offset: 0x10 ( /W 32) Transmit Holding Register */
+  __I  uint32_t PECR;        /**< \brief Offset: 0x14 (R/  32) Packet Error Check Register */
+  __I  uint32_t SR;          /**< \brief Offset: 0x18 (R/  32) Status Register */
+  __O  uint32_t IER;         /**< \brief Offset: 0x1C ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x20 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x24 (R/  32) Interrupt Mask Register */
+  __O  uint32_t SCR;         /**< \brief Offset: 0x28 ( /W 32) Status Clear Register */
+  __I  uint32_t PR;          /**< \brief Offset: 0x2C (R/  32) Parameter Register */
+  __I  uint32_t VR;          /**< \brief Offset: 0x30 (R/  32) Version Register */
+  __IO uint32_t HSTR;        /**< \brief Offset: 0x34 (R/W 32) HS-mode Timing Register */
+  __IO uint32_t SRR;         /**< \brief Offset: 0x38 (R/W 32) Slew Rate Register */
+  __IO uint32_t HSSRR;       /**< \brief Offset: 0x3C (R/W 32) HS-mode Slew Rate Register */
 } Twis;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 

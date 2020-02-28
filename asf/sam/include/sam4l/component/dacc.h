@@ -252,35 +252,19 @@ typedef union {
 
 /** \brief DACC hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  DACC_CR_Type              CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
-  __IO DACC_MR_Type              MR;          /**< \brief Offset: 0x04 (R/W 32) Mode Register */
-  __O  DACC_CDR_Type             CDR;         /**< \brief Offset: 0x08 ( /W 32) Conversion Data Register */
-  __O  DACC_IER_Type             IER;         /**< \brief Offset: 0x0C ( /W 32) Interrupt Enable Register */
-  __O  DACC_IDR_Type             IDR;         /**< \brief Offset: 0x10 ( /W 32) Interrupt Disable Register */
-  __I  DACC_IMR_Type             IMR;         /**< \brief Offset: 0x14 (R/  32) Interrupt Mask Register */
-  __I  DACC_ISR_Type             ISR;         /**< \brief Offset: 0x18 (R/  32) Interrupt Status Register */
-       RoReg8                    Reserved1[0xC8];
-  __IO DACC_WPMR_Type            WPMR;        /**< \brief Offset: 0xE4 (R/W 32) Write Protect Mode Register */
-  __I  DACC_WPSR_Type            WPSR;        /**< \brief Offset: 0xE8 (R/  32) Write Protect Status Register */
-       RoReg8                    Reserved2[0x10];
-  __I  DACC_VERSION_Type         VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
- } bf;
- struct {
-  WoReg   DACC_CR;            /**< \brief (DACC Offset: 0x00) Control Register */
-  RwReg   DACC_MR;            /**< \brief (DACC Offset: 0x04) Mode Register */
-  WoReg   DACC_CDR;           /**< \brief (DACC Offset: 0x08) Conversion Data Register */
-  WoReg   DACC_IER;           /**< \brief (DACC Offset: 0x0C) Interrupt Enable Register */
-  WoReg   DACC_IDR;           /**< \brief (DACC Offset: 0x10) Interrupt Disable Register */
-  RoReg   DACC_IMR;           /**< \brief (DACC Offset: 0x14) Interrupt Mask Register */
-  RoReg   DACC_ISR;           /**< \brief (DACC Offset: 0x18) Interrupt Status Register */
-  RoReg8  Reserved3[0xC8];
-  RwReg   DACC_WPMR;          /**< \brief (DACC Offset: 0xE4) Write Protect Mode Register */
-  RoReg   DACC_WPSR;          /**< \brief (DACC Offset: 0xE8) Write Protect Status Register */
-  RoReg8  Reserved4[0x10];
-  RoReg   DACC_VERSION;       /**< \brief (DACC Offset: 0xFC) Version Register */
- } reg;
+typedef struct {
+  __O  uint32_t CR;          /**< \brief Offset: 0x00 ( /W 32) Control Register */
+  __IO uint32_t MR;          /**< \brief Offset: 0x04 (R/W 32) Mode Register */
+  __O  uint32_t CDR;         /**< \brief Offset: 0x08 ( /W 32) Conversion Data Register */
+  __O  uint32_t IER;         /**< \brief Offset: 0x0C ( /W 32) Interrupt Enable Register */
+  __O  uint32_t IDR;         /**< \brief Offset: 0x10 ( /W 32) Interrupt Disable Register */
+  __I  uint32_t IMR;         /**< \brief Offset: 0x14 (R/  32) Interrupt Mask Register */
+  __I  uint32_t ISR;         /**< \brief Offset: 0x18 (R/  32) Interrupt Status Register */
+       RoReg8   Reserved1[0xC8];
+  __IO uint32_t WPMR;        /**< \brief Offset: 0xE4 (R/W 32) Write Protect Mode Register */
+  __I  uint32_t WPSR;        /**< \brief Offset: 0xE8 (R/  32) Write Protect Status Register */
+       RoReg8   Reserved2[0x10];
+  __I  uint32_t VERSION;     /**< \brief Offset: 0xFC (R/  32) Version Register */
 } Dacc;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
