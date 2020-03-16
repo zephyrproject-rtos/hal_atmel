@@ -39,4 +39,5 @@ Patch List:
    * Fix GMAC_SA register name.
    * Fix XDMAC_CHID register name.
    * Fix TC_CHANNEL register name.
+   * Fix USBHS_DEVDMA register name.
    * Add old USART definitions for compatibility.
