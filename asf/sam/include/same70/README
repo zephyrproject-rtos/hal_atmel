@@ -45,3 +45,4 @@ Patch List:
    * Fix MATRIX_PR register name.
    * Fix PWM_CMP register name.
    * Fix PWM_CH_NUM register name.
+   * Fix SMC_CS_NUMBER register name.
