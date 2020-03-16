@@ -377,7 +377,7 @@ typedef struct {
 #define SMCCSNUMBER_NUMBER 4
 /** \brief SMC hardware registers */
 typedef struct {  
-       SmcCsNumber SmcCsNumber[SMCCSNUMBER_NUMBER]; /**< Offset: 0x00 SMC Setup Register */
+       SmcCsNumber SMC_CS_NUMBER[SMCCSNUMBER_NUMBER]; /**< Offset: 0x00 SMC Setup Register */
   __I  uint8_t                        Reserved1[64];
   __IO uint32_t SMC_OCMS;       /**< (SMC Offset: 0x80) SMC Off-Chip Memory Scrambling Register */
   __O  uint32_t SMC_KEY1;       /**< (SMC Offset: 0x84) SMC Off-Chip Memory Scrambling KEY1 Register */
@@ -398,7 +398,7 @@ typedef struct {
 
 /** \brief SMC hardware registers */
 typedef struct {  
-       SmcCsNumber                    SmcCsNumber[4]; /**< Offset: 0x00 SMC Setup Register */
+       SmcCsNumber                    SMC_CS_NUMBER[4]; /**< Offset: 0x00 SMC Setup Register */
   __I  uint8_t                        Reserved1[64];
   __IO SMC_OCMS_Type                  SMC_OCMS;       /**< Offset: 0x80 (R/W  32) SMC Off-Chip Memory Scrambling Register */
   __O  SMC_KEY1_Type                  SMC_KEY1;       /**< Offset: 0x84 ( /W  32) SMC Off-Chip Memory Scrambling KEY1 Register */
