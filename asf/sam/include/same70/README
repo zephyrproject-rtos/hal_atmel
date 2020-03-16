@@ -44,3 +44,4 @@ Patch List:
    * Fix USBHS_HSTDMA register name.
    * Fix MATRIX_PR register name.
    * Fix PWM_CMP register name.
+   * Fix PWM_CH_NUM register name.
