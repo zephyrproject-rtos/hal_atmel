@@ -42,4 +42,5 @@ Patch List:
    * Fix USBHS_DEVDMA register name.
    * Fix USBHS_HSTDMA register name.
    * Fix MATRIX_PR register name.
+   * Fix PWM_CMP register name.
    * Add old USART definitions for compatibility.
