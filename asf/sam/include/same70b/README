@@ -40,4 +40,5 @@ Patch List:
    * Fix XDMAC_CHID register name.
    * Fix TC_CHANNEL register name.
    * Fix USBHS_DEVDMA register name.
+   * Fix USBHS_HSTDMA register name.
    * Add old USART definitions for compatibility.
