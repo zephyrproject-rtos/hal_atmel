@@ -42,3 +42,4 @@ Patch List:
    * Fix TC_CHANNEL register name.
    * Fix USBHS_DEVDMA register name.
    * Fix USBHS_HSTDMA register name.
+   * Fix MATRIX_PR register name.
