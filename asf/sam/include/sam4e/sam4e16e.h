@@ -250,7 +250,7 @@ void WDT_Handler        ( void );
  */
 
 #define __CM4_REV              0x0000 /**< SAM4E16E core revision number ([15:8] revision number, [7:0] patch number) */
-#define __MPU_PRESENT          0      /**< SAM4E16E does not provide a MPU */
+#define __MPU_PRESENT          1      /**< SAM4E16E does provide a MPU */
 #define __FPU_PRESENT          1      /**< SAM4E16E does provide a FPU */
 #define __NVIC_PRIO_BITS       4      /**< SAM4E16E uses 4 Bits for the Priority Levels */
 #define __Vendor_SysTickConfig 0      /**< Set to 1 if different SysTick Config is used */
