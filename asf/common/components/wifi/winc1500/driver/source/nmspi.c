@@ -42,7 +42,9 @@
 
 #ifdef CONF_WINC_USE_SPI
 
+/* Don't force USE_OLD_SPI_SW, instead we will pass it from Zephyr side
 #define USE_OLD_SPI_SW
+*/
 
 #include "bus_wrapper/include/nm_bus_wrapper.h"
 #include "nmspi.h"
