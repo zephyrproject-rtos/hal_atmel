@@ -50,12 +50,12 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_DSCR_OFFSET           0x00         /**< \brief (CRCCU_DSCR offset) Descriptor Base Register */
-#define CRCCU_DSCR_RESETVALUE       _U(0x00000000); /**< \brief (CRCCU_DSCR reset_value) Descriptor Base Register */
+#define CRCCU_DSCR_RESETVALUE       _U_(0x00000000); /**< \brief (CRCCU_DSCR reset_value) Descriptor Base Register */
 
 #define CRCCU_DSCR_DSCR_Pos         9            /**< \brief (CRCCU_DSCR) Description Base Address */
-#define CRCCU_DSCR_DSCR_Msk         (_U(0x7FFFFF) << CRCCU_DSCR_DSCR_Pos)
+#define CRCCU_DSCR_DSCR_Msk         (_U_(0x7FFFFF) << CRCCU_DSCR_DSCR_Pos)
 #define CRCCU_DSCR_DSCR(value)      (CRCCU_DSCR_DSCR_Msk & ((value) << CRCCU_DSCR_DSCR_Pos))
-#define CRCCU_DSCR_MASK             _U(0xFFFFFE00) /**< \brief (CRCCU_DSCR) MASK Register */
+#define CRCCU_DSCR_MASK             _U_(0xFFFFFE00) /**< \brief (CRCCU_DSCR) MASK Register */
 
 /* -------- CRCCU_DMAEN : (CRCCU Offset: 0x08) ( /W 32) DMA Enable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -69,11 +69,11 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_DMAEN_OFFSET          0x08         /**< \brief (CRCCU_DMAEN offset) DMA Enable Register */
-#define CRCCU_DMAEN_RESETVALUE      _U(0x00000000); /**< \brief (CRCCU_DMAEN reset_value) DMA Enable Register */
+#define CRCCU_DMAEN_RESETVALUE      _U_(0x00000000); /**< \brief (CRCCU_DMAEN reset_value) DMA Enable Register */
 
 #define CRCCU_DMAEN_DMAEN_Pos       0            /**< \brief (CRCCU_DMAEN) DMA Enable */
-#define CRCCU_DMAEN_DMAEN           (_U(0x1) << CRCCU_DMAEN_DMAEN_Pos)
-#define CRCCU_DMAEN_MASK            _U(0x00000001) /**< \brief (CRCCU_DMAEN) MASK Register */
+#define CRCCU_DMAEN_DMAEN           (_U_(0x1) << CRCCU_DMAEN_DMAEN_Pos)
+#define CRCCU_DMAEN_MASK            _U_(0x00000001) /**< \brief (CRCCU_DMAEN) MASK Register */
 
 /* -------- CRCCU_DMADIS : (CRCCU Offset: 0x0C) ( /W 32) DMA Disable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -87,11 +87,11 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_DMADIS_OFFSET         0x0C         /**< \brief (CRCCU_DMADIS offset) DMA Disable Register */
-#define CRCCU_DMADIS_RESETVALUE     _U(0x00000000); /**< \brief (CRCCU_DMADIS reset_value) DMA Disable Register */
+#define CRCCU_DMADIS_RESETVALUE     _U_(0x00000000); /**< \brief (CRCCU_DMADIS reset_value) DMA Disable Register */
 
 #define CRCCU_DMADIS_DMADIS_Pos     0            /**< \brief (CRCCU_DMADIS) DMA Disable */
-#define CRCCU_DMADIS_DMADIS         (_U(0x1) << CRCCU_DMADIS_DMADIS_Pos)
-#define CRCCU_DMADIS_MASK           _U(0x00000001) /**< \brief (CRCCU_DMADIS) MASK Register */
+#define CRCCU_DMADIS_DMADIS         (_U_(0x1) << CRCCU_DMADIS_DMADIS_Pos)
+#define CRCCU_DMADIS_MASK           _U_(0x00000001) /**< \brief (CRCCU_DMADIS) MASK Register */
 
 /* -------- CRCCU_DMASR : (CRCCU Offset: 0x10) (R/  32) DMA Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -105,11 +105,11 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_DMASR_OFFSET          0x10         /**< \brief (CRCCU_DMASR offset) DMA Status Register */
-#define CRCCU_DMASR_RESETVALUE      _U(0x00000000); /**< \brief (CRCCU_DMASR reset_value) DMA Status Register */
+#define CRCCU_DMASR_RESETVALUE      _U_(0x00000000); /**< \brief (CRCCU_DMASR reset_value) DMA Status Register */
 
 #define CRCCU_DMASR_DMASR_Pos       0            /**< \brief (CRCCU_DMASR) DMA Channel Status */
-#define CRCCU_DMASR_DMASR           (_U(0x1) << CRCCU_DMASR_DMASR_Pos)
-#define CRCCU_DMASR_MASK            _U(0x00000001) /**< \brief (CRCCU_DMASR) MASK Register */
+#define CRCCU_DMASR_DMASR           (_U_(0x1) << CRCCU_DMASR_DMASR_Pos)
+#define CRCCU_DMASR_MASK            _U_(0x00000001) /**< \brief (CRCCU_DMASR) MASK Register */
 
 /* -------- CRCCU_DMAIER : (CRCCU Offset: 0x14) ( /W 32) DMA Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -123,11 +123,11 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_DMAIER_OFFSET         0x14         /**< \brief (CRCCU_DMAIER offset) DMA Interrupt Enable Register */
-#define CRCCU_DMAIER_RESETVALUE     _U(0x00000000); /**< \brief (CRCCU_DMAIER reset_value) DMA Interrupt Enable Register */
+#define CRCCU_DMAIER_RESETVALUE     _U_(0x00000000); /**< \brief (CRCCU_DMAIER reset_value) DMA Interrupt Enable Register */
 
 #define CRCCU_DMAIER_DMAIER_Pos     0            /**< \brief (CRCCU_DMAIER) DMA Interrupt Enable */
-#define CRCCU_DMAIER_DMAIER         (_U(0x1) << CRCCU_DMAIER_DMAIER_Pos)
-#define CRCCU_DMAIER_MASK           _U(0x00000001) /**< \brief (CRCCU_DMAIER) MASK Register */
+#define CRCCU_DMAIER_DMAIER         (_U_(0x1) << CRCCU_DMAIER_DMAIER_Pos)
+#define CRCCU_DMAIER_MASK           _U_(0x00000001) /**< \brief (CRCCU_DMAIER) MASK Register */
 
 /* -------- CRCCU_DMAIDR : (CRCCU Offset: 0x18) ( /W 32) DMA Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -141,11 +141,11 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_DMAIDR_OFFSET         0x18         /**< \brief (CRCCU_DMAIDR offset) DMA Interrupt Disable Register */
-#define CRCCU_DMAIDR_RESETVALUE     _U(0x00000000); /**< \brief (CRCCU_DMAIDR reset_value) DMA Interrupt Disable Register */
+#define CRCCU_DMAIDR_RESETVALUE     _U_(0x00000000); /**< \brief (CRCCU_DMAIDR reset_value) DMA Interrupt Disable Register */
 
 #define CRCCU_DMAIDR_DMAIDR_Pos     0            /**< \brief (CRCCU_DMAIDR) DMA Interrupt Disable */
-#define CRCCU_DMAIDR_DMAIDR         (_U(0x1) << CRCCU_DMAIDR_DMAIDR_Pos)
-#define CRCCU_DMAIDR_MASK           _U(0x00000001) /**< \brief (CRCCU_DMAIDR) MASK Register */
+#define CRCCU_DMAIDR_DMAIDR         (_U_(0x1) << CRCCU_DMAIDR_DMAIDR_Pos)
+#define CRCCU_DMAIDR_MASK           _U_(0x00000001) /**< \brief (CRCCU_DMAIDR) MASK Register */
 
 /* -------- CRCCU_DMAIMR : (CRCCU Offset: 0x1C) (R/  32) DMA Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -159,11 +159,11 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_DMAIMR_OFFSET         0x1C         /**< \brief (CRCCU_DMAIMR offset) DMA Interrupt Mask Register */
-#define CRCCU_DMAIMR_RESETVALUE     _U(0x00000000); /**< \brief (CRCCU_DMAIMR reset_value) DMA Interrupt Mask Register */
+#define CRCCU_DMAIMR_RESETVALUE     _U_(0x00000000); /**< \brief (CRCCU_DMAIMR reset_value) DMA Interrupt Mask Register */
 
 #define CRCCU_DMAIMR_DMAIMR_Pos     0            /**< \brief (CRCCU_DMAIMR) DMA Interrupt Mask */
-#define CRCCU_DMAIMR_DMAIMR         (_U(0x1) << CRCCU_DMAIMR_DMAIMR_Pos)
-#define CRCCU_DMAIMR_MASK           _U(0x00000001) /**< \brief (CRCCU_DMAIMR) MASK Register */
+#define CRCCU_DMAIMR_DMAIMR         (_U_(0x1) << CRCCU_DMAIMR_DMAIMR_Pos)
+#define CRCCU_DMAIMR_MASK           _U_(0x00000001) /**< \brief (CRCCU_DMAIMR) MASK Register */
 
 /* -------- CRCCU_DMAISR : (CRCCU Offset: 0x20) (R/  32) DMA Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -177,11 +177,11 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_DMAISR_OFFSET         0x20         /**< \brief (CRCCU_DMAISR offset) DMA Interrupt Status Register */
-#define CRCCU_DMAISR_RESETVALUE     _U(0x00000000); /**< \brief (CRCCU_DMAISR reset_value) DMA Interrupt Status Register */
+#define CRCCU_DMAISR_RESETVALUE     _U_(0x00000000); /**< \brief (CRCCU_DMAISR reset_value) DMA Interrupt Status Register */
 
 #define CRCCU_DMAISR_DMAISR_Pos     0            /**< \brief (CRCCU_DMAISR) DMA Interrupt Status */
-#define CRCCU_DMAISR_DMAISR         (_U(0x1) << CRCCU_DMAISR_DMAISR_Pos)
-#define CRCCU_DMAISR_MASK           _U(0x00000001) /**< \brief (CRCCU_DMAISR) MASK Register */
+#define CRCCU_DMAISR_DMAISR         (_U_(0x1) << CRCCU_DMAISR_DMAISR_Pos)
+#define CRCCU_DMAISR_MASK           _U_(0x00000001) /**< \brief (CRCCU_DMAISR) MASK Register */
 
 /* -------- CRCCU_CR : (CRCCU Offset: 0x34) ( /W 32) Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -195,11 +195,11 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_CR_OFFSET             0x34         /**< \brief (CRCCU_CR offset) Control Register */
-#define CRCCU_CR_RESETVALUE         _U(0x00000000); /**< \brief (CRCCU_CR reset_value) Control Register */
+#define CRCCU_CR_RESETVALUE         _U_(0x00000000); /**< \brief (CRCCU_CR reset_value) Control Register */
 
 #define CRCCU_CR_RESET_Pos          0            /**< \brief (CRCCU_CR) Reset CRCComputation */
-#define CRCCU_CR_RESET              (_U(0x1) << CRCCU_CR_RESET_Pos)
-#define CRCCU_CR_MASK               _U(0x00000001) /**< \brief (CRCCU_CR) MASK Register */
+#define CRCCU_CR_RESET              (_U_(0x1) << CRCCU_CR_RESET_Pos)
+#define CRCCU_CR_MASK               _U_(0x00000001) /**< \brief (CRCCU_CR) MASK Register */
 
 /* -------- CRCCU_MR : (CRCCU Offset: 0x38) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -216,25 +216,25 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_MR_OFFSET             0x38         /**< \brief (CRCCU_MR offset) Mode Register */
-#define CRCCU_MR_RESETVALUE         _U(0x00000000); /**< \brief (CRCCU_MR reset_value) Mode Register */
+#define CRCCU_MR_RESETVALUE         _U_(0x00000000); /**< \brief (CRCCU_MR reset_value) Mode Register */
 
 #define CRCCU_MR_ENABLE_Pos         0            /**< \brief (CRCCU_MR) CRC Computation Enable */
-#define CRCCU_MR_ENABLE             (_U(0x1) << CRCCU_MR_ENABLE_Pos)
+#define CRCCU_MR_ENABLE             (_U_(0x1) << CRCCU_MR_ENABLE_Pos)
 #define CRCCU_MR_COMPARE_Pos        1            /**< \brief (CRCCU_MR) CRC Compare */
-#define CRCCU_MR_COMPARE            (_U(0x1) << CRCCU_MR_COMPARE_Pos)
+#define CRCCU_MR_COMPARE            (_U_(0x1) << CRCCU_MR_COMPARE_Pos)
 #define CRCCU_MR_PTYPE_Pos          2            /**< \brief (CRCCU_MR) Polynomial Type */
-#define CRCCU_MR_PTYPE_Msk          (_U(0x3) << CRCCU_MR_PTYPE_Pos)
+#define CRCCU_MR_PTYPE_Msk          (_U_(0x3) << CRCCU_MR_PTYPE_Pos)
 #define CRCCU_MR_PTYPE(value)       (CRCCU_MR_PTYPE_Msk & ((value) << CRCCU_MR_PTYPE_Pos))
-#define   CRCCU_MR_PTYPE_CCITT8023_Val    _U(0x0)   /**< \brief (CRCCU_MR)  */
-#define   CRCCU_MR_PTYPE_CASTAGNOLI_Val   _U(0x1)   /**< \brief (CRCCU_MR)  */
-#define   CRCCU_MR_PTYPE_CCITT16_Val      _U(0x2)   /**< \brief (CRCCU_MR)  */
+#define   CRCCU_MR_PTYPE_CCITT8023_Val    _U_(0x0)   /**< \brief (CRCCU_MR)  */
+#define   CRCCU_MR_PTYPE_CASTAGNOLI_Val   _U_(0x1)   /**< \brief (CRCCU_MR)  */
+#define   CRCCU_MR_PTYPE_CCITT16_Val      _U_(0x2)   /**< \brief (CRCCU_MR)  */
 #define CRCCU_MR_PTYPE_CCITT8023    (CRCCU_MR_PTYPE_CCITT8023_Val  << CRCCU_MR_PTYPE_Pos)
 #define CRCCU_MR_PTYPE_CASTAGNOLI   (CRCCU_MR_PTYPE_CASTAGNOLI_Val << CRCCU_MR_PTYPE_Pos)
 #define CRCCU_MR_PTYPE_CCITT16      (CRCCU_MR_PTYPE_CCITT16_Val    << CRCCU_MR_PTYPE_Pos)
 #define CRCCU_MR_DIVIDER_Pos        4            /**< \brief (CRCCU_MR) Bandwidth Divider */
-#define CRCCU_MR_DIVIDER_Msk        (_U(0xF) << CRCCU_MR_DIVIDER_Pos)
+#define CRCCU_MR_DIVIDER_Msk        (_U_(0xF) << CRCCU_MR_DIVIDER_Pos)
 #define CRCCU_MR_DIVIDER(value)     (CRCCU_MR_DIVIDER_Msk & ((value) << CRCCU_MR_DIVIDER_Pos))
-#define CRCCU_MR_MASK               _U(0x000000FF) /**< \brief (CRCCU_MR) MASK Register */
+#define CRCCU_MR_MASK               _U_(0x000000FF) /**< \brief (CRCCU_MR) MASK Register */
 
 /* -------- CRCCU_SR : (CRCCU Offset: 0x3C) (R/  32) Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -247,12 +247,12 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_SR_OFFSET             0x3C         /**< \brief (CRCCU_SR offset) Status Register */
-#define CRCCU_SR_RESETVALUE         _U(0xFFFFFFFF); /**< \brief (CRCCU_SR reset_value) Status Register */
+#define CRCCU_SR_RESETVALUE         _U_(0xFFFFFFFF); /**< \brief (CRCCU_SR reset_value) Status Register */
 
 #define CRCCU_SR_CRC_Pos            0            /**< \brief (CRCCU_SR) Cyclic Redundancy Check Value */
-#define CRCCU_SR_CRC_Msk            (_U(0xFFFFFFFF) << CRCCU_SR_CRC_Pos)
+#define CRCCU_SR_CRC_Msk            (_U_(0xFFFFFFFF) << CRCCU_SR_CRC_Pos)
 #define CRCCU_SR_CRC(value)         (CRCCU_SR_CRC_Msk & ((value) << CRCCU_SR_CRC_Pos))
-#define CRCCU_SR_MASK               _U(0xFFFFFFFF) /**< \brief (CRCCU_SR) MASK Register */
+#define CRCCU_SR_MASK               _U_(0xFFFFFFFF) /**< \brief (CRCCU_SR) MASK Register */
 
 /* -------- CRCCU_IER : (CRCCU Offset: 0x40) ( /W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -266,11 +266,11 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_IER_OFFSET            0x40         /**< \brief (CRCCU_IER offset) Interrupt Enable Register */
-#define CRCCU_IER_RESETVALUE        _U(0x00000000); /**< \brief (CRCCU_IER reset_value) Interrupt Enable Register */
+#define CRCCU_IER_RESETVALUE        _U_(0x00000000); /**< \brief (CRCCU_IER reset_value) Interrupt Enable Register */
 
 #define CRCCU_IER_ERRIER_Pos        0            /**< \brief (CRCCU_IER) CRC Error Interrupt Enable */
-#define CRCCU_IER_ERRIER            (_U(0x1) << CRCCU_IER_ERRIER_Pos)
-#define CRCCU_IER_MASK              _U(0x00000001) /**< \brief (CRCCU_IER) MASK Register */
+#define CRCCU_IER_ERRIER            (_U_(0x1) << CRCCU_IER_ERRIER_Pos)
+#define CRCCU_IER_MASK              _U_(0x00000001) /**< \brief (CRCCU_IER) MASK Register */
 
 /* -------- CRCCU_IDR : (CRCCU Offset: 0x44) ( /W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -284,11 +284,11 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_IDR_OFFSET            0x44         /**< \brief (CRCCU_IDR offset) Interrupt Disable Register */
-#define CRCCU_IDR_RESETVALUE        _U(0x00000000); /**< \brief (CRCCU_IDR reset_value) Interrupt Disable Register */
+#define CRCCU_IDR_RESETVALUE        _U_(0x00000000); /**< \brief (CRCCU_IDR reset_value) Interrupt Disable Register */
 
 #define CRCCU_IDR_ERRIDR_Pos        0            /**< \brief (CRCCU_IDR) CRC Error Interrupt Disable */
-#define CRCCU_IDR_ERRIDR            (_U(0x1) << CRCCU_IDR_ERRIDR_Pos)
-#define CRCCU_IDR_MASK              _U(0x00000001) /**< \brief (CRCCU_IDR) MASK Register */
+#define CRCCU_IDR_ERRIDR            (_U_(0x1) << CRCCU_IDR_ERRIDR_Pos)
+#define CRCCU_IDR_MASK              _U_(0x00000001) /**< \brief (CRCCU_IDR) MASK Register */
 
 /* -------- CRCCU_IMR : (CRCCU Offset: 0x48) (R/  32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -302,11 +302,11 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_IMR_OFFSET            0x48         /**< \brief (CRCCU_IMR offset) Interrupt Mask Register */
-#define CRCCU_IMR_RESETVALUE        _U(0x00000000); /**< \brief (CRCCU_IMR reset_value) Interrupt Mask Register */
+#define CRCCU_IMR_RESETVALUE        _U_(0x00000000); /**< \brief (CRCCU_IMR reset_value) Interrupt Mask Register */
 
 #define CRCCU_IMR_ERRIMR_Pos        0            /**< \brief (CRCCU_IMR) CRC Error Interrupt Mask */
-#define CRCCU_IMR_ERRIMR            (_U(0x1) << CRCCU_IMR_ERRIMR_Pos)
-#define CRCCU_IMR_MASK              _U(0x00000001) /**< \brief (CRCCU_IMR) MASK Register */
+#define CRCCU_IMR_ERRIMR            (_U_(0x1) << CRCCU_IMR_ERRIMR_Pos)
+#define CRCCU_IMR_MASK              _U_(0x00000001) /**< \brief (CRCCU_IMR) MASK Register */
 
 /* -------- CRCCU_ISR : (CRCCU Offset: 0x4C) (R/  32) Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -320,11 +320,11 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_ISR_OFFSET            0x4C         /**< \brief (CRCCU_ISR offset) Interrupt Status Register */
-#define CRCCU_ISR_RESETVALUE        _U(0x00000000); /**< \brief (CRCCU_ISR reset_value) Interrupt Status Register */
+#define CRCCU_ISR_RESETVALUE        _U_(0x00000000); /**< \brief (CRCCU_ISR reset_value) Interrupt Status Register */
 
 #define CRCCU_ISR_ERRISR_Pos        0            /**< \brief (CRCCU_ISR) CRC Error Interrupt Status */
-#define CRCCU_ISR_ERRISR            (_U(0x1) << CRCCU_ISR_ERRISR_Pos)
-#define CRCCU_ISR_MASK              _U(0x00000001) /**< \brief (CRCCU_ISR) MASK Register */
+#define CRCCU_ISR_ERRISR            (_U_(0x1) << CRCCU_ISR_ERRISR_Pos)
+#define CRCCU_ISR_MASK              _U_(0x00000001) /**< \brief (CRCCU_ISR) MASK Register */
 
 /* -------- CRCCU_VERSION : (CRCCU Offset: 0xFC) (R/  32) Version Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -340,15 +340,15 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define CRCCU_VERSION_OFFSET        0xFC         /**< \brief (CRCCU_VERSION offset) Version Register */
-#define CRCCU_VERSION_RESETVALUE    _U(0x00000202); /**< \brief (CRCCU_VERSION reset_value) Version Register */
+#define CRCCU_VERSION_RESETVALUE    _U_(0x00000202); /**< \brief (CRCCU_VERSION reset_value) Version Register */
 
 #define CRCCU_VERSION_VERSION_Pos   0            /**< \brief (CRCCU_VERSION) Version Number */
-#define CRCCU_VERSION_VERSION_Msk   (_U(0xFFF) << CRCCU_VERSION_VERSION_Pos)
+#define CRCCU_VERSION_VERSION_Msk   (_U_(0xFFF) << CRCCU_VERSION_VERSION_Pos)
 #define CRCCU_VERSION_VERSION(value) (CRCCU_VERSION_VERSION_Msk & ((value) << CRCCU_VERSION_VERSION_Pos))
 #define CRCCU_VERSION_VARIANT_Pos   16           /**< \brief (CRCCU_VERSION) Variant Number */
-#define CRCCU_VERSION_VARIANT_Msk   (_U(0xF) << CRCCU_VERSION_VARIANT_Pos)
+#define CRCCU_VERSION_VARIANT_Msk   (_U_(0xF) << CRCCU_VERSION_VARIANT_Pos)
 #define CRCCU_VERSION_VARIANT(value) (CRCCU_VERSION_VARIANT_Msk & ((value) << CRCCU_VERSION_VARIANT_Pos))
-#define CRCCU_VERSION_MASK          _U(0x000F0FFF) /**< \brief (CRCCU_VERSION) MASK Register */
+#define CRCCU_VERSION_MASK          _U_(0x000F0FFF) /**< \brief (CRCCU_VERSION) MASK Register */
 
 /** \brief CRCCU hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))

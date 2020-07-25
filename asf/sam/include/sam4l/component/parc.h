@@ -55,23 +55,23 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PARC_CFG_OFFSET             0x00         /**< \brief (PARC_CFG offset) Configuration Register */
-#define PARC_CFG_RESETVALUE         _U(0x00000000); /**< \brief (PARC_CFG reset_value) Configuration Register */
+#define PARC_CFG_RESETVALUE         _U_(0x00000000); /**< \brief (PARC_CFG reset_value) Configuration Register */
 
 #define PARC_CFG_DSIZE_Pos          0            /**< \brief (PARC_CFG) Data Size */
-#define PARC_CFG_DSIZE_Msk          (_U(0x3) << PARC_CFG_DSIZE_Pos)
+#define PARC_CFG_DSIZE_Msk          (_U_(0x3) << PARC_CFG_DSIZE_Pos)
 #define PARC_CFG_DSIZE(value)       (PARC_CFG_DSIZE_Msk & ((value) << PARC_CFG_DSIZE_Pos))
 #define PARC_CFG_SMODE_Pos          2            /**< \brief (PARC_CFG) Sampling Mode */
-#define PARC_CFG_SMODE_Msk          (_U(0x3) << PARC_CFG_SMODE_Pos)
+#define PARC_CFG_SMODE_Msk          (_U_(0x3) << PARC_CFG_SMODE_Pos)
 #define PARC_CFG_SMODE(value)       (PARC_CFG_SMODE_Msk & ((value) << PARC_CFG_SMODE_Pos))
 #define PARC_CFG_EMODE_Pos          4            /**< \brief (PARC_CFG) Events Mode */
-#define PARC_CFG_EMODE              (_U(0x1) << PARC_CFG_EMODE_Pos)
+#define PARC_CFG_EMODE              (_U_(0x1) << PARC_CFG_EMODE_Pos)
 #define PARC_CFG_EDGE_Pos           5            /**< \brief (PARC_CFG) Sampling Edge Select */
-#define PARC_CFG_EDGE               (_U(0x1) << PARC_CFG_EDGE_Pos)
+#define PARC_CFG_EDGE               (_U_(0x1) << PARC_CFG_EDGE_Pos)
 #define PARC_CFG_HALF_Pos           6            /**< \brief (PARC_CFG) Half Capture */
-#define PARC_CFG_HALF               (_U(0x1) << PARC_CFG_HALF_Pos)
+#define PARC_CFG_HALF               (_U_(0x1) << PARC_CFG_HALF_Pos)
 #define PARC_CFG_ODD_Pos            7            /**< \brief (PARC_CFG) Odd Capture */
-#define PARC_CFG_ODD                (_U(0x1) << PARC_CFG_ODD_Pos)
-#define PARC_CFG_MASK               _U(0x000000FF) /**< \brief (PARC_CFG) MASK Register */
+#define PARC_CFG_ODD                (_U_(0x1) << PARC_CFG_ODD_Pos)
+#define PARC_CFG_MASK               _U_(0x000000FF) /**< \brief (PARC_CFG) MASK Register */
 
 /* -------- PARC_CR : (PARC Offset: 0x04) (R/W 32) Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -88,17 +88,17 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PARC_CR_OFFSET              0x04         /**< \brief (PARC_CR offset) Control Register */
-#define PARC_CR_RESETVALUE          _U(0x00000000); /**< \brief (PARC_CR reset_value) Control Register */
+#define PARC_CR_RESETVALUE          _U_(0x00000000); /**< \brief (PARC_CR reset_value) Control Register */
 
 #define PARC_CR_EN_Pos              0            /**< \brief (PARC_CR) Enable */
-#define PARC_CR_EN                  (_U(0x1) << PARC_CR_EN_Pos)
+#define PARC_CR_EN                  (_U_(0x1) << PARC_CR_EN_Pos)
 #define PARC_CR_DIS_Pos             1            /**< \brief (PARC_CR) Disable */
-#define PARC_CR_DIS                 (_U(0x1) << PARC_CR_DIS_Pos)
+#define PARC_CR_DIS                 (_U_(0x1) << PARC_CR_DIS_Pos)
 #define PARC_CR_START_Pos           2            /**< \brief (PARC_CR) Start Capture */
-#define PARC_CR_START               (_U(0x1) << PARC_CR_START_Pos)
+#define PARC_CR_START               (_U_(0x1) << PARC_CR_START_Pos)
 #define PARC_CR_STOP_Pos            3            /**< \brief (PARC_CR) Stop Capture */
-#define PARC_CR_STOP                (_U(0x1) << PARC_CR_STOP_Pos)
-#define PARC_CR_MASK                _U(0x0000000F) /**< \brief (PARC_CR) MASK Register */
+#define PARC_CR_STOP                (_U_(0x1) << PARC_CR_STOP_Pos)
+#define PARC_CR_MASK                _U_(0x0000000F) /**< \brief (PARC_CR) MASK Register */
 
 /* -------- PARC_IER : (PARC Offset: 0x08) ( /W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -114,13 +114,13 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PARC_IER_OFFSET             0x08         /**< \brief (PARC_IER offset) Interrupt Enable Register */
-#define PARC_IER_RESETVALUE         _U(0x00000000); /**< \brief (PARC_IER reset_value) Interrupt Enable Register */
+#define PARC_IER_RESETVALUE         _U_(0x00000000); /**< \brief (PARC_IER reset_value) Interrupt Enable Register */
 
 #define PARC_IER_DRDY_Pos           2            /**< \brief (PARC_IER) Data Ready Interrupt Enable */
-#define PARC_IER_DRDY               (_U(0x1) << PARC_IER_DRDY_Pos)
+#define PARC_IER_DRDY               (_U_(0x1) << PARC_IER_DRDY_Pos)
 #define PARC_IER_OVR_Pos            3            /**< \brief (PARC_IER) Overrun Interrupt Enable */
-#define PARC_IER_OVR                (_U(0x1) << PARC_IER_OVR_Pos)
-#define PARC_IER_MASK               _U(0x0000000C) /**< \brief (PARC_IER) MASK Register */
+#define PARC_IER_OVR                (_U_(0x1) << PARC_IER_OVR_Pos)
+#define PARC_IER_MASK               _U_(0x0000000C) /**< \brief (PARC_IER) MASK Register */
 
 /* -------- PARC_IDR : (PARC Offset: 0x0C) ( /W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -136,13 +136,13 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PARC_IDR_OFFSET             0x0C         /**< \brief (PARC_IDR offset) Interrupt Disable Register */
-#define PARC_IDR_RESETVALUE         _U(0x00000000); /**< \brief (PARC_IDR reset_value) Interrupt Disable Register */
+#define PARC_IDR_RESETVALUE         _U_(0x00000000); /**< \brief (PARC_IDR reset_value) Interrupt Disable Register */
 
 #define PARC_IDR_DRDY_Pos           2            /**< \brief (PARC_IDR) Data Ready Interrupt Disable */
-#define PARC_IDR_DRDY               (_U(0x1) << PARC_IDR_DRDY_Pos)
+#define PARC_IDR_DRDY               (_U_(0x1) << PARC_IDR_DRDY_Pos)
 #define PARC_IDR_OVR_Pos            3            /**< \brief (PARC_IDR) Overrun Interrupt Disable */
-#define PARC_IDR_OVR                (_U(0x1) << PARC_IDR_OVR_Pos)
-#define PARC_IDR_MASK               _U(0x0000000C) /**< \brief (PARC_IDR) MASK Register */
+#define PARC_IDR_OVR                (_U_(0x1) << PARC_IDR_OVR_Pos)
+#define PARC_IDR_MASK               _U_(0x0000000C) /**< \brief (PARC_IDR) MASK Register */
 
 /* -------- PARC_IMR : (PARC Offset: 0x10) (R/  32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -158,13 +158,13 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PARC_IMR_OFFSET             0x10         /**< \brief (PARC_IMR offset) Interrupt Mask Register */
-#define PARC_IMR_RESETVALUE         _U(0x00000000); /**< \brief (PARC_IMR reset_value) Interrupt Mask Register */
+#define PARC_IMR_RESETVALUE         _U_(0x00000000); /**< \brief (PARC_IMR reset_value) Interrupt Mask Register */
 
 #define PARC_IMR_DRDY_Pos           2            /**< \brief (PARC_IMR) Data Ready Interrupt Mask */
-#define PARC_IMR_DRDY               (_U(0x1) << PARC_IMR_DRDY_Pos)
+#define PARC_IMR_DRDY               (_U_(0x1) << PARC_IMR_DRDY_Pos)
 #define PARC_IMR_OVR_Pos            3            /**< \brief (PARC_IMR) Overrun Interrupt Mask */
-#define PARC_IMR_OVR                (_U(0x1) << PARC_IMR_OVR_Pos)
-#define PARC_IMR_MASK               _U(0x0000000C) /**< \brief (PARC_IMR) MASK Register */
+#define PARC_IMR_OVR                (_U_(0x1) << PARC_IMR_OVR_Pos)
+#define PARC_IMR_MASK               _U_(0x0000000C) /**< \brief (PARC_IMR) MASK Register */
 
 /* -------- PARC_SR : (PARC Offset: 0x14) (R/  32) Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -181,17 +181,17 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PARC_SR_OFFSET              0x14         /**< \brief (PARC_SR offset) Status Register */
-#define PARC_SR_RESETVALUE          _U(0x00000000); /**< \brief (PARC_SR reset_value) Status Register */
+#define PARC_SR_RESETVALUE          _U_(0x00000000); /**< \brief (PARC_SR reset_value) Status Register */
 
 #define PARC_SR_EN_Pos              0            /**< \brief (PARC_SR) Enable Status */
-#define PARC_SR_EN                  (_U(0x1) << PARC_SR_EN_Pos)
+#define PARC_SR_EN                  (_U_(0x1) << PARC_SR_EN_Pos)
 #define PARC_SR_CS_Pos              1            /**< \brief (PARC_SR) Capture Status */
-#define PARC_SR_CS                  (_U(0x1) << PARC_SR_CS_Pos)
+#define PARC_SR_CS                  (_U_(0x1) << PARC_SR_CS_Pos)
 #define PARC_SR_DRDY_Pos            2            /**< \brief (PARC_SR) Data Ready Interrupt Status */
-#define PARC_SR_DRDY                (_U(0x1) << PARC_SR_DRDY_Pos)
+#define PARC_SR_DRDY                (_U_(0x1) << PARC_SR_DRDY_Pos)
 #define PARC_SR_OVR_Pos             3            /**< \brief (PARC_SR) Overrun Interrupt Status */
-#define PARC_SR_OVR                 (_U(0x1) << PARC_SR_OVR_Pos)
-#define PARC_SR_MASK                _U(0x0000000F) /**< \brief (PARC_SR) MASK Register */
+#define PARC_SR_OVR                 (_U_(0x1) << PARC_SR_OVR_Pos)
+#define PARC_SR_MASK                _U_(0x0000000F) /**< \brief (PARC_SR) MASK Register */
 
 /* -------- PARC_ICR : (PARC Offset: 0x18) ( /W 32) Interrupt Status Clear Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -207,13 +207,13 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PARC_ICR_OFFSET             0x18         /**< \brief (PARC_ICR offset) Interrupt Status Clear Register */
-#define PARC_ICR_RESETVALUE         _U(0x00000000); /**< \brief (PARC_ICR reset_value) Interrupt Status Clear Register */
+#define PARC_ICR_RESETVALUE         _U_(0x00000000); /**< \brief (PARC_ICR reset_value) Interrupt Status Clear Register */
 
 #define PARC_ICR_DRDY_Pos           2            /**< \brief (PARC_ICR) Data Ready Interrupt Status Clear */
-#define PARC_ICR_DRDY               (_U(0x1) << PARC_ICR_DRDY_Pos)
+#define PARC_ICR_DRDY               (_U_(0x1) << PARC_ICR_DRDY_Pos)
 #define PARC_ICR_OVR_Pos            3            /**< \brief (PARC_ICR) Overrun Interrupt Status Clear */
-#define PARC_ICR_OVR                (_U(0x1) << PARC_ICR_OVR_Pos)
-#define PARC_ICR_MASK               _U(0x0000000C) /**< \brief (PARC_ICR) MASK Register */
+#define PARC_ICR_OVR                (_U_(0x1) << PARC_ICR_OVR_Pos)
+#define PARC_ICR_MASK               _U_(0x0000000C) /**< \brief (PARC_ICR) MASK Register */
 
 /* -------- PARC_RHR : (PARC Offset: 0x1C) (R/  32) Receive Holding Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -226,12 +226,12 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PARC_RHR_OFFSET             0x1C         /**< \brief (PARC_RHR offset) Receive Holding Register */
-#define PARC_RHR_RESETVALUE         _U(0x00000000); /**< \brief (PARC_RHR reset_value) Receive Holding Register */
+#define PARC_RHR_RESETVALUE         _U_(0x00000000); /**< \brief (PARC_RHR reset_value) Receive Holding Register */
 
 #define PARC_RHR_CDATA_Pos          0            /**< \brief (PARC_RHR) Captured Data */
-#define PARC_RHR_CDATA_Msk          (_U(0xFFFFFFFF) << PARC_RHR_CDATA_Pos)
+#define PARC_RHR_CDATA_Msk          (_U_(0xFFFFFFFF) << PARC_RHR_CDATA_Pos)
 #define PARC_RHR_CDATA(value)       (PARC_RHR_CDATA_Msk & ((value) << PARC_RHR_CDATA_Pos))
-#define PARC_RHR_MASK               _U(0xFFFFFFFF) /**< \brief (PARC_RHR) MASK Register */
+#define PARC_RHR_MASK               _U_(0xFFFFFFFF) /**< \brief (PARC_RHR) MASK Register */
 
 /* -------- PARC_VERSION : (PARC Offset: 0x20) (R/  32) Version Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -247,15 +247,15 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define PARC_VERSION_OFFSET         0x20         /**< \brief (PARC_VERSION offset) Version Register */
-#define PARC_VERSION_RESETVALUE     _U(0x00000100); /**< \brief (PARC_VERSION reset_value) Version Register */
+#define PARC_VERSION_RESETVALUE     _U_(0x00000100); /**< \brief (PARC_VERSION reset_value) Version Register */
 
 #define PARC_VERSION_VERSION_Pos    0            /**< \brief (PARC_VERSION) Version Number */
-#define PARC_VERSION_VERSION_Msk    (_U(0xFFF) << PARC_VERSION_VERSION_Pos)
+#define PARC_VERSION_VERSION_Msk    (_U_(0xFFF) << PARC_VERSION_VERSION_Pos)
 #define PARC_VERSION_VERSION(value) (PARC_VERSION_VERSION_Msk & ((value) << PARC_VERSION_VERSION_Pos))
 #define PARC_VERSION_VARIANT_Pos    16           /**< \brief (PARC_VERSION) Variant Number */
-#define PARC_VERSION_VARIANT_Msk    (_U(0xF) << PARC_VERSION_VARIANT_Pos)
+#define PARC_VERSION_VARIANT_Msk    (_U_(0xF) << PARC_VERSION_VARIANT_Pos)
 #define PARC_VERSION_VARIANT(value) (PARC_VERSION_VARIANT_Msk & ((value) << PARC_VERSION_VARIANT_Pos))
-#define PARC_VERSION_MASK           _U(0x000F0FFF) /**< \brief (PARC_VERSION) MASK Register */
+#define PARC_VERSION_MASK           _U_(0x000F0FFF) /**< \brief (PARC_VERSION) MASK Register */
 
 /** \brief PARC hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))

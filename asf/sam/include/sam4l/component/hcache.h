@@ -52,12 +52,12 @@ typedef union {
 #define HCACHE_CTRL_OFFSET          0x08         /**< \brief (HCACHE_CTRL offset) Control Register */
 
 #define HCACHE_CTRL_CEN_Pos         0            /**< \brief (HCACHE_CTRL) Cache Enable */
-#define HCACHE_CTRL_CEN             (_U(0x1) << HCACHE_CTRL_CEN_Pos)
-#define   HCACHE_CTRL_CEN_NO_Val          _U(0x0)   /**< \brief (HCACHE_CTRL) Disable Cache Controller */
-#define   HCACHE_CTRL_CEN_YES_Val         _U(0x1)   /**< \brief (HCACHE_CTRL) Enable Cache Controller */
+#define HCACHE_CTRL_CEN             (_U_(0x1) << HCACHE_CTRL_CEN_Pos)
+#define   HCACHE_CTRL_CEN_NO_Val          _U_(0x0)   /**< \brief (HCACHE_CTRL) Disable Cache Controller */
+#define   HCACHE_CTRL_CEN_YES_Val         _U_(0x1)   /**< \brief (HCACHE_CTRL) Enable Cache Controller */
 #define HCACHE_CTRL_CEN_NO          (HCACHE_CTRL_CEN_NO_Val        << HCACHE_CTRL_CEN_Pos)
 #define HCACHE_CTRL_CEN_YES         (HCACHE_CTRL_CEN_YES_Val       << HCACHE_CTRL_CEN_Pos)
-#define HCACHE_CTRL_MASK            _U(0x00000001) /**< \brief (HCACHE_CTRL) MASK Register */
+#define HCACHE_CTRL_MASK            _U_(0x00000001) /**< \brief (HCACHE_CTRL) MASK Register */
 
 /* -------- HCACHE_SR : (HCACHE Offset: 0x0C) (R/W 32) Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -73,12 +73,12 @@ typedef union {
 #define HCACHE_SR_OFFSET            0x0C         /**< \brief (HCACHE_SR offset) Status Register */
 
 #define HCACHE_SR_CSTS_Pos          0            /**< \brief (HCACHE_SR) Cache Controller Status */
-#define HCACHE_SR_CSTS              (_U(0x1) << HCACHE_SR_CSTS_Pos)
-#define   HCACHE_SR_CSTS_DIS_Val          _U(0x0)   /**< \brief (HCACHE_SR) Cache Controller Disabled */
-#define   HCACHE_SR_CSTS_EN_Val           _U(0x1)   /**< \brief (HCACHE_SR) Cache Controller Enabled */
+#define HCACHE_SR_CSTS              (_U_(0x1) << HCACHE_SR_CSTS_Pos)
+#define   HCACHE_SR_CSTS_DIS_Val          _U_(0x0)   /**< \brief (HCACHE_SR) Cache Controller Disabled */
+#define   HCACHE_SR_CSTS_EN_Val           _U_(0x1)   /**< \brief (HCACHE_SR) Cache Controller Enabled */
 #define HCACHE_SR_CSTS_DIS          (HCACHE_SR_CSTS_DIS_Val        << HCACHE_SR_CSTS_Pos)
 #define HCACHE_SR_CSTS_EN           (HCACHE_SR_CSTS_EN_Val         << HCACHE_SR_CSTS_Pos)
-#define HCACHE_SR_MASK              _U(0x00000001) /**< \brief (HCACHE_SR) MASK Register */
+#define HCACHE_SR_MASK              _U_(0x00000001) /**< \brief (HCACHE_SR) MASK Register */
 
 /* -------- HCACHE_MAINT0 : (HCACHE Offset: 0x20) ( /W 32) Maintenance Register 0 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -94,12 +94,12 @@ typedef union {
 #define HCACHE_MAINT0_OFFSET        0x20         /**< \brief (HCACHE_MAINT0 offset) Maintenance Register 0 */
 
 #define HCACHE_MAINT0_INVALL_Pos    0            /**< \brief (HCACHE_MAINT0) Cache Controller Invalidate All */
-#define HCACHE_MAINT0_INVALL        (_U(0x1) << HCACHE_MAINT0_INVALL_Pos)
-#define   HCACHE_MAINT0_INVALL_NO_Val     _U(0x0)   /**< \brief (HCACHE_MAINT0) No effect */
-#define   HCACHE_MAINT0_INVALL_YES_Val    _U(0x1)   /**< \brief (HCACHE_MAINT0) Invalidate all cache entries */
+#define HCACHE_MAINT0_INVALL        (_U_(0x1) << HCACHE_MAINT0_INVALL_Pos)
+#define   HCACHE_MAINT0_INVALL_NO_Val     _U_(0x0)   /**< \brief (HCACHE_MAINT0) No effect */
+#define   HCACHE_MAINT0_INVALL_YES_Val    _U_(0x1)   /**< \brief (HCACHE_MAINT0) Invalidate all cache entries */
 #define HCACHE_MAINT0_INVALL_NO     (HCACHE_MAINT0_INVALL_NO_Val   << HCACHE_MAINT0_INVALL_Pos)
 #define HCACHE_MAINT0_INVALL_YES    (HCACHE_MAINT0_INVALL_YES_Val  << HCACHE_MAINT0_INVALL_Pos)
-#define HCACHE_MAINT0_MASK          _U(0x00000001) /**< \brief (HCACHE_MAINT0) MASK Register */
+#define HCACHE_MAINT0_MASK          _U_(0x00000001) /**< \brief (HCACHE_MAINT0) MASK Register */
 
 /* -------- HCACHE_MAINT1 : (HCACHE Offset: 0x24) ( /W 32) Maintenance Register 1 -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -116,9 +116,9 @@ typedef union {
 #define HCACHE_MAINT1_OFFSET        0x24         /**< \brief (HCACHE_MAINT1 offset) Maintenance Register 1 */
 
 #define HCACHE_MAINT1_INDEX_Pos     4            /**< \brief (HCACHE_MAINT1) Invalidate Index */
-#define HCACHE_MAINT1_INDEX_Msk     (_U(0xF) << HCACHE_MAINT1_INDEX_Pos)
+#define HCACHE_MAINT1_INDEX_Msk     (_U_(0xF) << HCACHE_MAINT1_INDEX_Pos)
 #define HCACHE_MAINT1_INDEX(value)  (HCACHE_MAINT1_INDEX_Msk & ((value) << HCACHE_MAINT1_INDEX_Pos))
-#define HCACHE_MAINT1_MASK          _U(0x000000F0) /**< \brief (HCACHE_MAINT1) MASK Register */
+#define HCACHE_MAINT1_MASK          _U_(0x000000F0) /**< \brief (HCACHE_MAINT1) MASK Register */
 
 /* -------- HCACHE_MCFG : (HCACHE Offset: 0x28) (R/W 32) Monitor Configuration Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -134,15 +134,15 @@ typedef union {
 #define HCACHE_MCFG_OFFSET          0x28         /**< \brief (HCACHE_MCFG offset) Monitor Configuration Register */
 
 #define HCACHE_MCFG_MODE_Pos        0            /**< \brief (HCACHE_MCFG) Cache Controller Monitor Counter Mode */
-#define HCACHE_MCFG_MODE_Msk        (_U(0x3) << HCACHE_MCFG_MODE_Pos)
+#define HCACHE_MCFG_MODE_Msk        (_U_(0x3) << HCACHE_MCFG_MODE_Pos)
 #define HCACHE_MCFG_MODE(value)     (HCACHE_MCFG_MODE_Msk & ((value) << HCACHE_MCFG_MODE_Pos))
-#define   HCACHE_MCFG_MODE_CYCLE_Val      _U(0x0)   /**< \brief (HCACHE_MCFG) Cycle Counter */
-#define   HCACHE_MCFG_MODE_IHIT_Val       _U(0x1)   /**< \brief (HCACHE_MCFG) Instruction Hit Counter */
-#define   HCACHE_MCFG_MODE_DHIT_Val       _U(0x2)   /**< \brief (HCACHE_MCFG) Data Hit Counter */
+#define   HCACHE_MCFG_MODE_CYCLE_Val      _U_(0x0)   /**< \brief (HCACHE_MCFG) Cycle Counter */
+#define   HCACHE_MCFG_MODE_IHIT_Val       _U_(0x1)   /**< \brief (HCACHE_MCFG) Instruction Hit Counter */
+#define   HCACHE_MCFG_MODE_DHIT_Val       _U_(0x2)   /**< \brief (HCACHE_MCFG) Data Hit Counter */
 #define HCACHE_MCFG_MODE_CYCLE      (HCACHE_MCFG_MODE_CYCLE_Val    << HCACHE_MCFG_MODE_Pos)
 #define HCACHE_MCFG_MODE_IHIT       (HCACHE_MCFG_MODE_IHIT_Val     << HCACHE_MCFG_MODE_Pos)
 #define HCACHE_MCFG_MODE_DHIT       (HCACHE_MCFG_MODE_DHIT_Val     << HCACHE_MCFG_MODE_Pos)
-#define HCACHE_MCFG_MASK            _U(0x00000003) /**< \brief (HCACHE_MCFG) MASK Register */
+#define HCACHE_MCFG_MASK            _U_(0x00000003) /**< \brief (HCACHE_MCFG) MASK Register */
 
 /* -------- HCACHE_MEN : (HCACHE Offset: 0x2C) (R/W 32) Monitor Enable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -158,12 +158,12 @@ typedef union {
 #define HCACHE_MEN_OFFSET           0x2C         /**< \brief (HCACHE_MEN offset) Monitor Enable Register */
 
 #define HCACHE_MEN_MENABLE_Pos      0            /**< \brief (HCACHE_MEN) Monitor Enable */
-#define HCACHE_MEN_MENABLE          (_U(0x1) << HCACHE_MEN_MENABLE_Pos)
-#define   HCACHE_MEN_MENABLE_DIS_Val      _U(0x0)   /**< \brief (HCACHE_MEN) Disable Monitor Counter */
-#define   HCACHE_MEN_MENABLE_EN_Val       _U(0x1)   /**< \brief (HCACHE_MEN) Enable Monitor Counter */
+#define HCACHE_MEN_MENABLE          (_U_(0x1) << HCACHE_MEN_MENABLE_Pos)
+#define   HCACHE_MEN_MENABLE_DIS_Val      _U_(0x0)   /**< \brief (HCACHE_MEN) Disable Monitor Counter */
+#define   HCACHE_MEN_MENABLE_EN_Val       _U_(0x1)   /**< \brief (HCACHE_MEN) Enable Monitor Counter */
 #define HCACHE_MEN_MENABLE_DIS      (HCACHE_MEN_MENABLE_DIS_Val    << HCACHE_MEN_MENABLE_Pos)
 #define HCACHE_MEN_MENABLE_EN       (HCACHE_MEN_MENABLE_EN_Val     << HCACHE_MEN_MENABLE_Pos)
-#define HCACHE_MEN_MASK             _U(0x00000001) /**< \brief (HCACHE_MEN) MASK Register */
+#define HCACHE_MEN_MASK             _U_(0x00000001) /**< \brief (HCACHE_MEN) MASK Register */
 
 /* -------- HCACHE_MCTRL : (HCACHE Offset: 0x30) ( /W 32) Monitor Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -179,12 +179,12 @@ typedef union {
 #define HCACHE_MCTRL_OFFSET         0x30         /**< \brief (HCACHE_MCTRL offset) Monitor Control Register */
 
 #define HCACHE_MCTRL_SWRST_Pos      0            /**< \brief (HCACHE_MCTRL) Monitor Software Reset */
-#define HCACHE_MCTRL_SWRST          (_U(0x1) << HCACHE_MCTRL_SWRST_Pos)
-#define   HCACHE_MCTRL_SWRST_NO_Val       _U(0x0)   /**< \brief (HCACHE_MCTRL) No effect */
-#define   HCACHE_MCTRL_SWRST_YES_Val      _U(0x1)   /**< \brief (HCACHE_MCTRL) Reset event counter register */
+#define HCACHE_MCTRL_SWRST          (_U_(0x1) << HCACHE_MCTRL_SWRST_Pos)
+#define   HCACHE_MCTRL_SWRST_NO_Val       _U_(0x0)   /**< \brief (HCACHE_MCTRL) No effect */
+#define   HCACHE_MCTRL_SWRST_YES_Val      _U_(0x1)   /**< \brief (HCACHE_MCTRL) Reset event counter register */
 #define HCACHE_MCTRL_SWRST_NO       (HCACHE_MCTRL_SWRST_NO_Val     << HCACHE_MCTRL_SWRST_Pos)
 #define HCACHE_MCTRL_SWRST_YES      (HCACHE_MCTRL_SWRST_YES_Val    << HCACHE_MCTRL_SWRST_Pos)
-#define HCACHE_MCTRL_MASK           _U(0x00000001) /**< \brief (HCACHE_MCTRL) MASK Register */
+#define HCACHE_MCTRL_MASK           _U_(0x00000001) /**< \brief (HCACHE_MCTRL) MASK Register */
 
 /* -------- HCACHE_MSR : (HCACHE Offset: 0x34) (R/  32) Monitor Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -199,9 +199,9 @@ typedef union {
 #define HCACHE_MSR_OFFSET           0x34         /**< \brief (HCACHE_MSR offset) Monitor Status Register */
 
 #define HCACHE_MSR_EVENTCNT_Pos     0            /**< \brief (HCACHE_MSR) Monitor Event Counter */
-#define HCACHE_MSR_EVENTCNT_Msk     (_U(0xFFFFFFFF) << HCACHE_MSR_EVENTCNT_Pos)
+#define HCACHE_MSR_EVENTCNT_Msk     (_U_(0xFFFFFFFF) << HCACHE_MSR_EVENTCNT_Pos)
 #define HCACHE_MSR_EVENTCNT(value)  (HCACHE_MSR_EVENTCNT_Msk & ((value) << HCACHE_MSR_EVENTCNT_Pos))
-#define HCACHE_MSR_MASK             _U(0xFFFFFFFF) /**< \brief (HCACHE_MSR) MASK Register */
+#define HCACHE_MSR_MASK             _U_(0xFFFFFFFF) /**< \brief (HCACHE_MSR) MASK Register */
 
 /* -------- HCACHE_VERSION : (HCACHE Offset: 0xFC) (R/  32) Version Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -217,15 +217,15 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define HCACHE_VERSION_OFFSET       0xFC         /**< \brief (HCACHE_VERSION offset) Version Register */
-#define HCACHE_VERSION_RESETVALUE   _U(0x00000101); /**< \brief (HCACHE_VERSION reset_value) Version Register */
+#define HCACHE_VERSION_RESETVALUE   _U_(0x00000101); /**< \brief (HCACHE_VERSION reset_value) Version Register */
 
 #define HCACHE_VERSION_VERSION_Pos  0            /**< \brief (HCACHE_VERSION) VERSION */
-#define HCACHE_VERSION_VERSION_Msk  (_U(0xFFF) << HCACHE_VERSION_VERSION_Pos)
+#define HCACHE_VERSION_VERSION_Msk  (_U_(0xFFF) << HCACHE_VERSION_VERSION_Pos)
 #define HCACHE_VERSION_VERSION(value) (HCACHE_VERSION_VERSION_Msk & ((value) << HCACHE_VERSION_VERSION_Pos))
 #define HCACHE_VERSION_MFN_Pos      16           /**< \brief (HCACHE_VERSION) MFN */
-#define HCACHE_VERSION_MFN_Msk      (_U(0xF) << HCACHE_VERSION_MFN_Pos)
+#define HCACHE_VERSION_MFN_Msk      (_U_(0xF) << HCACHE_VERSION_MFN_Pos)
 #define HCACHE_VERSION_MFN(value)   (HCACHE_VERSION_MFN_Msk & ((value) << HCACHE_VERSION_MFN_Pos))
-#define HCACHE_VERSION_MASK         _U(0x000F0FFF) /**< \brief (HCACHE_VERSION) MASK Register */
+#define HCACHE_VERSION_MASK         _U_(0x000F0FFF) /**< \brief (HCACHE_VERSION) MASK Register */
 
 /** \brief HCACHE hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))

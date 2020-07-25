@@ -54,17 +54,17 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AESA_CTRL_OFFSET            0x00         /**< \brief (AESA_CTRL offset) Control Register */
-#define AESA_CTRL_RESETVALUE        _U(0x00000000); /**< \brief (AESA_CTRL reset_value) Control Register */
+#define AESA_CTRL_RESETVALUE        _U_(0x00000000); /**< \brief (AESA_CTRL reset_value) Control Register */
 
 #define AESA_CTRL_ENABLE_Pos        0            /**< \brief (AESA_CTRL) Enable Module */
-#define AESA_CTRL_ENABLE            (_U(0x1) << AESA_CTRL_ENABLE_Pos)
+#define AESA_CTRL_ENABLE            (_U_(0x1) << AESA_CTRL_ENABLE_Pos)
 #define AESA_CTRL_DKEYGEN_Pos       1            /**< \brief (AESA_CTRL) Decryption Key Generate */
-#define AESA_CTRL_DKEYGEN           (_U(0x1) << AESA_CTRL_DKEYGEN_Pos)
+#define AESA_CTRL_DKEYGEN           (_U_(0x1) << AESA_CTRL_DKEYGEN_Pos)
 #define AESA_CTRL_NEWMSG_Pos        2            /**< \brief (AESA_CTRL) New Message */
-#define AESA_CTRL_NEWMSG            (_U(0x1) << AESA_CTRL_NEWMSG_Pos)
+#define AESA_CTRL_NEWMSG            (_U_(0x1) << AESA_CTRL_NEWMSG_Pos)
 #define AESA_CTRL_SWRST_Pos         8            /**< \brief (AESA_CTRL) Software Reset */
-#define AESA_CTRL_SWRST             (_U(0x1) << AESA_CTRL_SWRST_Pos)
-#define AESA_CTRL_MASK              _U(0x00000107) /**< \brief (AESA_CTRL) MASK Register */
+#define AESA_CTRL_SWRST             (_U_(0x1) << AESA_CTRL_SWRST_Pos)
+#define AESA_CTRL_MASK              _U_(0x00000107) /**< \brief (AESA_CTRL) MASK Register */
 
 /* -------- AESA_MODE : (AESA Offset: 0x04) (R/W 32) Mode Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -85,25 +85,25 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AESA_MODE_OFFSET            0x04         /**< \brief (AESA_MODE offset) Mode Register */
-#define AESA_MODE_RESETVALUE        _U(0x000F0000); /**< \brief (AESA_MODE reset_value) Mode Register */
+#define AESA_MODE_RESETVALUE        _U_(0x000F0000); /**< \brief (AESA_MODE reset_value) Mode Register */
 
 #define AESA_MODE_ENCRYPT_Pos       0            /**< \brief (AESA_MODE) Encryption */
-#define AESA_MODE_ENCRYPT           (_U(0x1) << AESA_MODE_ENCRYPT_Pos)
+#define AESA_MODE_ENCRYPT           (_U_(0x1) << AESA_MODE_ENCRYPT_Pos)
 #define AESA_MODE_KEYSIZE_Pos       1            /**< \brief (AESA_MODE) Key Size */
-#define AESA_MODE_KEYSIZE_Msk       (_U(0x3) << AESA_MODE_KEYSIZE_Pos)
+#define AESA_MODE_KEYSIZE_Msk       (_U_(0x3) << AESA_MODE_KEYSIZE_Pos)
 #define AESA_MODE_KEYSIZE(value)    (AESA_MODE_KEYSIZE_Msk & ((value) << AESA_MODE_KEYSIZE_Pos))
 #define AESA_MODE_DMA_Pos           3            /**< \brief (AESA_MODE) DMA Mode */
-#define AESA_MODE_DMA               (_U(0x1) << AESA_MODE_DMA_Pos)
+#define AESA_MODE_DMA               (_U_(0x1) << AESA_MODE_DMA_Pos)
 #define AESA_MODE_OPMODE_Pos        4            /**< \brief (AESA_MODE) Confidentiality Mode of Operation */
-#define AESA_MODE_OPMODE_Msk        (_U(0x7) << AESA_MODE_OPMODE_Pos)
+#define AESA_MODE_OPMODE_Msk        (_U_(0x7) << AESA_MODE_OPMODE_Pos)
 #define AESA_MODE_OPMODE(value)     (AESA_MODE_OPMODE_Msk & ((value) << AESA_MODE_OPMODE_Pos))
 #define AESA_MODE_CFBS_Pos          8            /**< \brief (AESA_MODE) Cipher Feedback Data Segment Size */
-#define AESA_MODE_CFBS_Msk          (_U(0x7) << AESA_MODE_CFBS_Pos)
+#define AESA_MODE_CFBS_Msk          (_U_(0x7) << AESA_MODE_CFBS_Pos)
 #define AESA_MODE_CFBS(value)       (AESA_MODE_CFBS_Msk & ((value) << AESA_MODE_CFBS_Pos))
 #define AESA_MODE_CTYPE_Pos         16           /**< \brief (AESA_MODE) Countermeasure Type */
-#define AESA_MODE_CTYPE_Msk         (_U(0xF) << AESA_MODE_CTYPE_Pos)
+#define AESA_MODE_CTYPE_Msk         (_U_(0xF) << AESA_MODE_CTYPE_Pos)
 #define AESA_MODE_CTYPE(value)      (AESA_MODE_CTYPE_Msk & ((value) << AESA_MODE_CTYPE_Pos))
-#define AESA_MODE_MASK              _U(0x000F077F) /**< \brief (AESA_MODE) MASK Register */
+#define AESA_MODE_MASK              _U_(0x000F077F) /**< \brief (AESA_MODE) MASK Register */
 
 /* -------- AESA_DATABUFPTR : (AESA Offset: 0x08) (R/W 32) Data Buffer Pointer Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -119,15 +119,15 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AESA_DATABUFPTR_OFFSET      0x08         /**< \brief (AESA_DATABUFPTR offset) Data Buffer Pointer Register */
-#define AESA_DATABUFPTR_RESETVALUE  _U(0x00000000); /**< \brief (AESA_DATABUFPTR reset_value) Data Buffer Pointer Register */
+#define AESA_DATABUFPTR_RESETVALUE  _U_(0x00000000); /**< \brief (AESA_DATABUFPTR reset_value) Data Buffer Pointer Register */
 
 #define AESA_DATABUFPTR_IDATAW_Pos  0            /**< \brief (AESA_DATABUFPTR) Input Data Word */
-#define AESA_DATABUFPTR_IDATAW_Msk  (_U(0x3) << AESA_DATABUFPTR_IDATAW_Pos)
+#define AESA_DATABUFPTR_IDATAW_Msk  (_U_(0x3) << AESA_DATABUFPTR_IDATAW_Pos)
 #define AESA_DATABUFPTR_IDATAW(value) (AESA_DATABUFPTR_IDATAW_Msk & ((value) << AESA_DATABUFPTR_IDATAW_Pos))
 #define AESA_DATABUFPTR_ODATAW_Pos  4            /**< \brief (AESA_DATABUFPTR) Output Data Word */
-#define AESA_DATABUFPTR_ODATAW_Msk  (_U(0x3) << AESA_DATABUFPTR_ODATAW_Pos)
+#define AESA_DATABUFPTR_ODATAW_Msk  (_U_(0x3) << AESA_DATABUFPTR_ODATAW_Pos)
 #define AESA_DATABUFPTR_ODATAW(value) (AESA_DATABUFPTR_ODATAW_Msk & ((value) << AESA_DATABUFPTR_ODATAW_Pos))
-#define AESA_DATABUFPTR_MASK        _U(0x00000033) /**< \brief (AESA_DATABUFPTR) MASK Register */
+#define AESA_DATABUFPTR_MASK        _U_(0x00000033) /**< \brief (AESA_DATABUFPTR) MASK Register */
 
 /* -------- AESA_SR : (AESA Offset: 0x0C) (R/  32) Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -143,13 +143,13 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AESA_SR_OFFSET              0x0C         /**< \brief (AESA_SR offset) Status Register */
-#define AESA_SR_RESETVALUE          _U(0x00010000); /**< \brief (AESA_SR reset_value) Status Register */
+#define AESA_SR_RESETVALUE          _U_(0x00010000); /**< \brief (AESA_SR reset_value) Status Register */
 
 #define AESA_SR_ODATARDY_Pos        0            /**< \brief (AESA_SR) Output Data Ready */
-#define AESA_SR_ODATARDY            (_U(0x1) << AESA_SR_ODATARDY_Pos)
+#define AESA_SR_ODATARDY            (_U_(0x1) << AESA_SR_ODATARDY_Pos)
 #define AESA_SR_IBUFRDY_Pos         16           /**< \brief (AESA_SR) Input Buffer Ready */
-#define AESA_SR_IBUFRDY             (_U(0x1) << AESA_SR_IBUFRDY_Pos)
-#define AESA_SR_MASK                _U(0x00010001) /**< \brief (AESA_SR) MASK Register */
+#define AESA_SR_IBUFRDY             (_U_(0x1) << AESA_SR_IBUFRDY_Pos)
+#define AESA_SR_MASK                _U_(0x00010001) /**< \brief (AESA_SR) MASK Register */
 
 /* -------- AESA_IER : (AESA Offset: 0x10) ( /W 32) Interrupt Enable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -165,13 +165,13 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AESA_IER_OFFSET             0x10         /**< \brief (AESA_IER offset) Interrupt Enable Register */
-#define AESA_IER_RESETVALUE         _U(0x00000000); /**< \brief (AESA_IER reset_value) Interrupt Enable Register */
+#define AESA_IER_RESETVALUE         _U_(0x00000000); /**< \brief (AESA_IER reset_value) Interrupt Enable Register */
 
 #define AESA_IER_ODATARDY_Pos       0            /**< \brief (AESA_IER) Output Data Ready Interrupt Enable */
-#define AESA_IER_ODATARDY           (_U(0x1) << AESA_IER_ODATARDY_Pos)
+#define AESA_IER_ODATARDY           (_U_(0x1) << AESA_IER_ODATARDY_Pos)
 #define AESA_IER_IBUFRDY_Pos        16           /**< \brief (AESA_IER) Input Buffer Ready Interrupt Enable */
-#define AESA_IER_IBUFRDY            (_U(0x1) << AESA_IER_IBUFRDY_Pos)
-#define AESA_IER_MASK               _U(0x00010001) /**< \brief (AESA_IER) MASK Register */
+#define AESA_IER_IBUFRDY            (_U_(0x1) << AESA_IER_IBUFRDY_Pos)
+#define AESA_IER_MASK               _U_(0x00010001) /**< \brief (AESA_IER) MASK Register */
 
 /* -------- AESA_IDR : (AESA Offset: 0x14) ( /W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -187,13 +187,13 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AESA_IDR_OFFSET             0x14         /**< \brief (AESA_IDR offset) Interrupt Disable Register */
-#define AESA_IDR_RESETVALUE         _U(0x00000000); /**< \brief (AESA_IDR reset_value) Interrupt Disable Register */
+#define AESA_IDR_RESETVALUE         _U_(0x00000000); /**< \brief (AESA_IDR reset_value) Interrupt Disable Register */
 
 #define AESA_IDR_ODATARDY_Pos       0            /**< \brief (AESA_IDR) Output Data Ready Interrupt Disable */
-#define AESA_IDR_ODATARDY           (_U(0x1) << AESA_IDR_ODATARDY_Pos)
+#define AESA_IDR_ODATARDY           (_U_(0x1) << AESA_IDR_ODATARDY_Pos)
 #define AESA_IDR_IBUFRDY_Pos        16           /**< \brief (AESA_IDR) Input Buffer Ready Interrupt Disable */
-#define AESA_IDR_IBUFRDY            (_U(0x1) << AESA_IDR_IBUFRDY_Pos)
-#define AESA_IDR_MASK               _U(0x00010001) /**< \brief (AESA_IDR) MASK Register */
+#define AESA_IDR_IBUFRDY            (_U_(0x1) << AESA_IDR_IBUFRDY_Pos)
+#define AESA_IDR_MASK               _U_(0x00010001) /**< \brief (AESA_IDR) MASK Register */
 
 /* -------- AESA_IMR : (AESA Offset: 0x18) (R/  32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -209,13 +209,13 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AESA_IMR_OFFSET             0x18         /**< \brief (AESA_IMR offset) Interrupt Mask Register */
-#define AESA_IMR_RESETVALUE         _U(0x00000000); /**< \brief (AESA_IMR reset_value) Interrupt Mask Register */
+#define AESA_IMR_RESETVALUE         _U_(0x00000000); /**< \brief (AESA_IMR reset_value) Interrupt Mask Register */
 
 #define AESA_IMR_ODATARDY_Pos       0            /**< \brief (AESA_IMR) Output Data Ready Interrupt Mask */
-#define AESA_IMR_ODATARDY           (_U(0x1) << AESA_IMR_ODATARDY_Pos)
+#define AESA_IMR_ODATARDY           (_U_(0x1) << AESA_IMR_ODATARDY_Pos)
 #define AESA_IMR_IBUFRDY_Pos        16           /**< \brief (AESA_IMR) Input Buffer Ready Interrupt Mask */
-#define AESA_IMR_IBUFRDY            (_U(0x1) << AESA_IMR_IBUFRDY_Pos)
-#define AESA_IMR_MASK               _U(0x00010001) /**< \brief (AESA_IMR) MASK Register */
+#define AESA_IMR_IBUFRDY            (_U_(0x1) << AESA_IMR_IBUFRDY_Pos)
+#define AESA_IMR_MASK               _U_(0x00010001) /**< \brief (AESA_IMR) MASK Register */
 
 /* -------- AESA_KEY : (AESA Offset: 0x20) ( /W 32) KEY Key Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -228,12 +228,12 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AESA_KEY_OFFSET             0x20         /**< \brief (AESA_KEY offset) Key Register */
-#define AESA_KEY_RESETVALUE         _U(0x00000000); /**< \brief (AESA_KEY reset_value) Key Register */
+#define AESA_KEY_RESETVALUE         _U_(0x00000000); /**< \brief (AESA_KEY reset_value) Key Register */
 
 #define AESA_KEY_KEY0_Pos           0            /**< \brief (AESA_KEY) Key Word 0 */
-#define AESA_KEY_KEY0_Msk           (_U(0xFFFFFFFF) << AESA_KEY_KEY0_Pos)
+#define AESA_KEY_KEY0_Msk           (_U_(0xFFFFFFFF) << AESA_KEY_KEY0_Pos)
 #define AESA_KEY_KEY0(value)        (AESA_KEY_KEY0_Msk & ((value) << AESA_KEY_KEY0_Pos))
-#define AESA_KEY_MASK               _U(0xFFFFFFFF) /**< \brief (AESA_KEY) MASK Register */
+#define AESA_KEY_MASK               _U_(0xFFFFFFFF) /**< \brief (AESA_KEY) MASK Register */
 
 /* -------- AESA_INITVECT : (AESA Offset: 0x40) ( /W 32) INITVECT Initialization Vector Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -246,12 +246,12 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AESA_INITVECT_OFFSET        0x40         /**< \brief (AESA_INITVECT offset) Initialization Vector Register */
-#define AESA_INITVECT_RESETVALUE    _U(0x00000000); /**< \brief (AESA_INITVECT reset_value) Initialization Vector Register */
+#define AESA_INITVECT_RESETVALUE    _U_(0x00000000); /**< \brief (AESA_INITVECT reset_value) Initialization Vector Register */
 
 #define AESA_INITVECT_INITVECT0_Pos 0            /**< \brief (AESA_INITVECT) Initialization Vector Word 0 */
-#define AESA_INITVECT_INITVECT0_Msk (_U(0xFFFFFFFF) << AESA_INITVECT_INITVECT0_Pos)
+#define AESA_INITVECT_INITVECT0_Msk (_U_(0xFFFFFFFF) << AESA_INITVECT_INITVECT0_Pos)
 #define AESA_INITVECT_INITVECT0(value) (AESA_INITVECT_INITVECT0_Msk & ((value) << AESA_INITVECT_INITVECT0_Pos))
-#define AESA_INITVECT_MASK          _U(0xFFFFFFFF) /**< \brief (AESA_INITVECT) MASK Register */
+#define AESA_INITVECT_MASK          _U_(0xFFFFFFFF) /**< \brief (AESA_INITVECT) MASK Register */
 
 /* -------- AESA_IDATA : (AESA Offset: 0x50) ( /W 32) Input Data Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -264,12 +264,12 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AESA_IDATA_OFFSET           0x50         /**< \brief (AESA_IDATA offset) Input Data Register */
-#define AESA_IDATA_RESETVALUE       _U(0x00000000); /**< \brief (AESA_IDATA reset_value) Input Data Register */
+#define AESA_IDATA_RESETVALUE       _U_(0x00000000); /**< \brief (AESA_IDATA reset_value) Input Data Register */
 
 #define AESA_IDATA_IDATA_Pos        0            /**< \brief (AESA_IDATA) Input Data */
-#define AESA_IDATA_IDATA_Msk        (_U(0xFFFFFFFF) << AESA_IDATA_IDATA_Pos)
+#define AESA_IDATA_IDATA_Msk        (_U_(0xFFFFFFFF) << AESA_IDATA_IDATA_Pos)
 #define AESA_IDATA_IDATA(value)     (AESA_IDATA_IDATA_Msk & ((value) << AESA_IDATA_IDATA_Pos))
-#define AESA_IDATA_MASK             _U(0xFFFFFFFF) /**< \brief (AESA_IDATA) MASK Register */
+#define AESA_IDATA_MASK             _U_(0xFFFFFFFF) /**< \brief (AESA_IDATA) MASK Register */
 
 /* -------- AESA_ODATA : (AESA Offset: 0x60) (R/  32) Output Data Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -282,12 +282,12 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AESA_ODATA_OFFSET           0x60         /**< \brief (AESA_ODATA offset) Output Data Register */
-#define AESA_ODATA_RESETVALUE       _U(0x00000000); /**< \brief (AESA_ODATA reset_value) Output Data Register */
+#define AESA_ODATA_RESETVALUE       _U_(0x00000000); /**< \brief (AESA_ODATA reset_value) Output Data Register */
 
 #define AESA_ODATA_ODATA_Pos        0            /**< \brief (AESA_ODATA) Output Data */
-#define AESA_ODATA_ODATA_Msk        (_U(0xFFFFFFFF) << AESA_ODATA_ODATA_Pos)
+#define AESA_ODATA_ODATA_Msk        (_U_(0xFFFFFFFF) << AESA_ODATA_ODATA_Pos)
 #define AESA_ODATA_ODATA(value)     (AESA_ODATA_ODATA_Msk & ((value) << AESA_ODATA_ODATA_Pos))
-#define AESA_ODATA_MASK             _U(0xFFFFFFFF) /**< \brief (AESA_ODATA) MASK Register */
+#define AESA_ODATA_MASK             _U_(0xFFFFFFFF) /**< \brief (AESA_ODATA) MASK Register */
 
 /* -------- AESA_DRNGSEED : (AESA Offset: 0x70) ( /W 32) DRNG Seed Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -300,12 +300,12 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AESA_DRNGSEED_OFFSET        0x70         /**< \brief (AESA_DRNGSEED offset) DRNG Seed Register */
-#define AESA_DRNGSEED_RESETVALUE    _U(0x00000000); /**< \brief (AESA_DRNGSEED reset_value) DRNG Seed Register */
+#define AESA_DRNGSEED_RESETVALUE    _U_(0x00000000); /**< \brief (AESA_DRNGSEED reset_value) DRNG Seed Register */
 
 #define AESA_DRNGSEED_SEED_Pos      0            /**< \brief (AESA_DRNGSEED) DRNG Seed */
-#define AESA_DRNGSEED_SEED_Msk      (_U(0xFFFFFFFF) << AESA_DRNGSEED_SEED_Pos)
+#define AESA_DRNGSEED_SEED_Msk      (_U_(0xFFFFFFFF) << AESA_DRNGSEED_SEED_Pos)
 #define AESA_DRNGSEED_SEED(value)   (AESA_DRNGSEED_SEED_Msk & ((value) << AESA_DRNGSEED_SEED_Pos))
-#define AESA_DRNGSEED_MASK          _U(0xFFFFFFFF) /**< \brief (AESA_DRNGSEED) MASK Register */
+#define AESA_DRNGSEED_MASK          _U_(0xFFFFFFFF) /**< \brief (AESA_DRNGSEED) MASK Register */
 
 /* -------- AESA_PARAMETER : (AESA Offset: 0xF8) (R/  32) Parameter Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -322,17 +322,17 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AESA_PARAMETER_OFFSET       0xF8         /**< \brief (AESA_PARAMETER offset) Parameter Register */
-#define AESA_PARAMETER_RESETVALUE   _U(0x00000112); /**< \brief (AESA_PARAMETER reset_value) Parameter Register */
+#define AESA_PARAMETER_RESETVALUE   _U_(0x00000112); /**< \brief (AESA_PARAMETER reset_value) Parameter Register */
 
 #define AESA_PARAMETER_KEYSIZE_Pos  0            /**< \brief (AESA_PARAMETER) Maximum Key Size */
-#define AESA_PARAMETER_KEYSIZE_Msk  (_U(0x3) << AESA_PARAMETER_KEYSIZE_Pos)
+#define AESA_PARAMETER_KEYSIZE_Msk  (_U_(0x3) << AESA_PARAMETER_KEYSIZE_Pos)
 #define AESA_PARAMETER_KEYSIZE(value) (AESA_PARAMETER_KEYSIZE_Msk & ((value) << AESA_PARAMETER_KEYSIZE_Pos))
 #define AESA_PARAMETER_OPMODE_Pos   2            /**< \brief (AESA_PARAMETER) Maximum Number of Confidentiality Modes of Operation */
-#define AESA_PARAMETER_OPMODE_Msk   (_U(0x7) << AESA_PARAMETER_OPMODE_Pos)
+#define AESA_PARAMETER_OPMODE_Msk   (_U_(0x7) << AESA_PARAMETER_OPMODE_Pos)
 #define AESA_PARAMETER_OPMODE(value) (AESA_PARAMETER_OPMODE_Msk & ((value) << AESA_PARAMETER_OPMODE_Pos))
 #define AESA_PARAMETER_CTRMEAS_Pos  8            /**< \brief (AESA_PARAMETER) Countermeasures */
-#define AESA_PARAMETER_CTRMEAS      (_U(0x1) << AESA_PARAMETER_CTRMEAS_Pos)
-#define AESA_PARAMETER_MASK         _U(0x0000011F) /**< \brief (AESA_PARAMETER) MASK Register */
+#define AESA_PARAMETER_CTRMEAS      (_U_(0x1) << AESA_PARAMETER_CTRMEAS_Pos)
+#define AESA_PARAMETER_MASK         _U_(0x0000011F) /**< \brief (AESA_PARAMETER) MASK Register */
 
 /* -------- AESA_VERSION : (AESA Offset: 0xFC) (R/  32) Version Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -348,15 +348,15 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define AESA_VERSION_OFFSET         0xFC         /**< \brief (AESA_VERSION offset) Version Register */
-#define AESA_VERSION_RESETVALUE     _U(0x00000102); /**< \brief (AESA_VERSION reset_value) Version Register */
+#define AESA_VERSION_RESETVALUE     _U_(0x00000102); /**< \brief (AESA_VERSION reset_value) Version Register */
 
 #define AESA_VERSION_VERSION_Pos    0            /**< \brief (AESA_VERSION) Version Number */
-#define AESA_VERSION_VERSION_Msk    (_U(0xFFF) << AESA_VERSION_VERSION_Pos)
+#define AESA_VERSION_VERSION_Msk    (_U_(0xFFF) << AESA_VERSION_VERSION_Pos)
 #define AESA_VERSION_VERSION(value) (AESA_VERSION_VERSION_Msk & ((value) << AESA_VERSION_VERSION_Pos))
 #define AESA_VERSION_VARIANT_Pos    16           /**< \brief (AESA_VERSION) Variant Number */
-#define AESA_VERSION_VARIANT_Msk    (_U(0xF) << AESA_VERSION_VARIANT_Pos)
+#define AESA_VERSION_VARIANT_Msk    (_U_(0xF) << AESA_VERSION_VARIANT_Pos)
 #define AESA_VERSION_VARIANT(value) (AESA_VERSION_VARIANT_Msk & ((value) << AESA_VERSION_VARIANT_Pos))
-#define AESA_VERSION_MASK           _U(0x000F0FFF) /**< \brief (AESA_VERSION) MASK Register */
+#define AESA_VERSION_MASK           _U_(0x000F0FFF) /**< \brief (AESA_VERSION) MASK Register */
 
 /** \brief AesaInitvect hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))

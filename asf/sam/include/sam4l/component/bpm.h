@@ -51,13 +51,13 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define BPM_IER_OFFSET              0x00         /**< \brief (BPM_IER offset) Interrupt Enable Register */
-#define BPM_IER_RESETVALUE          _U(0x00000000); /**< \brief (BPM_IER reset_value) Interrupt Enable Register */
+#define BPM_IER_RESETVALUE          _U_(0x00000000); /**< \brief (BPM_IER reset_value) Interrupt Enable Register */
 
 #define BPM_IER_PSOK_Pos            0            /**< \brief (BPM_IER) Power Scaling OK Interrupt Enable */
-#define BPM_IER_PSOK                (_U(0x1) << BPM_IER_PSOK_Pos)
+#define BPM_IER_PSOK                (_U_(0x1) << BPM_IER_PSOK_Pos)
 #define BPM_IER_AE_Pos              31           /**< \brief (BPM_IER) Access Error Interrupt Enable */
-#define BPM_IER_AE                  (_U(0x1) << BPM_IER_AE_Pos)
-#define BPM_IER_MASK                _U(0x80000001) /**< \brief (BPM_IER) MASK Register */
+#define BPM_IER_AE                  (_U_(0x1) << BPM_IER_AE_Pos)
+#define BPM_IER_MASK                _U_(0x80000001) /**< \brief (BPM_IER) MASK Register */
 
 /* -------- BPM_IDR : (BPM Offset: 0x04) ( /W 32) Interrupt Disable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -72,13 +72,13 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define BPM_IDR_OFFSET              0x04         /**< \brief (BPM_IDR offset) Interrupt Disable Register */
-#define BPM_IDR_RESETVALUE          _U(0x00000000); /**< \brief (BPM_IDR reset_value) Interrupt Disable Register */
+#define BPM_IDR_RESETVALUE          _U_(0x00000000); /**< \brief (BPM_IDR reset_value) Interrupt Disable Register */
 
 #define BPM_IDR_PSOK_Pos            0            /**< \brief (BPM_IDR) Power Scaling OK Interrupt Disable */
-#define BPM_IDR_PSOK                (_U(0x1) << BPM_IDR_PSOK_Pos)
+#define BPM_IDR_PSOK                (_U_(0x1) << BPM_IDR_PSOK_Pos)
 #define BPM_IDR_AE_Pos              31           /**< \brief (BPM_IDR) Access Error Interrupt Disable */
-#define BPM_IDR_AE                  (_U(0x1) << BPM_IDR_AE_Pos)
-#define BPM_IDR_MASK                _U(0x80000001) /**< \brief (BPM_IDR) MASK Register */
+#define BPM_IDR_AE                  (_U_(0x1) << BPM_IDR_AE_Pos)
+#define BPM_IDR_MASK                _U_(0x80000001) /**< \brief (BPM_IDR) MASK Register */
 
 /* -------- BPM_IMR : (BPM Offset: 0x08) (R/  32) Interrupt Mask Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -93,13 +93,13 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define BPM_IMR_OFFSET              0x08         /**< \brief (BPM_IMR offset) Interrupt Mask Register */
-#define BPM_IMR_RESETVALUE          _U(0x00000000); /**< \brief (BPM_IMR reset_value) Interrupt Mask Register */
+#define BPM_IMR_RESETVALUE          _U_(0x00000000); /**< \brief (BPM_IMR reset_value) Interrupt Mask Register */
 
 #define BPM_IMR_PSOK_Pos            0            /**< \brief (BPM_IMR) Power Scaling OK Interrupt Mask */
-#define BPM_IMR_PSOK                (_U(0x1) << BPM_IMR_PSOK_Pos)
+#define BPM_IMR_PSOK                (_U_(0x1) << BPM_IMR_PSOK_Pos)
 #define BPM_IMR_AE_Pos              31           /**< \brief (BPM_IMR) Access Error Interrupt Mask */
-#define BPM_IMR_AE                  (_U(0x1) << BPM_IMR_AE_Pos)
-#define BPM_IMR_MASK                _U(0x80000001) /**< \brief (BPM_IMR) MASK Register */
+#define BPM_IMR_AE                  (_U_(0x1) << BPM_IMR_AE_Pos)
+#define BPM_IMR_MASK                _U_(0x80000001) /**< \brief (BPM_IMR) MASK Register */
 
 /* -------- BPM_ISR : (BPM Offset: 0x0C) (R/  32) Interrupt Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -114,13 +114,13 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define BPM_ISR_OFFSET              0x0C         /**< \brief (BPM_ISR offset) Interrupt Status Register */
-#define BPM_ISR_RESETVALUE          _U(0x00000000); /**< \brief (BPM_ISR reset_value) Interrupt Status Register */
+#define BPM_ISR_RESETVALUE          _U_(0x00000000); /**< \brief (BPM_ISR reset_value) Interrupt Status Register */
 
 #define BPM_ISR_PSOK_Pos            0            /**< \brief (BPM_ISR) Power Scaling OK Interrupt Status */
-#define BPM_ISR_PSOK                (_U(0x1) << BPM_ISR_PSOK_Pos)
+#define BPM_ISR_PSOK                (_U_(0x1) << BPM_ISR_PSOK_Pos)
 #define BPM_ISR_AE_Pos              31           /**< \brief (BPM_ISR) Access Error Interrupt Status */
-#define BPM_ISR_AE                  (_U(0x1) << BPM_ISR_AE_Pos)
-#define BPM_ISR_MASK                _U(0x80000001) /**< \brief (BPM_ISR) MASK Register */
+#define BPM_ISR_AE                  (_U_(0x1) << BPM_ISR_AE_Pos)
+#define BPM_ISR_MASK                _U_(0x80000001) /**< \brief (BPM_ISR) MASK Register */
 
 /* -------- BPM_ICR : (BPM Offset: 0x10) ( /W 32) Interrupt Clear Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -135,13 +135,13 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define BPM_ICR_OFFSET              0x10         /**< \brief (BPM_ICR offset) Interrupt Clear Register */
-#define BPM_ICR_RESETVALUE          _U(0x00000000); /**< \brief (BPM_ICR reset_value) Interrupt Clear Register */
+#define BPM_ICR_RESETVALUE          _U_(0x00000000); /**< \brief (BPM_ICR reset_value) Interrupt Clear Register */
 
 #define BPM_ICR_PSOK_Pos            0            /**< \brief (BPM_ICR) Power Scaling OK Interrupt Status Clear */
-#define BPM_ICR_PSOK                (_U(0x1) << BPM_ICR_PSOK_Pos)
+#define BPM_ICR_PSOK                (_U_(0x1) << BPM_ICR_PSOK_Pos)
 #define BPM_ICR_AE_Pos              31           /**< \brief (BPM_ICR) Access Error Interrupt Status Clear */
-#define BPM_ICR_AE                  (_U(0x1) << BPM_ICR_AE_Pos)
-#define BPM_ICR_MASK                _U(0x80000001) /**< \brief (BPM_ICR) MASK Register */
+#define BPM_ICR_AE                  (_U_(0x1) << BPM_ICR_AE_Pos)
+#define BPM_ICR_MASK                _U_(0x80000001) /**< \brief (BPM_ICR) MASK Register */
 
 /* -------- BPM_SR : (BPM Offset: 0x14) (R/  32) Status Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -156,13 +156,13 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define BPM_SR_OFFSET               0x14         /**< \brief (BPM_SR offset) Status Register */
-#define BPM_SR_RESETVALUE           _U(0x00000000); /**< \brief (BPM_SR reset_value) Status Register */
+#define BPM_SR_RESETVALUE           _U_(0x00000000); /**< \brief (BPM_SR reset_value) Status Register */
 
 #define BPM_SR_PSOK_Pos             0            /**< \brief (BPM_SR) Power Scaling OK Status */
-#define BPM_SR_PSOK                 (_U(0x1) << BPM_SR_PSOK_Pos)
+#define BPM_SR_PSOK                 (_U_(0x1) << BPM_SR_PSOK_Pos)
 #define BPM_SR_AE_Pos               31           /**< \brief (BPM_SR) Access Error */
-#define BPM_SR_AE                   (_U(0x1) << BPM_SR_AE_Pos)
-#define BPM_SR_MASK                 _U(0x80000001) /**< \brief (BPM_SR) MASK Register */
+#define BPM_SR_AE                   (_U_(0x1) << BPM_SR_AE_Pos)
+#define BPM_SR_MASK                 _U_(0x80000001) /**< \brief (BPM_SR) MASK Register */
 
 /* -------- BPM_UNLOCK : (BPM Offset: 0x18) ( /W 32) Unlock Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -177,15 +177,15 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define BPM_UNLOCK_OFFSET           0x18         /**< \brief (BPM_UNLOCK offset) Unlock Register */
-#define BPM_UNLOCK_RESETVALUE       _U(0x00000000); /**< \brief (BPM_UNLOCK reset_value) Unlock Register */
+#define BPM_UNLOCK_RESETVALUE       _U_(0x00000000); /**< \brief (BPM_UNLOCK reset_value) Unlock Register */
 
 #define BPM_UNLOCK_ADDR_Pos         0            /**< \brief (BPM_UNLOCK) Unlock Address */
-#define BPM_UNLOCK_ADDR_Msk         (_U(0x3FF) << BPM_UNLOCK_ADDR_Pos)
+#define BPM_UNLOCK_ADDR_Msk         (_U_(0x3FF) << BPM_UNLOCK_ADDR_Pos)
 #define BPM_UNLOCK_ADDR(value)      (BPM_UNLOCK_ADDR_Msk & ((value) << BPM_UNLOCK_ADDR_Pos))
 #define BPM_UNLOCK_KEY_Pos          24           /**< \brief (BPM_UNLOCK) Unlock Key */
-#define BPM_UNLOCK_KEY_Msk          (_U(0xFF) << BPM_UNLOCK_KEY_Pos)
+#define BPM_UNLOCK_KEY_Msk          (_U_(0xFF) << BPM_UNLOCK_KEY_Pos)
 #define BPM_UNLOCK_KEY(value)       (BPM_UNLOCK_KEY_Msk & ((value) << BPM_UNLOCK_KEY_Pos))
-#define BPM_UNLOCK_MASK             _U(0xFF0003FF) /**< \brief (BPM_UNLOCK) MASK Register */
+#define BPM_UNLOCK_MASK             _U_(0xFF0003FF) /**< \brief (BPM_UNLOCK) MASK Register */
 
 /* -------- BPM_PMCON : (BPM Offset: 0x1C) (R/W 32) Power Mode Control Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -210,27 +210,27 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define BPM_PMCON_OFFSET            0x1C         /**< \brief (BPM_PMCON offset) Power Mode Control Register */
-#define BPM_PMCON_RESETVALUE        _U(0x00000000); /**< \brief (BPM_PMCON reset_value) Power Mode Control Register */
+#define BPM_PMCON_RESETVALUE        _U_(0x00000000); /**< \brief (BPM_PMCON reset_value) Power Mode Control Register */
 
 #define BPM_PMCON_PS_Pos            0            /**< \brief (BPM_PMCON) Power Scaling Configuration Value */
-#define BPM_PMCON_PS_Msk            (_U(0x3) << BPM_PMCON_PS_Pos)
+#define BPM_PMCON_PS_Msk            (_U_(0x3) << BPM_PMCON_PS_Pos)
 #define BPM_PMCON_PS(value)         (BPM_PMCON_PS_Msk & ((value) << BPM_PMCON_PS_Pos))
 #define BPM_PMCON_PSCREQ_Pos        2            /**< \brief (BPM_PMCON) Power Scaling Change Request */
-#define BPM_PMCON_PSCREQ            (_U(0x1) << BPM_PMCON_PSCREQ_Pos)
+#define BPM_PMCON_PSCREQ            (_U_(0x1) << BPM_PMCON_PSCREQ_Pos)
 #define BPM_PMCON_PSCM_Pos          3            /**< \brief (BPM_PMCON) Power Scaling Change Mode */
-#define BPM_PMCON_PSCM              (_U(0x1) << BPM_PMCON_PSCM_Pos)
+#define BPM_PMCON_PSCM              (_U_(0x1) << BPM_PMCON_PSCM_Pos)
 #define BPM_PMCON_BKUP_Pos          8            /**< \brief (BPM_PMCON) BACKUP Mode */
-#define BPM_PMCON_BKUP              (_U(0x1) << BPM_PMCON_BKUP_Pos)
+#define BPM_PMCON_BKUP              (_U_(0x1) << BPM_PMCON_BKUP_Pos)
 #define BPM_PMCON_RET_Pos           9            /**< \brief (BPM_PMCON) RETENTION Mode */
-#define BPM_PMCON_RET               (_U(0x1) << BPM_PMCON_RET_Pos)
+#define BPM_PMCON_RET               (_U_(0x1) << BPM_PMCON_RET_Pos)
 #define BPM_PMCON_SLEEP_Pos         12           /**< \brief (BPM_PMCON) SLEEP mode Configuration */
-#define BPM_PMCON_SLEEP_Msk         (_U(0x3) << BPM_PMCON_SLEEP_Pos)
+#define BPM_PMCON_SLEEP_Msk         (_U_(0x3) << BPM_PMCON_SLEEP_Pos)
 #define BPM_PMCON_SLEEP(value)      (BPM_PMCON_SLEEP_Msk & ((value) << BPM_PMCON_SLEEP_Pos))
 #define BPM_PMCON_CK32S_Pos         16           /**< \brief (BPM_PMCON) 32Khz-1Khz Clock Source Selection */
-#define BPM_PMCON_CK32S             (_U(0x1) << BPM_PMCON_CK32S_Pos)
+#define BPM_PMCON_CK32S             (_U_(0x1) << BPM_PMCON_CK32S_Pos)
 #define BPM_PMCON_FASTWKUP_Pos      24           /**< \brief (BPM_PMCON) Fast Wakeup */
-#define BPM_PMCON_FASTWKUP          (_U(0x1) << BPM_PMCON_FASTWKUP_Pos)
-#define BPM_PMCON_MASK              _U(0x0101330F) /**< \brief (BPM_PMCON) MASK Register */
+#define BPM_PMCON_FASTWKUP          (_U_(0x1) << BPM_PMCON_FASTWKUP_Pos)
+#define BPM_PMCON_MASK              _U_(0x0101330F) /**< \brief (BPM_PMCON) MASK Register */
 
 /* -------- BPM_BKUPWCAUSE : (BPM Offset: 0x28) (R/  32) Backup Wake up Cause Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -240,8 +240,8 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define BPM_BKUPWCAUSE_OFFSET       0x28         /**< \brief (BPM_BKUPWCAUSE offset) Backup Wake up Cause Register */
-#define BPM_BKUPWCAUSE_RESETVALUE   _U(0x00000000); /**< \brief (BPM_BKUPWCAUSE reset_value) Backup Wake up Cause Register */
-#define BPM_BKUPWCAUSE_MASK         _U(0xFFFFFFFF) /**< \brief (BPM_BKUPWCAUSE) MASK Register */
+#define BPM_BKUPWCAUSE_RESETVALUE   _U_(0x00000000); /**< \brief (BPM_BKUPWCAUSE reset_value) Backup Wake up Cause Register */
+#define BPM_BKUPWCAUSE_MASK         _U_(0xFFFFFFFF) /**< \brief (BPM_BKUPWCAUSE) MASK Register */
 
 /* -------- BPM_BKUPWEN : (BPM Offset: 0x2C) (R/W 32) Backup Wake up Enable Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -251,8 +251,8 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define BPM_BKUPWEN_OFFSET          0x2C         /**< \brief (BPM_BKUPWEN offset) Backup Wake up Enable Register */
-#define BPM_BKUPWEN_RESETVALUE      _U(0x00000000); /**< \brief (BPM_BKUPWEN reset_value) Backup Wake up Enable Register */
-#define BPM_BKUPWEN_MASK            _U(0xFFFFFFFF) /**< \brief (BPM_BKUPWEN) MASK Register */
+#define BPM_BKUPWEN_RESETVALUE      _U_(0x00000000); /**< \brief (BPM_BKUPWEN reset_value) Backup Wake up Enable Register */
+#define BPM_BKUPWEN_MASK            _U_(0xFFFFFFFF) /**< \brief (BPM_BKUPWEN) MASK Register */
 
 /* -------- BPM_BKUPPMUX : (BPM Offset: 0x30) (R/W 32) Backup Pin Muxing Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -266,12 +266,12 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define BPM_BKUPPMUX_OFFSET         0x30         /**< \brief (BPM_BKUPPMUX offset) Backup Pin Muxing Register */
-#define BPM_BKUPPMUX_RESETVALUE     _U(0x00000000); /**< \brief (BPM_BKUPPMUX reset_value) Backup Pin Muxing Register */
+#define BPM_BKUPPMUX_RESETVALUE     _U_(0x00000000); /**< \brief (BPM_BKUPPMUX reset_value) Backup Pin Muxing Register */
 
 #define BPM_BKUPPMUX_BKUPPMUX_Pos   0            /**< \brief (BPM_BKUPPMUX) Backup Pin Muxing */
-#define BPM_BKUPPMUX_BKUPPMUX_Msk   (_U(0x1FF) << BPM_BKUPPMUX_BKUPPMUX_Pos)
+#define BPM_BKUPPMUX_BKUPPMUX_Msk   (_U_(0x1FF) << BPM_BKUPPMUX_BKUPPMUX_Pos)
 #define BPM_BKUPPMUX_BKUPPMUX(value) (BPM_BKUPPMUX_BKUPPMUX_Msk & ((value) << BPM_BKUPPMUX_BKUPPMUX_Pos))
-#define BPM_BKUPPMUX_MASK           _U(0x000001FF) /**< \brief (BPM_BKUPPMUX) MASK Register */
+#define BPM_BKUPPMUX_MASK           _U_(0x000001FF) /**< \brief (BPM_BKUPPMUX) MASK Register */
 
 /* -------- BPM_IORET : (BPM Offset: 0x34) (R/W 32) Input Output Retention Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -285,11 +285,11 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define BPM_IORET_OFFSET            0x34         /**< \brief (BPM_IORET offset) Input Output Retention Register */
-#define BPM_IORET_RESETVALUE        _U(0x00000000); /**< \brief (BPM_IORET reset_value) Input Output Retention Register */
+#define BPM_IORET_RESETVALUE        _U_(0x00000000); /**< \brief (BPM_IORET reset_value) Input Output Retention Register */
 
 #define BPM_IORET_RET_Pos           0            /**< \brief (BPM_IORET) Retention on I/O lines after waking up from the BACKUP mode */
-#define BPM_IORET_RET               (_U(0x1) << BPM_IORET_RET_Pos)
-#define BPM_IORET_MASK              _U(0x00000001) /**< \brief (BPM_IORET) MASK Register */
+#define BPM_IORET_RET               (_U_(0x1) << BPM_IORET_RET_Pos)
+#define BPM_IORET_MASK              _U_(0x00000001) /**< \brief (BPM_IORET) MASK Register */
 
 /* -------- BPM_BPR : (BPM Offset: 0x40) (R/W 32) Bypass Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -315,35 +315,35 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define BPM_BPR_OFFSET              0x40         /**< \brief (BPM_BPR offset) Bypass Register */
-#define BPM_BPR_RESETVALUE          _U(0x00000000); /**< \brief (BPM_BPR reset_value) Bypass Register */
+#define BPM_BPR_RESETVALUE          _U_(0x00000000); /**< \brief (BPM_BPR reset_value) Bypass Register */
 
 #define BPM_BPR_RUNPSPB_Pos         0            /**< \brief (BPM_BPR) Run Mode Power Scaling Preset Bypass */
-#define BPM_BPR_RUNPSPB             (_U(0x1) << BPM_BPR_RUNPSPB_Pos)
+#define BPM_BPR_RUNPSPB             (_U_(0x1) << BPM_BPR_RUNPSPB_Pos)
 #define BPM_BPR_PSMPSPB_Pos         1            /**< \brief (BPM_BPR) Power Save Mode Power Scaling Preset Bypass */
-#define BPM_BPR_PSMPSPB             (_U(0x1) << BPM_BPR_PSMPSPB_Pos)
+#define BPM_BPR_PSMPSPB             (_U_(0x1) << BPM_BPR_PSMPSPB_Pos)
 #define BPM_BPR_SEQSTN_Pos          2            /**< \brief (BPM_BPR) Sequencial Startup from ULP (Active Low) */
-#define BPM_BPR_SEQSTN              (_U(0x1) << BPM_BPR_SEQSTN_Pos)
+#define BPM_BPR_SEQSTN              (_U_(0x1) << BPM_BPR_SEQSTN_Pos)
 #define BPM_BPR_PSBTD_Pos           3            /**< \brief (BPM_BPR) Power Scaling Bias Timing Disable */
-#define BPM_BPR_PSBTD               (_U(0x1) << BPM_BPR_PSBTD_Pos)
+#define BPM_BPR_PSBTD               (_U_(0x1) << BPM_BPR_PSBTD_Pos)
 #define BPM_BPR_PSHFD_Pos           4            /**< \brief (BPM_BPR) Power Scaling Halt Flash Until VREGOK Disable */
-#define BPM_BPR_PSHFD               (_U(0x1) << BPM_BPR_PSHFD_Pos)
+#define BPM_BPR_PSHFD               (_U_(0x1) << BPM_BPR_PSHFD_Pos)
 #define BPM_BPR_DLYRSTD_Pos         5            /**< \brief (BPM_BPR) Delaying Reset Disable */
-#define BPM_BPR_DLYRSTD             (_U(0x1) << BPM_BPR_DLYRSTD_Pos)
+#define BPM_BPR_DLYRSTD             (_U_(0x1) << BPM_BPR_DLYRSTD_Pos)
 #define BPM_BPR_BIASSEN_Pos         6            /**< \brief (BPM_BPR) Bias Switch Enable */
-#define BPM_BPR_BIASSEN             (_U(0x1) << BPM_BPR_BIASSEN_Pos)
+#define BPM_BPR_BIASSEN             (_U_(0x1) << BPM_BPR_BIASSEN_Pos)
 #define BPM_BPR_LATSEN_Pos          7            /**< \brief (BPM_BPR) Latdel Switch Enable */
-#define BPM_BPR_LATSEN              (_U(0x1) << BPM_BPR_LATSEN_Pos)
+#define BPM_BPR_LATSEN              (_U_(0x1) << BPM_BPR_LATSEN_Pos)
 #define BPM_BPR_BOD18CONT_Pos       8            /**< \brief (BPM_BPR) BOD18 in continuous mode not disabled in WAIT/RET/BACKUP modes */
-#define BPM_BPR_BOD18CONT           (_U(0x1) << BPM_BPR_BOD18CONT_Pos)
+#define BPM_BPR_BOD18CONT           (_U_(0x1) << BPM_BPR_BOD18CONT_Pos)
 #define BPM_BPR_POBS_Pos            9            /**< \brief (BPM_BPR) Pico Uart Observability */
-#define BPM_BPR_POBS                (_U(0x1) << BPM_BPR_POBS_Pos)
+#define BPM_BPR_POBS                (_U_(0x1) << BPM_BPR_POBS_Pos)
 #define BPM_BPR_FFFW_Pos            10           /**< \brief (BPM_BPR) Force Flash Fast Wakeup */
-#define BPM_BPR_FFFW                (_U(0x1) << BPM_BPR_FFFW_Pos)
+#define BPM_BPR_FFFW                (_U_(0x1) << BPM_BPR_FFFW_Pos)
 #define BPM_BPR_FBRDYEN_Pos         11           /**< \brief (BPM_BPR) Flash Bias Ready Enable */
-#define BPM_BPR_FBRDYEN             (_U(0x1) << BPM_BPR_FBRDYEN_Pos)
+#define BPM_BPR_FBRDYEN             (_U_(0x1) << BPM_BPR_FBRDYEN_Pos)
 #define BPM_BPR_FVREFSEN_Pos        12           /**< \brief (BPM_BPR) Flash Vref Switch Enable */
-#define BPM_BPR_FVREFSEN            (_U(0x1) << BPM_BPR_FVREFSEN_Pos)
-#define BPM_BPR_MASK                _U(0x00001FFF) /**< \brief (BPM_BPR) MASK Register */
+#define BPM_BPR_FVREFSEN            (_U_(0x1) << BPM_BPR_FVREFSEN_Pos)
+#define BPM_BPR_MASK                _U_(0x00001FFF) /**< \brief (BPM_BPR) MASK Register */
 
 /* -------- BPM_FWRUNPS : (BPM Offset: 0x44) (R/  32) Factory Word Run PS Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -365,43 +365,43 @@ typedef union {
 #define BPM_FWRUNPS_OFFSET          0x44         /**< \brief (BPM_FWRUNPS offset) Factory Word Run PS Register */
 
 #define BPM_FWRUNPS_REGLEVEL_Pos    0            /**< \brief (BPM_FWRUNPS) Regulator Voltage Level */
-#define BPM_FWRUNPS_REGLEVEL_Msk    (_U(0xF) << BPM_FWRUNPS_REGLEVEL_Pos)
+#define BPM_FWRUNPS_REGLEVEL_Msk    (_U_(0xF) << BPM_FWRUNPS_REGLEVEL_Pos)
 #define BPM_FWRUNPS_REGLEVEL(value) (BPM_FWRUNPS_REGLEVEL_Msk & ((value) << BPM_FWRUNPS_REGLEVEL_Pos))
 #define BPM_FWRUNPS_REGTYPE_Pos     4            /**< \brief (BPM_FWRUNPS) Regulator Type */
-#define BPM_FWRUNPS_REGTYPE_Msk     (_U(0x3) << BPM_FWRUNPS_REGTYPE_Pos)
+#define BPM_FWRUNPS_REGTYPE_Msk     (_U_(0x3) << BPM_FWRUNPS_REGTYPE_Pos)
 #define BPM_FWRUNPS_REGTYPE(value)  (BPM_FWRUNPS_REGTYPE_Msk & ((value) << BPM_FWRUNPS_REGTYPE_Pos))
-#define   BPM_FWRUNPS_REGTYPE_NORMAL_Val  _U(0x0)   /**< \brief (BPM_FWRUNPS)  */
-#define   BPM_FWRUNPS_REGTYPE_LP_Val      _U(0x1)   /**< \brief (BPM_FWRUNPS)  */
-#define   BPM_FWRUNPS_REGTYPE_XULP_Val    _U(0x2)   /**< \brief (BPM_FWRUNPS)  */
+#define   BPM_FWRUNPS_REGTYPE_NORMAL_Val  _U_(0x0)   /**< \brief (BPM_FWRUNPS)  */
+#define   BPM_FWRUNPS_REGTYPE_LP_Val      _U_(0x1)   /**< \brief (BPM_FWRUNPS)  */
+#define   BPM_FWRUNPS_REGTYPE_XULP_Val    _U_(0x2)   /**< \brief (BPM_FWRUNPS)  */
 #define BPM_FWRUNPS_REGTYPE_NORMAL  (BPM_FWRUNPS_REGTYPE_NORMAL_Val << BPM_FWRUNPS_REGTYPE_Pos)
 #define BPM_FWRUNPS_REGTYPE_LP      (BPM_FWRUNPS_REGTYPE_LP_Val    << BPM_FWRUNPS_REGTYPE_Pos)
 #define BPM_FWRUNPS_REGTYPE_XULP    (BPM_FWRUNPS_REGTYPE_XULP_Val  << BPM_FWRUNPS_REGTYPE_Pos)
 #define BPM_FWRUNPS_REFTYPE_Pos     6            /**< \brief (BPM_FWRUNPS) Reference Type */
-#define BPM_FWRUNPS_REFTYPE_Msk     (_U(0x3) << BPM_FWRUNPS_REFTYPE_Pos)
+#define BPM_FWRUNPS_REFTYPE_Msk     (_U_(0x3) << BPM_FWRUNPS_REFTYPE_Pos)
 #define BPM_FWRUNPS_REFTYPE(value)  (BPM_FWRUNPS_REFTYPE_Msk & ((value) << BPM_FWRUNPS_REFTYPE_Pos))
-#define   BPM_FWRUNPS_REFTYPE_BOTH_Val    _U(0x0)   /**< \brief (BPM_FWRUNPS)  */
-#define   BPM_FWRUNPS_REFTYPE_BG_Val      _U(0x1)   /**< \brief (BPM_FWRUNPS)  */
-#define   BPM_FWRUNPS_REFTYPE_LPBG_Val    _U(0x2)   /**< \brief (BPM_FWRUNPS)  */
-#define   BPM_FWRUNPS_REFTYPE_INTERNAL_Val _U(0x3)   /**< \brief (BPM_FWRUNPS)  */
+#define   BPM_FWRUNPS_REFTYPE_BOTH_Val    _U_(0x0)   /**< \brief (BPM_FWRUNPS)  */
+#define   BPM_FWRUNPS_REFTYPE_BG_Val      _U_(0x1)   /**< \brief (BPM_FWRUNPS)  */
+#define   BPM_FWRUNPS_REFTYPE_LPBG_Val    _U_(0x2)   /**< \brief (BPM_FWRUNPS)  */
+#define   BPM_FWRUNPS_REFTYPE_INTERNAL_Val _U_(0x3)   /**< \brief (BPM_FWRUNPS)  */
 #define BPM_FWRUNPS_REFTYPE_BOTH    (BPM_FWRUNPS_REFTYPE_BOTH_Val  << BPM_FWRUNPS_REFTYPE_Pos)
 #define BPM_FWRUNPS_REFTYPE_BG      (BPM_FWRUNPS_REFTYPE_BG_Val    << BPM_FWRUNPS_REFTYPE_Pos)
 #define BPM_FWRUNPS_REFTYPE_LPBG    (BPM_FWRUNPS_REFTYPE_LPBG_Val  << BPM_FWRUNPS_REFTYPE_Pos)
 #define BPM_FWRUNPS_REFTYPE_INTERNAL (BPM_FWRUNPS_REFTYPE_INTERNAL_Val << BPM_FWRUNPS_REFTYPE_Pos)
 #define BPM_FWRUNPS_FLASHLATDEL_Pos 8            /**< \brief (BPM_FWRUNPS) Flash Latch Delay Value */
-#define BPM_FWRUNPS_FLASHLATDEL_Msk (_U(0x1F) << BPM_FWRUNPS_FLASHLATDEL_Pos)
+#define BPM_FWRUNPS_FLASHLATDEL_Msk (_U_(0x1F) << BPM_FWRUNPS_FLASHLATDEL_Pos)
 #define BPM_FWRUNPS_FLASHLATDEL(value) (BPM_FWRUNPS_FLASHLATDEL_Msk & ((value) << BPM_FWRUNPS_FLASHLATDEL_Pos))
 #define BPM_FWRUNPS_FLASHBIAS_Pos   13           /**< \brief (BPM_FWRUNPS) Flash Bias Value */
-#define BPM_FWRUNPS_FLASHBIAS_Msk   (_U(0xF) << BPM_FWRUNPS_FLASHBIAS_Pos)
+#define BPM_FWRUNPS_FLASHBIAS_Msk   (_U_(0xF) << BPM_FWRUNPS_FLASHBIAS_Pos)
 #define BPM_FWRUNPS_FLASHBIAS(value) (BPM_FWRUNPS_FLASHBIAS_Msk & ((value) << BPM_FWRUNPS_FLASHBIAS_Pos))
 #define BPM_FWRUNPS_FPPW_Pos        17           /**< \brief (BPM_FWRUNPS) Flash Pico Power Mode */
-#define BPM_FWRUNPS_FPPW            (_U(0x1) << BPM_FWRUNPS_FPPW_Pos)
+#define BPM_FWRUNPS_FPPW            (_U_(0x1) << BPM_FWRUNPS_FPPW_Pos)
 #define BPM_FWRUNPS_RC115_Pos       18           /**< \brief (BPM_FWRUNPS) RC 115KHZ Calibration Value */
-#define BPM_FWRUNPS_RC115_Msk       (_U(0x7F) << BPM_FWRUNPS_RC115_Pos)
+#define BPM_FWRUNPS_RC115_Msk       (_U_(0x7F) << BPM_FWRUNPS_RC115_Pos)
 #define BPM_FWRUNPS_RC115(value)    (BPM_FWRUNPS_RC115_Msk & ((value) << BPM_FWRUNPS_RC115_Pos))
 #define BPM_FWRUNPS_RCFAST_Pos      25           /**< \brief (BPM_FWRUNPS) RCFAST Calibration Value */
-#define BPM_FWRUNPS_RCFAST_Msk      (_U(0x7F) << BPM_FWRUNPS_RCFAST_Pos)
+#define BPM_FWRUNPS_RCFAST_Msk      (_U_(0x7F) << BPM_FWRUNPS_RCFAST_Pos)
 #define BPM_FWRUNPS_RCFAST(value)   (BPM_FWRUNPS_RCFAST_Msk & ((value) << BPM_FWRUNPS_RCFAST_Pos))
-#define BPM_FWRUNPS_MASK            _U(0xFFFFFFFF) /**< \brief (BPM_FWRUNPS) MASK Register */
+#define BPM_FWRUNPS_MASK            _U_(0xFFFFFFFF) /**< \brief (BPM_FWRUNPS) MASK Register */
 
 /* -------- BPM_FWPSAVEPS : (BPM Offset: 0x48) (R/  32) Factory Word Power Save PS Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -424,31 +424,31 @@ typedef union {
 #define BPM_FWPSAVEPS_OFFSET        0x48         /**< \brief (BPM_FWPSAVEPS offset) Factory Word Power Save PS Register */
 
 #define BPM_FWPSAVEPS_WREGLEVEL_Pos 0            /**< \brief (BPM_FWPSAVEPS) Wait mode Regulator Level */
-#define BPM_FWPSAVEPS_WREGLEVEL_Msk (_U(0xF) << BPM_FWPSAVEPS_WREGLEVEL_Pos)
+#define BPM_FWPSAVEPS_WREGLEVEL_Msk (_U_(0xF) << BPM_FWPSAVEPS_WREGLEVEL_Pos)
 #define BPM_FWPSAVEPS_WREGLEVEL(value) (BPM_FWPSAVEPS_WREGLEVEL_Msk & ((value) << BPM_FWPSAVEPS_WREGLEVEL_Pos))
 #define BPM_FWPSAVEPS_WBIAS_Pos     4            /**< \brief (BPM_FWPSAVEPS) Bias in wait mode */
-#define BPM_FWPSAVEPS_WBIAS_Msk     (_U(0xF) << BPM_FWPSAVEPS_WBIAS_Pos)
+#define BPM_FWPSAVEPS_WBIAS_Msk     (_U_(0xF) << BPM_FWPSAVEPS_WBIAS_Pos)
 #define BPM_FWPSAVEPS_WBIAS(value)  (BPM_FWPSAVEPS_WBIAS_Msk & ((value) << BPM_FWPSAVEPS_WBIAS_Pos))
 #define BPM_FWPSAVEPS_WLATDEL_Pos   8            /**< \brief (BPM_FWPSAVEPS) Flash Latdel in wait mode */
-#define BPM_FWPSAVEPS_WLATDEL_Msk   (_U(0x1F) << BPM_FWPSAVEPS_WLATDEL_Pos)
+#define BPM_FWPSAVEPS_WLATDEL_Msk   (_U_(0x1F) << BPM_FWPSAVEPS_WLATDEL_Pos)
 #define BPM_FWPSAVEPS_WLATDEL(value) (BPM_FWPSAVEPS_WLATDEL_Msk & ((value) << BPM_FWPSAVEPS_WLATDEL_Pos))
 #define BPM_FWPSAVEPS_RREGLEVEL_Pos 13           /**< \brief (BPM_FWPSAVEPS) Retention mode Regulator Level */
-#define BPM_FWPSAVEPS_RREGLEVEL_Msk (_U(0xF) << BPM_FWPSAVEPS_RREGLEVEL_Pos)
+#define BPM_FWPSAVEPS_RREGLEVEL_Msk (_U_(0xF) << BPM_FWPSAVEPS_RREGLEVEL_Pos)
 #define BPM_FWPSAVEPS_RREGLEVEL(value) (BPM_FWPSAVEPS_RREGLEVEL_Msk & ((value) << BPM_FWPSAVEPS_RREGLEVEL_Pos))
 #define BPM_FWPSAVEPS_RBIAS_Pos     17           /**< \brief (BPM_FWPSAVEPS) Bias in Retention mode */
-#define BPM_FWPSAVEPS_RBIAS_Msk     (_U(0xF) << BPM_FWPSAVEPS_RBIAS_Pos)
+#define BPM_FWPSAVEPS_RBIAS_Msk     (_U_(0xF) << BPM_FWPSAVEPS_RBIAS_Pos)
 #define BPM_FWPSAVEPS_RBIAS(value)  (BPM_FWPSAVEPS_RBIAS_Msk & ((value) << BPM_FWPSAVEPS_RBIAS_Pos))
 #define BPM_FWPSAVEPS_RLATDEL_Pos   21           /**< \brief (BPM_FWPSAVEPS) Flash Latdel in Retention mode */
-#define BPM_FWPSAVEPS_RLATDEL_Msk   (_U(0x1F) << BPM_FWPSAVEPS_RLATDEL_Pos)
+#define BPM_FWPSAVEPS_RLATDEL_Msk   (_U_(0x1F) << BPM_FWPSAVEPS_RLATDEL_Pos)
 #define BPM_FWPSAVEPS_RLATDEL(value) (BPM_FWPSAVEPS_RLATDEL_Msk & ((value) << BPM_FWPSAVEPS_RLATDEL_Pos))
 #define BPM_FWPSAVEPS_BREGLEVEL_Pos 26           /**< \brief (BPM_FWPSAVEPS) Backup mode Regulator Level */
-#define BPM_FWPSAVEPS_BREGLEVEL_Msk (_U(0xF) << BPM_FWPSAVEPS_BREGLEVEL_Pos)
+#define BPM_FWPSAVEPS_BREGLEVEL_Msk (_U_(0xF) << BPM_FWPSAVEPS_BREGLEVEL_Pos)
 #define BPM_FWPSAVEPS_BREGLEVEL(value) (BPM_FWPSAVEPS_BREGLEVEL_Msk & ((value) << BPM_FWPSAVEPS_BREGLEVEL_Pos))
 #define BPM_FWPSAVEPS_POR18DIS_Pos  30           /**< \brief (BPM_FWPSAVEPS) POR 18 Disable */
-#define BPM_FWPSAVEPS_POR18DIS      (_U(0x1) << BPM_FWPSAVEPS_POR18DIS_Pos)
+#define BPM_FWPSAVEPS_POR18DIS      (_U_(0x1) << BPM_FWPSAVEPS_POR18DIS_Pos)
 #define BPM_FWPSAVEPS_FWSAS_Pos     31           /**< \brief (BPM_FWPSAVEPS) Flash Wait State Automatic Switching */
-#define BPM_FWPSAVEPS_FWSAS         (_U(0x1) << BPM_FWPSAVEPS_FWSAS_Pos)
-#define BPM_FWPSAVEPS_MASK          _U(0xFFFFFFFF) /**< \brief (BPM_FWPSAVEPS) MASK Register */
+#define BPM_FWPSAVEPS_FWSAS         (_U_(0x1) << BPM_FWPSAVEPS_FWSAS_Pos)
+#define BPM_FWPSAVEPS_MASK          _U_(0xFFFFFFFF) /**< \brief (BPM_FWPSAVEPS) MASK Register */
 
 /* -------- BPM_VERSION : (BPM Offset: 0xFC) (R/  32) Version Register -------- */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
@@ -464,15 +464,15 @@ typedef union {
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #define BPM_VERSION_OFFSET          0xFC         /**< \brief (BPM_VERSION offset) Version Register */
-#define BPM_VERSION_RESETVALUE      _U(0x00000120); /**< \brief (BPM_VERSION reset_value) Version Register */
+#define BPM_VERSION_RESETVALUE      _U_(0x00000120); /**< \brief (BPM_VERSION reset_value) Version Register */
 
 #define BPM_VERSION_VERSION_Pos     0            /**< \brief (BPM_VERSION) Version Number */
-#define BPM_VERSION_VERSION_Msk     (_U(0xFFF) << BPM_VERSION_VERSION_Pos)
+#define BPM_VERSION_VERSION_Msk     (_U_(0xFFF) << BPM_VERSION_VERSION_Pos)
 #define BPM_VERSION_VERSION(value)  (BPM_VERSION_VERSION_Msk & ((value) << BPM_VERSION_VERSION_Pos))
 #define BPM_VERSION_VARIANT_Pos     16           /**< \brief (BPM_VERSION) Variant Number */
-#define BPM_VERSION_VARIANT_Msk     (_U(0xF) << BPM_VERSION_VARIANT_Pos)
+#define BPM_VERSION_VARIANT_Msk     (_U_(0xF) << BPM_VERSION_VARIANT_Pos)
 #define BPM_VERSION_VARIANT(value)  (BPM_VERSION_VARIANT_Msk & ((value) << BPM_VERSION_VARIANT_Pos))
-#define BPM_VERSION_MASK            _U(0x000F0FFF) /**< \brief (BPM_VERSION) MASK Register */
+#define BPM_VERSION_MASK            _U_(0x000F0FFF) /**< \brief (BPM_VERSION) MASK Register */
 
 /** \brief BPM hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))

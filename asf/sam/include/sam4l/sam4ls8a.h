@@ -62,15 +62,15 @@ typedef volatile       uint32_t RwReg;   /**< Read-Write 32-bit register (volati
 typedef volatile       uint16_t RwReg16; /**< Read-Write 16-bit register (volatile unsigned int) */
 typedef volatile       uint8_t  RwReg8;  /**< Read-Write  8-bit register (volatile unsigned int) */
 #if !defined(_UL)
-#define _U(x)          x ## U            /**< C code: Unsigned integer literal constant value */
-#define _L(x)          x ## L            /**< C code: Long integer literal constant value */
-#define _UL(x)         x ## UL           /**< C code: Unsigned Long integer literal constant value */
+#define _U_(x)          x ## U            /**< C code: Unsigned integer literal constant value */
+#define _L_(x)          x ## L            /**< C code: Long integer literal constant value */
+#define _UL_(x)         x ## UL           /**< C code: Unsigned Long integer literal constant value */
 #endif
 #else
 #if !defined(_UL)
-#define _U(x)          x                 /**< Assembler: Unsigned integer literal constant value */
-#define _L(x)          x                 /**< Assembler: Long integer literal constant value */
-#define _UL(x)         x                 /**< Assembler: Unsigned Long integer literal constant value */
+#define _U_(x)          x                 /**< Assembler: Unsigned integer literal constant value */
+#define _L_(x)          x                 /**< Assembler: Long integer literal constant value */
+#define _UL_(x)         x                 /**< Assembler: Unsigned Long integer literal constant value */
 #endif
 #endif
 
@@ -857,23 +857,23 @@ void TWIM3_Handler               ( void );
 /**  MEMORY MAPPING DEFINITIONS FOR SAM4LS8A */
 /* ************************************************************************** */
 
-#define FLASH_SIZE            _UL(0x00080000) /* 512 kB */
+#define FLASH_SIZE            _UL_(0x00080000) /* 512 kB */
 #define FLASH_PAGE_SIZE       512
 #define FLASH_NB_OF_PAGES     1024
 #define FLASH_USER_PAGE_SIZE  512
-#define HRAMC0_SIZE           _UL(0x00010000) /* 64 kB */
-#define HRAMC1_SIZE           _UL(0x00000800) /* 2 kB */
+#define HRAMC0_SIZE           _UL_(0x00010000) /* 64 kB */
+#define HRAMC1_SIZE           _UL_(0x00000800) /* 2 kB */
 
-#define FLASH_ADDR            _UL(0x00000000) /**< FLASH base address */
-#define FLASH_USER_PAGE_ADDR  _UL(0x00800000) /**< FLASH_USER_PAGE base address */
-#define HRAMC0_ADDR           _UL(0x20000000) /**< HRAMC0 base address */
-#define HRAMC1_ADDR           _UL(0x21000000) /**< HRAMC1 base address */
-#define HTOP0_ADDR            _UL(0x40000000) /**< HTOP0 base address */
-#define HTOP1_ADDR            _UL(0x400A0000) /**< HTOP1 base address */
-#define HTOP2_ADDR            _UL(0x400E0000) /**< HTOP2 base address */
-#define HTOP3_ADDR            _UL(0x400F0000) /**< HTOP3 base address */
+#define FLASH_ADDR            _UL_(0x00000000) /**< FLASH base address */
+#define FLASH_USER_PAGE_ADDR  _UL_(0x00800000) /**< FLASH_USER_PAGE base address */
+#define HRAMC0_ADDR           _UL_(0x20000000) /**< HRAMC0 base address */
+#define HRAMC1_ADDR           _UL_(0x21000000) /**< HRAMC1 base address */
+#define HTOP0_ADDR            _UL_(0x40000000) /**< HTOP0 base address */
+#define HTOP1_ADDR            _UL_(0x400A0000) /**< HTOP1 base address */
+#define HTOP2_ADDR            _UL_(0x400E0000) /**< HTOP2 base address */
+#define HTOP3_ADDR            _UL_(0x400F0000) /**< HTOP3 base address */
 
-#define DSU_DID_RESETVALUE    _UL(0xAB0B0AE0)
+#define DSU_DID_RESETVALUE    _UL_(0xAB0B0AE0)
 
 /* ************************************************************************** */
 /**  ELECTRICAL DEFINITIONS FOR SAM4LS8A */
