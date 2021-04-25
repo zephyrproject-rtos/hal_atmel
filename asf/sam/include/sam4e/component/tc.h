@@ -70,7 +70,7 @@ typedef struct {
 #define TCCHANNEL_NUMBER 3
 #define TCPDC_NUMBER 3
 typedef struct {
-  TcChannel  TC_CHANNEL[TCCHANNEL_NUMBER]; /**< \brief (Tc Offset: 0x0) channel = 0 .. 2 */
+  TcChannel  TcChannel[TCCHANNEL_NUMBER]; /**< \brief (Tc Offset: 0x0) channel = 0 .. 2 */
   WoReg      TC_BCR;        /**< \brief (Tc Offset: 0xC0) Block Control Register */
   RwReg      TC_BMR;        /**< \brief (Tc Offset: 0xC4) Block Mode Register */
   WoReg      TC_QIER;       /**< \brief (Tc Offset: 0xC8) QDEC Interrupt Enable Register */
