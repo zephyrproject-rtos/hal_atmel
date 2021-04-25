@@ -309,6 +309,14 @@ typedef union {
 #define TC_CMR_WAVEFORM_WAVSEL_UPDOWN_NO_AUTO (TC_CMR_WAVEFORM_WAVSEL_UPDOWN_NO_AUTO_Val << TC_CMR_WAVEFORM_WAVSEL_Pos)
 #define TC_CMR_WAVEFORM_WAVSEL_UP_AUTO (TC_CMR_WAVEFORM_WAVSEL_UP_AUTO_Val << TC_CMR_WAVEFORM_WAVSEL_Pos)
 #define TC_CMR_WAVEFORM_WAVSEL_UPDOWN_AUTO (TC_CMR_WAVEFORM_WAVSEL_UPDOWN_AUTO_Val << TC_CMR_WAVEFORM_WAVSEL_Pos)
+#define   TC_CMR_WAVEFORM_WAVSEL_UP_Val     _U_(0x0)                                       /**< (TC_CMR) WAVEFORM UP mode without automatic trigger on RC Compare  */
+#define   TC_CMR_WAVEFORM_WAVSEL_UPDOWN_Val _U_(0x1)                                       /**< (TC_CMR) WAVEFORM UPDOWN mode without automatic trigger on RC Compare  */
+#define   TC_CMR_WAVEFORM_WAVSEL_UP_RC_Val  _U_(0x2)                                       /**< (TC_CMR) WAVEFORM UP mode with automatic trigger on RC Compare  */
+#define   TC_CMR_WAVEFORM_WAVSEL_UPDOWN_RC_Val _U_(0x3)                                       /**< (TC_CMR) WAVEFORM UPDOWN mode with automatic trigger on RC Compare  */
+#define TC_CMR_WAVEFORM_WAVSEL_UP           (TC_CMR_WAVEFORM_WAVSEL_UP_Val << TC_CMR_WAVEFORM_WAVSEL_Pos)  /**< (TC_CMR) UP mode without automatic trigger on RC Compare Position  */
+#define TC_CMR_WAVEFORM_WAVSEL_UPDOWN       (TC_CMR_WAVEFORM_WAVSEL_UPDOWN_Val << TC_CMR_WAVEFORM_WAVSEL_Pos)  /**< (TC_CMR) UPDOWN mode without automatic trigger on RC Compare Position  */
+#define TC_CMR_WAVEFORM_WAVSEL_UP_RC        (TC_CMR_WAVEFORM_WAVSEL_UP_RC_Val << TC_CMR_WAVEFORM_WAVSEL_Pos)  /**< (TC_CMR) UP mode with automatic trigger on RC Compare Position  */
+#define TC_CMR_WAVEFORM_WAVSEL_UPDOWN_RC    (TC_CMR_WAVEFORM_WAVSEL_UPDOWN_RC_Val << TC_CMR_WAVEFORM_WAVSEL_Pos)  /**< (TC_CMR) UPDOWN mode with automatic trigger on RC Compare Position  */
 #define TC_CMR_WAVEFORM_WAVE_Pos    15           /**< \brief (TC_CMR_WAVEFORM) WAVE */
 #define TC_CMR_WAVEFORM_WAVE        (_U_(0x1) << TC_CMR_WAVEFORM_WAVE_Pos)
 #define   TC_CMR_WAVEFORM_WAVE_0_Val      _U_(0x0)   /**< \brief (TC_CMR_WAVEFORM) Waveform Mode is disabled (Capture Mode is enabled). */

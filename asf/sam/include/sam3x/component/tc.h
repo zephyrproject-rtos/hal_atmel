@@ -182,6 +182,190 @@ typedef struct {
 #define   TC_CMR_BSWTRG_SET (0x1u << 30) /**< \brief (TC_CMR) Set */
 #define   TC_CMR_BSWTRG_CLEAR (0x2u << 30) /**< \brief (TC_CMR) Clear */
 #define   TC_CMR_BSWTRG_TOGGLE (0x3u << 30) /**< \brief (TC_CMR) Toggle */
+
+/* CAPTURE mode */
+#define TC_CMR_CAPTURE_LDBSTOP_Pos          6                                              /**< (TC_CMR) Counter Clock Stopped with RB Loading Position */
+#define TC_CMR_CAPTURE_LDBSTOP_Msk          (0x1u << TC_CMR_CAPTURE_LDBSTOP_Pos)       /**< (TC_CMR) Counter Clock Stopped with RB Loading Mask */
+#define TC_CMR_CAPTURE_LDBSTOP              TC_CMR_CAPTURE_LDBSTOP_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use TC_CMR_CAPTURE_LDBSTOP_Msk instead */
+#define TC_CMR_CAPTURE_LDBDIS_Pos           7                                              /**< (TC_CMR) Counter Clock Disable with RB Loading Position */
+#define TC_CMR_CAPTURE_LDBDIS_Msk           (0x1u << TC_CMR_CAPTURE_LDBDIS_Pos)        /**< (TC_CMR) Counter Clock Disable with RB Loading Mask */
+#define TC_CMR_CAPTURE_LDBDIS               TC_CMR_CAPTURE_LDBDIS_Msk                      /**< \deprecated Old style mask definition for 1 bit bitfield. Use TC_CMR_CAPTURE_LDBDIS_Msk instead */
+#define TC_CMR_CAPTURE_ETRGEDG_Pos          8                                              /**< (TC_CMR) External Trigger Edge Selection Position */
+#define TC_CMR_CAPTURE_ETRGEDG_Msk          (0x3u << TC_CMR_CAPTURE_ETRGEDG_Pos)       /**< (TC_CMR) External Trigger Edge Selection Mask */
+#define TC_CMR_CAPTURE_ETRGEDG(value)       (TC_CMR_CAPTURE_ETRGEDG_Msk & ((value) << TC_CMR_CAPTURE_ETRGEDG_Pos))
+#define   TC_CMR_CAPTURE_ETRGEDG_NONE_Val   0x0u                                       /**< (TC_CMR) CAPTURE The clock is not gated by an external signal.  */
+#define   TC_CMR_CAPTURE_ETRGEDG_RISING_Val 0x1u                                       /**< (TC_CMR) CAPTURE Rising edge  */
+#define   TC_CMR_CAPTURE_ETRGEDG_FALLING_Val 0x2u                                       /**< (TC_CMR) CAPTURE Falling edge  */
+#define   TC_CMR_CAPTURE_ETRGEDG_EDGE_Val   0x3u                                       /**< (TC_CMR) CAPTURE Each edge  */
+#define TC_CMR_CAPTURE_ETRGEDG_NONE         (TC_CMR_CAPTURE_ETRGEDG_NONE_Val << TC_CMR_CAPTURE_ETRGEDG_Pos)  /**< (TC_CMR) The clock is not gated by an external signal. Position  */
+#define TC_CMR_CAPTURE_ETRGEDG_RISING       (TC_CMR_CAPTURE_ETRGEDG_RISING_Val << TC_CMR_CAPTURE_ETRGEDG_Pos)  /**< (TC_CMR) Rising edge Position  */
+#define TC_CMR_CAPTURE_ETRGEDG_FALLING      (TC_CMR_CAPTURE_ETRGEDG_FALLING_Val << TC_CMR_CAPTURE_ETRGEDG_Pos)  /**< (TC_CMR) Falling edge Position  */
+#define TC_CMR_CAPTURE_ETRGEDG_EDGE         (TC_CMR_CAPTURE_ETRGEDG_EDGE_Val << TC_CMR_CAPTURE_ETRGEDG_Pos)  /**< (TC_CMR) Each edge Position  */
+#define TC_CMR_CAPTURE_ABETRG_Pos           10                                             /**< (TC_CMR) TIOAx or TIOBx External Trigger Selection Position */
+#define TC_CMR_CAPTURE_ABETRG_Msk           (0x1u << TC_CMR_CAPTURE_ABETRG_Pos)        /**< (TC_CMR) TIOAx or TIOBx External Trigger Selection Mask */
+#define TC_CMR_CAPTURE_ABETRG               TC_CMR_CAPTURE_ABETRG_Msk                      /**< \deprecated Old style mask definition for 1 bit bitfield. Use TC_CMR_CAPTURE_ABETRG_Msk instead */
+#define TC_CMR_CAPTURE_CPCTRG_Pos           14                                             /**< (TC_CMR) RC Compare Trigger Enable Position */
+#define TC_CMR_CAPTURE_CPCTRG_Msk           (0x1u << TC_CMR_CAPTURE_CPCTRG_Pos)        /**< (TC_CMR) RC Compare Trigger Enable Mask */
+#define TC_CMR_CAPTURE_CPCTRG               TC_CMR_CAPTURE_CPCTRG_Msk                      /**< \deprecated Old style mask definition for 1 bit bitfield. Use TC_CMR_CAPTURE_CPCTRG_Msk instead */
+#define TC_CMR_CAPTURE_LDRA_Pos             16                                             /**< (TC_CMR) RA Loading Edge Selection Position */
+#define TC_CMR_CAPTURE_LDRA_Msk             (0x3u << TC_CMR_CAPTURE_LDRA_Pos)          /**< (TC_CMR) RA Loading Edge Selection Mask */
+#define TC_CMR_CAPTURE_LDRA(value)          (TC_CMR_CAPTURE_LDRA_Msk & ((value) << TC_CMR_CAPTURE_LDRA_Pos))
+#define   TC_CMR_CAPTURE_LDRA_NONE_Val      0x0u                                       /**< (TC_CMR) CAPTURE None  */
+#define   TC_CMR_CAPTURE_LDRA_RISING_Val    0x1u                                       /**< (TC_CMR) CAPTURE Rising edge of TIOAx  */
+#define   TC_CMR_CAPTURE_LDRA_FALLING_Val   0x2u                                       /**< (TC_CMR) CAPTURE Falling edge of TIOAx  */
+#define   TC_CMR_CAPTURE_LDRA_EDGE_Val      0x3u                                       /**< (TC_CMR) CAPTURE Each edge of TIOAx  */
+#define TC_CMR_CAPTURE_LDRA_NONE            (TC_CMR_CAPTURE_LDRA_NONE_Val << TC_CMR_CAPTURE_LDRA_Pos)  /**< (TC_CMR) None Position  */
+#define TC_CMR_CAPTURE_LDRA_RISING          (TC_CMR_CAPTURE_LDRA_RISING_Val << TC_CMR_CAPTURE_LDRA_Pos)  /**< (TC_CMR) Rising edge of TIOAx Position  */
+#define TC_CMR_CAPTURE_LDRA_FALLING         (TC_CMR_CAPTURE_LDRA_FALLING_Val << TC_CMR_CAPTURE_LDRA_Pos)  /**< (TC_CMR) Falling edge of TIOAx Position  */
+#define TC_CMR_CAPTURE_LDRA_EDGE            (TC_CMR_CAPTURE_LDRA_EDGE_Val << TC_CMR_CAPTURE_LDRA_Pos)  /**< (TC_CMR) Each edge of TIOAx Position  */
+#define TC_CMR_CAPTURE_LDRB_Pos             18                                             /**< (TC_CMR) RB Loading Edge Selection Position */
+#define TC_CMR_CAPTURE_LDRB_Msk             (0x3u << TC_CMR_CAPTURE_LDRB_Pos)          /**< (TC_CMR) RB Loading Edge Selection Mask */
+#define TC_CMR_CAPTURE_LDRB(value)          (TC_CMR_CAPTURE_LDRB_Msk & ((value) << TC_CMR_CAPTURE_LDRB_Pos))
+#define   TC_CMR_CAPTURE_LDRB_NONE_Val      0x0u                                       /**< (TC_CMR) CAPTURE None  */
+#define   TC_CMR_CAPTURE_LDRB_RISING_Val    0x1u                                       /**< (TC_CMR) CAPTURE Rising edge of TIOAx  */
+#define   TC_CMR_CAPTURE_LDRB_FALLING_Val   0x2u                                       /**< (TC_CMR) CAPTURE Falling edge of TIOAx  */
+#define   TC_CMR_CAPTURE_LDRB_EDGE_Val      0x3u                                       /**< (TC_CMR) CAPTURE Each edge of TIOAx  */
+#define TC_CMR_CAPTURE_LDRB_NONE            (TC_CMR_CAPTURE_LDRB_NONE_Val << TC_CMR_CAPTURE_LDRB_Pos)  /**< (TC_CMR) None Position  */
+#define TC_CMR_CAPTURE_LDRB_RISING          (TC_CMR_CAPTURE_LDRB_RISING_Val << TC_CMR_CAPTURE_LDRB_Pos)  /**< (TC_CMR) Rising edge of TIOAx Position  */
+#define TC_CMR_CAPTURE_LDRB_FALLING         (TC_CMR_CAPTURE_LDRB_FALLING_Val << TC_CMR_CAPTURE_LDRB_Pos)  /**< (TC_CMR) Falling edge of TIOAx Position  */
+#define TC_CMR_CAPTURE_LDRB_EDGE            (TC_CMR_CAPTURE_LDRB_EDGE_Val << TC_CMR_CAPTURE_LDRB_Pos)  /**< (TC_CMR) Each edge of TIOAx Position  */
+#define TC_CMR_CAPTURE_MASK                 0x7F47C0u                                  /**< \deprecated (TC_CMR_CAPTURE) Register MASK  (Use TC_CMR_CAPTURE_Msk instead)  */
+#define TC_CMR_CAPTURE_Msk                  0x7F47C0u                                  /**< (TC_CMR_CAPTURE) Register Mask  */
+
+/* WAVEFORM mode */
+#define TC_CMR_WAVEFORM_CPCSTOP_Pos         6                                              /**< (TC_CMR) Counter Clock Stopped with RC Compare Position */
+#define TC_CMR_WAVEFORM_CPCSTOP_Msk         (0x1u << TC_CMR_WAVEFORM_CPCSTOP_Pos)      /**< (TC_CMR) Counter Clock Stopped with RC Compare Mask */
+#define TC_CMR_WAVEFORM_CPCSTOP             TC_CMR_WAVEFORM_CPCSTOP_Msk                    /**< \deprecated Old style mask definition for 1 bit bitfield. Use TC_CMR_WAVEFORM_CPCSTOP_Msk instead */
+#define TC_CMR_WAVEFORM_CPCDIS_Pos          7                                              /**< (TC_CMR) Counter Clock Disable with RC Loading Position */
+#define TC_CMR_WAVEFORM_CPCDIS_Msk          (0x1u << TC_CMR_WAVEFORM_CPCDIS_Pos)       /**< (TC_CMR) Counter Clock Disable with RC Loading Mask */
+#define TC_CMR_WAVEFORM_CPCDIS              TC_CMR_WAVEFORM_CPCDIS_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use TC_CMR_WAVEFORM_CPCDIS_Msk instead */
+#define TC_CMR_WAVEFORM_EEVTEDG_Pos         8                                              /**< (TC_CMR) External Event Edge Selection Position */
+#define TC_CMR_WAVEFORM_EEVTEDG_Msk         (0x3u << TC_CMR_WAVEFORM_EEVTEDG_Pos)      /**< (TC_CMR) External Event Edge Selection Mask */
+#define TC_CMR_WAVEFORM_EEVTEDG(value)      (TC_CMR_WAVEFORM_EEVTEDG_Msk & ((value) << TC_CMR_WAVEFORM_EEVTEDG_Pos))
+#define   TC_CMR_WAVEFORM_EEVTEDG_NONE_Val  0x0u                                       /**< (TC_CMR) WAVEFORM None  */
+#define   TC_CMR_WAVEFORM_EEVTEDG_RISING_Val 0x1u                                       /**< (TC_CMR) WAVEFORM Rising edge  */
+#define   TC_CMR_WAVEFORM_EEVTEDG_FALLING_Val 0x2u                                       /**< (TC_CMR) WAVEFORM Falling edge  */
+#define   TC_CMR_WAVEFORM_EEVTEDG_EDGE_Val  0x3u                                       /**< (TC_CMR) WAVEFORM Each edges  */
+#define TC_CMR_WAVEFORM_EEVTEDG_NONE        (TC_CMR_WAVEFORM_EEVTEDG_NONE_Val << TC_CMR_WAVEFORM_EEVTEDG_Pos)  /**< (TC_CMR) None Position  */
+#define TC_CMR_WAVEFORM_EEVTEDG_RISING      (TC_CMR_WAVEFORM_EEVTEDG_RISING_Val << TC_CMR_WAVEFORM_EEVTEDG_Pos)  /**< (TC_CMR) Rising edge Position  */
+#define TC_CMR_WAVEFORM_EEVTEDG_FALLING     (TC_CMR_WAVEFORM_EEVTEDG_FALLING_Val << TC_CMR_WAVEFORM_EEVTEDG_Pos)  /**< (TC_CMR) Falling edge Position  */
+#define TC_CMR_WAVEFORM_EEVTEDG_EDGE        (TC_CMR_WAVEFORM_EEVTEDG_EDGE_Val << TC_CMR_WAVEFORM_EEVTEDG_Pos)  /**< (TC_CMR) Each edges Position  */
+#define TC_CMR_WAVEFORM_EEVT_Pos            10                                             /**< (TC_CMR) External Event Selection Position */
+#define TC_CMR_WAVEFORM_EEVT_Msk            (0x3u << TC_CMR_WAVEFORM_EEVT_Pos)         /**< (TC_CMR) External Event Selection Mask */
+#define TC_CMR_WAVEFORM_EEVT(value)         (TC_CMR_WAVEFORM_EEVT_Msk & ((value) << TC_CMR_WAVEFORM_EEVT_Pos))
+#define   TC_CMR_WAVEFORM_EEVT_TIOB_Val     0x0u                                       /**< (TC_CMR) WAVEFORM TIOB  */
+#define   TC_CMR_WAVEFORM_EEVT_XC0_Val      0x1u                                       /**< (TC_CMR) WAVEFORM XC0  */
+#define   TC_CMR_WAVEFORM_EEVT_XC1_Val      0x2u                                       /**< (TC_CMR) WAVEFORM XC1  */
+#define   TC_CMR_WAVEFORM_EEVT_XC2_Val      0x3u                                       /**< (TC_CMR) WAVEFORM XC2  */
+#define TC_CMR_WAVEFORM_EEVT_TIOB           (TC_CMR_WAVEFORM_EEVT_TIOB_Val << TC_CMR_WAVEFORM_EEVT_Pos)  /**< (TC_CMR) TIOB Position  */
+#define TC_CMR_WAVEFORM_EEVT_XC0            (TC_CMR_WAVEFORM_EEVT_XC0_Val << TC_CMR_WAVEFORM_EEVT_Pos)  /**< (TC_CMR) XC0 Position  */
+#define TC_CMR_WAVEFORM_EEVT_XC1            (TC_CMR_WAVEFORM_EEVT_XC1_Val << TC_CMR_WAVEFORM_EEVT_Pos)  /**< (TC_CMR) XC1 Position  */
+#define TC_CMR_WAVEFORM_EEVT_XC2            (TC_CMR_WAVEFORM_EEVT_XC2_Val << TC_CMR_WAVEFORM_EEVT_Pos)  /**< (TC_CMR) XC2 Position  */
+#define TC_CMR_WAVEFORM_ENETRG_Pos          12                                             /**< (TC_CMR) External Event Trigger Enable Position */
+#define TC_CMR_WAVEFORM_ENETRG_Msk          (0x1u << TC_CMR_WAVEFORM_ENETRG_Pos)       /**< (TC_CMR) External Event Trigger Enable Mask */
+#define TC_CMR_WAVEFORM_ENETRG              TC_CMR_WAVEFORM_ENETRG_Msk                     /**< \deprecated Old style mask definition for 1 bit bitfield. Use TC_CMR_WAVEFORM_ENETRG_Msk instead */
+#define TC_CMR_WAVEFORM_WAVSEL_Pos          13                                             /**< (TC_CMR) Waveform Selection Position */
+#define TC_CMR_WAVEFORM_WAVSEL_Msk          (0x3u << TC_CMR_WAVEFORM_WAVSEL_Pos)       /**< (TC_CMR) Waveform Selection Mask */
+#define TC_CMR_WAVEFORM_WAVSEL(value)       (TC_CMR_WAVEFORM_WAVSEL_Msk & ((value) << TC_CMR_WAVEFORM_WAVSEL_Pos))
+#define   TC_CMR_WAVEFORM_WAVSEL_UP_Val     0x0u                                       /**< (TC_CMR) WAVEFORM UP mode without automatic trigger on RC Compare  */
+#define   TC_CMR_WAVEFORM_WAVSEL_UPDOWN_Val 0x1u                                       /**< (TC_CMR) WAVEFORM UPDOWN mode without automatic trigger on RC Compare  */
+#define   TC_CMR_WAVEFORM_WAVSEL_UP_RC_Val  0x2u                                       /**< (TC_CMR) WAVEFORM UP mode with automatic trigger on RC Compare  */
+#define   TC_CMR_WAVEFORM_WAVSEL_UPDOWN_RC_Val 0x3u                                       /**< (TC_CMR) WAVEFORM UPDOWN mode with automatic trigger on RC Compare  */
+#define TC_CMR_WAVEFORM_WAVSEL_UP           (TC_CMR_WAVEFORM_WAVSEL_UP_Val << TC_CMR_WAVEFORM_WAVSEL_Pos)  /**< (TC_CMR) UP mode without automatic trigger on RC Compare Position  */
+#define TC_CMR_WAVEFORM_WAVSEL_UPDOWN       (TC_CMR_WAVEFORM_WAVSEL_UPDOWN_Val << TC_CMR_WAVEFORM_WAVSEL_Pos)  /**< (TC_CMR) UPDOWN mode without automatic trigger on RC Compare Position  */
+#define TC_CMR_WAVEFORM_WAVSEL_UP_RC        (TC_CMR_WAVEFORM_WAVSEL_UP_RC_Val << TC_CMR_WAVEFORM_WAVSEL_Pos)  /**< (TC_CMR) UP mode with automatic trigger on RC Compare Position  */
+#define TC_CMR_WAVEFORM_WAVSEL_UPDOWN_RC    (TC_CMR_WAVEFORM_WAVSEL_UPDOWN_RC_Val << TC_CMR_WAVEFORM_WAVSEL_Pos)  /**< (TC_CMR) UPDOWN mode with automatic trigger on RC Compare Position  */
+#define TC_CMR_WAVEFORM_ACPA_Pos            16                                             /**< (TC_CMR) RA Compare Effect on TIOAx Position */
+#define TC_CMR_WAVEFORM_ACPA_Msk            (0x3u << TC_CMR_WAVEFORM_ACPA_Pos)         /**< (TC_CMR) RA Compare Effect on TIOAx Mask */
+#define TC_CMR_WAVEFORM_ACPA(value)         (TC_CMR_WAVEFORM_ACPA_Msk & ((value) << TC_CMR_WAVEFORM_ACPA_Pos))
+#define   TC_CMR_WAVEFORM_ACPA_NONE_Val     0x0u                                       /**< (TC_CMR) WAVEFORM NONE  */
+#define   TC_CMR_WAVEFORM_ACPA_SET_Val      0x1u                                       /**< (TC_CMR) WAVEFORM SET  */
+#define   TC_CMR_WAVEFORM_ACPA_CLEAR_Val    0x2u                                       /**< (TC_CMR) WAVEFORM CLEAR  */
+#define   TC_CMR_WAVEFORM_ACPA_TOGGLE_Val   0x3u                                       /**< (TC_CMR) WAVEFORM TOGGLE  */
+#define TC_CMR_WAVEFORM_ACPA_NONE           (TC_CMR_WAVEFORM_ACPA_NONE_Val << TC_CMR_WAVEFORM_ACPA_Pos)  /**< (TC_CMR) NONE Position  */
+#define TC_CMR_WAVEFORM_ACPA_SET            (TC_CMR_WAVEFORM_ACPA_SET_Val << TC_CMR_WAVEFORM_ACPA_Pos)  /**< (TC_CMR) SET Position  */
+#define TC_CMR_WAVEFORM_ACPA_CLEAR          (TC_CMR_WAVEFORM_ACPA_CLEAR_Val << TC_CMR_WAVEFORM_ACPA_Pos)  /**< (TC_CMR) CLEAR Position  */
+#define TC_CMR_WAVEFORM_ACPA_TOGGLE         (TC_CMR_WAVEFORM_ACPA_TOGGLE_Val << TC_CMR_WAVEFORM_ACPA_Pos)  /**< (TC_CMR) TOGGLE Position  */
+#define TC_CMR_WAVEFORM_ACPC_Pos            18                                             /**< (TC_CMR) RC Compare Effect on TIOAx Position */
+#define TC_CMR_WAVEFORM_ACPC_Msk            (0x3u << TC_CMR_WAVEFORM_ACPC_Pos)         /**< (TC_CMR) RC Compare Effect on TIOAx Mask */
+#define TC_CMR_WAVEFORM_ACPC(value)         (TC_CMR_WAVEFORM_ACPC_Msk & ((value) << TC_CMR_WAVEFORM_ACPC_Pos))
+#define   TC_CMR_WAVEFORM_ACPC_NONE_Val     0x0u                                       /**< (TC_CMR) WAVEFORM NONE  */
+#define   TC_CMR_WAVEFORM_ACPC_SET_Val      0x1u                                       /**< (TC_CMR) WAVEFORM SET  */
+#define   TC_CMR_WAVEFORM_ACPC_CLEAR_Val    0x2u                                       /**< (TC_CMR) WAVEFORM CLEAR  */
+#define   TC_CMR_WAVEFORM_ACPC_TOGGLE_Val   0x3u                                       /**< (TC_CMR) WAVEFORM TOGGLE  */
+#define TC_CMR_WAVEFORM_ACPC_NONE           (TC_CMR_WAVEFORM_ACPC_NONE_Val << TC_CMR_WAVEFORM_ACPC_Pos)  /**< (TC_CMR) NONE Position  */
+#define TC_CMR_WAVEFORM_ACPC_SET            (TC_CMR_WAVEFORM_ACPC_SET_Val << TC_CMR_WAVEFORM_ACPC_Pos)  /**< (TC_CMR) SET Position  */
+#define TC_CMR_WAVEFORM_ACPC_CLEAR          (TC_CMR_WAVEFORM_ACPC_CLEAR_Val << TC_CMR_WAVEFORM_ACPC_Pos)  /**< (TC_CMR) CLEAR Position  */
+#define TC_CMR_WAVEFORM_ACPC_TOGGLE         (TC_CMR_WAVEFORM_ACPC_TOGGLE_Val << TC_CMR_WAVEFORM_ACPC_Pos)  /**< (TC_CMR) TOGGLE Position  */
+#define TC_CMR_WAVEFORM_AEEVT_Pos           20                                             /**< (TC_CMR) External Event Effect on TIOAx Position */
+#define TC_CMR_WAVEFORM_AEEVT_Msk           (0x3u << TC_CMR_WAVEFORM_AEEVT_Pos)        /**< (TC_CMR) External Event Effect on TIOAx Mask */
+#define TC_CMR_WAVEFORM_AEEVT(value)        (TC_CMR_WAVEFORM_AEEVT_Msk & ((value) << TC_CMR_WAVEFORM_AEEVT_Pos))
+#define   TC_CMR_WAVEFORM_AEEVT_NONE_Val    0x0u                                       /**< (TC_CMR) WAVEFORM NONE  */
+#define   TC_CMR_WAVEFORM_AEEVT_SET_Val     0x1u                                       /**< (TC_CMR) WAVEFORM SET  */
+#define   TC_CMR_WAVEFORM_AEEVT_CLEAR_Val   0x2u                                       /**< (TC_CMR) WAVEFORM CLEAR  */
+#define   TC_CMR_WAVEFORM_AEEVT_TOGGLE_Val  0x3u                                       /**< (TC_CMR) WAVEFORM TOGGLE  */
+#define TC_CMR_WAVEFORM_AEEVT_NONE          (TC_CMR_WAVEFORM_AEEVT_NONE_Val << TC_CMR_WAVEFORM_AEEVT_Pos)  /**< (TC_CMR) NONE Position  */
+#define TC_CMR_WAVEFORM_AEEVT_SET           (TC_CMR_WAVEFORM_AEEVT_SET_Val << TC_CMR_WAVEFORM_AEEVT_Pos)  /**< (TC_CMR) SET Position  */
+#define TC_CMR_WAVEFORM_AEEVT_CLEAR         (TC_CMR_WAVEFORM_AEEVT_CLEAR_Val << TC_CMR_WAVEFORM_AEEVT_Pos)  /**< (TC_CMR) CLEAR Position  */
+#define TC_CMR_WAVEFORM_AEEVT_TOGGLE        (TC_CMR_WAVEFORM_AEEVT_TOGGLE_Val << TC_CMR_WAVEFORM_AEEVT_Pos)  /**< (TC_CMR) TOGGLE Position  */
+#define TC_CMR_WAVEFORM_ASWTRG_Pos          22                                             /**< (TC_CMR) Software Trigger Effect on TIOAx Position */
+#define TC_CMR_WAVEFORM_ASWTRG_Msk          (0x3u << TC_CMR_WAVEFORM_ASWTRG_Pos)       /**< (TC_CMR) Software Trigger Effect on TIOAx Mask */
+#define TC_CMR_WAVEFORM_ASWTRG(value)       (TC_CMR_WAVEFORM_ASWTRG_Msk & ((value) << TC_CMR_WAVEFORM_ASWTRG_Pos))
+#define   TC_CMR_WAVEFORM_ASWTRG_NONE_Val   0x0u                                       /**< (TC_CMR) WAVEFORM NONE  */
+#define   TC_CMR_WAVEFORM_ASWTRG_SET_Val    0x1u                                       /**< (TC_CMR) WAVEFORM SET  */
+#define   TC_CMR_WAVEFORM_ASWTRG_CLEAR_Val  0x2u                                       /**< (TC_CMR) WAVEFORM CLEAR  */
+#define   TC_CMR_WAVEFORM_ASWTRG_TOGGLE_Val 0x3u                                       /**< (TC_CMR) WAVEFORM TOGGLE  */
+#define TC_CMR_WAVEFORM_ASWTRG_NONE         (TC_CMR_WAVEFORM_ASWTRG_NONE_Val << TC_CMR_WAVEFORM_ASWTRG_Pos)  /**< (TC_CMR) NONE Position  */
+#define TC_CMR_WAVEFORM_ASWTRG_SET          (TC_CMR_WAVEFORM_ASWTRG_SET_Val << TC_CMR_WAVEFORM_ASWTRG_Pos)  /**< (TC_CMR) SET Position  */
+#define TC_CMR_WAVEFORM_ASWTRG_CLEAR        (TC_CMR_WAVEFORM_ASWTRG_CLEAR_Val << TC_CMR_WAVEFORM_ASWTRG_Pos)  /**< (TC_CMR) CLEAR Position  */
+#define TC_CMR_WAVEFORM_ASWTRG_TOGGLE       (TC_CMR_WAVEFORM_ASWTRG_TOGGLE_Val << TC_CMR_WAVEFORM_ASWTRG_Pos)  /**< (TC_CMR) TOGGLE Position  */
+#define TC_CMR_WAVEFORM_BCPB_Pos            24                                             /**< (TC_CMR) RB Compare Effect on TIOBx Position */
+#define TC_CMR_WAVEFORM_BCPB_Msk            (0x3u << TC_CMR_WAVEFORM_BCPB_Pos)         /**< (TC_CMR) RB Compare Effect on TIOBx Mask */
+#define TC_CMR_WAVEFORM_BCPB(value)         (TC_CMR_WAVEFORM_BCPB_Msk & ((value) << TC_CMR_WAVEFORM_BCPB_Pos))
+#define   TC_CMR_WAVEFORM_BCPB_NONE_Val     0x0u                                       /**< (TC_CMR) WAVEFORM NONE  */
+#define   TC_CMR_WAVEFORM_BCPB_SET_Val      0x1u                                       /**< (TC_CMR) WAVEFORM SET  */
+#define   TC_CMR_WAVEFORM_BCPB_CLEAR_Val    0x2u                                       /**< (TC_CMR) WAVEFORM CLEAR  */
+#define   TC_CMR_WAVEFORM_BCPB_TOGGLE_Val   0x3u                                       /**< (TC_CMR) WAVEFORM TOGGLE  */
+#define TC_CMR_WAVEFORM_BCPB_NONE           (TC_CMR_WAVEFORM_BCPB_NONE_Val << TC_CMR_WAVEFORM_BCPB_Pos)  /**< (TC_CMR) NONE Position  */
+#define TC_CMR_WAVEFORM_BCPB_SET            (TC_CMR_WAVEFORM_BCPB_SET_Val << TC_CMR_WAVEFORM_BCPB_Pos)  /**< (TC_CMR) SET Position  */
+#define TC_CMR_WAVEFORM_BCPB_CLEAR          (TC_CMR_WAVEFORM_BCPB_CLEAR_Val << TC_CMR_WAVEFORM_BCPB_Pos)  /**< (TC_CMR) CLEAR Position  */
+#define TC_CMR_WAVEFORM_BCPB_TOGGLE         (TC_CMR_WAVEFORM_BCPB_TOGGLE_Val << TC_CMR_WAVEFORM_BCPB_Pos)  /**< (TC_CMR) TOGGLE Position  */
+#define TC_CMR_WAVEFORM_BCPC_Pos            26                                             /**< (TC_CMR) RC Compare Effect on TIOBx Position */
+#define TC_CMR_WAVEFORM_BCPC_Msk            (0x3u << TC_CMR_WAVEFORM_BCPC_Pos)         /**< (TC_CMR) RC Compare Effect on TIOBx Mask */
+#define TC_CMR_WAVEFORM_BCPC(value)         (TC_CMR_WAVEFORM_BCPC_Msk & ((value) << TC_CMR_WAVEFORM_BCPC_Pos))
+#define   TC_CMR_WAVEFORM_BCPC_NONE_Val     0x0u                                       /**< (TC_CMR) WAVEFORM NONE  */
+#define   TC_CMR_WAVEFORM_BCPC_SET_Val      0x1u                                       /**< (TC_CMR) WAVEFORM SET  */
+#define   TC_CMR_WAVEFORM_BCPC_CLEAR_Val    0x2u                                       /**< (TC_CMR) WAVEFORM CLEAR  */
+#define   TC_CMR_WAVEFORM_BCPC_TOGGLE_Val   0x3u                                       /**< (TC_CMR) WAVEFORM TOGGLE  */
+#define TC_CMR_WAVEFORM_BCPC_NONE           (TC_CMR_WAVEFORM_BCPC_NONE_Val << TC_CMR_WAVEFORM_BCPC_Pos)  /**< (TC_CMR) NONE Position  */
+#define TC_CMR_WAVEFORM_BCPC_SET            (TC_CMR_WAVEFORM_BCPC_SET_Val << TC_CMR_WAVEFORM_BCPC_Pos)  /**< (TC_CMR) SET Position  */
+#define TC_CMR_WAVEFORM_BCPC_CLEAR          (TC_CMR_WAVEFORM_BCPC_CLEAR_Val << TC_CMR_WAVEFORM_BCPC_Pos)  /**< (TC_CMR) CLEAR Position  */
+#define TC_CMR_WAVEFORM_BCPC_TOGGLE         (TC_CMR_WAVEFORM_BCPC_TOGGLE_Val << TC_CMR_WAVEFORM_BCPC_Pos)  /**< (TC_CMR) TOGGLE Position  */
+#define TC_CMR_WAVEFORM_BEEVT_Pos           28                                             /**< (TC_CMR) External Event Effect on TIOBx Position */
+#define TC_CMR_WAVEFORM_BEEVT_Msk           (0x3u << TC_CMR_WAVEFORM_BEEVT_Pos)        /**< (TC_CMR) External Event Effect on TIOBx Mask */
+#define TC_CMR_WAVEFORM_BEEVT(value)        (TC_CMR_WAVEFORM_BEEVT_Msk & ((value) << TC_CMR_WAVEFORM_BEEVT_Pos))
+#define   TC_CMR_WAVEFORM_BEEVT_NONE_Val    0x0u                                       /**< (TC_CMR) WAVEFORM NONE  */
+#define   TC_CMR_WAVEFORM_BEEVT_SET_Val     0x1u                                       /**< (TC_CMR) WAVEFORM SET  */
+#define   TC_CMR_WAVEFORM_BEEVT_CLEAR_Val   0x2u                                       /**< (TC_CMR) WAVEFORM CLEAR  */
+#define   TC_CMR_WAVEFORM_BEEVT_TOGGLE_Val  0x3u                                       /**< (TC_CMR) WAVEFORM TOGGLE  */
+#define TC_CMR_WAVEFORM_BEEVT_NONE          (TC_CMR_WAVEFORM_BEEVT_NONE_Val << TC_CMR_WAVEFORM_BEEVT_Pos)  /**< (TC_CMR) NONE Position  */
+#define TC_CMR_WAVEFORM_BEEVT_SET           (TC_CMR_WAVEFORM_BEEVT_SET_Val << TC_CMR_WAVEFORM_BEEVT_Pos)  /**< (TC_CMR) SET Position  */
+#define TC_CMR_WAVEFORM_BEEVT_CLEAR         (TC_CMR_WAVEFORM_BEEVT_CLEAR_Val << TC_CMR_WAVEFORM_BEEVT_Pos)  /**< (TC_CMR) CLEAR Position  */
+#define TC_CMR_WAVEFORM_BEEVT_TOGGLE        (TC_CMR_WAVEFORM_BEEVT_TOGGLE_Val << TC_CMR_WAVEFORM_BEEVT_Pos)  /**< (TC_CMR) TOGGLE Position  */
+#define TC_CMR_WAVEFORM_BSWTRG_Pos          30                                             /**< (TC_CMR) Software Trigger Effect on TIOBx Position */
+#define TC_CMR_WAVEFORM_BSWTRG_Msk          (0x3u << TC_CMR_WAVEFORM_BSWTRG_Pos)       /**< (TC_CMR) Software Trigger Effect on TIOBx Mask */
+#define TC_CMR_WAVEFORM_BSWTRG(value)       (TC_CMR_WAVEFORM_BSWTRG_Msk & ((value) << TC_CMR_WAVEFORM_BSWTRG_Pos))
+#define   TC_CMR_WAVEFORM_BSWTRG_NONE_Val   0x0u                                       /**< (TC_CMR) WAVEFORM NONE  */
+#define   TC_CMR_WAVEFORM_BSWTRG_SET_Val    0x1u                                       /**< (TC_CMR) WAVEFORM SET  */
+#define   TC_CMR_WAVEFORM_BSWTRG_CLEAR_Val  0x2u                                       /**< (TC_CMR) WAVEFORM CLEAR  */
+#define   TC_CMR_WAVEFORM_BSWTRG_TOGGLE_Val 0x3u                                       /**< (TC_CMR) WAVEFORM TOGGLE  */
+#define TC_CMR_WAVEFORM_BSWTRG_NONE         (TC_CMR_WAVEFORM_BSWTRG_NONE_Val << TC_CMR_WAVEFORM_BSWTRG_Pos)  /**< (TC_CMR) NONE Position  */
+#define TC_CMR_WAVEFORM_BSWTRG_SET          (TC_CMR_WAVEFORM_BSWTRG_SET_Val << TC_CMR_WAVEFORM_BSWTRG_Pos)  /**< (TC_CMR) SET Position  */
+#define TC_CMR_WAVEFORM_BSWTRG_CLEAR        (TC_CMR_WAVEFORM_BSWTRG_CLEAR_Val << TC_CMR_WAVEFORM_BSWTRG_Pos)  /**< (TC_CMR) CLEAR Position  */
+#define TC_CMR_WAVEFORM_BSWTRG_TOGGLE       (TC_CMR_WAVEFORM_BSWTRG_TOGGLE_Val << TC_CMR_WAVEFORM_BSWTRG_Pos)  /**< (TC_CMR) TOGGLE Position  */
+#define TC_CMR_WAVEFORM_MASK                0xFFFF7FC0u                                /**< \deprecated (TC_CMR_WAVEFORM) Register MASK  (Use TC_CMR_WAVEFORM_Msk instead)  */
+#define TC_CMR_WAVEFORM_Msk                 0xFFFF7FC0u                                /**< (TC_CMR_WAVEFORM) Register Mask  */
+
 /* -------- TC_SMMR : (TC Offset: N/A) Stepper Motor Mode Register -------- */
 #define TC_SMMR_GCEN (0x1u << 0) /**< \brief (TC_SMMR) Gray Count Enable */
 #define TC_SMMR_DOWN (0x1u << 1) /**< \brief (TC_SMMR) DOWN Count */
