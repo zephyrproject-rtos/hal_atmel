@@ -1202,23 +1202,7 @@ typedef union {
 
 /** \brief TcChannel hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
-typedef union {
- struct {
-  __O  TC_CCR_Type               CCR;         /**< \brief Offset: 0x00 ( /W 32) Channel Control Register Channel */
-  __IO TC_CMR_Type               CMR;         /**< \brief Offset: 0x04 (R/W 32) Channel Mode Register Channel */
-  __IO TC_SMMR_Type              SMMR;        /**< \brief Offset: 0x08 (R/W 32) Stepper Motor Mode Register */
-       RoReg8                    Reserved1[0x4];
-  __I  TC_CV_Type                CV;          /**< \brief Offset: 0x10 (R/  32) Counter Value Channel */
-  __IO TC_RA_Type                RA;          /**< \brief Offset: 0x14 (R/W 32) Register A Channel */
-  __IO TC_RB_Type                RB;          /**< \brief Offset: 0x18 (R/W 32) Register B Channel */
-  __IO TC_RC_Type                RC;          /**< \brief Offset: 0x1C (R/W 32) Register C Channel */
-  __I  TC_SR_Type                SR;          /**< \brief Offset: 0x20 (R/  32) Status Register Channel */
-  __O  TC_IER_Type               IER;         /**< \brief Offset: 0x24 ( /W 32) Interrupt Enable Register Channel */
-  __O  TC_IDR_Type               IDR;         /**< \brief Offset: 0x28 ( /W 32) Interrupt Disable Register Channel */
-  __I  TC_IMR_Type               IMR;         /**< \brief Offset: 0x2C (R/  32) Interrupt Mask Register Channel */
-       RoReg8                    Reserved2[0x10];
- } bf;
- struct {
+typedef struct {
   WoReg   TC_CCR;             /**< \brief (TC Offset: 0x00) Channel Control Register Channel */
   RwReg   TC_CMR;             /**< \brief (TC Offset: 0x04) Channel Mode Register Channel */
   RwReg   TC_SMMR;            /**< \brief (TC Offset: 0x08) Stepper Motor Mode Register */
@@ -1232,14 +1216,15 @@ typedef union {
   WoReg   TC_IDR;             /**< \brief (TC Offset: 0x28) Interrupt Disable Register Channel */
   RoReg   TC_IMR;             /**< \brief (TC Offset: 0x2C) Interrupt Mask Register Channel */
   RoReg8  Reserved4[0x10];
- } reg;
 } TcChannel;
 #endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
+
+#define TCCHANNEL_NUMBER 3
 
 /** \brief TC hardware registers */
 #if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
 typedef struct {
-  __IO uint32_t Channel[3];  /**< \brief Offset: 0x00 TcChannel groups */
+  TcChannel TcChannel[3];/**< \brief Offset: 0x00 TcChannel groups */
   __O  uint32_t BCR;         /**< \brief Offset: 0xC0 ( /W 32) TC Block Control Register */
   __IO uint32_t BMR;         /**< \brief Offset: 0xC4 (R/W 32) TC Block Mode Register */
        RoReg8   Reserved1[0x1C];

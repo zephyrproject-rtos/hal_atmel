@@ -1104,7 +1104,7 @@ typedef struct {
 #define TCCHANNEL_NUMBER 3
 /** \brief TC hardware registers */
 typedef struct {  
-       TcChannel TC_CHANNEL[TCCHANNEL_NUMBER]; /**< Offset: 0x00 Channel Control Register (channel = 0) */
+       TcChannel TcChannel[TCCHANNEL_NUMBER]; /**< Offset: 0x00 Channel Control Register (channel = 0) */
   __O  uint32_t TC_BCR;         /**< (TC Offset: 0xC0) Block Control Register */
   __IO uint32_t TC_BMR;         /**< (TC Offset: 0xC4) Block Mode Register */
   __O  uint32_t TC_QIER;        /**< (TC Offset: 0xC8) QDEC Interrupt Enable Register */
