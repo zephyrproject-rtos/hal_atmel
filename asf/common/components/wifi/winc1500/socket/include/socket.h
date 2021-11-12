@@ -1834,7 +1834,7 @@ NMI_API sint16 sendto(SOCKET sock, void *pvSendBuffer, uint16 u16SendLength, uin
 @return		
 	The function returned @ref SOCK_ERR_NO_ERROR for successful operation and a negative value (indicating the error) otherwise. 
 */
-NMI_API sint8 close(SOCKET sock);
+NMI_API sint8 winc1500_close(SOCKET sock);
 
 
 /** @} */
