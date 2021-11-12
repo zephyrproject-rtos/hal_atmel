@@ -905,7 +905,7 @@ Version
 Date
 		4 June 2012
 *********************************************************************/
-sint8 close(SOCKET sock)
+sint8 winc1500_close(SOCKET sock)
 {
 	sint8	s8Ret = SOCK_ERR_INVALID_ARG;
     M2M_INFO("Sock to delete <%d>\n", sock);
