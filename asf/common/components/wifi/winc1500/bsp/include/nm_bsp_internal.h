@@ -8,7 +8,7 @@
 #define _NM_BSP_INTERNAL_H_
 
 #if defined(CONFIG_WIFI_WINC1500)
-#include <wifi_winc1500_nm_bsp_internal.h>
+#include <wifi/winc1500/wifi_winc1500_nm_bsp_internal.h>
 #endif /* CONFIG_WIFI_WINC1500 */
 
 #endif //_NM_BSP_INTERNAL_H_
