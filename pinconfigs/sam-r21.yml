@@ -1,0 +1,317 @@
+# Copyright (c) 2022 Gerson Fernando Budke
+# SPDX-License-Identifier: Apache-2.0
+#
+# Sources:
+# - Atmel-42223G–SAM-R21_Datasheet–05/2016 (Revision G - 05/2016)
+#
+# Pin codes:
+#
+# - 32      pins: e
+# - 48      pins: g
+
+model: atmel,sam
+
+family: r21
+
+map: SAM_PINMUX
+
+series: [r21]
+
+variants:
+  - pincode: e
+    series: [r21]
+  - pincode: g
+    series: [r21]
+
+pins:
+  pa00:
+    pincodes: [g]
+    periph:
+      - [d, sercom1, pad0]
+      - [e, tcc2, wo0]
+  pa01:
+    pincodes: [g]
+    periph:
+      - [a, eic, extint1]
+      - [d, sercom1, pad1]
+      - [e, tcc2, wo1]
+  pa04:
+    pincodes: [g]
+    periph:
+      - [a, eic, extint4]
+      - [b, adc, vrefb]
+      - [b, adc, ain4]
+      - [b, ac, ain0]
+      - [b, ptc, y2]
+      - [d, sercom0, pad0]
+      - [e, tcc0, wo0]
+  pa05:
+    pincodes: [g]
+    periph:
+      - [a, eic, extint5]
+      - [b, adc, ain5]
+      - [b, ac, ain1]
+      - [b, ptc, y3]
+      - [d, sercom0, pad1]
+      - [e, tcc0, wo1]
+  pa06:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint6]
+      - [b, adc, ain6]
+      - [b, ac, ain2]
+      - [b, ptc, y4]
+      - [d, sercom0, pad2]
+      - [e, tcc1, wo0]
+  pa07:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint7]
+      - [b, adc, ain7]
+      - [b, ac, ain3]
+      - [b, ptc, y5]
+      - [d, sercom0, pad3]
+      - [e, tcc1, wo1]
+  pa08:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, nmi]
+      - [b, adc, ain16]
+      - [b, ptc, x0]
+      - [c, sercom0, pad0]
+      - [d, sercom2, pad0]
+      - [e, tcc0, wo0]
+      - [f, radio, fectrl0]
+  pa09:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint9]
+      - [b, adc, ain17]
+      - [b, ptc, x1]
+      - [c, sercom0, pad1]
+      - [d, sercom2, pad1]
+      - [e, tcc0, wo1]
+      - [f, radio, fectrl1]
+  pa12:
+    pincodes: [g]
+    periph:
+      - [a, eic, extint12]
+      - [c, sercom2, pad0]
+      - [e, tcc2, wo0]
+      - [f, radio, fectrl2]
+      - [h, ac, cmp0]
+  pa13:
+    pincodes: [g]
+    periph:
+      - [a, eic, extint13]
+      - [c, sercom2, pad1]
+      - [e, tcc2, wo1]
+      - [f, radio, fectrl3]
+      - [h, ac, cmp1]
+  pa14:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint14]
+      - [c, sercom2, pad2]
+      - [e, tc3, wo0]
+      - [f, radio, fectrl4]
+      - [h, gclk, io0]
+  pa15:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint15]
+      - [c, sercom2, pad3]
+      - [e, tc3, wo1]
+      - [f, radio, fectrl5]
+      - [h, gclk, io1]
+  pa16:
+    pincodes: [e, g]
+    periph:
+      - [b, ptc, x4]
+      - [c, sercom1, pad0]
+      - [d, sercom3, pad0]
+      - [e, tcc2, wo0]
+      - [f, tcc0, wo6]
+      - [h, gclk, io2]
+  pa17:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint1]
+      - [b, ptc, x5]
+      - [c, sercom1, pad1]
+      - [d, sercom3, pad1]
+      - [e, tcc2, wo1]
+      - [f, tcc0, wo7]
+      - [h, gclk, io3]
+  pa18:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint2]
+      - [b, ptc, x6]
+      - [c, sercom1, pad2]
+      - [d, sercom3, pad2]
+      - [e, tc3, wo0]
+      - [f, tcc0, wo2]
+      - [h, ac, cmp0]
+  pa19:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint3]
+      - [b, ptc, x7]
+      - [c, sercom1, pad3]
+      - [d, sercom3, pad3]
+      - [e, tc3, wo1]
+      - [f, tcc0, wo3]
+      - [h, ac, cmp1]
+  pa22:
+    pincodes: [g]
+    periph:
+      - [a, eic, extint6]
+      - [b, ptc, x10]
+      - [c, sercom3, pad0]
+      - [d, sercom5, pad0]
+      - [e, tc4, wo0]
+      - [f, tcc0, wo4]
+      - [h, gclk, io6]
+  pa23:
+    pincodes: [g]
+    periph:
+      - [a, eic, extint7]
+      - [b, ptc, x11]
+      - [c, sercom3, pad1]
+      - [d, sercom5, pad1]
+      - [e, tc4, wo1]
+      - [f, tcc0, wo5]
+      - [g, usb, sof]
+      - [h, gclk, io7]
+  pa24:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint12]
+      - [c, sercom3, pad2]
+      - [d, sercom5, pad2]
+      - [e, tc5, wo0]
+      - [f, tcc1, wo2]
+      - [g, usb, dm]
+  pa25:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint13]
+      - [b, ptc, x11]
+      - [c, sercom3, pad3]
+      - [d, sercom5, pad3]
+      - [e, tc5, wo1]
+      - [f, tcc1, wo3]
+      - [g, usb, dp]
+  pb22:
+    pincodes: [g]
+    periph:
+      - [a, eic, extint6]
+      - [d, sercom5, pad2]
+      - [h, gclk, io0]
+  pb23:
+    pincodes: [g]
+    periph:
+      - [a, eic, extint7]
+      - [d, sercom5, pad3]
+      - [h, gclk, io1]
+  pa27:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint15]
+      - [f, sercom3, pad0]
+      - [h, gclk, io0]
+  pa28:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint8]
+      - [f, sercom3, pad1]
+      - [h, gclk, io0]
+  pa30:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint10]
+      - [d, sercom1, pad2]
+      - [e, tcc1, wo0]
+      - [g, swd, clk]
+      - [h, gclk, io0]
+  pa31:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint11]
+      - [d, sercom1, pad3]
+      - [e, tcc1, wo1]
+      - [g, swd, io]
+  pb02:
+    pincodes: [g]
+    periph:
+      - [a, eic, extint2]
+      - [b, adc, ain10]
+      - [b, ptc, y8]
+      - [d, sercom5, pad0]
+  pb03:
+    pincodes: [g]
+    periph:
+      - [a, eic, extint3]
+      - [b, adc, ain11]
+      - [b, ptc, y9]
+      - [d, sercom5, pad1]
+
+# Internal Multiplexed Signals
+
+  pa10:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint10]
+      # dig3
+  pa11:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint11]
+      # dig4
+  pa20:
+    pincodes: [e, g]
+      # slp_tr
+  pb00:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint0]
+      # irq
+  pb15:
+    pincodes: [e, g]
+      # rstn
+  pb16:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint0]
+      # dig1
+  pb17:
+    pincodes: [e, g]
+    periph:
+      - [a, eic, extint1]
+      # dig2
+  pb30:
+    pincodes: [e, g]
+    periph:
+      - [f, sercom4, pad2]
+      # mosi
+  pb31:
+    pincodes: [e, g]
+    periph:
+      - [f, sercom4, pad1]
+      # sel
+  pc16:
+    pincodes: [e, g]
+    periph:
+      - [f, glkc, io1]
+      # clkm (Die revision A uses GCLK/IO[5])
+  pc18:
+    pincodes: [e, g]
+    periph:
+      - [f, sercom4, pad3]
+      # sclk
+  pc19:
+    pincodes: [e, g]
+    periph:
+      - [f, sercom4, pad0]
+      # miso
