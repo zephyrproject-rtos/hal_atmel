@@ -20,3 +20,18 @@ Such development tools can be installed using:
 ```
 pip install -r scripts/requirements-dev.txt
 ```
+
+# Tests
+
+Before running tests make sure to have testing dependencies installed. They
+can be installed by running:
+
+```
+pip install -r scripts/requirements-test.txt
+```
+
+Tests can be executed by running:
+
+```
+pytest
+```
