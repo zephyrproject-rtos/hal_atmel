@@ -1,0 +1,691 @@
+# Copyright (c) 2022 Gerson Fernando Budke
+# SPDX-License-Identifier: Apache-2.0
+#
+# Sources:
+# - SAM4L Datasheet (Revision H - 11/16)
+#
+# Pin codes:
+#
+# - 48  pins: a
+# - 64  pins: b
+# - 100 pins: c
+
+model: atmel,sam
+
+family: sam4l
+
+map: SAM_PINMUX
+
+series: [4lsX, 4lcX]
+
+variants:
+  - pincode: a
+    series: [4lsX, 4lcX]
+  - pincode: b
+    series: [4lsX, 4lcX]
+  - pincode: c
+    series: [4lsX, 4lcX]
+
+pins:
+  pa00:
+    pincodes: [a, b, c]
+  pa01:
+    pincodes: [a, b, c]
+  pa02:
+    pincodes: [a, b, c]
+    periph:
+      - [a, scif, gclk0]
+      - [b, spi, npcs0]
+      - [g, catb, dis]
+  pa03:
+    pincodes: [a, b, c]
+    periph:
+      - [b, spi, miso]
+  pa04:
+    pincodes: [a, b, c]
+    periph:
+      - [a, adcife, ad0]
+      - [b, usart0, clk]
+      - [c, eic, extint2]
+      - [d, gloc, in1]
+      - [g, catb, sense0]
+  pa05:
+    pincodes: [a, b, c]
+    periph:
+      - [a, adcife, ad1]
+      - [b, usart0, rxd]
+      - [c, eic, extint3]
+      - [d, gloc, in2]
+      - [e, adcife, trigger]
+      - [g, catb, sense1]
+  pa06:
+    pincodes: [a, b, c]
+    periph:
+      - [a, dacc, vout]
+      - [b, usart0, rts]
+      - [c, eic, extint1]
+      - [d, gloc, in0]
+      - [e, acifc, acan0]
+      - [g, catb, sense2]
+  pa07:
+    pincodes: [a, b, c]
+    periph:
+      - [a, adcife, ad2]
+      - [b, usart0, txd]
+      - [c, eic, extint4]
+      - [d, gloc, in3]
+      - [e, acifc, acap0]
+      - [g, catb, sense3]
+  pa08:
+    pincodes: [a, b, c]
+    periph:
+      - [a, usart0, rts]
+      - [b, tc0, a0]
+      - [c, pevc, evt0]
+      - [d, gloc, out0]
+      - [f, lcdca, seg23, [4lsX]]
+      - [g, catb, sense4]
+  pa09:
+    pincodes: [a, b, c]
+    periph:
+      - [a, usart0, cts]
+      - [b, tc0, b0]
+      - [c, pevc, evt1]
+      - [d, parc, pcdata0]
+      - [f, lcdca, com3, [4lsX]]
+      - [g, catb, sense5]
+  pa10:
+    pincodes: [a, b, c]
+    periph:
+      - [a, usart0, clk]
+      - [b, tc0, a1]
+      - [c, pevc, evt2]
+      - [d, parc, pcdata1]
+      - [f, lcdca, com2, [4lsX]]
+      - [g, catb, sense6]
+  pa11:
+    pincodes: [a, b, c]
+    periph:
+      - [a, usart0, rxd]
+      - [b, tc0, b1]
+      - [c, pevc, evt3]
+      - [d, parc, pcdata2]
+      - [f, lcdca, com1, [4lsX]]
+      - [g, catb, sense7]
+  pa12:
+    pincodes: [a, b, c]
+    periph:
+      - [a, usart0, txd]
+      - [b, tc0, a2]
+      - [d, parc, pcdata3]
+      - [f, lcdca, com0, [4lsX]]
+      - [g, catb, dis]
+  pa13:
+    pincodes: [a, b, c]
+    periph:
+      - [a, usart1, rts]
+      - [b, tc0, b2]
+      - [c, spi, npcs1]
+      - [d, parc, pcdata4]
+      - [f, lcdca, seg5, [4lsX]]
+      - [g, catb, sense8]
+  pa14:
+    pincodes: [a, b, c]
+    periph:
+      - [a, usart1, clk]
+      - [b, tc0, clk0]
+      - [c, spi, npcs2]
+      - [d, parc, pcdata5]
+      - [f, lcdca, seg6, [4lsX]]
+      - [g, catb, sense9]
+  pa15:
+    pincodes: [a, b, c]
+    periph:
+      - [a, usart1, rxd]
+      - [b, tc0, clk1]
+      - [c, spi, npcs3]
+      - [d, parc, pcdata6]
+      - [f, lcdca, seg7, [4lsX]]
+      - [g, catb, sense10]
+  pa16:
+    pincodes: [a, b, c]
+    periph:
+      - [a, usart1, txd]
+      - [b, tc0, clk2]
+      - [c, eic, extint1]
+      - [d, parc, pcdata7]
+      - [f, lcdca, seg8, [4lsX]]
+      - [g, catb, sense11]
+  pa17:
+    pincodes: [a, b, c]
+    periph:
+      - [a, usart2, rts]
+      - [b, abdacb, dac0]
+      - [c, eic, extint2]
+      - [d, parc, pcck]
+      - [f, lcdca, seg9, [4lsX]]
+      - [g, catb, sense12]
+  pa18:
+    pincodes: [a, b, c]
+    periph:
+      - [a, usart2, clk]
+      - [b, abdacb, dacn0]
+      - [c, eic, extint3]
+      - [d, parc, pcen1]
+      - [f, lcdca, seg18, [4lsX]]
+      - [g, catb, sense13]
+  pa19:
+    pincodes: [a, b, c]
+    periph:
+      - [a, usart2, rxd]
+      - [b, abdacb, dac1]
+      - [c, eic, extint4]
+      - [d, parc, pcen2]
+      - [e, scif, gclk0]
+      - [f, lcdca, seg19, [4lsX]]
+      - [g, catb, sense14]
+  pa20:
+    pincodes: [a, b, c]
+    periph:
+      - [a, usart2, txd]
+      - [b, abdacb, dacn1]
+      - [c, eic, extint5]
+      - [d, gcloc, in0]
+      - [e, scif, gclk1]
+      - [f, lcdca, seg20, [4lsX]]
+      - [g, catb, sense15]
+  pa21:
+    pincodes: [a, b, c]
+    periph:
+      - [a, spi, miso]
+      - [b, usart1, cts]
+      - [c, eic, extint6]
+      - [d, gcloc, in1]
+      - [e, twim2, twd]
+      - [f, lcdca, seg34, [4lsX]]
+      - [g, catb, sense16]
+  pa22:
+    pincodes: [a, b, c]
+    periph:
+      - [a, spi, mosi]
+      - [b, usart2, cts]
+      - [c, eic, extint7]
+      - [d, gcloc, in2]
+      - [e, twim2, twck]
+      - [f, lcdca, seg35, [4lsX]]
+      - [g, catb, sense17]
+  pa23:
+    pincodes: [a, b, c]
+    periph:
+      - [a, spi, sck]
+      - [b, twims0, twd]
+      - [c, eic, extint8]
+      - [d, gcloc, in3]
+      - [e, scif, glck_in0]
+      - [f, lcdca, seg38, [4lsX]]
+      - [g, catb, dis]
+  pa24:
+    pincodes: [a, b, c]
+    periph:
+      - [a, spi, npcs0]
+      - [b, twims0, twck]
+      - [d, gcloc, out0]
+      - [e, scif, glck_in1]
+      - [f, lcdca, seg39, [4lsX]]
+      - [g, catb, sense18]
+  pa25:
+    pincodes: [a, b, c]
+    periph:
+      - [a, usbc, dm, [4lsX]]
+      - [b, usart2, rxd]
+      - [g, catb, sense19]
+  pa26:
+    pincodes: [a, b, c]
+    periph:
+      - [a, usbc, dp, [4lsX]]
+      - [b, usart2, txd]
+      - [g, catb, sense20]
+  pa27:
+    pincodes: [a, b, c]
+    periph:
+      - [a, spi, miso, [4lcX]]
+      - [b, iisc, isck, [4lcX]]
+      - [c, abdacb, dac0, [4lcX]]
+      - [d, gloc, in4, [4lcX]]
+      - [e, usart3, rts, [4lcX]]
+      - [g, catb, sense0, [4lcX]]
+  pa28:
+    pincodes: [a, b, c]
+    periph:
+      - [a, spi, mosi, [4lcX]]
+      - [b, iisc, isdi, [4lcX]]
+      - [c, abdacb, dacn0, [4lcX]]
+      - [d, gloc, in5, [4lcX]]
+      - [e, usart3, cts, [4lcX]]
+      - [g, catb, sense1, [4lcX]]
+  pa29:
+    pincodes: [a, b, c]
+    periph:
+      - [a, spi, sck, [4lcX]]
+      - [b, iisc, iws, [4lcX]]
+      - [c, abdacb, dac1, [4lcX]]
+      - [d, gloc, in6, [4lcX]]
+      - [e, usart3, clk, [4lcX]]
+      - [g, catb, sense2, [4lcX]]
+  pa30:
+    pincodes: [a, b, c]
+    periph:
+      - [a, spi, npcs0, [4lcX]]
+      - [b, iisc, isdo, [4lcX]]
+      - [c, abdacb, dacn1, [4lcX]]
+      - [d, gloc, in7, [4lcX]]
+      - [e, usart3, rxd, [4lcX]]
+      - [g, catb, sense3, [4lcX]]
+  pa31:
+    pincodes: [a, b, c]
+    periph:
+      - [a, spi, npcs1, [4lcX]]
+      - [b, iisc, imck, [4lcX]]
+      - [c, abdacb, clk, [4lcX]]
+      - [d, gloc, out1, [4lcX]]
+      - [e, usart3, txd, [4lcX]]
+      - [g, catb, dis, [4lcX]]
+  pb00:
+    pincodes: [b, c]
+    periph:
+      - [a, twims1, twd]
+      - [b, usart0, rxd]
+      - [g, catb, sense21]
+  pb01:
+    pincodes: [b, c]
+    periph:
+      - [a, twims1, twck]
+      - [b, usart0, txd]
+      - [c, eic, extint0]
+      - [g, catb, sense22]
+  pb02:
+    pincodes: [b, c]
+    periph:
+      - [a, adcife, ad3]
+      - [b, usart1, rts]
+      - [c, abdacb, dac0]
+      - [d, iisc, isck]
+      - [e, acifc, acbn0]
+      - [g, catb, sense23]
+  pb03:
+    pincodes: [b, c]
+    periph:
+      - [a, adcife, ad4]
+      - [b, usart1, clk]
+      - [c, abdacb, dacn0]
+      - [d, iisc, isdi]
+      - [e, acifc, acbp0]
+      - [g, catb, dis]
+  pb04:
+    pincodes: [b, c]
+    periph:
+      - [a, adcife, ad5]
+      - [b, usart1, rxd]
+      - [c, abdacb, dac1]
+      - [d, iisc, isdo]
+      - [e, dacc, ext_trig0]
+      - [g, catb, sense24]
+  pb05:
+    pincodes: [b, c]
+    periph:
+      - [a, adcife, ad6]
+      - [b, usart1, txd]
+      - [c, abdacb, dacn1]
+      - [d, iisc, imck]
+      - [g, catb, sense25]
+  pb06:
+    pincodes: [b, c]
+    periph:
+      - [a, usart3, rts]
+      - [c, gloc, in4]
+      - [d, iisc, iws]
+      - [f, lcdca, seg22, [4lsX]]
+      - [g, catb, sense26]
+  pb07:
+    pincodes: [b, c]
+    periph:
+      - [a, usart3, cts]
+      - [c, gloc, in5]
+      - [d, tc0, a0]
+      - [f, lcdca, seg21, [4lsX]]
+      - [g, catb, sense27]
+  pb08:
+    pincodes: [b, c]
+    periph:
+      - [a, usart3, clk]
+      - [c, gloc, in6]
+      - [d, tc0, b0]
+      - [f, lcdca, seg14, [4lsX]]
+      - [g, catb, sense28]
+  pb09:
+    pincodes: [b, c]
+    periph:
+      - [a, usart3, rxd]
+      - [b, pevd, evt2]
+      - [c, gloc, in7]
+      - [d, tc0, a1]
+      - [f, lcdca, seg15, [4lsX]]
+      - [g, catb, sense29]
+  pb10:
+    pincodes: [b, c]
+    periph:
+      - [a, usart3, txd]
+      - [b, pevd, evt3]
+      - [c, gloc, out1]
+      - [d, tc0, b1]
+      - [e, scif, gclk0]
+      - [f, lcdca, seg16, [4lsX]]
+      - [g, catb, sense30]
+  pb11:
+    pincodes: [b, c]
+    periph:
+      - [a, usart0, cts]
+      - [b, spi, npcs2]
+      - [d, tc0, a2]
+      - [e, scif, gclk1]
+      - [f, lcdca, seg17, [4lsX]]
+      - [g, catb, sense31]
+  pb12:
+    pincodes: [b, c]
+    periph:
+      - [a, usart0, rts]
+      - [b, spi, npcs3]
+      - [c, pevc, evt0]
+      - [d, tc0, b2]
+      - [e, scif, gclk2]
+      - [f, lcdca, seg32, [4lsX]]
+      - [g, catb, dis]
+  pb13:
+    pincodes: [b, c]
+    periph:
+      - [a, usart0, clk]
+      - [b, spi, npcs1]
+      - [c, pevc, evt1]
+      - [d, tc0, clk0]
+      - [e, scif, gclk3]
+      - [f, lcdca, seg33, [4lsX]]
+      - [g, catb, sense0]
+  pb14:
+    pincodes: [b, c]
+    periph:
+      - [a, usart0, rxd]
+      - [b, spi, miso]
+      - [c, twim3, twd]
+      - [d, tc0, clk1]
+      - [e, scif, gclk_in0]
+      - [f, lcdca, seg36, [4lsX]]
+      - [g, catb, sense1]
+  pb15:
+    pincodes: [b, c]
+    periph:
+      - [a, usart0, txd]
+      - [b, spi, mosi]
+      - [c, twim3, twck]
+      - [d, tc0, clk2]
+      - [e, scif, gclk_in1]
+      - [f, lcdca, seg37, [4lsX]]
+      - [g, catb, sense2]
+  pc00:
+    pincodes: [c]
+    periph:
+      - [a, spi, npcs2]
+      - [b, usart0, clk]
+      - [d, tc1, a0]
+      - [g, catb, sense3]
+  pc01:
+    pincodes: [c]
+    periph:
+      - [a, spi, npcs3]
+      - [b, usart0, rts]
+      - [d, tc1, b0]
+      - [g, catb, sense4]
+  pc02:
+    pincodes: [c]
+    periph:
+      - [a, spi, npcs1]
+      - [b, usart0, cts]
+      - [c, usart0, rxd]
+      - [d, tc1, a1]
+      - [g, catb, sense5]
+  pc03:
+    pincodes: [c]
+    periph:
+      - [a, spi, npcs0]
+      - [b, eic, extint5]
+      - [c, usart0, txd]
+      - [d, tc1, b1]
+      - [g, catb, sense6]
+  pc04:
+    pincodes: [c]
+    periph:
+      - [a, spi, miso]
+      - [b, eic, extint6]
+      - [d, tc1, a2]
+      - [g, catb, sense7]
+  pc05:
+    pincodes: [c]
+    periph:
+      - [a, spi, mosi]
+      - [b, eic, extint7]
+      - [d, tc1, b2]
+      - [g, catb, dis]
+  pc06:
+    pincodes: [c]
+    periph:
+      - [a, spi, sck]
+      - [b, eic, extint8]
+      - [d, tc1, clk0]
+      - [g, catb, sense8]
+  pc07:
+    pincodes: [c]
+    periph:
+      - [a, adcife, ad7]
+      - [b, usart2, rts]
+      - [c, pevc, evt0]
+      - [d, tc1, clk1]
+      - [g, catb, sense9]
+  pc08:
+    pincodes: [c]
+    periph:
+      - [a, adcife, ad8]
+      - [b, usart2, clk]
+      - [c, pevc, evt1]
+      - [d, tc1, clk2]
+      - [e, usart2, cts]
+      - [g, catb, sense10]
+  pc09:
+    pincodes: [c]
+    periph:
+      - [a, adcife, ad9]
+      - [b, usart3, rxd]
+      - [c, abdacb, dac0]
+      - [d, iisc, isck]
+      - [e, acifc, acan1]
+      - [g, catb, sense11]
+  pc10:
+    pincodes: [c]
+    periph:
+      - [a, adcife, ad10]
+      - [b, usart3, txd]
+      - [c, abdacb, dacn0]
+      - [d, iisc, isdi]
+      - [e, acifc, acap1]
+      - [g, catb, sense12]
+  pc11:
+    pincodes: [c]
+    periph:
+      - [a, adcife, ad11]
+      - [b, usart2, rxd]
+      - [c, pevc, evt2]
+      - [g, catb, sense13]
+  pc12:
+    pincodes: [c]
+    periph:
+      - [a, adcife, ad12]
+      - [b, usart2, txd]
+      - [c, abdacb, clk]
+      - [d, iisc, iws]
+      - [g, catb, sense14]
+  pc13:
+    pincodes: [c]
+    periph:
+      - [a, adcife, ad13]
+      - [b, usart3, rts]
+      - [c, abdacb, dac1]
+      - [d, iisc, isdo]
+      - [e, acifc, acbn1]
+      - [g, catb, sense15]
+  pc14:
+    pincodes: [c]
+    periph:
+      - [a, adcife, ad14]
+      - [b, usart3, clk]
+      - [c, abdacb, dacn1]
+      - [d, iisc, imck]
+      - [e, acifc, acbp1]
+      - [g, catb, dis]
+  pc15:
+    pincodes: [c]
+    periph:
+      - [a, tc1, a0]
+      - [d, gloc, in4]
+      - [f, lcdca, seg0, [4lsX]]
+      - [g, catb, sense16]
+  pc16:
+    pincodes: [c]
+    periph:
+      - [a, tc1, b0]
+      - [d, gloc, in5]
+      - [f, lcdca, seg1, [4lsX]]
+      - [g, catb, sense17]
+  pc17:
+    pincodes: [c]
+    periph:
+      - [a, tc1, a1]
+      - [d, gloc, in6]
+      - [f, lcdca, seg2, [4lsX]]
+      - [g, catb, sense18]
+  pc18:
+    pincodes: [c]
+    periph:
+      - [a, tc1, b1]
+      - [d, gloc, in7]
+      - [f, lcdca, seg3, [4lsX]]
+      - [g, catb, sense19]
+  pc19:
+    pincodes: [c]
+    periph:
+      - [a, tc1, a2]
+      - [d, gloc, out1]
+      - [f, lcdca, seg4, [4lsX]]
+      - [g, catb, sense20]
+  pc20:
+    pincodes: [c]
+    periph:
+      - [a, tc1, b2]
+      - [f, lcdca, seg10, [4lsX]]
+      - [g, catb, sense21]
+  pc21:
+    pincodes: [c]
+    periph:
+      - [a, tc1, clk0]
+      - [d, parc, pcck]
+      - [f, lcdca, seg11, [4lsX]]
+      - [g, catb, sense22]
+  pc22:
+    pincodes: [c]
+    periph:
+      - [a, tc1, clk1]
+      - [d, parc, pcen1]
+      - [f, lcdca, seg12, [4lsX]]
+      - [g, catb, sense23]
+  pc23:
+    pincodes: [c]
+    periph:
+      - [a, tc1, clk2]
+      - [d, parc, pcen2]
+      - [f, lcdca, seg13, [4lsX]]
+      - [g, catb, dis]
+  pc24:
+    pincodes: [c]
+    periph:
+      - [a, usart1, rts]
+      - [b, eic, extint1]
+      - [c, pevc, evt0]
+      - [d, parc, pcdata0]
+      - [f, lcdca, seg24, [4lsX]]
+      - [g, catb, sense24]
+  pc25:
+    pincodes: [c]
+    periph:
+      - [a, usart1, clk]
+      - [b, eic, extint2]
+      - [c, pevc, evt1]
+      - [d, parc, pcdata1]
+      - [f, lcdca, seg25, [4lsX]]
+      - [g, catb, sense25]
+  pc26:
+    pincodes: [c]
+    periph:
+      - [a, usart1, rxd]
+      - [b, eic, extint3]
+      - [c, pevc, evt2]
+      - [d, parc, pcdata2]
+      - [e, scif, glkc0]
+      - [f, lcdca, seg26, [4lsX]]
+      - [g, catb, sense26]
+  pc27:
+    pincodes: [c]
+    periph:
+      - [a, usart1, txd]
+      - [b, eic, extint4]
+      - [c, pevc, evt3]
+      - [d, parc, pcdata3]
+      - [e, scif, gclk1]
+      - [f, lcdca, seg27, [4lsX]]
+      - [g, catb, sense27]
+  pc28:
+    pincodes: [c]
+    periph:
+      - [a, usart3, rxd]
+      - [b, spi, miso]
+      - [c, gloc, in4]
+      - [d, parc, pcdata4]
+      - [e, scif, gclk2]
+      - [f, lcdca, seg28, [4lsX]]
+      - [g, catb, sense28]
+  pc29:
+    pincodes: [c]
+    periph:
+      - [a, usart3, txd]
+      - [b, spi, mosi]
+      - [c, gloc, in5]
+      - [d, parc, pcdata5]
+      - [e, scif, gclk3]
+      - [f, lcdca, seg29, [4lsX]]
+      - [g, catb, sense29]
+  pc30:
+    pincodes: [c]
+    periph:
+      - [a, usart3, rts]
+      - [b, spi, sck]
+      - [c, gloc, in6]
+      - [d, parc, pcdata6]
+      - [e, scif, gclk_in0]
+      - [f, lcdca, seg30, [4lsX]]
+      - [g, catb, sense30]
+  pc31:
+    pincodes: [c]
+    periph:
+      - [a, usart3, clk]
+      - [b, spi, npcs0]
+      - [c, gloc, out1]
+      - [d, parc, pcdata7]
+      - [e, scif, gclk_in1]
+      - [f, lcdca, seg31, [4lsX]]
+      - [g, catb, sense31]
