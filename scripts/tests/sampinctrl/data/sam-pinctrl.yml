@@ -1,0 +1,65 @@
+# Copyright (c) 2022 Gerson Fernando Budke
+# SPDX-License-Identifier: Apache-2.0
+
+model: atmel,sam
+
+family: sam
+
+map: ATMEL_SAM_XXX
+
+series: [a, b, c]
+
+variants:
+  - pincode: d
+    series: [a]
+  - pincode: e
+    series: [a, b]
+    exception: y
+  - pincode: f
+    series: [a, b, c]
+
+pins:
+  pa00:
+    pincodes: [d, e, f]
+    periph:
+      - [a, per0, sig0, [a]]
+      - [b, per1, sig0, [b]]
+      - [c, per2, sig0, [c]]
+  pb0:
+    pincodes: [d, e, f]
+    periph:
+      - [d, per3, sig1, [a, c]]
+      - [e, per4, sig1]
+      - [f, per5, sig1, [e]]
+  pc0:
+    pincodes: [d, e]
+    periph:
+      - [g, per6, sig2, [d, e]]
+      - [h, per7, sig2, [d]]
+      - [i, per8, sig2, [e, b]]
+  pd31:
+    pincodes: [d]
+    periph:
+      - [a, per9,  sig3]
+      - [b, per10, sig3, [d]]
+      - [c, per11, sig3]
+  pe15:
+    pincodes: [f]
+    periph:
+      - [d, per12, sig4]
+      - [e, per13, sig4, [a, b]]
+      - [f, per14, sig4]
+  pa01:
+    pincodes: [d, e, f]
+  pa02:
+    pincodes: [d, f]
+    extra:
+      - [x, extra_per, sig_extra]
+    system:
+      - [s, jtag, tck]
+  pa03:
+    pincodes: [e]
+    lpm:
+      - [lpm, lpm_per, sig_lpm]
+  pa04:
+    pincodes: [d, e, f]
