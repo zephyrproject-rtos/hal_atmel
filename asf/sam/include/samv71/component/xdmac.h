@@ -2488,7 +2488,7 @@ typedef struct {
   __I  uint32_t XDMAC_GSWS;     /**< (XDMAC Offset: 0x3C) Global Channel Software Request Status Register */
   __O  uint32_t XDMAC_GSWF;     /**< (XDMAC Offset: 0x40) Global Channel Software Flush Request Register */
   __I  uint8_t                        Reserved1[12];
-       XdmacChid XdmacChid[XDMACCHID_NUMBER]; /**< Offset: 0x50 Channel Interrupt Enable Register (chid = 0) */
+       XdmacChid XDMAC_CHID[XDMACCHID_NUMBER]; /**< Offset: 0x50 Channel Interrupt Enable Register (chid = 0) */
   __I  uint8_t                        Reserved2[2476];
   __IO uint32_t XDMAC_VERSION;  /**< (XDMAC Offset: 0xFFC) XDMAC Version Register */
 } Xdmac;
@@ -2533,7 +2533,7 @@ typedef struct {
   __I  XDMAC_GSWS_Type                XDMAC_GSWS;     /**< Offset: 0x3C (R/   32) Global Channel Software Request Status Register */
   __O  XDMAC_GSWF_Type                XDMAC_GSWF;     /**< Offset: 0x40 ( /W  32) Global Channel Software Flush Request Register */
   __I  uint8_t                        Reserved1[12];
-       XdmacChid                      XdmacChid[24];  /**< Offset: 0x50 Channel Interrupt Enable Register (chid = 0) */
+       XdmacChid                      XDMAC_CHID[24];  /**< Offset: 0x50 Channel Interrupt Enable Register (chid = 0) */
   __I  uint8_t                        Reserved2[2476];
   __IO XDMAC_VERSION_Type             XDMAC_VERSION;  /**< Offset: 0xFFC (R/W  32) XDMAC Version Register */
 } Xdmac;

@@ -37,3 +37,4 @@ License Link:
 
 Patch List:
    * Fix the GMAC priority queue registers to match the datasheet.
+   * Fix XDMAC_CHID register name.
