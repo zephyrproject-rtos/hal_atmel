@@ -61,18 +61,24 @@ typedef volatile       uint32_t WoReg8;  /**< Write only  8-bit register (volati
 typedef volatile       uint32_t RwReg;   /**< Read-Write 32-bit register (volatile unsigned int) */
 typedef volatile       uint16_t RwReg16; /**< Read-Write 16-bit register (volatile unsigned int) */
 typedef volatile       uint8_t  RwReg8;  /**< Read-Write  8-bit register (volatile unsigned int) */
-#if !defined(_UL)
-#define _U(x)          x ## U            /**< C code: Unsigned integer literal constant value */
-#define _L(x)          x ## L            /**< C code: Long integer literal constant value */
-#define _UL(x)         x ## UL           /**< C code: Unsigned Long integer literal constant value */
 #endif
-#else
-#if !defined(_UL)
-#define _U(x)          x                 /**< Assembler: Unsigned integer literal constant value */
-#define _L(x)          x                 /**< Assembler: Long integer literal constant value */
-#define _UL(x)         x                 /**< Assembler: Unsigned Long integer literal constant value */
+
+#if !defined(SKIP_INTEGER_LITERALS)
+#if defined(_U_) || defined(_L_) || defined(_UL_)
+  #error "Integer Literals macros already defined elsewhere"
 #endif
-#endif
+
+#if !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__))
+/* Macros that deal with adding suffixes to integer literal constants for C/C++ */
+#define _U_(x)         x ## U            /**< C code: Unsigned integer literal constant value */
+#define _L_(x)         x ## L            /**< C code: Long integer literal constant value */
+#define _UL_(x)        x ## UL           /**< C code: Unsigned Long integer literal constant value */
+#else /* Assembler */
+#define _U_(x)         x                 /**< Assembler: Unsigned integer literal constant value */
+#define _L_(x)         x                 /**< Assembler: Long integer literal constant value */
+#define _UL_(x)        x                 /**< Assembler: Unsigned Long integer literal constant value */
+#endif /* !(defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
+#endif /* SKIP_INTEGER_LITERALS */
 
 /* ************************************************************************** */
 /**  CMSIS DEFINITIONS FOR SAMR21E17A */
@@ -542,21 +548,21 @@ void PTC_Handler                 ( void );
 /**  MEMORY MAPPING DEFINITIONS FOR SAMR21E17A */
 /* ************************************************************************** */
 
-#define FLASH_SIZE            _UL(0x00020000) /* 128 kB */
+#define FLASH_SIZE            _UL_(0x00020000) /* 128 kB */
 #define FLASH_PAGE_SIZE       64
 #define FLASH_NB_OF_PAGES     2048
 #define FLASH_USER_PAGE_SIZE  64
-#define HMCRAMC0_SIZE         _UL(0x00008000) /* 32 kB */
+#define HMCRAMC0_SIZE         _UL_(0x00008000) /* 32 kB */
 
-#define FLASH_ADDR            _UL(0x00000000) /**< FLASH base address */
-#define FLASH_USER_PAGE_ADDR  _UL(0x00800000) /**< FLASH_USER_PAGE base address */
-#define HMCRAMC0_ADDR         _UL(0x20000000) /**< HMCRAMC0 base address */
-#define HPB0_ADDR             _UL(0x40000000) /**< HPB0 base address */
-#define HPB1_ADDR             _UL(0x41000000) /**< HPB1 base address */
-#define HPB2_ADDR             _UL(0x42000000) /**< HPB2 base address */
-#define PPB_ADDR              _UL(0xE0000000) /**< PPB base address */
+#define FLASH_ADDR            _UL_(0x00000000) /**< FLASH base address */
+#define FLASH_USER_PAGE_ADDR  _UL_(0x00800000) /**< FLASH_USER_PAGE base address */
+#define HMCRAMC0_ADDR         _UL_(0x20000000) /**< HMCRAMC0 base address */
+#define HPB0_ADDR             _UL_(0x40000000) /**< HPB0 base address */
+#define HPB1_ADDR             _UL_(0x41000000) /**< HPB1 base address */
+#define HPB2_ADDR             _UL_(0x42000000) /**< HPB2 base address */
+#define PPB_ADDR              _UL_(0xE0000000) /**< PPB base address */
 
-#define DSU_DID_RESETVALUE    _UL(0x1001031D)
+#define DSU_DID_RESETVALUE    _UL_(0x1001031D)
 #define EIC_EXTINT_NUM        16
 #define PORT_GROUPS           3
 #define SIP_CONFIG            RF233
