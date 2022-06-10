@@ -2761,7 +2761,7 @@ typedef struct {
   __O  uint32_t PWM_WPCR;       /**< (PWM Offset: 0xE4) PWM Write Protection Control Register */
   __I  uint32_t PWM_WPSR;       /**< (PWM Offset: 0xE8) PWM Write Protection Status Register */
   __I  uint8_t                        Reserved6[68];
-       PwmCmp   PwmCmp[PWMCMP_NUMBER]; /**< Offset: 0x130 PWM Comparison 0 Value Register */
+       PwmCmp   PWM_CMP[PWMCMP_NUMBER]; /**< Offset: 0x130 PWM Comparison 0 Value Register */
   __I  uint8_t                        Reserved7[80];
        PwmChNum PWM_CH_NUM[PWMCHNUM_NUMBER]; /**< Offset: 0x200 PWM Channel Mode Register */
   __I  uint8_t                        Reserved8[384];
@@ -2844,7 +2844,7 @@ typedef struct {
   __O  PWM_WPCR_Type                  PWM_WPCR;       /**< Offset: 0xE4 ( /W  32) PWM Write Protection Control Register */
   __I  PWM_WPSR_Type                  PWM_WPSR;       /**< Offset: 0xE8 (R/   32) PWM Write Protection Status Register */
   __I  uint8_t                        Reserved6[68];
-       PwmCmp                         PwmCmp[8];      /**< Offset: 0x130 PWM Comparison 0 Value Register */
+       PwmCmp                         PWM_CMP[8];      /**< Offset: 0x130 PWM Comparison 0 Value Register */
   __I  uint8_t                        Reserved7[80];
        PwmChNum                       PWM_CH_NUM[4];    /**< Offset: 0x200 PWM Channel Mode Register */
   __I  uint8_t                        Reserved8[384];
