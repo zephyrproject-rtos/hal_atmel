@@ -38,3 +38,4 @@ License Link:
 Patch List:
    * Add deprecated usart macros
    * Fix XDMAC_CHID register name
+   * Fix PWM_CH_NUM register name
