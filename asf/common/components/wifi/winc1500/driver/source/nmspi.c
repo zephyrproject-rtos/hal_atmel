@@ -743,6 +743,7 @@ _error_:
 	return result;
 }
 #endif
+#if defined USE_OLD_SPI_SW
 static sint8 spi_data_read(uint8 *b, uint16 sz,uint8 clockless)
 {
 	sint16 retry, ix, nbytes;
@@ -811,6 +812,7 @@ static sint8 spi_data_read(uint8 *b, uint16 sz,uint8 clockless)
 
 	return result;
 }
+#endif
 
 static sint8 spi_data_write(uint8 *b, uint16 sz)
 {
