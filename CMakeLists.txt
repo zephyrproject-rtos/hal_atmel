@@ -1,2 +1,2 @@
-zephyr_include_directories(include)
+zephyr_include_directories_ifdef(CONFIG_ASF include)
 add_subdirectory(asf)
