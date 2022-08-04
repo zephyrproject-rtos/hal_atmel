@@ -941,7 +941,7 @@ void XDMAC_Handler                 ( void );
 /* ************************************************************************** */
 #define JTAGID                   _UL_(0X05B3D03F)
 #define CHIP_JTAGID              _UL_(0X05B3D03F)
-#define CHIP_CIDR                _UL_(0XA1220C00)
+#define CHIP_CIDR                _UL_(0XA1220C01)
 #define CHIP_EXID                _UL_(0X00000002)
 
 /* ************************************************************************** */
