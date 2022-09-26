@@ -808,6 +808,9 @@ void TWIM3_Handler               ( void );
 #define US_MR_NBSTOP_2_BIT    US_MR_NBSTOP_2
 #define US_MR_NBSTOP_1_5_BIT  US_MR_NBSTOP_1_5
 #define US_MR_NBSTOP_1_BIT    US_MR_NBSTOP_1
+#define US_MR_CHRL_5_BIT      US_MR_CHRL_5
+#define US_MR_CHRL_6_BIT      US_MR_CHRL_6
+#define US_MR_CHRL_7_BIT      US_MR_CHRL_7
 #define US_MR_CHRL_8_BIT      US_MR_CHRL_8
 #define US_MR_PAR_NO          US_MR_PAR_NONE
 #define US_MR_PAR_MULTIDROP   US_MR_PAR_MULTI
