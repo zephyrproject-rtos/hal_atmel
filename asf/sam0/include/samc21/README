@@ -1,0 +1,39 @@
+Atmel SAM C21
+#############
+
+Origin:
+   Microchip Packs Repository
+   http://packs.download.atmel.com/
+
+   Atmel SAMC21 Series Device Support (1.2.176)
+   http://packs.download.atmel.com/Atmel.SAMC21_DFP.1.2.176.atpack
+
+Status:
+   version 1.2.176
+
+Purpose:
+   Official package for SAM C21.
+
+Description:
+   Atmel Software Framework (ASF) provides a set of low-level
+   header files that give access to different hardware
+   peripherals of Atmel's ICs.
+
+URL:
+   http://packs.download.atmel.com/
+   http://packs.download.atmel.com/Atmel.SAMC21_DFP.1.2.176.atpack
+
+commit:
+  n/a
+
+Maintained-by:
+   External
+
+License:
+   Apache-2.0
+
+License Link:
+   https://www.apache.org/licenses/LICENSE-2.0
+
+Patch List:
+   * Fix ADC_INPUTCTRL ground mask value.
