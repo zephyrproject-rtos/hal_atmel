@@ -40,6 +40,7 @@
 #define REG_SUPC_WUMR           (0x400E181C) /**< (SUPC) Supply Controller Wake-up Mode Register */
 #define REG_SUPC_WUIR           (0x400E1820) /**< (SUPC) Supply Controller Wake-up Inputs Register */
 #define REG_SUPC_SR             (0x400E1824) /**< (SUPC) Supply Controller Status Register */
+#define REG_SYSC_WPMR           (0x400E18E4) /**< (SUPC) System Controller Write Protection Mode Register */
 
 #else
 
@@ -49,10 +50,11 @@
 #define REG_SUPC_WUMR           (*(__IO uint32_t*)0x400E181CU) /**< (SUPC) Supply Controller Wake-up Mode Register */
 #define REG_SUPC_WUIR           (*(__IO uint32_t*)0x400E1820U) /**< (SUPC) Supply Controller Wake-up Inputs Register */
 #define REG_SUPC_SR             (*(__I  uint32_t*)0x400E1824U) /**< (SUPC) Supply Controller Status Register */
+#define REG_SYSC_WPMR           (*(__IO uint32_t*)0x400E18E4U) /**< (SUPC) System Controller Write Protection Mode Register */
 
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for SUPC peripheral ========== */
-#define SUPC_INSTANCE_ID                         0          
+#define SUPC_INSTANCE_ID                         0
 
 #endif /* _SAMV71_SUPC_INSTANCE_ */

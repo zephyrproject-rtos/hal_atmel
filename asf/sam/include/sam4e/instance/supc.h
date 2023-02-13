@@ -38,6 +38,7 @@
 #define REG_SUPC_WUMR          (0x400E181CU) /**< \brief (SUPC) Supply Controller Wake Up Mode Register */
 #define REG_SUPC_WUIR          (0x400E1820U) /**< \brief (SUPC) Supply Controller Wake Up Inputs Register */
 #define REG_SUPC_SR            (0x400E1824U) /**< \brief (SUPC) Supply Controller Status Register */
+#define REG_SYSC_WPMR          (0x400E18E4U) /**< \brief (SUPC) System Controller Write Protection Mode Register */
 #else
 #define REG_SUPC_CR   (*(WoReg*)0x400E1810U) /**< \brief (SUPC) Supply Controller Control Register */
 #define REG_SUPC_SMMR (*(RwReg*)0x400E1814U) /**< \brief (SUPC) Supply Controller Supply Monitor Mode Register */
@@ -45,6 +46,7 @@
 #define REG_SUPC_WUMR (*(RwReg*)0x400E181CU) /**< \brief (SUPC) Supply Controller Wake Up Mode Register */
 #define REG_SUPC_WUIR (*(RwReg*)0x400E1820U) /**< \brief (SUPC) Supply Controller Wake Up Inputs Register */
 #define REG_SUPC_SR   (*(RoReg*)0x400E1824U) /**< \brief (SUPC) Supply Controller Status Register */
+#define REG_SYSC_WPMR (*(RwReg*)0x400E18E4U) /**< \brief (SUPC) System Controller Write Protection Mode Register */
 #endif /* (defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #endif /* _SAM4E_SUPC_INSTANCE_ */
