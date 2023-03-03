@@ -1,0 +1,554 @@
+# Copyright (c) 2023 Chen Xingyu <hi@xingrz.me>
+# SPDX-License-Identifier: Apache-2.0
+#
+# Sources:
+# - SAM3U Datasheet (Revision C - 03/15)
+#
+# Pin codes:
+#
+# - 100 pins: c
+# - 144 pins: e
+
+model: atmel,sam
+
+family: sam3u
+
+map: SAM_PINMUX
+
+series: [3uX]
+
+variants:
+  - pincode: c
+    series: [3uX]
+  - pincode: e
+    series: [3uX]
+
+pins:
+  pa0:
+    pincodes: [c, e]
+    periph:
+      - [a, tc0, tiob0]
+      - [b, spi, npcs1]
+    extra:
+      - [x, supc, wkup0]
+  pa1:
+    pincodes: [c, e]
+    periph:
+      - [a, tc0, tioa0]
+      - [b, spi, npcs2]
+    extra:
+      - [x, supc, wkup1]
+  pa2:
+    pincodes: [c, e]
+    periph:
+      - [a, tc0, tclk0]
+      - [b, adc, adtrg]
+    extra:
+      - [x, supc, wkup2]
+  pa3:
+    pincodes: [c, e]
+    periph:
+      - [a, hsmci, mcck]
+      - [b, pmc, pck1]
+  pa4:
+    pincodes: [c, e]
+    periph:
+      - [a, hsmci, mccda]
+      - [b, pwm, pwmh0]
+  pa5:
+    pincodes: [c, e]
+    periph:
+      - [a, hsmci, mcda0]
+      - [b, pwm, pwmh1]
+  pa6:
+    pincodes: [c, e]
+    periph:
+      - [a, hsmci, mcda1]
+      - [b, pwm, pwmh2]
+  pa7:
+    pincodes: [c, e]
+    periph:
+      - [a, hsmci, mcda2]
+      - [b, pwm, pwml0]
+  pa8:
+    pincodes: [c, e]
+    periph:
+      - [a, hsmci, mcda3]
+      - [b, pwm, pwml1]
+  pa9:
+    pincodes: [c, e]
+    periph:
+      - [a, twi0, twd0]
+      - [b, pwm, pwml2]
+    extra:
+      - [x, supc, wkup3]
+  pa10:
+    pincodes: [c, e]
+    periph:
+      - [a, twi0, twck0]
+      - [b, pwm, pwml3]
+    extra:
+      - [x, supc, wkup4]
+  pa11:
+    pincodes: [c, e]
+    periph:
+      - [a, uart, urxd]
+      - [b, pwm, pwmfi0]
+  pa12:
+    pincodes: [c, e]
+    periph:
+      - [a, uart, utxd]
+      - [b, pwm, pwmfi1]
+  pa13:
+    pincodes: [c, e]
+    periph:
+      - [a, spi, miso]
+  pa14:
+    pincodes: [c, e]
+    periph:
+      - [a, spi, mosi]
+  pa15:
+    pincodes: [c, e]
+    periph:
+      - [a, spi, spck]
+      - [b, pwm, pwmh2]
+  pa16:
+    pincodes: [c, e]
+    periph:
+      - [a, spi, npcs0]
+      - [b, ebi, ncs1]
+    extra:
+      - [x, supc, wkup5]
+  pa17:
+    pincodes: [c, e]
+    periph:
+      - [a, usart0, sck0]
+      - [b, adc, ad12btrg]
+    extra:
+      - [x, supc, wkup6]
+  pa18:
+    pincodes: [c, e]
+    periph:
+      - [a, usart0, txd0]
+      - [b, pwm, pwmfi2]
+    extra:
+      - [x, supc, wkup7]
+  pa19:
+    pincodes: [c, e]
+    periph:
+      - [a, usart0, rxd0]
+      - [b, spi, npcs3]
+    extra:
+      - [x, supc, wkup8]
+  pa20:
+    pincodes: [c, e]
+    periph:
+      - [a, usart1, txd1]
+      - [b, pwm, pwmh3]
+    extra:
+      - [x, supc, wkup9]
+  pa21:
+    pincodes: [c, e]
+    periph:
+      - [a, usart1, rxd1]
+      - [b, pmc, pck0]
+    extra:
+      - [x, supc, wkup10]
+  pa22:
+    pincodes: [c, e]
+    periph:
+      - [a, usart2, txd2]
+      - [b, usart1, rts1]
+    extra:
+      - [x, adc, ad12b0]
+  pa23:
+    pincodes: [c, e]
+    periph:
+      - [a, usart2, rxd2]
+      - [b, usart1, cts1]
+  pa24:
+    pincodes: [e]
+    periph:
+      - [a, twi1, twd1]
+      - [b, usart1, sck1]
+    extra:
+      - [x, supc, wkup11]
+  pa25:
+    pincodes: [e]
+    periph:
+      - [a, twi1, twck1]
+      - [b, usart2, sck2]
+    extra:
+      - [x, supc, wkup12]
+  pa26:
+    pincodes: [c, e]
+    periph:
+      - [a, ssc, td]
+      - [b, tc0, tclk2]
+  pa27:
+    pincodes: [c, e]
+    periph:
+      - [a, ssc, rd]
+      - [b, pmc, pck0]
+  pa28:
+    pincodes: [c, e]
+    periph:
+      - [a, ssc, tk]
+      - [b, pwm, pwmh0]
+  pa29:
+    pincodes: [c, e]
+    periph:
+      - [a, ssc, rk]
+      - [b, pwm, pwmh1]
+  pa30:
+    pincodes: [c, e]
+    periph:
+      - [a, ssc, tf]
+      - [b, tc0, tioa2]
+    extra:
+      - [x, adc, ad12b1]
+  pa31:
+    pincodes: [c, e]
+    periph:
+      - [a, ssc, rf]
+      - [b, tc0, tiob2]
+  pb0:
+    pincodes: [c, e]
+    periph:
+      - [a, pwm, pwmh0]
+      - [b, ebi, a2]
+    extra:
+      - [x, supc, wkup13]
+  pb1:
+    pincodes: [c, e]
+    periph:
+      - [a, pwm, pwmh1]
+      - [b, ebi, a3]
+    extra:
+      - [x, supc, wkup14]
+  pb2:
+    pincodes: [c, e]
+    periph:
+      - [a, pwm, pwmh2]
+      - [b, ebi, a4]
+    extra:
+      - [x, supc, wkup15]
+  pb3:
+    pincodes: [c, e]
+    periph:
+      - [a, pwm, pwmh3]
+      - [b, ebi, a5]
+    extra:
+      - [x, adc, ad12b2]
+  pb4:
+    pincodes: [c, e]
+    periph:
+      - [a, tc0, tclk1]
+      - [b, ebi, a6]
+    extra:
+      - [x, adc, ad12b3]
+  pb5:
+    pincodes: [c, e]
+    periph:
+      - [a, tc0, tioa1]
+      - [b, ebi, a7]
+    extra:
+      - [x, adc, ad0]
+  pb6:
+    pincodes: [c, e]
+    periph:
+      - [a, tc0, tiob1]
+      - [b, ebi, d15]
+    extra:
+      - [x, adc, ad1]
+  pb7:
+    pincodes: [c, e]
+    periph:
+      - [a, usart0, rts0]
+      - [b, ebi, a0_nbs0]
+    extra:
+      - [x, adc, ad2]
+  pb8:
+    pincodes: [c, e]
+    periph:
+      - [a, usart0, cts0]
+      - [b, ebi, a1]
+    extra:
+      - [x, adc, ad3]
+  pb9:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, d0]
+      - [b, usart0, dtr0]
+  pb10:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, d1]
+      - [b, usart0, dsr0]
+  pb11:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, d2]
+      - [b, usart0, dcd0]
+  pb12:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, d3]
+      - [b, usart0, ri0]
+  pb13:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, d4]
+      - [b, pwm, pwmh0]
+  pb14:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, d5]
+      - [b, pwm, pwmh1]
+  pb15:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, d6]
+      - [b, pwm, pwmh2]
+  pb16:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, d7]
+      - [b, pwm, pwmh3]
+  pb17:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, nandoe]
+      - [b, pwm, pwml0]
+  pb18:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, nandwe]
+      - [b, pwm, pwml1]
+  pb19:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, nrd]
+      - [b, pwm, pwml2]
+  pb20:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, ncs0]
+      - [b, pwm, pwml3]
+  pb21:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, a21_nandale]
+      - [b, usart2, rts2]
+  pb22:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, a22_nandcle]
+      - [b, usart2, cts2]
+  pb23:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, nwr0_nwe]
+      - [b, pmc, pck2]
+  pb24:
+    pincodes: [c, e]
+    periph:
+      - [a, ebi, nandrdy]
+      - [b, pmc, pck1]
+  pb25:
+    pincodes: [e]
+    periph:
+      - [a, ebi, d8]
+      - [b, pwm, pwml0]
+  pb26:
+    pincodes: [e]
+    periph:
+      - [a, ebi, d9]
+      - [b, pwm, pwml1]
+  pb27:
+    pincodes: [e]
+    periph:
+      - [a, ebi, d10]
+      - [b, pwm, pwml2]
+  pb28:
+    pincodes: [e]
+    periph:
+      - [a, ebi, d11]
+      - [b, pwm, pwml3]
+  pb29:
+    pincodes: [e]
+    periph:
+      - [a, ebi, d12]
+  pb30:
+    pincodes: [e]
+    periph:
+      - [a, ebi, d13]
+  pb31:
+    pincodes: [e]
+    periph:
+      - [a, ebi, d14]
+  pc0:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a2]
+  pc1:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a3]
+  pc2:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a4]
+  pc3:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a5]
+      - [b, spi, npcs1]
+  pc4:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a6]
+      - [b, spi, npcs2]
+  pc5:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a7]
+      - [b, spi, npcs3]
+  pc6:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a8]
+      - [b, pwm, pwml0]
+  pc7:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a9]
+      - [b, pwm, pwml1]
+  pc8:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a10]
+      - [b, pwm, pwml2]
+  pc9:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a11]
+      - [b, pwm, pwml3]
+  pc10:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a12]
+      - [b, usart3, cts3]
+  pc11:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a13]
+      - [b, usart3, rts3]
+  pc12:
+    pincodes: [e]
+    periph:
+      - [a, ebi, ncs1]
+      - [b, usart3, txd3]
+  pc13:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a2]
+      - [b, usart3, rxd3]
+  pc14:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a3]
+      - [b, spi, npcs2]
+  pc15:
+    pincodes: [e]
+    periph:
+      - [a, ebi, nwr1_nbs1]
+    extra:
+      - [x, adc, ad12b4]
+  pc16:
+    pincodes: [e]
+    periph:
+      - [a, ebi, ncs2]
+      - [b, pwm, pwml3]
+    extra:
+      - [x, adc, ad12b5]
+  pc17:
+    pincodes: [e]
+    periph:
+      - [a, ebi, ncs3]
+    extra:
+      - [x, adc, ad12b6]
+  pc18:
+    pincodes: [e]
+    periph:
+      - [a, ebi, nwait]
+    extra:
+      - [x, adc, ad12b7]
+  pc19:
+    pincodes: [e]
+    periph:
+      - [a, usart3, sck3]
+      - [b, spi, npcs1]
+  pc20:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a14]
+  pc21:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a15]
+  pc22:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a16]
+  pc23:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a17]
+  pc24:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a18]
+      - [b, pwm, pwmh0]
+  pc25:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a19]
+      - [b, pwm, pwmh1]
+  pc26:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a20]
+      - [b, pwm, pwmh2]
+  pc27:
+    pincodes: [e]
+    periph:
+      - [a, ebi, a23]
+      - [b, pwm, pwmh3]
+  pc28:
+    pincodes: [e]
+    periph:
+      - [b, hsmci, mcda4]
+    extra:
+      - [x, adc, ad4]
+  pc29:
+    pincodes: [e]
+    periph:
+      - [a, pwm, pwml0]
+      - [b, hsmci, mcda5]
+    extra:
+      - [x, adc, ad5]
+  pc30:
+    pincodes: [e]
+    periph:
+      - [a, pwm, pwml1]
+      - [b, hsmci, mcda6]
+    extra:
+      - [x, adc, ad6]
+  pc31:
+    pincodes: [e]
+    periph:
+      - [a, pwm, pwml2]
+      - [b, hsmci, mcda7]
+    extra:
+      - [x, adc, ad7]

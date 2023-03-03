@@ -1,0 +1,39 @@
+Atmel SAM3U
+###########
+
+Origin:
+   Microchip Packs Repository
+   http://packs.download.atmel.com/
+
+   Atmel SAM4E Series Device Support (1.0.49)
+   http://packs.download.atmel.com/Atmel.SAM3U_DFP.1.0.49.atpack
+
+Status:
+   version 1.0.49
+
+Purpose:
+   Official package for SAM3U.
+
+Description:
+   Atmel Software Framework (ASF) provides a set of low-level
+   header files that give access to different hardware
+   peripherals of Atmel's ICs.
+
+URL:
+   http://packs.download.atmel.com/
+   http://packs.download.atmel.com/Atmel.SAM3U_DFP.1.0.49.atpack
+
+commit:
+   n/a
+
+Maintained-by:
+   External
+
+License:
+   SAM Software Package License
+
+License Link:
+   n/a
+
+Patch Lst:
+   n/a
