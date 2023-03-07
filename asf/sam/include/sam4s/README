@@ -1,21 +1,21 @@
 # Copyright (c) 2023 Gerson Fernando Budke
 # SPDX-License-Identifier: Apache-2.0
 
-Atmel SAM4L
+Atmel SAM4S
 ###########
 
 Origin:
    Microchip Packs Repository
    http://packs.download.atmel.com/
 
-   Atmel SAM4L Series Device Support (1.1.61)
-   http://packs.download.atmel.com/Atmel.SAM4L_DFP.1.1.61.atpack
+   Atmel SAM4E Series Device Support (1.1.56)
+   http://packs.download.atmel.com/Atmel.SAM4S_DFP.1.1.56.atpack
 
 Status:
-   version 1.1.61
+   version 1.1.56
 
 Purpose:
-   Official package for SAM4L.
+   Official package for SAM4S.
 
 Description:
    Atmel Software Framework (ASF) provides a set of low-level
@@ -24,20 +24,19 @@ Description:
 
 URL:
    http://packs.download.atmel.com/
-   http://packs.download.atmel.com/Atmel.SAM4L_DFP.1.1.61.atpack
+   http://packs.download.atmel.com/Atmel.SAM4E_DFP.1.1.56.atpack
 
 commit:
-  n/a
+   n/a
 
 Maintained-by:
    External
 
 License:
-   Apache-2.0
+   SAM Software Package License
 
 License Link:
-   https://www.apache.org/licenses/LICENSE-2.0
+   n/a
 
 Patch Lst:
-   * Add MPU peripheral in device file. Updated header files.
-   * Updated documentation links.
+   * Fix TC registers macros
