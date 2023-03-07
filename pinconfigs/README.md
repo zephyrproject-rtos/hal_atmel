@@ -1,4 +1,4 @@
-# Atmel SAM pin configurations
+# Atmel SAM/SAM0 pin configurations
 
 This directory contains a set of files describing valid pin configurations for
 multiple Atmel Smart Arm MCUs (SAM) devices. This configuration files maps a

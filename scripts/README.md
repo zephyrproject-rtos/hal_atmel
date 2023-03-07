@@ -1,17 +1,17 @@
-# hal_atmel scripts
+# Atmel SAM/SAM0 scripts
 
 This folder contains `hal_atmel` scripts.
 
-# Dependencies
+## Dependencies
 
-Scripts require Python 3.6+ and the Python dependencies listed in
+Scripts require Python 3.7+ and the Python dependencies listed in
 `requirements.txt`. They can be installed by running:
 
 ```
 pip install -r scripts/requirements.txt
 ```
 
-# Lint
+## Lint
 
 Scripts should be formatted using `black` and linted using `flake8`.
 
@@ -21,7 +21,7 @@ Such development tools can be installed using:
 pip install -r scripts/requirements-dev.txt
 ```
 
-# Tests
+## Tests
 
 Before running tests make sure to have testing dependencies installed. They
 can be installed by running:
