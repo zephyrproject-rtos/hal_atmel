@@ -48,3 +48,4 @@ Patch Lst:
    * Fix PMC registers macros
    * Fix TC registers macros
    * Fix RSTC registers macros
+   * Fix PWM registers macros
