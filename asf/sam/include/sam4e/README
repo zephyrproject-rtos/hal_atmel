@@ -47,3 +47,4 @@ Patch Lst:
    * Add WDT_CR_KEY_PASSWD register macro
    * Fix PMC registers macros
    * Fix TC registers macros
+   * Fix RSTC registers macros
