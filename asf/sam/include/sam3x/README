@@ -41,3 +41,4 @@ License Link:
 Patch Lst:
    * Fix TC registers macros
    * Fix RSTC registers macros
+   * Fix PWM registers macros
