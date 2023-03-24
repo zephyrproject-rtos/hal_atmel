@@ -36,4 +36,4 @@ License Link:
    n/a
 
 Patch Lst:
-   n/a
+   * Fix RSTC registers macros
