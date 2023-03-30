@@ -389,7 +389,6 @@ void XDMAC_Handler                 ( void );
 #define __DTCM_PRESENT                 1 /**< Data TCM present                                                          */
 #define __DEBUG_LVL                    1
 #define __TRACE_LVL                    1
-#define __LITTLE_ENDIAN                1
 #define __ARCH_ARM                     1
 #define __ARCH_ARM_CORTEX_M            1
 #define __DEVICE_IS_SAM                1
