@@ -375,7 +375,6 @@ void TWIM3_Handler               ( void );
  * \brief Configuration of the Cortex-M4 Processor and Core Peripherals
  */
 
-#define LITTLE_ENDIAN          1        
 #define __BB_PRESENT           0         /*!< BIT_BANDING present or not */
 #define __CLKGATE_PRESENT      1         /*!< CLKGATE present or not */
 #define __CM4_REV              1         /*!< Core revision r0p1 */
