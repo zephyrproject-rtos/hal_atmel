@@ -47,6 +47,7 @@
 #define REG_RTC_IMR             (0x400E1888) /**< (RTC) Interrupt Mask Register */
 #define REG_RTC_VER             (0x400E188C) /**< (RTC) Valid Entry Register */
 #define REG_RTC_VERSION         (0x400E195C) /**< (RTC) Version Register */
+#define REG_RTC_WPMR            (0x400E18E4) /**< (RTC) Write Protect Mode Register */
 
 #else
 
@@ -63,10 +64,11 @@
 #define REG_RTC_IMR             (*(__I  uint32_t*)0x400E1888U) /**< (RTC) Interrupt Mask Register */
 #define REG_RTC_VER             (*(__I  uint32_t*)0x400E188CU) /**< (RTC) Valid Entry Register */
 #define REG_RTC_VERSION         (*(__I  uint32_t*)0x400E195CU) /**< (RTC) Version Register */
+#define REG_RTC_WPMR            (*(__O  uint32_t*)0x400E18E4U) /**< (RTC) Write Protect Mode Register */
 
 #endif /* (defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* ========== Instance Parameter definitions for RTC peripheral ========== */
-#define RTC_INSTANCE_ID                          2          
+#define RTC_INSTANCE_ID                          2
 
 #endif /* _SAMV71_RTC_INSTANCE_ */
