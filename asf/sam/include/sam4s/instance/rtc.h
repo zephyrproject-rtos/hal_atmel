@@ -44,6 +44,7 @@
   #define REG_RTC_IDR                     (0x400E1484U) /**< \brief (RTC) Interrupt Disable Register */
   #define REG_RTC_IMR                     (0x400E1488U) /**< \brief (RTC) Interrupt Mask Register */
   #define REG_RTC_VER                     (0x400E148CU) /**< \brief (RTC) Valid Entry Register */
+  #define REG_RTC_WPMR                    (0x400E14E4U) /**< \brief (RTC) Write Protect Mode Register */
 #else
   #define REG_RTC_CR     (*(__IO uint32_t*)0x400E1460U) /**< \brief (RTC) Control Register */
   #define REG_RTC_MR     (*(__IO uint32_t*)0x400E1464U) /**< \brief (RTC) Mode Register */
@@ -57,6 +58,7 @@
   #define REG_RTC_IDR    (*(__O  uint32_t*)0x400E1484U) /**< \brief (RTC) Interrupt Disable Register */
   #define REG_RTC_IMR    (*(__I  uint32_t*)0x400E1488U) /**< \brief (RTC) Interrupt Mask Register */
   #define REG_RTC_VER    (*(__I  uint32_t*)0x400E148CU) /**< \brief (RTC) Valid Entry Register */
+  #define REG_RTC_WPMR   (*(__O  uint32_t*)0x400E14E4U) /**< \brief (RTC) Write Protect Mode Register */
 #endif /* (defined(__ASSEMBLY__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 #endif /* _SAM4S_RTC_INSTANCE_ */
