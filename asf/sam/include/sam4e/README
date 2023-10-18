@@ -1,3 +1,6 @@
+# Copyright (c) 2023 Gerson Fernando Budke
+# SPDX-License-Identifier: Apache-2.0
+
 Atmel SAM4E
 ###########
 
@@ -38,4 +41,12 @@ License Link:
 Patch Lst:
    * Add MPU peripheral in device file
    * Fix CHIPID_EXID for SAM4E8C and SAM4E16C
-
+   * Add SPI_CSR_BITS register macro
+   * Fix GMAC_UR_RMII register macro
+   * Fix PIO_PD6A_GRX1 register macro
+   * Add WDT_CR_KEY_PASSWD register macro
+   * Fix PMC registers macros
+   * Fix TC registers macros
+   * Fix RSTC registers macros
+   * Fix PWM registers macros
+   * Fix AFEC registers macros
