@@ -11,22 +11,22 @@
  * @{
  */
 
-#define SAM_PINMUX_PORT_a	0U
-#define SAM_PINMUX_PORT_b	1U
-#define SAM_PINMUX_PORT_c	2U
-#define SAM_PINMUX_PORT_d	3U
-#define SAM_PINMUX_PORT_e	4U
-#define SAM_PINMUX_PORT_f	5U
-#define SAM_PINMUX_PORT_g	6U
-#define SAM_PINMUX_PORT_h	7U
-#define SAM_PINMUX_PORT_i	8U
-#define SAM_PINMUX_PORT_j	9U
-#define SAM_PINMUX_PORT_k	10U
-#define SAM_PINMUX_PORT_l	11U
-#define SAM_PINMUX_PORT_m	12U
-#define SAM_PINMUX_PORT_n	13U
-#define SAM_PINMUX_PORT_o	14U
-#define SAM_PINMUX_PORT_p	15U
+#define SAM_PINMUX_PORT_a		0U
+#define SAM_PINMUX_PORT_b		1U
+#define SAM_PINMUX_PORT_c		2U
+#define SAM_PINMUX_PORT_d		3U
+#define SAM_PINMUX_PORT_e		4U
+#define SAM_PINMUX_PORT_f		5U
+#define SAM_PINMUX_PORT_g		6U
+#define SAM_PINMUX_PORT_h		7U
+#define SAM_PINMUX_PORT_i		8U
+#define SAM_PINMUX_PORT_j		9U
+#define SAM_PINMUX_PORT_k		10U
+#define SAM_PINMUX_PORT_l		11U
+#define SAM_PINMUX_PORT_m		12U
+#define SAM_PINMUX_PORT_n		13U
+#define SAM_PINMUX_PORT_o		14U
+#define SAM_PINMUX_PORT_p		15U
 
 /** @} */
 
@@ -36,29 +36,45 @@
  */
 
 /** GPIO */
-#define SAM_PINMUX_PERIPH_gpio	0U
+#define SAM_PINMUX_PERIPH_gpio		0U
 /** Peripherals */
-#define SAM_PINMUX_PERIPH_a	0U
-#define SAM_PINMUX_PERIPH_b	1U
-#define SAM_PINMUX_PERIPH_c	2U
-#define SAM_PINMUX_PERIPH_d	3U
-#define SAM_PINMUX_PERIPH_e	4U
-#define SAM_PINMUX_PERIPH_f	5U
-#define SAM_PINMUX_PERIPH_g	6U
-#define SAM_PINMUX_PERIPH_h	7U
-#define SAM_PINMUX_PERIPH_i	8U
-#define SAM_PINMUX_PERIPH_j	9U
-#define SAM_PINMUX_PERIPH_k	10U
-#define SAM_PINMUX_PERIPH_l	11U
-#define SAM_PINMUX_PERIPH_m	12U
-#define SAM_PINMUX_PERIPH_n	13U
+#define SAM_PINMUX_PERIPH_a		0U
+#define SAM_PINMUX_PERIPH_b		1U
+#define SAM_PINMUX_PERIPH_c		2U
+#define SAM_PINMUX_PERIPH_d		3U
+#define SAM_PINMUX_PERIPH_e		4U
+#define SAM_PINMUX_PERIPH_f		5U
+#define SAM_PINMUX_PERIPH_g		6U
+#define SAM_PINMUX_PERIPH_h		7U
+#define SAM_PINMUX_PERIPH_i		8U
+#define SAM_PINMUX_PERIPH_j		9U
+#define SAM_PINMUX_PERIPH_k		10U
+#define SAM_PINMUX_PERIPH_l		11U
+#define SAM_PINMUX_PERIPH_m		12U
+#define SAM_PINMUX_PERIPH_n		13U
 /** Extra */
-#define SAM_PINMUX_PERIPH_x	0U
+#define SAM_PINMUX_PERIPH_x		0U
 /** System */
-#define SAM_PINMUX_PERIPH_s	0U
+#define SAM_PINMUX_PERIPH_s		0U
 /** LPM */
-#define SAM_PINMUX_PERIPH_lpm	0U
-
+#define SAM_PINMUX_PERIPH_lpm		0U
+/** Wake-up pin sources */
+#define SAM_PINMUX_PERIPH_wkup0		0U
+#define SAM_PINMUX_PERIPH_wkup1		1U
+#define SAM_PINMUX_PERIPH_wkup2		2U
+#define SAM_PINMUX_PERIPH_wkup3		3U
+#define SAM_PINMUX_PERIPH_wkup4		4U
+#define SAM_PINMUX_PERIPH_wkup5		5U
+#define SAM_PINMUX_PERIPH_wkup6		6U
+#define SAM_PINMUX_PERIPH_wkup7		7U
+#define SAM_PINMUX_PERIPH_wkup8		8U
+#define SAM_PINMUX_PERIPH_wkup9		9U
+#define SAM_PINMUX_PERIPH_wkup10	10U
+#define SAM_PINMUX_PERIPH_wkup11	11U
+#define SAM_PINMUX_PERIPH_wkup12	12U
+#define SAM_PINMUX_PERIPH_wkup13	13U
+#define SAM_PINMUX_PERIPH_wkup14	14U
+#define SAM_PINMUX_PERIPH_wkup15	15U
 /** @} */
 
 /**
@@ -67,15 +83,17 @@
  */
 
 /** Selects pin to be used as GPIO */
-#define SAM_PINMUX_FUNC_gpio	0U
+#define SAM_PINMUX_FUNC_gpio		0U
 /** Selects pin to be used as by some peripheral */
-#define SAM_PINMUX_FUNC_periph	1U
+#define SAM_PINMUX_FUNC_periph		1U
 /** Selects pin to be used as extra function */
-#define SAM_PINMUX_FUNC_extra	2U
+#define SAM_PINMUX_FUNC_extra		2U
 /** Selects pin to be used as system function */
-#define SAM_PINMUX_FUNC_system	3U
+#define SAM_PINMUX_FUNC_system		3U
 /** Selects and configure pin to be used in Low Power Mode */
-#define SAM_PINMUX_FUNC_lpm	4U
+#define SAM_PINMUX_FUNC_lpm		4U
+/** Selects and configure wake-up pin sources Low Power Mode */
+#define SAM_PINMUX_FUNC_wakeup		5U
 
 /** @} */
 
@@ -85,26 +103,26 @@
  */
 
 /** Pinmux bit field position. */
-#define SAM_PINCTRL_PINMUX_POS  (16U)
+#define SAM_PINCTRL_PINMUX_POS  	(16U)
 /** Pinmux bit field mask. */
-#define SAM_PINCTRL_PINMUX_MASK (0xFFFF)
+#define SAM_PINCTRL_PINMUX_MASK 	(0xFFFF)
 
 /** Port field mask. */
-#define SAM_PINMUX_PORT_MSK	(0xFU)
+#define SAM_PINMUX_PORT_MSK		(0xFU)
 /** Port field position. */
-#define SAM_PINMUX_PORT_POS	(0U)
+#define SAM_PINMUX_PORT_POS		(0U)
 /** Pin field mask. */
-#define SAM_PINMUX_PIN_MSK	(0x1FU)
+#define SAM_PINMUX_PIN_MSK		(0x1FU)
 /** Pin field position. */
-#define SAM_PINMUX_PIN_POS	(SAM_PINMUX_PORT_POS + 4U)
+#define SAM_PINMUX_PIN_POS		(SAM_PINMUX_PORT_POS + 4U)
 /** Function field mask. */
-#define SAM_PINMUX_FUNC_MSK	(0x7U)
+#define SAM_PINMUX_FUNC_MSK		(0x7U)
 /** Function field position. */
-#define SAM_PINMUX_FUNC_POS	(SAM_PINMUX_PIN_POS + 5U)
+#define SAM_PINMUX_FUNC_POS		(SAM_PINMUX_PIN_POS + 5U)
 /** Peripheral field mask. */
-#define SAM_PINMUX_PERIPH_MSK	(0xFU)
+#define SAM_PINMUX_PERIPH_MSK		(0xFU)
 /** Peripheral field position. */
-#define SAM_PINMUX_PERIPH_POS	(SAM_PINMUX_FUNC_POS + 3U)
+#define SAM_PINMUX_PERIPH_POS		(SAM_PINMUX_FUNC_POS + 3U)
 
 /** @} */
 

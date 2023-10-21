@@ -83,6 +83,17 @@ def write_gpio_function(f, port, pin_num, fmap, function):
     f.write(f"{define} \\\n\t{define_val}\n")
 
 
+def write_wakeup_function(f, port, pin_num, pinmux, periph,
+                          signal, fmap, function):
+    f.write(f"\n/* p{port.lower()}{pin_num}{pinmux}_{periph}_{signal} "
+            f"*/\n")
+    define = f"#define P{port.upper()}{pin_num.upper()}" \
+             f"{pinmux.upper()}_{periph.upper()}_{signal.upper()}"
+    define_val = f"{fmap}({port.lower()}, {pin_num}, " \
+                 f"{signal.lower()}, {function.lower()})"
+    f.write(f"{define} \\\n\t{define_val}\n")
+
+
 def write_periph_function(f, port, pin_num, pinmux, periph,
                           signal, fmap, function):
     f.write(f"\n/* p{port.lower()}{pin_num}{pinmux}_{periph}_{signal} "
@@ -119,9 +130,15 @@ def generate_atmel_sam_header(outdir, family, fmap, serie,
         for port, pin_num, pinmux, periph, signal, function in pin_cfgs:
             if function in ["gpio", "lpm"]:
                 write_gpio_function(f, port, pin_num, fmap, function)
-            else:
-                write_periph_function(f, port, pin_num, pinmux, periph,
+                continue
+
+            if function in ["wakeup"]:
+                write_wakeup_function(f, port, pin_num, pinmux, periph,
                                       signal, fmap, function)
+                continue
+
+            write_periph_function(f, port, pin_num, pinmux, periph,
+                                  signal, fmap, function)
 
 
 def build_atmel_sam_gpio_sets(pin_cfgs, pin):
@@ -200,6 +217,9 @@ def build_atmel_sam_pin_cfgs(serie, variant, pins):
         if "lpm" in pin_cfg.keys():
             build_atmel_sam_sets(pin_cfgs, pin, pin_cfg["lpm"],
                                  serie, variant, "lpm")
+        if "wakeup" in pin_cfg.keys():
+            build_atmel_sam_sets(pin_cfgs, pin, pin_cfg["wakeup"],
+                                 serie, variant, "wakeup")
 
     return pin_cfgs
 

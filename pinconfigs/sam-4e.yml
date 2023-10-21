@@ -30,7 +30,7 @@ pins:
       - [a, pwm, pwmh0]
       - [b, tc0, tioa0]
       - [c, ebi, a17, [c]]
-    extra:
+    wakeup:
       - [x, supc, wkup0]
   pa1:
     pincodes: [c, e]
@@ -38,14 +38,14 @@ pins:
       - [a, pwm, pwmh1]
       - [b, tc0, tiob0]
       - [c, ebi, a18, [c]]
-    extra:
+    wakeup:
       - [x, supc, wkup1]
   pa2:
     pincodes: [c, e]
     periph:
       - [a, pwm, pwmh2]
       - [c, dacc, datrg]
-    extra:
+    wakeup:
       - [x, supc, wkup2]
   pa3:
     pincodes: [c, e]
@@ -57,14 +57,14 @@ pins:
     periph:
       - [a, twi0, twck]
       - [b, tc0, tclk0]
-    extra:
+    wakeup:
       - [x, supc, wkup3]
   pa5:
     pincodes: [c, e]
     periph:
       - [b, spi, npcs3]
       - [c, uart1, rxd]
-    extra:
+    wakeup:
       - [x, supc, wkup4]
   pa6:
     pincodes: [c, e]
@@ -81,7 +81,7 @@ pins:
     pincodes: [c, e]
     periph:
       - [b, afec0, adtrg]
-    extra:
+    wakeup:
       - [x, supc, wkup5]
     system:
       - [s, supc, xout32]
@@ -91,7 +91,7 @@ pins:
       - [a, uart0, rxd]
       - [b, spi, npcs1]
       - [c, pwm, pwmfi0]
-    extra:
+    wakeup:
       - [x, supc, wkup6]
   pa10:
     pincodes: [c, e]
@@ -103,7 +103,7 @@ pins:
     periph:
       - [a, spi, npcs0]
       - [b, pwm, pwmh0]
-    extra:
+    wakeup:
       - [x, supc, wkup7]
   pa12:
     pincodes: [c, e]
@@ -120,7 +120,7 @@ pins:
     periph:
       - [a, spi, spck]
       - [b, pwm, pwmh3]
-    extra:
+    wakeup:
       - [x, supc, wkup8]
   pa15:
     pincodes: [c, e]
@@ -129,6 +129,7 @@ pins:
       - [c, pwm, pwml3]
     extra:
       - [x, pio, piodcen1]
+    wakeup:
       - [x, supc, wkup14]
   pa16:
     pincodes: [c, e]
@@ -137,6 +138,7 @@ pins:
       - [c, pwm, pwml2]
     extra:
       - [x, pio, piodcen2]
+    wakeup:
       - [x, supc, wkup15]
   pa17:
     pincodes: [c, e]
@@ -159,6 +161,7 @@ pins:
       - [c, ebi, a15, [c]]
     extra:
       - [x, afec0, ad2]
+    wakeup:
       - [x, supc, wkup9]
   pa20:
     pincodes: [c, e]
@@ -167,6 +170,7 @@ pins:
       - [c, ebi, a16, [c]]
     extra:
       - [x, afec0, ad3]
+    wakeup:
       - [x, supc, wkup10]
   pa21:
     pincodes: [c, e]
@@ -247,6 +251,7 @@ pins:
       - [c, hsmci, mcda0]
     extra:
       - [x, pio, piodc6]
+    wakeup:
       - [x, supc, wkup11]
   pa31:
     pincodes: [c, e]
@@ -280,6 +285,7 @@ pins:
       - [c, usart0, cts]
     extra:
       - [x, afec1, ad0]
+    wakeup:
       - [x, supc, wkup12]
   pb3:
     pincodes: [c, e]
@@ -301,7 +307,7 @@ pins:
     periph:
       - [a, twi1, twck]
       - [b, pwm, pwml0]
-    extra:
+    wakeup:
       - [x, supc, wkup13]
     system:
       - [s, jtag, tdo]

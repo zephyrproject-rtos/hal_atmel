@@ -32,7 +32,7 @@
 
 /* pa1x_supc_wkup0 */
 #define PA1X_SUPC_WKUP0 \
-	SAM_PINMUX(a, 1, x, extra)
+	SAM_PINMUX(a, 1, wkup0, wakeup)
 
 /* pa2_gpio */
 #define PA2_GPIO \
@@ -68,7 +68,7 @@
 
 /* pa3x_supc_wkup1 */
 #define PA3X_SUPC_WKUP1 \
-	SAM_PINMUX(a, 3, x, extra)
+	SAM_PINMUX(a, 3, wkup1, wakeup)
 
 /* pa4_gpio */
 #define PA4_GPIO \
@@ -100,7 +100,7 @@
 
 /* pa5x_supc_wkup2 */
 #define PA5X_SUPC_WKUP2 \
-	SAM_PINMUX(a, 5, x, extra)
+	SAM_PINMUX(a, 5, wkup2, wakeup)
 
 /* pa6_gpio */
 #define PA6_GPIO \
@@ -132,7 +132,7 @@
 
 /* pa7x_supc_wkup3 */
 #define PA7X_SUPC_WKUP3 \
-	SAM_PINMUX(a, 7, x, extra)
+	SAM_PINMUX(a, 7, wkup3, wakeup)
 
 /* pa8_gpio */
 #define PA8_GPIO \
@@ -148,7 +148,7 @@
 
 /* pa8x_supc_wkup4 */
 #define PA8X_SUPC_WKUP4 \
-	SAM_PINMUX(a, 8, x, extra)
+	SAM_PINMUX(a, 8, wkup4, wakeup)
 
 /* pa9_gpio */
 #define PA9_GPIO \
@@ -176,7 +176,7 @@
 
 /* pa10x_supc_wkup5 */
 #define PA10X_SUPC_WKUP5 \
-	SAM_PINMUX(a, 10, x, extra)
+	SAM_PINMUX(a, 10, wkup5, wakeup)
 
 /* pa11_gpio */
 #define PA11_GPIO \
@@ -192,7 +192,7 @@
 
 /* pa11x_supc_wkup6 */
 #define PA11X_SUPC_WKUP6 \
-	SAM_PINMUX(a, 11, x, extra)
+	SAM_PINMUX(a, 11, wkup6, wakeup)
 
 /* pa12_gpio */
 #define PA12_GPIO \
@@ -208,7 +208,7 @@
 
 /* pa12x_supc_wkup7 */
 #define PA12X_SUPC_WKUP7 \
-	SAM_PINMUX(a, 12, x, extra)
+	SAM_PINMUX(a, 12, wkup7, wakeup)
 
 /* pa13_gpio */
 #define PA13_GPIO \
@@ -248,7 +248,7 @@
 
 /* pa15x_supc_wkup8 */
 #define PA15X_SUPC_WKUP8 \
-	SAM_PINMUX(a, 15, x, extra)
+	SAM_PINMUX(a, 15, wkup8, wakeup)
 
 /* pa16_gpio */
 #define PA16_GPIO \
@@ -292,7 +292,7 @@
 
 /* pa18x_supc_wkup9 */
 #define PA18X_SUPC_WKUP9 \
-	SAM_PINMUX(a, 18, x, extra)
+	SAM_PINMUX(a, 18, wkup9, wakeup)
 
 /* pa19_gpio */
 #define PA19_GPIO \
@@ -416,7 +416,7 @@
 
 /* pa27x_supc_wkup10 */
 #define PA27X_SUPC_WKUP10 \
-	SAM_PINMUX(a, 27, x, extra)
+	SAM_PINMUX(a, 27, wkup10, wakeup)
 
 /* pa28_gpio */
 #define PA28_GPIO \
@@ -432,7 +432,7 @@
 
 /* pa28x_supc_wkup11 */
 #define PA28X_SUPC_WKUP11 \
-	SAM_PINMUX(a, 28, x, extra)
+	SAM_PINMUX(a, 28, wkup11, wakeup)
 
 /* pa29_gpio */
 #define PA29_GPIO \
@@ -676,7 +676,7 @@
 
 /* pb15x_supc_wkup10 */
 #define PB15X_SUPC_WKUP10 \
-	SAM_PINMUX(b, 15, x, extra)
+	SAM_PINMUX(b, 15, wkup10, wakeup)
 
 /* pb16_gpio */
 #define PB16_GPIO \
@@ -776,7 +776,7 @@
 
 /* pb21x_supc_wkup13 */
 #define PB21X_SUPC_WKUP13 \
-	SAM_PINMUX(b, 21, x, extra)
+	SAM_PINMUX(b, 21, wkup13, wakeup)
 
 /* pb22_gpio */
 #define PB22_GPIO \
@@ -804,7 +804,7 @@
 
 /* pb23x_supc_wkup14 */
 #define PB23X_SUPC_WKUP14 \
-	SAM_PINMUX(b, 23, x, extra)
+	SAM_PINMUX(b, 23, wkup14, wakeup)
 
 /* pb24_gpio */
 #define PB24_GPIO \
@@ -844,7 +844,7 @@
 
 /* pb26x_supc_wkup15 */
 #define PB26X_SUPC_WKUP15 \
-	SAM_PINMUX(b, 26, x, extra)
+	SAM_PINMUX(b, 26, wkup15, wakeup)
 
 /* pb27_gpio */
 #define PB27_GPIO \

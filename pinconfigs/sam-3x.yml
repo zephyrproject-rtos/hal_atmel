@@ -37,7 +37,7 @@ pins:
     periph:
       - [a, can0, rx]
       - [b, pmc, pck0]
-    extra:
+    wakeup:
       - [x, supc, wkup0]
   pa2:
     pincodes: [c, e, h]
@@ -53,6 +53,7 @@ pins:
       - [b, pwm, pwmfi1]
     extra:
       - [x, adc, ad1]
+    wakeup:
       - [x, supc, wkup1]
   pa4:
     pincodes: [c, e, h]
@@ -66,7 +67,7 @@ pins:
     periph:
       - [a, tc0, tioa2]
       - [b, pwm, pwmfi0]
-    extra:
+    wakeup:
       - [x, supc, wkup2]
   pa6:
     pincodes: [c, e, h]
@@ -80,14 +81,14 @@ pins:
     periph:
       - [a, tc0, tclk2]
       - [b, ebi, ncs1, [c]]
-    extra:
+    wakeup:
       - [x, supc, wkup3]
   pa8:
     pincodes: [c, e, h]
     periph:
       - [a, uart, rxd]
       - [b, pwm, pwmh0]
-    extra:
+    wakeup:
       - [x, supc, wkup4]
   pa9:
     pincodes: [c, e, h]
@@ -99,21 +100,21 @@ pins:
     periph:
       - [a, usart0, rxd]
       - [b, dacc, datrg]
-    extra:
+    wakeup:
       - [x, supc, wkup5]
   pa11:
     pincodes: [c, e, h]
     periph:
       - [a, usart0, txd]
       - [b, adc, adtrg]
-    extra:
+    wakeup:
       - [x, supc, wkup6]
   pa12:
     pincodes: [c, e, h]
     periph:
       - [a, usart1, rxd]
       - [b, pwm, pwml1]
-    extra:
+    wakeup:
       - [x, supc, wkup7]
   pa13:
     pincodes: [c, e, h]
@@ -130,7 +131,7 @@ pins:
     periph:
       - [a, usart1, cts]
       - [b, ssc, tf]
-    extra:
+    wakeup:
       - [x, supc, wkup8]
   pa16:
     pincodes: [c, e, h]
@@ -149,7 +150,7 @@ pins:
     periph:
       - [a, twi0, twck]
       - [b, ebi, a20, [c]]
-    extra:
+    wakeup:
       - [x, supc, wkup9]
   pa19:
     pincodes: [c, e, h]
@@ -202,14 +203,14 @@ pins:
     periph:
       - [a, spi0, spck]
       - [b, ebi, a20, [c]]
-    extra:
+    wakeup:
       - [x, supc, wkup10]
   pa28:
     pincodes: [c, e, h]
     periph:
       - [a, spi0, npcs0]
       - [b, pmc, pck2]
-    extra:
+    wakeup:
       - [x, supc, wkup11]
   pa29:
     pincodes: [c, e, h]
@@ -312,6 +313,7 @@ pins:
       - [b, pwm, pwmh3]
     extra:
       - [x, dacc, dac0]
+    wakeup:
       - [x, supc, wkup10]
   pb16:
     pincodes: [c, e, h]
@@ -355,6 +357,7 @@ pins:
       - [b, spi0, npcs2]
     extra:
       - [x, adc, ad14]
+    wakeup:
       - [x, supc, wkup13]
   pb22:
     pincodes: [c, e, h]
@@ -366,7 +369,7 @@ pins:
     periph:
       - [a, usart2, cts]
       - [b, spi0, npcs3]
-    extra:
+    wakeup:
       - [x, supc, wkup14]
   pb24:
     pincodes: [c, e, h]
@@ -383,7 +386,7 @@ pins:
     periph:
       - [a, usart0, cts]
       - [b, tc0, tclk0]
-    extra:
+    wakeup:
       - [x, supc, wkup15]
   pb27:
     pincodes: [c, e, h]
