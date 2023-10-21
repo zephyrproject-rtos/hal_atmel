@@ -35,7 +35,7 @@ pins:
       - [b, tc0, tioa0]
       - [c, ebi, a17_ba1, [j, n]]
       - [d, i2sc0, mck]
-    extra:
+    wakeup:
       - [x, supc, wkup0]
   pa1:
     pincodes: [n, q]
@@ -44,14 +44,14 @@ pins:
       - [b, tc0, tiob0]
       - [c, ebi, a18, [j, n]]
       - [d, i2sc0, ck]
-    extra:
+    wakeup:
       - [x, supc, wkup1]
   pa2:
     pincodes: [n, q]
     periph:
       - [a, pwmc0, pwmh1]
       - [c, dacc, datrg]
-    extra:
+    wakeup:
       - [x, supc, wkup2]
   pa3:
     pincodes: [j, n, q]
@@ -69,6 +69,7 @@ pins:
       - [c, uart1, txd]
     extra:
       - [x, pio, piodc1]
+    wakeup:
       - [x, supc, wkup3]
   pa5:
     pincodes: [j, n, q]
@@ -78,6 +79,7 @@ pins:
       - [c, uart1, rxd]
     extra:
       - [x, pio, piodc2]
+    wakeup:
       - [x, supc, wkup4]
   pa6:
     pincodes: [j, n, q]
@@ -105,6 +107,7 @@ pins:
       - [c, pwmc0, pwmfi0]
     extra:
       - [x, pio, piodc3]
+    wakeup:
       - [x, supc, wkup6]
   pa10:
     pincodes: [j, n, q]
@@ -122,6 +125,7 @@ pins:
       - [c, pwmc1, pwml0]
     extra:
       - [x, pio, piodc5]
+    wakeup:
       - [x, supc, wkup7]
   pa12:
     pincodes: [j, n, q]
@@ -147,6 +151,7 @@ pins:
       - [c, pwmc1, pwmh1]
     extra:
       - [x, pio, pioden1]
+    wakeup:
       - [x, supc, wkup8]
   pa15:
     pincodes: [n, q]
@@ -186,6 +191,7 @@ pins:
       - [d, i2sc1, mck]
     extra:
       - [x, afe0, ad8]
+    wakeup:
       - [x, supc, wkup9]
   pa20:
     pincodes: [n, q]
@@ -195,6 +201,7 @@ pins:
       - [d, i2sc1, ck]
     extra:
       - [x, afe0, ad9]
+    wakeup:
       - [x, supc, wkup10]
   pa21:
     pincodes: [j, n, q]
@@ -267,7 +274,7 @@ pins:
       - [b, pwmc1, pwmextrg0]
       - [c, hsmci, mcda0]
       - [d, i2sc0, do]
-    extra:
+    wakeup:
       - [x, supc, wkup11]
   pa31:
     pincodes: [n, q]
@@ -312,6 +319,7 @@ pins:
       - [d, isi, d2]
     extra:
       - [x, afe0, ad2]
+    wakeup:
       - [x, supc, wkup12]
   pb4:
     pincodes: [j, n, q]
@@ -329,7 +337,7 @@ pins:
       - [b, pwmc0, pwml0]
       - [c, mlb, dat, [s70, e70]]
       - [d, ssc, td]
-    extra:
+    wakeup:
       - [x, supc, wkup13]
     system:
       - [s, jtag, tdo]
@@ -744,7 +752,7 @@ pins:
       - [b, can1, rx, [s70]]
       - [c, twi2, twck]
       - [d, isi, d9]
-    extra:
+    wakeup:
       - [x, supc, wkup5]
   pd29:
     pincodes: [q]

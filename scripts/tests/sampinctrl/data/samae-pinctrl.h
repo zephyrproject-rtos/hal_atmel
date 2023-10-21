@@ -41,6 +41,10 @@
 #define PA4_GPIO \
 	ATMEL_SAM_XXX(a, 4, gpio, gpio)
 
+/* pa4x_supc_wkup1 */
+#define PA4X_SUPC_WKUP1 \
+	ATMEL_SAM_XXX(a, 4, wkup1, wakeup)
+
 /* pb0_gpio */
 #define PB0_GPIO \
 	ATMEL_SAM_XXX(b, 0, gpio, gpio)

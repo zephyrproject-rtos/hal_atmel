@@ -63,3 +63,5 @@ pins:
       - [lpm, lpm_per, sig_lpm]
   pa04:
     pincodes: [d, e, f]
+    wakeup:
+      - [x, supc, wkup1]

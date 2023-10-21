@@ -140,23 +140,25 @@ add a `WARNING` message to uses in the auto generated file asking to user look
 datasheet. Any variation with exception must map all pins to allow users access
 functionality.
 
-The `pins` section is a vaiable length list of pin definitions. Each entry is
+The `pins` section is a variable length list of pin definitions. Each entry is
 a pin itself composed by one mandatory properties which is `pincodes` and many
-optional properties: `periph`, `extra`, `system`, `lpm`. The `pincode` instructs
-the engine to generate pin definitions only for those packages were pin is, in
-fact, available. The `periph` is the set of multiplexed peripheral signals. It
-is a variable length list where each entry is a list. Each peripheral list
-entry is composed of 4 fields, where the first 3 are mandatory. The peripheral
+optional properties: `periph`, `extra`, `system`, `lpm`, `wakeup`. The `pincode`
+instructs the engine to generate pin definitions only for those packages were
+pin is, in fact, available. The `periph` is the set of multiplexed peripheral
+signals. It is a variable length list where each entry is a list. Each peripheral
+list entry is composed of 4 fields, where the first 3 are mandatory. The peripheral
 list represents:
  - `alternate function index`
  - `peripheral [instance]`
  - `signal`
  - `SoC/pincode exclusion list` (optional)
 
-Additionaly some SoCs define special pin configuration. In the datasheet user
+Additionally some SoCs define special pin configuration. In the datasheet user
 can find a column named `extra` and another as `systems`. The syntax is the
 same as `periph`. The `lpm` is reserved for future use. Some SoCs may require
-special pin configuration to allow system consume less possible power.
+special pin configuration to allow system consume less possible power. The
+special `wakeup` pin definition configure the pin to be used to wake-up the
+core power supply, see Supply Controller SUPC for more details.
 
 Example:
 
@@ -220,14 +222,13 @@ pins:
       - [a, pwm, pwmh0]
       - [b, tc0, tioa0]
       - [c, smc, a17, [c]]
-      - [d, supc, wkup0]
 ```
 
 It is recommended use one filter at exclusion list. When necessary combine both
 `series` and `pincodes` the exclusion will operate first in the series and then
 will lookup by pincode.
 
-The next example shows how to specify `extra` function and `system` functions.
+The next example shows how to specify `extra`, `wakeup` and `system` functions.
 
 ```yaml
   pb5:
@@ -236,6 +237,8 @@ The next example shows how to specify `extra` function and `system` functions.
       - [a, twi1, twck1]
       - [b, pwm, pwml0]
     extra:
+      - [x, adc, ad3]
+    wakeup:
       - [x, supc, wkup13]
     system:
       - [s, jtag, tdo]
