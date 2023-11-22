@@ -159,6 +159,14 @@ typedef union {
 #define TC_CMR_BURST_XC0                    (TC_CMR_BURST_XC0_Val << TC_CMR_BURST_Pos)     /**< (TC_CMR) XC0 is ANDed with the selected clock. Position  */
 #define TC_CMR_BURST_XC1                    (TC_CMR_BURST_XC1_Val << TC_CMR_BURST_Pos)     /**< (TC_CMR) XC1 is ANDed with the selected clock. Position  */
 #define TC_CMR_BURST_XC2                    (TC_CMR_BURST_XC2_Val << TC_CMR_BURST_Pos)     /**< (TC_CMR) XC2 is ANDed with the selected clock. Position  */
+#define   TC_CMR_ETRGEDG_NONE_Val           _U_(0x0)                                       /**< (TC_CMR) The clock is not gated by an external signal.  */
+#define   TC_CMR_ETRGEDG_RISING_Val         _U_(0x1)                                       /**< (TC_CMR) Rising edge  */
+#define   TC_CMR_ETRGEDG_FALLING_Val        _U_(0x2)                                       /**< (TC_CMR) Falling edge  */
+#define   TC_CMR_ETRGEDG_EDGE_Val           _U_(0x3)                                       /**< (TC_CMR) Each edge  */
+#define TC_CMR_ETRGEDG_NONE                 (TC_CMR_ETRGEDG_NONE_Val << TC_CMR_ETRGEDG_Pos)  /**< (TC_CMR) The clock is not gated by an external signal. Position  */
+#define TC_CMR_ETRGEDG_RISING               (TC_CMR_ETRGEDG_RISING_Val << TC_CMR_ETRGEDG_Pos)  /**< (TC_CMR) Rising edge Position  */
+#define TC_CMR_ETRGEDG_FALLING              (TC_CMR_ETRGEDG_FALLING_Val << TC_CMR_ETRGEDG_Pos)  /**< (TC_CMR) Falling edge Position  */
+#define TC_CMR_ETRGEDG_EDGE                 (TC_CMR_ETRGEDG_EDGE_Val << TC_CMR_ETRGEDG_Pos)  /**< (TC_CMR) Each edge Position  */
 #define TC_CMR_WAVE_Pos                     15                                             /**< (TC_CMR) Waveform Mode Position */
 #define TC_CMR_WAVE_Msk                     (_U_(0x1) << TC_CMR_WAVE_Pos)                  /**< (TC_CMR) Waveform Mode Mask */
 #define TC_CMR_WAVE                         TC_CMR_WAVE_Msk                                /**< \deprecated Old style mask definition for 1 bit bitfield. Use TC_CMR_WAVE_Msk instead */
