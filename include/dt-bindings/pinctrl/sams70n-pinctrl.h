@@ -426,8 +426,8 @@
 #define PA21C_PWMC1_PWMFI0 \
 	SAM_PINMUX(a, 21, c, periph)
 
-/* pa21x_afe1_ad1 */
-#define PA21X_AFE1_AD1 \
+/* pa21x_afe0_ad1 */
+#define PA21X_AFE0_AD1 \
 	SAM_PINMUX(a, 21, x, extra)
 
 /* pa21x_pio_piodcen2 */
