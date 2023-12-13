@@ -210,7 +210,7 @@ pins:
       - [b, pmc, pck1]
       - [c, pwmc1, pwmfi0]
     extra:
-      - [x, afe1, ad1]
+      - [x, afe0, ad1]
       - [x, pio, piodcen2]
   pa22:
     pincodes: [j, n, q]
