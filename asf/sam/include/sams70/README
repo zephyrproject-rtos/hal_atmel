@@ -39,4 +39,11 @@ License Link:
    https://www.apache.org/licenses/LICENSE-2.0
 
 Patch List:
-   n/a
+   * Fix XDMAC_CHID register name.
+   * Fix TC_CHANNEL register name.
+   * Fix USBHS_DEVDMA register name.
+   * Fix USBHS_HSTDMA register name.
+   * Fix MATRIX_PR register name.
+   * Fix PWM_CMP register name.
+   * Fix PWM_CH_NUM register name.
+   * Fix SMC_CS_NUMBER register name.

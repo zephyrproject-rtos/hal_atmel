@@ -3430,7 +3430,7 @@ typedef struct {
   __I  uint8_t                        Reserved7[8];
   __O  uint32_t USBHS_DEVEPTIDR[10]; /**< (USBHS Offset: 0x220) Device Endpoint Disable Register (n = 0) 0 */
   __I  uint8_t                        Reserved8[200];
-       UsbhsDevdma UsbhsDevdma[USBHSDEVDMA_NUMBER]; /**< Offset: 0x310 Device DMA Channel Next Descriptor Address Register (n = 1) */
+       UsbhsDevdma USBHS_DEVDMA[USBHSDEVDMA_NUMBER]; /**< Offset: 0x310 Device DMA Channel Next Descriptor Address Register (n = 1) */
   __I  uint8_t                        Reserved9[128];
   __IO uint32_t USBHS_HSTCTRL;  /**< (USBHS Offset: 0x400) Host General Control Register */
   __I  uint32_t USBHS_HSTISR;   /**< (USBHS Offset: 0x404) Host Global Interrupt Status Register */
@@ -3463,7 +3463,7 @@ typedef struct {
   __I  uint8_t                        Reserved18[8];
   __IO uint32_t USBHS_HSTPIPERR[10]; /**< (USBHS Offset: 0x680) Host Pipe Error Register (n = 0) 0 */
   __I  uint8_t                        Reserved19[104];
-       UsbhsHstdma UsbhsHstdma[USBHSHSTDMA_NUMBER]; /**< Offset: 0x710 Host DMA Channel Next Descriptor Address Register (n = 1) */
+       UsbhsHstdma USBHS_HSTDMA[USBHSHSTDMA_NUMBER]; /**< Offset: 0x710 Host DMA Channel Next Descriptor Address Register (n = 1) */
   __I  uint8_t                        Reserved20[128];
   __IO uint32_t USBHS_CTRL;     /**< (USBHS Offset: 0x800) General Control Register */
   __I  uint32_t USBHS_SR;       /**< (USBHS Offset: 0x804) General Status Register */
@@ -3514,7 +3514,7 @@ typedef struct {
   __I  uint8_t                        Reserved7[8];
   __O  USBHS_DEVEPTIDR_Type           USBHS_DEVEPTIDR[10]; /**< Offset: 0x220 ( /W  32) Device Endpoint Disable Register (n = 0) 0 */
   __I  uint8_t                        Reserved8[200];
-       UsbhsDevdma                    UsbhsDevdma[7]; /**< Offset: 0x310 Device DMA Channel Next Descriptor Address Register (n = 1) */
+       UsbhsDevdma                    USBHS_DEVDMA[7]; /**< Offset: 0x310 Device DMA Channel Next Descriptor Address Register (n = 1) */
   __I  uint8_t                        Reserved9[128];
   __IO USBHS_HSTCTRL_Type             USBHS_HSTCTRL;  /**< Offset: 0x400 (R/W  32) Host General Control Register */
   __I  USBHS_HSTISR_Type              USBHS_HSTISR;   /**< Offset: 0x404 (R/   32) Host Global Interrupt Status Register */
@@ -3547,7 +3547,7 @@ typedef struct {
   __I  uint8_t                        Reserved18[8];
   __IO USBHS_HSTPIPERR_Type           USBHS_HSTPIPERR[10]; /**< Offset: 0x680 (R/W  32) Host Pipe Error Register (n = 0) 0 */
   __I  uint8_t                        Reserved19[104];
-       UsbhsHstdma                    UsbhsHstdma[7]; /**< Offset: 0x710 Host DMA Channel Next Descriptor Address Register (n = 1) */
+       UsbhsHstdma                    USBHS_HSTDMA[7]; /**< Offset: 0x710 Host DMA Channel Next Descriptor Address Register (n = 1) */
   __I  uint8_t                        Reserved20[128];
   __IO USBHS_CTRL_Type                USBHS_CTRL;     /**< Offset: 0x800 (R/W  32) General Control Register */
   __I  USBHS_SR_Type                  USBHS_SR;       /**< Offset: 0x804 (R/   32) General Status Register */

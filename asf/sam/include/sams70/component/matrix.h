@@ -415,7 +415,7 @@ typedef struct {
   __I  uint8_t                        Reserved1[28];
   __IO uint32_t MATRIX_SCFG[9]; /**< (MATRIX Offset: 0x40) Slave Configuration Register 0 */
   __I  uint8_t                        Reserved2[28];
-       MatrixPr MatrixPr[MATRIXPR_NUMBER]; /**< Offset: 0x80 Priority Register A for Slave 0 */
+       MatrixPr MATRIX_PR[MATRIXPR_NUMBER]; /**< Offset: 0x80 Priority Register A for Slave 0 */
   __I  uint8_t                        Reserved3[56];
   __IO uint32_t MATRIX_MRCR;    /**< (MATRIX Offset: 0x100) Master Remap Control Register */
   __I  uint8_t                        Reserved4[16];
@@ -440,7 +440,7 @@ typedef struct {
   __I  uint8_t                        Reserved1[28];
   __IO MATRIX_SCFG_Type               MATRIX_SCFG[9]; /**< Offset: 0x40 (R/W  32) Slave Configuration Register 0 */
   __I  uint8_t                        Reserved2[28];
-       MatrixPr                       MatrixPr[9];    /**< Offset: 0x80 Priority Register A for Slave 0 */
+       MatrixPr                       MATRIX_PR[9];    /**< Offset: 0x80 Priority Register A for Slave 0 */
   __I  uint8_t                        Reserved3[56];
   __IO MATRIX_MRCR_Type               MATRIX_MRCR;    /**< Offset: 0x100 (R/W  32) Master Remap Control Register */
   __I  uint8_t                        Reserved4[16];

@@ -909,7 +909,7 @@ typedef struct {
 #define TCCHANNEL_NUMBER 3
 /** \brief TC hardware registers */
 typedef struct {  
-       TcChannel TcChannel[TCCHANNEL_NUMBER]; /**< Offset: 0x00 Channel Control Register (channel = 0) */
+       TcChannel TC_CHANNEL[TCCHANNEL_NUMBER]; /**< Offset: 0x00 Channel Control Register (channel = 0) */
   __O  uint32_t TC_BCR;         /**< (TC Offset: 0xC0) Block Control Register */
   __IO uint32_t TC_BMR;         /**< (TC Offset: 0xC4) Block Mode Register */
   __O  uint32_t TC_QIER;        /**< (TC Offset: 0xC8) QDEC Interrupt Enable Register */
@@ -942,7 +942,7 @@ typedef struct {
 
 /** \brief TC hardware registers */
 typedef struct {  
-       TcChannel                      TcChannel[3];   /**< Offset: 0x00 Channel Control Register (channel = 0) */
+       TcChannel                      TC_CHANNEL[3];   /**< Offset: 0x00 Channel Control Register (channel = 0) */
   __O  TC_BCR_Type                    TC_BCR;         /**< Offset: 0xC0 ( /W  32) Block Control Register */
   __IO TC_BMR_Type                    TC_BMR;         /**< Offset: 0xC4 (R/W  32) Block Mode Register */
   __O  TC_QIER_Type                   TC_QIER;        /**< Offset: 0xC8 ( /W  32) QDEC Interrupt Enable Register */
