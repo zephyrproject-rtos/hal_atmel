@@ -1999,7 +1999,7 @@
 	SAM_PINMUX(e, 4, b, periph)
 
 /* pe4x_afe1_ad4 */
-#define PE4X_AFE1_AD4 \
+#define PE4X_AFE0_AD4 \
 	SAM_PINMUX(e, 4, x, extra)
 
 /* pe5_gpio */
