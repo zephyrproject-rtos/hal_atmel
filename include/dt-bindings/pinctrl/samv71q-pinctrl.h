@@ -2015,5 +2015,5 @@
 	SAM_PINMUX(e, 5, b, periph)
 
 /* pe5x_afe1_ad3 */
-#define PE5X_AFE1_AD3 \
+#define PE5X_AFE0_AD3 \
 	SAM_PINMUX(e, 5, x, extra)
