@@ -39,6 +39,7 @@ License Link:
    https://www.apache.org/licenses/LICENSE-2.0
 
 Patch List:
+   * Fix SmcCs struct naming.
    * Fix QDEC deprecated symbols.
    * Fix GMAC_SA register name.
    * Fix XDMAC_CHID register name.
