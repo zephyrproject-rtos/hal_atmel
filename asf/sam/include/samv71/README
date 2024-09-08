@@ -39,5 +39,6 @@ License Link:
    https://www.apache.org/licenses/LICENSE-2.0
 
 Patch List:
+   * Fix SmcCs struct naming.
    * Fix the GMAC priority queue registers to match the datasheet.
    * Fix XDMAC_CHID register name.
