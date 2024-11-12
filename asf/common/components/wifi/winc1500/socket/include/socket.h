@@ -1118,7 +1118,7 @@ static SOCKET ssl_socket = -1;
 ssl_socket = socket(AF_INET, SOCK_STREAM, SOCK_FLAGS_SSL));
 @endcode
 */
-NMI_API SOCKET socket(uint16 u16Domain, uint8 u8Type, uint8 u8Flags);
+NMI_API SOCKET winc1500_socket(uint16 u16Domain, uint8 u8Type, uint8 u8Flags);
 
 
 /** @} */
@@ -1201,7 +1201,7 @@ NMI_API SOCKET socket(uint16 u16Domain, uint8 u8Type, uint8 u8Flags);
 	}
 @endcode	
 */
-NMI_API sint8 bind(SOCKET sock, struct sockaddr *pstrAddr, uint8 u8AddrLen);
+NMI_API sint8 winc1500_socket_bind(SOCKET sock, struct sockaddr *pstrAddr, uint8 u8AddrLen);
 
 
 /** @} */
@@ -1325,7 +1325,7 @@ This example demonstrates the call of the listen socket operation after a succes
 
 @endcode
 */
-NMI_API sint8 listen(SOCKET sock, uint8 backlog);
+NMI_API sint8 winc1500_socket_listen(SOCKET sock, uint8 backlog);
 /** @} */
 /** @defgroup AcceptFn accept
  *    @ingroup SocketAPI
@@ -1355,7 +1355,7 @@ NMI_API sint8 listen(SOCKET sock, uint8 backlog);
 	- [SOCK_ERR_INVALID_ARG](@ref SOCK_ERR_INVALID_ARG)
 		Indicating passing invalid arguments such as negative socket ID.
 */
-NMI_API sint8 accept(SOCKET sock, struct sockaddr *addr, uint8 *addrlen);
+NMI_API sint8 winc1500_socket_accept(SOCKET sock, struct sockaddr *addr, uint8 *addrlen);
 /** @} */
 /** @defgroup ConnectFn connect
  *    @ingroup SocketAPI
@@ -1459,7 +1459,7 @@ NMI_API sint8 accept(SOCKET sock, struct sockaddr *addr, uint8 *addrlen);
 	}
 @endcode
 */
-NMI_API sint8 connect(SOCKET sock, struct sockaddr *pstrAddr, uint8 u8AddrLen);
+NMI_API sint8 winc1500_socket_connect(SOCKET sock, struct sockaddr *pstrAddr, uint8 u8AddrLen);
 /** @} */
 /** @defgroup ReceiveFn recv
  *    @ingroup SocketAPI
@@ -1569,7 +1569,7 @@ NMI_API sint8 connect(SOCKET sock, struct sockaddr *pstrAddr, uint8 u8AddrLen);
 }
 @endcode
 */
-NMI_API sint16 recv(SOCKET sock, void *pvRecvBuf, uint16 u16BufLen, uint32 u32Timeoutmsec);
+NMI_API sint16 winc1500_socket_recv(SOCKET sock, void *pvRecvBuf, uint16 u16BufLen, uint32 u32Timeoutmsec);
 /** @} */
 /** @defgroup ReceiveFromSocketFn recvfrom
  *   @ingroup SocketAPI
@@ -1683,7 +1683,7 @@ NMI_API sint16 recv(SOCKET sock, void *pvRecvBuf, uint16 u16BufLen, uint32 u32Ti
 }
 @endcode
 */
-NMI_API sint16 recvfrom(SOCKET sock, void *pvRecvBuf, uint16 u16BufLen, uint32 u32Timeoutmsec);
+NMI_API sint16 winc1500_socket_recvfrom(SOCKET sock, void *pvRecvBuf, uint16 u16BufLen, uint32 u32Timeoutmsec);
 /** @} */
 /** @defgroup SendFn send
  *   @ingroup SocketAPI
@@ -1746,7 +1746,7 @@ NMI_API sint16 recvfrom(SOCKET sock, void *pvRecvBuf, uint16 u16BufLen, uint32 u
 @return		
 	The function shall return @ref SOCK_ERR_NO_ERROR for successful operation and a negative value (indicating the error) otherwise. 
 */
-NMI_API sint16 send(SOCKET sock, void *pvSendBuffer, uint16 u16SendLength, uint16 u16Flags);
+NMI_API sint16 winc1500_socket_send(SOCKET sock, void *pvSendBuffer, uint16 u16SendLength, uint16 u16Flags);
 /** @} */
 /** @defgroup SendToSocketFn sendto
  *  @ingroup SocketAPI
@@ -1805,7 +1805,7 @@ NMI_API sint16 send(SOCKET sock, void *pvSendBuffer, uint16 u16SendLength, uint1
 @return
 	The function  returns @ref SOCK_ERR_NO_ERROR for successful operation and a negative value (indicating the error) otherwise. 
 */
-NMI_API sint16 sendto(SOCKET sock, void *pvSendBuffer, uint16 u16SendLength, uint16 flags, struct sockaddr *pstrDestAddr, uint8 u8AddrLen);
+NMI_API sint16 winc1500_socket_sendto(SOCKET sock, void *pvSendBuffer, uint16 u16SendLength, uint16 flags, struct sockaddr *pstrDestAddr, uint8 u8AddrLen);
 /** @} */
 /** @defgroup CloseSocketFn close
  *  @ingroup SocketAPI
@@ -1888,7 +1888,7 @@ NMI_API uint32 nmi_inet_addr(char *pcIpAddr);
 	- [SOCK_ERR_NO_ERROR](@ref SOCK_ERR_NO_ERROR)
 	- [SOCK_ERR_INVALID_ARG](@ref SOCK_ERR_INVALID_ARG)
 */
-NMI_API sint8 gethostbyname(uint8 * pcHostName);
+NMI_API sint8 winc1500_socket_gethostbyname(uint8 * pcHostName);
 
 
 /** @} */
@@ -1993,7 +1993,7 @@ NMI_API sint8 sslEnableCertExpirationCheck(tenuSslCertExpSettings enuValidationS
 	and a negative value (indicating the error) otherwise. 
 @sa SOL_SOCKET, SOL_SSL_SOCKET, IP_ADD_MEMBERSHIP, IP_DROP_MEMBERSHIP
 */
-NMI_API sint8 setsockopt(SOCKET socket, uint8 u8Level, uint8 option_name,
+NMI_API sint8 winc1500_socket_setsockopt(SOCKET socket, uint8 u8Level, uint8 option_name,
        const void *option_value, uint16 u16OptionLen);
 
 
@@ -2023,7 +2023,7 @@ NMI_API sint8 setsockopt(SOCKET socket, uint8 u8Level, uint8 option_name,
 @return
 	The function shall return ZERO for successful operation and a negative value otherwise.
 */
-NMI_API sint8 getsockopt(SOCKET sock, uint8 u8Level, uint8 u8OptName, const void *pvOptValue, uint8* pu8OptLen);
+NMI_API sint8 winc1500_socket_getsockopt(SOCKET sock, uint8 u8Level, uint8 u8OptName, const void *pvOptValue, uint8* pu8OptLen);
 /** @} */
 
 /**@}*/

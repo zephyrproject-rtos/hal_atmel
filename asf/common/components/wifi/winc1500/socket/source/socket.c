@@ -503,7 +503,7 @@ Version
 Date
 		4 June 2012
 *********************************************************************/
-SOCKET socket(uint16 u16Domain, uint8 u8Type, uint8 u8Flags)
+SOCKET winc1500_socket(uint16 u16Domain, uint8 u8Type, uint8 u8Flags)
 {
 	SOCKET					sock = -1;
 	uint8					u8SockID;
@@ -589,7 +589,7 @@ Version
 Date
 		5 June 2012
 *********************************************************************/
-sint8 bind(SOCKET sock, struct sockaddr *pstrAddr, uint8 u8AddrLen)
+sint8 winc1500_socket_bind(SOCKET sock, struct sockaddr *pstrAddr, uint8 u8AddrLen)
 {
 	sint8	s8Ret = SOCK_ERR_INVALID_ARG;
 	if((pstrAddr != NULL) && (sock >= 0) && (gastrSockets[sock].bIsUsed == 1) && (u8AddrLen != 0))
@@ -634,7 +634,7 @@ Version
 Date
 		5 June 2012
 *********************************************************************/
-sint8 listen(SOCKET sock, uint8 backlog)
+sint8 winc1500_socket_listen(SOCKET sock, uint8 backlog)
 {
 	sint8	s8Ret = SOCK_ERR_INVALID_ARG;
 	
@@ -672,7 +672,7 @@ Version
 Date
 		5 June 2012
 *********************************************************************/
-sint8 accept(SOCKET sock, struct sockaddr *addr, uint8 *addrlen)
+sint8 winc1500_socket_accept(SOCKET sock, struct sockaddr *addr, uint8 *addrlen)
 {
 	sint8	s8Ret = SOCK_ERR_INVALID_ARG;
 	
@@ -701,7 +701,7 @@ Version
 Date
 		5 June 2012
 *********************************************************************/
-sint8 connect(SOCKET sock, struct sockaddr *pstrAddr, uint8 u8AddrLen)
+sint8 winc1500_socket_connect(SOCKET sock, struct sockaddr *pstrAddr, uint8 u8AddrLen)
 {
 	sint8	s8Ret = SOCK_ERR_INVALID_ARG;
 	if((sock >= 0) && (pstrAddr != NULL) && (gastrSockets[sock].bIsUsed == 1) && (u8AddrLen != 0))
@@ -742,7 +742,7 @@ Version
 Date
 		5 June 2012
 *********************************************************************/
-sint16 send(SOCKET sock, void *pvSendBuffer, uint16 u16SendLength, uint16 flags)
+sint16 winc1500_socket_send(SOCKET sock, void *pvSendBuffer, uint16 u16SendLength, uint16 flags)
 {
 	sint16	s16Ret = SOCK_ERR_INVALID_ARG;
 	
@@ -794,7 +794,7 @@ Version
 Date
 		4 June 2012
 *********************************************************************/
-sint16 sendto(SOCKET sock, void *pvSendBuffer, uint16 u16SendLength, uint16 flags, struct sockaddr *pstrDestAddr, uint8 u8AddrLen)
+sint16 winc1500_socket_sendto(SOCKET sock, void *pvSendBuffer, uint16 u16SendLength, uint16 flags, struct sockaddr *pstrDestAddr, uint8 u8AddrLen)
 {
 	sint16	s16Ret = SOCK_ERR_INVALID_ARG;
 	
@@ -849,7 +849,7 @@ Version
 Date
 		5 June 2012
 *********************************************************************/
-sint16 recv(SOCKET sock, void *pvRecvBuf, uint16 u16BufLen, uint32 u32Timeoutmsec)
+sint16 winc1500_socket_recv(SOCKET sock, void *pvRecvBuf, uint16 u16BufLen, uint32 u32Timeoutmsec)
 {
 	sint16	s16Ret = SOCK_ERR_INVALID_ARG;
 	
@@ -951,7 +951,7 @@ Version
 Date
 		5 June 2012
 *********************************************************************/
-sint16 recvfrom(SOCKET sock, void *pvRecvBuf, uint16 u16BufLen, uint32 u32Timeoutmsec)
+sint16 winc1500_socket_recvfrom(SOCKET sock, void *pvRecvBuf, uint16 u16BufLen, uint32 u32Timeoutmsec)
 {
 	sint16	s16Ret = SOCK_ERR_NO_ERROR;
 	if((sock >= 0) && (pvRecvBuf != NULL) && (u16BufLen != 0) && (gastrSockets[sock].bIsUsed == 1))
@@ -1067,7 +1067,7 @@ Version
 Date
 		4 June 2012
 *********************************************************************/
-sint8 gethostbyname(uint8 * pcHostName)
+sint8 winc1500_socket_gethostbyname(uint8 * pcHostName)
 {
 	sint8	s8Err = SOCK_ERR_INVALID_ARG;
 	uint8	u8HostNameSize = (uint8)m2m_strlen(pcHostName);
@@ -1197,7 +1197,7 @@ Version
 Date
 		9 September 2014
 *********************************************************************/
-sint8 setsockopt(SOCKET sock, uint8  u8Level, uint8  option_name,
+sint8 winc1500_socket_setsockopt(SOCKET sock, uint8  u8Level, uint8  option_name,
        const void *option_value, uint16 u16OptionLen)
 {
 	sint8	s8Ret = SOCK_ERR_INVALID_ARG;
@@ -1243,7 +1243,7 @@ Version
 Date
 		24 August 2014
 *********************************************************************/
-sint8 getsockopt(SOCKET sock, uint8 u8Level, uint8 u8OptName, const void *pvOptValue, uint8* pu8OptLen)
+sint8 winc1500_socket_getsockopt(SOCKET sock, uint8 u8Level, uint8 u8OptName, const void *pvOptValue, uint8* pu8OptLen)
 {
 	/* TBD */
 	return M2M_SUCCESS;
