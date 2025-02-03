@@ -1,0 +1,39 @@
+Atmel SAM R34
+##############
+
+Origin:
+   Microchip Packs Repository
+   http://packs.download.atmel.com/
+
+   Atmel SAMR34 Series Device Support (1.0.11)
+   http://packs.download.atmel.com/Atmel.SAMR34_DFP.1.0.11.atpack
+
+Status:
+   version 1.0.11
+
+Purpose:
+   Official package for SAM R34.
+
+Description:
+   Atmel Software Framework (ASF) provides a set of low-level
+   header files that give access to different hardware
+   peripherals of Atmel's ICs.
+
+URL:
+   http://packs.download.atmel.com/
+   http://packs.download.atmel.com/Atmel.SAMR34_DFP.1.0.11.atpack
+
+commit:
+  n/a
+
+Maintained-by:
+   External
+
+License:
+   Apache-2.0
+
+License Link:
+   https://www.apache.org/licenses/LICENSE-2.0
+
+Patch List:
+   * Fix anonymous bit-fields with qualifiers.
