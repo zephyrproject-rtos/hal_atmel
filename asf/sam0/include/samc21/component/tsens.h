@@ -205,7 +205,7 @@ typedef union { // __I to avoid read-modify-write on write-to-clear register
     __I uint8_t  OVERRUN:1;        /*!< bit:      1  Overrun                            */
     __I uint8_t  WINMON:1;         /*!< bit:      2  Window Monitor                     */
     __I uint8_t  OVF:1;            /*!< bit:      3  Overflow                           */
-    __I uint8_t  :4;               /*!< bit:  4.. 7  Reserved                           */
+    __I uint8_t  Reserved1:4;      /*!< bit:  4.. 7  Reserved                           */
   } bit;                       /*!< Structure used for bit  access                  */
   uint8_t reg;                 /*!< Type      used for register access              */
 } TSENS_INTFLAG_Type;
