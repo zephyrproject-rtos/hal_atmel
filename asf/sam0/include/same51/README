@@ -1,0 +1,39 @@
+Atmel SAM E51
+##############
+
+Origin:
+   Microchip Packs Repository
+   http://packs.download.atmel.com/
+
+   Atmel SAME51 Series Device Support (1.2.129)
+   http://packs.download.atmel.com/Atmel.SAME51_DFP.1.1.129.atpack
+
+Status:
+   version 1.2.129
+
+Purpose:
+   Official package for SAM E51.
+
+Description:
+   Atmel Software Framework (ASF) provides a set of low-level
+   header files that give access to different hardware
+   peripherals of Atmel's ICs.
+
+URL:
+   http://packs.download.atmel.com/
+   http://packs.download.atmel.com/Atmel.SAME51_DFP.1.1.129.atpack
+
+commit:
+  n/a
+
+Maintained-by:
+   External
+
+License:
+   Apache-2.0
+
+License Link:
+   https://www.apache.org/licenses/LICENSE-2.0
+
+Patch List:
+   * Fix anonymous bit-fields with qualifiers.
