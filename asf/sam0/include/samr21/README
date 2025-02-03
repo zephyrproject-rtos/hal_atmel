@@ -1,0 +1,39 @@
+Atmel SAM R21
+##############
+
+Origin:
+   Microchip Packs Repository
+   http://packs.download.atmel.com/
+
+   Atmel SAMR21 Series Device Support (1.1.72)
+   http://packs.download.atmel.com/Atmel.SAMR21_DFP.1.1.72.atpack
+
+Status:
+   version 1.1.72
+
+Purpose:
+   Official package for SAM R21.
+
+Description:
+   Atmel Software Framework (ASF) provides a set of low-level
+   header files that give access to different hardware
+   peripherals of Atmel's ICs.
+
+URL:
+   http://packs.download.atmel.com/
+   http://packs.download.atmel.com/Atmel.SAMR21_DFP.1.1.72.atpack
+
+commit:
+  n/a
+
+Maintained-by:
+   External
+
+License:
+   Apache-2.0
+
+License Link:
+   https://www.apache.org/licenses/LICENSE-2.0
+
+Patch List:
+   * Fix anonymous bit-fields with qualifiers.
