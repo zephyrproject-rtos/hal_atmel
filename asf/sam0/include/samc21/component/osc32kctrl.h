@@ -94,7 +94,7 @@ typedef union { // __I to avoid read-modify-write on write-to-clear register
     __I uint32_t XOSC32KRDY:1;     /*!< bit:      0  XOSC32K Ready                      */
     __I uint32_t OSC32KRDY:1;      /*!< bit:      1  OSC32K Ready                       */
     __I uint32_t CLKFAIL:1;        /*!< bit:      2  XOSC32K Clock Failure Detector     */
-    __I uint32_t :29;              /*!< bit:  3..31  Reserved                           */
+    __I uint32_t Reserved1:29;     /*!< bit:  3..31  Reserved                           */
   } bit;                       /*!< Structure used for bit  access                  */
   uint32_t reg;                /*!< Type      used for register access              */
 } OSC32KCTRL_INTFLAG_Type;
