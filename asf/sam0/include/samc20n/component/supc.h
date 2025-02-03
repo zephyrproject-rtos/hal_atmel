@@ -122,7 +122,7 @@ typedef union { // __I to avoid read-modify-write on write-to-clear register
     __I uint32_t BODCOREDET:1;     /*!< bit:      4  BODCORE Detection                  */
     __I uint32_t BCORESRDY:1;      /*!< bit:      5  BODCORE Synchronization Ready      */
     __I uint32_t VREG33RDY:1;      /*!< bit:      6  VREG33 Ready                       */
-    __I uint32_t :25;              /*!< bit:  7..31  Reserved                           */
+    __I uint32_t Reserved1:25;     /*!< bit:  7..31  Reserved                           */
   } bit;                       /*!< Structure used for bit  access                  */
   uint32_t reg;                /*!< Type      used for register access              */
 } SUPC_INTFLAG_Type;
