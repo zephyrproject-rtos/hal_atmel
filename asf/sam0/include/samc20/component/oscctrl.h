@@ -121,14 +121,14 @@ typedef union { // __I to avoid read-modify-write on write-to-clear register
   struct {
     __I uint32_t XOSCRDY:1;        /*!< bit:      0  XOSC Ready                         */
     __I uint32_t XOSCFAIL:1;       /*!< bit:      1  XOSC Clock Failure Detector        */
-    __I uint32_t :2;               /*!< bit:  2.. 3  Reserved                           */
+    __I uint32_t Reserved1:2;      /*!< bit:  2.. 3  Reserved                           */
     __I uint32_t OSC48MRDY:1;      /*!< bit:      4  OSC48M Ready                       */
-    __I uint32_t :3;               /*!< bit:  5.. 7  Reserved                           */
+    __I uint32_t Reserved2:3;      /*!< bit:  5.. 7  Reserved                           */
     __I uint32_t DPLLLCKR:1;       /*!< bit:      8  DPLL Lock Rise                     */
     __I uint32_t DPLLLCKF:1;       /*!< bit:      9  DPLL Lock Fall                     */
     __I uint32_t DPLLLTO:1;        /*!< bit:     10  DPLL Timeout                       */
     __I uint32_t DPLLLDRTO:1;      /*!< bit:     11  DPLL Ratio Ready                   */
-    __I uint32_t :20;              /*!< bit: 12..31  Reserved                           */
+    __I uint32_t Reserved3:20;     /*!< bit: 12..31  Reserved                           */
   } bit;                       /*!< Structure used for bit  access                  */
   uint32_t reg;                /*!< Type      used for register access              */
 } OSCCTRL_INTFLAG_Type;
