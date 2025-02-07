@@ -161,7 +161,7 @@ typedef union {
   } bit;                       /*!< Structure used for bit  access                  */
   struct {
     uint8_t  UNDERRUN:2;       /*!< bit:  0.. 1  Underrun x Interrupt Enable        */
-    uint8_t  EMPTY:2;          /*!< bit:  2.. 3  Data Buffer x Empty Interrupt Enable */
+    uint8_t  DBEMPTY:2;        /*!< bit:  2.. 3  Data Buffer x Empty Interrupt Enable */
     uint8_t  RESRDY:2;         /*!< bit:  4.. 5  Result x Ready Interrupt Enable    */
     uint8_t  OVERRUN:2;        /*!< bit:  6.. 7  Overrun x Interrupt Enable         */
   } vec;                       /*!< Structure used for vec  access                  */
@@ -217,7 +217,7 @@ typedef union {
   } bit;                       /*!< Structure used for bit  access                  */
   struct {
     uint8_t  UNDERRUN:2;       /*!< bit:  0.. 1  Underrun x Interrupt Enable        */
-    uint8_t  EMPTY:2;          /*!< bit:  2.. 3  Data Buffer x Empty Interrupt Enable */
+    uint8_t  DBEMPTY:2;        /*!< bit:  2.. 3  Data Buffer x Empty Interrupt Enable */
     uint8_t  RESRDY:2;         /*!< bit:  4.. 5  Result x Ready Interrupt Enable    */
     uint8_t  OVERRUN:2;        /*!< bit:  6.. 7  Overrun x Interrupt Enable         */
   } vec;                       /*!< Structure used for vec  access                  */
@@ -273,7 +273,7 @@ typedef union { // __I to avoid read-modify-write on write-to-clear register
   } bit;                       /*!< Structure used for bit  access                  */
   struct {
     __I uint8_t  UNDERRUN:2;       /*!< bit:  0.. 1  Result x Underrun                  */
-    __I uint8_t  EMPTY:2;          /*!< bit:  2.. 3  Data Buffer x Empty                */
+    __I uint8_t  DBEMPTY:2;        /*!< bit:  2.. 3  Data Buffer x Empty                */
     __I uint8_t  RESRDY:2;         /*!< bit:  4.. 5  Result x Ready                     */
     __I uint8_t  OVERRUN:2;        /*!< bit:  6.. 7  Result x Overrun                   */
   } vec;                       /*!< Structure used for vec  access                  */
