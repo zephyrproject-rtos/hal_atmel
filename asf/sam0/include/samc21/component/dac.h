@@ -133,7 +133,7 @@ typedef union {
 typedef union {
   struct {
     uint8_t  UNDERRUN:1;       /*!< bit:      0  Underrun Interrupt Enable          */
-    uint8_t  EMPTY:1;          /*!< bit:      1  Data Buffer Empty Interrupt Enable */
+    uint8_t  DBEMPTY:1;        /*!< bit:      1  Data Buffer Empty Interrupt Enable */
     uint8_t  :6;               /*!< bit:  2.. 7  Reserved                           */
   } bit;                       /*!< Structure used for bit  access                  */
   uint8_t reg;                 /*!< Type      used for register access              */
@@ -154,7 +154,7 @@ typedef union {
 typedef union {
   struct {
     uint8_t  UNDERRUN:1;       /*!< bit:      0  Underrun Interrupt Enable          */
-    uint8_t  EMPTY:1;          /*!< bit:      1  Data Buffer Empty Interrupt Enable */
+    uint8_t  DBEMPTY:1;        /*!< bit:      1  Data Buffer Empty Interrupt Enable */
     uint8_t  :6;               /*!< bit:  2.. 7  Reserved                           */
   } bit;                       /*!< Structure used for bit  access                  */
   uint8_t reg;                 /*!< Type      used for register access              */
@@ -175,7 +175,7 @@ typedef union {
 typedef union { // __I to avoid read-modify-write on write-to-clear register
   struct {
     __I uint8_t  UNDERRUN:1;       /*!< bit:      0  Underrun                           */
-    __I uint8_t  EMPTY:1;          /*!< bit:      1  Data Buffer Empty                  */
+    __I uint8_t  DBEMPTY:1;        /*!< bit:      1  Data Buffer Empty                  */
     __I uint8_t  Reserved1:6;      /*!< bit:  2.. 7  Reserved                           */
   } bit;                       /*!< Structure used for bit  access                  */
   uint8_t reg;                 /*!< Type      used for register access              */
