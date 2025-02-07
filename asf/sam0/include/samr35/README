@@ -37,3 +37,4 @@ License Link:
 
 Patch List:
    * Fix anonymous bit-fields with qualifiers.
+   * Rename DAC EMPTY bit-fields to DBEMPTY to avoid collision with Zephyr macros.

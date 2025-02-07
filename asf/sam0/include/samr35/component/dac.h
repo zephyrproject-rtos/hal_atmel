@@ -150,7 +150,7 @@ typedef union {
   } bit;                       /*!< Structure used for bit  access                  */
   struct {
     uint8_t  UNDERRUN:2;       /*!< bit:  0.. 1  Underrun Interrupt Enable for DAC x */
-    uint8_t  EMPTY:2;          /*!< bit:  2.. 3  Data Buffer x Empty Interrupt Enable */
+    uint8_t  DBEMPTY:2;        /*!< bit:  2.. 3  Data Buffer x Empty Interrupt Enable */
     uint8_t  :4;               /*!< bit:  4.. 7  Reserved                           */
   } vec;                       /*!< Structure used for vec  access                  */
   uint8_t reg;                 /*!< Type      used for register access              */
@@ -188,7 +188,7 @@ typedef union {
   } bit;                       /*!< Structure used for bit  access                  */
   struct {
     uint8_t  UNDERRUN:2;       /*!< bit:  0.. 1  Underrun Interrupt Enable for DAC x */
-    uint8_t  EMPTY:2;          /*!< bit:  2.. 3  Data Buffer x Empty Interrupt Enable */
+    uint8_t  DBEMPTY:2;        /*!< bit:  2.. 3  Data Buffer x Empty Interrupt Enable */
     uint8_t  :4;               /*!< bit:  4.. 7  Reserved                           */
   } vec;                       /*!< Structure used for vec  access                  */
   uint8_t reg;                 /*!< Type      used for register access              */
@@ -226,7 +226,7 @@ typedef union { // __I to avoid read-modify-write on write-to-clear register
   } bit;                       /*!< Structure used for bit  access                  */
   struct {
     __I uint8_t  UNDERRUN:2;       /*!< bit:  0.. 1  DAC x Underrun                     */
-    __I uint8_t  EMPTY:2;          /*!< bit:  2.. 3  Data Buffer x Empty                */
+    __I uint8_t  DBEMPTY:2;        /*!< bit:  2.. 3  Data Buffer x Empty                */
     __I uint8_t  Reserved1:4;      /*!< bit:  4.. 7  Reserved                           */
   } vec;                       /*!< Structure used for vec  access                  */
   uint8_t reg;                 /*!< Type      used for register access              */
