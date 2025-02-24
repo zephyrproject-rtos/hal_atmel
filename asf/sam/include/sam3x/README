@@ -43,3 +43,4 @@ Patch Lst:
    * Fix RSTC registers macros
    * Fix PWM registers macros
    * Fix SSC registers macros
+   * Fix missing SPI_CSR_BITS macro
