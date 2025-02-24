@@ -44,3 +44,4 @@ Patch Lst:
    * Fix PWM registers macros
    * Fix SSC registers macros
    * Fix missing SPI_CSR_BITS macro
+   * Fix missing ADC_MR_STARTUP and ADC_MR_SETTLING macros
