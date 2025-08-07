@@ -41,3 +41,4 @@ License Link:
 Patch Lst:
    * Add MPU peripheral in device file. Updated header files.
    * Updated documentation links.
+   * Updated TC_CMR_WAVEFORM_EEVT macro name, aligned with sam mcu.
