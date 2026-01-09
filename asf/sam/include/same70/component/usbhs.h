@@ -369,7 +369,11 @@ typedef union {
 #define USBHS_DEVCTRL_SPDCONF(value)        (USBHS_DEVCTRL_SPDCONF_Msk & ((value) << USBHS_DEVCTRL_SPDCONF_Pos))
 #define   USBHS_DEVCTRL_SPDCONF_NORMAL_Val  _U_(0x0)                                       /**< (USBHS_DEVCTRL) The peripheral starts in Full-speed mode and performs a high-speed reset to switch to High-speed mode if the host is high-speed-capable.  */
 #define   USBHS_DEVCTRL_SPDCONF_LOW_POWER_Val _U_(0x1)                                       /**< (USBHS_DEVCTRL) For a better consumption, if high speed is not needed.  */
+#define   USBHS_DEVCTRL_SPDCONF_HIGH_SPEED_Val _U_(0x2)                                       /**< (USBHS_DEVCTRL) Forced high speed.  */
+#define   USBHS_DEVCTRL_SPDCONF_FORCED_FS_Val _U_(0x3)                                       /**< (USBHS_DEVCTRL) The peripheral remains in Full-speed mode whatever the host speed capability.  */
 #define USBHS_DEVCTRL_SPDCONF_NORMAL        (USBHS_DEVCTRL_SPDCONF_NORMAL_Val << USBHS_DEVCTRL_SPDCONF_Pos)  /**< (USBHS_DEVCTRL) The peripheral starts in Full-speed mode and performs a high-speed reset to switch to High-speed mode if the host is high-speed-capable. Position  */
+#define USBHS_DEVCTRL_SPDCONF_HIGH_SPEED    (USBHS_DEVCTRL_SPDCONF_HIGH_SPEED_Val << USBHS_DEVCTRL_SPDCONF_Pos)  /**< (USBHS_DEVCTRL) Forced high speed. Position  */
+#define USBHS_DEVCTRL_SPDCONF_FORCED_FS     (USBHS_DEVCTRL_SPDCONF_FORCED_FS_Val << USBHS_DEVCTRL_SPDCONF_Pos)  /**< (USBHS_DEVCTRL) The peripheral remains in Full-speed mode whatever the host speed capability. Position  */
 #define USBHS_DEVCTRL_SPDCONF_LOW_POWER     (USBHS_DEVCTRL_SPDCONF_LOW_POWER_Val << USBHS_DEVCTRL_SPDCONF_Pos)  /**< (USBHS_DEVCTRL) For a better consumption, if high speed is not needed. Position  */
 #define USBHS_DEVCTRL_LS_Pos                12                                             /**< (USBHS_DEVCTRL) Low-Speed Mode Force Position */
 #define USBHS_DEVCTRL_LS_Msk                (_U_(0x1) << USBHS_DEVCTRL_LS_Pos)             /**< (USBHS_DEVCTRL) Low-Speed Mode Force Mask */

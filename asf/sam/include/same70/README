@@ -50,3 +50,4 @@ Patch List:
    * Fix PWM_CMP register name.
    * Fix PWM_CH_NUM register name.
    * Fix SMC_CS_NUMBER register name.
+   * Add missing macros for USBHS_DEVCTRL register.
