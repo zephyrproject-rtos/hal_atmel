@@ -805,11 +805,11 @@ pins:
       - [a, ebi, d12, [j, n]]
       - [b, tc3, tiob10]
     extra:
-      - [x, afe1, ad4]
+      - [x, afe0, ad4]
   pe5:
     pincodes: [q]
     periph:
       - [a, ebi, d13, [j, n]]
       - [b, tc3, tclk10]
     extra:
-      - [x, afe1, ad3]
+      - [x, afe0, ad3]
