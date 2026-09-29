@@ -78,12 +78,8 @@
 #define PA3B_ANAREF_VREFA \
 	SAM_PINMUX(a, 3, b, periph)
 
-/* pa3b_adc0_ain5 */
-#define PA3B_ADC0_AIN5 \
-	SAM_PINMUX(a, 3, b, periph)
-
-/* pa3b_ac_ain4 */
-#define PA3B_AC_AIN4 \
+/* pa3b_adc0_ain1 */
+#define PA3B_ADC0_AIN1 \
 	SAM_PINMUX(a, 3, b, periph)
 
 /* pa3b_ptc_y1 */
@@ -174,8 +170,8 @@
 #define PA6D_SERCOM0_PAD2 \
 	SAM_PINMUX(a, 6, d, periph)
 
-/* pa6e_tcc1_wo0 */
-#define PA6E_TCC1_WO0 \
+/* pa6e_tc1_wo0 */
+#define PA6E_TC1_WO0 \
 	SAM_PINMUX(a, 6, e, periph)
 
 /* pa7_gpio */
@@ -202,8 +198,8 @@
 #define PA7D_SERCOM0_PAD3 \
 	SAM_PINMUX(a, 7, d, periph)
 
-/* pa7e_tcc1_wo1 */
-#define PA7E_TCC1_WO1 \
+/* pa7e_tc1_wo1 */
+#define PA7E_TC1_WO1 \
 	SAM_PINMUX(a, 7, e, periph)
 
 /* pa8_gpio */
@@ -342,8 +338,8 @@
 #define PA12D_SERCOM4_PAD0 \
 	SAM_PINMUX(a, 12, d, periph)
 
-/* pa12e_tcc2_wo0 */
-#define PA12E_TCC2_WO0 \
+/* pa12e_tc2_wo0 */
+#define PA12E_TC2_WO0 \
 	SAM_PINMUX(a, 12, e, periph)
 
 /* pa12f_tcc0_wo6 */
@@ -370,8 +366,8 @@
 #define PA13D_SERCOM4_PAD1 \
 	SAM_PINMUX(a, 13, d, periph)
 
-/* pa13e_tcc2_wo1 */
-#define PA13E_TCC2_WO1 \
+/* pa13e_tc2_wo1 */
+#define PA13E_TC2_WO1 \
 	SAM_PINMUX(a, 13, e, periph)
 
 /* pa13f_tcc0_wo7 */
@@ -450,12 +446,12 @@
 #define PA16D_SERCOM3_PAD0 \
 	SAM_PINMUX(a, 16, d, periph)
 
-/* pa16e_tcc2_wo0 */
-#define PA16E_TCC2_WO0 \
+/* pa16e_tc2_wo0 */
+#define PA16E_TC2_WO0 \
 	SAM_PINMUX(a, 16, e, periph)
 
-/* pa16f_tcc1_wo6 */
-#define PA16F_TCC1_WO6 \
+/* pa16f_tcc1_wo0 */
+#define PA16F_TCC1_WO0 \
 	SAM_PINMUX(a, 16, f, periph)
 
 /* pa16h_gclk_io2 */
@@ -482,12 +478,12 @@
 #define PA17D_SERCOM3_PAD1 \
 	SAM_PINMUX(a, 17, d, periph)
 
-/* pa17e_tcc2_wo1 */
-#define PA17E_TCC2_WO1 \
+/* pa17e_tc2_wo1 */
+#define PA17E_TC2_WO1 \
 	SAM_PINMUX(a, 17, e, periph)
 
-/* pa17f_tcc1_wo7 */
-#define PA17F_TCC1_WO7 \
+/* pa17f_tcc1_wo1 */
+#define PA17F_TCC1_WO1 \
 	SAM_PINMUX(a, 17, f, periph)
 
 /* pa17h_gclk_io3 */
@@ -898,8 +894,8 @@
 #define PB4A_EIC_EXTINT4 \
 	SAM_PINMUX(b, 4, a, periph)
 
-/* pb4b_adc0_ain6 */
-#define PB4B_ADC0_AIN6 \
+/* pb4b_ac_ain5 */
+#define PB4B_AC_AIN5 \
 	SAM_PINMUX(b, 4, b, periph)
 
 /* pb4b_ptc_y10 */
@@ -913,10 +909,6 @@
 /* pb5a_eic_extint5 */
 #define PB5A_EIC_EXTINT5 \
 	SAM_PINMUX(b, 5, a, periph)
-
-/* pb5b_adc0_ain7 */
-#define PB5B_ADC0_AIN7 \
-	SAM_PINMUX(b, 5, b, periph)
 
 /* pb5b_ac_ain6 */
 #define PB5B_AC_AIN6 \
@@ -933,10 +925,6 @@
 /* pb6a_eic_extint6 */
 #define PB6A_EIC_EXTINT6 \
 	SAM_PINMUX(b, 6, a, periph)
-
-/* pb6b_adc0_ain8 */
-#define PB6B_ADC0_AIN8 \
-	SAM_PINMUX(b, 6, b, periph)
 
 /* pb6b_ac_ain7 */
 #define PB6B_AC_AIN7 \
@@ -957,10 +945,6 @@
 /* pb7a_eic_extint7 */
 #define PB7A_EIC_EXTINT7 \
 	SAM_PINMUX(b, 7, a, periph)
-
-/* pb7b_adc0_ain9 */
-#define PB7B_ADC0_AIN9 \
-	SAM_PINMUX(b, 7, b, periph)
 
 /* pb7b_ptc_y13 */
 #define PB7B_PTC_Y13 \
@@ -1290,8 +1274,8 @@
 #define PB21C_SERCOM3_PAD1 \
 	SAM_PINMUX(b, 21, c, periph)
 
-/* pb21d_sercom2_pad2 */
-#define PB21D_SERCOM2_PAD2 \
+/* pb21d_sercom2_pad1 */
+#define PB21D_SERCOM2_PAD1 \
 	SAM_PINMUX(b, 21, d, periph)
 
 /* pb21h_gclk_io7 */
@@ -1358,8 +1342,8 @@
 #define PB24_GPIO \
 	SAM_PINMUX(b, 24, gpio, gpio)
 
-/* pb24a_eic_extint7 */
-#define PB24A_EIC_EXTINT7 \
+/* pb24a_eic_extint8 */
+#define PB24A_EIC_EXTINT8 \
 	SAM_PINMUX(b, 24, a, periph)
 
 /* pb24c_sercom0_pad0 */
@@ -1378,8 +1362,8 @@
 #define PB25_GPIO \
 	SAM_PINMUX(b, 25, gpio, gpio)
 
-/* pb25a_eic_extint8 */
-#define PB25A_EIC_EXTINT8 \
+/* pb25a_eic_extint9 */
+#define PB25A_EIC_EXTINT9 \
 	SAM_PINMUX(b, 25, a, periph)
 
 /* pb25c_sercom0_pad1 */
@@ -1402,6 +1386,10 @@
 #define PB30A_EIC_EXTINT14 \
 	SAM_PINMUX(b, 30, a, periph)
 
+/* pb30c_sercom1_pad0 */
+#define PB30C_SERCOM1_PAD0 \
+	SAM_PINMUX(b, 30, c, periph)
+
 /* pb30d_sercom5_pad0 */
 #define PB30D_SERCOM5_PAD0 \
 	SAM_PINMUX(b, 30, d, periph)
@@ -1421,6 +1409,10 @@
 /* pb31a_eic_extint15 */
 #define PB31A_EIC_EXTINT15 \
 	SAM_PINMUX(b, 31, a, periph)
+
+/* pb31c_sercom1_pad1 */
+#define PB31C_SERCOM1_PAD1 \
+	SAM_PINMUX(b, 31, c, periph)
 
 /* pb31d_sercom5_pad1 */
 #define PB31D_SERCOM5_PAD1 \
