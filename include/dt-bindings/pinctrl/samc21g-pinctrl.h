@@ -82,12 +82,12 @@
 #define PA3B_ANAREF_VREFA \
 	SAM_PINMUX(a, 3, b, periph)
 
-/* pa3b_adc0_ain5 */
-#define PA3B_ADC0_AIN5 \
+/* pa3b_adc0_ain1 */
+#define PA3B_ADC0_AIN1 \
 	SAM_PINMUX(a, 3, b, periph)
 
-/* pa3b_ac_ain4 */
-#define PA3B_AC_AIN4 \
+/* pa3b_ac_ain5 */
+#define PA3B_AC_AIN5 \
 	SAM_PINMUX(a, 3, b, periph)
 
 /* pa3b_ptc_y1 */

@@ -82,12 +82,12 @@
 #define PA3B_ANAREF_VREFA \
 	SAM_PINMUX(a, 3, b, periph)
 
-/* pa3b_adc0_ain5 */
-#define PA3B_ADC0_AIN5 \
+/* pa3b_adc0_ain1 */
+#define PA3B_ADC0_AIN1 \
 	SAM_PINMUX(a, 3, b, periph)
 
-/* pa3b_ac_ain4 */
-#define PA3B_AC_AIN4 \
+/* pa3b_ac_ain5 */
+#define PA3B_AC_AIN5 \
 	SAM_PINMUX(a, 3, b, periph)
 
 /* pa3b_ptc_y1 */
@@ -966,8 +966,8 @@
 #define PB4A_EIC_EXTINT4 \
 	SAM_PINMUX(b, 4, a, periph)
 
-/* pb4b_adc0_ain6 */
-#define PB4B_ADC0_AIN6 \
+/* pb4b_adc1_ain6 */
+#define PB4B_ADC1_AIN6 \
 	SAM_PINMUX(b, 4, b, periph)
 
 /* pb4b_ptc_y10 */
@@ -982,8 +982,8 @@
 #define PB5A_EIC_EXTINT5 \
 	SAM_PINMUX(b, 5, a, periph)
 
-/* pb5b_adc0_ain7 */
-#define PB5B_ADC0_AIN7 \
+/* pb5b_adc1_ain7 */
+#define PB5B_ADC1_AIN7 \
 	SAM_PINMUX(b, 5, b, periph)
 
 /* pb5b_ac_ain6 */
@@ -1002,8 +1002,8 @@
 #define PB6A_EIC_EXTINT6 \
 	SAM_PINMUX(b, 6, a, periph)
 
-/* pb6b_adc0_ain8 */
-#define PB6B_ADC0_AIN8 \
+/* pb6b_adc1_ain8 */
+#define PB6B_ADC1_AIN8 \
 	SAM_PINMUX(b, 6, b, periph)
 
 /* pb6b_ac_ain7 */
@@ -1026,8 +1026,8 @@
 #define PB7A_EIC_EXTINT7 \
 	SAM_PINMUX(b, 7, a, periph)
 
-/* pb7b_adc0_ain9 */
-#define PB7B_ADC0_AIN9 \
+/* pb7b_adc1_ain9 */
+#define PB7B_ADC1_AIN9 \
 	SAM_PINMUX(b, 7, b, periph)
 
 /* pb7b_ptc_y13 */
