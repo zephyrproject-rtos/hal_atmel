@@ -613,7 +613,7 @@ pins:
       - [c, trace, d2]
       - [d, usart2, dsr]
   pd7:
-    pincodes: [j, q]
+    pincodes: [j, n, q]
     periph:
       - [a, gmac, grxer, [s70, v70]]
       - [b, pwmc1, pwmh3]

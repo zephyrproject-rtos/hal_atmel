@@ -958,6 +958,22 @@
 #define PD6D_USART2_DSR \
 	SAM_PINMUX(d, 6, d, periph)
 
+/* pd7_gpio */
+#define PD7_GPIO \
+	SAM_PINMUX(d, 7, gpio, gpio)
+
+/* pd7b_pwmc1_pwmh3 */
+#define PD7B_PWMC1_PWMH3 \
+	SAM_PINMUX(d, 7, b, periph)
+
+/* pd7c_trace_d3 */
+#define PD7C_TRACE_D3 \
+	SAM_PINMUX(d, 7, c, periph)
+
+/* pd7d_usart2_ri */
+#define PD7D_USART2_RI \
+	SAM_PINMUX(d, 7, d, periph)
+
 /* pd8_gpio */
 #define PD8_GPIO \
 	SAM_PINMUX(d, 8, gpio, gpio)
